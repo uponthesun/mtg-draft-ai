@@ -6,7 +6,6 @@ use clap::{Arg, App};
 use std::fs::File;
 use std::io::{prelude::*, BufReader};
 use rand::seq::SliceRandom;
-use rand::Rng;
 
 fn main() {
     let matches = App::new("Drafting")
@@ -33,10 +32,10 @@ fn main() {
     let pack = &draft_packs[0][0];
     let cards_owned : Vec<api::Card> = vec![];
 
-    println!("Random drafter's pick: {}", drafter.pick(&pack, &cards_owned, &draft_info));
+    println!("Random drafter's pick: {:?}", drafter.pick(&pack, &cards_owned, &draft_info));
 }
 
-fn create_draft_info(cube_list_filename: &String) -> DraftInfo {
+fn create_draft_info(cube_list_filename: &str) -> DraftInfo {
     // from https://stackoverflow.com/a/35820003
     let list_file = File::open(cube_list_filename).expect("file not found");
     let buf = BufReader::new(list_file);

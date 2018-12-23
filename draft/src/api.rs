@@ -1,11 +1,10 @@
-#[derive(Debug)]
-#[derive(Clone)]
+#[derive(Debug, Clone, Hash, Eq, PartialEq)]
 pub struct Card {
     pub name: String,
 }
 
 impl Card {
-    pub fn new(name: &String) -> Self {
+    pub fn new(name: &str) -> Self {
         Self {
            name: name.to_string(),
         }
@@ -13,7 +12,7 @@ impl Card {
 }
 
 pub trait Drafter {
-    fn pick(&self, pack: &Vec<Card>, owned_cards: &Vec<Card>, draft_info: &DraftInfo) -> u32;
+    fn pick<'a>(&self, pack: &'a [Card], owned_cards: &[Card], draft_info: &DraftInfo) -> &'a Card;
 }
 
 // Information about the configuration of the draft that is available to all drafters
