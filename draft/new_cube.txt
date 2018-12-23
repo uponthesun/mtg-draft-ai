@@ -1,0 +1,373 @@
+Favored Hoplite
+Lantern Kami
+Loyal Pegasus
+Skymarcher Aspirant
+Accorder Paladin
+Ajani's Pridemate
+Anafenza, Kin-Tree Spirit
+Kami of Ancient Law
+Lone Rider
+Martyr of Dusk
+Mikaeus, the Lunarch
+Niblis of the Urn
+Phalanx Leader
+Phantom Nomad
+Soulfire Grand Master
+Steward of Solidarity
+Tallowisp
+Wall of Omens
+Banisher Priest
+Crusader of Odric
+Deadeye Harpooner
+Inspiring Cleric
+Mavren Fein, Dusk Apostle
+Militia Bugler
+Pianna, Nomad Captain
+Vizier of Deferment
+Abzan Battle Priest
+Daring Archaeologist
+Gallant Cavalry
+Nearheath Chaplain
+Rhox Faithmender
+Angel of Flight Alabaster
+Bishop of Rebirth
+Crested Sunmare
+Felidar Sovereign
+Urbis Protector
+Harm's Way
+Swift Justice
+Gideon's Reproach
+Valorous Stance
+Gird for Battle
+Launch the Fleet
+Gather the Townsfolk
+Oppressive Rays
+Angelic Gift
+Ordeal of Heliod
+Pacifism
+Seal Away
+Banishing Light
+Bound by Moonsilver
+Path of Bravery
+Cloudfin Raptor
+Siren Stormtamer
+Augury Owl
+Daring Saboteur
+Glint-Nest Crane
+Harbinger of the Tides
+Ludevic's Test Subject
+Rattlechains
+Supreme Phantom
+Thing in the Ice
+Thought Courier
+Fettergeist
+Jhessian Thief
+Nebelgast Herald
+Sai, Master Thopterist
+Skilled Animator
+Spawnbroker
+Watertrap Weaver
+Naru Meha, Master Wizard
+Tower Geist
+Azami, Lady of Scrolls
+Kiri-Onna
+Cryptic Serpent
+Merchant's Dockhand
+Dive Down
+Essence Flux
+Opt
+Pongify
+Stream of Unconsciousness
+Disperse
+Mana Leak
+Negate
+Peel from Reality
+Voyage's End
+Dissolve
+Supreme Will
+Thirst for Knowledge
+Wizard's Retort
+Fortune's Favor
+Illusionist's Stratagem
+Epiphany at the Drownyard
+Chart a Course
+Crush of Tentacles
+Rise from the Tides
+Curious Obsession
+Favorable Winds
+Metamorphic Alteration
+Mirror Mockery
+Ordeal of Thassa
+Riddleform
+Drake Haven
+Precognition Field
+Bloodsoaked Champion
+Indulgent Aristocrat
+Stitcher's Supplier
+Viscera Seer
+Asylum Visitor
+Blood Artist
+Dusk Legion Zealot
+Graveyard Marshal
+Heir of Falkenrath
+Kalastria Highborn
+Oathsworn Vampire
+Ravenous Rats
+Reassembling Skeleton
+Stromkirk Condemned
+Kindly Stranger
+Liliana's Specter
+Ruin Raider
+Vampire Nighthawk
+Vengeful Rebel
+Bone Picker
+Crovax the Cursed
+Gonti, Lord of Luxury
+Haunted Dead
+Sanctum Seeker
+Whisper, Blood Liturgist
+Bloodline Necromancer
+Necropolis Fiend
+Abhorrent Overlord
+Scourge of Nel Toth
+Supernatural Stamina
+Tragic Slip
+Bile Blight
+Smother
+Ultimate Price
+Urge to Feed
+Killing Glare
+Murderous Cut
+Silence the Believers
+Bone Splinters
+Thoughtseize
+Sickening Dreams
+Stitch Together
+Victimize
+Zombify
+Crux of Fate
+Gruesome Menagerie
+Sinister Concoction
+Vampiric Rites
+Midnight Oil
+Brain Maggot
+Akroan Crusader
+Flameblade Adept
+Ghitu Lavarunner
+Goblin Welder
+Magus of the Scroll
+Arena Athlete
+Bloodrage Brawler
+Dark-Dweller Oracle
+Dismissive Pyromancer
+Generator Servant
+Goblin Diplomats
+Goblin Instigator
+Kari Zev, Skyship Raider
+Scourge Wolf
+Young Pyromancer
+Countryside Crusher
+Izzet Chemister
+Magus of the Wheel
+Sin Prodder
+Tuktuk the Explorer
+Embodiment of Fury
+Ogre Battledriver
+Rowdy Crew
+Bedlam Reveler
+Magmaw
+Neheb, the Eternal
+Runehorn Hellkite
+Magmatic Force
+Bomat Courier
+Pyrite Spellbomb
+Pyromancer's Goggles
+Collateral Damage
+Fervent Strike
+Outnumber
+Harvest Pyre
+Temur Battle Rage
+Arcbond
+Brimstone Volley
+Fiery Temper
+Wizard's Lightning
+Grab the Reins
+Magma Burst
+Fall of the Titans
+Magmatic Insight
+Cathartic Reunion
+Incendiary Flow
+Dragon Mantle
+Molten Vortex
+The Flame of Keld
+Goblin Assault
+Blighted Gorge
+Birds of Paradise
+Experiment One
+Llanowar Elves
+Scute Mob
+Devoted Druid
+Fa'adiyah Seer
+Gyre Sage
+Heir of the Wilds
+Hermit Druid
+Satyr Wayfinder
+Scrounging Bandar
+Skinshifter
+Viridian Zealot
+Generous Patron
+Grazing Gladehart
+Mul Daya Channelers
+Ramunap Excavator
+Renegade Krasis
+Rishkar, Peema Renegade
+Tilling Treefolk
+Tuskguard Captain
+Yavimaya Sapherd
+Armorcraft Judge
+Bloodspore Thrinax
+Oracle of Mul Daya
+Pack Guardian
+Territorial Allosaurus
+World Shaper
+Crested Herdcaller
+Ghoultree
+Kessig Cagebreakers
+Skullmulcher
+Titania, Protector of Argoth
+Greenwarden of Murasa
+Verdeloth the Ancient
+Sifter Wurm
+Vastwood Hydra
+Blossoming Defense
+Might of the Masses
+Second Harvest
+Spore Swarm
+Prey Upon
+Commune with the Gods
+Saproling Migration
+Genesis Wave
+Hardened Scales
+Fists of Ironwood
+Crawling Sensation
+Presence of Gond
+Path of Discovery
+Verdant Embrace
+Memorial to Unity
+Spectral Shepherd
+Brago, King Eternal
+Cloudblazer
+Isperia the Inscrutable
+Bane Alley Broker
+Possessed Skaab
+Dinrova Horror
+Soul Manipulation
+Tymaret, the Murder King
+Azra Oddsmaker
+Bloodhall Priest
+Twinstrike
+Skarrg Guildmage
+Goblin Clearcutter
+Mina and Denn, Wildborn
+Valleymaker
+Omnath, Locus of Rage
+Selesnya Evangel
+Juniper Order Ranger
+Mercy Killing
+Reap What Is Sown
+Ayli, Eternal Pilgrim
+Vizkopa Guildmage
+Teysa, Orzhov Scion
+Call to the Feast
+Ochran Assassin
+The Gitrog Monster
+Deadbridge Chant
+Nyx Weaver
+River Hoopoe
+Bounding Krasis
+Mystic Snake
+Prophet of Kruphix
+Adeliz, the Cinder Wind
+Jori En, Ruin Diver
+Maverick Thopterist
+Anax and Cymede
+Brion Stoutarm
+Lightning Helix
+Martial Glory
+Jeskai Ascendancy
+Metallic Mimic
+Perilous Myr
+Steel Overseer
+Filigree Familiar
+Foundry Inspector
+Palladium Myr
+Mindless Automaton
+Treasure Keeper
+Karn, Silver Golem
+Thopter Squadron
+Metalwork Colossus
+Blade of the Bloodchief
+Brittle Effigy
+Pacification Array
+Azorius Signet
+Boros Signet
+Dimir Signet
+Golgari Signet
+Gruul Signet
+Izzet Signet
+Key to the City
+Orzhov Signet
+Prophetic Prism
+Rakdos Signet
+Selesnya Signet
+Simic Signet
+Cultivator's Caravan
+Mindstorm Crown
+Piston Sledge
+Hedron Archive
+Oracle's Vault
+Panharmonicon
+Weatherlight
+Adarkar Wastes
+Battlefield Forge
+Bloodfell Caves
+Blossoming Sands
+Brushland
+Buried Ruin
+Caves of Koilos
+Clifftop Retreat
+Dismal Backwater
+Dragonskull Summit
+Drowned Catacomb
+Foundry of the Consuls
+Glacial Fortress
+Hinterland Harbor
+Hostile Desert
+Isolated Chapel
+Jungle Hollow
+Karplusan Forest
+Llanowar Wastes
+Rootbound Crag
+Rugged Highlands
+Scoured Barrens
+Shivan Reef
+Sulfur Falls
+Sulfurous Springs
+Sunpetal Grove
+Swiftwater Cliffs
+Temple of Abandon
+Temple of Deceit
+Temple of Enlightenment
+Temple of Epiphany
+Temple of Malady
+Temple of Malice
+Temple of Mystery
+Temple of Plenty
+Temple of Silence
+Temple of Triumph
+Thornwood Falls
+Tranquil Cove
+Underground River
+Wind-Scarred Crag
+Woodland Cemetery
+Yavimaya Coast
