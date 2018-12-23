@@ -1,0 +1,8 @@
+[package]
+name = "draft"
+version = "0.1.0"
+authors = ["Winter Dong <uponthesun@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.6.1"
