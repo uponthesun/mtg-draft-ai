@@ -30,7 +30,7 @@ fn main() {
     let drafter = random_drafter::RandomDrafter {};
 
     let pack = &draft_packs[0][0];
-    let cards_owned : Vec<api::Card> = vec![];
+    let cards_owned : Vec<Card> = vec![];
 
     println!("Random drafter's pick: {:?}", drafter.pick(&pack, &cards_owned, &draft_info));
 }
@@ -52,7 +52,7 @@ fn create_draft_info(cube_list_filename: &str) -> DraftInfo {
 }
 
 // Returns shuffled draft packs in the following format:
-// Outermost vector: which pack (e.g. drafts normally have 3 packs per player)
+// Outermost vector: draft phases (e.g. in a normal draft there's 3 phases, which are colloquially known as "Pack 1, Pack 2, Pack 3")
 // second level of vector: which seat the pack will start at in the draft
 // innermost: a pack of cards
 fn create_draft_packs(draft_info: &DraftInfo) -> Vec<Vec<Vec<Card>>> {
@@ -69,7 +69,7 @@ fn create_draft_packs(draft_info: &DraftInfo) -> Vec<Vec<Vec<Card>>> {
         let mut pack_set = vec![];
 
         for seat_index in 0..draft_info.num_drafters {
-            let start_index = ((pack_index * draft_info.num_drafters + seat_index)* draft_info.cards_per_pack) as usize;
+            let start_index = ((pack_index * draft_info.num_drafters + seat_index) * draft_info.cards_per_pack) as usize;
             let end_index = start_index + (draft_info.cards_per_pack as usize);
             println!("start index: {}", start_index);
             let slice: &[Card] = &shuffled_list[start_index..end_index];
