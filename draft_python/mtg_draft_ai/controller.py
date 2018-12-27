@@ -61,4 +61,4 @@ def create_packs(draft_info):
 
 def read_cube_list(filename):
     with open(filename, 'r') as f:
-        return [l.rstrip() for l in f.readlines()]
+        return [Card(name=l.rstrip()) for l in f.readlines()]

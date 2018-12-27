@@ -1,7 +1,7 @@
 import os
 import pytest
 from mtg_draft_ai.controller import create_packs, read_cube_list, DraftController
-from mtg_draft_ai.api import DraftInfo, Drafter, Packs
+from mtg_draft_ai.api import DraftInfo, Drafter, Packs, Card
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -15,7 +15,7 @@ def draft_info():
 
 def test_read_cube_list():
     file_path = os.path.join(TEST_DATA_DIR, 'test_cube_list.txt')
-    assert read_cube_list(file_path) == ['Battle Hymn', 'Earthquake']
+    assert read_cube_list(file_path) == [Card('Battle Hymn'), Card('Earthquake')]
 
 
 def test_create_packs_dimensions(draft_info):
