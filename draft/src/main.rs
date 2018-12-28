@@ -37,16 +37,37 @@ fn main() {
     run_draft(&draft_info, &mut draft_state);
 }
 
+// Runs through a draft with the configuration specified by draft_info and pack list in draft_state,
+// delegates picks to the drafter implementations in draft_state, and writes the picked cards to draft_state.
 fn run_draft(draft_info: &DraftInfo, draft_state: &mut DraftState) {
+
+    // "Draft phase" is commonly referred to as "Pack" by magic players, e.g. "Pack 1 pick 5".
+    // A typical draft has 3 draft phases.
     for draft_phase in 0..draft_info.num_phases {
         println!("======= draft phase: {} =======", draft_phase);
+
+        // Alternate passing directions based on phase, starting with passing left.
         let direction: i32 = if draft_phase % 2 == 0 {1} else {-1};
 
+        // "Pick index" is the "pick 1" part of "Pack 1 pick 5". In each phase, we repeat
+        // picking a card and passing until we've picked all the cards in the pack.
         for pick_index in 0..draft_info.cards_per_pack {
             println!("== pick {} ==", pick_index);
+
+            // Have each drafter make a pick.
             for drafter_index in 0..draft_info.num_drafters {
+                // We implement "passing" the packs after each pick by shifting the index of the pack
+                // that a drafter will pick from by the pick_index. We add it when passing left, and subtract
+                // when passing right (you can picture this like the packs staying in place and the drafters
+                // standing up and walking around the table).
+                // Then we apply modulus (since the packs are passed in a circle).
                 let mut current_pack_index: i32 = drafter_index as i32 + direction * pick_index as i32;
                 current_pack_index = current_pack_index % draft_info.num_drafters as i32;
+                // The mod of a negative number will remain negative, e.g. -11 mod 8 = -3, but we want to
+                // translate that into the positive equivalent to find the index into the packs, so
+                // we add num_drafters after the mod if it's a negative number. So in our example, -3
+                // would become 5. This represents starting at seat 0 and finding the drafter 3 seats to the left,
+                // which would be the drafter at seat 5.
                 if current_pack_index < 0 {
                     current_pack_index += draft_info.num_drafters as i32;
                 }
