@@ -31,7 +31,6 @@ fn main() {
 
     let pack = &draft_packs[0][0];
     let cards_owned : Vec<Card> = vec![];
-
     println!("Random drafter's pick: {:?}", drafter.pick(&pack, &cards_owned, &draft_info));
 }
 
@@ -40,7 +39,8 @@ fn create_draft_info(cube_list_filename: &str) -> DraftInfo {
     let list_file = File::open(cube_list_filename).expect("file not found");
     let buf = BufReader::new(list_file);
     let cube_list: Vec<Card> = buf.lines()
-        .map(|l| Card::new(&l.expect("Could not parse line")))
+        .map(|l| Card::new(&l.expect("Could not parse line"),
+                           ManaCost::new_empty()))
         .collect();
 
     DraftInfo {
