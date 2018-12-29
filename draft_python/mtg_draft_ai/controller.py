@@ -47,20 +47,38 @@ class DraftController:
         Each Drafter in self.drafters will update its own list of picked cards, which can be used
         to view the final result of the draft.
         """
+
+        # "Draft phase" is commonly referred to as "Pack" by magic players, e.g. "Pack 1 pick 5".
+        # A typical draft has 3 draft phases.
         for phase in range(0, self.draft_info.num_phases):
             print('====== Phase {} ======'.format(phase))
+            # Alternate passing directions based on phase, starting with passing left.
             direction = 1 if phase % 2 == 0 else -1
 
+            # "Pick index" is the "pick 1" part of "Pack 1 pick 5". In each phase, we repeat
+            # picking a card and passing until we've picked all the cards in the pack.
             for pick in range(0, self.draft_info.cards_per_pack):
                 print('== Pick {} =='.format(pick))
 
+                # Have each drafter make a pick.
                 for drafter in range(0, self.draft_info.num_drafters):
+                    # Implement "passing" packs after each pick by shifting the index of the pack
+                    # assigned to each drafter by the pick index. We add when passing left,
+                    # and subtract when passing right (picture the packs staying in place,
+                    # and the drafters standing up and walking around the table).
+                    # Then we apply modulus (since the packs are passed in a circle).
                     pack_index = (pick * direction + drafter) % self.draft_info.num_drafters
+
+                    # The mod of a negative number will remain negative, e.g. -11 mod 8 = -3,
+                    # but we want to use the positive equivalent to find the index into the packs,
+                    # so we add num_drafters if it's a negative number. So in our example, -3
+                    # would become 5. This represents starting at seat 0 and finding the drafter
+                    # 3 seats to the left, which would be the drafter at seat 5.
                     if pack_index < 0:
                         pack_index += self.draft_info.num_drafters
+
                     print('Drafter {} picking from pack with original seat {}'
                           .format(drafter, pack_index))
-
                     pack = self.packs.get(phase=phase, starting_seat=pack_index)
                     print(pack)
                     picked = self.drafters[drafter].pick(pack)
