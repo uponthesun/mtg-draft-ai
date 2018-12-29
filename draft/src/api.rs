@@ -31,7 +31,13 @@ pub struct DraftInfo {
 // either through composition or an abstract base class, in the Python port.
 pub struct DraftState {
     pub drafters: Vec<Box<Drafter>>,
+    // The packs in a draft are organized into X phases of Y packs, each of which has Z cards.
+    // E.g. a typical draft has 3 phases, 8 packs in each (one per drafter), and 15 cards per pack.
+    // Likewise, the outermost Vec represents phase, the next nested Vec represents packs in a phase, and the
+    // innermost Vec represents the cards in a single pack.
     pub packs: Vec<Vec<Vec<Card>>>,
+    // The cards owned (previously picked) by each drafter so far. The outermost Vec represents
+    // the drafters, and the inner Vec represents the collection of cards they've picked so far in the draft.
     pub owned_cards: Vec<Vec<Card>>,
 }
 
