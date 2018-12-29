@@ -22,8 +22,6 @@ pub enum BasicMana{
     Blue,
     Black,
     White,
-    // Can be fulfilled by any mana type including colorless.
-    Generic,
     // Specifically requests colorless mana.
     Colorless
 }
@@ -65,13 +63,13 @@ impl ManaCost {
         let mut total: i16 = 0;
         for symbol in 0..self.cost.len(){
             match &self.cost[symbol] {
-                Mana::XCost(str) => break,
+                Mana::XCost(str) => (),
                 Mana::Phyrexian(basic) => total += 1,
                 Mana::Split(basic, other_basic) => total += 1,
                 Mana::Standard(basic) => total += 1,
                 Mana::NumGeneric(amt) => total+= amt,
                 // This is certainly debatable...
-                Mana::SplitGeneric(basic) => total += 1,
+                Mana::SplitGeneric(basic) => total += 2,
             }
         };
         total
