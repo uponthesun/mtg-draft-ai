@@ -1,6 +1,8 @@
 mod random_drafter;
 mod api;
+mod composite_drafter;
 use crate::api::*;
+use crate::composite_drafter::*;
 extern crate clap;
 use clap::{Arg, App};
 use std::fs::File;
