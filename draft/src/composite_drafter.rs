@@ -23,16 +23,16 @@ impl DraftColorBrain {
             for symbol in 0..cards_owned[i].mana_cost.cost.len() {
                 // TODO: Find a good way to return the primitive mana types of complex mana types
                 // and increment our hashmap values accordingly.
-                match cards_owned[i].mana_cost.cost[symbol] {
+                match &cards_owned[i].mana_cost.cost[symbol] {
                     Mana::XCost(string) => (),
-                    Mana::Phyrexian(basic) => {mana_prefs.entry(basic).and_modify(|m| { *m += 1 }).or_insert(1);},
+                    Mana::Phyrexian(basic) => {mana_prefs.entry(basic.clone()).and_modify(|m| { *m += 1 }).or_insert(1);},
                     Mana::Split(basic, basic2) => {
-                        mana_prefs.entry(basic).and_modify(|m| { *m += 1 }.or_insert(1));
-                        mana_prefs.entry(basic2).and_modify(|m| { *m += 1 }.or_insert(1));
+                        mana_prefs.entry(basic.clone()).and_modify(|m| { *m += 1 }).or_insert(1);
+                        mana_prefs.entry(basic2.clone()).and_modify(|m| { *m += 1 }).or_insert(1);
                     },
-                    Mana::Standard(basic) => mana_prefs.entry(basic).and_modify(|m| { *m += 2 }).or_insert(2),
+                    Mana::Standard(basic) => {mana_prefs.entry(basic.clone()).and_modify(|m| { *m += 2 }).or_insert(2);},
                     Mana::NumGeneric(amt) => (),
-                    Mana::SplitGeneric(basic) => mana_prefs.entry(basic).and_modify(|m| { *m += 1 }).or_insert(1),
+                    Mana::SplitGeneric(basic) => {mana_prefs.entry(basic.clone()).and_modify(|m| { *m += 1 }).or_insert(1);},
                 }
             }
         }
@@ -42,23 +42,23 @@ impl DraftColorBrain {
     // In truth I think this strategy is terrible and will move to clustering for python,
     // but I'm going to write it out as a way to help think through the problem.
     fn get_pack_weights<'a>(&self, pack: &'a [Card], cards_owned: &[Card],
-                            draft_info: &DraftInfo) -> Vec<&'a CardWeight> {
+                            draft_info: &DraftInfo) -> Vec<CardWeight> {
         let prefs = self.calc_preferences(cards_owned);
         let mut weights: Vec<CardWeight> = Vec::new();
         for i in 0..cards_owned.len() {
-            weights.push(self.get_card_weight(&pack[i], cards_owned, draft_info, prefs));
+            weights.push(self.get_card_weight(&pack[i], cards_owned, draft_info, &prefs));
         };
-        weights;
+        weights
     }
 
     fn get_card_weight<'a>(&self, card: &'a Card, cards_owned: &[Card],
-                           draft_info: &DraftInfo, prefs: HashMap<BasicMana, i32>) -> (CardWeight){
+                           draft_info: &DraftInfo, prefs: &HashMap<BasicMana, i32>) -> (CardWeight){
         let mut weight: i32 = 0;
         for symbol in 0..card.mana_cost.cost.len() {
             // The mana cost structure sort of breaks down here. In c# I could do this much easier
             // with a lambda, not sure what the right solution is in rust. This match function could
             // also probably be merged with the one used for preference generation as well.
-            match card.mana_cost.cost[symbol] {
+            match &card.mana_cost.cost[symbol] {
                 Mana::XCost(string) => (),
                 Mana::Phyrexian(basic) => match prefs.get(&basic) {
                     Some(val) => weight += val,
@@ -85,12 +85,13 @@ impl DraftColorBrain {
                 },
             }
         }
-        CardWeight {card: card, weight: weight}
+        CardWeight {card: card.clone(), weight: weight}
     }
 }
 
-pub struct CardWeight<'a> {
-    pub card: &'a Card,
+#[derive(Debug, Clone, Hash, Eq, PartialEq)]
+pub struct CardWeight {
+    pub card: Card,
     pub weight: i32
 }
 

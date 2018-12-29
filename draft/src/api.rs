@@ -13,7 +13,7 @@ impl Card {
     }
 }
 
-#[derive(Debug, Clone, Hash, Eq, PartialEq)]
+#[derive(Debug, Clone, Copy, Hash, Eq, PartialEq)]
 pub enum BasicMana{
     Red,
     Green,
