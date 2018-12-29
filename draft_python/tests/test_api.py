@@ -1,6 +1,6 @@
 import mock
 import pytest
-from mtg_draft_ai.api import Drafter, Packs, DraftInfo
+from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker
 
 
 PICKED_CARD = 1
@@ -38,3 +38,11 @@ def test_packs_get():
     packs = Packs(pack_contents=[[[1, 2, 3], [4, 5, 6]],
                                  [[7, 8, 9], [10, 11, 12]]])
     assert packs.get(phase=0, starting_seat=1) == [4, 5, 6]
+
+
+def test_invalid_picker():
+    class InvalidPicker(Picker):
+        pass
+
+    with pytest.raises(TypeError):
+        InvalidPicker()

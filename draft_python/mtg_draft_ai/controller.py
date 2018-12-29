@@ -3,14 +3,37 @@ from mtg_draft_ai.api import *
 
 
 class DraftController:
+    """Runs a draft by asking each drafter to pick from the right pack in the right order."""
 
     def __init__(self, draft_info, drafters, packs):
+        """Basic init method which does no manipulation of its parameters.
+
+        For most cases, use DraftController.create instead, which creates shuffled packs
+        from the card list.
+
+        Args:
+            draft_info (api.DraftInfo): Config about the draft, which will not change
+                during the draft.
+            drafters (list of api.Drafter): The Drafters, which may have different Picker
+                implementations.
+            packs (api.Packs): The Packs to use for this draft. Should already be initialized.
+        """
         self.draft_info = draft_info
         self.drafters = drafters
         self.packs = packs
 
     @staticmethod
     def create(draft_info, drafters):
+        """Creates a DraftController with shuffled packs generated from the card list.
+
+        Args:
+            draft_info (api.DraftInfo): Config about the draft, which will not change
+                during the draft.
+            drafters (list of api.Drafter): The Drafters, which may have different Picker
+                implementations.
+        Returns:
+            DraftController: A DraftController initialized with shuffled packs.
+        """
         if draft_info.num_drafters != len(drafters):
             raise ValueError('Exactly {} drafters required, but got {}'
                              .format(draft_info.num_drafters, len(drafters)))
@@ -18,6 +41,12 @@ class DraftController:
         return DraftController(draft_info=draft_info, drafters=drafters, packs=packs)
 
     def run_draft(self):
+        """Runs a draft by asking each drafter to pick from the right pack in the right order.
+
+        Throughout the drafting process, mutates self.packs as each pick is made.
+        Each Drafter in self.drafters will update its own list of picked cards, which can be used
+        to view the final result of the draft.
+        """
         for phase in range(0, self.draft_info.num_phases):
             print('====== Phase {} ======'.format(phase))
             direction = 1 if phase % 2 == 0 else -1
@@ -40,6 +69,14 @@ class DraftController:
 
 
 def create_packs(draft_info):
+    """Creates a collection of shuffled packs to be used for one draft.
+
+    Args:
+        draft_info (api.DraftInfo): Contains card list and draft config used to create packs.
+
+    Returns:
+        api.Packs: A collection of shuffled packs.
+    """
     cards_needed = draft_info.num_drafters * draft_info.num_phases * draft_info.cards_per_pack
     if cards_needed > len(draft_info.card_list):
         raise ValueError('Too many cards required for draft configuration: {}'.format(draft_info))
@@ -60,5 +97,14 @@ def create_packs(draft_info):
 
 
 def read_cube_list(filename):
+    """Reads a cube list from a file and returns it as a list of Cards.
+
+    Args:
+        filename (str): Path (relative or absolute) to file containing cube list. File should
+            be plain text, with one card name per line.
+
+    Returns:
+        list of Card: The list of cards from the file.
+    """
     with open(filename, 'r') as f:
         return [Card(name=l.rstrip()) for l in f.readlines()]
