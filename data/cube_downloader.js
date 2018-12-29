@@ -70,7 +70,7 @@ function downloadCardPage(content, page, numPages, cubeId) {
     // If we're on the last page, save the file with all the content that we have so far.
     if(page > numPages) {
         saveFile(content);
-        // Otherwise, load the next page and wait a second before downloading it.
+        // Otherwise, download the next page and process it.
     } else {
         // Download the specified page by performing a POST against a generated URL for the cube.
         var xhttp = new XMLHttpRequest();
@@ -106,14 +106,14 @@ function downloadCardPageInfo(doc) {
     var content = '';
     for(var i = 0; i < tableRows.length; i++) {
         var tableColumns = tableRows[i].childNodes;
-        var cardName = tableColumns[1].firstChild.innerHTML;
+        var cardName = tableColumns[1].firstChild.innerHTML.replace('"', '\"');
         var manaCost = parseManaCost(tableColumns[2].firstChild);
         var colorIdentity = parseColorIdentity(tableColumns[3].firstChild);
         var types = parseTypes(tableColumns[5].firstChild);
         var tags = parseTags(tableColumns[8]);
         // Note: This page does not have subtypes, so we can't use this for tribal information.
 
-        content += '[' + cardName + ']\n';
+        content += '["' + cardName + '"]\n';
         content += 'mana_cost = ' + manaCost + '\n';
         content += 'color_identity = "' + colorIdentity + '"\n';
         content += 'types = ' + types + '\n';
