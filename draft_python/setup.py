@@ -17,6 +17,6 @@ setuptools.setup(
     ],
     install_requires=['toml'],
     extras_require={
-        'test': ['pytest', 'mock']
+        'test': ['pytest', 'mock', 'pytest-cov']
     }
 )
