@@ -46,6 +46,8 @@ pytest -k test_drafter_pick
 ```
 
 Run tests and generate coverage report:
+
+(Other options for --cov-report are available, e.g. html)
 ```
-pytest --cov=mtg_draft_ai
+pytest --cov=mtg_draft_ai --cov-report term-missing
 ```
