@@ -42,12 +42,13 @@ impl DraftColorBrain {
     fn get_card_weight<'a>(&self, card: &'a Card, cards_owned: &[Card],
                            draft_info: &DraftInfo, prefs: &HashMap<BasicMana, i32>) -> (CardWeight){
         let mut weight: i32 = 0;
+        let mut genericSymbols: i32 = 0;
         for symbol in card.mana_cost.cost.iter() {
             // The mana cost structure sort of breaks down here. In c# I could do this much easier
             // with a lambda, not sure what the right solution is in rust. This match function could
             // also probably be merged with the one used for preference generation as well.
             match symbol {
-                Mana::XCost(string) => (),
+                Mana::XCost(string) => { genericSymbols += 1; },
                 Mana::Phyrexian(basic) => match prefs.get(&basic) {
                     Some(val) => weight += val,
                     None => ()
@@ -66,18 +67,32 @@ impl DraftColorBrain {
                     Some(val) => weight += val,
                     None => ()
                 },
-                Mana::NumGeneric(amt) => (),
+                Mana::NumGeneric(amt) => { genericSymbols += 1; },
                 Mana::SplitGeneric(basic) => match prefs.get(&basic) {
                     Some(val) => weight += val,
                     None => ()
                 },
             }
         }
+        if card.mana_cost.cost.len() as i32 == genericSymbols{
+            // Card is colorless and can go in any deck.
+            weight = i32::max_value();
+        }
+        else{
+            // Divide weight by the number of non-generic symbols scored to get the average weight
+            // of our colored mana symbols.
+            weight = weight / (card.mana_cost.cost.len() as i32 - genericSymbols);
+        }
+
         CardWeight {card: card.clone(), weight: weight}
     }
 }
 
 impl DraftBrain for DraftColorBrain{
+    // This strategy attempts to find matching colors by tallying up the total number of weighted
+    // mana symbols of each color currently in our deck, and then scoring a card by the average tally
+    // of its colored mana symbols. Does not take into account colorless mana (neither adds weight nor
+    // penalizes the divisor in the average).
     // In truth I think this strategy is terrible and will move to clustering for python,
     // but I'm going to write it out as a way to help think through the problem.
     fn get_pack_weights<'a>(&self, pack: &'a [Card], cards_owned: &[Card],
