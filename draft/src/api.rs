@@ -56,9 +56,6 @@ impl ManaCost{
             cost
         }
     }
-}
-
-impl ManaCost {
     fn converted_mana_cost(&self) -> i16{
         let mut total: i16 = 0;
         for symbol in 0..self.cost.len(){
