@@ -15,7 +15,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    install_requires=['toml'],
+    install_requires=['toml', 'networkx'],
     extras_require={
         'test': ['pytest', 'mock', 'pytest-cov']
     }

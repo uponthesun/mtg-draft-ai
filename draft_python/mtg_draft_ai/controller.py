@@ -125,4 +125,4 @@ def read_cube_list(filename):
         list of Card: The list of cards from the file.
     """
     with open(filename, 'r') as f:
-        return [Card(name=l.rstrip()) for l in f.readlines()]
+        return [Card(name=l.strip()) for l in f.readlines()]
