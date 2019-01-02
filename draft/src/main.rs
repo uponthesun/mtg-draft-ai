@@ -2,7 +2,9 @@
 
 mod random_drafter;
 mod api;
+mod composite_drafter;
 use crate::api::*;
+use crate::composite_drafter::*;
 extern crate clap;
 use clap::{Arg, App};
 use std::fs::File;
@@ -98,7 +100,8 @@ fn create_draft_info(cube_list_filename: &str) -> DraftInfo {
     let list_file = File::open(cube_list_filename).expect("file not found");
     let buf = BufReader::new(list_file);
     let cube_list: Vec<Card> = buf.lines()
-        .map(|l| Card::new(&l.expect("Could not parse line")))
+        .map(|l| Card::new(&l.expect("Could not parse line"),
+                           ManaCost::new_empty()))
         .collect();
 
     DraftInfo {
@@ -129,6 +132,7 @@ fn create_draft_packs(draft_info: &DraftInfo) -> Vec<Vec<Vec<Card>>> {
         for seat_index in 0..draft_info.num_drafters {
             let start_index = ((pack_index * draft_info.num_drafters + seat_index) * draft_info.cards_per_pack) as usize;
             let end_index = start_index + (draft_info.cards_per_pack as usize);
+            println!("start index: {}", start_index);
             let slice: &[Card] = &shuffled_list[start_index..end_index];
             pack_set.push(slice.to_vec());
         }
