@@ -1,0 +1,17 @@
+["Abzan Battle Priest"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Counters - Payoff","Keyword","Lifegain - Enabler","Counters - Enabler"]
+
+["Ajani's Pridemate"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Lifegain - Payoff"]
+
+["Blood Artist"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Sacrifice - Payoff","Vampires - Enabler","Lifegain - Enabler"]
