@@ -111,7 +111,7 @@ class Packs:
         """
         self.pack_contents = pack_contents
 
-    def get(self, phase, starting_seat):
+    def get_pack(self, phase, starting_seat):
         """Gets a specific pack.
 
         Args:

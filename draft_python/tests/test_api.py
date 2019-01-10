@@ -28,16 +28,17 @@ def test_drafter_pick(draft_info, picker):
 
 
 def test_picker_invalid_pick(draft_info, picker):
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError) as excinfo:
         picker.pick.return_value = 'Ace of Spades'
         drafter = Drafter(picker)
         drafter.pick(pack=[1, 2, 3])
+    assert 'Drafter made invalid pick Ace of Spades' in str(excinfo)
 
 
 def test_packs_get():
     packs = Packs(pack_contents=[[[1, 2, 3], [4, 5, 6]],
                                  [[7, 8, 9], [10, 11, 12]]])
-    assert packs.get(phase=0, starting_seat=1) == [4, 5, 6]
+    assert packs.get_pack(phase=0, starting_seat=1) == [4, 5, 6]
 
 
 def test_invalid_picker():
