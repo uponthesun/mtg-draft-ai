@@ -79,7 +79,7 @@ class DraftController:
 
                     print('Drafter {} picking from pack with original seat {}'
                           .format(drafter, pack_index))
-                    pack = self.packs.get(phase=phase, starting_seat=pack_index)
+                    pack = self.packs.get_pack(phase=phase, starting_seat=pack_index)
                     print(pack)
                     picked = self.drafters[drafter].pick(pack)
                     print('Picked: {}\n'.format(picked))
