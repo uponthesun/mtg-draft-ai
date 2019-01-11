@@ -51,3 +51,8 @@ Run tests and generate coverage report:
 ```
 pytest --cov=mtg_draft_ai --cov-report term-missing
 ```
+
+# Notebooks
+Code used for trying out ideas for the AI / generating visualizations / etc. 
+
+See [notebooks](notebooks)
