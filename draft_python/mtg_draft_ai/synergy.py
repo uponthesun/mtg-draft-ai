@@ -1,7 +1,22 @@
+"""Synergy graph creation and analysis."""
+
 import networkx as nx
 
 
 def create_graph(cards):
+    """Creates a synergy graph for the given list of card objects.
+
+    Each card is a node, and two cards are connected by an edge if one tagged as an Enabler and
+    one is tagged as a Payoff for the same theme. Example tag:
+    Lifegain - Enabler
+    Lifegain - Payoff
+
+    Args:
+        cards (list of api.Card): list of cards to use as nodes in the graph.
+
+    Returns:
+        NetworkX graph object representing the synergy graph.
+    """
     G = nx.Graph()
     G.add_nodes_from(cards)
 
@@ -29,11 +44,35 @@ def create_graph(cards):
 
 
 def colors_subgraph(graph, colors):
+    """Creates a subgraph containing only cards castable with the given colors.
+
+    Includes colorless cards.
+
+    Args:
+        graph (networkx.Graph): The graph to create a subgraph from.
+        colors (str): String representation of the available colors of mana, e.g. 'RG' or 'UWR'.
+
+    Returns:
+        The subgraph of cards castable using only those colors of mana.
+    """
     on_color = [card for card in graph.nodes if _castable(card.color_id, colors)]
     return graph.subgraph(on_color)
 
 
 def sorted_centralities(graph, centrality_measure=nx.eigenvector_centrality):
+    """Computes centralities for all nodes of a graph and returns them sorted highest to lowest.
+
+    A centrality measure is a way to measure the importance of a node in a graph.
+    Defaults to NetworkX's eigenvector centrality implementation; any NetworkX centrality
+    function can be provided instead.
+
+    Args:
+        graph (networkx.Graph): The graph to compute centralities for.
+        centrality_measure (fn): A function which computes centrality for all nodes of the graph.
+
+    Returns:
+        list of (api.Card, float): Tuples of (card, centrality) sorted by centrality
+    """
     centralities = centrality_measure(graph)
     return _sort_dict_by_values(centralities, reverse=True)
 
