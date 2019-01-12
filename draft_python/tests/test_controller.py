@@ -42,6 +42,15 @@ def test_create_packs_invalid_config(draft_info):
         create_packs(draft_info)
 
 
+def test_controller_create(draft_info):
+    drafters = [Drafter(FirstPicker()) for _ in range(0, 4)]
+    controller = DraftController.create(draft_info=draft_info, drafters=drafters)
+    assert controller.drafters == drafters
+    assert len(controller.packs.pack_contents) == 3
+    assert len(controller.packs.pack_contents[0]) == 4
+    assert len(controller.packs.pack_contents[0][0]) == 5
+
+
 def test_run_draft():
     pack_contents = [[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],
                     [[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]],

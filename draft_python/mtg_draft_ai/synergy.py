@@ -14,8 +14,10 @@ def create_graph(cards):
 
     for theme, roles in bp_graphs.items():
         partitions = list(roles.values())
-        if len(partitions) != 2:
+        if len(partitions) > 2:
             raise ValueError('Enabler/Payoff is only tagging scheme supported currently')
+        elif len(partitions) < 2:
+            continue
 
         for card_1 in partitions[0]:
             for card_2 in partitions[1]:
