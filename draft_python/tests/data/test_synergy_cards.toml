@@ -1,0 +1,41 @@
+["Abzan Battle Priest"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Counters - Payoff","Keyword","Lifegain - Enabler","Counters - Enabler"]
+
+["Ajani's Pridemate"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Lifegain - Payoff"]
+
+["Blood Artist"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Sacrifice - Payoff","Vampires - Enabler","Lifegain - Enabler"]
+
+["Stromkirk Condemned"]
+mana_cost = ["B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Vampires - Enabler","Vampires - Payoff","Madness/Hellbent - Enabler"]
+
+["Azorius Signet"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Artifacts - Enabler"]
+
+["Lightning Helix"]
+mana_cost = ["R","W"]
+color_identity = "RW"
+types = ["instant"]
+tags = ["Removal","Lifegain - Enabler","Spells - Enabler"]
+
+["Call to the Feast"]
+mana_cost = ["2","W","B"]
+color_identity = "BW"
+types = ["sorcery"]
+tags = ["Tokens - Enabler","Lifegain - Enabler","Vampires - Enabler"]

@@ -1,23 +1,54 @@
 """Data types and interfaces which represent basic concepts in Magic drafting."""
 
 import abc
+import toml
 
 
 class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
-    def __init__(self, name):
+    def __init__(self, name, color_id=None, tags=None):
         """
         Args:
             name (str): The card's name.
+            color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
+                can assign R for Bomat Courier.
+            tags (list of (str, str)): List of applicable tags for this card, as read from cubetutor.
+                Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
+                e.g.: Lifegain - Payoff
+                Defaults to [].
         """
+        tags = [] if tags is None else tags
+
         self.name = name
+        self.color_id = color_id
+        self.tags = tags
+
+    def __str__(self):
+        return 'C: {}'.format(self.name)
 
     def __repr__(self):
-        return 'C: {}'.format(self.name)
+        return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
 
     def __eq__(self, other):
         return self.name == other.name
+
+    def __hash__(self):
+        return hash(self.name)
+
+    @staticmethod
+    def from_raw_data(name, properties):
+        raw_tags = properties['tags']
+        tags = []
+        for raw_tag in raw_tags:
+            split = raw_tag.split('-')
+            if len(split) != 2:
+                # Currently, only two-part tags are supported
+                continue
+            k, v = split
+            tags.append((k.strip(), v.strip()))
+
+        return Card(name, color_id=properties['color_identity'], tags=tags)
 
 
 class Drafter:
@@ -111,6 +142,7 @@ class Packs:
         """
         self.pack_contents = pack_contents
 
+
     def get_pack(self, phase, starting_seat):
         """Gets a specific pack.
 
@@ -123,3 +155,17 @@ class Packs:
             list of Card: A specific pack.
         """
         return self.pack_contents[phase][starting_seat]
+
+
+def read_cube_toml(filename):
+    """Reads cube data from a toml file and returns it as a list of Cards.
+
+    Args:
+        filename (str): Path (relative or absolute) to file containing cube list. File must
+            be in the TOML format.
+
+    Returns:
+        list of Card: The list of cards from the file.
+    """
+    raw_data = toml.load(filename)
+    return [Card.from_raw_data(*tup) for tup in raw_data.items()]
