@@ -63,6 +63,7 @@ class Drafter:
         """
         self.picker = picker
         self.cards_owned = []
+        self.pack_history = []
 
     def pick(self, pack):
         """Picks a card by delegating to self.picker, and adds it to owned cards.
@@ -73,7 +74,9 @@ class Drafter:
         Returns:
             Card: The picked card.
         """
-        pick = self.picker.pick(pack=pack.copy(), cards_owned=self.cards_owned.copy())
+        pack_snapshot = pack.copy()
+        self.pack_history.append(pack_snapshot)
+        pick = self.picker.pick(pack=pack_snapshot, cards_owned=self.cards_owned.copy())
         if pick not in pack:
             raise ValueError('Drafter made invalid pick {} from pack {}'.format(pick, pack))
 
