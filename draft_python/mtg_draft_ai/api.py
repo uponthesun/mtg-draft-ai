@@ -31,7 +31,9 @@ class Card:
         return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
 
     def __eq__(self, other):
-        return self.name == other.name
+        if isinstance(other, self.__class__):
+            return self.name == other.name
+        return False
 
     def __hash__(self):
         return hash(self.name)

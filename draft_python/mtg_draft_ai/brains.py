@@ -39,7 +39,7 @@ class Factory:
 
 
 _GSPRating = collections.namedtuple('Rating', ['card', 'color_combo', 'total_edges',
-                                               'new_edges', 'common_neighbors', 'default'])
+                                               'pool_size', 'common_neighbors', 'default'])
 
 
 class GreedySynergyPicker(Picker):
@@ -105,14 +105,17 @@ class GreedySynergyPicker(Picker):
                 # Number of edges in the graph for the card pool plus the candidate.
                 total_edges = len(syn_graph.edges)
                 # Number of edges added by the candidate.
-                new_edges = _num_new_edges(syn_graph, candidate)
+                #new_edges = _num_new_edges(syn_graph, candidate)
+
+                pool_size = len(cards_with_candidate)
+
                 # Number of nodes in global graph which neighbor both the candidate and the card pool.
                 # Does not count cards already in the pool as neighbors.
                 common_neighbors = len(self._card_pool_common_neighbors(on_color_cards, candidate, color_combo))
                 default = self.default_ratings[candidate]
 
-                candidates.append(_GSPRating(candidate, color_combo, total_edges,
-                                             new_edges, common_neighbors, default))
+                candidates.append(_GSPRating(candidate, color_combo, total_edges, pool_size,
+                                             common_neighbors, default))
 
         # Lexicographic sort of the fields in the rating tuple (excluding the card and color combo)
         candidates.sort(key=lambda tup: tup[2:], reverse=True)
