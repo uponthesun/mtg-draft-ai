@@ -1,7 +1,7 @@
 import os
 import pytest
 from mtg_draft_ai.controller import create_packs, read_cube_list, DraftController
-from mtg_draft_ai.api import DraftInfo, Drafter, Packs, Card
+from mtg_draft_ai.api import DraftInfo, Drafter, Packs, Card, Picker
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -43,7 +43,7 @@ def test_create_packs_invalid_config(draft_info):
 
 
 def test_controller_create(draft_info):
-    drafters = [Drafter(FirstPicker()) for _ in range(0, 4)]
+    drafters = [Drafter(FirstPicker(), draft_info) for _ in range(0, 4)]
     controller = DraftController.create(draft_info=draft_info, drafters=drafters)
     assert controller.drafters == drafters
     assert len(controller.packs.pack_contents) == 3
@@ -55,8 +55,8 @@ def test_run_draft():
     pack_contents = [[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],
                     [[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]],
                     [[25, 26, 27, 28], [29, 30, 31, 32], [33, 34, 35, 36]]]
-    drafters = [Drafter(FirstPicker()) for _ in range(0, 3)]
     draft_info = DraftInfo(card_list=list(range(1, 37)), cards_per_pack=4, num_phases=3, num_drafters=3)
+    drafters = [Drafter(FirstPicker(), draft_info) for _ in range(0, 3)]
 
     controller = DraftController(packs=Packs(pack_contents), drafters=drafters, draft_info=draft_info)
     controller.run_draft()
@@ -68,8 +68,8 @@ def test_run_draft():
     assert all_picks == set(range(1, 37))
 
 
-class FirstPicker:
-    def pick(self, pack, cards_owned):
+class FirstPicker(Picker):
+    def pick(self, pack, cards_owned, draft_info):
         return pack[0]
 
 

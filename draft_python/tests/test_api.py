@@ -19,18 +19,18 @@ def picker():
 
 
 def test_drafter_pick(draft_info, picker):
-    drafter = Drafter(picker)
+    drafter = Drafter(picker, draft_info)
     picked = drafter.pick([1, 2, 3])
 
     assert picked == PICKED_CARD
     assert drafter.cards_owned == [PICKED_CARD]
-    picker.pick.assert_called_with(pack=[1, 2, 3], cards_owned=[])
+    picker.pick.assert_called_with(pack=[1, 2, 3], cards_owned=[], draft_info=draft_info)
 
 
 def test_picker_invalid_pick(draft_info, picker):
     with pytest.raises(ValueError) as excinfo:
         picker.pick.return_value = 'Ace of Spades'
-        drafter = Drafter(picker)
+        drafter = Drafter(picker, draft_info)
         drafter.pick(pack=[1, 2, 3])
     assert 'Drafter made invalid pick Ace of Spades' in str(excinfo)
 
