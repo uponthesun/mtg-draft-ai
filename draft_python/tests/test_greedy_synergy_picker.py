@@ -1,3 +1,4 @@
+import mock
 import os
 import pytest
 from mtg_draft_ai.brains import GreedySynergyPicker, all_common_neighbors
@@ -26,6 +27,11 @@ def graph(cards):
     return synergy.create_graph(cards)
 
 
+@pytest.fixture
+def draft_info():
+    return mock.Mock(name='draft_info')
+
+
 def test_all_common_neighbors_coverage(graph, cards):
     common = all_common_neighbors(graph, cards)
 
@@ -46,14 +52,14 @@ def test_common_neighbors_found(graph, cards, cards_by_name):
     assert set(common[c1][c2]) == {cards_by_name[n] for n in expected_neighbor_names}
 
 
-def test_greedy_synergy_picker(cards, cards_by_name):
+def test_greedy_synergy_picker(cards, cards_by_name, draft_info):
     picker = GreedySynergyPicker.factory(cards).create()
     owned_card_names = ['Abzan Battle Priest', "Ajani's Pridemate"]
     pack_card_names = ['Ayli, Eternal Pilgrim', 'Tuskguard Captain']
     owned_cards = [cards_by_name[n] for n in owned_card_names]
     pack = [cards_by_name[n] for n in pack_card_names]
 
-    ratings = picker._ratings(pack=pack, cards_owned=owned_cards)
+    ratings = picker._ratings(pack=pack, cards_owned=owned_cards, draft_info=draft_info)
 
     # Ayli in WB only, Tuskguard Captain in GW/GU/GR/GB
     assert len(ratings) == 5

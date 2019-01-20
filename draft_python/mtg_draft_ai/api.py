@@ -14,7 +14,6 @@ class Card:
             color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
                 can assign R for Bomat Courier.
             tags (List[(str, str)]): List of applicable tags for this card, as read from cubetutor.
-
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
@@ -55,13 +54,14 @@ class Card:
 class Drafter:
     """Makes picks and tracks cards already picked."""
 
-    def __init__(self, picker):
+    def __init__(self, picker, draft_info):
         """
         Args:
             picker: A Picker implementation. This Drafter instance will delegate
                 all picking decisions to picker.
         """
         self.picker = picker
+        self.draft_info = draft_info
         self.cards_owned = []
         self.pack_history = []
 
@@ -76,7 +76,8 @@ class Drafter:
         """
         pack_snapshot = pack.copy()
         self.pack_history.append(pack_snapshot)
-        pick = self.picker.pick(pack=pack_snapshot, cards_owned=self.cards_owned.copy())
+        pick = self.picker.pick(pack=pack.copy(), cards_owned=self.cards_owned.copy(),
+                                draft_info=self.draft_info)
         if pick not in pack:
             raise ValueError('Drafter made invalid pick {} from pack {}'.format(pick, pack))
 
@@ -95,7 +96,7 @@ class Picker(abc.ABC):
     """
 
     @abc.abstractmethod
-    def pick(self, pack, cards_owned):
+    def pick(self, pack, cards_owned, draft_info):
         """Implementations should return the picked Card.
 
         Implementations do not need to modify the state of either pack or cards_owned,
@@ -104,6 +105,7 @@ class Picker(abc.ABC):
         Args:
             pack (List[Card]): The current pack to pick a card out of.
             cards_owned (List[Card]): The cards already owned.
+            draft_info (DraftInfo): Information about the draft configuration.
 
         Returns:
             Card: The picked card.
@@ -126,6 +128,9 @@ class DraftInfo:
         self.num_drafters = num_drafters
         self.num_phases = num_phases
         self.cards_per_pack = cards_per_pack
+
+    def num_cards_in_draft(self):
+        return self.num_drafters * self.num_phases * self.cards_per_pack
 
 
 class Packs:
