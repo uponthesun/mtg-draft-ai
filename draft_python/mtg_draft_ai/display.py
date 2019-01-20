@@ -52,4 +52,4 @@ def default_style():
         padding: 5px;
     }
     </style>
-    """
+"""

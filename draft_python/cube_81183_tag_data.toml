@@ -92,7 +92,7 @@ tags = ["Signpost","Counters - Payoff","ETB - Enabler","Card Draw"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Artifacts - Payoff","Ninjutsu - Enabler"]
+tags = ["Ninjutsu - Enabler","Artifacts (Cheap) - Payoff"]
 
 ["Asylum Visitor"]
 mana_cost = ["1","B"]
@@ -128,7 +128,7 @@ tags = ["Spirits - Enabler","Lifegain - Enabler","ETB - Enabler"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Azra Oddsmaker"]
 mana_cost = ["1","B","R"]
@@ -182,7 +182,7 @@ tags = ["Higher Toughness","Vampires - Enabler"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Counters - Enabler","Sacrifice - Payoff","Vampires - Payoff","Artifacts - Enabler"]
+tags = ["Counters - Enabler","Sacrifice - Payoff","Vampires - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Blighted Gorge"]
 mana_cost = []
@@ -248,7 +248,7 @@ tags = []
 mana_cost = ["1"]
 color_identity = "R"
 types = ["artifact","creature"]
-tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler"]
+tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Bone Picker"]
 mana_cost = ["3","B"]
@@ -266,7 +266,7 @@ tags = ["Removal","Sacrifice - Payoff"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Bound by Moonsilver"]
 mana_cost = ["2","W"]
@@ -302,7 +302,7 @@ tags = ["Lifegain - Enabler","Big"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Brushland"]
 mana_cost = []
@@ -314,7 +314,7 @@ tags = []
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Land Graveyard - Enabler","Artifacts - Payoff"]
+tags = ["Land Graveyard - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Creature) - Payoff"]
 
 ["Call to the Feast"]
 mana_cost = ["2","W","B"]
@@ -434,7 +434,7 @@ tags = ["Spells - Payoff"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Big","Artifacts - Enabler"]
+tags = ["Big","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Curious Obsession"]
 mana_cost = ["U"]
@@ -446,7 +446,7 @@ tags = ["Heroic - Enabler","Card Draw"]
 mana_cost = ["3","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Artifacts - Payoff","Big","Keyword","ETB - Enabler"]
+tags = ["Big","Keyword","ETB - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Creature) - Payoff"]
 
 ["Dark-Dweller Oracle"]
 mana_cost = ["1","R"]
@@ -476,7 +476,7 @@ tags = []
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Dinrova Horror"]
 mana_cost = ["4","U","B"]
@@ -620,7 +620,7 @@ tags = ["Keyword","Spells - Enabler","Madness/Hellbent - Payoff"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Lifegain - Enabler","Artifacts - Enabler"]
+tags = ["Lifegain - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Fists of Ironwood"]
 mana_cost = ["1","G"]
@@ -644,7 +644,7 @@ tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Tokens - Enabler","Land Graveyard - Enabler","Artifacts - Enabler"]
+tags = ["Tokens - Enabler","Land Graveyard - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Gallant Cavalry"]
 mana_cost = ["3","W"]
@@ -710,7 +710,7 @@ tags = []
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Artifacts - Payoff","Higher Toughness","ETB - Enabler","Ninjutsu - Enabler"]
+tags = ["Higher Toughness","ETB - Enabler","Ninjutsu - Enabler","Artifacts - Payoff"]
 
 ["Goblin Assault"]
 mana_cost = ["2","R"]
@@ -740,7 +740,7 @@ tags = ["Signpost","Artifacts - Payoff"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Gonti, Lord of Luxury"]
 mana_cost = ["2","B","B"]
@@ -782,7 +782,7 @@ tags = ["Graveyard - Payoff"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Gyre Sage"]
 mana_cost = ["1","G"]
@@ -824,7 +824,7 @@ tags = ["Tokens - Enabler","Graveyard - Payoff","Spirits - Enabler","ETB - Enabl
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Card Draw","Artifacts - Enabler"]
+tags = ["Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Heir of Falkenrath"]
 mana_cost = ["1","B"]
@@ -908,7 +908,7 @@ tags = ["Spells - Payoff","Graveyard - Payoff","Signpost","Higher Toughness","Wi
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Jeskai Ascendancy"]
 mana_cost = ["U","R","W"]
@@ -956,7 +956,7 @@ tags = ["Sacrifice - Enabler","Tokens - Enabler","Higher Toughness"]
 mana_cost = ["5"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Artifacts - Payoff","Signpost","Higher Toughness","Artifacts - Enabler"]
+tags = ["Signpost","Higher Toughness","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler"]
 
 ["Karplusan Forest"]
 mana_cost = []
@@ -974,7 +974,7 @@ tags = ["Graveyard - Payoff","Signpost","Higher Toughness","Big"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Ninjutsu - Enabler"]
+tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Ninjutsu - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Killing Glare"]
 mana_cost = ["X","B"]
@@ -1016,7 +1016,7 @@ tags = ["Spirits - Enabler","Ninjutsu - Enabler"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["sorcery"]
-tags = ["Tokens - Enabler","Tokens - Payoff","Keyword","Spells - Enabler"]
+tags = ["Tokens - Enabler","Tokens - Payoff","Keyword","Spells - Enabler","Heroic - Enabler"]
 
 ["Lightning Helix"]
 mana_cost = ["R","W"]
@@ -1118,7 +1118,7 @@ tags = ["Sacrifice - Enabler","Lifegain - Enabler","Vampires - Enabler"]
 mana_cost = ["3","U","R"]
 color_identity = "UR"
 types = ["creature"]
-tags = ["Signpost","Tokens - Enabler","Artifacts - Enabler","Artifacts - Payoff","Keyword","ETB - Enabler"]
+tags = ["Signpost","Tokens - Enabler","Artifacts - Enabler","Keyword","ETB - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Mavren Fein, Dusk Apostle"]
 mana_cost = ["2","W"]
@@ -1142,13 +1142,13 @@ tags = ["Removal","Tokens - Enabler","Spells - Enabler"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Counters - Enabler","Tokens - Payoff","Artifacts - Enabler"]
+tags = ["Counters - Enabler","Tokens - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Metalwork Colossus"]
 mana_cost = ["11"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Signpost","Artifacts - Payoff","Big","Artifacts - Enabler"]
+tags = ["Signpost","Big","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler"]
 
 ["Midnight Oil"]
 mana_cost = ["2","B","B"]
@@ -1184,13 +1184,13 @@ tags = ["Landfall - Enabler","Big"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Madness/Hellbent - Enabler","Artifacts - Enabler"]
+tags = ["Counters - Enabler","Counters - Payoff","Madness/Hellbent - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Mindstorm Crown"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Card Draw","Madness/Hellbent - Payoff","Artifacts - Enabler"]
+tags = ["Card Draw","Madness/Hellbent - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Mirror Mockery"]
 mana_cost = ["1","U"]
@@ -1328,7 +1328,7 @@ tags = ["Landfall - Enabler"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Card Draw","Artifacts - Enabler"]
+tags = ["Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Ordeal of Heliod"]
 mana_cost = ["1","W"]
@@ -1346,7 +1346,7 @@ tags = ["Heroic - Enabler","Counters - Enabler","Counters - Payoff","Card Draw"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Outnumber"]
 mana_cost = ["R"]
@@ -1358,7 +1358,7 @@ tags = ["Removal","Tokens - Payoff","Spells - Enabler"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Pacifism"]
 mana_cost = ["1","W"]
@@ -1376,13 +1376,13 @@ tags = ["Land Graveyard - Enabler","Spirits - Enabler","Flash - Threat"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Panharmonicon"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Signpost","ETB - Payoff","Artifacts - Enabler"]
+tags = ["Signpost","ETB - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Path of Bravery"]
 mana_cost = ["2","W"]
@@ -1406,7 +1406,7 @@ tags = ["ETB - Payoff","Bounce","Spells - Enabler"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler"]
+tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Phalanx Leader"]
 mana_cost = ["W","W"]
@@ -1436,7 +1436,7 @@ tags = ["Ninjutsu - Enabler"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Payoff","Keyword","Artifacts - Enabler"]
+tags = ["Keyword","Artifacts - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Pongify"]
 mana_cost = ["U"]
@@ -1478,19 +1478,19 @@ tags = ["Signpost","Higher Toughness","Wizards - Enabler","Flash - Threat"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Pyrite Spellbomb"]
 mana_cost = ["1"]
 color_identity = "R"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Pyromancer's Goggles"]
 mana_cost = ["5"]
 color_identity = "R"
 types = ["artifact"]
-tags = ["Signpost","Spells - Payoff","Artifacts - Enabler"]
+tags = ["Signpost","Spells - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Quickling"]
 mana_cost = ["1","U"]
@@ -1502,7 +1502,7 @@ tags = ["ETB - Payoff","Ninjutsu - Enabler","Flash - Threat"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Ramunap Excavator"]
 mana_cost = ["2","G"]
@@ -1676,7 +1676,7 @@ tags = ["Tokens - Enabler","Higher Toughness"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Shivan Reef"]
 mana_cost = []
@@ -1700,13 +1700,13 @@ tags = ["Big","ETB - Enabler"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Ninjutsu - Enabler","Artifacts - Enabler","Tokens - Payoff"]
+tags = ["Ninjutsu - Enabler","Artifacts - Enabler","Tokens - Payoff","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Simic Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Sin Prodder"]
 mana_cost = ["2","R"]
@@ -1736,7 +1736,7 @@ tags = ["Land Graveyard - Enabler"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Artifacts - Payoff","Higher Toughness","Big","ETB - Enabler"]
+tags = ["Higher Toughness","Big","ETB - Enabler","Artifacts (Cheap) - Payoff"]
 
 ["Skinshifter"]
 mana_cost = ["1","G"]
@@ -1760,7 +1760,7 @@ tags = ["Keyword","Vampires - Enabler"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Ninjutsu - Enabler","ETB - Enabler","Artifacts - Enabler"]
+tags = ["Ninjutsu - Enabler","ETB - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Smother"]
 mana_cost = ["1","B"]
@@ -1796,7 +1796,7 @@ tags = ["Tokens - Enabler","Flash - Threat"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Signpost","Artifacts - Payoff","Counters - Enabler","Artifacts - Enabler"]
+tags = ["Signpost","Counters - Enabler","Artifacts - Enabler","Artifacts (Creature) - Payoff","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
 
 ["Steward of Solidarity"]
 mana_cost = ["1","W"]
@@ -1988,7 +1988,7 @@ tags = ["Artifacts - Payoff","Card Draw","Spells - Enabler","Madness/Hellbent - 
 mana_cost = ["5"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Tokens - Enabler","Counters - Enabler","Counters - Payoff","Artifacts - Enabler"]
+tags = ["Tokens - Enabler","Counters - Enabler","Counters - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Thornwood Falls"]
 mana_cost = []
@@ -2048,7 +2048,7 @@ tags = []
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Sacrifice - Enabler","Artifacts - Enabler"]
+tags = ["Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Tuktuk the Explorer"]
 mana_cost = ["2","R"]
@@ -2186,7 +2186,7 @@ tags = ["Higher Toughness","ETB - Enabler"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Signpost","Artifacts - Payoff","Keyword","Card Draw","Artifacts - Enabler"]
+tags = ["Signpost","Artifacts - Payoff","Keyword","Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Creature) - Enabler"]
 
 ["Whisper, Blood Liturgist"]
 mana_cost = ["3","B"]

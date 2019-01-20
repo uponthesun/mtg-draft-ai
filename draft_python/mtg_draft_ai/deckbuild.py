@@ -41,6 +41,7 @@ def build(card_pool, colors=None):
 
     top_comms = _top_comms(G, 10)
     core = _build_core(G, top_comms)
+    print('Core size: {} Core: {}'.format(len(core), core))
 
     remaining_cards = card_pool.copy()
     for card in core:
@@ -78,16 +79,24 @@ def _build_core(graph, top_comms):
         cards_in_combo = list(itertools.chain(*combo))
         num_cards = len(cards_in_combo)
 
-        if _CORE_MINIMUM <= num_cards <= _NONLANDS_IN_DECK:
-            density = len(graph.subgraph(cards_in_combo).edges) / len(cards_in_combo)
-            if top_comm_combo is None or density > top_comm_combo[1]:
-                top_comm_combo = (combo, density)
+        if num_cards < _CORE_MINIMUM:
+            continue
+
+        combo_subgraph = graph.subgraph(cards_in_combo)
+        if num_cards > _NONLANDS_IN_DECK:
+            ranked_cards = synergy.sorted_centralities(combo_subgraph)
+            cards_in_combo = [tup[0] for tup in ranked_cards[:_NONLANDS_IN_DECK]]
+            combo_subgraph = graph.subgraph(cards_in_combo)
+
+        density = len(combo_subgraph.edges) / len(cards_in_combo)
+        if top_comm_combo is None or density > top_comm_combo[1]:
+            top_comm_combo = (cards_in_combo, density)
 
     if top_comm_combo is None:
         raise DeckbuildError('Unable to build a deck core of between {} and {} cards'
                              .format(_CORE_MINIMUM, _NONLANDS_IN_DECK))
 
-    return list(itertools.chain(*top_comm_combo[0]))
+    return list(top_comm_combo[0])
 
 
 def _top_comms(graph, n=10):
