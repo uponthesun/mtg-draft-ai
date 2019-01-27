@@ -13,7 +13,8 @@ class Card:
             name (str): The card's name.
             color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
                 can assign R for Bomat Courier.
-            tags (list of (str, str)): List of applicable tags for this card, as read from cubetutor.
+            tags (List[(str, str)]): List of applicable tags for this card, as read from cubetutor.
+
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
@@ -67,7 +68,7 @@ class Drafter:
         """Picks a card by delegating to self.picker, and adds it to owned cards.
 
         Args:
-            pack (list of Card): The current pack to pick a card out of.
+            pack (List[Card]): The current pack to pick a card out of.
 
         Returns:
             Card: The picked card.
@@ -80,7 +81,8 @@ class Drafter:
         return pick
 
     def __repr__(self):
-        return 'Cards owned: {} Picker state: {}'.format(self.cards_owned, self.picker)
+        return 'Cards owned: {} Picker state: {}'.format([card.name for card in self.cards_owned],
+                                                         self.picker)
 
 
 class Picker(abc.ABC):
@@ -97,8 +99,8 @@ class Picker(abc.ABC):
         as doing so will have no effect on the draft state.
 
         Args:
-            pack (list of Card): The current pack to pick a card out of.
-            cards_owned (list of Card): The cards already owned.
+            pack (List[Card]): The current pack to pick a card out of.
+            cards_owned (List[Card]): The cards already owned.
 
         Returns:
             Card: The picked card.
@@ -112,7 +114,7 @@ class DraftInfo:
     def __init__(self, card_list, num_drafters, num_phases, cards_per_pack):
         """
         Args:
-            card_list (list of Card): A list of all cards in the cube.
+            card_list (List[Card]): A list of all cards in the cube.
             num_drafters (int): Number of drafters (aka number of seats in the draft).
             num_phases (int): Number of draft phases (e.g. there are 3 phases in a typical draft).
             cards_per_pack (int): Number of cards in each pack.
@@ -127,17 +129,17 @@ class Packs:
     """The collection of all packs used in a draft, organized by phase and seat.
 
     Wrapper class for the backing data structure for the pack contents, which is a
-    list of list of list of Cards, organized as follows:
+    List[List[List[Card]]], organized as follows:
 
     Outermost list: one element for each phase of the draft
     Second-level list: one element for each seat in the draft (aka each drafter)
-    Innermost list of Cards: one specific pack
+    Innermost List[Card]: one specific pack
     """
 
     def __init__(self, pack_contents):
         """
         Args:
-            pack_contents (list of list of list of Card): The raw pack contents. Should already
+            pack_contents (list of list of List[Card]): The raw pack contents. Should already
                 be randomized and organized into phases and seats.
         """
         self.pack_contents = pack_contents
@@ -152,20 +154,20 @@ class Packs:
                 start of the current draft phase.
 
         Returns:
-            list of Card: A specific pack.
+            List[Card]: A specific pack.
         """
         return self.pack_contents[phase][starting_seat]
 
 
 def read_cube_toml(filename):
-    """Reads cube data from a toml file and returns it as a list of Cards.
+    """Reads cube data from a toml file and returns it as a List[Card].
 
     Args:
         filename (str): Path (relative or absolute) to file containing cube list. File must
             be in the TOML format.
 
     Returns:
-        list of Card: The list of cards from the file.
+        List[Card]: The List[Card] from the file.
     """
     raw_data = toml.load(filename)
     return [Card.from_raw_data(*tup) for tup in raw_data.items()]

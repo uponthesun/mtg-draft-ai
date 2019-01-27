@@ -12,20 +12,15 @@ def create_graph(cards):
     Lifegain - Payoff
 
     Args:
-        cards (list of api.Card): list of cards to use as nodes in the graph.
+        cards (List[Card]): list of cards to use as nodes in the graph.
 
     Returns:
-        NetworkX graph object representing the synergy graph.
+        networkx.Graph: The synergy graph for the given cards.
     """
     G = nx.Graph()
     G.add_nodes_from(cards)
 
-    bp_graphs = {}
-
-    for card in cards:
-        for theme, role in card.tags:
-            bp_graphs.setdefault(theme, {})
-            bp_graphs[theme].setdefault(role, set()).add(card)
+    bp_graphs = _cards_by_themes(cards)
 
     for theme, roles in bp_graphs.items():
         partitions = list(roles.values())
@@ -43,6 +38,16 @@ def create_graph(cards):
     return nx.freeze(G)
 
 
+def _cards_by_themes(cards):
+    bp_graphs = {}
+
+    for card in cards:
+        for theme, role in card.tags:
+            bp_graphs.setdefault(theme, {}).setdefault(role, set()).add(card)
+
+    return bp_graphs
+
+
 def colors_subgraph(graph, colors):
     """Creates a subgraph containing only cards castable with the given colors.
 
@@ -55,7 +60,7 @@ def colors_subgraph(graph, colors):
     Returns:
         The subgraph of cards castable using only those colors of mana.
     """
-    on_color = [card for card in graph.nodes if _castable(card.color_id, colors)]
+    on_color = [card for card in graph.nodes if castable(card, colors)]
     return graph.subgraph(on_color)
 
 
@@ -71,14 +76,23 @@ def sorted_centralities(graph, centrality_measure=nx.eigenvector_centrality):
         centrality_measure (fn): A function which computes centrality for all nodes of the graph.
 
     Returns:
-        list of (api.Card, float): Tuples of (card, centrality) sorted by centrality
+        List[(Card, float)]: Tuples of (card, centrality) sorted by centrality
     """
     centralities = centrality_measure(graph)
     return _sort_dict_by_values(centralities, reverse=True)
 
 
-def _castable(color_id, colors):
-    return set(color_id).issubset(set(colors)) or color_id == 'C'
+def castable(card, colors):
+    """Returns whether the card is castable using only the given colors.
+
+    Args:
+        card (Card): The card in question.
+        colors (str): Color combination expressed as a string.
+
+    Returns:
+        bool: Whether the card is castable.
+    """
+    return set(card.color_id).issubset(set(colors)) or card.color_id == 'C'
 
 
 # sorts items in a dictionary by their values

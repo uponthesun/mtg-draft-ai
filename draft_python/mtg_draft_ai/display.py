@@ -21,7 +21,7 @@ def image_html(card_name, width=146, height=204):
 
 
 def cards_to_html(cards):
-    """Returns HTML for scryfall images for a list of api.Card. Images are all in one row."""
+    """Returns HTML for scryfall images for a List[Card]. Images are all in one row."""
     return '\n'.join([image_html(card.name) for card in cards])
 
 

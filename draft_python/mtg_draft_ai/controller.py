@@ -12,11 +12,11 @@ class DraftController:
         from the card list.
 
         Args:
-            draft_info (api.DraftInfo): Config about the draft, which will not change
+            draft_info (DraftInfo): Config about the draft, which will not change
                 during the draft.
-            drafters (list of api.Drafter): The Drafters, which may have different Picker
+            drafters (list of Drafter): The Drafters, which may have different Picker
                 implementations.
-            packs (api.Packs): The Packs to use for this draft. Should already be initialized.
+            packs (Packs): The Packs to use for this draft. Should already be initialized.
         """
         self.draft_info = draft_info
         self.drafters = drafters
@@ -27,9 +27,9 @@ class DraftController:
         """Creates a DraftController with shuffled packs generated from the card list.
 
         Args:
-            draft_info (api.DraftInfo): Config about the draft, which will not change
+            draft_info (DraftInfo): Config about the draft, which will not change
                 during the draft.
-            drafters (list of api.Drafter): The Drafters, which may have different Picker
+            drafters (list of Drafter): The Drafters, which may have different Picker
                 implementations.
         Returns:
             DraftController: A DraftController initialized with shuffled packs.
@@ -77,10 +77,10 @@ class DraftController:
                     if pack_index < 0:
                         pack_index += self.draft_info.num_drafters
 
-                    print('Drafter {} picking from pack with original seat {}'
-                          .format(drafter, pack_index))
+                    print('Drafter {} pick {}'.format(drafter, pick))
                     pack = self.packs.get_pack(phase=phase, starting_seat=pack_index)
-                    print(pack)
+                    print('Pack: {}'.format([str(card) for card in pack]))
+                    print('Cards Owned: {}'.format([str(card) for card in self.drafters[drafter].cards_owned]))
                     picked = self.drafters[drafter].pick(pack)
                     print('Picked: {}\n'.format(picked))
                     pack.remove(picked)
@@ -90,10 +90,10 @@ def create_packs(draft_info):
     """Creates a collection of shuffled packs to be used for one draft.
 
     Args:
-        draft_info (api.DraftInfo): Contains card list and draft config used to create packs.
+        draft_info (DraftInfo): Contains card list and draft config used to create packs.
 
     Returns:
-        api.Packs: A collection of shuffled packs.
+        Packs: A collection of shuffled packs.
     """
     cards_needed = draft_info.num_drafters * draft_info.num_phases * draft_info.cards_per_pack
     if cards_needed > len(draft_info.card_list):
