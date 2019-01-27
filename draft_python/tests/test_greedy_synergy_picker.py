@@ -68,6 +68,5 @@ def test_greedy_synergy_picker(cards, cards_by_name, draft_info):
     assert top_ranked.card == cards_by_name['Ayli, Eternal Pilgrim']
     # Expected:
     # total edges: priest/pridemate/ayli all connected
-    # new edges: priest/ayli and pridemate/ayli
     # common neighbors (not already in pool): swift justice
-    assert top_ranked[1:] == ('WB', 3, 2, 1, picker.default_ratings[top_ranked.card])
+    assert top_ranked[1:] == ('WB', 3, 1, picker.default_ratings[top_ranked.card])
