@@ -2,7 +2,6 @@ import sys
 from mtg_draft_ai.controller import *
 from mtg_draft_ai.api import *
 from mtg_draft_ai.brains import *
-from mtg_draft_ai import display
 from mtg_draft_ai import draftlog
 
 output_file = 'draft.html' if len(sys.argv) < 2 else sys.argv[1]
@@ -15,15 +14,12 @@ draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_
 gsp_factory = GreedySynergyPicker.factory(cube_list)
 drafters = [Drafter(gsp_factory.create(), draft_info) for i in range(0, draft_info.num_drafters)]
 
-# drafters = [Drafter(RandomPicker()) for i in range(0, draft_info.num_drafters)]
-
 controller = DraftController.create(draft_info, drafters)
 controller.run_draft()
 
 print('\n\nFinal state:')
 for drafter in drafters:
     print('{}\n'.format(drafter))
-
 
 with open(draft_log_file, 'w') as f:
     f.write(draftlog.dumps_log(controller.drafters, draft_info))
