@@ -17,6 +17,7 @@ class DraftController:
             drafters (list of Drafter): The Drafters, which may have different Picker
                 implementations.
             packs (Packs): The Packs to use for this draft. Should already be initialized.
+            debug (bool): Whether to print debugging info on the draft. Defaults to True.
         """
         self.draft_info = draft_info
         self.drafters = drafters
