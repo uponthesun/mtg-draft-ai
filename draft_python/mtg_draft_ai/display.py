@@ -3,7 +3,7 @@
 import urllib
 
 
-def image_html(card_name, width=146, height=204):
+def image_html(card_name, width=146, height=204, highlighted=False):
     """Formats an img tag for the scryfall card image.
 
     Args:
@@ -16,8 +16,12 @@ def image_html(card_name, width=146, height=204):
     """
     url_prefix = 'https://api.scryfall.com/cards/named?'
     params = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
-    return '<img src="{}{}" width="{}" height="{}" class="card-image" />'.format(url_prefix,
-                                                                                 params, width, height)
+    css_class = 'card-image'
+    if highlighted:
+        css_class += ' highlight'
+
+    return '<img src="{}{}" width="{}" height="{}" class="{}" />'.format(url_prefix, params,
+                                                                         width, height, css_class)
 
 
 def cards_to_html(cards):
@@ -25,6 +29,27 @@ def cards_to_html(cards):
     return '\n'.join([image_html(card.name) for card in cards])
 
 
-def card_names_to_html(card_names):
+def card_names_to_html(card_names, highlighted=None):
     """Returns HTML for scryfall images for a list of card names. Images are all in one row."""
-    return '\n'.join([image_html(name) for name in card_names])
+    return '\n'.join([image_html(name, highlighted=(name == highlighted)) for name in card_names])
+
+
+def default_style():
+    return """
+    <style>
+    card-image {
+        display: inline;
+        margin: 1px;
+    }
+    .highlight {
+        border-width: 10px;
+        border-color: red;
+        border-style: solid;
+    }
+    .pack {
+        border-color: black;   
+        border-style: solid;
+        padding: 5px;
+    }
+    </style>
+"""
