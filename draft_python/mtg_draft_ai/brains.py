@@ -14,12 +14,13 @@ COLOR_TRIOS = ['WUB', 'UBR', 'BRG', 'RGW', 'GWU', 'WBR', 'URG', 'BGW', 'RWU', 'G
 class RandomPicker(Picker):
     """Makes totally random picks. Used for prototyping purposes."""
 
-    def pick(self, pack, cards_owned):
+    def pick(self, pack, cards_owned, draft_info):
         """Makes a random pick from a pack.
 
         Args:
             pack (List[Card]): The current pack to pick a card out of.
             cards_owned (List[Card]): The cards already owned.
+            draft_info (DraftInfo): Information about the draft configuration.
 
         Returns:
             Card: The picked card.
@@ -38,7 +39,7 @@ class Factory:
 
 
 _GSPRating = collections.namedtuple('Rating', ['card', 'color_combo', 'total_edges',
-                                               'new_edges', 'common_neighbors', 'default'])
+                                               'common_neighbors', 'default'])
 
 
 class GreedySynergyPicker(Picker):
@@ -81,8 +82,8 @@ class GreedySynergyPicker(Picker):
                   'common_neighbors': common_neighbors}
         return Factory(GreedySynergyPicker, kwargs)
 
-    def pick(self, pack, cards_owned):
-        ranked_candidates = self._ratings(pack, cards_owned)
+    def pick(self, pack, cards_owned, draft_info):
+        ranked_candidates = self._ratings(pack, cards_owned, draft_info)
 
         # replace full card object with just card name for more readable output
         printable_candidates = [str(_GSPRating(tup[0].name, *tup[1:])) for tup in ranked_candidates]
@@ -90,7 +91,7 @@ class GreedySynergyPicker(Picker):
 
         return pack[0] if len(ranked_candidates) == 0 else ranked_candidates[0][0]
 
-    def _ratings(self, pack, cards_owned):
+    def _ratings(self, pack, cards_owned, draft_info):
         candidates = []
 
         for color_combo in COLOR_PAIRS:
@@ -103,15 +104,13 @@ class GreedySynergyPicker(Picker):
 
                 # Number of edges in the graph for the card pool plus the candidate.
                 total_edges = len(syn_graph.edges)
-                # Number of edges added by the candidate.
-                new_edges = _num_new_edges(syn_graph, candidate)
+
                 # Number of nodes in global graph which neighbor both the candidate and the card pool.
                 # Does not count cards already in the pool as neighbors.
                 common_neighbors = len(self._card_pool_common_neighbors(on_color_cards, candidate, color_combo))
                 default = self.default_ratings[candidate]
 
-                candidates.append(_GSPRating(candidate, color_combo, total_edges, new_edges,
-                                             common_neighbors, default))
+                candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors, default))
 
         # Lexicographic sort of the fields in the rating tuple (excluding the card and color combo)
         candidates.sort(key=lambda tup: tup[2:], reverse=True)
@@ -122,7 +121,7 @@ class GreedySynergyPicker(Picker):
         for card in card_pool:
             neighbors.update(self.common_neighbors[candidate][card])
 
-        # Only count on-color neighbors not already in the pool
+        # Only count on-color neighbors not already in the pool, and in the color combo
         neighbors = {c for c in neighbors
                      if c not in card_pool
                      if synergy.castable(c, colors)}
