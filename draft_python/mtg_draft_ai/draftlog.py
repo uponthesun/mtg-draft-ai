@@ -17,9 +17,8 @@ def dumps_log(drafters, draft_info):
     return toml.dumps({'draft_info': draft_info_dict, 'full_draft': full_draft})
 
 
-def load_drafters_from_log(log_filename, card_list=None):
-    with open(log_filename, 'r') as f:
-        log_obj = toml.load(f)
+def load_drafters_from_log(log_file, card_list=None):
+    log_obj = toml.load(log_file)
 
     draft_info = DraftInfo(card_list=card_list, **log_obj['draft_info'])
 
@@ -43,8 +42,8 @@ def load_drafters_from_log(log_filename, card_list=None):
     return drafters
 
 
-def log_to_html(log_filename):
-    drafters = load_drafters_from_log(log_filename)
+def log_to_html(log_file):
+    drafters = load_drafters_from_log(log_file)
 
     html = default_style()
 

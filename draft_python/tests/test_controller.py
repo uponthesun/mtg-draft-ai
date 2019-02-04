@@ -58,7 +58,7 @@ def test_run_draft():
     draft_info = DraftInfo(card_list=list(range(1, 37)), cards_per_pack=4, num_phases=3, num_drafters=3)
     drafters = [Drafter(FirstPicker(), draft_info) for _ in range(0, 3)]
 
-    controller = DraftController(packs=Packs(pack_contents), drafters=drafters, draft_info=draft_info)
+    controller = DraftController(packs=Packs(pack_contents), drafters=drafters, draft_info=draft_info, debug=False)
     controller.run_draft()
 
     assert drafters[0].cards_owned == [1, 6, 11, 4,
