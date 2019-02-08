@@ -5,7 +5,7 @@ from mtg_draft_ai.api import *
 class DraftController:
     """Runs a draft by asking each drafter to pick from the right pack in the right order."""
 
-    def __init__(self, draft_info, drafters, packs):
+    def __init__(self, draft_info, drafters, packs, debug=True):
         """Basic init method which does no manipulation of its parameters.
 
         For most cases, use DraftController.create instead, which creates shuffled packs
@@ -17,13 +17,15 @@ class DraftController:
             drafters (list of Drafter): The Drafters, which may have different Picker
                 implementations.
             packs (Packs): The Packs to use for this draft. Should already be initialized.
+            debug (bool): Whether to print debugging info on the draft. Defaults to True.
         """
         self.draft_info = draft_info
         self.drafters = drafters
         self.packs = packs
+        self.debug = debug
 
     @staticmethod
-    def create(draft_info, drafters):
+    def create(draft_info, drafters, debug=True):
         """Creates a DraftController with shuffled packs generated from the card list.
 
         Args:
@@ -38,7 +40,7 @@ class DraftController:
             raise ValueError('Exactly {} drafters required, but got {}'
                              .format(draft_info.num_drafters, len(drafters)))
         packs = create_packs(draft_info)
-        return DraftController(draft_info=draft_info, drafters=drafters, packs=packs)
+        return DraftController(draft_info=draft_info, drafters=drafters, packs=packs, debug=debug)
 
     def run_draft(self):
         """Runs a draft by asking each drafter to pick from the right pack in the right order.
@@ -51,14 +53,14 @@ class DraftController:
         # "Draft phase" is commonly referred to as "Pack" by magic players, e.g. "Pack 1 pick 5".
         # A typical draft has 3 draft phases.
         for phase in range(0, self.draft_info.num_phases):
-            print('====== Phase {} ======'.format(phase))
+            self._debug('====== Phase {} ======'.format(phase))
             # Alternate passing directions based on phase, starting with passing left.
             direction = 1 if phase % 2 == 0 else -1
 
             # "Pick index" is the "pick 1" part of "Pack 1 pick 5". In each phase, we repeat
             # picking a card and passing until we've picked all the cards in the pack.
             for pick in range(0, self.draft_info.cards_per_pack):
-                print('== Pick {} =='.format(pick))
+                self._debug('== Pick {} =='.format(pick))
 
                 # Have each drafter make a pick.
                 for drafter in range(0, self.draft_info.num_drafters):
@@ -77,14 +79,17 @@ class DraftController:
                     if pack_index < 0:
                         pack_index += self.draft_info.num_drafters
 
-                    print('Drafter {} pick {}'.format(drafter, pick))
+                    self._debug('Drafter {} pick {}'.format(drafter, pick))
                     pack = self.packs.get_pack(phase=phase, starting_seat=pack_index)
-                    print('Pack: {}'.format([str(card) for card in pack]))
-                    print('Cards Owned: {}'.format([str(card) for card in self.drafters[drafter].cards_owned]))
+                    self._debug('Pack: {}'.format([str(card) for card in pack]))
+                    self._debug('Cards Owned: {}'.format([str(card) for card in self.drafters[drafter].cards_owned]))
                     picked = self.drafters[drafter].pick(pack)
-                    print('Picked: {}\n'.format(picked))
+                    self._debug('Picked: {}\n'.format(picked))
                     pack.remove(picked)
 
+    def _debug(self, message):
+        if self.debug:
+            print(message)
 
 def create_packs(draft_info):
     """Creates a collection of shuffled packs to be used for one draft.

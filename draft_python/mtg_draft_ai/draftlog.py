@@ -4,6 +4,15 @@ from mtg_draft_ai.api import DraftInfo, Drafter
 
 
 def dumps_log(drafters, draft_info):
+    """Writes pick history of drafters into a toml log file.
+
+    Args:
+        drafters (List[Drafter]): Drafters to create log for.
+        draft_info (DraftInfo): Draft config to record.
+
+    Returns:
+        str: TOML string containing every pick for every drafter, as well as the draft info.
+    """
     full_draft = []
     i = 0
     for d in drafters:
@@ -17,9 +26,18 @@ def dumps_log(drafters, draft_info):
     return toml.dumps({'draft_info': draft_info_dict, 'full_draft': full_draft})
 
 
-def load_drafters_from_log(log_filename, card_list=None):
-    with open(log_filename, 'r') as f:
-        log_obj = toml.load(f)
+def load_drafters_from_log(log_file, card_list=None):
+    """Returns a list of drafters, with pick history, reconstructed from log file.
+
+    Args:
+        log_file: File-like object to load the log from.
+        card_list (List[Card]): Optional - specify in order to return full Card objects instead of just names.
+
+    Returns:
+        By default, returned pick history contains card names only. If card_list is provided,
+        contains full card objects instead.
+    """
+    log_obj = toml.load(log_file)
 
     draft_info = DraftInfo(card_list=card_list, **log_obj['draft_info'])
 
@@ -43,8 +61,10 @@ def load_drafters_from_log(log_filename, card_list=None):
     return drafters
 
 
-def log_to_html(log_filename):
-    drafters = load_drafters_from_log(log_filename)
+def log_to_html(log_file):
+    """Outputs HTML visualization of a draft from the given log file."""
+
+    drafters = load_drafters_from_log(log_file)
 
     html = default_style()
 

@@ -87,7 +87,7 @@ class Drafter:
         return pick
 
     def __repr__(self):
-        return 'Cards owned: {} Picker state: {}'.format([card.name for card in self.cards_owned],
+        return 'Cards owned: {} Picker state: {}'.format([str(card) for card in self.cards_owned],
                                                          self.picker)
 
 
