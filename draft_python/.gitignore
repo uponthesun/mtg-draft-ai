@@ -9,3 +9,5 @@ notebooks/sealed_pools/
 notebooks/*.html
 drafts/
 *.html
+draftlog.txt
+*.debug

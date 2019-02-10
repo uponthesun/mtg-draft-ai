@@ -20,8 +20,6 @@ for drafter in drafters:
     """
     deck = deckbuild.best_two_color_build(drafter.cards_owned)
     deck_graph = synergy.create_graph(deck)
-    #deck_with_degrees = [(c.name, deck_graph.degree(c) if c in deck_graph else 0) for c in deck]
-    #deck_with_degrees.sort(key=lambda tup: tup[1], reverse=True)
     sorted_deck = [(tup[0].name, tup[1]) for tup in synergy.sorted_centralities(deck_graph)]
 
     print('\n'.join([str(tup) for tup in sorted_deck]))

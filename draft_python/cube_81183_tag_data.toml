@@ -160,12 +160,6 @@ color_identity = "R"
 types = ["creature"]
 tags = ["Signpost","Spells - Payoff","Higher Toughness","Big","Keyword","Card Draw"]
 
-["Bile Blight"]
-mana_cost = ["B","B"]
-color_identity = "B"
-types = ["instant"]
-tags = ["Removal"]
-
 ["Birds of Paradise"]
 mana_cost = ["G"]
 color_identity = "G"
@@ -195,12 +189,6 @@ mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Sacrifice - Payoff","Vampires - Enabler","Lifegain - Enabler"]
-
-["Bloodfell Caves"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
 
 ["Bloodhall Priest"]
 mana_cost = ["2","B","R"]
@@ -237,12 +225,6 @@ mana_cost = ["G"]
 color_identity = "G"
 types = ["instant"]
 tags = ["Trick","Heroic - Enabler"]
-
-["Blossoming Sands"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
 
 ["Bomat Courier"]
 mana_cost = ["1"]
@@ -290,13 +272,7 @@ tags = ["Signpost","ETB - Payoff","Spirits - Enabler","Higher Toughness"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Keyword","Spells - Enabler"]
-
-["Brion Stoutarm"]
-mana_cost = ["2","R","W"]
-color_identity = "RW"
-types = ["creature"]
-tags = ["Lifegain - Enabler","Big"]
+tags = ["Removal","Keyword","Spells - Enabler","Removal - Size"]
 
 ["Brittle Effigy"]
 mana_cost = ["1"]
@@ -340,11 +316,23 @@ color_identity = "C"
 types = ["land"]
 tags = []
 
+["Centaur's Herald"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Flash - Threat"]
+
 ["Chart a Course"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["sorcery"]
 tags = ["Graveyard - Enabler","Keyword","Card Draw","Spells - Enabler","Madness/Hellbent - Enabler"]
+
+["Cinder Barrens"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Clifftop Retreat"]
 mana_cost = []
@@ -368,7 +356,7 @@ tags = ["Counters - Enabler","Keyword","Ninjutsu - Enabler"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Sacrifice - Payoff","Removal","Spells - Enabler"]
+tags = ["Sacrifice - Payoff","Removal","Spells - Enabler","Removal - Size"]
 
 ["Commune with the Gods"]
 mana_cost = ["1","G"]
@@ -484,17 +472,11 @@ color_identity = "BU"
 types = ["creature"]
 tags = ["ETB - Enabler","Bounce"]
 
-["Dismal Backwater"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
 ["Dismissive Pyromancer"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Enabler","Graveyard - Enabler"]
+tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Enabler","Graveyard - Enabler","Removal - Size"]
 
 ["Disperse"]
 mana_cost = ["1","U"]
@@ -544,6 +526,12 @@ color_identity = "B"
 types = ["creature"]
 tags = ["ETB - Enabler","Vampires - Enabler"]
 
+["Echoing Decay"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["Removal","Removal - Size"]
+
 ["Embodiment of Fury"]
 mana_cost = ["3","R"]
 color_identity = "R"
@@ -584,7 +572,7 @@ tags = ["Landfall - Enabler","Graveyard - Enabler","Madness/Hellbent - Enabler"]
 mana_cost = ["X","X","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Heroic - Enabler","Keyword","Spells - Enabler"]
+tags = ["Removal","Heroic - Enabler","Keyword","Spells - Enabler","Removal - Size"]
 
 ["Familiar's Ruse"]
 mana_cost = ["U","U"]
@@ -598,12 +586,6 @@ color_identity = "W"
 types = ["creature"]
 tags = ["Heroic - Payoff","Higher Toughness","Keyword"]
 
-["Felidar Sovereign"]
-mana_cost = ["4","W","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Lifegain - Enabler","Lifegain - Payoff","Signpost","Higher Toughness"]
-
 ["Fettergeist"]
 mana_cost = ["2","U"]
 color_identity = "U"
@@ -614,7 +596,7 @@ tags = ["Higher Toughness","Spirits - Enabler","Ninjutsu - Enabler"]
 mana_cost = ["1","R","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Keyword","Spells - Enabler","Madness/Hellbent - Payoff"]
+tags = ["Keyword","Spells - Enabler","Madness/Hellbent - Payoff","Removal","Removal - Size"]
 
 ["Filigree Familiar"]
 mana_cost = ["3"]
@@ -628,17 +610,23 @@ color_identity = "G"
 types = ["enchantment"]
 tags = ["Tokens - Enabler","Heroic - Enabler"]
 
-["Flameblade Adept"]
-mana_cost = ["R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Madness/Hellbent - Payoff"]
+["Forsaken Sanctuary"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Fortune's Favor"]
 mana_cost = ["3","U"]
 color_identity = "U"
 types = ["instant"]
 tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
+
+["Foul Orchard"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Foundry of the Consuls"]
 mana_cost = []
@@ -692,7 +680,7 @@ tags = ["Signpost","Graveyard - Payoff","Big"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Removal","Spells - Enabler"]
+tags = ["Removal","Spells - Enabler","Removal - Size"]
 
 ["Gird for Battle"]
 mana_cost = ["W"]
@@ -752,7 +740,7 @@ tags = ["Higher Toughness","ETB - Enabler"]
 mana_cost = ["3","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Keyword","Spells - Enabler"]
+tags = ["Keyword","Spells - Enabler","Sacrifice - Enabler"]
 
 ["Graveyard Marshal"]
 mana_cost = ["B","B"]
@@ -806,19 +794,25 @@ tags = ["Counters - Payoff","Signpost"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Removal","Heroic - Enabler","Spells - Enabler"]
+tags = ["Removal","Heroic - Enabler","Spells - Enabler","Removal - Size"]
 
 ["Harvest Pyre"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Graveyard - Payoff","Spells - Enabler"]
+tags = ["Removal","Graveyard - Payoff","Spells - Enabler","Removal - Size"]
 
 ["Haunted Dead"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Tokens - Enabler","Graveyard - Payoff","Spirits - Enabler","ETB - Enabler","Madness/Hellbent - Enabler","Sacrifice - Enabler"]
+
+["Hearthfire Hobgoblin"]
+mana_cost = ["RW","RW","RW"]
+color_identity = "RW"
+types = ["creature"]
+tags = []
 
 ["Hedron Archive"]
 mana_cost = ["4"]
@@ -844,11 +838,17 @@ color_identity = "G"
 types = ["creature"]
 tags = ["Graveyard - Enabler","Landfall - Enabler","Land Graveyard - Enabler"]
 
+["Highland Lake"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
 ["Higure, the Still Wind"]
 mana_cost = ["3","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff","Signpost","Ninjutsu - Enabler"]
+tags = ["Ninjutsu - Payoff","Signpost","Ninjutsu - Enabler","Higher Toughness"]
 
 ["Hinterland Harbor"]
 mana_cost = []
@@ -861,6 +861,12 @@ mana_cost = ["3","W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["Spirits - Enabler","Flash - Threat"]
+
+["Hooded Hydra"]
+mana_cost = ["X","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Counters - Enabler","Counters - Payoff","Tokens - Enabler"]
 
 ["Hostile Desert"]
 mana_cost = []
@@ -878,7 +884,7 @@ tags = ["ETB - Payoff","Spells - Enabler"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["sorcery"]
-tags = ["Removal","Spells - Enabler"]
+tags = ["Removal","Spells - Enabler","Removal - Size"]
 
 ["Indulgent Aristocrat"]
 mana_cost = ["B"]
@@ -891,6 +897,12 @@ mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Enabler"]
+
+["Isareth the Awakener"]
+mana_cost = ["1","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Graveyard - Payoff"]
 
 ["Isolated Chapel"]
 mana_cost = []
@@ -921,12 +933,6 @@ mana_cost = ["1","U","R"]
 color_identity = "UR"
 types = ["creature"]
 tags = ["Higher Toughness","Wizards - Enabler","Card Draw"]
-
-["Jungle Hollow"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
 
 ["Juniper Order Ranger"]
 mana_cost = ["3","G","W"]
@@ -980,13 +986,13 @@ tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Ninjutsu - Enabler",
 mana_cost = ["X","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Removal"]
+tags = ["Removal","Removal - Size"]
 
 ["Kindly Stranger"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Removal","Higher Toughness","Keyword","Madness/Hellbent - Payoff"]
+tags = ["Graveyard - Payoff","Removal","Higher Toughness","Keyword","Madness/Hellbent - Payoff","Removal - Size"]
 
 ["Kiri-Onna"]
 mana_cost = ["4","U"]
@@ -1000,11 +1006,11 @@ color_identity = "B"
 types = ["creature"]
 tags = ["Ninjutsu - Enabler"]
 
-["Lambholt Elder"]
-mana_cost = ["2","G"]
-color_identity = "G"
+["Knotvine Paladin"]
+mana_cost = ["G","W"]
+color_identity = "GW"
 types = ["creature"]
-tags = ["Flash - Threat"]
+tags = ["Tokens - Payoff"]
 
 ["Lantern Kami"]
 mana_cost = ["W"]
@@ -1022,7 +1028,7 @@ tags = ["Tokens - Enabler","Tokens - Payoff","Keyword","Spells - Enabler","Heroi
 mana_cost = ["R","W"]
 color_identity = "RW"
 types = ["instant"]
-tags = ["Removal","Lifegain - Enabler","Spells - Enabler"]
+tags = ["Removal","Lifegain - Enabler","Spells - Enabler","Removal - Size"]
 
 ["Liliana's Specter"]
 mana_cost = ["1","B","B"]
@@ -1064,7 +1070,7 @@ tags = ["Big","Flash - Threat"]
 mana_cost = ["3","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Keyword","Land Graveyard - Enabler","Removal","Spells - Enabler"]
+tags = ["Keyword","Land Graveyard - Enabler","Removal","Spells - Enabler","Removal - Size"]
 
 ["Magmatic Force"]
 mana_cost = ["5","R","R","R"]
@@ -1088,7 +1094,7 @@ tags = ["Sacrifice - Payoff","Signpost"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Payoff"]
+tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Payoff","Removal - Size"]
 
 ["Magus of the Wheel"]
 mana_cost = ["2","R"]
@@ -1126,17 +1132,17 @@ color_identity = "W"
 types = ["creature"]
 tags = ["Tokens - Enabler","Lifegain - Enabler","Signpost","Vampires - Enabler","Vampires - Payoff"]
 
+["Meandering River"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
 ["Memorial to Unity"]
 mana_cost = []
 color_identity = "G"
 types = ["land"]
 tags = ["Land Graveyard - Enabler"]
-
-["Mercy Killing"]
-mana_cost = ["2","GW"]
-color_identity = "GW"
-types = ["instant"]
-tags = ["Removal","Tokens - Enabler","Spells - Enabler"]
 
 ["Metallic Mimic"]
 mana_cost = ["2"]
@@ -1208,7 +1214,7 @@ tags = ["Ninjutsu - Payoff"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["enchantment"]
-tags = ["Land Graveyard - Enabler"]
+tags = ["Land Graveyard - Enabler","Removal","Removal - Size"]
 
 ["Murderous Cut"]
 mana_cost = ["4","B"]
@@ -1226,7 +1232,7 @@ tags = ["Signpost","Flash - Counterspell"]
 mana_cost = ["2","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Signpost","Wizards - Payoff","Spells - Payoff","ETB - Enabler","Wizards - Enabler","Flash - Threat"]
+tags = ["Signpost","Wizards - Payoff","Spells - Payoff","Wizards - Enabler","Flash - Threat"]
 
 ["Nearheath Chaplain"]
 mana_cost = ["3","W"]
@@ -1245,6 +1251,12 @@ mana_cost = ["7","B","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Signpost","Graveyard - Payoff","Higher Toughness","Big","Keyword"]
+
+["Necrotic Wound"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["Graveyard - Payoff"]
 
 ["Negate"]
 mana_cost = ["1","U"]
@@ -1306,6 +1318,12 @@ color_identity = "GR"
 types = ["creature"]
 tags = ["Reanimator - Payoff","Big","Landfall - Payoff","Keyword"]
 
+["One Dozen Eyes"]
+mana_cost = ["5","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["Tokens - Enabler"]
+
 ["Oppressive Rays"]
 mana_cost = ["W"]
 color_identity = "W"
@@ -1323,12 +1341,6 @@ mana_cost = ["3","G"]
 color_identity = "G"
 types = ["creature"]
 tags = ["Landfall - Enabler"]
-
-["Oracle's Vault"]
-mana_cost = ["4"]
-color_identity = "C"
-types = ["artifact"]
-tags = ["Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
 
 ["Ordeal of Heliod"]
 mana_cost = ["1","W"]
@@ -1352,7 +1364,7 @@ tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreat
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Tokens - Payoff","Spells - Enabler"]
+tags = ["Removal","Tokens - Payoff","Spells - Enabler","Removal - Size"]
 
 ["Pacification Array"]
 mana_cost = ["1"]
@@ -1406,7 +1418,7 @@ tags = ["ETB - Payoff","Bounce","Spells - Enabler"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Removal - Size"]
 
 ["Phalanx Leader"]
 mana_cost = ["W","W"]
@@ -1466,7 +1478,7 @@ tags = ["Tokens - Enabler","Heroic - Enabler"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Removal","Heroic - Enabler"]
+tags = ["Removal","Heroic - Enabler","Removal - Size"]
 
 ["Prophet of Kruphix"]
 mana_cost = ["3","U","G"]
@@ -1484,7 +1496,7 @@ tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Ch
 mana_cost = ["1"]
 color_identity = "R"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Removal - Size"]
 
 ["Pyromancer's Goggles"]
 mana_cost = ["5"]
@@ -1534,6 +1546,12 @@ color_identity = "B"
 types = ["creature"]
 tags = ["Sacrifice - Enabler","Graveyard - Payoff"]
 
+["Reckless Racer"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Madness/Hellbent - Enabler","Higher Toughness"]
+
 ["Renegade Krasis"]
 mana_cost = ["1","G","G"]
 color_identity = "G"
@@ -1582,23 +1600,11 @@ color_identity = "R"
 types = ["creature"]
 tags = ["Graveyard - Enabler","ETB - Enabler","Card Draw","Madness/Hellbent - Enabler"]
 
-["Rugged Highlands"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
 ["Ruin Raider"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Keyword","Card Draw"]
-
-["Runehorn Hellkite"]
-mana_cost = ["5","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Big","Madness/Hellbent - Payoff"]
 
 ["Sai, Master Thopterist"]
 mana_cost = ["2","U"]
@@ -1623,12 +1629,6 @@ mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
 tags = ["Graveyard - Enabler","ETB - Enabler"]
-
-["Scoured Barrens"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
 
 ["Scourge Wolf"]
 mana_cost = ["R","R"]
@@ -1736,7 +1736,7 @@ tags = ["Land Graveyard - Enabler"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Higher Toughness","Big","ETB - Enabler","Artifacts (Cheap) - Payoff"]
+tags = ["Higher Toughness","Big","Artifacts (Cheap) - Payoff"]
 
 ["Skinshifter"]
 mana_cost = ["1","G"]
@@ -1767,6 +1767,12 @@ mana_cost = ["1","B"]
 color_identity = "B"
 types = ["instant"]
 tags = ["Removal"]
+
+["Soul's Fire"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Spells - Enabler","Heroic - Enabler","Removal","Removal - Size"]
 
 ["Soulfire Grand Master"]
 mana_cost = ["1","W"]
@@ -1804,17 +1810,17 @@ color_identity = "W"
 types = ["creature"]
 tags = ["Tokens - Enabler","Keyword"]
 
-["Stitch Together"]
-mana_cost = ["B","B"]
-color_identity = "B"
-types = ["sorcery"]
-tags = ["Reanimator - Enabler","Keyword"]
-
 ["Stitcher's Supplier"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Graveyard - Enabler"]
+
+["Stone Quarry"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Stream of Unconsciousness"]
 mana_cost = ["U"]
@@ -1827,6 +1833,12 @@ mana_cost = ["B","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Vampires - Enabler","Vampires - Payoff","Madness/Hellbent - Enabler"]
+
+["Submerged Boneyard"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Sulfur Falls"]
 mana_cost = []
@@ -1870,17 +1882,17 @@ color_identity = "W"
 types = ["instant"]
 tags = ["Trick","Heroic - Enabler","Lifegain - Enabler","Spells - Enabler"]
 
-["Swiftwater Cliffs"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
 ["Tallowisp"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["Spirits - Payoff","Keyword","Spirits - Enabler","Higher Toughness"]
+
+["Tapestry of the Ages"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Artifacts (Noncreature) - Enabler","Artifacts - Enabler"]
 
 ["Temple of Abandon"]
 mana_cost = []
@@ -1990,17 +2002,17 @@ color_identity = "C"
 types = ["artifact","creature"]
 tags = ["Tokens - Enabler","Counters - Enabler","Counters - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
 
-["Thornwood Falls"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
 ["Thought Courier"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
 tags = ["Wizards - Enabler","Madness/Hellbent - Enabler"]
+
+["Thresher Lizard"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Madness/Hellbent - Payoff"]
 
 ["Throat Slitter"]
 mana_cost = ["4","B"]
@@ -2013,6 +2025,12 @@ mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
 tags = ["Land Graveyard - Payoff","Graveyard - Payoff","Landfall - Enabler","Higher Toughness"]
+
+["Timber Gorge"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
 
 ["Titan's Strength"]
 mana_cost = ["R"]
@@ -2038,7 +2056,7 @@ color_identity = "B"
 types = ["instant"]
 tags = ["Removal"]
 
-["Tranquil Cove"]
+["Tranquil Expanse"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
@@ -2054,7 +2072,7 @@ tags = ["Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enab
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Big"]
+tags = ["Big","Sacrifice - Enabler"]
 
 ["Tuskguard Captain"]
 mana_cost = ["2","G"]
@@ -2066,7 +2084,7 @@ tags = ["Counters - Enabler","Counters - Payoff","Higher Toughness","Keyword"]
 mana_cost = ["3","B","R"]
 color_identity = "BR"
 types = ["instant"]
-tags = ["Removal","Madness/Hellbent - Payoff"]
+tags = ["Removal","Madness/Hellbent - Payoff","Removal - Size"]
 
 ["Tymaret, the Murder King"]
 mana_cost = ["B","R"]
@@ -2096,13 +2114,13 @@ tags = ["ETB - Enabler"]
 mana_cost = ["B","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Vampires - Payoff","Removal"]
+tags = ["Vampires - Payoff","Removal","Removal - Size"]
 
 ["Valorous Stance"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Removal","Trick","Heroic - Enabler","Spells - Enabler"]
+tags = ["Removal","Trick","Heroic - Enabler","Spells - Enabler","Removal - Size"]
 
 ["Vampire Nighthawk"]
 mana_cost = ["1","B","B"]
@@ -2116,17 +2134,11 @@ color_identity = "B"
 types = ["enchantment"]
 tags = ["Lifegain - Enabler","Sacrifice - Payoff","Card Draw"]
 
-["Vastwood Hydra"]
-mana_cost = ["X","G","G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Counters - Enabler","Big"]
-
 ["Vengeful Rebel"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Removal","Sacrifice - Payoff","Keyword","ETB - Enabler"]
+tags = ["Removal","Sacrifice - Payoff","Keyword","ETB - Enabler","Removal - Size"]
 
 ["Verdant Embrace"]
 mana_cost = ["3","G","G"]
@@ -2134,17 +2146,11 @@ color_identity = "G"
 types = ["enchantment"]
 tags = ["Tokens - Enabler","Heroic - Enabler","Big"]
 
-["Verdeloth the Ancient"]
-mana_cost = ["4","G","G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Tokens - Enabler","Big","Keyword","Higher Toughness"]
-
 ["Victimize"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Sacrifice - Payoff","Graveyard - Payoff","Reanimator - Enabler","Signpost"]
+tags = ["Graveyard - Payoff","Reanimator - Enabler","Signpost"]
 
 ["Viridian Zealot"]
 mana_cost = ["G","G"]
@@ -2156,7 +2162,7 @@ tags = []
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Vampires - Enabler","Wizards - Enabler"]
+tags = ["Vampires - Enabler","Wizards - Enabler","Sacrifice - Payoff"]
 
 ["Vizier of Deferment"]
 mana_cost = ["2","W"]
@@ -2188,23 +2194,23 @@ color_identity = "C"
 types = ["artifact"]
 tags = ["Signpost","Artifacts - Payoff","Keyword","Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Creature) - Enabler"]
 
+["Weight of Conscience"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Removal"]
+
 ["Whisper, Blood Liturgist"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
 tags = ["Sacrifice - Payoff","Reanimator - Enabler","Signpost","ETB - Payoff"]
 
-["Wind-Scarred Crag"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
 ["Wizard's Lightning"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Wizards - Payoff","Removal","Spells - Enabler"]
+tags = ["Wizards - Payoff","Removal","Spells - Enabler","Removal - Size"]
 
 ["Wizard's Retort"]
 mana_cost = ["1","U","U"]
@@ -2213,6 +2219,12 @@ types = ["instant"]
 tags = ["Wizards - Payoff","Flash - Counterspell","Spells - Enabler"]
 
 ["Woodland Cemetery"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Woodland Stream"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
@@ -2246,10 +2258,4 @@ tags = ["Signpost","Spells - Payoff","Tokens - Enabler"]
 mana_cost = ["1","U","B"]
 color_identity = "BU"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff","Signpost"]
-
-["Zombify"]
-mana_cost = ["3","B"]
-color_identity = "B"
-types = ["sorcery"]
-tags = ["Reanimator - Enabler"]
+tags = ["Ninjutsu - Payoff","Signpost","Higher Toughness"]

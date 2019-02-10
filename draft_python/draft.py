@@ -30,4 +30,4 @@ print('Draft log written to {}'.format(draft_log_file))
 html = draftlog.log_to_html(draft_log_file)
 with open(output_file, 'w') as f:
     f.write(html)
-print('Draft HTML written to {}'.format(draft_log_file))
+print('Draft HTML written to {}'.format(output_file))

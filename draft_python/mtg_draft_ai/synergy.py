@@ -64,7 +64,7 @@ def colors_subgraph(graph, colors):
     return graph.subgraph(on_color)
 
 
-def sorted_centralities(graph, centrality_measure=nx.eigenvector_centrality):
+def sorted_centralities(graph, centrality_measure=nx.eigenvector_centrality_numpy):
     """Computes centralities for all nodes of a graph and returns them sorted highest to lowest.
 
     A centrality measure is a way to measure the importance of a node in a graph.
