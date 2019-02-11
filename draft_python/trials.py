@@ -81,11 +81,11 @@ def decks_to_html(decks):
 
     i = 0
     for deck in decks:
-        deck_graph = synergy.create_graph(deck)
-        sorted_deck = [tup[0].name for tup in synergy.sorted_centralities(deck_graph)]
+        deck_graph = synergy.create_graph(deck, remove_isolated=False)
+        sorted_deck = [tup[0] for tup in synergy.sorted_centralities(deck_graph)]
 
         html += 'Deck {} - # Edges: {} \n'.format(i, len(deck_graph.edges))
-        html += '<div>\n{}</div>\n'.format(display.card_names_to_html(sorted_deck))
+        html += '<div>\n{}</div>\n'.format(display.cards_to_html(sorted_deck))
         i += 1
 
     return html

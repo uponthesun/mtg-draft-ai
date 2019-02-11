@@ -17,7 +17,7 @@ def best_two_color_build(card_pool, build_fn=centralities_build):
     print('\nBuilding pool: {}'.format([c.name for c in card_pool]))
 
     candidates = []
-    graph = synergy.create_graph(card_pool)
+    graph = synergy.create_graph(card_pool, remove_isolated=False)
 
     for colors in ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG']:
         try:
