@@ -20,7 +20,7 @@ def dumps_log(drafters, draft_info):
         full_draft.append({'drafter': i, 'picks': picks})
         i += 1
 
-    draft_info_dict = draft_info.__dict__
+    draft_info_dict = draft_info.__dict__.copy()
     draft_info_dict.pop('card_list')
 
     return toml.dumps({'draft_info': draft_info_dict, 'full_draft': full_draft})

@@ -19,19 +19,22 @@ def main():
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
     drafter_factory = GreedySynergyPicker.factory(cube_list)
 
+    edge_counts = []
     for i in range(0, args.n):
-        run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory)
+        edge_counts += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory)
+
+    result = sum(edge_counts) / len(edge_counts)
+    print('Avg. # of edges: {}'.format(result))
 
 
 def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn=deckbuild.best_two_color_build):
     draft_log_file = os.path.join(output_dir, 'draft-log_{}.txt'.format(name))
     draft_html_file = os.path.join(output_dir, 'draft_{}.html'.format(name))
     draft_debug_file = os.path.join(output_dir, 'draft-debug_{}.txt'.format(name))
-
     build_html_file = os.path.join(output_dir, 'build_{}.html'.format(name))
     build_debug_file = os.path.join(output_dir, 'build-debug_{}.txt'.format(name))
 
-    drafters = [Drafter(drafter_factory.create(), draft_info) for i in range(0, draft_info.num_drafters)]
+    drafters = [Drafter(drafter_factory.create(), draft_info) for _ in range(0, draft_info.num_drafters)]
 
     # Run draft, redirecting output to debug file
     with open(draft_debug_file, 'w') as f:
@@ -63,6 +66,14 @@ def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn=deckbu
     with open(build_html_file, 'w') as f:
         f.write(decks_to_html(decks))
     print('Build HTML written to {}'.format(build_html_file))
+
+    # Return # of edges in each deck
+    return [edges_in_deck(d) for d in decks]
+
+
+def edges_in_deck(deck):
+    deck_graph = synergy.create_graph(deck)
+    return len(deck_graph.edges)
 
 
 def decks_to_html(decks):
