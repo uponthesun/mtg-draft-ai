@@ -2,7 +2,6 @@ from mtg_draft_ai import synergy
 
 
 _NONLANDS_IN_DECK = 23
-_CORE_MINIMUM = 17
 
 
 def centralities_build(card_pool_graph):
