@@ -21,13 +21,14 @@ def main():
 
     edge_counts = []
     for i in range(0, args.n):
-        edge_counts += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory)
+        edge_counts += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory,
+                                 deckbuild_fn=deckbuild.best_two_color_synergy_build)
 
     result = sum(edge_counts) / len(edge_counts)
     print('Avg. # of edges: {}'.format(result))
 
 
-def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn=deckbuild.best_two_color_build):
+def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn):
     draft_log_file = os.path.join(output_dir, 'draft-log_{}.txt'.format(name))
     draft_html_file = os.path.join(output_dir, 'draft_{}.html'.format(name))
     draft_debug_file = os.path.join(output_dir, 'draft-debug_{}.txt'.format(name))

@@ -8,7 +8,7 @@ output_file = 'build.html' if len(sys.argv) < 3 else sys.argv[2]
 cube_list = read_cube_toml('cube_81183_tag_data.toml')
 drafters = draftlog.load_drafters_from_log(log_file, card_list=cube_list)
 
-decks = [deckbuild.best_two_color_build(d.cards_owned) for d in drafters]
+decks = [deckbuild.best_two_color_synergy_build(d.cards_owned) for d in drafters]
 
 
 def decks_to_html(decks):
