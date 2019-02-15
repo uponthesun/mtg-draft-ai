@@ -2,10 +2,10 @@ import sys
 from mtg_draft_ai.controller import *
 from mtg_draft_ai.api import *
 from mtg_draft_ai.brains import *
-from mtg_draft_ai import display, draftlog
+from mtg_draft_ai import draftlog
 
-output_file = 'draft.html' if len(sys.argv) < 2 else sys.argv[1]
-draft_log_file = 'draftlog.txt' if len(sys.argv) < 3 else sys.argv[2]
+output_file = 'output/draft.html' if len(sys.argv) < 2 else sys.argv[1]
+draft_log_file = 'output/draftlog.txt' if len(sys.argv) < 3 else sys.argv[2]
 
 cube_list = read_cube_toml('cube_81183_tag_data.toml')
 
@@ -30,4 +30,4 @@ print('Draft log written to {}'.format(draft_log_file))
 html = draftlog.log_to_html(draft_log_file)
 with open(output_file, 'w') as f:
     f.write(html)
-print('Draft HTML written to {}'.format(draft_log_file))
+print('Draft HTML written to {}'.format(output_file))
