@@ -86,7 +86,7 @@ tags = ["Heroic - Payoff","Keyword"]
 mana_cost = ["3","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Signpost","Counters - Payoff","ETB - Enabler","Card Draw"]
+tags = ["Signpost","Counters - Payoff","Card Draw"]
 
 ["Artificer's Assistant"]
 mana_cost = ["U"]

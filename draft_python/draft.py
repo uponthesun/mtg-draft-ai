@@ -4,8 +4,8 @@ from mtg_draft_ai.api import *
 from mtg_draft_ai.brains import *
 from mtg_draft_ai import draftlog
 
-output_file = 'draft.html' if len(sys.argv) < 2 else sys.argv[1]
-draft_log_file = 'draftlog.txt' if len(sys.argv) < 3 else sys.argv[2]
+output_file = 'output/draft.html' if len(sys.argv) < 2 else sys.argv[1]
+draft_log_file = 'output/draftlog.txt' if len(sys.argv) < 3 else sys.argv[2]
 
 cube_list = read_cube_toml('cube_81183_tag_data.toml')
 

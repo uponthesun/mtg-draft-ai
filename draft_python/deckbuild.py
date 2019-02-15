@@ -3,7 +3,7 @@ from mtg_draft_ai import draftlog, deckbuild, display, synergy
 from mtg_draft_ai.api import read_cube_toml
 
 log_file = sys.argv[1]
-output_file = 'build.html' if len(sys.argv) < 3 else sys.argv[2]
+output_file = 'output/build.html' if len(sys.argv) < 3 else sys.argv[2]
 
 cube_list = read_cube_toml('cube_81183_tag_data.toml')
 drafters = draftlog.load_drafters_from_log(log_file, card_list=cube_list)
@@ -28,3 +28,4 @@ def decks_to_html(decks):
 
 with open(output_file, 'w') as f:
     f.write(decks_to_html(decks))
+print('Deckbuild HTML written to {}'.format(output_file))

@@ -7,8 +7,8 @@ venv*
 notebooks/graph_images/
 notebooks/sealed_pools/
 notebooks/*.html
-drafts/*.html
-drafts/*.txt
+output/*.html
+output/*.txt
 *.html
 draftlog.txt
 *.debug
