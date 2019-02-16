@@ -1,6 +1,7 @@
 import argparse
 import contextlib
 import os
+import statistics
 from mtg_draft_ai.controller import *
 from mtg_draft_ai.api import *
 from mtg_draft_ai.brains import *
@@ -24,8 +25,10 @@ def main():
         edge_counts += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory,
                                  deckbuild_fn=deckbuild.best_two_color_synergy_build)
 
-    result = sum(edge_counts) / len(edge_counts)
-    print('Avg. # of edges: {}'.format(result))
+    mean = statistics.mean(edge_counts)
+    median = statistics.median(edge_counts)
+    print('Mean # of edges: {}'.format(mean))
+    print('Median # of edges: {}'.format(median))
 
 
 def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn):
