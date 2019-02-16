@@ -107,7 +107,7 @@ class GreedySynergyPicker(Picker):
 
                 # Number of nodes in global graph which neighbor both the candidate and the card pool.
                 # Does not count cards already in the pool as neighbors.
-                common_neighbors = len(self._card_pool_common_neighbors(on_color_cards, candidate, color_combo))
+                common_neighbors = self._common_neighbors_weight(on_color_cards, candidate, color_combo)
                 default = self.default_ratings[candidate]
 
                 candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors, default))
@@ -116,16 +116,16 @@ class GreedySynergyPicker(Picker):
         candidates.sort(key=lambda tup: tup[2:], reverse=True)
         return candidates
 
-    def _card_pool_common_neighbors(self, card_pool, candidate, colors):
-        neighbors = set()
-        for card in card_pool:
-            neighbors.update(self.common_neighbors[candidate][card])
+    def _common_neighbors_weight(self, card_pool, candidate, colors):
+        neighbor_count = 0
 
-        # Only count on-color neighbors not already in the pool, and in the color combo
-        neighbors = {c for c in neighbors
-                     if c not in card_pool
-                     if synergy.castable(c, colors)}
-        return neighbors
+        for c in card_pool:
+            valid_neighbors = [n.name for n in self.common_neighbors[candidate][c]
+                               if synergy.castable(n, colors)
+                               if n not in card_pool]
+            neighbor_count += len(valid_neighbors)
+
+        return neighbor_count
 
 
 def all_common_neighbors(graph, cards):
