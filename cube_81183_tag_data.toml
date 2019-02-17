@@ -224,7 +224,7 @@ tags = ["Counters - Enabler","Tokens - Payoff","Keyword","Sacrifice - Payoff"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Flash - Interaction"]
+tags = ["Trick","Heroic - Enabler"]
 
 ["Bomat Courier"]
 mana_cost = ["1"]
@@ -482,19 +482,19 @@ tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Enabler","Graveyard - 
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Bounce","Spells - Enabler","Flash - Interaction"]
+tags = ["Bounce","Spells - Enabler"]
 
 ["Dissolve"]
 mana_cost = ["1","U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Spells - Enabler","Flash - Interaction"]
+tags = ["Flash - Counterspell","Spells - Enabler"]
 
 ["Dive Down"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler","Flash - Interaction"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler"]
 
 ["Dragon Mantle"]
 mana_cost = ["R"]
@@ -548,7 +548,7 @@ tags = ["Sacrifice - Enabler","ETB - Enabler"]
 mana_cost = ["X","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler","Flash - Threat"]
+tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
 
 ["Essence Flux"]
 mana_cost = ["U"]
@@ -578,7 +578,7 @@ tags = ["Removal","Heroic - Enabler","Keyword","Spells - Enabler","Removal - Siz
 mana_cost = ["U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Interaction"]
+tags = ["Flash - Counterspell"]
 
 ["Favored Hoplite"]
 mana_cost = ["W"]
@@ -620,7 +620,7 @@ tags = []
 mana_cost = ["3","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler","Flash - Threat"]
+tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
 
 ["Foul Orchard"]
 mana_cost = []
@@ -698,7 +698,7 @@ tags = []
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Higher Toughness","Ninjutsu - Enabler","Artifacts - Payoff"]
+tags = ["Higher Toughness","ETB - Enabler","Ninjutsu - Enabler","Artifacts - Payoff"]
 
 ["Goblin Assault"]
 mana_cost = ["2","R"]
@@ -1106,7 +1106,7 @@ tags = ["Graveyard - Enabler","Wizards - Enabler","Madness/Hellbent - Enabler"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Spells - Enabler","Flash - Interaction"]
+tags = ["Flash - Counterspell","Spells - Enabler"]
 
 ["Martial Glory"]
 mana_cost = ["W","R"]
@@ -1226,7 +1226,7 @@ tags = ["Removal","Graveyard - Payoff","Keyword"]
 mana_cost = ["1","G","U","U"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Signpost","Flash - Interaction"]
+tags = ["Signpost","Flash - Counterspell"]
 
 ["Naru Meha, Master Wizard"]
 mana_cost = ["2","U","U"]
@@ -1262,7 +1262,7 @@ tags = ["Graveyard - Payoff"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Spells - Enabler","Flash - Interaction"]
+tags = ["Flash - Counterspell","Spells - Enabler"]
 
 ["Neheb, the Eternal"]
 mana_cost = ["3","R","R"]
@@ -1874,7 +1874,7 @@ tags = ["Signpost","Spirits - Enabler","Spirits - Payoff","Higher Toughness","Ni
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Spells - Enabler","Flash - Interaction"]
+tags = ["Flash - Counterspell","Spells - Enabler"]
 
 ["Swift Justice"]
 mana_cost = ["W"]
@@ -2180,7 +2180,7 @@ tags = ["Lifegain - Enabler","Lifegain - Payoff","Wizards - Enabler"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Bounce","Spells - Enabler","Flash - Interaction"]
+tags = ["Bounce","Spells - Enabler"]
 
 ["Wall of Omens"]
 mana_cost = ["1","W"]
@@ -2216,7 +2216,7 @@ tags = ["Wizards - Payoff","Removal","Spells - Enabler","Removal - Size"]
 mana_cost = ["1","U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Wizards - Payoff","Spells - Enabler","Flash - Interaction"]
+tags = ["Wizards - Payoff","Flash - Counterspell","Spells - Enabler"]
 
 ["Woodland Cemetery"]
 mana_cost = []

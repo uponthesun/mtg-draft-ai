@@ -10,7 +10,6 @@ notebooks/sealed_pools/
 notebooks/*.html
 output/*.html
 output/*.txt
-output/**/*
 *.html
 draftlog.txt
 *.debug
