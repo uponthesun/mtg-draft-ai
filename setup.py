@@ -17,6 +17,6 @@ setuptools.setup(
     ],
     install_requires=['toml', 'networkx', 'scipy'],
     extras_require={
-        'test': ['pytest', 'mock', 'pytest-cov']
+        'test': ['pytest>=3.6', 'mock', 'pytest-cov']
     }
 )
