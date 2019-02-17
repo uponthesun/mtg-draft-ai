@@ -7,3 +7,4 @@ install:
 
 script:
   - pytest --cov=mtg_draft_ai --cov-report term-missing
+  - python trials.py 100
