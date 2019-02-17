@@ -39,7 +39,7 @@ class Factory:
 
 
 _GSPRating = collections.namedtuple('Rating', ['card', 'color_combo', 'total_edges',
-                                               'common_neighbors', 'default'])
+                                               'common_neighbors_weighted', 'default'])
 
 
 class GreedySynergyPicker(Picker):
@@ -107,16 +107,16 @@ class GreedySynergyPicker(Picker):
 
                 # Number of nodes in global graph which neighbor both the candidate and the card pool.
                 # Does not count cards already in the pool as neighbors.
-                common_neighbors = self._common_neighbors_weight(on_color_cards, candidate, color_combo)
+                common_neighbors_weighted = self._common_neighbors_weighted(on_color_cards, candidate, color_combo)
                 default = self.default_ratings[candidate]
 
-                candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors, default))
+                candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors_weighted, default))
 
         # Lexicographic sort of the fields in the rating tuple (excluding the card and color combo)
         candidates.sort(key=lambda tup: tup[2:], reverse=True)
         return candidates
 
-    def _common_neighbors_weight(self, card_pool, candidate, colors):
+    def _common_neighbors_weighted(self, card_pool, candidate, colors):
         neighbor_count = 0
 
         for c in card_pool:
@@ -154,9 +154,3 @@ def all_common_neighbors(graph, cards):
             common_neighbors[c2][c1] = neighbors
 
     return common_neighbors
-
-
-def _num_new_edges(graph, node):
-    if node not in graph.nodes:
-        return 0
-    return nx.degree(graph, node)
