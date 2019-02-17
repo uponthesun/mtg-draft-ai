@@ -1,7 +1,7 @@
 import mock
 import os
 import pytest
-from mtg_draft_ai.brains import GreedySynergyPicker, all_common_neighbors
+from mtg_draft_ai.brains import GreedySynergyPicker, _all_common_neighbors
 from mtg_draft_ai.api import *
 from mtg_draft_ai import synergy
 
@@ -33,7 +33,7 @@ def draft_info():
 
 
 def test_all_common_neighbors_coverage(graph, cards):
-    common = all_common_neighbors(graph, cards)
+    common = _all_common_neighbors(graph, cards)
 
     for c1 in cards:
         for c2 in cards:
@@ -42,7 +42,7 @@ def test_all_common_neighbors_coverage(graph, cards):
 
 
 def test_common_neighbors_found(graph, cards, cards_by_name):
-    common = all_common_neighbors(graph, cards)
+    common = _all_common_neighbors(graph, cards)
 
     c1 = cards_by_name['Abzan Battle Priest']
     c2 = cards_by_name["Lightning Helix"]
