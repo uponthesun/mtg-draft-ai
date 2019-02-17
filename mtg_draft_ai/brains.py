@@ -105,8 +105,7 @@ class GreedySynergyPicker(Picker):
                 # Number of edges in the graph for the card pool plus the candidate.
                 total_edges = len(syn_graph.edges)
 
-                # Number of nodes in global graph which neighbor both the candidate and the card pool.
-                # Does not count cards already in the pool as neighbors.
+                # Measure of improvement of future pick quality based on common neighbors between pool and candidate.
                 common_neighbors_weighted = self._common_neighbors_weighted(on_color_cards, candidate, color_combo)
                 default = self.default_ratings[candidate]
 
@@ -117,6 +116,7 @@ class GreedySynergyPicker(Picker):
         return candidates
 
     def _common_neighbors_weighted(self, card_pool, candidate, colors):
+        """Sums # of common neighbors between candidate and each card in the pool."""
         neighbor_count = 0
 
         for c in card_pool:
