@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.6"
+
+install:
+  - pip install -e ".[test]"
+
+script:
+  - pytest --cov=mtg_draft_ai --cov-report term-missing
