@@ -1,7 +1,7 @@
 .idea
 venv*
 *.egg-info
-*/__pycache__
+**/__pycache__
 .DS_Store
 .coverage
 .ipynb_checkpoints/
@@ -14,3 +14,4 @@ output/**/*
 *.html
 draftlog.txt
 *.debug
+website/**/db.sqlite3
