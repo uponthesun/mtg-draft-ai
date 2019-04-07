@@ -1,0 +1,30 @@
+View Seat:
+<br>
+{% for seat in seats %}
+    <a href="/draft/{{ draft_id }}/seat/{{ seat }}">{{ seat }}</a>
+{% endfor %}
+<br>
+<br>
+
+<b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+
+<div>
+    <form action="/draft/pick-card/{{ draft_id }}" method="post">
+        {% csrf_token %}
+        <input name="phase" type="hidden" value="{{ phase }}">
+        <input name="pick" type="hidden" value="{{ pick }}">
+        {% for card in cards %}
+            <button name="picked_card_id" value="{{ card.id }}">
+                <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+            </button>
+        {% endfor %}
+    </form>
+</div>
+
+<b>Owned Cards</b>
+
+<div>
+{% for card in owned_cards %}
+    <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+{% endfor %}
+</div>

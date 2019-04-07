@@ -1,7 +1,8 @@
 from django.contrib import admin
 
-from .models import Draft, Card
+from .models import *
 
 
 admin.site.register(Draft)
 admin.site.register(Card)
+admin.site.register(Drafter)
