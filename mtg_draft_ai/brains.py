@@ -39,7 +39,7 @@ class Factory:
 
 
 _GSPRating = collections.namedtuple('Rating', ['card', 'color_combo', 'total_edges',
-                                               'common_neighbors', 'default'])
+                                               'common_neighbors_weighted', 'default'])
 
 
 class GreedySynergyPicker(Picker):
@@ -105,27 +105,27 @@ class GreedySynergyPicker(Picker):
                 # Number of edges in the graph for the card pool plus the candidate.
                 total_edges = len(syn_graph.edges)
 
-                # Number of nodes in global graph which neighbor both the candidate and the card pool.
-                # Does not count cards already in the pool as neighbors.
-                common_neighbors = len(self._card_pool_common_neighbors(on_color_cards, candidate, color_combo))
+                # Measure of improvement of future pick quality based on common neighbors between pool and candidate.
+                common_neighbors_weighted = self._common_neighbors_weighted(on_color_cards, candidate, color_combo)
                 default = self.default_ratings[candidate]
 
-                candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors, default))
+                candidates.append(_GSPRating(candidate, color_combo, total_edges, common_neighbors_weighted, default))
 
         # Lexicographic sort of the fields in the rating tuple (excluding the card and color combo)
         candidates.sort(key=lambda tup: tup[2:], reverse=True)
         return candidates
 
-    def _card_pool_common_neighbors(self, card_pool, candidate, colors):
-        neighbors = set()
-        for card in card_pool:
-            neighbors.update(self.common_neighbors[candidate][card])
+    def _common_neighbors_weighted(self, card_pool, candidate, colors):
+        """Sums # of common neighbors between candidate and each card in the pool."""
+        neighbor_count = 0
 
-        # Only count on-color neighbors not already in the pool, and in the color combo
-        neighbors = {c for c in neighbors
-                     if c not in card_pool
-                     if synergy.castable(c, colors)}
-        return neighbors
+        for c in card_pool:
+            valid_neighbors = [n.name for n in self.common_neighbors[candidate][c]
+                               if synergy.castable(n, colors)
+                               if n not in card_pool]
+            neighbor_count += len(valid_neighbors)
+
+        return neighbor_count
 
 
 def all_common_neighbors(graph, cards):
@@ -154,9 +154,3 @@ def all_common_neighbors(graph, cards):
             common_neighbors[c2][c1] = neighbors
 
     return common_neighbors
-
-
-def _num_new_edges(graph, node):
-    if node not in graph.nodes:
-        return 0
-    return nx.degree(graph, node)
