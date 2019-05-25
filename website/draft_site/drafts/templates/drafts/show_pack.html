@@ -28,3 +28,8 @@ View Seat:
     <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
 {% endfor %}
 </div>
+
+<textarea rows="{{ owned_cards|length }}">
+{% for card in owned_cards %}1 {{ card.name }}
+{% endfor %}
+</textarea>
