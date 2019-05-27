@@ -1,14 +1,20 @@
 View Seat:
 <br>
-{% for seat in seats %}
+<!-- Human drafter is always seat 0 -->
+<a href="/draft/{{ draft_id }}">0 (You)</a>
+{% for seat in bot_seat_range %}
     <a href="/draft/{{ draft_id }}/seat/{{ seat }}">{{ seat }}</a>
 {% endfor %}
 <br>
+<br>
+<b>Seat {{ current_seat }}</b>
 <br>
 
 <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
 
 <div>
+
+{% if human_drafter %}
     <form action="/draft/pick-card/{{ draft_id }}" method="post">
         {% csrf_token %}
         <input name="phase" type="hidden" value="{{ phase }}">
@@ -19,6 +25,11 @@ View Seat:
             </button>
         {% endfor %}
     </form>
+{% else %}
+    {% for card in cards %}
+        <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+    {% endfor %}
+{% endif %}
 </div>
 
 <b>Owned Cards</b>

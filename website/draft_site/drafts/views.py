@@ -61,23 +61,9 @@ def create_draft(request):
 
 # /draft/<int:draft_id>
 def show_draft(request, draft_id):
-    draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafter = models.Drafter.objects.get(draft=draft, seat=0)
-
-    pack_index = _get_pack_index(draft, drafter)
-    cards = models.Card.objects.filter(draft=draft, phase=drafter.current_phase,
-                                       start_seat=pack_index, picked_by__isnull=True)
-    owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
-    sorted_owned_cards = sorted(owned_cards, key=lambda c: (c.phase, c.picked_at))
-
-    context = {'cards': cards, 'draft_id': draft_id,
-               'phase': drafter.current_phase, 'pick': drafter.current_pick,
-               'owned_cards': sorted_owned_cards, 'seats': range(0, draft.num_drafters)}
-
-    return render(request, 'drafts/show_pack.html', context)
+    return show_seat(request, draft_id, seat=0)
 
 
-# TODO: reduce redundancy with show_draft
 # /draft/<int:draft_id>/seat/<int:seat>
 def show_seat(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
@@ -91,9 +77,10 @@ def show_seat(request, draft_id, seat):
 
     context = {'cards': cards, 'draft_id': draft_id,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
-               'owned_cards': sorted_owned_cards}
+               'owned_cards': sorted_owned_cards, 'bot_seat_range': range(1, draft.num_drafters),
+               'human_drafter': seat == 0, 'current_seat': seat}
 
-    return render(request, 'drafts/show_seat.html', context)
+    return render(request, 'drafts/show_pack.html', context)
 
 
 # /draft/pick-card/<int:draft_id>
