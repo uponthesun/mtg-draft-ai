@@ -1,5 +1,4 @@
 View Seat:
-<br>
 <!-- Human drafter is always seat 0 -->
 <a href="/draft/{{ draft_id }}">0 (You)</a>
 {% for seat in bot_seat_range %}
@@ -7,10 +6,7 @@ View Seat:
 {% endfor %}
 <br>
 <br>
-<b>Seat {{ current_seat }}</b>
-<br>
-
-<b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+<b>Seat {{ current_seat }}: Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
 
 <div>
 
@@ -19,15 +15,15 @@ View Seat:
         {% csrf_token %}
         <input name="phase" type="hidden" value="{{ phase }}">
         <input name="pick" type="hidden" value="{{ pick }}">
-        {% for card in cards %}
+        {% for card, image_url in cards %}
             <button name="picked_card_id" value="{{ card.id }}">
-                <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+                <img src="{{ image_url }}" width="146" height="204" />
             </button>
         {% endfor %}
     </form>
 {% else %}
-    {% for card in cards %}
-        <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+    {% for card, image_url in cards %}
+        <img src="{{ image_url }}" width="146" height="204" />
     {% endfor %}
 {% endif %}
 </div>
@@ -35,12 +31,12 @@ View Seat:
 <b>Owned Cards</b>
 
 <div>
-{% for card in owned_cards %}
-    <img src="https://api.scryfall.com/cards/named?format=image&exact={{ card.name|urlencode }}" width="146" height="204" />
+{% for card, image_url in owned_cards %}
+    <img src="{{ image_url }}" width="146" height="204" />
 {% endfor %}
 </div>
 
 <textarea rows="{{ owned_cards|length }}">
-{% for card in owned_cards %}1 {{ card.name }}
+{% for card, _ in owned_cards %}1 {{ card.name }}
 {% endfor %}
 </textarea>
