@@ -1,8 +1,10 @@
 import logging
+from multiprocessing.pool import ThreadPool
 import os
 import pickle
+
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.db import transaction
 from django.conf import settings
@@ -12,12 +14,51 @@ from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
 from mtg_draft_ai.brains import GreedySynergyPicker
 
+import requests
+import toml
+
 
 CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
 CUBE_LIST = read_cube_toml(CUBE_FILE)
 CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
 PICKER_FACTORY = GreedySynergyPicker.factory(CUBE_LIST)
 LOGGER = logging.getLogger(__name__)
+
+IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
+
+
+def _initialize_image_url_cache():
+    # Load cache from disk
+    cache = toml.load(IMAGE_URLS_FILE)
+
+    # Filter out cards which are no longer in the cube list
+    cache = {k: v for k, v in cache.items() if k in CARDS_BY_NAME}
+
+    # Get URLs for new cards
+    missing_cards = [name for name in CARDS_BY_NAME if name not in cache]
+    with ThreadPool(10) as tp:
+        urls = tp.map(_get_image_url, missing_cards)
+
+    for card_name, url in zip(missing_cards, urls):
+        cache[card_name] = url
+
+    # Write cache back out to disk
+    with open(IMAGE_URLS_FILE, 'w') as f:
+        toml.dump(cache, f)
+
+    return cache
+
+
+def _get_image_url(name):
+    r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
+    card_json = r.json()
+    if 'card_faces' in card_json:
+        # Case for double-faced cards
+        return card_json['card_faces'][0]['image_uris']['normal']
+    return card_json['image_uris']['normal']
+
+
+IMAGE_URL_CACHE = _initialize_image_url_cache()
 
 
 class StaleReadError(Exception):
@@ -75,9 +116,12 @@ def show_seat(request, draft_id, seat):
     owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
     sorted_owned_cards = sorted(owned_cards, key=lambda c: (c.phase, c.picked_at))
 
-    context = {'cards': cards, 'draft_id': draft_id,
+    cards_with_images = [(c, IMAGE_URL_CACHE[c.name]) for c in cards]
+    owned_cards_with_images = [(c, IMAGE_URL_CACHE[c.name]) for c in sorted_owned_cards]
+
+    context = {'cards': cards_with_images, 'draft_id': draft_id,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
-               'owned_cards': sorted_owned_cards, 'bot_seat_range': range(1, draft.num_drafters),
+               'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
                'human_drafter': seat == 0, 'current_seat': seat}
 
     return render(request, 'drafts/show_pack.html', context)
