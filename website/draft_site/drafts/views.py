@@ -2,6 +2,7 @@ import logging
 from multiprocessing.pool import ThreadPool
 import os
 import pickle
+import urllib
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -37,7 +38,7 @@ def _initialize_image_url_cache():
     # Get URLs for new cards
     missing_cards = [name for name in CARDS_BY_NAME if name not in cache]
     with ThreadPool(10) as tp:
-        urls = tp.map(_get_image_url, missing_cards)
+        urls = tp.map(_scryfall_image_url, missing_cards)
 
     for card_name, url in zip(missing_cards, urls):
         cache[card_name] = url
@@ -49,11 +50,12 @@ def _initialize_image_url_cache():
     return cache
 
 
-def _get_image_url(name):
+def _scryfall_image_url(name):
     r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
     card_json = r.json()
     if 'card_faces' in card_json:
         # Case for double-faced cards
+        # TODO: nice to have - show both sides of a DFC
         return card_json['card_faces'][0]['image_uris']['normal']
     return card_json['image_uris']['normal']
 
@@ -116,8 +118,8 @@ def show_seat(request, draft_id, seat):
     owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
     sorted_owned_cards = sorted(owned_cards, key=lambda c: (c.phase, c.picked_at))
 
-    cards_with_images = [(c, IMAGE_URL_CACHE[c.name]) for c in cards]
-    owned_cards_with_images = [(c, IMAGE_URL_CACHE[c.name]) for c in sorted_owned_cards]
+    cards_with_images = [(c, _image_url(c.name)) for c in cards]
+    owned_cards_with_images = [(c, _image_url(c.name)) for c in sorted_owned_cards]
 
     context = {'cards': cards_with_images, 'draft_id': draft_id,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
@@ -214,3 +216,13 @@ def _get_pack_index(draft, drafter, phase=None, pick=None):
         pack_index += draft.num_drafters
 
     return pack_index
+
+
+def _image_url(card_name):
+    """ Gets the image URL for a card name from cache if present, otherwise falls back to the API URL. """
+    if card_name in IMAGE_URL_CACHE:
+        return IMAGE_URL_CACHE[card_name]
+
+    # Fall back to using the API if we don't have the image URL cached (e.g. when viewing old drafts)
+    query_string = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
+    return 'https://api.scryfall.com/cards/named?' + query_string
