@@ -66,6 +66,7 @@ class Drafter:
         self.draft_info = draft_info
         self.cards_owned = []
         self.pack_history = []
+        self.state = {}
 
     def pick(self, pack):
         """Picks a card by delegating to self.picker, and adds it to owned cards.
@@ -79,7 +80,7 @@ class Drafter:
         pack_snapshot = pack.copy()
         self.pack_history.append(pack_snapshot)
         pick = self.picker.pick(pack=pack.copy(), cards_owned=self.cards_owned.copy(),
-                                draft_info=self.draft_info)
+                                draft_info=self.draft_info, state=self.state)
         if pick not in pack:
             raise ValueError('Drafter made invalid pick {} from pack {}'.format(pick, pack))
 
@@ -87,8 +88,8 @@ class Drafter:
         return pick
 
     def __repr__(self):
-        return 'Cards owned: {} Picker state: {}'.format([str(card) for card in self.cards_owned],
-                                                         self.picker)
+        return 'Cards owned: {} Picker class: {} Picker state: {}'.format([str(card) for card in self.cards_owned],
+                                                         type(self.picker), self.state)
 
 
 class Picker(abc.ABC):
@@ -98,7 +99,7 @@ class Picker(abc.ABC):
     """
 
     @abc.abstractmethod
-    def pick(self, pack, cards_owned, draft_info):
+    def pick(self, pack, cards_owned, draft_info, state):
         """Implementations should return the picked Card.
 
         Implementations do not need to modify the state of either pack or cards_owned,
@@ -108,6 +109,7 @@ class Picker(abc.ABC):
             pack (List[Card]): The current pack to pick a card out of.
             cards_owned (List[Card]): The cards already owned.
             draft_info (DraftInfo): Information about the draft configuration.
+            state (Dict[str, str]): Any additional state used by picker implementations.
 
         Returns:
             Card: The picked card.

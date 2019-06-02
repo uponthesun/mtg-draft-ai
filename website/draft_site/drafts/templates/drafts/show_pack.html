@@ -25,6 +25,16 @@ View Seat:
     {% for card, image_url in cards %}
         <img src="{{ image_url }}" width="146" height="204" />
     {% endfor %}
+
+
+    <div>
+        <b>Picker State</b><br/>
+        Color counts:<br/>
+        {% for colors, count in picker_state.color_counts.items %}
+            {{ colors }}: {{ count }}<br/>
+        {% endfor %}
+    </div>
+
 {% endif %}
 </div>
 

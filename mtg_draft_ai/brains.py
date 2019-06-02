@@ -2,25 +2,27 @@
 
 import collections
 import random
+import itertools
 import networkx as nx
 from mtg_draft_ai import synergy
 from mtg_draft_ai.api import Picker
 
 
-COLOR_PAIRS = ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG']
-COLOR_TRIOS = ['WUB', 'UBR', 'BRG', 'RGW', 'GWU', 'WBR', 'URG', 'BGW', 'RWU', 'GUB']
+COLORS = ['W', 'U', 'B', 'R', 'G']
+COLOR_PAIRS = [''.join(tup) for tup in itertools.combinations(COLORS, 2)]
 
 
 class RandomPicker(Picker):
     """Makes totally random picks. Used for prototyping purposes."""
 
-    def pick(self, pack, cards_owned, draft_info):
+    def pick(self, pack, cards_owned, draft_info, state):
         """Makes a random pick from a pack.
 
         Args:
             pack (List[Card]): The current pack to pick a card out of.
             cards_owned (List[Card]): The cards already owned.
             draft_info (DraftInfo): Information about the draft configuration.
+            state (Dict[str, str]): Any additional state used by picker implementations.
 
         Returns:
             Card: The picked card.
@@ -82,8 +84,10 @@ class GreedySynergyPicker(Picker):
                   'common_neighbors': common_neighbors}
         return Factory(GreedySynergyPicker, kwargs)
 
-    def pick(self, pack, cards_owned, draft_info):
-        ranked_candidates = self._ratings(pack, cards_owned, draft_info)
+    def pick(self, pack, cards_owned, draft_info, state):
+        self._update_signals(state, pack)
+
+        ranked_candidates = self._ratings(pack, cards_owned)
 
         # replace full card object with just card name for more readable output
         printable_candidates = [str(_GSPRating(tup[0].name, *tup[1:])) for tup in ranked_candidates]
@@ -91,7 +95,17 @@ class GreedySynergyPicker(Picker):
 
         return pack[0] if len(ranked_candidates) == 0 else ranked_candidates[0][0]
 
-    def _ratings(self, pack, cards_owned, draft_info):
+    @staticmethod
+    def _update_signals(state, pack):
+        color_counts_key = 'color_counts'
+        if color_counts_key not in state:
+            state[color_counts_key] = _init_color_counts()
+
+        for card in pack:
+            if card.color_id != 'C' and len(card.color_id) <= 2:
+                state[color_counts_key][_standardized_colors(card.color_id)] += 1
+
+    def _ratings(self, pack, cards_owned):
         candidates = []
 
         for color_combo in COLOR_PAIRS:
@@ -154,3 +168,14 @@ def all_common_neighbors(graph, cards):
             common_neighbors[c2][c1] = neighbors
 
     return common_neighbors
+
+
+def _init_color_counts():
+    counts = collections.OrderedDict()
+    for colors in itertools.chain(COLORS, COLOR_PAIRS):
+        counts[_standardized_colors(colors)] = 0
+    return counts
+
+
+def _standardized_colors(colors):
+    return ''.join(sorted(colors, key=lambda c: COLORS.index(c)))

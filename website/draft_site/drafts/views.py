@@ -125,6 +125,8 @@ def show_seat(request, draft_id, seat):
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
                'human_drafter': seat == 0, 'current_seat': seat}
+    if drafter.bot_state:
+        context['picker_state'] = pickle.loads(drafter.bot_state).state
 
     return render(request, 'drafts/show_pack.html', context)
 
