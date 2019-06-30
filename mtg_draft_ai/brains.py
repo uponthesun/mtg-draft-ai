@@ -221,13 +221,13 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
             color_combo = synergy_rating.color_combo
 
             normalized_values = {k: _normalize(v, max_values[k]) for k, v in raws.items()}
-            power_delta = raws['power_delta']  # don't normalize power since it's already in [0, 1]
+            power_delta = normalized_values['power_delta']
             total_power = normalized_values['total_power']
             edges_delta = normalized_values['edges_delta']
             total_edges = normalized_values['total_edges']
             common_neighbors_weighted = normalized_values['common_neighbors_weighted']
 
-            rating = round(power_delta + total_power + edges_delta + total_edges + common_neighbors_weighted, 3)
+            rating = round(0.5 * ((power_delta + total_power)/2 + (edges_delta + total_edges + common_neighbors_weighted)/3), 3)
 
             final_ratings.append(_CombinedRating(card, color_combo, rating, power_delta, total_power,
                                                  edges_delta, total_edges, common_neighbors_weighted, raws))
