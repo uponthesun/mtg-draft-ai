@@ -17,6 +17,7 @@ class Card:
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
+            power_tier (int): Power level tier as tagged by cube maintainer (currently values 1-4 allowed).
         """
         tags = [] if tags is None else tags
 
@@ -46,6 +47,9 @@ class Card:
         power_tier = None
 
         for raw_tag in raw_tags:
+            # Currently, the only tags we use are:
+            # - power level tags in the format: "Tier N"
+            # - synergy tags in the format: "Theme - Role"
             if raw_tag.startswith('Tier'):
                 power_tier = int(raw_tag.split(' ')[1])
             else:

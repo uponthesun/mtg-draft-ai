@@ -1,6 +1,6 @@
 import mock
 import pytest
-from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker
+from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker, Card
 
 
 PICKED_CARD = 1
@@ -47,3 +47,17 @@ def test_invalid_picker():
 
     with pytest.raises(TypeError):
         InvalidPicker()
+
+
+def test_card_from_raw_data():
+    name = 'Abhorrent Overlord'
+    props = {
+        'color_identity': 'B',
+        'tags': ['Reanimator - Payoff', 'Big', 'Keyword', 'Tier 2', 'Ramp - Payoff']
+    }
+    card = Card.from_raw_data(name, props)
+
+    assert card.name == name
+    assert card.color_id == 'B'
+    assert card.power_tier == 2
+    assert card.tags == [('Reanimator', 'Payoff'), ('Ramp', 'Payoff')]
