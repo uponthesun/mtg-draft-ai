@@ -149,7 +149,7 @@ _GSPRating = collections.namedtuple('Rating', ['card', 'color_combo', 'total_edg
 
 _CombinedRating = collections.namedtuple('CombinedRating', ['card', 'color_combo', 'rating',
                                                             'power_delta', 'total_power', 'edges_delta', 'total_edges',
-                                                            'raw_values'])
+                                                            'common_neighbors_weighted', 'raw_values'])
 
 
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
@@ -180,7 +180,8 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
             total_power = round(pool_total_power_by_color_pair[r.color_combo] + power_delta, 2)
 
             raw_values = {'power_delta': power_delta, 'total_power': total_power,
-                          'edges_delta': r.edges_delta, 'total_edges': r.total_edges}
+                          'edges_delta': r.edges_delta, 'total_edges': r.total_edges,
+                          'common_neighbors_weighted': r.common_neighbors_weighted}
 
             raw_ratings.append((r, raw_values))
 
@@ -224,11 +225,12 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
             total_power = normalized_values['total_power']
             edges_delta = normalized_values['edges_delta']
             total_edges = normalized_values['total_edges']
+            common_neighbors_weighted = normalized_values['common_neighbors_weighted']
 
-            rating = round(power_delta + total_power + edges_delta + total_edges, 3)
+            rating = round(power_delta + total_power + edges_delta + total_edges + common_neighbors_weighted, 3)
 
             final_ratings.append(_CombinedRating(card, color_combo, rating, power_delta, total_power,
-                                                 edges_delta, total_edges, raws))
+                                                 edges_delta, total_edges, common_neighbors_weighted, raws))
         return final_ratings
 
 

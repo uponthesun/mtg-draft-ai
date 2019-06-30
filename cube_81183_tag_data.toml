@@ -38,7 +38,7 @@ tags = ["Heroic - Payoff","Keyword","Tier 4"]
 mana_cost = ["W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Counters - Enabler","Keyword","Spirits - Enabler","ETB - Enabler","Tier 1"]
+tags = ["Counters - Enabler","Keyword","Spirits - Enabler","ETB - Enabler","Tier 2"]
 
 ["Anax and Cymede"]
 mana_cost = ["1","W","R"]
@@ -170,7 +170,7 @@ tags = ["Signpost","Big","Keyword","Vampires - Enabler","Madness/Hellbent - Payo
 mana_cost = ["4","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Payoff","Vampires - Enabler","Wizards - Payoff","Wizards - Enabler","Tier 1","Spice"]
+tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Payoff","Vampires - Enabler","Wizards - Payoff","Wizards - Enabler","Spice","Tier 2"]
 
 ["Bloodmist Infiltrator"]
 mana_cost = ["2","B"]
@@ -188,7 +188,7 @@ tags = ["Madness/Hellbent - Enabler","Tier 3"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Keyword","Tier 2"]
+tags = ["Sacrifice - Enabler","Keyword","Tier 2","Madness/Hellbent - Payoff"]
 
 ["Bloodspore Thrinax"]
 mana_cost = ["2","G","G"]
@@ -428,7 +428,7 @@ tags = ["Big","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifac
 mana_cost = ["U"]
 color_identity = "U"
 types = ["enchantment"]
-tags = ["Heroic - Enabler","Card Draw","Tier 1"]
+tags = ["Heroic - Enabler","Card Draw","Tier 1","Ninjutsu - Payoff"]
 
 ["Dark-Dweller Oracle"]
 mana_cost = ["1","R"]
@@ -974,7 +974,7 @@ tags = []
 mana_cost = ["4","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Signpost","Higher Toughness","Big","Tier 2"]
+tags = ["Graveyard - Payoff","Signpost","Higher Toughness","Big","Tier 1"]
 
 ["Key to the City"]
 mana_cost = ["2"]
@@ -1514,7 +1514,7 @@ tags = ["Counters - Enabler","Tier 3"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Graveyard - Payoff","Tier 2"]
+tags = ["Sacrifice - Enabler","Graveyard - Payoff","Tier 2","Madness/Hellbent - Payoff"]
 
 ["Reckless Racer"]
 mana_cost = ["2","R"]
@@ -1556,7 +1556,7 @@ tags = ["Counters - Enabler","ETB - Enabler","Tier 1","Ramp - Enabler"]
 mana_cost = ["G","U"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Flash - Threat","Card Draw","Higher Toughness","Ninjutsu - Enabler","Tier 4"]
+tags = ["Lifegain - Enabler","Flash - Threat","Card Draw","Higher Toughness","Ninjutsu - Enabler","Tier 3","Ramp - Payoff"]
 
 ["Rootbound Crag"]
 mana_cost = []
@@ -1622,7 +1622,7 @@ tags = ["Keyword","Madness/Hellbent - Payoff","Tier 2"]
 mana_cost = ["5","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Signpost","Big","Tier 2","Spice"]
+tags = ["Reanimator - Payoff","Signpost","Big","Spice","Madness/Hellbent - Payoff","Graveyard - Payoff","Tier 1"]
 
 ["Scrounging Bandar"]
 mana_cost = ["1","G"]
@@ -1664,7 +1664,7 @@ tags = []
 mana_cost = ["1","B","G","U"]
 color_identity = "BGU"
 types = ["creature"]
-tags = ["Signpost","Graveyard - Enabler","Graveyard - Payoff","Tier 1"]
+tags = ["Signpost","Graveyard - Enabler","Graveyard - Payoff","Tier 2"]
 
 ["Sifter Wurm"]
 mana_cost = ["5","G","G"]
@@ -2108,7 +2108,7 @@ tags = ["Removal","Sacrifice - Payoff","Keyword","ETB - Enabler","Removal - Size
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Graveyard - Payoff","Reanimator - Enabler","Signpost","Tier 2","Spice"]
+tags = ["Graveyard - Payoff","Reanimator - Enabler","Signpost","Spice","Tier 1"]
 
 ["Viridian Zealot"]
 mana_cost = ["G","G"]
