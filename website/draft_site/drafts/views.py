@@ -13,7 +13,7 @@ from django.conf import settings
 from . import models
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
-from mtg_draft_ai.brains import GreedySynergyPicker
+from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
 
 import requests
 import toml
@@ -22,7 +22,7 @@ import toml
 CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
 CUBE_LIST = read_cube_toml(CUBE_FILE)
 CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
-PICKER_FACTORY = GreedySynergyPicker.factory(CUBE_LIST)
+PICKER_FACTORY = GreedyPowerAndSynergyPicker.factory(CUBE_LIST)
 LOGGER = logging.getLogger(__name__)
 
 IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
