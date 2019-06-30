@@ -2,7 +2,7 @@
 mana_cost = ["5","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Big","Keyword","ETB - Enabler","Tier 2","Ramp - Payoff"]
+tags = ["Reanimator - Payoff","Big","Keyword","Tier 2","Ramp - Payoff"]
 
 ["Abzan Battle Priest"]
 mana_cost = ["3","W"]
