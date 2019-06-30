@@ -1,7 +1,6 @@
 """Implementations of Picker, which (hopefully) use intelligent strategies to make draft picks."""
 
 import collections
-import math
 import random
 import networkx as nx
 from mtg_draft_ai import synergy
@@ -104,7 +103,6 @@ class GreedySynergyPicker(Picker):
 
                 # Measure of improvement of future pick quality based on common neighbors between pool and candidate.
                 common_neighbors_weighted = self._common_neighbors_weighted(on_color_cards, candidate, color_combo)
-                # common_neighbors = self._common_neighbors(on_color_cards, candidate, color_combo)
 
                 edges_delta = syn_graph.degree[candidate] if candidate in syn_graph else 0
 
@@ -264,7 +262,3 @@ def all_common_neighbors(graph, cards):
             common_neighbors[c2][c1] = neighbors
 
     return common_neighbors
-
-
-def sigmoid(x, k=0.5, x0=5):
-    return round(1 / (1 + math.exp(-k * (x - x0))), 3)
