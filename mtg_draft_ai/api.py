@@ -7,7 +7,7 @@ import toml
 class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
-    def __init__(self, name, color_id=None, tags=None):
+    def __init__(self, name, color_id=None, tags=None, power_tier=None):
         """
         Args:
             name (str): The card's name.
@@ -17,12 +17,14 @@ class Card:
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
+            power_tier (int): Power level tier as tagged by cube maintainer (currently values 1-4 allowed).
         """
         tags = [] if tags is None else tags
 
         self.name = name
         self.color_id = color_id
         self.tags = tags
+        self.power_tier = power_tier
 
     def __str__(self):
         return 'C: {}'.format(self.name)
@@ -42,15 +44,21 @@ class Card:
     def from_raw_data(name, properties):
         raw_tags = properties['tags']
         tags = []
-        for raw_tag in raw_tags:
-            split = raw_tag.split('-')
-            if len(split) != 2:
-                # Currently, only two-part tags are supported
-                continue
-            k, v = split
-            tags.append((k.strip(), v.strip()))
+        power_tier = None
 
-        return Card(name, color_id=properties['color_identity'], tags=tags)
+        for raw_tag in raw_tags:
+            # Currently, the only tags we use are:
+            # - power level tags in the format: "Tier N"
+            # - synergy tags in the format: "Theme - Role"
+            if raw_tag.startswith('Tier'):
+                power_tier = int(raw_tag.split(' ')[1])
+            else:
+                split = raw_tag.split('-')
+                if len(split) == 2:
+                    k, v = split
+                    tags.append((k.strip(), v.strip()))
+
+        return Card(name, color_id=properties['color_identity'], tags=tags, power_tier=power_tier)
 
 
 class Drafter:
