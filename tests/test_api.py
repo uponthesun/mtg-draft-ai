@@ -1,5 +1,6 @@
 import mock
 import pytest
+import sys
 from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker, Card
 
 
@@ -28,11 +29,13 @@ def test_drafter_pick(draft_info, picker):
 
 
 def test_picker_invalid_pick(draft_info, picker):
+    print(sys.version)
     with pytest.raises(ValueError) as excinfo:
         picker.pick.return_value = 'Ace of Spades'
         drafter = Drafter(picker, draft_info)
         drafter.pick(pack=[1, 2, 3])
-    assert 'Drafter made invalid pick Ace of Spades' in str(excinfo)
+    print(str(excinfo.value))
+    assert 'Drafter made invalid pick Ace of Spades' in str(excinfo.value)
 
 
 def test_packs_get():
