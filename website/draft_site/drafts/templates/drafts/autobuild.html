@@ -1,0 +1,27 @@
+View Seat:
+<!-- Human drafter is always seat 0 -->
+<a href="/draft/{{ draft_id }}">0 (You)</a>
+{% for seat in bot_seat_range %}
+    <a href="/draft/{{ draft_id }}/seat/{{ seat }}">{{ seat }}</a>
+{% endfor %}
+<br>
+<br>
+
+<b>Build</b>
+<br>
+Synergy edges: {{ num_edges }}
+<br>
+Average card power: {{ avg_power }}
+<div>
+{% for image_url in built_deck_images %}
+    <img src="{{ image_url }}" width="146" height="204" />
+{% endfor %}
+</div>
+
+<b>Leftovers</b>
+
+<div>
+{% for image_url in leftovers_images %}
+    <img src="{{ image_url }}" width="146" height="204" />
+{% endfor %}
+</div>
