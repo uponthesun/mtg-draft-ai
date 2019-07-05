@@ -2,6 +2,7 @@ import logging
 from multiprocessing.pool import ThreadPool
 import os
 import pickle
+import statistics
 import urllib
 
 from django.shortcuts import render, get_object_or_404
@@ -14,6 +15,8 @@ from . import models
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
+from mtg_draft_ai.deckbuild import best_two_color_synergy_build
+from mtg_draft_ai import synergy
 
 import requests
 import toml
@@ -120,13 +123,38 @@ def show_seat(request, draft_id, seat):
 
     cards_with_images = [(c, _image_url(c.name)) for c in cards]
     owned_cards_with_images = [(c, _image_url(c.name)) for c in sorted_owned_cards]
+    draft_complete = (drafter.current_phase == draft.num_phases)
 
     context = {'cards': cards_with_images, 'draft_id': draft_id,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
-               'human_drafter': seat == 0, 'current_seat': seat}
+               'human_drafter': seat == 0, 'current_seat': seat, 'draft_complete': draft_complete}
 
     return render(request, 'drafts/show_pack.html', context)
+
+
+# /draft/<int:draft_id>/seat/<int:seat>/autobuild
+def auto_build(request, draft_id, seat):
+    draft = get_object_or_404(models.Draft, pk=draft_id)
+    drafter = models.Drafter.objects.get(draft=draft, seat=seat)
+    owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
+
+    # Convert from DB objects to Card objects with metadata
+    pool = [CARDS_BY_NAME[c.name] for c in owned_cards]
+
+    built_deck = best_two_color_synergy_build(pool)
+    deck_graph = synergy.create_graph(built_deck, remove_isolated=False)
+    leftovers = [c for c in pool if c not in built_deck]
+
+    built_deck_images = [_image_url(c.name) for c in built_deck]
+    leftovers_images = [_image_url(c.name) for c in leftovers]
+    num_edges = len(deck_graph.edges)
+    avg_power = statistics.mean([GreedyPowerAndSynergyPicker._power_rating(c) for c in built_deck])
+
+    context = {'built_deck_images': built_deck_images, 'leftovers_images': leftovers_images,
+               'num_edges': num_edges, 'avg_power': round(avg_power, 2), 'draft_id': draft_id,
+               'bot_seat_range': range(1, draft.num_drafters)}
+    return render(request, 'drafts/autobuild.html', context)
 
 
 # /draft/pick-card/<int:draft_id>
