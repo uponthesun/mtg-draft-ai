@@ -7,7 +7,7 @@ import toml
 class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
-    def __init__(self, name, color_id=None, tags=None, power_tier=None):
+    def __init__(self, name, color_id=None, types=None, tags=None, power_tier=None):
         """
         Args:
             name (str): The card's name.
@@ -23,6 +23,7 @@ class Card:
 
         self.name = name
         self.color_id = color_id
+        self.types = types
         self.tags = tags
         self.power_tier = power_tier
 
@@ -58,7 +59,8 @@ class Card:
                     k, v = split
                     tags.append((k.strip(), v.strip()))
 
-        return Card(name, color_id=properties['color_identity'], tags=tags, power_tier=power_tier)
+        return Card(name, color_id=properties['color_identity'], types=properties['types'],
+                    tags=tags, power_tier=power_tier)
 
 
 class Drafter:
