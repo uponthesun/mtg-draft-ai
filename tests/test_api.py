@@ -53,7 +53,8 @@ def test_card_from_raw_data():
     name = 'Abhorrent Overlord'
     props = {
         'color_identity': 'B',
-        'tags': ['Reanimator - Payoff', 'Big', 'Keyword', 'Tier 2', 'Ramp - Payoff']
+        'tags': ['Reanimator - Payoff', 'Big', 'Keyword', 'Tier 2', 'Ramp - Payoff'],
+        'types': ['Creature']
     }
     card = Card.from_raw_data(name, props)
 
@@ -61,3 +62,4 @@ def test_card_from_raw_data():
     assert card.color_id == 'B'
     assert card.power_tier == 2
     assert card.tags == [('Reanimator', 'Payoff'), ('Ramp', 'Payoff')]
+    assert card.types == ['Creature']

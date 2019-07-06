@@ -32,7 +32,19 @@ def pool(cards_by_name):
 def test_deckbuild(pool):
     deck = deckbuild.best_two_color_synergy_build(pool)
 
-    assert len(deck) == deckbuild._NONLANDS_IN_DECK
+    assert len(deck) == deckbuild._NONLANDS_IN_DECK_DEFAULT
+
+    ur_cards_in_deck = [c for c in deck if synergy.castable(c, 'UR')]
+    assert deck == ur_cards_in_deck
+
+# Verifies that deckbuild will succeed even if there aren't enough playables in any color combination, and that it will
+# do a build for the color combination with the most playables in that case.
+def test_deckbuild_short_on_playables(cards_by_name):
+    card_names = ['Adeliz, the Cinder Wind', 'Harvest Pyre', 'Bloodrage Brawler', 'Thing in the Ice', 'Bound by Moonsilver']
+    card_pool = [cards_by_name[name] for name in card_names]
+    deck = deckbuild.best_two_color_synergy_build(card_pool)
+
+    assert len(deck) == 4
 
     ur_cards_in_deck = [c for c in deck if synergy.castable(c, 'UR')]
     assert deck == ur_cards_in_deck

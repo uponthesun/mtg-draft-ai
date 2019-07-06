@@ -19,14 +19,16 @@ def _num_nonlands(current_build):
     return len([c for c in current_build if 'land' not in c.types])
 
 
-def _communities_build(card_pool_graph, minimum_playables):
-    if _num_nonlands(card_pool_graph.nodes) < minimum_playables:
+def _communities_build(card_pool_graph, target_playables):
+    if _num_nonlands(card_pool_graph.nodes) < target_playables:
         raise DeckbuildError('Not enough cards')
 
     communities = nx.algorithms.community.greedy_modularity_communities(card_pool_graph)
 
+    # Add the community with the best ratio of edges added to nodes added. Repeat until we have >=
+    # the target number of playables.
     current_build = []
-    while _num_nonlands(current_build) < minimum_playables:
+    while _num_nonlands(current_build) < target_playables:
         current_graph = synergy.create_graph(current_build, remove_isolated=False)
         communities.sort(key=lambda c: _comm_score(current_graph, c), reverse=True)
         current_build.extend(communities.pop(0))
@@ -34,7 +36,7 @@ def _communities_build(card_pool_graph, minimum_playables):
     current_build_graph = synergy.create_graph(current_build, remove_isolated=False, freeze=False)
 
     # Cut least-central cards one by one until we're at the final number of playables
-    while _num_nonlands(current_build_graph.nodes) > minimum_playables:
+    while _num_nonlands(current_build_graph.nodes) > target_playables:
         centralities = synergy.sorted_centralities(current_build_graph)
         least_central_card = centralities[-1][0]
         current_build_graph.remove_node(least_central_card)
@@ -42,7 +44,7 @@ def _communities_build(card_pool_graph, minimum_playables):
     return list(current_build_graph.nodes)
 
 
-def _centralities_build(card_pool_graph, minimum_playables):
+def _centralities_build(card_pool_graph, target_playables):
     """Builds a deck by taking the top N most central cards. Ignores all other factors (including color).
 
     Args:
@@ -51,11 +53,11 @@ def _centralities_build(card_pool_graph, minimum_playables):
     Returns:
         List[Card]: The build for that subset of the pool.
     """
-    if len(card_pool_graph.nodes) < minimum_playables:
+    if len(card_pool_graph.nodes) < target_playables:
         raise DeckbuildError('Not enough cards')
 
     ranked_cards = synergy.sorted_centralities(card_pool_graph)
-    centrality_build = [tup[0] for tup in ranked_cards[:minimum_playables]]
+    centrality_build = [tup[0] for tup in ranked_cards[:target_playables]]
     return centrality_build
 
 
@@ -73,9 +75,8 @@ def best_two_color_synergy_build(card_pool, build_fn=_communities_build):
 
     print('\nBuilding pool: {}'.format([c.name for c in card_pool]))
 
-    candidates = []
-    graph = synergy.create_graph(card_pool, remove_isolated=False)
-
+    # By default we aim for 23 nonland playables, but if no color combo has enough, we instead
+    # aim for whatever the highest number is among all color combos.
     max_num_playables = 0
     for colors in _COLOR_COMBOS:
         on_color = [c for c in card_pool if synergy.castable(c, colors)]
@@ -84,14 +85,18 @@ def best_two_color_synergy_build(card_pool, build_fn=_communities_build):
             max_num_playables = num_nonlands
     target_num_playables = min(max_num_playables, _NONLANDS_IN_DECK_DEFAULT)
 
+    candidates = []
+    graph = synergy.create_graph(card_pool, remove_isolated=False)
+
     for colors in _COLOR_COMBOS:
         try:
-            on_color = [c for c in card_pool
+            # We include utility lands in the graph since they should affect card choices.
+            on_color_with_utility_lands = [c for c in card_pool
                         if synergy.castable(c, colors) and not ('land' in c.types and not c.tags)]
-            on_color_subgraph = graph.subgraph(on_color)
+            on_color_subgraph = graph.subgraph(on_color_with_utility_lands)
             deck_for_colors = build_fn(on_color_subgraph, target_num_playables)
-
             deck_subgraph = graph.subgraph(deck_for_colors)
+
             candidates.append((deck_for_colors, len(deck_subgraph.edges)))
         except DeckbuildError as e:
             print('Failed to build color combo {}, continuing. Reason: {}'.format(colors, e))
