@@ -13,6 +13,7 @@ class Card:
             name (str): The card's name.
             color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
                 can assign R for Bomat Courier.
+            types (List[str]): The card's supertypes.
             tags (List[(str, str)]): List of applicable tags for this card, as read from cubetutor.
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
