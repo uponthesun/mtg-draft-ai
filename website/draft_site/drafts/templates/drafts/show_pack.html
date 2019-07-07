@@ -29,6 +29,13 @@ View Seat:
 </div>
 
 <b>Owned Cards</b>
+{% if draft_complete %}
+<form action="/draft/{{ draft_id }}/seat/{{ current_seat }}/autobuild" method="get">
+    <button type="submit">
+        Auto-build deck
+    </button>
+</form>
+{% endif %}
 
 <div>
 {% for card, image_url in owned_cards %}
