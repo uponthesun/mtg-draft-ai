@@ -20,8 +20,27 @@ def _num_nonlands(current_build):
 
 
 def _communities_build(card_pool_graph, target_playables):
+    """Builds a deck by trying combinations of communities. Ignores all other factors (including color).
+
+    Outline of algorithm:
+
+    1). Split the on-color cards into communities using networkx's greedy_modular_communities
+    2). Find the "best" community to add based on # of edges it would add / # nodes
+    3). Add the entire community to the pool
+    4). Repeat 2-3 until we have >= the target number of playables
+    5). Cut cards one by one based on lowest centrality score in the graph for the pool
+    until we have the target number of playables
+
+    Args:
+        card_pool_graph (networkx.Graph): A synergy graph of Cards as the card pool to build from.
+        target_playables (int): The number of nonland cards to include in the deck. Utility lands can still be
+            included if they are beneficial, but don't count towards this total.
+
+    Returns:
+        List[Card]: The build for the given pool pool of cards.
+    """
     if _num_nonlands(card_pool_graph.nodes) < target_playables:
-        raise DeckbuildError('Not enough cards')
+        raise DeckbuildError('Not enough nonland cards')
 
     communities = nx.algorithms.community.greedy_modularity_communities(card_pool_graph)
 
@@ -49,9 +68,11 @@ def _centralities_build(card_pool_graph, target_playables):
 
     Args:
         card_pool_graph (networkx.Graph): A synergy graph of Cards as the card pool to build from.
+        target_playables (int): The number of nonland cards to include in the deck. Utility lands can still be
+            included if they are beneficial, but don't count towards this total.
 
     Returns:
-        List[Card]: The build for that subset of the pool.
+        List[Card]: The build for the given pool pool of cards.
     """
     if len(card_pool_graph.nodes) < target_playables:
         raise DeckbuildError('Not enough cards')
