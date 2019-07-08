@@ -154,8 +154,6 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
         return pack[0] if len(composite_ratings) == 0 else composite_ratings[0].card
 
-
-
     @classmethod
     def _raw_combined_ratings(cls, synergy_ratings, cards_owned):
         """Generate power ratings (power_delta, total_power) for each card."""
@@ -199,23 +197,24 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
     @staticmethod
     def _composite_ratings(normalized_ratings, cards_owned, draft_info):
-        conservative_level = len(cards_owned) / (draft_info.cards_per_pack * draft_info.num_phases)
+        # "Conservative level" starts at 0 for the first pick of the draft and linearly increases to 1 for the
+        # last pick in which there is a decision in the draft, which is the second-to-last pick.
+        conservative_level = min(len(cards_owned) / (draft_info.cards_per_pack * draft_info.num_phases - 2), 1)
         greed_level = 1 - conservative_level
 
-        # Average all of the different power measures into a composite power rating.
-        # Then, average the different synergy measures into a composite synergy rating.
+        # Combine the different power measures into a composite power rating, using greed and conservative level
+        # as weights.
+        # Then, combine the different synergy measures into a composite synergy rating, using greed and conservative
+        # level as weights.
         # Finally, average the composite power and synergy ratings into a final rating.
         composite_ratings = []
         for nr in normalized_ratings:
             power_rating = greed_level * nr.power_delta + conservative_level * nr.total_power
-            #power_rating = statistics.mean([nr.power_delta, nr.total_power])
 
             synergy_rating = greed_level * statistics.mean([nr.edges_delta, nr.common_neighbors_weighted]) + \
                              conservative_level * nr.total_edges
-            #synergy_rating = statistics.mean([nr.edges_delta, nr.total_edges, nr.common_neighbors_weighted])
 
             rating = round(statistics.mean([power_rating, synergy_rating]), 3)
-
 
             composite_ratings.append(nr._replace(rating=rating))
         return composite_ratings

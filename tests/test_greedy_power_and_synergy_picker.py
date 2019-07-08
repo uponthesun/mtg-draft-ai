@@ -30,7 +30,7 @@ def graph(cards):
 
 @pytest.fixture
 def draft_info():
-    return mock.Mock(name='draft_info')
+    return DraftInfo(card_list=None, num_drafters=6, num_phases=3, cards_per_pack=15)
 
 
 def test_normalize_ratings():
@@ -51,21 +51,48 @@ def test_normalize_ratings():
     assert normalized_ratings == expected
 
 
-def test_composite_ratings():
+# power_delta, edges_delta, and common_neighbors_weighted are the "greedy" ratings, and
+# total_power, total_edges are the "conservative" ratings. This test verifies that at the start
+# of the draft, the greedy ratings are weighted 1 and the conservative ratings are rated 0.
+def test_composite_ratings_start_of_draft(draft_info):
+    owned_cards = []
     normalized_ratings = [
-        _CombinedRating('card1', 'W', rating=None, power_delta=1.0, total_power=1.0, edges_delta=1.0,
-                        total_edges=1.0, common_neighbors_weighted=1.0),
-        _CombinedRating('card2', 'U', None, 0.0, 0.2, 0.3, 0.4, 0.5),
+        _CombinedRating('card1', 'W', rating=None, power_delta=1.0, total_power=0.0, edges_delta=1.0,
+                        total_edges=0.0, common_neighbors_weighted=1.0),
+        _CombinedRating('card2', 'U', rating=None, power_delta=0.0, total_power=1.0, edges_delta=0.0,
+                        total_edges=1.0, common_neighbors_weighted=0.0)
     ]
 
     expected = [
-        _CombinedRating('card1', 'W', rating=1.0, power_delta=1.0, total_power=1.0, edges_delta=1.0,
-                        total_edges=1.0, common_neighbors_weighted=1.0),
-        # Expected: power rating = 0.1 and synergy rating = 0.4 -> composite = 0.25
-        _CombinedRating('card2', 'U', 0.25, 0.0, 0.2, 0.3, 0.4, 0.5),
+        _CombinedRating('card1', 'W', rating=1.0, power_delta=1.0, total_power=0.0, edges_delta=1.0,
+                        total_edges=0.0, common_neighbors_weighted=1.0),
+        _CombinedRating('card2', 'U', rating=0.0, power_delta=0.0, total_power=1.0, edges_delta=0.0,
+                        total_edges=1.0, common_neighbors_weighted=0.0)
     ]
 
-    composite_ratings = GreedyPowerAndSynergyPicker._composite_ratings(normalized_ratings)
+    composite_ratings = GreedyPowerAndSynergyPicker._composite_ratings(normalized_ratings, owned_cards, draft_info)
+    assert composite_ratings == expected
+
+
+# This test verifies that on the last meaningful pick of the draft, the greedy ratings are weighted 0
+# and the conservative ratings are rated 1.
+def test_composite_ratings_end_of_draft(draft_info):
+    owned_cards = [None for _ in range(0, 43)]
+    normalized_ratings = [
+        _CombinedRating('card1', 'W', rating=None, power_delta=1.0, total_power=0.0, edges_delta=1.0,
+                        total_edges=0.0, common_neighbors_weighted=1.0),
+        _CombinedRating('card2', 'U', rating=None, power_delta=0.0, total_power=1.0, edges_delta=0.0,
+                        total_edges=1.0, common_neighbors_weighted=0.0)
+    ]
+
+    expected = [
+        _CombinedRating('card1', 'W', rating=0.0, power_delta=1.0, total_power=0.0, edges_delta=1.0,
+                        total_edges=0.0, common_neighbors_weighted=1.0),
+        _CombinedRating('card2', 'U', rating=1.0, power_delta=0.0, total_power=1.0, edges_delta=0.0,
+                        total_edges=1.0, common_neighbors_weighted=0.0)
+    ]
+
+    composite_ratings = GreedyPowerAndSynergyPicker._composite_ratings(normalized_ratings, owned_cards, draft_info)
     assert composite_ratings == expected
 
 
