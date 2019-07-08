@@ -29,7 +29,7 @@ View Seat:
         <img src="{{ image_url }}" width="146" height="204" />
     {% endfor %}
 {% endif %}
-    <input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings">
+    <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
 
     <div id="bot_ratings" class="hidden">
         {% for rating in bot_ratings %}
