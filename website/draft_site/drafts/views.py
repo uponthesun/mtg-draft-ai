@@ -17,7 +17,6 @@ from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
-
 import requests
 import toml
 
@@ -125,6 +124,7 @@ def show_draft(request, draft_id):
 
 # /draft/<int:draft_id>/seat/<int:seat>
 def show_seat(request, draft_id, seat):
+    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=6, num_phases=3, cards_per_pack=15)
     draft = get_object_or_404(models.Draft, pk=draft_id)
     drafter = models.Drafter.objects.get(draft=draft, seat=seat)
 
@@ -137,11 +137,17 @@ def show_seat(request, draft_id, seat):
     cards_with_images = [(c, _image_url(c.name)) for c in cards]
     owned_cards_with_images = [(c, _image_url(c.name)) for c in sorted_owned_cards]
     draft_complete = (drafter.current_phase == draft.num_phases)
+    
+    # Generate bot recommendations
+    pack_converted = [CARDS_BY_NAME[c.name] for c in cards]
+    owned_converted = [CARDS_BY_NAME[c.name] for c in owned_cards]
+    bot_ratings = PICKER_FACTORY.create().get_composite_ratings(pack_converted, owned_converted, draft_info)
 
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
-               'human_drafter': seat == 0, 'current_seat': seat, 'draft_complete': draft_complete}
+               'human_drafter': seat == 0, 'current_seat': seat, 'draft_complete': draft_complete,
+               'bot_ratings': bot_ratings}
 
     return render(request, 'drafts/show_pack.html', context)
 
