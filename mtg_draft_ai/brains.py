@@ -145,7 +145,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
         raw_combined_ratings = self._raw_combined_ratings(synergy_ratings, cards_owned)
         normalized_ratings = self._normalize_ratings(raw_combined_ratings)
-        composite_ratings = self._composite_ratings(normalized_ratings)
+        composite_ratings = self._composite_ratings(normalized_ratings, cards_owned, draft_info)
         composite_ratings.sort(key=lambda cr: cr.rating, reverse=True)
 
         # replace full card object with just card name for more readable output
@@ -198,15 +198,25 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         return values_by_tier[card.power_tier]
 
     @staticmethod
-    def _composite_ratings(normalized_ratings):
+    def _composite_ratings(normalized_ratings, cards_owned, draft_info):
+        conservative_level = len(cards_owned) / (draft_info.cards_per_pack * draft_info.num_phases)
+        greed_level = 1 - conservative_level
+
         # Average all of the different power measures into a composite power rating.
         # Then, average the different synergy measures into a composite synergy rating.
         # Finally, average the composite power and synergy ratings into a final rating.
         composite_ratings = []
         for nr in normalized_ratings:
-            power_rating = statistics.mean([nr.power_delta, nr.total_power])
-            synergy_rating = statistics.mean([nr.edges_delta, nr.total_edges, nr.common_neighbors_weighted])
+            power_rating = greed_level * nr.power_delta + conservative_level * nr.total_power
+            #power_rating = statistics.mean([nr.power_delta, nr.total_power])
+
+            synergy_rating = greed_level * statistics.mean([nr.edges_delta, nr.common_neighbors_weighted]) + \
+                             conservative_level * nr.total_edges
+            #synergy_rating = statistics.mean([nr.edges_delta, nr.total_edges, nr.common_neighbors_weighted])
+
             rating = round(statistics.mean([power_rating, synergy_rating]), 3)
+
+
             composite_ratings.append(nr._replace(rating=rating))
         return composite_ratings
 
