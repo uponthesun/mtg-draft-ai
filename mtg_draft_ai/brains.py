@@ -141,18 +141,21 @@ _CombinedRating = collections.namedtuple('CombinedRating', ['card', 'color_combo
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
     def pick(self, pack, cards_owned, draft_info):
+        composite_ratings = self.get_composite_ratings(pack, cards_owned, draft_info)
+        # replace full card object with just card name for more readable output
+        printable_candidates = [str(_CombinedRating(tup[0].name, *tup[1:])) for tup in composite_ratings]
+        print('\nrankings:\n{}'.format('\n'.join(printable_candidates)))
+
+        return pack[0] if len(composite_ratings) == 0 else composite_ratings[0].card
+
+    def get_composite_ratings(self, pack, cards_owned, draft_info):
         synergy_ratings = super()._ratings(pack, cards_owned, draft_info)
 
         raw_combined_ratings = self._raw_combined_ratings(synergy_ratings, cards_owned)
         normalized_ratings = self._normalize_ratings(raw_combined_ratings)
         composite_ratings = self._composite_ratings(normalized_ratings)
         composite_ratings.sort(key=lambda cr: cr.rating, reverse=True)
-
-        # replace full card object with just card name for more readable output
-        printable_candidates = [str(_CombinedRating(tup[0].name, *tup[1:])) for tup in composite_ratings]
-        print('\nrankings:\n{}'.format('\n'.join(printable_candidates)))
-
-        return pack[0] if len(composite_ratings) == 0 else composite_ratings[0].card
+        return composite_ratings
 
 
 
