@@ -27,16 +27,17 @@ def _refine_build(current_build, leftovers):
         for card in leftovers:
             build_with_card = current_build + [card]
             graph_with_card = synergy.create_graph(build_with_card, remove_isolated=False)
-            centralities = synergy.sorted_centralities(graph_with_card)
 
-            card_centrality = [tup[1] for tup in centralities if tup[0] == card][0]
-            worst_card, worst_centrality = centralities[-1]
-            improvement = card_centrality - worst_centrality
+            card_degree = graph_with_card.degree(card)
+            worst_card, worst_degree = min([(c, graph_with_card.degree(c)) for c in build_with_card],
+                                           key=lambda tup: tup[1])
+            improvement = card_degree - worst_degree
 
             if improvement > max_improvement:
                 best_card_to_add, card_to_remove, max_improvement = card, worst_card, improvement
 
         if best_card_to_add:
+            #print('***** removing: {} adding: {}'.format(card_to_remove, best_card_to_add))
             current_build.remove(card_to_remove)
             current_build.append(best_card_to_add)
             leftovers.remove(best_card_to_add)
