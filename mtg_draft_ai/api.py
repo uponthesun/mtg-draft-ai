@@ -28,12 +28,11 @@ class Card:
         self.tags = tags
         self.power_tier = power_tier
 
-    def full_repr(self):
-        """Returns full string representation of this card."""
-        return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
+    def __str__(self):
+        return 'C: {}'.format(self.name)
 
     def __repr__(self):
-        return 'C: {}'.format(self.name)
+        return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):
