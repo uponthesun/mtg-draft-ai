@@ -37,7 +37,6 @@ def _refine_build(current_build, leftovers):
                 best_card_to_add, card_to_remove, max_improvement = card, worst_card, improvement
 
         if best_card_to_add:
-            #print('***** removing: {} adding: {}'.format(card_to_remove, best_card_to_add))
             current_build.remove(card_to_remove)
             current_build.append(best_card_to_add)
             leftovers.remove(best_card_to_add)
