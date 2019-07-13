@@ -1,8 +1,8 @@
 View Seat:
 <!-- Human drafter is always seat 0 -->
-<a href="/draft/{{ draft_id }}">0 (You)</a>
+<a href="/draft/{{ draft.id }}">0 (You)</a>
 {% for seat in bot_seat_range %}
-    <a href="/draft/{{ draft_id }}/seat/{{ seat }}">{{ seat }}</a>
+    <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
 {% endfor %}
 <br>
 <br>
@@ -11,7 +11,7 @@ View Seat:
 <div>
 
 {% if human_drafter %}
-    <form action="/draft/pick-card/{{ draft_id }}" method="post">
+    <form action="/draft/pick-card/{{ draft.id }}" method="post">
         {% csrf_token %}
         <input name="phase" type="hidden" value="{{ phase }}">
         <input name="pick" type="hidden" value="{{ pick }}">
@@ -28,17 +28,18 @@ View Seat:
 {% endif %}
 </div>
 
-<b>Owned Cards</b>
 {% if draft_complete %}
-<form action="/draft/{{ draft_id }}/seat/{{ current_seat }}/autobuild" method="get">
+<form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
     <button type="submit">
         Auto-build deck
     </button>
 </form>
 {% endif %}
+<b>Owned Cards</b>
 
 <div>
-{% for card, image_url in owned_cards %}
+{% for _, image_url in owned_cards %}
+    {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
     <img src="{{ image_url }}" width="146" height="204" />
 {% endfor %}
 </div>
