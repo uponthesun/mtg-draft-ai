@@ -151,9 +151,14 @@ def auto_build(request, draft_id, seat):
     num_edges = len(deck_graph.edges)
     avg_power = statistics.mean([GreedyPowerAndSynergyPicker._power_rating(c) for c in built_deck])
 
+    deck_card_names = [c.name for c in built_deck]
+    leftovers_card_names = [c.name for c in leftovers]
+    textarea_rows = len(owned_cards) + 1
+
     context = {'built_deck_images': built_deck_images, 'leftovers_images': leftovers_images,
                'num_edges': num_edges, 'avg_power': round(avg_power, 2), 'draft_id': draft_id,
-               'bot_seat_range': range(1, draft.num_drafters)}
+               'bot_seat_range': range(1, draft.num_drafters), 'deck_card_names': deck_card_names,
+               'leftovers_card_names': leftovers_card_names, 'textarea_rows': textarea_rows}
     return render(request, 'drafts/autobuild.html', context)
 
 
