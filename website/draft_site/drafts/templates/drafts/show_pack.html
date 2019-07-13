@@ -22,9 +22,12 @@ View Seat:
         {% endfor %}
     </form>
 {% else %}
+    <!-- Do-nothing form to make formatting consistent with human drafter view -->
+    <form>
     {% for card, image_url in cards %}
         <img src="{{ image_url }}" width="146" height="204" />
     {% endfor %}
+    </form>
 {% endif %}
 </div>
 
