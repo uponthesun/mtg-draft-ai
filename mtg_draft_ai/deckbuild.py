@@ -8,15 +8,49 @@ _NONLANDS_IN_DECK_DEFAULT = 23
 
 _COLOR_COMBOS = ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG']
 
+
+def _num_nonlands(current_build):
+    return len([c for c in current_build if 'land' not in c.types])
+
+
+def _refine_build(current_build, leftovers):
+    """Improves on current build by trying 1-for-1 swaps of leftover cards with cards in the current build.
+
+    Checks all leftover cards to see if there exists a 1-for-1 swap with the worst card in the current build
+    that improves the build. Makes the swap that causes the largest such improvement. Repeat until there is none.
+    Removed cards aren't considered for re-adding, so the process is guaranteed to terminate.
+    """
+    while True:
+        best_card_to_add = None
+        card_to_remove = None
+        max_improvement = 0
+        for card in leftovers:
+            build_with_card = current_build + [card]
+            graph_with_card = synergy.create_graph(build_with_card, remove_isolated=False)
+
+            card_degree = graph_with_card.degree(card)
+            worst_card, worst_degree = min([(c, graph_with_card.degree(c)) for c in build_with_card],
+                                           key=lambda tup: tup[1])
+            improvement = card_degree - worst_degree
+
+            if improvement > max_improvement:
+                best_card_to_add, card_to_remove, max_improvement = card, worst_card, improvement
+
+        if best_card_to_add:
+            current_build.remove(card_to_remove)
+            current_build.append(best_card_to_add)
+            leftovers.remove(best_card_to_add)
+        else:
+            break
+
+    return current_build
+
+
 def _comm_score(current_graph, comm):
     build_with_comm = list(current_graph.nodes) + list(comm)
     graph_with_comm = synergy.create_graph(build_with_comm, remove_isolated=False)
     edges_added = len(graph_with_comm.edges) - len(current_graph.edges)
     return edges_added / len(comm)
-
-
-def _num_nonlands(current_build):
-    return len([c for c in current_build if 'land' not in c.types])
 
 
 def _communities_build(card_pool_graph, target_playables):
@@ -30,6 +64,7 @@ def _communities_build(card_pool_graph, target_playables):
     4). Repeat 2-3 until we have >= the target number of playables
     5). Cut cards one by one based on lowest centrality score in the graph for the pool
     until we have the target number of playables
+    6). Check leftovers to see if any cards should be swapped with the worst cards in current build
 
     Args:
         card_pool_graph (networkx.Graph): A synergy graph of Cards as the card pool to build from.
@@ -60,7 +95,10 @@ def _communities_build(card_pool_graph, target_playables):
         least_central_card = centralities[-1][0]
         current_build_graph.remove_node(least_central_card)
 
-    return list(current_build_graph.nodes)
+    leftovers = [c for c in card_pool_graph.nodes if c not in current_build_graph.nodes]
+    current_build = list(current_build_graph.nodes)
+
+    return _refine_build(current_build, leftovers)
 
 
 def _centralities_build(card_pool_graph, target_playables):
@@ -79,7 +117,10 @@ def _centralities_build(card_pool_graph, target_playables):
 
     ranked_cards = synergy.sorted_centralities(card_pool_graph)
     centrality_build = [tup[0] for tup in ranked_cards[:target_playables]]
-    return centrality_build
+
+    leftovers = [c for c in card_pool_graph.nodes if c not in centrality_build]
+
+    return _refine_build(centrality_build, leftovers)
 
 
 def best_two_color_synergy_build(card_pool, build_fn=_communities_build):
