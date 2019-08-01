@@ -125,7 +125,7 @@ def show_seat(request, draft_id, seat):
     owned_cards_with_images = [(c, _image_url(c.name)) for c in sorted_owned_cards]
     draft_complete = (drafter.current_phase == draft.num_phases)
 
-    context = {'cards': cards_with_images, 'draft_id': draft_id,
+    context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
                'human_drafter': seat == 0, 'current_seat': seat, 'draft_complete': draft_complete}
