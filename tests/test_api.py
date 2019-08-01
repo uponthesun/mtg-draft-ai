@@ -54,7 +54,8 @@ def test_card_from_raw_data():
     props = {
         'color_identity': 'B',
         'tags': ['Reanimator - Payoff', 'Big', 'Keyword', 'Tier 2', 'Ramp - Payoff'],
-        'types': ['Creature']
+        'types': ['Creature'],
+        'mana_cost': ["5", "B", "B"]
     }
     card = Card.from_raw_data(name, props)
 

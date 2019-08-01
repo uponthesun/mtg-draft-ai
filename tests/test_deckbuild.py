@@ -28,7 +28,8 @@ def pool(cards_by_name):
     return [cards_by_name[name] for name in pool]
 
 
-# Does a deckbuild of a UR pool. Asserts that the right number of cards are in resulting deck, and that they are all on-color.
+# Does a deckbuild of a UR pool. Asserts that the right number of cards are in resulting deck,
+# and that they are all on-color.
 def test_deckbuild(pool):
     deck = deckbuild.best_two_color_synergy_build(pool)
 
@@ -36,6 +37,7 @@ def test_deckbuild(pool):
 
     ur_cards_in_deck = [c for c in deck if synergy.castable(c, 'UR')]
     assert deck == ur_cards_in_deck
+
 
 # Verifies that deckbuild will succeed even if there aren't enough playables in any color combination, and that it will
 # do a build for the color combination with the most playables in that case.
@@ -49,9 +51,12 @@ def test_deckbuild_short_on_playables(cards_by_name):
     ur_cards_in_deck = [c for c in deck if synergy.castable(c, 'UR')]
     assert deck == ur_cards_in_deck
 
-# Asserts that build_fn is called once for each color combination.
+
+# Asserts that build_fn is called once for each:
+# - 2-color combination (10)
+# - 2 main color, 1 splash color combination (30)
 def test_deckbuild_each_color_pair_tried(pool):
     build_fn = mock.MagicMock('build_fn')
     deckbuild.best_two_color_synergy_build(pool, build_fn=build_fn)
 
-    assert build_fn.call_count == 10
+    assert build_fn.call_count == 40

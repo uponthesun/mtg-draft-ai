@@ -188,9 +188,9 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
         values_by_tier = {
             1: 1,
-            2: 0.8,
-            3: 0.6,
-            4: 0.3,
+            2: 0.75,
+            3: 0.25,
+            4: 0,
             None: 0
         }
         if card.power_tier not in values_by_tier:
