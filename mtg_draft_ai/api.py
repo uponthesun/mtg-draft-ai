@@ -183,7 +183,7 @@ class Packs:
         return self.pack_contents[phase][starting_seat]
 
 
-def read_cube_toml(filename):
+def read_cube_toml(filename, fixer_data_filename=None):
     """Reads cube data from a toml file and returns it as a List[Card].
 
     Args:
@@ -194,4 +194,12 @@ def read_cube_toml(filename):
         List[Card]: The List[Card] from the file.
     """
     raw_data = toml.load(filename)
-    return [Card.from_raw_data(*tup) for tup in raw_data.items()]
+    cube_list = [Card.from_raw_data(*tup) for tup in raw_data.items()]
+
+    if fixer_data_filename:
+        fixers = toml.load(fixer_data_filename)
+        for card in cube_list:
+            if card.name in fixers:
+                card.fixer_color_id = fixers[card.name]
+
+    return cube_list

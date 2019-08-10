@@ -1,6 +1,7 @@
 """Implementations of Picker, which (hopefully) use intelligent strategies to make draft picks."""
 
 import collections
+import math
 import random
 import statistics
 import networkx as nx
@@ -138,22 +139,45 @@ _CombinedRating = collections.namedtuple('CombinedRating', ['card', 'color_combo
                                                             'common_neighbors_weighted'])
 
 
+_FixerRating = collections.namedtuple('FixerRating', ['card', 'color_combo', 'rating', 'num_oncolor_playables',
+                                                      'num_picks_made'])
+
+
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
     def pick(self, pack, cards_owned, draft_info):
-        synergy_ratings = super()._ratings(pack, cards_owned, draft_info)
+        land_fixers = [c for c in pack if c.fixer_color_id and 'land' in c.types]
+        regular_cards = [c for c in pack if c not in land_fixers]
 
+        # Create ratings for the "regular cards", i.e. not the land fixers
+        synergy_ratings = super()._ratings(regular_cards, cards_owned, draft_info)
         raw_combined_ratings = self._raw_combined_ratings(synergy_ratings, cards_owned)
         normalized_ratings = self._normalize_ratings(raw_combined_ratings)
         composite_ratings = self._composite_ratings(normalized_ratings)
-        composite_ratings.sort(key=lambda cr: cr.rating, reverse=True)
 
-        # replace full card object with just card name for more readable output
-        printable_candidates = [str(_CombinedRating(tup[0].name, *tup[1:])) for tup in composite_ratings]
-        print('\nrankings:\n{}'.format('\n'.join(printable_candidates)))
+        # Create ratings for land fixers
+        land_fixer_ratings = self._land_fixer_ratings(land_fixers, cards_owned)
 
-        return pack[0] if len(composite_ratings) == 0 else composite_ratings[0].card
+        all_ratings = composite_ratings + land_fixer_ratings
+        all_ratings.sort(key=lambda cr: cr.rating, reverse=True)
+        print('\nrankings:\n{}'.format('\n'.join([str(r) for r in all_ratings])))
 
+        return pack[0] if len(all_ratings) == 0 else all_ratings[0].card
+
+    @staticmethod
+    def _land_fixer_ratings(land_fixers, cards_owned):
+        num_picks_made = len(cards_owned)
+
+        ratings = []
+        for card in land_fixers:
+            on_color_playables = [c for c in cards_owned if
+                                  synergy.castable(c, card.fixer_color_id) and
+                                  'land' not in c.types]
+            num_oncolor_playables = len(on_color_playables)
+            rating = _fixer_rating(num_oncolor_playables, num_picks_made)
+            ratings.append(_FixerRating(card=card, color_combo=card.fixer_color_id, rating=rating,
+                                        num_oncolor_playables=num_oncolor_playables, num_picks_made=num_picks_made))
+        return ratings
 
 
     @classmethod
@@ -247,6 +271,20 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
             normalized_ratings.append(raw_rating._replace(**norm_values))
         return normalized_ratings
+
+
+def _fixer_rating(num_oncolor_nonlands, num_picks_made):
+    if num_picks_made == 0:
+        return 0
+
+    lower_bound = 0.5
+
+    offset = 2
+    x = (num_oncolor_nonlands - offset) / num_picks_made
+
+    k = 5
+    x0 = 0.6
+    return lower_bound + (1 - lower_bound) / (1 + math.exp(-k * (x - x0)))
 
 
 def _normalize(value, max_value):

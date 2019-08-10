@@ -26,19 +26,7 @@ CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
 IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
 FIXER_DATA_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_fixer_data.toml')
 
-
-def _load_cube_list(cube_filename, fixer_data_filename):
-    cube_list = read_cube_toml(cube_filename)
-
-    fixers = toml.load(fixer_data_filename)
-    for card in cube_list:
-        if card.name in fixers:
-            card.fixer_color_id = fixers[card.name]
-
-    return cube_list
-
-
-CUBE_LIST = _load_cube_list(CUBE_FILE, FIXER_DATA_FILE)
+CUBE_LIST = read_cube_toml(CUBE_FILE, FIXER_DATA_FILE)
 CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
 PICKER_FACTORY = GreedyPowerAndSynergyPicker.factory(CUBE_LIST)
 LOGGER = logging.getLogger(__name__)
