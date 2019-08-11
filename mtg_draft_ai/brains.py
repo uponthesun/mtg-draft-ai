@@ -279,10 +279,10 @@ def _fixer_rating(num_oncolor_nonlands, num_picks_made):
 
     lower_bound = 0.5
 
-    offset = 2
+    offset = 1
     x = (num_oncolor_nonlands - offset) / num_picks_made
 
-    k = 5
+    k = 6
     x0 = 0.6
     return lower_bound + (1 - lower_bound) / (1 + math.exp(-k * (x - x0)))
 
