@@ -34,6 +34,8 @@ def draft_info():
 
 
 def test_normalize_ratings():
+    cards_owned = [None] * 10
+
     raw_ratings = [
         _CombinedRating('card1', 'W', None, power_delta=0.8, total_power=10, edges_delta=5,
                         total_edges=50, common_neighbors_weighted=10),
@@ -42,12 +44,12 @@ def test_normalize_ratings():
     ]
 
     expected = [
-        _CombinedRating('card1', 'W', None, 1.0, 1.0, 1.0, 1.0, 1.0),
-        _CombinedRating('card2', 'U', None, 0.75, 0.8, 0.8, 0.8, 0.8),
-        _CombinedRating('card3', 'B', None, 0.375, 0.6, 0.6, 0.6, 0.6),
+        _CombinedRating('card1', 'W', None, 0.8, 1.0, 0.5, 1.0, 1.0),
+        _CombinedRating('card2', 'U', None, 0.6, 0.8, 0.4, 0.8, 0.8),
+        _CombinedRating('card3', 'B', None, 0.3, 0.6, 0.3, 0.6, 0.6),
     ]
 
-    normalized_ratings = GreedyPowerAndSynergyPicker._normalize_ratings(raw_ratings)
+    normalized_ratings = GreedyPowerAndSynergyPicker._normalize_ratings(raw_ratings, cards_owned)
     assert normalized_ratings == expected
 
 
