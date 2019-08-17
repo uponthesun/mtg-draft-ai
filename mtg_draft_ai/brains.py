@@ -152,7 +152,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         # Create ratings for the "regular cards", i.e. not the land fixers
         synergy_ratings = super()._ratings(regular_cards, cards_owned, draft_info)
         raw_combined_ratings = self._raw_combined_ratings(synergy_ratings, cards_owned)
-        normalized_ratings = self._normalize_ratings(raw_combined_ratings)
+        normalized_ratings = self._normalize_ratings(raw_combined_ratings, cards_owned)
         composite_ratings = self._composite_ratings(normalized_ratings)
 
         # Create ratings for land fixers
@@ -212,9 +212,9 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
         values_by_tier = {
             1: 1,
-            2: 0.8,
-            3: 0.6,
-            4: 0.3,
+            2: 0.7,
+            3: 0.3,
+            4: 0.1,
             None: 0
         }
         if card.power_tier not in values_by_tier:
@@ -235,7 +235,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         return composite_ratings
 
     @staticmethod
-    def _normalize_ratings(raw_ratings):
+    def _normalize_ratings(raw_ratings, cards_owned):
         """Normalizes the given list of ratings.
 
         'Normalization' here means converting all of the values for a field to proportional values in
@@ -256,11 +256,16 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         if not raw_ratings:
             return []
 
-        fields = ['power_delta', 'total_power', 'edges_delta', 'total_edges', 'common_neighbors_weighted']
-        max_values = {}
-        for field in fields:
+        max_values = {
+            'power_delta': 1.0,
+            'edges_delta': len(cards_owned)
+        }
+        relative_fields = ['total_power', 'total_edges', 'common_neighbors_weighted']
+        for field in relative_fields:
             max_values[field] = max([getattr(r, field) for r in raw_ratings])
 
+        print('max_values: {}'.format(max_values))
+        fields = relative_fields + list(max_values.keys())
         normalized_ratings = []
         for raw_rating in raw_ratings:
             norm_values = {}
@@ -277,12 +282,12 @@ def _fixer_rating(num_oncolor_nonlands, num_picks_made):
     if num_picks_made == 0:
         return 0
 
-    lower_bound = 0.5
+    lower_bound = 0.3
 
-    offset = 1
+    offset = 2
     x = (num_oncolor_nonlands - offset) / num_picks_made
 
-    k = 6
+    k = 5
     x0 = 0.6
     return lower_bound + (1 - lower_bound) / (1 + math.exp(-k * (x - x0)))
 
