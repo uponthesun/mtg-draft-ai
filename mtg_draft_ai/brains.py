@@ -140,7 +140,7 @@ _CombinedRating = collections.namedtuple('CombinedRating', ['card', 'color_combo
 
 
 _FixerRating = collections.namedtuple('FixerRating', ['card', 'color_combo', 'rating', 'num_oncolor_playables',
-                                                      'num_picks_made'])
+                                                      'num_picks_made', 'num_oncolor_lands'])
 
 
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
@@ -170,13 +170,17 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
         ratings = []
         for card in land_fixers:
-            on_color_playables = [c for c in cards_owned if
-                                  synergy.castable(c, card.fixer_color_id) and
+            on_color_playables = [c for c in cards_owned
+                                  if synergy.castable(c, card.fixer_color_id) and
                                   'land' not in c.types]
+            on_color_fixing_lands = [c for c in cards_owned
+                                     if 'land' in c.types and c.fixer_color_id == card.fixer_color_id]
             num_oncolor_playables = len(on_color_playables)
-            rating = _fixer_rating(num_oncolor_playables, num_picks_made)
+            num_oncolor_lands = len(on_color_fixing_lands)
+            rating = _fixer_rating(num_oncolor_playables, num_picks_made, num_oncolor_lands)
             ratings.append(_FixerRating(card=card, color_combo=card.fixer_color_id, rating=rating,
-                                        num_oncolor_playables=num_oncolor_playables, num_picks_made=num_picks_made))
+                                        num_oncolor_playables=num_oncolor_playables, num_picks_made=num_picks_made,
+                                        num_oncolor_lands=num_oncolor_lands))
         return ratings
 
 
@@ -213,7 +217,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         values_by_tier = {
             1: 1,
             2: 0.7,
-            3: 0.3,
+            3: 0.4,
             4: 0.1,
             None: 0
         }
@@ -278,18 +282,14 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         return normalized_ratings
 
 
-def _fixer_rating(num_oncolor_nonlands, num_picks_made):
+def _fixer_rating(num_oncolor_nonlands, num_picks_made, num_oncolor_lands):
     if num_picks_made == 0:
         return 0
 
     lower_bound = 0.3
+    offset = 1 + num_oncolor_lands
 
-    offset = 2
-    x = (num_oncolor_nonlands - offset) / num_picks_made
-
-    k = 5
-    x0 = 0.6
-    return lower_bound + (1 - lower_bound) / (1 + math.exp(-k * (x - x0)))
+    return max(0, lower_bound + (1 - lower_bound) * (num_oncolor_nonlands - offset) / num_picks_made)
 
 
 def _normalize(value, max_value):
