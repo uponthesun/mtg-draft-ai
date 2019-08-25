@@ -243,13 +243,14 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         """Normalizes the given list of ratings.
 
         'Normalization' here means converting all of the values for a field to proportional values in
-        the range of [0, 1]. We do this by finding the max value for that field in this list, and
-        dividing all values for that field by the max value.
+        the range of [0, 1]. For some fields there are straightforward ways to determine the practical
+        maximum value to divide by. For the ones which there aren't, we use the max value for that field
+        in the raw ratings list, making those "relative fields". For relative fields, a normalized value
+        of 1 means the original value was the highest in this list of values, not that it was the
+        theoretical maximum for that field.
 
-        Note that this means that a normalized value of 1 means the original value was the highest in
-        this list of values, not that it was the theoretical maximum for that field.
-
-        We assume all values are >= 0, and if the max value is 0, then all normalized values will be 0 as well.
+        We assume all values are >= 0. For relative fields, if the max value is 0,
+        then all normalized values will be 0 as well.
 
         Args:
             raw_ratings (List[_CombinedRating]): Raw combined power and synergy ratings.
@@ -269,7 +270,6 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         for field in relative_fields:
             max_values[field] = max([getattr(r, field) for r in raw_ratings])
 
-        print('max_values: {}'.format(max_values))
         fields = relative_fields + list(max_values.keys())
         normalized_ratings = []
         for raw_rating in raw_ratings:
