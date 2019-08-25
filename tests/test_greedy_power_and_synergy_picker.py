@@ -3,7 +3,6 @@ import os
 import pytest
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker, _CombinedRating
 from mtg_draft_ai.api import *
-from mtg_draft_ai import synergy
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -12,25 +11,21 @@ TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 # Cards:
 # Abzan Battle Priest, Ajani's Pridemate, Lightning Helix, "Ayli, Eternal Pilgrim",
 # Tuskguard Captain, Swift Justice
-@pytest.fixture
-def cards():
-    file_path = os.path.join(TEST_DATA_DIR, 'test_greedy_power_and_synergy_picker_cards.toml')
-    return read_cube_toml(file_path)
+CUBE_LIST_PATH = os.path.join(TEST_DATA_DIR, 'test_greedy_power_and_synergy_picker_cards.toml')
+FIXER_DATA_PATH = os.path.join(TEST_DATA_DIR, 'fixer_data.toml')
 
-
-@pytest.fixture
-def cards_by_name(cards):
-    return {c.name: c for c in cards}
-
-
-@pytest.fixture
-def graph(cards):
-    return synergy.create_graph(cards)
+CUBE_LIST = read_cube_toml(CUBE_LIST_PATH, FIXER_DATA_PATH)
+CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
 
 
 @pytest.fixture
 def draft_info():
     return mock.Mock(name='draft_info')
+
+
+@pytest.fixture
+def picker():
+    return GreedyPowerAndSynergyPicker.factory(CUBE_LIST).create()
 
 
 def test_normalize_ratings():
@@ -71,13 +66,21 @@ def test_composite_ratings():
     assert composite_ratings == expected
 
 
-def test_greedy_power_and_synergy_picker(cards, cards_by_name, draft_info):
-    picker = GreedyPowerAndSynergyPicker.factory(cards).create()
-    owned_card_names = ['Abzan Battle Priest', "Ajani's Pridemate"]
-    pack_card_names = ['Ayli, Eternal Pilgrim', 'Tuskguard Captain']
-    owned_cards = [cards_by_name[n] for n in owned_card_names]
-    pack = [cards_by_name[n] for n in pack_card_names]
+def test_pick(draft_info, picker):
+    owned_cards = _cards(['Abzan Battle Priest', "Ajani's Pridemate"])
+    pack = _cards(['Ayli, Eternal Pilgrim', 'Tuskguard Captain'])
 
     pick = picker.pick(pack, owned_cards, draft_info)
-    assert pick == cards_by_name['Ayli, Eternal Pilgrim']
+    assert pick == CARDS_BY_NAME['Ayli, Eternal Pilgrim']
 
+
+def test_fixer_land_pick(draft_info, picker):
+    owned_cards = _cards(['Abzan Battle Priest', "Ajani's Pridemate", 'Ayli, Eternal Pilgrim'])
+    pack = _cards(['Tuskguard Captain', 'Caves of Koilos', 'Woodland Cemetery'])
+
+    pick = picker.pick(pack, owned_cards, draft_info)
+    assert pick == CARDS_BY_NAME['Caves of Koilos']
+
+
+def _cards(card_names):
+    return [CARDS_BY_NAME[n] for n in card_names]

@@ -33,3 +33,15 @@ mana_cost = ["W"]
 color_identity = "W"
 types = ["instant"]
 tags = ["Trick","Heroic - Enabler","Lifegain - Enabler","Spells - Enabler","Tier 3"]
+
+["Caves of Koilos"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer"]
+
+["Woodland Cemetery"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer"]
