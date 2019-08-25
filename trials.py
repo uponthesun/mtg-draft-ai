@@ -88,7 +88,8 @@ def edges_in_deck(deck):
 
 
 def avg_power(deck):
-    return statistics.mean([GreedyPowerAndSynergyPicker._power_rating(card) for card in deck])
+    return statistics.mean([GreedyPowerAndSynergyPicker._power_rating(card) for card in deck
+                            if 'land' not in card.types])
 
 
 def decks_to_html(decks):
