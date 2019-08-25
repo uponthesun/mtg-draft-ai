@@ -253,6 +253,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
         Args:
             raw_ratings (List[_CombinedRating]): Raw combined power and synergy ratings.
+            cards_owned (List[Card]): Cards currently owned.
 
         Returns:
             List[_CombinedRatings]: Normalized combined power and synergy ratings.
@@ -282,12 +283,20 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         return normalized_ratings
 
 
-def _fixer_rating(num_oncolor_nonlands, num_picks_made, num_oncolor_lands):
+def _fixer_rating(num_oncolor_nonlands, num_picks_made, num_oncolor_fixer_lands):
+    """Rates the value of a fixer land based on the current state of the draft.
+
+    Returns a value in [0, 1]. The higher % of current cards are on-color nonlands,
+    the higher the rating, since it's more likely there will be enough playables. The more
+    on-color fixer lands we already have, the lower the rating, since we don't need fixing as badly.
+    """
     if num_picks_made == 0:
         return 0
 
+    # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
+    # that improving your mana always has value
     lower_bound = 0.3
-    offset = 1 + num_oncolor_lands
+    offset = 1 + num_oncolor_fixer_lands
 
     return max(0, lower_bound + (1 - lower_bound) * (num_oncolor_nonlands - offset) / num_picks_made)
 

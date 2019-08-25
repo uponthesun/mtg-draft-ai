@@ -168,7 +168,6 @@ class Packs:
         """
         self.pack_contents = pack_contents
 
-
     def get_pack(self, phase, starting_seat):
         """Gets a specific pack.
 
@@ -189,6 +188,8 @@ def read_cube_toml(filename, fixer_data_filename=None):
     Args:
         filename (str): Path (relative or absolute) to file containing cube list. File must
             be in the TOML format.
+        fixer_data_filename (str): Path (relative or absolute) to file containing color identity data
+            for fixer lands. File should contain a dict of card name: color id, in the TOML format.
 
     Returns:
         List[Card]: The List[Card] from the file.
