@@ -22,8 +22,10 @@ import requests
 import toml
 
 
-CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
-IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
+#CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
+CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_6949_tag_data.toml')
+#IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
+IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_6949_image_urls.toml')
 FIXER_DATA_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_fixer_data.toml')
 
 CUBE_LIST = read_cube_toml(CUBE_FILE, FIXER_DATA_FILE)
@@ -57,11 +59,16 @@ def _initialize_image_url_cache():
 def _scryfall_image_url(name):
     r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
     card_json = r.json()
+
+    if 'image_uris' in card_json:
+        return card_json['image_uris']['normal']
+
     if 'card_faces' in card_json:
         # Case for double-faced cards
         # TODO: nice to have - show both sides of a DFC
         return card_json['card_faces'][0]['image_uris']['normal']
-    return card_json['image_uris']['normal']
+
+    raise ValueError("Error finding image url in card json for {}".format(name))
 
 
 IMAGE_URL_CACHE = _initialize_image_url_cache()

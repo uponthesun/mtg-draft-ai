@@ -1,0 +1,2933 @@
+["Abbot of Keral Keep"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Spells - Payoff","Aggro - Enabler"]
+
+["Abzan Falconer"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Counters - Payoff"]
+
+["Academy Rector"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Enchantments - Payoff","Counters - Enabler"]
+
+["Adventuring Gear"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Aggro - Payoff","Equipment - Enabler","Artifacts - Enabler"]
+
+["Aeon Chronicler"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Aether Vial"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","ETB - Payoff","Artifacts - Enabler"]
+
+["Ainok Bond-Kin"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Counters - Payoff","Counters - Enabler","Aggro - Enabler"]
+
+["Akrasan Squire"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable","Aggro - Enabler"]
+
+["Akroma, Angel of Fury"]
+mana_cost = ["5","R","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Morph Flip - Payoff","Big Mana - Payoff","Cheating Creature - Payoff"]
+
+["Ancestral Blade"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["artifact"]
+tags = ["tier 3 - filler","Aggro - Enabler","Equipment - Enabler"]
+
+["Anger"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Discard - Payoff","Graveyard - Payoff"]
+
+["Anguished Unmaking"]
+mana_cost = ["1","W","B"]
+color_identity = "BW"
+types = ["instant"]
+tags = ["tier 2 - good","cuttable"]
+
+["Arc-Slogger"]
+mana_cost = ["3","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good"]
+
+["Arcane Denial"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler"]
+
+["Archaeomancer"]
+mana_cost = ["2","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Arid Mesa"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Ash Barrens"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Ashnod's Altar"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Sac Me - Enabler","Artifacts - Enabler"]
+
+["Asylum Visitor"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Discard - Payoff","Aggro - Enabler"]
+
+["Azorius Guildmage"]
+mana_cost = ["WU","WU"]
+color_identity = "UW"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Azure Mage"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Answers - Payoff","Big Mana - Payoff"]
+
+["Banishing Knack"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler"]
+
+["Basking Rootwalla"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable","Discard - Payoff","Aggro - Enabler"]
+
+["Battle Hymn"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 4 - weak"]
+
+["Beck // Call"]
+mana_cost = ["U","G","4","W","U"]
+color_identity = "GUW"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Go Wide - Payoff","Cheating Creature - Payoff"]
+
+["Betrothed of Fire"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["experimental","tier 4 - weak","Enchantments - Enabler","Auras - Enabler"]
+
+["Blackcleave Cliffs"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Blasphemous Act"]
+mana_cost = ["8","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 1 - best","Answers - Enabler"]
+
+["Blasting Station"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Sac Me - Enabler","Sac Fodder - Payoff","Kurkesh - Enabler","Artifacts - Enabler"]
+
+["Blazing Torch"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Equipment - Enabler","Kurkesh - Enabler","Artifacts - Enabler"]
+
+["Blood Artist"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Fodder - Payoff","Go Wide - Payoff"]
+
+["Blood Crypt"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Bloodghast"]
+mana_cost = ["B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Sac Fodder - Enabler","Aggro - Enabler","Graveyard - Payoff","Discard - Payoff"]
+
+["Bloodstained Mire"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Bogardan Hellkite"]
+mana_cost = ["6","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Cheating Creature - Payoff"]
+
+["Bomat Courier"]
+mana_cost = ["1"]
+color_identity = "R"
+types = ["artifact","creature"]
+tags = ["tier 1 - best","Aggro - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Borderland Ranger"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","ETB - Enabler","Answers - Payoff"]
+
+["Boros Garrison"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Boros Guildmage"]
+mana_cost = ["RW","RW"]
+color_identity = "RW"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Bosh, Iron Golem"]
+mana_cost = ["8"]
+color_identity = "R"
+types = ["artifact","creature"]
+tags = ["tier 2 - good","Cheating Creature - Payoff","Big Mana - Payoff","Kurkesh - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Bound by Moonsilver"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Sac Me - Enabler","Enchantments - Enabler","Auras - Enabler","Answers - Enabler"]
+
+["Braid of Fire"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["tier 4 - weak","Enchantments - Enabler"]
+
+["Brainstorm"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler"]
+
+["Breeding Pool"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Briarhorn"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Power - Enabler","Toughness - Enabler"]
+
+["Brittle Effigy"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Answers - Enabler","Kurkesh - Enabler","Artifacts - Enabler"]
+
+["Brute Force"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Aggro - Payoff"]
+
+["Budoka Gardener"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Burst Lightning"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Aggro - Payoff","Answers - Enabler"]
+
+["Cabal Therapy"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Sac Me - Enabler"]
+
+["Cackling Counterpart"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","ETB - Payoff"]
+
+["Caged Sun"]
+mana_cost = ["6"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Big Mana - Enabler","Mana Accel - Payoff","Artifacts - Enabler"]
+
+["Carrion Feeder"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Fodder - Payoff","Sac Me - Enabler","Aggro - Enabler"]
+
+["Carrionette"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Fodder - Enabler","Graveyard - Payoff","Answers - Enabler"]
+
+["Cartel Aristocrat"]
+mana_cost = ["W","B"]
+color_identity = "BW"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Me - Enabler"]
+
+["Cascade Bluffs"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Casting of Bones"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Enchantments - Enabler","Auras - Enabler","Sac Me - Payoff"]
+
+["Cathodion"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Caustic Caterpillar"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable"]
+
+["Celestial Colonnade"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Centaur Chieftain"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Payoff"]
+
+["Chancellor of the Forge"]
+mana_cost = ["4","R","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 4 - weak"]
+
+["Chasm Skulker"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","Drawing Cards - Payoff"]
+
+["Chief Engineer"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","Artifacts - Payoff"]
+
+["Chime of Night"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Enchantments - Enabler","Auras - Enabler"]
+
+["Chimeric Mass"]
+mana_cost = ["X"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Artifacts - Enabler"]
+
+["Chord of Calling"]
+mana_cost = ["X","G","G","G"]
+color_identity = "G"
+types = ["instant"]
+tags = ["tier 1 - best","Go Wide - Payoff"]
+
+["Chronomaton"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Counters - Enabler","Aggro - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Citanul Hierophants"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Enabler"]
+
+["Clifftop Retreat"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Cloud of Faeries"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable"]
+
+["Cloudthresher"]
+mana_cost = ["2","G","G","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","cuttable","Power - Enabler","Toughness - Enabler"]
+
+["Codex Shredder"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Graveyard - Enabler","Kurkesh - Enabler","Artifacts - Enabler"]
+
+["Coldsteel Heart"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Mana Accel - Enabler","Artifacts - Enabler"]
+
+["Collected Company"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["instant"]
+tags = ["tier 2 - good"]
+
+["Commune with Lava"]
+mana_cost = ["X","R","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 3 - filler"]
+
+["Compulsive Research"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 1 - best","Answers - Payoff","Drawing Cards - Enabler","Spells - Enabler","Mana Accel - Payoff"]
+
+["Contagion Clasp"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Artifacts - Enabler"]
+
+["Copperline Gorge"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Creeping Tar Pit"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Crow Storm"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 3 - filler"]
+
+["Cruel Sadist"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Counters - Enabler"]
+
+["Crypt Champion"]
+mana_cost = ["3","B"]
+color_identity = "BR"
+types = ["creature"]
+tags = ["tier 2 - good"]
+
+["Crypt Ghast"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Enabler","Mana Accel - Payoff"]
+
+["Cryptbreaker"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Discard - Enabler","Graveyard - Enabler"]
+
+["Culling the Weak"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["experimental","tier 4 - weak"]
+
+["Cytoplast Root-Kin"]
+mana_cost = ["2","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Power - Enabler","Toughness - Enabler","Counters - Enabler","Counters - Payoff"]
+
+["Damnation"]
+mana_cost = ["2","B","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 1 - best","Answers - Enabler"]
+
+["Dance of Many"]
+mana_cost = ["U","U"]
+color_identity = "U"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","ETB - Payoff"]
+
+["Daring Skyjek"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Darkslick Shores"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Darksteel Axe"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Aggro - Payoff","Equipment - Enabler","Artifacts - Enabler"]
+
+["Deadbridge Goliath"]
+mana_cost = ["2","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Power - Enabler","Toughness - Enabler","Graveyard - Payoff"]
+
+["Deadwood Treefolk"]
+mana_cost = ["5","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","ETB - Enabler"]
+
+["Death or Glory"]
+mana_cost = ["4","W"]
+color_identity = "W"
+types = ["sorcery"]
+tags = ["tier 4 - weak","Graveyard - Payoff"]
+
+["Deathrender"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 4 - weak","Equipment - Enabler","Cheating Creature - Enabler","Sac Me - Payoff","Artifacts - Enabler"]
+
+["Deep Analysis"]
+mana_cost = ["3","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 1 - best","Drawing Cards - Enabler","Answers - Payoff","Graveyard - Payoff","Mana Accel - Payoff"]
+
+["Demonic Tutor"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Payoff"]
+
+["Deranged Hermit"]
+mana_cost = ["3","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Go Wide - Enabler","ETB - Enabler"]
+
+["Desperate Ravings"]
+mana_cost = ["1","R"]
+color_identity = "UR"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Drawing Cards - Enabler","Answers - Payoff"]
+
+["Devastating Summons"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 1 - best","Spells - Enabler","Aggro - Payoff"]
+
+["Dig Through Time"]
+mana_cost = ["6","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Answers - Payoff","Graveyard - Payoff"]
+
+["Disciple of Bolas"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Power - Payoff","Sac Me - Enabler"]
+
+["Disciple of Deceit"]
+mana_cost = ["U","B"]
+color_identity = "BU"
+types = ["creature"]
+tags = ["tier 3 - filler","Discard - Enabler","Graveyard - Enabler"]
+
+["Disenchant"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Disfigure"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler"]
+
+["Dissipate"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Dissolve"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Doomed Traveler"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Fodder - Enabler","Aggro - Enabler"]
+
+["Dragon Fodder"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Spells - Enabler","Sac Fodder - Enabler","Go Wide - Enabler","Aggro - Enabler"]
+
+["Dread Return"]
+mana_cost = ["2","B","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 2 - good","Graveyard - Payoff"]
+
+["Dreadhorde Arcanist"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Spells - Payoff"]
+
+["Druidic Satchel"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Answers - Payoff","Kurkesh - Enabler","Mana Accel - Payoff","Artifacts - Enabler"]
+
+["Dual Casting"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Auras - Enabler","Spells - Payoff"]
+
+["Duress"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Spells - Enabler","Answers - Enabler"]
+
+["Earthquake"]
+mana_cost = ["X","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 1 - best","Answers - Enabler","Aggro - Payoff"]
+
+["Eidolon of Blossoms"]
+mana_cost = ["2","G","G"]
+color_identity = "G"
+types = ["enchantment","creature"]
+tags = ["tier 2 - good","Enchantments - Enabler","Enchantments - Payoff","ETB - Enabler","Mana Accel - Payoff"]
+
+["Eight-and-a-Half-Tails"]
+mana_cost = ["W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Aggro - Payoff"]
+
+["Elder of Laurels"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff","Go Wide - Payoff","Power - Enabler","Power - Payoff"]
+
+["Elemental Mastery"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["experimental","tier 4 - weak","Enchantments - Enabler","Auras - Enabler","Sac Fodder - Enabler"]
+
+["Elvish Visionary"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Enabler","ETB - Enabler"]
+
+["Ember Hauler"]
+mana_cost = ["R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Emeria Angel"]
+mana_cost = ["2","W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Go Wide - Enabler"]
+
+["Emeria Shepherd"]
+mana_cost = ["5","W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler","Answers - Payoff","Big Mana - Payoff"]
+
+["Empty the Warrens"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 3 - filler"]
+
+["Emrakul's Hatcher"]
+mana_cost = ["4","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Enabler","Go Wide - Enabler","ETB - Enabler"]
+
+["Enclave Cryptologist"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Answers - Payoff","Drawing Cards - Enabler","Graveyard - Enabler","Discard - Enabler"]
+
+["Endless Horizons"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 3 - filler","cuttable","Enchantments - Enabler","Answers - Payoff"]
+
+["Endless Obedience"]
+mana_cost = ["4","B","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 3 - filler"]
+
+["Engineered Explosives"]
+mana_cost = ["X"]
+color_identity = "WUBRG"
+types = ["artifact"]
+tags = ["tier 2 - good","Answers - Enabler","Artifacts - Enabler"]
+
+["Entomber Exarch"]
+mana_cost = ["2","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","ETB - Enabler"]
+
+["Essence Extraction"]
+mana_cost = ["1","B","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Eternal Taskmaster"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["cuttable","Aggro - Enabler","tier 2 - good"]
+
+["Eternal Witness"]
+mana_cost = ["1","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Answers - Payoff","ETB - Enabler"]
+
+["Ethereal Armor"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Enchantments - Enabler","Auras - Enabler"]
+
+["Everflowing Chalice"]
+mana_cost = ["0"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Big Mana - Enabler","Mana Accel - Enabler","Artifacts - Enabler"]
+
+["Exploration"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler"]
+
+["Explorer's Scope"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["experimental","tier 3 - filler","Equipment - Enabler","Aggro - Payoff","Artifacts - Enabler"]
+
+["Extractor Demon"]
+mana_cost = ["4","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Payoff","Discard - Payoff","Sac Fodder - Payoff"]
+
+["Faerie Conclave"]
+mana_cost = []
+color_identity = "U"
+types = ["land"]
+tags = ["tier 3 - filler"]
+
+["Faith's Fetters"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 2 - good","cuttable","Enchantments - Enabler","Auras - Enabler","Answers - Enabler"]
+
+["Faith's Reward"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler"]
+
+["Faith's Shield"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler","cuttable","Spells - Enabler","Aggro - Payoff"]
+
+["Faithless Looting"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Discard - Enabler","Graveyard - Enabler"]
+
+["Fathom Seer"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","Drawing Cards - Enabler"]
+
+["Fauna Shaman"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Graveyard - Enabler"]
+
+["Fertile Ground"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 1 - best","Enchantments - Enabler","Auras - Enabler"]
+
+["Fetid Heath"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Figure of Destiny"]
+mana_cost = ["RW"]
+color_identity = "RW"
+types = ["creature"]
+tags = ["tier 0 - best of best","Aggro - Enabler","Aggro - Payoff"]
+
+["Fire Ambush"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler","Aggro - Payoff"]
+
+["Fire-Lit Thicket"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Firefist Striker"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Fires of Yavimaya"]
+mana_cost = ["1","R","G"]
+color_identity = "GR"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler"]
+
+["Flame Javelin"]
+mana_cost = ["2R","2R","2R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 2 - good","Aggro - Payoff","Answers - Enabler"]
+
+["Flamerush Rider"]
+mana_cost = ["4","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 1 - best","Aggro - Payoff","ETB - Payoff"]
+
+["Flayer of the Hatebound"]
+mana_cost = ["5","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Me - Payoff"]
+
+["Fledgling Dragon"]
+mana_cost = ["2","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Payoff"]
+
+["Flickerwisp"]
+mana_cost = ["1","W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Morph Flip - Enabler"]
+
+["Flooded Grove"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Flooded Strand"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Food Chain"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","Cheating Creature - Enabler"]
+
+["Forbidden Alchemy"]
+mana_cost = ["2","U"]
+color_identity = "BU"
+types = ["instant"]
+tags = ["tier 3 - filler","cuttable","Graveyard - Enabler","Answers - Payoff"]
+
+["Frog Tongue"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["cuttable","tier 3 - filler","Enchantments - Enabler","Auras - Enabler"]
+
+["Frostburn Weird"]
+mana_cost = ["UR","UR"]
+color_identity = "UR"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Galvanic Arc"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["tier 3 - filler","cuttable","Enchantments - Enabler","Auras - Enabler","Aggro - Payoff"]
+
+["Galvanic Juggernaut"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 2 - good","cuttable","Aggro - Payoff","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Gathan Raiders"]
+mana_cost = ["3","R","R"]
+color_identity = "C"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Gather the Pack"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler"]
+
+["Gauntlet of Power"]
+mana_cost = ["5"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Big Mana - Enabler","Mana Accel - Payoff","Artifacts - Enabler"]
+
+["Gelid Shackles"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","Auras - Enabler","Aggro - Payoff"]
+
+["Genesis Hydra"]
+mana_cost = ["X","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Big Mana - Payoff"]
+
+["Genju of the Fields"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Enchantments - Enabler","Auras - Enabler","Answers - Enabler"]
+
+["Ghitu Encampment"]
+mana_cost = []
+color_identity = "R"
+types = ["land"]
+tags = ["tier 3 - filler"]
+
+["Ghostway"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler","Morph Flip - Enabler","ETB - Payoff"]
+
+["Gideon's Triumph"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Answers - Enabler"]
+
+["Gifts Ungiven"]
+mana_cost = ["3","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 2 - good","Graveyard - Enabler","Answers - Payoff"]
+
+["Go for the Throat"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler"]
+
+["Goblin Electromancer"]
+mana_cost = ["U","R"]
+color_identity = "UR"
+types = ["creature"]
+tags = ["tier 2 - good","Spells - Payoff","Aggro - Enabler"]
+
+["Godless Shrine"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Gods Willing"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 3 - filler","cuttable","Spells - Enabler","Aggro - Payoff"]
+
+["Golgari Grave-Troll"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Graveyard - Payoff","Discard - Payoff"]
+
+["Grand Architect"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","Artifacts - Payoff"]
+
+["Grapeshot"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Spells - Enabler"]
+
+["Graven Cairns"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Gray Merchant of Asphodel"]
+mana_cost = ["3","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good"]
+
+["Great Whale"]
+mana_cost = ["5","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Answers - Payoff"]
+
+["Greater Gargadon"]
+mana_cost = ["9","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 0 - best of best","Aggro - Payoff","Sac Fodder - Payoff","Sac Me - Enabler"]
+
+["Greater Good"]
+mana_cost = ["2","G","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 0 - best of best","Enchantments - Enabler","Power - Payoff","Drawing Cards - Enabler","Graveyard - Enabler"]
+
+["Grim Haruspex"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Sac Fodder - Payoff","Sac Fodder - Enabler"]
+
+["Grim Harvest"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 3 - filler"]
+
+["Gruul Guildmage"]
+mana_cost = ["RG","RG"]
+color_identity = "GR"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Guardian Idol"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Mana Accel - Enabler","Artifacts - Enabler"]
+
+["Gush"]
+mana_cost = ["4","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Drawing Cards - Enabler","Spells - Enabler"]
+
+["Guttersnipe"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Spells - Payoff"]
+
+["Hallowed Burial"]
+mana_cost = ["3","W","W"]
+color_identity = "W"
+types = ["sorcery"]
+tags = ["tier 1 - best","Answers - Enabler"]
+
+["Hallowed Fountain"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Heap Doll"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 4 - weak","cuttable","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Heir of Falkenrath"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Discard - Enabler"]
+
+["Heliod's Pilgrim"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler","Auras - Payoff"]
+
+["Hidden Strings"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 4 - weak","Spells - Enabler"]
+
+["Hinder"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Hinterland Harbor"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Hissing Iguanar"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Go Wide - Payoff","Aggro - Payoff","Sac Fodder - Payoff"]
+
+["Hissing Quagmire"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Homarid Spawning Bed"]
+mana_cost = ["U","U"]
+color_identity = "U"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler"]
+
+["Hoofprints of the Stag"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Drawing Cards - Payoff","Answers - Payoff"]
+
+["Hope of Ghirapur"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["experimental","tier 3 - filler","Aggro - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Horizon Chimera"]
+mana_cost = ["2","U","G"]
+color_identity = "GU"
+types = ["creature"]
+tags = ["tier 2 - good","Drawing Cards - Payoff"]
+
+["Humble Defector"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Me - Payoff","Morph Flip - Payoff"]
+
+["Hystrodon"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Ice-Fang Coatl"]
+mana_cost = ["G","U"]
+color_identity = "GU"
+types = ["creature"]
+tags = ["tier 2 - good","Answers - Enabler","ETB - Enabler"]
+
+["Imperial Recruiter"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 1 - best","ETB - Enabler"]
+
+["Incinerate"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler","Aggro - Payoff"]
+
+["Inheritance"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 4 - weak","experimental"]
+
+["Into the North"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Mana Accel - Enabler"]
+
+["Ire Shaman"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Isamaru, Hound of Konda"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Isolated Chapel"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Izzet Boilerworks"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Jace's Ingenuity"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 2 - good","Drawing Cards - Enabler","Answers - Payoff"]
+
+["Jackal Pup"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Jade Mage"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Go Wide - Enabler","Aggro - Enabler","Big Mana - Payoff"]
+
+["Jaya, Venerated Firemage"]
+mana_cost = ["4","R"]
+color_identity = "R"
+types = ["planeswalker"]
+tags = ["tier 2 - good"]
+
+["Jeskai Elder"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable","Spells - Payoff","Aggro - Enabler"]
+
+["Judge Unworthy"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler"]
+
+["Jungleborn Pioneer"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable"]
+
+["Kagemaro, First to Suffer"]
+mana_cost = ["3","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Answers - Enabler"]
+
+["Kederekt Leviathan"]
+mana_cost = ["6","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Payoff","Answers - Enabler","Big Mana - Payoff","Cheating Creature - Payoff"]
+
+["Kiku's Shadow"]
+mana_cost = ["B","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Spells - Enabler","Answers - Enabler"]
+
+["Knight of the Reliquary"]
+mana_cost = ["1","G","W"]
+color_identity = "GW"
+types = ["creature"]
+tags = ["tier 1 - best","Graveyard - Payoff"]
+
+["Kor Skyfisher"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","ETB - Payoff","Aggro - Enabler"]
+
+["Korozda Guildmage"]
+mana_cost = ["B","G"]
+color_identity = "BG"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Toughness - Payoff","Go Wide - Enabler"]
+
+["Krovikan Plague"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["experimental","tier 3 - filler","Enchantments - Enabler","Auras - Enabler"]
+
+["Kruin Striker"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Kuldotha Forgemaster"]
+mana_cost = ["5"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 2 - good","Artifacts - Payoff","Kurkesh - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Kurkesh, Onakke Ancient"]
+mana_cost = ["2","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Kurkesh - Payoff"]
+
+["Last Gasp"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler"]
+
+["Lavaclaw Reaches"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Leonin Battlemage"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Payoff"]
+
+["Leonin Bola"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Aggro - Payoff","Equipment - Enabler","Artifacts - Enabler"]
+
+["Life // Death"]
+mana_cost = ["G","1","B"]
+color_identity = "BG"
+types = ["sorcery"]
+tags = ["tier 3 - filler"]
+
+["Life from the Loam"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Graveyard - Enabler","Graveyard - Payoff"]
+
+["Lighthouse Chronologist"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Payoff","Answers - Payoff"]
+
+["Lightning Axe"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Spells - Enabler","Discard - Enabler","tier 2 - good","Aggro - Payoff"]
+
+["Lightning Bolt"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Aggro - Payoff","Answers - Enabler"]
+
+["Lightning Mauler"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler"]
+
+["Lignify"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Auras - Enabler","Answers - Enabler"]
+
+["Liliana of the Dark Realms"]
+mana_cost = ["2","B","B"]
+color_identity = "B"
+types = ["planeswalker"]
+tags = ["tier 3 - filler","Answers - Payoff","Mana Accel - Payoff"]
+
+["Loaming Shaman"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable"]
+
+["Lodestone Myr"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Artifacts - Payoff","Kurkesh - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Looter il-Kor"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Drawing Cards - Enabler","Graveyard - Enabler","Discard - Enabler","Aggro - Enabler"]
+
+["Lotus Cobra"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Mana Accel - Enabler"]
+
+["Lumbering Falls"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Lyzolda, the Blood Witch"]
+mana_cost = ["1","B","R"]
+color_identity = "BR"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Payoff","Sac Me - Enabler","Aggro - Payoff"]
+
+["Maelstrom Djinn"]
+mana_cost = ["7","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Morph Flip - Payoff","Aggro - Payoff"]
+
+["Maelstrom Pulse"]
+mana_cost = ["1","B","G"]
+color_identity = "BG"
+types = ["sorcery"]
+tags = ["tier 2 - good","Answers - Enabler"]
+
+["Magma Jet"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler"]
+
+["Makeshift Mannequin"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 2 - good"]
+
+["Man-o'-War"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","ETB - Enabler","Aggro - Payoff"]
+
+["Mana Leak"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler"]
+
+["Marsh Flats"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Marsh Flitter"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Sac Fodder - Enabler","Go Wide - Enabler"]
+
+["Marshal's Anthem"]
+mana_cost = ["2","W","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Big Mana - Payoff"]
+
+["Mask of Memory"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Equipment - Enabler","Artifacts - Enabler"]
+
+["Mass Polymorph"]
+mana_cost = ["5","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Go Wide - Payoff","Cheating Creature - Enabler"]
+
+["Master of Pearls"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Go Wide - Payoff","Aggro - Payoff"]
+
+["Memory Jar"]
+mana_cost = ["5"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Mana Accel - Payoff","Graveyard - Enabler","Drawing Cards - Enabler","Artifacts - Enabler"]
+
+["Mentor of the Meek"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Drawing Cards - Enabler","Go Wide - Payoff"]
+
+["Merfolk Looter"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Drawing Cards - Enabler","Graveyard - Enabler","Discard - Enabler"]
+
+["Metamorphic Alteration"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["enchantment"]
+tags = ["cuttable","tier 3 - filler","Enchantments - Enabler","Auras - Enabler"]
+
+["Midnight Haunting"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 2 - good","Go Wide - Enabler","Aggro - Payoff","Spells - Enabler"]
+
+["Military Intelligence"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Aggro - Payoff"]
+
+["Millikin"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 1 - best","Mana Accel - Enabler","Graveyard - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Mind Stone"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Kurkesh - Enabler","Mana Accel - Enabler","Artifacts - Enabler"]
+
+["Mirrorweave"]
+mana_cost = ["2","WU","WU"]
+color_identity = "UW"
+types = ["instant"]
+tags = ["tier 2 - good","Go Wide - Payoff","Aggro - Payoff"]
+
+["Miscalculation"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler"]
+
+["Mistfire Adept"]
+mana_cost = ["3","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","Spells - Payoff","Aggro - Payoff"]
+
+["Mistveil Plains"]
+mana_cost = []
+color_identity = "W"
+types = ["land"]
+tags = ["tier 3 - filler"]
+
+["Misty Rainforest"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Mnemonic Wall"]
+mana_cost = ["4","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Mogg War Marshal"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Enabler","Aggro - Enabler"]
+
+["Momentary Blink"]
+mana_cost = ["1","W"]
+color_identity = "UW"
+types = ["instant"]
+tags = ["tier 2 - good","Morph Flip - Enabler","Spells - Enabler","ETB - Payoff"]
+
+["Monastery Swiftspear"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Spells - Payoff"]
+
+["Mortarpod"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Kurkesh - Enabler","Sac Fodder - Payoff","Sac Me - Enabler","Artifacts - Enabler"]
+
+["Mouth of Ronom"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["tier 3 - filler","Answers - Enabler"]
+
+["Mulldrifter"]
+mana_cost = ["4","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","Drawing Cards - Enabler","ETB - Enabler","Answers - Payoff","Mana Accel - Payoff"]
+
+["Murder"]
+mana_cost = ["1","B","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 2 - good","Answers - Enabler"]
+
+["Murderous Cut"]
+mana_cost = ["4","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 1 - best","Answers - Enabler","Graveyard - Payoff"]
+
+["Mutavault"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Myr Turbine"]
+mana_cost = ["5"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Kurkesh - Enabler","Sac Fodder - Enabler","Artifacts - Enabler"]
+
+["Myrsmith"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Artifacts - Payoff","Aggro - Enabler"]
+
+["Mystic Gate"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Mystical Teachings"]
+mana_cost = ["3","U"]
+color_identity = "BU"
+types = ["instant"]
+tags = ["tier 3 - filler","Answers - Payoff"]
+
+["Mystical Tutor"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler"]
+
+["Myth Realized"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Spells - Payoff"]
+
+["Nantuko Husk"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Sac Fodder - Payoff","Sac Me - Enabler","Aggro - Payoff"]
+
+["Narcissism"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Aggro - Payoff","Discard - Enabler"]
+
+["Necrotic Ooze"]
+mana_cost = ["2","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Payoff"]
+
+["Needle Spires"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Negate"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler"]
+
+["Nessian Game Warden"]
+mana_cost = ["3","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Nest Invader"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Mana Accel - Enabler","Sac Fodder - Enabler","Go Wide - Enabler","tier 2 - good"]
+
+["Nether Traitor"]
+mana_cost = ["B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Sac Fodder - Enabler"]
+
+["Nightveil Sprite"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Graveyard - Enabler"]
+
+["Nomad Mythmaker"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 2 - good","Auras - Payoff"]
+
+["Nucklavee"]
+mana_cost = ["4","UR","UR"]
+color_identity = "UR"
+types = ["creature"]
+tags = ["tier 2 - good","Spells - Payoff"]
+
+["Nykthos, Shrine to Nyx"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["tier 2 - good"]
+
+["Oblivion Ring"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","Answers - Enabler"]
+
+["Obsessive Skinner"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Counters - Enabler","Graveyard - Payoff"]
+
+["Ongoing Investigation"]
+mana_cost = ["1","U"]
+color_identity = "GU"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","Graveyard - Payoff","Aggro - Payoff"]
+
+["Oona's Prowler"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Discard - Enabler"]
+
+["Open the Vaults"]
+mana_cost = ["4","W","W"]
+color_identity = "W"
+types = ["sorcery"]
+tags = ["tier 2 - good","Artifacts - Payoff","Enchantments - Payoff","Graveyard - Payoff"]
+
+["Oracle of Mul Daya"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Big Mana - Enabler","Mana Accel - Payoff"]
+
+["Oran-Rief, the Vastwood"]
+mana_cost = []
+color_identity = "G"
+types = ["land"]
+tags = ["tier 2 - good","Counters - Enabler"]
+
+["Otherworldly Outburst"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Aggro - Payoff"]
+
+["Overgrown Tomb"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Pain Seer"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Paradise Druid"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Mana Accel - Enabler","Aggro - Enabler"]
+
+["Paradise Mantle"]
+mana_cost = ["0"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Equipment - Enabler","Artifacts - Enabler"]
+
+["Paradoxical Outcome"]
+mana_cost = ["3","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 2 - good","ETB - Payoff","Big Mana - Payoff"]
+
+["Path to Exile"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler","Aggro - Payoff"]
+
+["Peregrine Drake"]
+mana_cost = ["4","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good"]
+
+["Pestermite"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Phyrexian Rager"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","ETB - Enabler"]
+
+["Phyrexian Revoker"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Pilgrim's Eye"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","ETB - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Pillar of Flame"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Aggro - Payoff","Answers - Enabler"]
+
+["Planar Collapse"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Answers - Enabler"]
+
+["Planar Outburst"]
+mana_cost = ["3","W","W"]
+color_identity = "W"
+types = ["sorcery"]
+tags = ["tier 2 - good","Answers - Enabler"]
+
+["Polluted Delta"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Prey Upon"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Aggro - Payoff","Power - Payoff"]
+
+["Primal Command"]
+mana_cost = ["3","G","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","cuttable","Mana Accel - Payoff","Answers - Payoff"]
+
+["Prismatic Lens"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Mana Accel - Enabler","Artifacts - Enabler"]
+
+["Promise of Bunrei"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["tier 1 - best","Enchantments - Enabler","Go Wide - Enabler","Sac Fodder - Enabler"]
+
+["Prophetic Prism"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Artifacts - Enabler"]
+
+["Psychatog"]
+mana_cost = ["1","U","B"]
+color_identity = "BU"
+types = ["creature"]
+tags = ["tier 2 - good","Discard - Enabler","Graveyard - Payoff","Answers - Payoff"]
+
+["Psychosis Crawler"]
+mana_cost = ["5"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Drawing Cards - Payoff","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Puresteel Paladin"]
+mana_cost = ["W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Equipment - Payoff","Aggro - Enabler"]
+
+["Pyreheart Wolf"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff","Sac Fodder - Enabler"]
+
+["Quest for the Gravelord"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["tier 2 - good","Enchantments - Enabler","Sac Fodder - Payoff"]
+
+["Quirion Dryad"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Counters - Enabler"]
+
+["Raging Ravine"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Rakdos Carnarium"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Rakdos Guildmage"]
+mana_cost = ["BR","BR"]
+color_identity = "BR"
+types = ["creature"]
+tags = ["tier 2 - good","Discard - Enabler","Answers - Enabler","Aggro - Enabler"]
+
+["Ranger of Eos"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Go Wide - Enabler","Aggro - Payoff"]
+
+["Ratchet Bomb"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Answers - Enabler","Artifacts - Enabler"]
+
+["Razaketh, the Foulblooded"]
+mana_cost = ["5","B","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["experimental","Big Mana - Payoff","Cheating Creature - Payoff","Answers - Payoff"]
+
+["Razorverge Thicket"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Reaper King"]
+mana_cost = ["2W","2U","2B","2R","2G"]
+color_identity = "WUBRG"
+types = ["artifact","creature"]
+tags = ["tier 4 - weak","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Regal Force"]
+mana_cost = ["4","G","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Payoff"]
+
+["Remand"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler"]
+
+["Repeal"]
+mana_cost = ["X","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 2 - good","Answers - Enabler","Spells - Enabler"]
+
+["Restless Apparition"]
+mana_cost = ["WB","WB","WB"]
+color_identity = "BW"
+types = ["creature"]
+tags = ["tier 1 - best","Aggro - Payoff","Big Mana - Payoff"]
+
+["Restoration Specialist"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 3 - filler","Artifacts - Payoff","Enchantments - Payoff"]
+
+["Return to the Ranks"]
+mana_cost = ["X","W","W"]
+color_identity = "W"
+types = ["sorcery"]
+tags = ["tier 1 - best"]
+
+["Reveillark"]
+mana_cost = ["4","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 0 - best of best","ETB - Enabler","ETB - Payoff","Aggro - Payoff"]
+
+["Rift Bolt"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 2 - good","Aggro - Payoff","Spells - Enabler","Answers - Enabler"]
+
+["Riftwing Cloudskate"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","ETB - Enabler","Aggro - Payoff","Answers - Enabler"]
+
+["Rise // Fall"]
+mana_cost = ["U","B","B","R"]
+color_identity = "BRU"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler","ETB - Payoff"]
+
+["Rise of the Hobgoblins"]
+mana_cost = ["RW","RW"]
+color_identity = "RW"
+types = ["enchantment"]
+tags = ["tier 1 - best","Enchantments - Enabler","Go Wide - Enabler","Big Mana - Payoff"]
+
+["River Kelpie"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Rugged Prairie"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Rune-Scarred Demon"]
+mana_cost = ["5","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Cheating Creature - Payoff","Answers - Payoff"]
+
+["Runechanter's Pike"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Spells - Payoff","Equipment - Enabler","Artifacts - Enabler"]
+
+["Sacred Foundry"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Safehold Elite"]
+mana_cost = ["1","GW"]
+color_identity = "GW"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Enabler","Aggro - Enabler"]
+
+["Saffi Eriksdotter"]
+mana_cost = ["G","W"]
+color_identity = "GW"
+types = ["creature"]
+tags = ["tier 2 - good","Morph Flip - Enabler","ETB - Payoff","Aggro - Enabler"]
+
+["Sage's Reverie"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["experimental","tier 2 - good","Enchantments - Enabler","Auras - Enabler","Auras - Payoff"]
+
+["Sakura-Tribe Elder"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Mana Accel - Enabler"]
+
+["Saproling Burst"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["tier 0 - best of best","Enchantments - Enabler","Go Wide - Enabler","Power - Enabler","Power - Payoff","Sac Fodder - Enabler","Aggro - Payoff"]
+
+["Satyr Wayfinder"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Enabler","Sac Fodder - Enabler"]
+
+["Scalding Tarn"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Scarecrone"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 1 - best","Kurkesh - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler","Artifact Creatures - Payoff"]
+
+["Scepter of Dominance"]
+mana_cost = ["1","W","W"]
+color_identity = "W"
+types = ["artifact"]
+tags = ["tier 3 - filler","Kurkesh - Enabler","Answers - Enabler","Artifacts - Enabler"]
+
+["Scorched Rusalka"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Me - Enabler","Aggro - Enabler","Sac Fodder - Payoff"]
+
+["Scourge of Skola Vale"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Me - Enabler","Toughness - Payoff","Power - Enabler","Toughness - Enabler"]
+
+["Scrap Trawler"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Artifacts - Payoff","Graveyard - Payoff","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Scryb Ranger"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable","experimental","Aggro - Enabler"]
+
+["Scrying Sheets"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["tier 4 - weak"]
+
+["Seachrome Coast"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Seedborn Muse"]
+mana_cost = ["3","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler"]
+
+["Seer's Sundial"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact"]
+tags = []
+
+["Selesnya Guildmage"]
+mana_cost = ["GW","GW"]
+color_identity = "GW"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Payoff","Aggro - Enabler","Go Wide - Payoff","Go Wide - Enabler"]
+
+["Semblance Anvil"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 4 - weak","cuttable","experimental","Artifacts - Enabler"]
+
+["Sengir Autocrat"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","cuttable","Sac Fodder - Enabler","ETB - Enabler"]
+
+["Sensei's Divining Top"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Kurkesh - Enabler","Artifacts - Enabler"]
+
+["Serrated Biskelion"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 2 - good","Kurkesh - Enabler","Answers - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Sever the Bloodline"]
+mana_cost = ["3","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 2 - good","Answers - Enabler","Graveyard - Payoff"]
+
+["Shambling Vent"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Shriekmaw"]
+mana_cost = ["4","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 1 - best","Answers - Enabler","ETB - Enabler"]
+
+["Sidisi, Undead Vizier"]
+mana_cost = ["3","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 0 - best of best","ETB - Enabler","Sac Me - Enabler","Sac Fodder - Payoff"]
+
+["Skeletal Vampire"]
+mana_cost = ["4","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Answers - Payoff"]
+
+["Sky Hussar"]
+mana_cost = ["3","W","U"]
+color_identity = "UW"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff","Drawing Cards - Enabler"]
+
+["Sky Skiff"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","Aggro - Payoff","Artifacts - Enabler"]
+
+["Slaughter Pact"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 1 - best","Answers - Enabler","Spells - Enabler"]
+
+["Snakeform"]
+mana_cost = ["2","GU"]
+color_identity = "GU"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler"]
+
+["Snapcaster Mage"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","Spells - Payoff"]
+
+["Sneak Attack"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["tier 0 - best of best","Enchantments - Enabler","Cheating Creature - Enabler","Mana Accel - Payoff"]
+
+["Soldevi Adnate"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Big Mana - Enabler"]
+
+["Solemn Simulacrum"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 1 - best","ETB - Enabler","Big Mana - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Soul Stair Expedition"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","ETB - Payoff","Graveyard - Payoff"]
+
+["Soulbright Flamekin"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Soulflayer"]
+mana_cost = ["4","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Graveyard - Payoff"]
+
+["Spike Tiller"]
+mana_cost = ["3","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Counters - Enabler"]
+
+["Spire Golem"]
+mana_cost = ["6"]
+color_identity = "U"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Splinterfright"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Graveyard - Enabler","Graveyard - Payoff","Discard - Payoff"]
+
+["Springjack Shepherd"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler","Go Wide - Enabler","ETB - Enabler"]
+
+["Sram, Senior Edificer"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 2 - good","Aggro - Enabler","Equipment - Payoff"]
+
+["Steam Vents"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Stingscourger"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","ETB - Enabler","Sac Fodder - Enabler","Aggro - Payoff"]
+
+["Stinkweed Imp"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Graveyard - Enabler"]
+
+["Stirring Wildwood"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Stoke the Flames"]
+mana_cost = ["2","R","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["tier 1 - best","Answers - Enabler","Aggro - Payoff"]
+
+["Stomping Ground"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Stone Haven Outfitter"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler","Equipment - Payoff","Aggro - Enabler"]
+
+["Stonecloaker"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Aggro - Payoff","ETB - Payoff"]
+
+["Stoneforge Mystic"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Equipment - Payoff"]
+
+["Stonewright"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Stromkirk Occultist"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 2 - good","Discard - Payoff","Aggro - Payoff"]
+
+["Su-Chi"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Power - Enabler","Toughness - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Sulfur Falls"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Sunken Ruins"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Sunset Pyramid"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 3 - filler","cuttable","Kurkesh - Enabler","Answers - Payoff","Mana Accel - Payoff","Artifacts - Enabler"]
+
+["Sygg, River Cutthroat"]
+mana_cost = ["UB","UB"]
+color_identity = "BU"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Sylvan Might"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Aggro - Payoff","Graveyard - Payoff","Power - Payoff"]
+
+["Tandem Lookout"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Tectonic Edge"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["tier 3 - filler"]
+
+["Temple Garden"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Abandon"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Deceit"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Enlightenment"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Malady"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Mystery"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Plenty"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Temple of Silence"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Terastodon"]
+mana_cost = ["6","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Big Mana - Payoff","Cheating Creature - Payoff","Answers - Payoff"]
+
+["Terminate"]
+mana_cost = ["B","R"]
+color_identity = "BR"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler","Aggro - Payoff"]
+
+["Tethmos High Priest"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler"]
+
+["Think Twice"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Answers - Payoff"]
+
+["Thirst for Knowledge"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 1 - best","Artifacts - Payoff","Graveyard - Enabler","Discard - Enabler","Drawing Cards - Enabler","Mana Accel - Payoff"]
+
+["Thoughtseize"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler","Aggro - Payoff"]
+
+["Thraben Inspector"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Aggro - Enabler","ETB - Enabler","Answers - Enabler"]
+
+["Tidehollow Sculler"]
+mana_cost = ["W","B"]
+color_identity = "BW"
+types = ["artifact","creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Time Warp"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["tier 3 - filler","cuttable"]
+
+["Tithe"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["cuttable","tier 3 - filler","Spells - Enabler","Answers - Payoff"]
+
+["Topplegeist"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Enabler","Graveyard - Payoff"]
+
+["Tormenting Voice"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler","Discard - Enabler"]
+
+["Toshiro Umezawa"]
+mana_cost = ["1","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["experimental","tier 3 - filler","Answers - Payoff"]
+
+["Trading Post"]
+mana_cost = ["4"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 1 - best","Kurkesh - Enabler","Answers - Payoff","Artifacts - Payoff","Artifacts - Enabler"]
+
+["Tragic Slip"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Answers - Enabler","Sac Me - Payoff"]
+
+["Train of Thought"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["sorcery"]
+tags = ["cuttable","tier 3 - filler","Mana Accel - Payoff","Answers - Payoff","Spells - Enabler","Big Mana - Payoff"]
+
+["Traverse the Ulvenwald"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["tier 2 - good","Spells - Enabler"]
+
+["Treasonous Ogre"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 1 - best","Big Mana - Enabler"]
+
+["Trinket Mage"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good"]
+
+["Triskelavus"]
+mana_cost = ["7"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Kurkesh - Enabler","Cheating Creature - Payoff","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Turn // Burn"]
+mana_cost = ["2","U","1","R"]
+color_identity = "UR"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Answers - Enabler"]
+
+["Twilight Mire"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Twinflame"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Spells - Enabler","ETB - Payoff"]
+
+["Underworld Connections"]
+mana_cost = ["1","B","B"]
+color_identity = "B"
+types = ["enchantment"]
+tags = ["tier 1 - best","Enchantments - Enabler","Auras - Enabler","Answers - Payoff","Mana Accel - Payoff"]
+
+["Unexpectedly Absent"]
+mana_cost = ["X","W","W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["tier 1 - best","Spells - Enabler","Aggro - Payoff","Answers - Enabler"]
+
+["Unsummon"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["instant"]
+tags = ["tier 2 - good","Spells - Enabler","Aggro - Payoff"]
+
+["Varolz, the Scar-Striped"]
+mana_cost = ["1","B","G"]
+color_identity = "BG"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Me - Enabler","Graveyard - Payoff"]
+
+["Venser, Shaper Savant"]
+mana_cost = ["2","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 1 - best","ETB - Enabler","Answers - Enabler"]
+
+["Verdant Catacombs"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Vesuvan Shapeshifter"]
+mana_cost = ["3","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 2 - good","ETB - Enabler"]
+
+["Veteran's Armaments"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["tier 2 - good","Equipment - Enabler","Aggro - Payoff","Artifacts - Enabler"]
+
+["Veteran's Voice"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["tier 3 - filler","Enchantments - Enabler","Auras - Enabler","Aggro - Payoff"]
+
+["Vicious Offering"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Answers - Enabler","Sac Me - Enabler"]
+
+["Vines of Vastwood"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["instant"]
+tags = ["tier 3 - filler","Spells - Enabler","Aggro - Enabler"]
+
+["Viscera Seer"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 3 - filler","Sac Me - Enabler","Aggro - Enabler","Sac Fodder - Payoff"]
+
+["Wandering Fumarole"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Watery Grave"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Werebear"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Mana Accel - Enabler","Graveyard - Payoff"]
+
+["Wild Mongrel"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 1 - best","Discard - Enabler","Aggro - Enabler"]
+
+["Wild-Field Scarecrow"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["tier 3 - filler","Kurkesh - Enabler","Answers - Payoff","Artifacts - Enabler","Artifact Creatures - Enabler"]
+
+["Windswept Heath"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Wingcrafter"]
+mana_cost = ["U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler"]
+
+["Wolfir Avenger"]
+mana_cost = ["1","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Aggro - Payoff"]
+
+["Wooded Bastion"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Wooded Foothills"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["Woodland Cemetery"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = []
+
+["World Shaper"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 3 - filler","Graveyard - Enabler","Sac Me - Payoff"]
+
+["Xathrid Necromancer"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Enabler","Aggro - Enabler"]
+
+["Yavimaya Elder"]
+mana_cost = ["1","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["tier 2 - good","Sac Fodder - Enabler","Big Mana - Enabler","Answers - Payoff"]
+
+["Yawgmoth's Will"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["tier 3 - filler","Big Mana - Payoff","Graveyard - Payoff"]
+
+["Yosei, the Morning Star"]
+mana_cost = ["4","W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["tier 1 - best","Sac Me - Enabler","Answers - Payoff"]
+
+["Young Pyromancer"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["tier 1 - best","Aggro - Enabler","Spells - Payoff"]
+
+["Zameck Guildmage"]
+mana_cost = ["U","G"]
+color_identity = "GU"
+types = ["creature"]
+tags = ["tier 3 - filler","Aggro - Enabler","Counters - Enabler","Go Wide - Payoff","Counters - Payoff"]
+
+["Zur the Enchanter"]
+mana_cost = ["1","W","U","B"]
+color_identity = "BUW"
+types = ["creature"]
+tags = ["tier 3 - filler","Enchantments - Payoff","Answers - Payoff"]
