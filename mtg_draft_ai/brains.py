@@ -215,6 +215,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         # in lieu of a data-driven tuning process or theoretical basis for assigning them.
         # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
         values_by_tier = {
+            0: 1,  # TODO: make tier 0 worth more than 1
             1: 1,
             2: 0.7,
             3: 0.4,
