@@ -92,13 +92,13 @@ tags = ["Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Ash Barrens"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Ashnod's Altar"]
 mana_cost = ["3"]
@@ -158,7 +158,7 @@ tags = ["experimental","Enchantments - Enabler","Auras - Enabler","Tier 4"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Blasphemous Act"]
 mana_cost = ["8","R"]
@@ -188,7 +188,7 @@ tags = ["Sac Fodder - Payoff","Go Wide - Payoff","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Bloodghast"]
 mana_cost = ["B","B"]
@@ -200,7 +200,7 @@ tags = ["Sac Fodder - Enabler","Aggro - Enabler","Graveyard - Payoff","Discard -
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Bogardan Hellkite"]
 mana_cost = ["6","R","R"]
@@ -224,7 +224,7 @@ tags = ["ETB - Enabler","Answers - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Boros Guildmage"]
 mana_cost = ["RW","RW"]
@@ -260,7 +260,7 @@ tags = ["Spells - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Briarhorn"]
 mana_cost = ["3","G"]
@@ -332,7 +332,7 @@ tags = ["Sac Me - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Casting of Bones"]
 mana_cost = ["2","B"]
@@ -356,7 +356,7 @@ tags = ["cuttable","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Centaur Chieftain"]
 mana_cost = ["3","G"]
@@ -416,7 +416,7 @@ tags = ["Big Mana - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Cloud of Faeries"]
 mana_cost = ["1","U"]
@@ -470,13 +470,13 @@ tags = ["Artifacts - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Creeping Tar Pit"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Crow Storm"]
 mana_cost = ["2","U"]
@@ -542,7 +542,7 @@ tags = ["Aggro - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Darksteel Axe"]
 mana_cost = ["1"]
@@ -878,13 +878,13 @@ tags = ["Graveyard - Enabler","Tier 1"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Enchantments - Enabler","Auras - Enabler","Tier 1"]
+tags = ["Enchantments - Enabler","Auras - Enabler","Tier 1","Mana Accel - Enabler"]
 
 ["Fetid Heath"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Figure of Destiny"]
 mana_cost = ["RW"]
@@ -902,7 +902,7 @@ tags = ["Spells - Enabler","Answers - Enabler","Aggro - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Firefist Striker"]
 mana_cost = ["1","R"]
@@ -950,13 +950,13 @@ tags = ["Morph Flip - Enabler","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Flooded Strand"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Food Chain"]
 mana_cost = ["2","G"]
@@ -1070,7 +1070,7 @@ tags = ["Spells - Payoff","Aggro - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Gods Willing"]
 mana_cost = ["W"]
@@ -1100,7 +1100,7 @@ tags = ["Spells - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Gray Merchant of Asphodel"]
 mana_cost = ["3","B","B"]
@@ -1172,7 +1172,7 @@ tags = ["Answers - Enabler","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Heap Doll"]
 mana_cost = ["1"]
@@ -1208,7 +1208,7 @@ tags = ["Answers - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Hissing Iguanar"]
 mana_cost = ["2","R"]
@@ -1220,7 +1220,7 @@ tags = ["Go Wide - Payoff","Aggro - Payoff","Sac Fodder - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Homarid Spawning Bed"]
 mana_cost = ["U","U"]
@@ -1304,13 +1304,13 @@ tags = ["Aggro - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Izzet Boilerworks"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Jace's Ingenuity"]
 mana_cost = ["3","U","U"]
@@ -1424,7 +1424,7 @@ tags = ["Spells - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Leonin Battlemage"]
 mana_cost = ["3","W"]
@@ -1514,7 +1514,7 @@ tags = ["Mana Accel - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Lyzolda, the Blood Witch"]
 mana_cost = ["1","B","R"]
@@ -1562,7 +1562,7 @@ tags = ["Spells - Enabler","Answers - Enabler","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Marsh Flitter"]
 mana_cost = ["3","B"]
@@ -1670,7 +1670,7 @@ tags = ["Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Mnemonic Wall"]
 mana_cost = ["4","U"]
@@ -1748,7 +1748,7 @@ tags = ["Artifacts - Payoff","Aggro - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Mystical Teachings"]
 mana_cost = ["3","U"]
@@ -1790,7 +1790,7 @@ tags = ["Graveyard - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Negate"]
 mana_cost = ["1","U"]
@@ -1892,7 +1892,7 @@ tags = ["Spells - Enabler","Aggro - Payoff","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Pain Seer"]
 mana_cost = ["1","B"]
@@ -1976,7 +1976,7 @@ tags = ["Answers - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Prey Upon"]
 mana_cost = ["G"]
@@ -2048,13 +2048,13 @@ tags = ["Aggro - Enabler","Counters - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Rakdos Carnarium"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Rakdos Guildmage"]
 mana_cost = ["BR","BR"]
@@ -2078,13 +2078,13 @@ tags = ["Answers - Enabler","Artifacts - Enabler","Tier 3"]
 mana_cost = ["5","B","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["experimental","Big Mana - Payoff","Cheating Creature - Payoff","Answers - Payoff"]
+tags = ["Big Mana - Payoff","Cheating Creature - Payoff","Answers - Payoff","Tier 2"]
 
 ["Razorverge Thicket"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Reaper King"]
 mana_cost = ["2W","2U","2B","2R","2G"]
@@ -2168,7 +2168,7 @@ tags = ["Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Rune-Scarred Demon"]
 mana_cost = ["5","B","B"]
@@ -2186,7 +2186,7 @@ tags = ["Spells - Payoff","Equipment - Enabler","Artifacts - Enabler","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Safehold Elite"]
 mana_cost = ["1","GW"]
@@ -2228,7 +2228,7 @@ tags = ["Graveyard - Enabler","Sac Fodder - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Scarecrone"]
 mana_cost = ["3"]
@@ -2276,7 +2276,7 @@ tags = ["Tier 4"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Seedborn Muse"]
 mana_cost = ["3","G","G"]
@@ -2288,7 +2288,7 @@ tags = ["Tier 3"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = []
+tags = ["Tier 4"]
 
 ["Selesnya Guildmage"]
 mana_cost = ["GW","GW"]
@@ -2330,7 +2330,7 @@ tags = ["Answers - Enabler","Graveyard - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Shriekmaw"]
 mana_cost = ["4","B"]
@@ -2450,7 +2450,7 @@ tags = ["experimental","Aggro - Enabler","Equipment - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Stingscourger"]
 mana_cost = ["1","R"]
@@ -2468,7 +2468,7 @@ tags = ["Graveyard - Enabler","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Stoke the Flames"]
 mana_cost = ["2","R","R"]
@@ -2480,7 +2480,7 @@ tags = ["Answers - Enabler","Aggro - Payoff","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Stone Haven Outfitter"]
 mana_cost = ["1","W"]
@@ -2522,13 +2522,13 @@ tags = ["Power - Enabler","Toughness - Enabler","Artifacts - Enabler","Artifact 
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Sunken Ruins"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Sunset Pyramid"]
 mana_cost = ["2"]
@@ -2564,49 +2564,49 @@ tags = ["Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Abandon"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Deceit"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Enlightenment"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Malady"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Mystery"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Plenty"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Silence"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Terastodon"]
 mana_cost = ["6","G","G"]
@@ -2738,7 +2738,7 @@ tags = ["Spells - Enabler","Answers - Enabler","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Twinflame"]
 mana_cost = ["1","R"]
@@ -2780,7 +2780,7 @@ tags = ["ETB - Enabler","Answers - Enabler","Tier 1"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Vesuvan Shapeshifter"]
 mana_cost = ["3","U","U"]
@@ -2822,13 +2822,13 @@ tags = ["Sac Me - Enabler","Aggro - Enabler","Sac Fodder - Payoff","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Watery Grave"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Werebear"]
 mana_cost = ["1","G"]
@@ -2852,7 +2852,7 @@ tags = ["Kurkesh - Enabler","Answers - Payoff","Artifacts - Enabler","Artifact C
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Wingcrafter"]
 mana_cost = ["U"]
@@ -2870,19 +2870,19 @@ tags = ["Aggro - Payoff","Tier 2"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Wooded Foothills"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Woodland Cemetery"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["World Shaper"]
 mana_cost = ["3","G"]

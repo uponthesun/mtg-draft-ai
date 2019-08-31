@@ -26,7 +26,7 @@ import toml
 CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_6949_tag_data.toml')
 #IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
 IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_6949_image_urls.toml')
-FIXER_DATA_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_fixer_data.toml')
+FIXER_DATA_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_6949_fixer_data.toml')
 
 CUBE_LIST = read_cube_toml(CUBE_FILE, FIXER_DATA_FILE)
 CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
