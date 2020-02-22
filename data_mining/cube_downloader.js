@@ -3,7 +3,7 @@
 // @version      0.1
 // @description  Downloads cards and associated tag data for a cube from Cube Tutor.
 // @author       Matthew McKay
-// @match        http://www.cubetutor.com/editcube/*
+// @match        https://www.cubetutor.com/editcube/*
 // @grant        none
 // ==/UserScript==
 
@@ -82,7 +82,7 @@ function downloadCardPage(content, page, numPages, cubeId) {
                 downloadCardPage(content, page + 1, numPages, cubeId);
             }
         };
-        xhttp.open('POST', 'http://www.cubetutor.com/editcube.grid.pager/' + page + '/grid?t:ac=' + cubeId, true);
+        xhttp.open('POST', 'https://www.cubetutor.com/editcube.grid.pager/' + page + '/grid?t:ac=' + cubeId, true);
         xhttp.send();
     }
 }
