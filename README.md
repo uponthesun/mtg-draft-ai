@@ -17,6 +17,17 @@ python --version
 pip --version
 ```
 
+### Example virtualenv setup (run inside project root)
+```
+virtualenv --python=python3 venv
+```
+Creates a new virtual environment stored in a new directory called `venv` in the project root. `--python=python3` may not be necessary if you only have python3 installed on your system and not python2 as well.
+
+```
+source venv/bin/activate
+```
+Activates the virtual environment. You should always have the virtualenv active in your shell when running the tests or site.
+
 ## Setup
 
 1. cd into python project root
@@ -52,6 +63,19 @@ Run tests and generate coverage report:
 (Other options for --cov-report are available, e.g. html)
 ```
 pytest --cov=mtg_draft_ai --cov-report term-missing
+```
+
+# Running the site locally
+
+1-time setup:
+```
+cd website/draft_site
+python manage.py migrate
+```
+
+Start the site:
+```
+python manage.py runserver
 ```
 
 # Notebooks
