@@ -1,6 +1,7 @@
 """Implementations of Picker, which (hopefully) use intelligent strategies to make draft picks."""
 
 import collections
+import math
 import random
 import statistics
 import networkx as nx
@@ -138,26 +139,54 @@ _CombinedRating = collections.namedtuple('CombinedRating', ['card', 'color_combo
                                                             'common_neighbors_weighted'])
 
 
+_FixerRating = collections.namedtuple('FixerRating', ['card', 'color_combo', 'rating', 'num_oncolor_playables',
+                                                      'num_picks_made', 'num_oncolor_lands'])
+
+
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
     def pick(self, pack, cards_owned, draft_info):
-        composite_ratings = self.get_composite_ratings(pack, cards_owned, draft_info)
-        # replace full card object with just card name for more readable output
-        printable_candidates = [str(_CombinedRating(tup[0].name, *tup[1:])) for tup in composite_ratings]
-        print('\nrankings:\n{}'.format('\n'.join(printable_candidates)))
+        all_ratings = self._get_ratings(pack, cards_owned, draft_info)
+        #print('\nrankings:\n{}'.format('\n'.join([str(r) for r in all_ratings])))
 
-        return pack[0] if len(composite_ratings) == 0 else composite_ratings[0].card
+        return pack[0] if len(all_ratings) == 0 else all_ratings[0].card
 
-    def get_composite_ratings(self, pack, cards_owned, draft_info):
-        synergy_ratings = super()._ratings(pack, cards_owned, draft_info)
+    # currently depended on by the show_seat view. TODO: formalize this interface
+    def _get_ratings(self, pack, cards_owned, draft_info):
+        land_fixers = [c for c in pack if c.fixer_color_id and 'land' in c.types]
+        regular_cards = [c for c in pack if c not in land_fixers]
 
+        # Create ratings for the "regular cards", i.e. not the land fixers
+        synergy_ratings = super()._ratings(regular_cards, cards_owned, draft_info)
         raw_combined_ratings = self._raw_combined_ratings(synergy_ratings, cards_owned)
-        normalized_ratings = self._normalize_ratings(raw_combined_ratings)
+        normalized_ratings = self._normalize_ratings(raw_combined_ratings, cards_owned)
         composite_ratings = self._composite_ratings(normalized_ratings)
-        composite_ratings.sort(key=lambda cr: cr.rating, reverse=True)
-        return composite_ratings
 
+        # Create ratings for land fixers
+        land_fixer_ratings = self._land_fixer_ratings(land_fixers, cards_owned)
 
+        all_ratings = composite_ratings + land_fixer_ratings
+        all_ratings.sort(key=lambda cr: cr.rating, reverse=True)
+        return all_ratings
+
+    @staticmethod
+    def _land_fixer_ratings(land_fixers, cards_owned):
+        num_picks_made = len(cards_owned)
+
+        ratings = []
+        for card in land_fixers:
+            on_color_playables = [c for c in cards_owned
+                                  if synergy.castable(c, card.fixer_color_id) and
+                                  'land' not in c.types]
+            on_color_fixing_lands = [c for c in cards_owned
+                                     if 'land' in c.types and c.fixer_color_id == card.fixer_color_id]
+            num_oncolor_playables = len(on_color_playables)
+            num_oncolor_lands = len(on_color_fixing_lands)
+            rating = _fixer_rating(num_oncolor_playables, num_picks_made, num_oncolor_lands)
+            ratings.append(_FixerRating(card=card, color_combo=card.fixer_color_id, rating=rating,
+                                        num_oncolor_playables=num_oncolor_playables, num_picks_made=num_picks_made,
+                                        num_oncolor_lands=num_oncolor_lands))
+        return ratings
 
     @classmethod
     def _raw_combined_ratings(cls, synergy_ratings, cards_owned):
@@ -191,9 +220,9 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
         values_by_tier = {
             1: 1,
-            2: 0.8,
-            3: 0.6,
-            4: 0.3,
+            2: 0.7,
+            3: 0.4,
+            4: 0.1,
             None: 0
         }
         if card.power_tier not in values_by_tier:
@@ -214,20 +243,22 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         return composite_ratings
 
     @staticmethod
-    def _normalize_ratings(raw_ratings):
+    def _normalize_ratings(raw_ratings, cards_owned):
         """Normalizes the given list of ratings.
 
         'Normalization' here means converting all of the values for a field to proportional values in
-        the range of [0, 1]. We do this by finding the max value for that field in this list, and
-        dividing all values for that field by the max value.
+        the range of [0, 1]. For some fields there are straightforward ways to determine the practical
+        maximum value to divide by. For the ones which there aren't, we use the max value for that field
+        in the raw ratings list, making those "relative fields". For relative fields, a normalized value
+        of 1 means the original value was the highest in this list of values, not that it was the
+        theoretical maximum for that field.
 
-        Note that this means that a normalized value of 1 means the original value was the highest in
-        this list of values, not that it was the theoretical maximum for that field.
-
-        We assume all values are >= 0, and if the max value is 0, then all normalized values will be 0 as well.
+        We assume all values are >= 0. For relative fields, if the max value is 0,
+        then all normalized values will be 0 as well.
 
         Args:
             raw_ratings (List[_CombinedRating]): Raw combined power and synergy ratings.
+            cards_owned (List[Card]): Cards currently owned.
 
         Returns:
             List[_CombinedRatings]: Normalized combined power and synergy ratings.
@@ -235,11 +266,15 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
         if not raw_ratings:
             return []
 
-        fields = ['power_delta', 'total_power', 'edges_delta', 'total_edges', 'common_neighbors_weighted']
-        max_values = {}
-        for field in fields:
+        max_values = {
+            'power_delta': 1.0,
+            'edges_delta': len(cards_owned)
+        }
+        relative_fields = ['total_power', 'total_edges', 'common_neighbors_weighted']
+        for field in relative_fields:
             max_values[field] = max([getattr(r, field) for r in raw_ratings])
 
+        fields = relative_fields + list(max_values.keys())
         normalized_ratings = []
         for raw_rating in raw_ratings:
             norm_values = {}
@@ -250,6 +285,24 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
             normalized_ratings.append(raw_rating._replace(**norm_values))
         return normalized_ratings
+
+
+def _fixer_rating(num_oncolor_nonlands, num_picks_made, num_oncolor_fixer_lands):
+    """Rates the value of a fixer land based on the current state of the draft.
+
+    Returns a value in [0, 1]. The higher % of current cards are on-color nonlands,
+    the higher the rating, since it's more likely there will be enough playables. The more
+    on-color fixer lands we already have, the lower the rating, since we don't need fixing as badly.
+    """
+    if num_picks_made == 0:
+        return 0
+
+    # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
+    # that improving your mana always has value
+    lower_bound = 0.3
+    offset = 1 + num_oncolor_fixer_lands
+
+    return max(0, lower_bound + (1 - lower_bound) * (num_oncolor_nonlands - offset) / num_picks_made)
 
 
 def _normalize(value, max_value):

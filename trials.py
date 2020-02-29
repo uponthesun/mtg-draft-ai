@@ -13,11 +13,12 @@ def main():
     parser = argparse.ArgumentParser(description='Run N full drafts + deckbuilds for each, with all logs saved.')
     parser.add_argument('n', type=int, help='Number of drafts to run')
     parser.add_argument('--card-data', type=str, help='Card data TOML file', default='cube_81183_tag_data.toml')
+    parser.add_argument('--fixer-data', type=str, help='Fixer data TOML file', default='cube_81183_fixer_data.toml')
     parser.add_argument('-d', '--dir', type=str, help='Output directory for files', default='output')
 
     args = parser.parse_args()
 
-    cube_list = read_cube_toml(args.card_data)
+    cube_list = read_cube_toml(args.card_data, args.fixer_data)
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
     drafter_factory = GreedyPowerAndSynergyPicker.factory(cube_list)
 
