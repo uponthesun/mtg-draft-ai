@@ -1,3 +1,6 @@
+{%load static %}
+<link rel="stylesheet" href="{% static 'show_pack.css' %}" />
+<script src="{% static 'show_pack.js' %}"></script>
 View Seat:
 <!-- Human drafter is always seat 0 -->
 <a href="/draft/{{ draft.id }}">0 (You)</a>
@@ -29,6 +32,33 @@ View Seat:
     {% endfor %}
     </form>
 {% endif %}
+    <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
+
+    <div id="bot_ratings" class="hidden">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Color Combo</th>
+                <th>Power Delta</th>
+                <th>Total Power</th>
+                <th>Edges Delta</th>
+                <th>Total Edges</th>
+                <th>Common Neighbors Weighted</th>
+            </tr>
+            {% for rating in bot_ratings %}
+            <tr>
+                <td>{{ rating.card.name }}</td>
+                <td><b>{{ rating.rating }}</b></td>
+                <td>{{ rating.color_combo }}</td>
+                <td>{{ rating.power_delta }}</td>
+                <td>{{ rating.total_power }}</td>
+                <td>{{ rating.edges_delta }}</td>
+                <td>{{ rating.total_edges }}</td>
+                <td>{{ rating.common_neighbors_weighted }}</td>
+            </tr>
+            {% endfor %}
+        </table>
 </div>
 
 {% if draft_complete %}

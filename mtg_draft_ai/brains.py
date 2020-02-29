@@ -183,7 +183,6 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
                                         num_oncolor_lands=num_oncolor_lands))
         return ratings
 
-
     @classmethod
     def _raw_combined_ratings(cls, synergy_ratings, cards_owned):
         """Generate power ratings (power_delta, total_power) for each card."""
