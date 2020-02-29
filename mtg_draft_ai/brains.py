@@ -146,6 +146,13 @@ _FixerRating = collections.namedtuple('FixerRating', ['card', 'color_combo', 'ra
 class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
     def pick(self, pack, cards_owned, draft_info):
+        all_ratings = self._get_ratings(pack, cards_owned, draft_info)
+        #print('\nrankings:\n{}'.format('\n'.join([str(r) for r in all_ratings])))
+
+        return pack[0] if len(all_ratings) == 0 else all_ratings[0].card
+
+    # currently depended on by the show_seat view. TODO: formalize this interface
+    def _get_ratings(self, pack, cards_owned, draft_info):
         land_fixers = [c for c in pack if c.fixer_color_id and 'land' in c.types]
         regular_cards = [c for c in pack if c not in land_fixers]
 
@@ -160,9 +167,7 @@ class GreedyPowerAndSynergyPicker(GreedySynergyPicker):
 
         all_ratings = composite_ratings + land_fixer_ratings
         all_ratings.sort(key=lambda cr: cr.rating, reverse=True)
-        print('\nrankings:\n{}'.format('\n'.join([str(r) for r in all_ratings])))
-
-        return pack[0] if len(all_ratings) == 0 else all_ratings[0].card
+        return all_ratings
 
     @staticmethod
     def _land_fixer_ratings(land_fixers, cards_owned):

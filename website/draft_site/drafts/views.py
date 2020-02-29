@@ -129,7 +129,8 @@ def show_seat(request, draft_id, seat):
     # Generate bot recommendations
     pack_converted = [CARDS_BY_NAME[c.name] for c in cards]
     owned_converted = [CARDS_BY_NAME[c.name] for c in owned_cards]
-    bot_ratings = PICKER_FACTORY.create().get_composite_ratings(pack_converted, owned_converted, draft_info)
+    # TODO: fix interface for getting ratings
+    bot_ratings = PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
 
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
