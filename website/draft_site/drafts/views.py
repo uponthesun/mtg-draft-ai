@@ -54,13 +54,17 @@ def _initialize_image_url_cache():
 
 
 def _scryfall_image_url(name):
-    r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
-    card_json = r.json()
-    if 'card_faces' in card_json:
-        # Case for double-faced cards
-        # TODO: nice to have - show both sides of a DFC
-        return card_json['card_faces'][0]['image_uris']['normal']
-    return card_json['image_uris']['normal']
+    try:
+      r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
+      card_json = r.json()
+      if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
+          # Case for double-faced cards
+          # TODO: nice to have - show both sides of a DFC
+          return card_json['card_faces'][0]['image_uris']['normal']
+      return card_json['image_uris']['normal']
+    except Exception as e:
+      print('Failed to get image uri for card: {}'.format(card_json))
+      raise e
 
 
 IMAGE_URL_CACHE = _initialize_image_url_cache()
