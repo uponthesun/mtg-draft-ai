@@ -6,9 +6,14 @@
 // @match        *://tappedout.net/mtg-draft-simulator/draft/*
 // @run-at       document-end
 // @grant        none
+
+// @homepageURL  https://github.com/uponthesun/mtg-draft-ai
+// @updateURL    https://github.com/uponthesun/mtg-draft-ai/blob/tappedout-draft-display/data_mining/tappedout_draft_display.user.js
+
 // ==/UserScript==
 
-function createDisplayDivHTML(numDrafters, numPacks, cardsPerPack) {
+function createDisplayDivHTML(drafters, numPacks, cardsPerPack) {
+    const numDrafters = drafters.length
     const a = document.getElementsByTagName('a')
     const allPicks = Array.from(a).filter(x => "popover" === x.rel).map(x => x.text)
 
@@ -60,7 +65,8 @@ function createDisplayDivHTML(numDrafters, numPacks, cardsPerPack) {
     </style>`
 
     for (seat = 0; seat < numDrafters; seat++) {
-        html += `Drafter ${seat+1}\n`
+        const name = drafters[seat]
+        html += `<b>Drafter ${seat+1}: <a href="https://tappedout.net/users/${name}/">${name}</a></b>\n`
         for (var entry of drafterPickAndPacks[seat]) {
             html += `<div class="pack">`
             for (var card of entry.pack) {
@@ -79,15 +85,19 @@ function imageURL(cardName, wasPicked) {
     return `<img src="https://api.scryfall.com/cards/named?format=image&exact=${encodeURI(cardName)}" class="${cssClass}" width="146" height="204" />`
 }
 
-function getNumDrafters() {
-    const options = Array.from(document.getElementsByTagName('option'))
-    return options.map(o => o.text).filter(t => t.includes('Seat')).length / 2
+function getDrafters() {
+    const options = Array.from(document.getElementById('id_mtgo-seat').options)
+    const drafters = options.map(o => o.text).reduce(
+        (drafters, text) => text.includes('Seat') ? [...drafters, text.match(/Seat \d+: (\w+)/)[1].trim()] : drafters,
+        []
+    )
+    return drafters
 }
 
 const displayDiv = document.createElement('div')
 displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
 displayDiv.setAttribute('class', 'hidden')
-displayDiv.innerHTML = createDisplayDivHTML(getNumDrafters(), 3, 15) // TODO: determine parameters from page
+displayDiv.innerHTML = createDisplayDivHTML(getDrafters(), 3, 15) // TODO: determine parameters from page
 
 const showDisplayButton = document.createElement('button')
 showDisplayButton.innerHTML = 'show/hide draft images'
