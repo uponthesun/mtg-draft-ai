@@ -81,9 +81,27 @@ function imageURL(cardName, wasPicked) {
     return `<img src="https://api.scryfall.com/cards/named?format=image&exact=${encodeURI(cardName)}" class="${cssClass}" width="146" height="204" />`
 }
 
-const html = createHTML(6, 3, 15)
+const displayDiv = document.createElement('div')
+displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
+displayDiv.setAttribute('class', 'hidden')
+displayDiv.innerHTML = createHTML(6, 3, 15) // TODO: determine parameters from page
 
-const newNode = document.createElement('div')
-newNode.innerHTML = html
+const showDisplayButton = document.createElement('button')
+showDisplayButton.innerHTML = 'show/hide draft images'
+showDisplayButton.setAttribute('onclick', "showOrHide('draftImagesDisplayDiv')")
+
+const buttonScript = document.createElement('script')
+const scriptSrc = `
+function showOrHide(divID) {
+    const item = document.getElementById(divID);
+    if (item) {
+        newState = (item.className === 'hidden') ? 'unhidden' : 'hidden'
+        item.className = newState
+    }
+}`
+buttonScript.appendChild(document.createTextNode(scriptSrc))
+
 const parentNode = document.getElementsByClassName("container margin-top-18")[0]
-parentNode.appendChild(newNode)
+parentNode.insertBefore(displayDiv, parentNode.firstChild)
+parentNode.insertBefore(showDisplayButton, parentNode.firstChild)
+parentNode.insertBefore(buttonScript, parentNode.firstChild)
