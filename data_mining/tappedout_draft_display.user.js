@@ -8,9 +8,7 @@
 // @grant        none
 // ==/UserScript==
 
-function createHTML(numDrafters, numPacks, cardsPerPack) {
-    console.log('bar')
-
+function createDisplayDivHTML(numDrafters, numPacks, cardsPerPack) {
     const a = document.getElementsByTagName('a')
     const allPicks = Array.from(a).filter(x => "popover" === x.rel).map(x => x.text)
 
@@ -62,7 +60,7 @@ function createHTML(numDrafters, numPacks, cardsPerPack) {
     </style>`
 
     for (seat = 0; seat < numDrafters; seat++) {
-        html += `Drafter ${seat}\n`
+        html += `Drafter ${seat+1}\n`
         for (var entry of drafterPickAndPacks[seat]) {
             html += `<div class="pack">`
             for (var card of entry.pack) {
@@ -81,10 +79,15 @@ function imageURL(cardName, wasPicked) {
     return `<img src="https://api.scryfall.com/cards/named?format=image&exact=${encodeURI(cardName)}" class="${cssClass}" width="146" height="204" />`
 }
 
+function getNumDrafters() {
+    const options = Array.from(document.getElementsByTagName('option'))
+    return options.map(o => o.text).filter(t => t.includes('Seat')).length / 2
+}
+
 const displayDiv = document.createElement('div')
 displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
 displayDiv.setAttribute('class', 'hidden')
-displayDiv.innerHTML = createHTML(6, 3, 15) // TODO: determine parameters from page
+displayDiv.innerHTML = createDisplayDivHTML(getNumDrafters(), 3, 15) // TODO: determine parameters from page
 
 const showDisplayButton = document.createElement('button')
 showDisplayButton.innerHTML = 'show/hide draft images'
