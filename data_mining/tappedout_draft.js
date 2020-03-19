@@ -1,27 +1,36 @@
+// ==UserScript==
+// @name         tappedout_draft_display
+// @version      0.1
+// @description  Adds a visual display of the draft to the tappedout.net draft display page.
+// @author       Winter Dong
+// @match        *://tappedout.net/mtg-draft-simulator/draft/*
+// @run-at       document-end
+// @grant        none
+// ==/UserScript==
+
 function createHTML(numDrafters, numPacks, cardsPerPack) {
     console.log('bar')
 
-    a = document.getElementsByTagName('a')
-    allPicks = Array.from(a).filter(x => "popover" === x.rel).map(x => x.text)
-    console.log(allPicks)
+    const a = document.getElementsByTagName('a')
+    const allPicks = Array.from(a).filter(x => "popover" === x.rel).map(x => x.text)
 
     // create 2D array that matches table displayed on tappedout
-    picksTable = []
+    const picksTable = []
     for (var r = 0; r < numPacks * cardsPerPack; r++) {
         picksTable.push(allPicks.slice(r * numDrafters, (r+1) * numDrafters))
     }
 
-    drafterPickAndPacks = []
+    const drafterPickAndPacks = []
     for (var seat = 0; seat < numDrafters; seat++) {
-        pickAndPacks = []
+        const pickAndPacks = []
 
         for (var pack = 0; pack < numPacks; pack++) {
-            direction = (pack % 2 === 0) ? 1 : -1
+            const direction = (pack % 2 === 0) ? 1 : -1
             for (var pick = 0; pick < cardsPerPack; pick++) {
                 r = pack * cardsPerPack + pick
-                c = seat
-                picked = picksTable[r][c]
-                packContents = []
+                var c = seat
+                const picked = picksTable[r][c]
+                const packContents = []
 
                 for (var i = 0; i < cardsPerPack - pick; i++) {
                     packContents.push(picksTable[r][c])
@@ -35,7 +44,7 @@ function createHTML(numDrafters, numPacks, cardsPerPack) {
         drafterPickAndPacks.push(pickAndPacks)
     }
 
-    html = `<style>
+    var html = `<style>
     card-image {
         display: inline;
         margin: 1px;
@@ -52,25 +61,29 @@ function createHTML(numDrafters, numPacks, cardsPerPack) {
     }
     </style>`
 
-    for (var seat = 0; seat < numDrafters; seat++) {
+    for (seat = 0; seat < numDrafters; seat++) {
         html += `Drafter ${seat}\n`
         for (var entry of drafterPickAndPacks[seat]) {
             html += `<div class="pack">`
             for (var card of entry.pack) {
-                wasPicked = card === entry.pick
+                const wasPicked = card === entry.pick
                 html += imageURL(card, wasPicked) + `\n`
             }
 
             html += `</div>\n`
-            //html += `<div>${entry.pick} [${entry.pack}]\n`
         }
     }
     return html
 }
 
 function imageURL(cardName, wasPicked) {
-    cssClass = wasPicked ? 'card-image highlight' : 'card-image'
+    const cssClass = wasPicked ? 'card-image highlight' : 'card-image'
     return `<img src="https://api.scryfall.com/cards/named?format=image&exact=${encodeURI(cardName)}" class="${cssClass}" width="146" height="204" />`
 }
 
-createHTML(6, 3, 15)
+const html = createHTML(6, 3, 15)
+
+const newNode = document.createElement('div')
+newNode.innerHTML = html
+const parentNode = document.getElementsByClassName("container margin-top-18")[0]
+parentNode.appendChild(newNode)
