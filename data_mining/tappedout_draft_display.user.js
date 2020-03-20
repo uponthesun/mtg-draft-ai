@@ -8,7 +8,7 @@
 // @grant        none
 
 // @homepageURL  https://github.com/uponthesun/mtg-draft-ai
-// @updateURL    https://github.com/uponthesun/mtg-draft-ai/blob/tappedout-draft-display/data_mining/tappedout_draft_display.user.js
+// @updateURL    https://github.com/uponthesun/mtg-draft-ai/raw/master/data_mining/tappedout_draft_display.user.js
 
 // ==/UserScript==
 
