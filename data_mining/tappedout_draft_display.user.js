@@ -87,10 +87,9 @@ function imageURL(cardName, wasPicked) {
 
 function getDrafters() {
     const options = Array.from(document.getElementById('id_mtgo-seat').options)
-    const drafters = options.map(o => o.text).reduce(
-        (drafters, text) => text.includes('Seat') ? [...drafters, text.match(/Seat \d+: (\w+)/)[1].trim()] : drafters,
-        []
-    )
+    const drafters = options.map(o => o.text)
+            .filter(t => t.includes('Seat'))
+            .map(t => t.match(/Seat \d+: (\w+)/)[1].trim())
     return drafters
 }
 
