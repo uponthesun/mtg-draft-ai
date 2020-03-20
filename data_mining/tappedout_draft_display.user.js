@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         tappedout_draft_display
-// @version      0.2
+// @version      0.2.1
 // @description  Adds a visual display of the draft to the tappedout.net draft display page.
 // @author       Winter Dong
 // @match        *://tappedout.net/mtg-draft-simulator/draft/*
@@ -8,7 +8,7 @@
 // @grant        none
 
 // @homepageURL  https://github.com/uponthesun/mtg-draft-ai
-// @updateURL    https://github.com/uponthesun/mtg-draft-ai/blob/tappedout-draft-display/data_mining/tappedout_draft_display.user.js
+// @updateURL    https://github.com/uponthesun/mtg-draft-ai/raw/tappedout-draft-display/data_mining/tappedout_draft_display.user.js
 
 // ==/UserScript==
 
