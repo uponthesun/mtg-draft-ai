@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         tappedout_draft_display
-// @version      0.2
+// @version      0.3
 // @description  Adds a visual display of the draft to the tappedout.net draft display page.
 // @author       Winter Dong
 // @match        *://tappedout.net/mtg-draft-simulator/draft/*
