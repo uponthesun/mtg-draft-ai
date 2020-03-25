@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         tappedout_draft_display
-// @version      0.3.1
+// @version      0.4
 // @description  Adds a visual display of the draft to the tappedout.net draft display page.
 // @author       Winter Dong
 // @match        *://tappedout.net/mtg-draft-simulator/draft/*
@@ -66,6 +66,7 @@ function createDisplayDivHTML(drafters, numPacks, cardsPerPack) {
 
     for (seat = 0; seat < numDrafters; seat++) {
         const name = drafters[seat]
+        html += `<div class="hidden" id="drafterPicks${seat}">\n`
         html += `<b>Drafter ${seat+1}: <a href="https://tappedout.net/users/${name}/">${name}</a></b>\n`
         for (var entry of drafterPickAndPacks[seat]) {
             html += `<div class="pack">`
@@ -76,8 +77,21 @@ function createDisplayDivHTML(drafters, numPacks, cardsPerPack) {
 
             html += `</div>\n`
         }
+        html += `</div>\n`
     }
     return html
+}
+
+function createControlRow(numDrafters) {
+    const controlRow = document.createElement('tr')
+    var html = `<th>Draft Images</th>\n`
+    for (var seat = 0; seat < numDrafters; seat++) {
+        html += `<th>\n
+            <a onclick="showOrHide('drafterPicks${seat}')" style="cursor: pointer;">show/hide</a>
+        </th>`
+    }
+    controlRow.innerHTML = html
+    return controlRow
 }
 
 function imageURL(cardName, wasPicked) {
@@ -93,20 +107,13 @@ function getDrafters() {
     return drafters
 }
 
+const drafters = getDrafters()
+
 const draftTableRows = document.getElementsByTagName("tr")
 const draftTableLastRow = draftTableRows.item(draftTableRows.length - 1)
 const packDataCap = draftTableLastRow.firstElementChild.textContent.match(/(\d+) - (\d+)/)
 const numPacks = packDataCap[1]
 const packSize = packDataCap[2]
-
-const displayDiv = document.createElement('div')
-displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
-displayDiv.setAttribute('class', 'hidden')
-displayDiv.innerHTML = createDisplayDivHTML(getDrafters(), numPacks, packSize)
-
-const showDisplayButton = document.createElement('button')
-showDisplayButton.innerHTML = 'show/hide draft images'
-showDisplayButton.setAttribute('onclick', "showOrHide('draftImagesDisplayDiv')")
 
 const buttonScript = document.createElement('script')
 const scriptSrc = `
@@ -119,7 +126,22 @@ function showOrHide(divID) {
 }`
 buttonScript.appendChild(document.createTextNode(scriptSrc))
 
-const parentNode = document.getElementsByClassName("container margin-top-18")[0]
-parentNode.insertBefore(displayDiv, parentNode.firstChild)
-parentNode.insertBefore(showDisplayButton, parentNode.firstChild)
-parentNode.insertBefore(buttonScript, parentNode.firstChild)
+// add a control row to the table header
+const docDraftTableHead = document.getElementsByTagName("thead")[0]
+docDraftTableHead.appendChild(buttonScript)
+docDraftTableHead.appendChild(createControlRow(drafters.length))
+
+// insert a visualization row at the top of the table body
+const displayDiv = document.createElement('div')
+displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
+displayDiv.innerHTML = createDisplayDivHTML(drafters, numPacks, packSize)
+
+const displayRowSpan = document.createElement('td')
+displayRowSpan.colSpan = drafters.length + 1
+displayRowSpan.appendChild(displayDiv)
+
+const displayRow = document.createElement('tr')
+displayRow.appendChild(displayRowSpan)
+
+const docDraftTableBody = document.getElementsByTagName("tbody")[0]
+docDraftTableBody.insertBefore(displayRow, docDraftTableBody.firstChild)
