@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         tappedout_draft_display
-// @version      0.3
+// @version      0.3.1
 // @description  Adds a visual display of the draft to the tappedout.net draft display page.
 // @author       Winter Dong
 // @match        *://tappedout.net/mtg-draft-simulator/draft/*
@@ -93,10 +93,16 @@ function getDrafters() {
     return drafters
 }
 
+const draftTableRows = document.getElementsByTagName("tr")
+const draftTableLastRow = draftTableRows.item(draftTableRows.length - 1)
+const packDataCap = draftTableLastRow.firstElementChild.textContent.match(/(\d+) - (\d+)/)
+const numPacks = packDataCap[1]
+const packSize = packDataCap[2]
+
 const displayDiv = document.createElement('div')
 displayDiv.setAttribute('id', 'draftImagesDisplayDiv')
 displayDiv.setAttribute('class', 'hidden')
-displayDiv.innerHTML = createDisplayDivHTML(getDrafters(), 3, 15) // TODO: determine parameters from page
+displayDiv.innerHTML = createDisplayDivHTML(getDrafters(), numPacks, packSize)
 
 const showDisplayButton = document.createElement('button')
 showDisplayButton.innerHTML = 'show/hide draft images'
