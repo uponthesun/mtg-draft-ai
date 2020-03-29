@@ -15,62 +15,74 @@ View Seat:
 
 <div>
 
-{% if human_drafter %}
-    <form action="/draft/pick-card/{{ draft.id }}" method="post">
-        {% csrf_token %}
-        <input name="phase" type="hidden" value="{{ phase }}">
-        <input name="pick" type="hidden" value="{{ pick }}">
-        <input name="seat" type="hidden" value="{{ current_seat }}">
-        {% for card, image_url in cards %}
-            <button name="picked_card_id" value="{{ card.id }}">
-                <img src="{{ image_url }}" width="146" height="204" />
-            </button>
-        {% endfor %}
-    </form>
-{% else %}
-    <!-- Do-nothing form to make formatting consistent with human drafter view -->
-    <form>
-    {% for card, image_url in cards %}
-        <img src="{{ image_url }}" width="146" height="204" />
-    {% endfor %}
-    </form>
-{% endif %}
-    <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
-
-    <div id="bot_ratings" class="hidden">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Rating</th>
-                <th>Color Combo</th>
-                <th>Power Delta</th>
-                <th>Total Power</th>
-                <th>Edges Delta</th>
-                <th>Total Edges</th>
-                <th>Common Neighbors Weighted</th>
-            </tr>
-            {% for rating in bot_ratings %}
-            <tr>
-                <td>{{ rating.card.name }}</td>
-                <td><b>{{ rating.rating }}</b></td>
-                <td>{{ rating.color_combo }}</td>
-                <td>{{ rating.power_delta }}</td>
-                <td>{{ rating.total_power }}</td>
-                <td>{{ rating.edges_delta }}</td>
-                <td>{{ rating.total_edges }}</td>
-                <td>{{ rating.common_neighbors_weighted }}</td>
-            </tr>
+{% if not waiting_for_drafters %}
+    {% if human_drafter %}
+        <form action="/draft/pick-card/{{ draft.id }}" method="post">
+            {% csrf_token %}
+            <input name="phase" type="hidden" value="{{ phase }}">
+            <input name="pick" type="hidden" value="{{ pick }}">
+            <input name="seat" type="hidden" value="{{ current_seat }}">
+            {% for card, image_url in cards %}
+                <button name="picked_card_id" value="{{ card.id }}">
+                    <img src="{{ image_url }}" width="146" height="204" />
+                </button>
             {% endfor %}
-        </table>
-</div>
+        </form>
+    {% else %}
+        <!-- Do-nothing form to make formatting consistent with human drafter view -->
+        <form>
+        {% for card, image_url in cards %}
+            <img src="{{ image_url }}" width="146" height="204" />
+        {% endfor %}
+        </form>
+    {% endif %}
+        <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
 
-{% if draft_complete %}
-<form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
-    <button type="submit">
-        Auto-build deck
-    </button>
-</form>
+        <div id="bot_ratings" class="hidden">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>Color Combo</th>
+                    <th>Power Delta</th>
+                    <th>Total Power</th>
+                    <th>Edges Delta</th>
+                    <th>Total Edges</th>
+                    <th>Common Neighbors Weighted</th>
+                </tr>
+                {% for rating in bot_ratings %}
+                <tr>
+                    <td>{{ rating.card.name }}</td>
+                    <td><b>{{ rating.rating }}</b></td>
+                    <td>{{ rating.color_combo }}</td>
+                    <td>{{ rating.power_delta }}</td>
+                    <td>{{ rating.total_power }}</td>
+                    <td>{{ rating.edges_delta }}</td>
+                    <td>{{ rating.total_edges }}</td>
+                    <td>{{ rating.common_neighbors_weighted }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+
+    {% if draft_complete %}
+    <form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
+        <button type="submit">
+            Auto-build deck
+        </button>
+    </form>
+    {% endif %}
+{% else %}
+    <br>
+    Waiting for human drafters in seats:
+    <br>
+    {% for d in waiting_for_drafters %}
+        {{ d.seat }}
+        <br>
+    {% endfor %}
+    <br>
 {% endif %}
+
 <b>Owned Cards</b>
 
 <div>

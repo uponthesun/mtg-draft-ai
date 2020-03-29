@@ -117,7 +117,6 @@ def show_draft(request, draft_id):
 
 # /draft/<int:draft_id>/seat/<int:seat>
 def show_seat(request, draft_id, seat):
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=6, num_phases=3, cards_per_pack=15)
     draft = get_object_or_404(models.Draft, pk=draft_id)
     drafter = models.Drafter.objects.get(draft=draft, seat=seat)
 
@@ -132,16 +131,21 @@ def show_seat(request, draft_id, seat):
     draft_complete = (drafter.current_phase == draft.num_phases)
     
     # Generate bot recommendations
+    # TODO: fix interface for getting ratings
     pack_converted = [CARDS_BY_NAME[c.name] for c in cards]
     owned_converted = [CARDS_BY_NAME[c.name] for c in owned_cards]
-    # TODO: fix interface for getting ratings
+    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=6, num_phases=3, cards_per_pack=15)
     bot_ratings = PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
+
+    # Are we waiting on any picks?
+    drafters = models.Drafter.objects.filter(draft=draft, bot=False)
+    waiting_for_drafters = [d for d in drafters if d.current_pick < drafter.current_pick]
 
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'seat_range': range(0, draft.num_drafters),
                'human_drafter': not drafter.bot, 'current_seat': seat, 'draft_complete': draft_complete,
-               'bot_ratings': bot_ratings}
+               'bot_ratings': bot_ratings, 'waiting_for_drafters': waiting_for_drafters}
 
     return render(request, 'drafts/show_pack.html', context)
 
@@ -188,7 +192,9 @@ def pick_card(request, draft_id):
 
             _save_pick(draft, drafter, picked_card, phase, pick)
 
-            _make_bot_picks(draft, phase, pick)
+            # TODO: Use drafter field to designate primary instead of hardcoding it as seat 0
+            if drafter.seat == 0:
+                _make_bot_picks(draft, phase, pick)
     except StaleReadError:
         LOGGER.info('Stale read occurred when picking card, transaction was rolled back')
 
