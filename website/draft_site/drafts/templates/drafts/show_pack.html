@@ -1,10 +1,12 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_pack.css' %}" />
 <script src="{% static 'show_pack.js' %}"></script>
+<b>Viewing Seat:</b> {{ current_seat }}
+<br>
+<b>Drafter type:</b> {{ human_drafter|yesno:"Human,Bot" }}
+<br>
 View Seat:
-<!-- Human drafter is always seat 0 -->
-<a href="/draft/{{ draft.id }}">0 (You)</a>
-{% for seat in bot_seat_range %}
+{% for seat in seat_range %}
     <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
 {% endfor %}
 <br>
@@ -18,6 +20,7 @@ View Seat:
         {% csrf_token %}
         <input name="phase" type="hidden" value="{{ phase }}">
         <input name="pick" type="hidden" value="{{ pick }}">
+        <input name="seat" type="hidden" value="{{ current_seat }}">
         {% for card, image_url in cards %}
             <button name="picked_card_id" value="{{ card.id }}">
                 <img src="{{ image_url }}" width="146" height="204" />

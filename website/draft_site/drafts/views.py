@@ -98,20 +98,21 @@ def create_draft(request):
 
     # Create human drafter in DB
     models.Drafter(draft=new_draft, seat=0, bot=False).save()
+    models.Drafter(draft=new_draft, seat=1, bot=False).save()
     # Create bot drafters in DB
     # Seat 0 is the human drafter, so start at seat 1
-    for i in range(1, draft_info.num_drafters):
+    for i in range(2, draft_info.num_drafters):
         # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
         bot_drafter = Drafter(None, draft_info)
         db_bot_drafter = models.Drafter(draft=new_draft, seat=i, bot=True, bot_state=pickle.dumps(bot_drafter))
         db_bot_drafter.save()
 
-    return HttpResponseRedirect(reverse('show_draft', args=[new_draft.id]))
+    return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': new_draft.id, 'seat': 0}))
 
 
 # /draft/<int:draft_id>
-def show_draft(request, draft_id):
-    return show_seat(request, draft_id, seat=0)
+#def show_draft(request, draft_id):
+#    return show_seat(request, draft_id, seat=0)
 
 
 # /draft/<int:draft_id>/seat/<int:seat>
@@ -138,8 +139,8 @@ def show_seat(request, draft_id, seat):
 
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
-               'owned_cards': owned_cards_with_images, 'bot_seat_range': range(1, draft.num_drafters),
-               'human_drafter': seat == 0, 'current_seat': seat, 'draft_complete': draft_complete,
+               'owned_cards': owned_cards_with_images, 'seat_range': range(0, draft.num_drafters),
+               'human_drafter': not drafter.bot, 'current_seat': seat, 'draft_complete': draft_complete,
                'bot_ratings': bot_ratings}
 
     return render(request, 'drafts/show_pack.html', context)
@@ -180,7 +181,7 @@ def pick_card(request, draft_id):
     try:
         with transaction.atomic():
             draft = get_object_or_404(models.Draft, pk=draft_id)
-            drafter = models.Drafter.objects.get(draft=draft, seat=0)
+            drafter = models.Drafter.objects.get(draft=draft, seat=request.POST['seat'])
             picked_card = models.Card.objects.get(id=request.POST['picked_card_id'])
             phase = int(request.POST['phase'])
             pick = int(request.POST['pick'])
@@ -191,7 +192,7 @@ def pick_card(request, draft_id):
     except StaleReadError:
         LOGGER.info('Stale read occurred when picking card, transaction was rolled back')
 
-    return HttpResponseRedirect(reverse('show_draft', args=[draft_id]))
+    return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': draft_id, 'seat': request.POST['seat']}))
 
 
 def _make_bot_picks(draft, phase, pick):
