@@ -82,7 +82,9 @@ def index(request):
 # /draft
 @transaction.atomic
 def create_draft(request):
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=6, num_phases=3, cards_per_pack=15)
+    # TODO: Provide option to choose draft size
+    num_drafters = 6
+    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=num_drafters, num_phases=3, cards_per_pack=15)
     packs = create_packs(draft_info)
 
     new_draft = models.Draft(num_drafters=draft_info.num_drafters, num_phases=draft_info.num_phases,
@@ -96,16 +98,16 @@ def create_draft(request):
                 db_card = models.Card(draft=new_draft, name=card.name, phase=phase, start_seat=start_seat)
                 db_card.save()
 
-    # Create human drafter in DB
-    models.Drafter(draft=new_draft, seat=0, bot=False).save()
-    models.Drafter(draft=new_draft, seat=1, bot=False).save()
-    # Create bot drafters in DB
-    # Seat 0 is the human drafter, so start at seat 1
-    for i in range(2, draft_info.num_drafters):
-        # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-        bot_drafter = Drafter(None, draft_info)
-        db_bot_drafter = models.Drafter(draft=new_draft, seat=i, bot=True, bot_state=pickle.dumps(bot_drafter))
-        db_bot_drafter.save()
+    num_humans = int(request.POST['num_human_drafters']) if 'num_human_drafters' in request.POST else 1
+    human_drafters = [models.Drafter(draft=new_draft, bot=False) for _ in range(0, num_humans)]
+    # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
+    bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)))
+                    for _ in range(0, num_drafters - num_humans)]
+    drafters = _even_mix(human_drafters, bot_drafters)
+
+    for i in range(0, num_drafters):
+        drafters[i].seat = i
+        drafters[i].save()
 
     return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': new_draft.id, 'seat': 0}))
 
@@ -279,3 +281,23 @@ def _image_url(card_name):
     # Fall back to using the API if we don't have the image URL cached (e.g. when viewing old drafts)
     query_string = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
     return 'https://api.scryfall.com/cards/named?' + query_string
+
+
+def _even_mix(list_a, list_b):
+    total_len = len(list_a) + len(list_b)
+    increment = total_len / len(list_a)
+
+    result = [None] * total_len
+
+    i = 0
+    for e in list_a:
+        result[int(i)] = e
+        i += increment
+
+    list_b_copy = list_b.copy()
+    for i in range(0, len(result)):
+        # Assumes value of list_a are not None
+        if result[i] is None:
+            result[i] = list_b_copy.pop(0)
+
+    return result

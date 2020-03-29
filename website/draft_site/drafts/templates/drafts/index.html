@@ -1,5 +1,13 @@
 <form action="/draft" method="post">
     {% csrf_token %}
+
+    Number of human drafters:
+    <select name="num_human_drafters" id="num-drafters-select">
+    {% for i in '123456'|make_list %}
+        <option value="{{ i }}">{{ i }}</option>
+    {% endfor %}
+    </select>
+    <br>
     <button type="submit">
         Start draft
     </button>
