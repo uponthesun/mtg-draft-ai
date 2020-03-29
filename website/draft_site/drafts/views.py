@@ -111,8 +111,8 @@ def create_draft(request):
 
 
 # /draft/<int:draft_id>
-#def show_draft(request, draft_id):
-#    return show_seat(request, draft_id, seat=0)
+def show_draft(request, draft_id):
+    return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': draft_id, 'seat': 0}))
 
 
 # /draft/<int:draft_id>/seat/<int:seat>
