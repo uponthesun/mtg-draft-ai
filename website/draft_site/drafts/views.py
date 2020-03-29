@@ -178,7 +178,9 @@ def auto_build(request, draft_id, seat):
     context = {'built_deck_images': built_deck_images, 'leftovers_images': leftovers_images,
                'num_edges': num_edges, 'avg_power': round(avg_power, 2), 'draft_id': draft_id,
                'bot_seat_range': range(1, draft.num_drafters), 'deck_card_names': deck_card_names,
-               'leftovers_card_names': leftovers_card_names, 'textarea_rows': textarea_rows}
+               'leftovers_card_names': leftovers_card_names, 'textarea_rows': textarea_rows,
+               'seat_range': range(0, draft.num_drafters), 'human_drafter': not drafter.bot,
+               'current_seat': seat, 'draft': draft}
     return render(request, 'drafts/autobuild.html', context)
 
 

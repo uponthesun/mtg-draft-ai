@@ -1,14 +1,7 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_pack.css' %}" />
 <script src="{% static 'show_pack.js' %}"></script>
-<b>Viewing Seat:</b> {{ current_seat }}
-<br>
-<b>Drafter type:</b> {{ human_drafter|yesno:"Human,Bot" }}
-<br>
-View Seat:
-{% for seat in seat_range %}
-    <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
-{% endfor %}
+{% include "drafts/draft_header.html" %}
 <br>
 <br>
 <b>Seat {{ current_seat }}: Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
