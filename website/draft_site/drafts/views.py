@@ -220,7 +220,6 @@ def _make_bot_picks(draft, phase, pick):
         picked_card = drafter.pick(pack)
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
-        # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
         drafter.picker = None
         db_drafter.bot_state = pickle.dumps(drafter)
         _save_pick(draft, db_drafter, picked_db_card, phase, pick)
@@ -286,6 +285,7 @@ def _image_url(card_name):
 
 
 def _even_mix(list_a, list_b):
+    """Given two lists, mixes them 'evenly', maximizing the total distance between elements from the same list."""
     total_len = len(list_a) + len(list_b)
     increment = total_len / len(list_a)
 
