@@ -3,12 +3,15 @@
 <script src="{% static 'show_pack.js' %}"></script>
 {% include "drafts/draft_header.html" %}
 <br>
-<br>
-<b>Seat {{ current_seat }}: Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
 
 <div>
 
 {% if not waiting_for_drafters %}
+    {% if not draft_complete %}
+        <br>
+        <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+    {% endif %}
+
     {% if human_drafter %}
         <form action="/draft/pick-card/{{ draft.id }}" method="post">
             {% csrf_token %}
@@ -29,6 +32,14 @@
         {% endfor %}
         </form>
     {% endif %}
+
+    {% if draft_complete %}
+        <form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
+            <button type="submit">
+                Auto-build deck
+            </button>
+        </form>
+    {% else %}
         <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
 
         <div id="bot_ratings" class="hidden">
@@ -56,14 +67,7 @@
                 </tr>
                 {% endfor %}
             </table>
-    </div>
-
-    {% if draft_complete %}
-    <form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
-        <button type="submit">
-            Auto-build deck
-        </button>
-    </form>
+        </div>
     {% endif %}
 {% else %}
     <br>
