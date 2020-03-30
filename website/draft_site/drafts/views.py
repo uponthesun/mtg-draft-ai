@@ -141,7 +141,8 @@ def show_seat(request, draft_id, seat):
 
     # Are we waiting on any picks?
     drafters = models.Drafter.objects.filter(draft=draft, bot=False)
-    waiting_for_drafters = [d for d in drafters if d.current_pick < drafter.current_pick]
+    waiting_for_drafters = [d for d in drafters if d.current_phase < drafter.current_phase or
+                            d.current_phase == drafter.current_phase and d.current_pick < drafter.current_pick]
 
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
