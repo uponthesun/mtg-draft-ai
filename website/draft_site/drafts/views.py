@@ -12,6 +12,7 @@ from django.db import transaction
 from django.conf import settings
 
 from . import models
+from . import draft_converter
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
@@ -55,16 +56,16 @@ def _initialize_image_url_cache():
 
 def _scryfall_image_url(name):
     try:
-      r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
-      card_json = r.json()
-      if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
-          # Case for double-faced cards
-          # TODO: nice to have - show both sides of a DFC
-          return card_json['card_faces'][0]['image_uris']['normal']
-      return card_json['image_uris']['normal']
+        r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
+        card_json = r.json()
+        if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
+            # Case for double-faced cards
+            # TODO: nice to have - show both sides of a DFC
+            return card_json['card_faces'][0]['image_uris']['normal']
+        return card_json['image_uris']['normal']
     except Exception as e:
-      print('Failed to get image uri for card: {}'.format(card_json))
-      raise e
+        print('Failed to get image uri for card: {}'.format(card_json))
+        raise e
 
 
 IMAGE_URL_CACHE = _initialize_image_url_cache()
@@ -183,6 +184,18 @@ def auto_build(request, draft_id, seat):
                'seat_range': range(0, draft.num_drafters), 'human_drafter': not drafter.bot,
                'current_seat': seat, 'draft': draft}
     return render(request, 'drafts/autobuild.html', context)
+
+
+# /draft/<int:draft_id>/seat/<int:seat>/all-picks
+def all_picks(request, draft_id, seat):
+    draft = get_object_or_404(models.Draft, pk=draft_id)
+    drafter = models.Drafter.objects.get(draft=draft, seat=seat)
+
+    output = draft_converter.convert_drafter(drafter)
+
+    context = {'seat_range': range(0, draft.num_drafters), 'human_drafter': not drafter.bot,
+               'current_seat': seat, 'draft': draft, 'output': output}
+    return render(request, 'drafts/show_all_picks.html', context)
 
 
 # /draft/pick-card/<int:draft_id>
