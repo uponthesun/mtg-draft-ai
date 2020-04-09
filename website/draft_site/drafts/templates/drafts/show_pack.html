@@ -1,6 +1,7 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_pack.css' %}" />
 <script src="{% static 'show_pack.js' %}"></script>
+<script src="{% static 'refresh.js' %}"></script>
 {% include "drafts/draft_header.html" %}
 <br>
 
@@ -39,6 +40,8 @@
                 Auto-build deck
             </button>
         </form>
+        <a href="/draft/{{ draft.id }}/seat/{{ current_seat }}/all-picks">Review Draft</a>
+        <br>
     {% else %}
         <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
 
@@ -80,8 +83,6 @@
     <br>
 {% endif %}
 
-<a href="/draft/{{ draft.id }}/seat/{{ current_seat }}/all-picks">Review Draft</a>
-<br>
 <b>Owned Cards</b>
 
 <div>
