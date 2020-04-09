@@ -84,7 +84,7 @@ def index(request):
 @transaction.atomic
 def create_draft(request):
     # TODO: Provide option to choose draft size
-    num_drafters = 6
+    num_drafters = 8
     draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=num_drafters, num_phases=3, cards_per_pack=15)
     packs = create_packs(draft_info)
 
