@@ -84,8 +84,12 @@ def index(request):
 @transaction.atomic
 def create_draft(request):
     # TODO: Provide option to choose draft size
-    num_drafters = 8
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=num_drafters, num_phases=3, cards_per_pack=15)
+    human_drafter_names = request.POST['human_drafter_names'].split('\n')
+    human_drafter_names = [name.strip() for name in human_drafter_names if len(name.strip()) > 0]
+    num_humans = len(human_drafter_names)
+    num_bots = int(request.POST['num_bot_drafters']) if 'num_bot_drafters' in request.POST else 5
+
+    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
     packs = create_packs(draft_info)
 
     new_draft = models.Draft(num_drafters=draft_info.num_drafters, num_phases=draft_info.num_phases,
@@ -99,23 +103,27 @@ def create_draft(request):
                 db_card = models.Card(draft=new_draft, name=card.name, phase=phase, start_seat=start_seat)
                 db_card.save()
 
-    num_humans = int(request.POST['num_human_drafters']) if 'num_human_drafters' in request.POST else 1
-    human_drafters = [models.Drafter(draft=new_draft, bot=False) for _ in range(0, num_humans)]
+    human_drafters = [models.Drafter(draft=new_draft, bot=False, name=name) for name in human_drafter_names]
     # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-    bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)))
-                    for _ in range(0, num_drafters - num_humans)]
+    bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)),
+                                   name='Bot') for _ in range(0, num_bots)]
     drafters = _even_mix(human_drafters, bot_drafters)
 
-    for i in range(0, num_drafters):
+    for i in range(0, draft_info.num_drafters):
         drafters[i].seat = i
         drafters[i].save()
 
-    return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': new_draft.id, 'seat': 0}))
+    return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
 
 # /draft/<int:draft_id>
 def show_draft(request, draft_id):
-    return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': draft_id, 'seat': 0}))
+    draft = get_object_or_404(models.Draft, pk=draft_id)
+    drafters = models.Drafter.objects.filter(draft=draft)
+    human_drafters = [d for d in drafters if not d.bot]
+    num_bots = len([d for d in drafters if d.bot])
+    context = {'human_drafters': human_drafters, 'num_bots': num_bots, 'draft_id': draft_id}
+    return render(request, 'drafts/draft_start.html', context)
 
 
 # /draft/<int:draft_id>/seat/<int:seat>
@@ -148,7 +156,8 @@ def show_seat(request, draft_id, seat):
     context = {'cards': cards_with_images, 'draft': draft,
                'phase': drafter.current_phase, 'pick': drafter.current_pick,
                'owned_cards': owned_cards_with_images, 'seat_range': range(0, draft.num_drafters),
-               'human_drafter': not drafter.bot, 'current_seat': seat, 'draft_complete': draft_complete,
+               'drafter': drafter,
+               'draft_complete': draft_complete,
                'bot_ratings': bot_ratings, 'waiting_for_drafters': waiting_for_drafters}
 
     return render(request, 'drafts/show_pack.html', context)
@@ -181,8 +190,7 @@ def auto_build(request, draft_id, seat):
                'num_edges': num_edges, 'avg_power': round(avg_power, 2), 'draft_id': draft_id,
                'bot_seat_range': range(1, draft.num_drafters), 'deck_card_names': deck_card_names,
                'leftovers_card_names': leftovers_card_names, 'textarea_rows': textarea_rows,
-               'seat_range': range(0, draft.num_drafters), 'human_drafter': not drafter.bot,
-               'current_seat': seat, 'draft': draft}
+               'seat_range': range(0, draft.num_drafters), 'drafter': drafter, 'draft': draft}
     return render(request, 'drafts/autobuild.html', context)
 
 
@@ -193,8 +201,7 @@ def all_picks(request, draft_id, seat):
 
     output = draft_converter.convert_drafter(drafter)
 
-    context = {'seat_range': range(0, draft.num_drafters), 'human_drafter': not drafter.bot,
-               'current_seat': seat, 'draft': draft, 'output': output}
+    context = {'seat_range': range(0, draft.num_drafters), 'drafter': drafter, 'draft': draft, 'output': output}
     return render(request, 'drafts/show_all_picks.html', context)
 
 

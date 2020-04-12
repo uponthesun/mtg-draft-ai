@@ -2,7 +2,7 @@
 mana_cost = ["5","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Keyword","Tier 2","Ramp - Payoff","Goreclaw - Payoff"]
+tags = ["Reanimator - Payoff","Keyword","Ramp - Payoff","Goreclaw - Payoff","Tier 3"]
 
 ["Abzan Battle Priest"]
 mana_cost = ["3","W"]
@@ -166,12 +166,6 @@ color_identity = "C"
 types = ["artifact"]
 tags = ["Counters - Enabler","Sacrifice - Payoff","Vampires - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3"]
 
-["Blinding Flare"]
-mana_cost = ["R"]
-color_identity = "R"
-types = ["sorcery"]
-tags = ["Tier 4","Heroic - Enabler"]
-
 ["Bloodhall Priest"]
 mana_cost = ["2","B","R"]
 color_identity = "BR"
@@ -320,7 +314,7 @@ tags = ["Spice","Signpost","Tokens - Payoff","Tier 3"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Fixer","Land Graveyard - Enabler"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Cast Down"]
 mana_cost = ["1","B"]
@@ -398,13 +392,13 @@ tags = ["Sacrifice - Payoff","Removal","Spells - Enabler","Tier 4","Spells (Red)
 mana_cost = ["4","B","B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Tier 2","Lifegain - Payoff","Graveyard - Payoff"]
+tags = ["Lifegain - Payoff","Graveyard - Payoff","Tier 3"]
 
 ["Commune with the Gods"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Graveyard - Enabler","Tier 2","Spells - Enabler"]
+tags = ["Graveyard - Enabler","Spells - Enabler","Tier 3"]
 
 ["Conclave Tribunal"]
 mana_cost = ["3","W"]
@@ -440,7 +434,7 @@ tags = ["Spells - Payoff","Tier 3","Power - Enabler","Signpost"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Tier 2","Spice","Tokens - Payoff","Ramp - Enabler"]
+tags = ["Spice","Tokens - Payoff","Ramp - Enabler","Tier 3"]
 
 ["Curious Obsession"]
 mana_cost = ["U"]
@@ -465,6 +459,12 @@ mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["ETB - Enabler","Removal","Tier 4"]
+
+["Demotion"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Tier 3","Removal"]
 
 ["Dimir Signet"]
 mana_cost = ["2"]
@@ -626,7 +626,7 @@ tags = ["Heroic - Payoff","Keyword","Tier 3","Signpost"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Fixer","Land Graveyard - Enabler"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Fettergeist"]
 mana_cost = ["2","U"]
@@ -704,7 +704,7 @@ tags = ["Tokens - Enabler","Keyword","Spells - Enabler","Tier 3","Sacrifice - En
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Elves - Enabler","Elves - Payoff","Trick","Signpost","Tier 2"]
+tags = ["Elves - Enabler","Elves - Payoff","Trick","Signpost","Tier 2","Drake Haven - Enabler"]
 
 ["Generous Patron"]
 mana_cost = ["2","G"]
@@ -741,6 +741,12 @@ mana_cost = []
 color_identity = "C"
 types = ["land"]
 tags = ["Fixer"]
+
+["Glint-Horn Buccaneer"]
+mana_cost = ["1","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Discard - Enabler","Discard - Payoff","Tier 3"]
 
 ["Glint-Nest Crane"]
 mana_cost = ["1","U"]
@@ -860,7 +866,7 @@ tags = ["Bounce","ETB - Enabler","Wizards - Enabler","Flash - Threat","Tier 2"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Counters - Payoff","Signpost","Tier 2"]
+tags = ["Counters - Payoff","Signpost","Tier 3"]
 
 ["Harvest Pyre"]
 mana_cost = ["1","R"]
@@ -932,7 +938,7 @@ tags = ["Fixer"]
 mana_cost = ["X","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Tokens - Enabler","Tier 2","Spice","Sacrifice - Enabler"]
+tags = ["Counters - Enabler","Counters - Payoff","Tokens - Enabler","Spice","Sacrifice - Enabler","Tier 3"]
 
 ["Hostile Desert"]
 mana_cost = []
@@ -986,7 +992,7 @@ tags = ["Heroic - Enabler","Trick","Tier 4"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Lifegain - Enabler","Counters - Enabler","Vampires - Enabler","Vampires - Payoff","Signpost","Tier 2"]
+tags = ["Sacrifice - Payoff","Lifegain - Enabler","Counters - Enabler","Vampires - Enabler","Vampires - Payoff","Signpost","Tier 3"]
 
 ["Inquisitor Exarch"]
 mana_cost = ["W","W"]
@@ -994,23 +1000,23 @@ color_identity = "W"
 types = ["creature"]
 tags = ["Tier 3","Lifegain - Enabler","ETB - Enabler"]
 
-["Insolent Neonate"]
-mana_cost = ["R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Discard - Enabler","Vampires - Enabler","Tier 4"]
-
 ["Inspiring Cleric"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Enabler","Tier 3"]
 
+["Invigorated Rampage"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Tier 3","Trick","Heroic - Enabler","Power - Payoff","Spells - Enabler"]
+
 ["Irrigated Farmland"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Fixer","Land Graveyard - Enabler"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Isareth the Awakener"]
 mana_cost = ["1","B","B"]
@@ -1106,7 +1112,7 @@ tags = ["Removal","Tier 3","Spells - Enabler"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Removal","Keyword","Tier 2","Discard - Payoff"]
+tags = ["Graveyard - Payoff","Removal","Keyword","Discard - Payoff","Tier 3"]
 
 ["Kiri-Onna"]
 mana_cost = ["4","U"]
@@ -1125,6 +1131,12 @@ mana_cost = ["W"]
 color_identity = "W"
 types = ["creature"]
 tags = ["Spirits - Enabler","Ninjutsu - Enabler","Tier 4"]
+
+["Lightning Axe"]
+mana_cost = ["R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Discard - Enabler","Hellbent - Enabler","Removal","Spells (Red) - Enabler","Spells - Enabler","Tier 2"]
 
 ["Liliana's Specter"]
 mana_cost = ["1","B","B"]
@@ -1208,7 +1220,7 @@ tags = ["Flash - Interaction","Tier 2"]
 mana_cost = ["W","R"]
 color_identity = "RW"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 2","Spells (Red) - Enabler"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 2"]
 
 ["Martyr of Dusk"]
 mana_cost = ["1","W"]
@@ -1226,7 +1238,7 @@ tags = ["Tier 3","Spirits - Enabler","Counters - Enabler","Tokens - Payoff"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Elves - Enabler","Elves - Payoff","Legends - Enabler","Signpost","Tier 4"]
+tags = ["Elves - Enabler","Elves - Payoff","Legends - Enabler","Signpost","Tier 3"]
 
 ["Maverick Thopterist"]
 mana_cost = ["3","U","R"]
@@ -1324,6 +1336,12 @@ color_identity = "G"
 types = ["creature"]
 tags = ["Graveyard - Payoff","Tokens - Enabler","Tier 3"]
 
+["Murderous Compulsion"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["Removal","Discard - Payoff","Tier 3","Spells - Enabler"]
+
 ["Murderous Cut"]
 mana_cost = ["4","B"]
 color_identity = "B"
@@ -1364,7 +1382,7 @@ tags = ["Signpost","Graveyard - Payoff","Keyword","Tier 2","Goreclaw - Payoff"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Graveyard - Payoff","Tier 4"]
+tags = ["Graveyard - Payoff","Tier 4","Removal"]
 
 ["Negate"]
 mana_cost = ["1","U"]
@@ -1384,6 +1402,12 @@ color_identity = "G"
 types = ["creature"]
 tags = ["Power - Payoff","Tier 3","Signpost"]
 
+["Neurok Replica"]
+mana_cost = ["3"]
+color_identity = "U"
+types = ["artifact","creature"]
+tags = ["Wizards - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler","Artifacts - Enabler","Bounce","Tier 3"]
+
 ["Nightmare's Thirst"]
 mana_cost = ["B"]
 color_identity = "B"
@@ -1395,6 +1419,12 @@ mana_cost = ["3","U"]
 color_identity = "U"
 types = ["creature"]
 tags = ["Ninjutsu - Payoff","Tier 2","Ninjas - Enabler"]
+
+["Nissa's Judgment"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["Removal","Counters - Enabler","Counters - Payoff","Tier 3"]
 
 ["Nyx Weaver"]
 mana_cost = ["1","B","G"]
@@ -1425,12 +1455,6 @@ mana_cost = ["3","R","R","G","G"]
 color_identity = "GR"
 types = ["creature"]
 tags = ["Reanimator - Payoff","Keyword","Tier 2","Ramp - Payoff","Land Extra - Payoff","Legends - Enabler","Signpost","Goreclaw - Payoff"]
-
-["Oppressive Rays"]
-mana_cost = ["W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Removal","Tier 4"]
 
 ["Opt"]
 mana_cost = ["U"]
@@ -1485,12 +1509,6 @@ mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
 tags = ["Signpost","ETB - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Spice","Tier 4"]
-
-["Path of Bravery"]
-mana_cost = ["2","W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Lifegain - Enabler","Lifegain - Payoff","Tokens - Payoff","Tier 3","Tokens Aggro - Payoff"]
 
 ["Path of Discovery"]
 mana_cost = ["3","G"]
@@ -1562,7 +1580,7 @@ tags = ["ETB - Enabler","Tier 2"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Removal","Heroic - Enabler","Tier 2","Spells - Enabler"]
+tags = ["Removal","Heroic - Enabler","Tier 2","Spells - Enabler","Power - Payoff"]
 
 ["Prophet of Kruphix"]
 mana_cost = ["3","U","G"]
@@ -1718,7 +1736,7 @@ tags = ["Graveyard - Enabler","ETB - Enabler","Tier 2","Land Extra - Enabler","L
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Fixer","Land Graveyard - Enabler"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Scourge Wolf"]
 mana_cost = ["R","R"]
@@ -1772,7 +1790,7 @@ tags = ["Elves - Enabler","Elves - Payoff","Tier 3","Signpost"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Fixer","Land Graveyard - Enabler"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Sheltering Light"]
 mana_cost = ["W"]
@@ -1797,12 +1815,6 @@ mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
 tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
-
-["Sin Prodder"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Graveyard - Enabler","Tier 2"]
 
 ["Sinister Concoction"]
 mana_cost = ["B"]
@@ -1958,7 +1970,7 @@ tags = ["Fixer"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Trick","ETB - Payoff","Tier 2","Spells - Enabler"]
+tags = ["Trick","ETB - Payoff","Spells - Enabler","Tier 3"]
 
 ["Supreme Phantom"]
 mana_cost = ["1","U"]
@@ -1983,6 +1995,12 @@ mana_cost = ["3","G"]
 color_identity = "G"
 types = ["creature"]
 tags = ["Elves - Enabler","Elves - Payoff","Signpost","Tier 3"]
+
+["Take Heart"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["Lifegain - Enabler","Trick","Tier 3","Heroic - Enabler","Spells - Enabler"]
 
 ["Tallowisp"]
 mana_cost = ["1","W"]
@@ -2024,7 +2042,7 @@ tags = ["Fixer"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Keyword","Spells - Enabler","Spells (Red) - Enabler","Power - Payoff","Tier 3"]
+tags = ["Trick","Heroic - Enabler","Keyword","Spells - Enabler","Power - Payoff","Tier 3"]
 
 ["Tendershoot Dryad"]
 mana_cost = ["4","G"]
@@ -2102,13 +2120,13 @@ tags = ["Fixer"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 3","Spells (Red) - Enabler","Power - Enabler"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 3","Power - Enabler"]
 
 ["Titania, Protector of Argoth"]
 mana_cost = ["3","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Payoff","Signpost","Tier 2","Spice","Land Dying - Payoff","Land Extra - Enabler","Legends - Enabler","Power - Enabler"]
+tags = ["Land Graveyard - Payoff","Signpost","Spice","Land Dying - Payoff","Land Extra - Enabler","Legends - Enabler","Power - Enabler","Tier 3"]
 
 ["Together Forever"]
 mana_cost = ["W","W"]
@@ -2180,7 +2198,7 @@ tags = ["Removal","Trick","Heroic - Enabler","Spells - Enabler","Tier 3"]
 mana_cost = ["1","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Vampires - Enabler","Ninjutsu - Enabler","Tier 2"]
+tags = ["Lifegain - Enabler","Vampires - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Vampiric Rites"]
 mana_cost = ["B"]
@@ -2252,7 +2270,7 @@ tags = ["Tier 3","Artifacts (Cheap) - Payoff","Signpost"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Reanimator - Enabler","ETB - Payoff","Tier 2","Spice","Legends - Enabler"]
+tags = ["Sacrifice - Payoff","Reanimator - Enabler","ETB - Payoff","Spice","Legends - Enabler","Tier 3"]
 
 ["Wirewood Symbiote"]
 mana_cost = ["G"]
@@ -2300,7 +2318,7 @@ tags = ["Fixer"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Elves - Enabler","Elves - Payoff","Tier 2","Signpost"]
+tags = ["Elves - Enabler","Elves - Payoff","Signpost","Tier 3"]
 
 ["Yavimaya Coast"]
 mana_cost = []

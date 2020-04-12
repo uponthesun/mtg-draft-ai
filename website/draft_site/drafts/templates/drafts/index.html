@@ -1,12 +1,14 @@
 <form action="/draft" method="post">
     {% csrf_token %}
 
-    Number of human drafters:
-    <select name="num_human_drafters" id="num-drafters-select">
-    {% for i in '12345678'|make_list %}
-        <option value="{{ i }}">{{ i }}</option>
-    {% endfor %}
-    </select>
+    Human drafters (enter one name per line). Seats will be evenly spaced with bots, but in random order.
+    <br>
+    <textarea name="human_drafter_names"
+           rows="12" cols="30">Ash Ketchum</textarea>
+    <br>
+    Number of bot drafters:
+    <input type="text" name="num_bot_drafters" required value="5"
+           minlength="1" maxlength="2" size="10" />
     <br>
     <button type="submit">
         Start draft

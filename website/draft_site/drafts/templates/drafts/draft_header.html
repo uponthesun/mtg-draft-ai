@@ -1,6 +1,6 @@
-<b>Viewing Seat:</b> {{ current_seat }}
+<b>Viewing Seat:</b> {{ drafter.seat }}
 <br>
-<b>Drafter type:</b> {{ human_drafter|yesno:"Human,Bot" }}
+<b>Drafter type:</b> {{ drafter.bot|yesno:"Bot,Human" }}
 <br>
 View Seat:
 {% for seat in seat_range %}

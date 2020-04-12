@@ -1,7 +1,6 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_pack.css' %}" />
 <script src="{% static 'show_pack.js' %}"></script>
-<script src="{% static 'refresh.js' %}"></script>
 {% include "drafts/draft_header.html" %}
 <br>
 
@@ -13,34 +12,34 @@
         <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
     {% endif %}
 
-    {% if human_drafter %}
-        <form action="/draft/pick-card/{{ draft.id }}" method="post">
-            {% csrf_token %}
-            <input name="phase" type="hidden" value="{{ phase }}">
-            <input name="pick" type="hidden" value="{{ pick }}">
-            <input name="seat" type="hidden" value="{{ current_seat }}">
-            {% for card, image_url in cards %}
-                <button name="picked_card_id" value="{{ card.id }}">
-                    <img src="{{ image_url }}" width="146" height="204" />
-                </button>
-            {% endfor %}
-        </form>
-    {% else %}
+    {% if drafter.bot %}
         <!-- Do-nothing form to make formatting consistent with human drafter view -->
         <form>
         {% for card, image_url in cards %}
             <img src="{{ image_url }}" width="146" height="204" />
         {% endfor %}
         </form>
+    {% else %}
+        <form action="/draft/pick-card/{{ draft.id }}" method="post">
+            {% csrf_token %}
+            <input name="phase" type="hidden" value="{{ phase }}">
+            <input name="pick" type="hidden" value="{{ pick }}">
+            <input name="seat" type="hidden" value="{{ drafter.seat }}">
+            {% for card, image_url in cards %}
+                <button name="picked_card_id" value="{{ card.id }}">
+                    <img src="{{ image_url }}" width="146" height="204" />
+                </button>
+            {% endfor %}
+        </form>
     {% endif %}
 
     {% if draft_complete %}
-        <form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
+        <form action="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/autobuild" method="get">
             <button type="submit">
                 Auto-build deck
             </button>
         </form>
-        <a href="/draft/{{ draft.id }}/seat/{{ current_seat }}/all-picks">Review Draft</a>
+        <a href="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/all-picks">Review Draft</a>
         <br>
     {% else %}
         <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
@@ -73,6 +72,7 @@
         </div>
     {% endif %}
 {% else %}
+    <script src="{% static 'refresh.js' %}"></script>
     <br>
     Waiting for human drafters in seats:
     <br>

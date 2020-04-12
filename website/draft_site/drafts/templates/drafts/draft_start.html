@@ -1,0 +1,8 @@
+<b>Human Drafters</b>
+<br>
+{% for human in human_drafters %}
+    {{ human.name }} <a href="/draft/{{ draft_id }}/seat/{{ human.seat }}">Seat {{ human.seat }}</a>
+    <br>
+{% endfor %}
+<br>
+<b>Number of bots:</b> {{ num_bots }}
