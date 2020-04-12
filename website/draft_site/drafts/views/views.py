@@ -12,8 +12,8 @@ from django.urls import reverse
 from django.db import transaction
 from django.conf import settings
 
-from . import models
-from . import draft_converter
+from drafts import models
+from drafts import draft_converter
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
