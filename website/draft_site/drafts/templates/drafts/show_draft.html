@@ -1,7 +1,7 @@
 <b>Human Drafters</b>
 <br>
 {% for human in human_drafters %}
-    <a href="/draft/{{ draft.id }}/seat/{{ human.seat }}">Seat {{ human.seat }}</a> {{ human.name }}
+    <a href="{% url 'show_seat' draft_id=draft.id seat=human.seat %}">Seat {{ human.seat }}</a> {{ human.name }}
     <br>
 {% endfor %}
 <br>
