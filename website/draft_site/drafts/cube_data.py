@@ -15,10 +15,10 @@ class CubeData:
         self.cards_by_name = {c.name: c for c in cards}
 
     @staticmethod
-    def load(cube_file, image_urls_file, fixer_data_file):
-        cards = read_cube_toml(cube_file, fixer_data_file)
+    def load(cube_file_path, image_urls_file_path, fixer_data_file_path):
+        cards = read_cube_toml(cube_file_path, fixer_data_file_path)
         card_names = [c.name for c in cards]
-        image_urls = _load_and_update_image_url_cache(card_names, image_urls_file)
+        image_urls = _load_and_update_image_url_cache(card_names, image_urls_file_path)
         return CubeData(cards, image_urls)
 
     def card_by_name(self, card_name):
