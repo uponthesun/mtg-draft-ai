@@ -52,6 +52,9 @@ class Drafter(models.Model):
 
         return self.draft.card_set.filter(phase=self.current_phase, start_seat=pack_index, picked_by__isnull=True)
 
+    def owned_cards(self):
+        return self.draft.card_set.filter(picked_by=self)
+
 
 class Card(models.Model):
     draft = models.ForeignKey(Draft, on_delete=models.CASCADE)
