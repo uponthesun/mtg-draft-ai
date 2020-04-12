@@ -9,7 +9,7 @@
 {% if not waiting_for_drafters %}
     {% if not draft_complete %}
         <br>
-        <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+        <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
     {% endif %}
 
     {% if drafter.bot %}
@@ -22,8 +22,8 @@
     {% else %}
         <form action="/draft/pick-card/{{ draft.id }}" method="post">
             {% csrf_token %}
-            <input name="phase" type="hidden" value="{{ phase }}">
-            <input name="pick" type="hidden" value="{{ pick }}">
+            <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
+            <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
             <input name="seat" type="hidden" value="{{ drafter.seat }}">
             {% for card, image_url in cards %}
                 <button name="picked_card_id" value="{{ card.id }}">

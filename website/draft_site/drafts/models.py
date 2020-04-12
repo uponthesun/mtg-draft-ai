@@ -23,8 +23,8 @@ class Drafter(models.Model):
     name = models.CharField(max_length=40, default='')
 
     def __str__(self):
-        return 'ID: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(
-            self.id, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
+        return 'ID: {}, Name: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(
+            self.id, self.name, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
 
 
 class Card(models.Model):
