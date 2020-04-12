@@ -20,7 +20,7 @@
         {% endfor %}
         </form>
     {% else %}
-        <form action="/draft/pick-card/{{ draft.id }}" method="post">
+        <form action="/draft/{{ draft.id }}/pick-card" method="post">
             {% csrf_token %}
             <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
             <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
@@ -34,7 +34,7 @@
     {% endif %}
 
     {% if draft_complete %}
-        <form action="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/autobuild" method="get">
+        <form action="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/auto-build" method="get">
             <button type="submit">
                 Auto-build deck
             </button>
