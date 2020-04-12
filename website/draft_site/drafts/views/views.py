@@ -47,6 +47,8 @@ def _create_and_save_draft_models(human_drafter_names, num_bots):
 
     # Create and save Card model objects for this draft
     draft_info = new_draft.to_draft_info(CUBE_DATA.cards)
+    print(new_draft)
+    print(draft_info)
     packs = create_packs(draft_info)
     for phase in range(0, new_draft.num_phases):
         for start_seat in range(0, new_draft.num_drafters):
@@ -73,13 +75,13 @@ def _create_and_save_draft_models(human_drafter_names, num_bots):
 @transaction.atomic
 def create_draft(request):
     defaults = {
-        'human_drafter_names': ['Ash Ketchum'],
+        'human_drafter_names': 'Ash Ketchum\n',
         'num_bot_drafters': 5
     }
-    params = {**defaults, **request.POST}
-    human_drafter_names = [name.strip() for name in params['human_drafter_names'] if len(name.strip()) > 0]
+    params = {k: request.POST.get(k, default=v) for k, v in defaults.items()}
+    raw_human_drafter_names = params['human_drafter_names'].split('\n')
+    human_drafter_names = [name.strip() for name in raw_human_drafter_names if len(name.strip()) > 0]
     num_bots = int(params['num_bot_drafters'])
-
     new_draft = _create_and_save_draft_models(human_drafter_names, num_bots)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
