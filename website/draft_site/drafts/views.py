@@ -83,7 +83,6 @@ def index(request):
 # /draft
 @transaction.atomic
 def create_draft(request):
-    # TODO: Provide option to choose draft size
     human_drafter_names = request.POST['human_drafter_names'].split('\n')
     human_drafter_names = [name.strip() for name in human_drafter_names if len(name.strip()) > 0]
     num_humans = len(human_drafter_names)
@@ -145,7 +144,8 @@ def show_seat(request, draft_id, seat):
     # TODO: fix interface for getting ratings
     pack_converted = [CARDS_BY_NAME[c.name] for c in cards]
     owned_converted = [CARDS_BY_NAME[c.name] for c in owned_cards]
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=6, num_phases=3, cards_per_pack=15)
+    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=draft.num_drafters, num_phases=draft.num_phases,
+                           cards_per_pack=draft.cards_per_pack)
     bot_ratings = PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
 
     # Are we waiting on any picks?
