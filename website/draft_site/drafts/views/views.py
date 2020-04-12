@@ -93,7 +93,7 @@ def show_draft(request, draft_id):
     context = {
         'human_drafters': [d for d in drafters if not d.bot],
         'num_bots': len([d for d in drafters if d.bot]),
-        'draft': draft
+        'draft': draft,
     }
     return render(request, 'drafts/draft_start.html', context)
 
@@ -138,8 +138,8 @@ def show_seat(request, draft_id, seat):
 # /draft/<int:draft_id>/seat/<int:seat>/autobuild
 def auto_build(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafter = models.Drafter.objects.get(draft=draft, seat=seat)
-    owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
+    drafter = draft.drafter_set.get(seat=seat)
+    owned_cards = draft.card_set.filter(picked_by=drafter)
 
     # Convert from DB objects to Card objects with metadata
     pool = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
@@ -147,22 +147,22 @@ def auto_build(request, draft_id, seat):
     built_deck = best_two_color_synergy_build(pool)
     deck_graph = synergy.create_graph(built_deck, remove_isolated=False)
     leftovers = [c for c in pool if c not in built_deck]
-
-    built_deck_images = [CUBE_DATA.get_image_url(c.name) for c in built_deck]
-    leftovers_images = [CUBE_DATA.get_image_url(c.name) for c in leftovers]
-    num_edges = len(deck_graph.edges)
+    # TODO: fix interface
     avg_power = statistics.mean([GreedyPowerAndSynergyPicker._power_rating(c) for c in built_deck
                                  if 'land' not in c.types])
 
-    deck_card_names = [c.name for c in built_deck]
-    leftovers_card_names = [c.name for c in leftovers]
-    textarea_rows = len(owned_cards) + 1
-
-    context = {'built_deck_images': built_deck_images, 'leftovers_images': leftovers_images,
-               'num_edges': num_edges, 'avg_power': round(avg_power, 2),
-               'deck_card_names': deck_card_names, 'leftovers_card_names': leftovers_card_names,
-               'textarea_rows': textarea_rows, 'seat_range': range(0, draft.num_drafters),
-               'drafter': drafter, 'draft': draft}
+    context = {
+        'draft': draft,
+        'drafter': drafter,
+        'seat_range': range(0, draft.num_drafters),  # Used by header
+        'built_deck_images': [CUBE_DATA.get_image_url(c.name) for c in built_deck],
+        'leftovers_images': [CUBE_DATA.get_image_url(c.name) for c in leftovers],
+        'deck_card_names': [c.name for c in built_deck],
+        'leftovers_card_names': [c.name for c in leftovers],
+        'num_edges': len(deck_graph.edges),
+        'avg_power': round(avg_power, 2),
+        'textarea_rows': len(owned_cards) + 1,
+    }
     return render(request, 'drafts/autobuild.html', context)
 
 
