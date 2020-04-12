@@ -1,4 +1,5 @@
 from django.db import models
+from mtg_draft_ai.api import DraftInfo
 
 
 class Draft(models.Model):
@@ -8,6 +9,10 @@ class Draft(models.Model):
 
     def __str__(self):
         return str(self.__dict__)
+
+    def to_draft_info(self, card_list):
+        return DraftInfo(card_list=card_list, num_drafters=self.num_drafters, num_phases=self.num_phases,
+                         cards_per_pack=self.cards_per_pack)
 
 
 class Drafter(models.Model):

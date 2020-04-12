@@ -40,18 +40,16 @@ def index(request):
 
 def _create_and_save_draft_models(human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
-    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=num_humans + num_bots, num_phases=3,
-                           cards_per_pack=15)
 
     # Create and save Draft model objects
-    new_draft = models.Draft(num_drafters=draft_info.num_drafters, num_phases=draft_info.num_phases,
-                             cards_per_pack=draft_info.cards_per_pack)
+    new_draft = models.Draft(num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
     new_draft.save()
 
     # Create and save Card model objects for this draft
+    draft_info = new_draft.to_draft_info(CUBE_DATA.cards)
     packs = create_packs(draft_info)
-    for phase in range(0, draft_info.num_phases):
-        for start_seat in range(0, draft_info.num_drafters):
+    for phase in range(0, new_draft.num_phases):
+        for start_seat in range(0, new_draft.num_drafters):
             pack = packs.get_pack(phase=phase, starting_seat=start_seat)
             for card in pack:
                 db_card = models.Card(draft=new_draft, name=card.name, phase=phase, start_seat=start_seat)
@@ -64,7 +62,7 @@ def _create_and_save_draft_models(human_drafter_names, num_bots):
     bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)),
                                    name='Bot') for _ in range(0, num_bots)]
     drafters = _even_mix(human_drafters, bot_drafters)
-    for i in range(0, draft_info.num_drafters):
+    for i in range(0, len(drafters)):
         drafters[i].seat = i
         drafters[i].save()
 
@@ -103,35 +101,36 @@ def show_draft(request, draft_id):
 # /draft/<int:draft_id>/seat/<int:seat>
 def show_seat(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafter = models.Drafter.objects.get(draft=draft, seat=seat)
+    drafter = draft.drafter_set.get(seat=seat)
 
     pack_index = _get_pack_index(draft, drafter)
-    cards = models.Card.objects.filter(draft=draft, phase=drafter.current_phase,
-                                       start_seat=pack_index, picked_by__isnull=True)
-    owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
+    cards = draft.card_set.filter(phase=drafter.current_phase, start_seat=pack_index, picked_by__isnull=True)
+    owned_cards = draft.card_set.filter(picked_by=drafter)
     sorted_owned_cards = sorted(owned_cards, key=lambda c: (c.phase, c.picked_at))
-
-    cards_with_images = [(c, CUBE_DATA.get_image_url(c.name)) for c in cards]
-    owned_cards_with_images = [(c, CUBE_DATA.get_image_url(c.name)) for c in sorted_owned_cards]
-    draft_complete = (drafter.current_phase == draft.num_phases)
     
     # Generate bot recommendations
     # TODO: fix interface for getting ratings
     pack_converted = [CUBE_DATA.card_by_name(c.name) for c in cards]
     owned_converted = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
-    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=draft.num_drafters, num_phases=draft.num_phases,
-                           cards_per_pack=draft.cards_per_pack)
+    draft_info = draft.to_draft_info(CUBE_DATA.cards)
     bot_ratings = PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
 
     # Are we waiting on any picks?
-    drafters = models.Drafter.objects.filter(draft=draft, bot=False)
-    waiting_for_drafters = [d for d in drafters if d.current_phase < drafter.current_phase or
+    human_drafters = draft.drafter_set.filter(bot=False)
+    waiting_for_drafters = [d for d in human_drafters
+                            if d.current_phase < drafter.current_phase or
                             d.current_phase == drafter.current_phase and d.current_pick < drafter.current_pick]
 
-    context = {'cards': cards_with_images, 'draft': draft,
-               'owned_cards': owned_cards_with_images, 'seat_range': range(0, draft.num_drafters),
-               'drafter': drafter, 'draft_complete': draft_complete,
-               'bot_ratings': bot_ratings, 'waiting_for_drafters': waiting_for_drafters}
+    context = {
+        'draft': draft,
+        'drafter': drafter,
+        'seat_range': range(0, draft.num_drafters),  # Used by header
+        'cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in cards],
+        'owned_cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in sorted_owned_cards],
+        'bot_ratings': bot_ratings,
+        'waiting_for_drafters': waiting_for_drafters,
+        'draft_complete': (drafter.current_phase == draft.num_phases),
+    }
 
     return render(request, 'drafts/show_pack.html', context)
 
