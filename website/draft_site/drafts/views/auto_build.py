@@ -1,33 +1,12 @@
-import logging
 import statistics
 
 from django.shortcuts import render, get_object_or_404
 
-from .constants import CUBE_DATA
 from .. import models
+from .constants import CUBE_DATA
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
-
-LOGGER = logging.getLogger(__name__)
-
-
-# /
-def index(request):
-    return render(request, 'drafts/index.html', {})
-
-
-# /draft/<int:draft_id>
-def show_draft(request, draft_id):
-    draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafters = draft.drafter_set.all()
-
-    context = {
-        'human_drafters': [d for d in drafters if not d.bot],
-        'num_bots': len([d for d in drafters if d.bot]),
-        'draft': draft,
-    }
-    return render(request, 'drafts/draft_start.html', context)
 
 
 # /draft/<int:draft_id>/seat/<int:seat>/autobuild
@@ -58,4 +37,3 @@ def auto_build(request, draft_id, seat):
         'textarea_rows': len(pool) + 1,
     }
     return render(request, 'drafts/autobuild.html', context)
-
