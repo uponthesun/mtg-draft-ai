@@ -5,7 +5,6 @@ from django.shortcuts import render, get_object_or_404
 
 from .constants import CUBE_DATA
 from .. import models
-from .. import draft_converter
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
@@ -60,18 +59,3 @@ def auto_build(request, draft_id, seat):
     }
     return render(request, 'drafts/autobuild.html', context)
 
-
-# /draft/<int:draft_id>/seat/<int:seat>/all-picks
-def all_picks(request, draft_id, seat):
-    draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafter = draft.drafter_set.get(seat=seat)
-
-    output = draft_converter.convert_drafter(drafter)
-
-    context = {
-        'draft': draft,
-        'drafter': drafter,
-        'seat_range': range(0, draft.num_drafters),
-        'output': output,
-    }
-    return render(request, 'drafts/show_all_picks.html', context)

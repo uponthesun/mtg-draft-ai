@@ -1,9 +1,30 @@
-from . import models
+from django.shortcuts import render, get_object_or_404
+
+from .. import models
+
 from mtg_draft_ai.api import Drafter
 from mtg_draft_ai.draftlog import drafters_to_html
 
 
-def convert_drafter(db_drafter):
+# /draft/<int:draft_id>/seat/<int:seat>/all-picks
+def all_picks(request, draft_id, seat):
+    draft = get_object_or_404(models.Draft, pk=draft_id)
+    drafter = draft.drafter_set.get(seat=seat)
+
+    output = _convert_drafter(drafter)
+
+    context = {
+        'draft': draft,
+        'drafter': drafter,
+        'seat_range': range(0, draft.num_drafters),
+        'output': output,
+    }
+    return render(request, 'drafts/show_all_picks.html', context)
+
+
+# Helper functions below
+
+def _convert_drafter(db_drafter):
     draft = db_drafter.draft
     drafters = models.Drafter.objects.filter(draft=draft)
 
