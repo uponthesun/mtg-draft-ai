@@ -36,4 +36,4 @@ def auto_build(request, draft_id, seat):
         'avg_power': round(avg_power, 2),
         'textarea_rows': len(pool) + 1,
     }
-    return render(request, 'drafts/autobuild.html', context)
+    return render(request, 'drafts/auto_build.html', context)

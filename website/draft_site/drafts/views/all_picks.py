@@ -19,7 +19,7 @@ def all_picks(request, draft_id, seat):
         'seat_range': range(0, draft.num_drafters),
         'output': output,
     }
-    return render(request, 'drafts/show_all_picks.html', context)
+    return render(request, 'drafts/all_picks.html', context)
 
 
 # Helper functions below

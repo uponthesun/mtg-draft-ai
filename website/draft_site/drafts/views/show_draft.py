@@ -13,4 +13,4 @@ def show_draft(request, draft_id):
         'num_bots': len([d for d in drafters if d.bot]),
         'draft': draft,
     }
-    return render(request, 'drafts/draft_start.html', context)
+    return render(request, 'drafts/show_draft.html', context)

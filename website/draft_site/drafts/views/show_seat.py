@@ -29,7 +29,7 @@ def show_seat(request, draft_id, seat):
         'draft_complete': (drafter.current_phase == draft.num_phases),
     }
 
-    return render(request, 'drafts/show_pack.html', context)
+    return render(request, 'drafts/show_seat.html', context)
 
 
 def _get_humans_who_need_to_pick(drafter):
