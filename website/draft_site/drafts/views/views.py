@@ -169,11 +169,16 @@ def auto_build(request, draft_id, seat):
 # /draft/<int:draft_id>/seat/<int:seat>/all-picks
 def all_picks(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafter = models.Drafter.objects.get(draft=draft, seat=seat)
+    drafter = draft.drafter_set.get(seat=seat)
 
     output = draft_converter.convert_drafter(drafter)
 
-    context = {'seat_range': range(0, draft.num_drafters), 'drafter': drafter, 'draft': draft, 'output': output}
+    context = {
+        'draft': draft,
+        'drafter': drafter,
+        'seat_range': range(0, draft.num_drafters),
+        'output': output,
+    }
     return render(request, 'drafts/show_all_picks.html', context)
 
 
