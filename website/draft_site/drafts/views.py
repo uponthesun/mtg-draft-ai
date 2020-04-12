@@ -2,6 +2,7 @@ import logging
 from multiprocessing.pool import ThreadPool
 import os
 import pickle
+import random
 import statistics
 import urllib
 
@@ -103,6 +104,7 @@ def create_draft(request):
                 db_card.save()
 
     human_drafters = [models.Drafter(draft=new_draft, bot=False, name=name) for name in human_drafter_names]
+    random.shuffle(human_drafters)
     # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
     bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)),
                                    name='Bot') for _ in range(0, num_bots)]

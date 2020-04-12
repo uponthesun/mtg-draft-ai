@@ -1,6 +1,10 @@
 <b>Viewing Seat:</b> {{ drafter.seat }}
 <br>
-<b>Drafter type:</b> {{ drafter.bot|yesno:"Bot,Human" }}
+{% if drafter.bot %}
+    <b>Bot</b>
+{% else %}
+    <b>Name:</b> {{ drafter.name }}
+{% endif %}
 <br>
 View Seat:
 {% for seat in seat_range %}
