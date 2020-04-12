@@ -31,6 +31,27 @@ class Drafter(models.Model):
         return 'ID: {}, Name: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(
             self.id, self.name, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
 
+    def current_pack(self):
+        # Alternate passing directions based on phase, starting with passing left.
+        direction = 1 if self.current_phase % 2 == 0 else -1
+
+        # Implement "passing" packs after each pick by shifting the index of the pack
+        # assigned to each drafter by the pick index. We add when passing left,
+        # and subtract when passing right (picture the packs staying in place,
+        # and the drafters standing up and walking around the table).
+        # Then we apply modulus (since the packs are passed in a circle).
+        pack_index = (self.current_pick * direction + self.seat) % self.draft.num_drafters
+
+        # The mod of a negative number will remain negative, e.g. -11 mod 8 = -3,
+        # but we want to use the positive equivalent to find the index into the packs,
+        # so we add num_drafters if it's a negative number. So in our example, -3
+        # would become 5. This represents starting at seat 0 and finding the drafter
+        # 3 seats to the left, which would be the drafter at seat 5.
+        if pack_index < 0:
+            pack_index += self.draft.num_drafters
+
+        return self.draft.card_set.filter(phase=self.current_phase, start_seat=pack_index, picked_by__isnull=True)
+
 
 class Card(models.Model):
     draft = models.ForeignKey(Draft, on_delete=models.CASCADE)
