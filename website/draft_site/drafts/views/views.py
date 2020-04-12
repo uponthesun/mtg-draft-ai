@@ -184,14 +184,14 @@ def all_picks(request, draft_id, seat):
 
 # /draft/pick-card/<int:draft_id>
 def pick_card(request, draft_id):
+    draft = get_object_or_404(models.Draft, pk=draft_id)
+    drafter = draft.drafter_set.get(seat=request.POST['seat'])
+    picked_card = get_object_or_404(models.Card, id=request.POST['picked_card_id'])
+    phase = int(request.POST['phase'])
+    pick = int(request.POST['pick'])
+
     try:
         with transaction.atomic():
-            draft = get_object_or_404(models.Draft, pk=draft_id)
-            drafter = models.Drafter.objects.get(draft=draft, seat=request.POST['seat'])
-            picked_card = models.Card.objects.get(id=request.POST['picked_card_id'])
-            phase = int(request.POST['phase'])
-            pick = int(request.POST['pick'])
-
             _save_pick(draft, drafter, picked_card, phase, pick)
 
             # TODO: Use drafter field to designate primary instead of hardcoding it as seat 0
@@ -204,12 +204,10 @@ def pick_card(request, draft_id):
 
 
 def _make_bot_picks(draft, phase, pick):
-    bot_drafters = sorted(models.Drafter.objects.filter(draft=draft, bot=True),
-                          key=lambda d: d.seat)
+    bot_drafters = sorted(draft.drafter_set.filter(bot=True), key=lambda d: d.seat)
     for db_drafter in bot_drafters:
         pack_index = _get_pack_index(draft, db_drafter, phase, pick)
-        db_pack = models.Card.objects.filter(draft=draft, phase=phase,
-                                             start_seat=pack_index, picked_by__isnull=True)
+        db_pack = draft.card_set.filter(phase=phase, start_seat=pack_index, picked_by__isnull=True)
         pack = [CUBE_DATA.card_by_name(c.name) for c in db_pack]
 
         drafter = pickle.loads(db_drafter.bot_state)
