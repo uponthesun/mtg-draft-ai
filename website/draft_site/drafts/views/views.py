@@ -38,7 +38,7 @@ def index(request):
     return render(request, 'drafts/index.html', {})
 
 
-def _create_draft_models(human_drafter_names, num_bots):
+def _create_and_save_draft_models(human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
     draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=num_humans + num_bots, num_phases=3,
                            cards_per_pack=15)
@@ -82,7 +82,7 @@ def create_draft(request):
     human_drafter_names = [name.strip() for name in params['human_drafter_names'] if len(name.strip()) > 0]
     num_bots = int(params['num_bot_drafters'])
 
-    new_draft = _create_draft_models(human_drafter_names, num_bots)
+    new_draft = _create_and_save_draft_models(human_drafter_names, num_bots)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
@@ -90,10 +90,13 @@ def create_draft(request):
 # /draft/<int:draft_id>
 def show_draft(request, draft_id):
     draft = get_object_or_404(models.Draft, pk=draft_id)
-    drafters = models.Drafter.objects.filter(draft=draft)
-    human_drafters = [d for d in drafters if not d.bot]
-    num_bots = len([d for d in drafters if d.bot])
-    context = {'human_drafters': human_drafters, 'num_bots': num_bots, 'draft': draft}
+    drafters = draft.drafter_set.all()
+
+    context = {
+        'human_drafters': [d for d in drafters if not d.bot],
+        'num_bots': len([d for d in drafters if d.bot]),
+        'draft': draft
+    }
     return render(request, 'drafts/draft_start.html', context)
 
 
