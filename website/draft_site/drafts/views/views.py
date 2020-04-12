@@ -38,21 +38,18 @@ def index(request):
     return render(request, 'drafts/index.html', {})
 
 
-# /draft
-@transaction.atomic
-def create_draft(request):
-    human_drafter_names = request.POST['human_drafter_names'].split('\n')
-    human_drafter_names = [name.strip() for name in human_drafter_names if len(name.strip()) > 0]
+def _create_draft_models(human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
-    num_bots = int(request.POST['num_bot_drafters']) if 'num_bot_drafters' in request.POST else 5
+    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=num_humans + num_bots, num_phases=3,
+                           cards_per_pack=15)
 
-    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
-    packs = create_packs(draft_info)
-
+    # Create and save Draft model objects
     new_draft = models.Draft(num_drafters=draft_info.num_drafters, num_phases=draft_info.num_phases,
                              cards_per_pack=draft_info.cards_per_pack)
     new_draft.save()
 
+    # Create and save Card model objects for this draft
+    packs = create_packs(draft_info)
     for phase in range(0, draft_info.num_phases):
         for start_seat in range(0, draft_info.num_drafters):
             pack = packs.get_pack(phase=phase, starting_seat=start_seat)
@@ -60,16 +57,32 @@ def create_draft(request):
                 db_card = models.Card(draft=new_draft, name=card.name, phase=phase, start_seat=start_seat)
                 db_card.save()
 
+    # Create and save Drafter model objects for this draft
     human_drafters = [models.Drafter(draft=new_draft, bot=False, name=name) for name in human_drafter_names]
     random.shuffle(human_drafters)
     # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
     bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)),
                                    name='Bot') for _ in range(0, num_bots)]
     drafters = _even_mix(human_drafters, bot_drafters)
-
     for i in range(0, draft_info.num_drafters):
         drafters[i].seat = i
         drafters[i].save()
+
+    return new_draft
+
+
+# /draft
+@transaction.atomic
+def create_draft(request):
+    defaults = {
+        'human_drafter_names': ['Ash Ketchum'],
+        'num_bot_drafters': 5
+    }
+    params = {**defaults, **request.POST}
+    human_drafter_names = [name.strip() for name in params['human_drafter_names'] if len(name.strip()) > 0]
+    num_bots = int(params['num_bot_drafters'])
+
+    new_draft = _create_draft_models(human_drafter_names, num_bots)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
