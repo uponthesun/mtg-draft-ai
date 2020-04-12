@@ -1,10 +1,8 @@
 import logging
-from multiprocessing.pool import ThreadPool
 import os
 import pickle
 import random
 import statistics
-import urllib
 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -12,64 +10,23 @@ from django.urls import reverse
 from django.db import transaction
 from django.conf import settings
 
+from drafts.cube_data import CubeData
 from drafts import models
 from drafts import draft_converter
 from mtg_draft_ai.controller import create_packs
-from mtg_draft_ai.api import DraftInfo, Drafter, read_cube_toml
+from mtg_draft_ai.api import DraftInfo, Drafter
 from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
-import requests
-import toml
-
 
 CUBE_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_tag_data.toml')
 IMAGE_URLS_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_image_urls.toml')
 FIXER_DATA_FILE = os.path.join(settings.DRAFTS_APP_DIR, 'cube_81183_fixer_data.toml')
 
-CUBE_LIST = read_cube_toml(CUBE_FILE, FIXER_DATA_FILE)
-CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
-PICKER_FACTORY = GreedyPowerAndSynergyPicker.factory(CUBE_LIST)
+CUBE_DATA = CubeData.load(CUBE_FILE, IMAGE_URLS_FILE, FIXER_DATA_FILE)
+PICKER_FACTORY = GreedyPowerAndSynergyPicker.factory(CUBE_DATA.cards)
+
 LOGGER = logging.getLogger(__name__)
-
-
-def _initialize_image_url_cache():
-    # Load cache from disk
-    cache = toml.load(IMAGE_URLS_FILE)
-
-    # Filter out cards which are no longer in the cube list
-    cache = {k: v for k, v in cache.items() if k in CARDS_BY_NAME}
-
-    # Get URLs for new cards
-    missing_cards = [name for name in CARDS_BY_NAME if name not in cache]
-    with ThreadPool(10) as tp:
-        urls = tp.map(_scryfall_image_url, missing_cards)
-
-    for card_name, url in zip(missing_cards, urls):
-        cache[card_name] = url
-
-    # Write cache back out to disk
-    with open(IMAGE_URLS_FILE, 'w') as f:
-        toml.dump(cache, f)
-
-    return cache
-
-
-def _scryfall_image_url(name):
-    try:
-        r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
-        card_json = r.json()
-        if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
-            # Case for double-faced cards
-            # TODO: nice to have - show both sides of a DFC
-            return card_json['card_faces'][0]['image_uris']['normal']
-        return card_json['image_uris']['normal']
-    except Exception as e:
-        print('Failed to get image uri for card: {}'.format(card_json))
-        raise e
-
-
-IMAGE_URL_CACHE = _initialize_image_url_cache()
 
 
 class StaleReadError(Exception):
@@ -89,7 +46,7 @@ def create_draft(request):
     num_humans = len(human_drafter_names)
     num_bots = int(request.POST['num_bot_drafters']) if 'num_bot_drafters' in request.POST else 5
 
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
+    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
     packs = create_packs(draft_info)
 
     new_draft = models.Draft(num_drafters=draft_info.num_drafters, num_phases=draft_info.num_phases,
@@ -138,15 +95,15 @@ def show_seat(request, draft_id, seat):
     owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
     sorted_owned_cards = sorted(owned_cards, key=lambda c: (c.phase, c.picked_at))
 
-    cards_with_images = [(c, _image_url(c.name)) for c in cards]
-    owned_cards_with_images = [(c, _image_url(c.name)) for c in sorted_owned_cards]
+    cards_with_images = [(c, CUBE_DATA.get_image_url(c.name)) for c in cards]
+    owned_cards_with_images = [(c, CUBE_DATA.get_image_url(c.name)) for c in sorted_owned_cards]
     draft_complete = (drafter.current_phase == draft.num_phases)
     
     # Generate bot recommendations
     # TODO: fix interface for getting ratings
-    pack_converted = [CARDS_BY_NAME[c.name] for c in cards]
-    owned_converted = [CARDS_BY_NAME[c.name] for c in owned_cards]
-    draft_info = DraftInfo(card_list=CUBE_LIST, num_drafters=draft.num_drafters, num_phases=draft.num_phases,
+    pack_converted = [CUBE_DATA.card_by_name(c.name) for c in cards]
+    owned_converted = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
+    draft_info = DraftInfo(card_list=CUBE_DATA.cards, num_drafters=draft.num_drafters, num_phases=draft.num_phases,
                            cards_per_pack=draft.cards_per_pack)
     bot_ratings = PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
 
@@ -170,14 +127,14 @@ def auto_build(request, draft_id, seat):
     owned_cards = models.Card.objects.filter(draft=draft, picked_by=drafter)
 
     # Convert from DB objects to Card objects with metadata
-    pool = [CARDS_BY_NAME[c.name] for c in owned_cards]
+    pool = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
 
     built_deck = best_two_color_synergy_build(pool)
     deck_graph = synergy.create_graph(built_deck, remove_isolated=False)
     leftovers = [c for c in pool if c not in built_deck]
 
-    built_deck_images = [_image_url(c.name) for c in built_deck]
-    leftovers_images = [_image_url(c.name) for c in leftovers]
+    built_deck_images = [CUBE_DATA.get_image_url(c.name) for c in built_deck]
+    leftovers_images = [CUBE_DATA.get_image_url(c.name) for c in leftovers]
     num_edges = len(deck_graph.edges)
     avg_power = statistics.mean([GreedyPowerAndSynergyPicker._power_rating(c) for c in built_deck
                                  if 'land' not in c.types])
@@ -233,7 +190,7 @@ def _make_bot_picks(draft, phase, pick):
         pack_index = _get_pack_index(draft, db_drafter, phase, pick)
         db_pack = models.Card.objects.filter(draft=draft, phase=phase,
                                              start_seat=pack_index, picked_by__isnull=True)
-        pack = [CARDS_BY_NAME[c.name] for c in db_pack]
+        pack = [CUBE_DATA.card_by_name(c.name) for c in db_pack]
 
         drafter = pickle.loads(db_drafter.bot_state)
         # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
@@ -293,16 +250,6 @@ def _get_pack_index(draft, drafter, phase=None, pick=None):
         pack_index += draft.num_drafters
 
     return pack_index
-
-
-def _image_url(card_name):
-    """ Gets the image URL for a card name from cache if present, otherwise falls back to the API URL. """
-    if card_name in IMAGE_URL_CACHE:
-        return IMAGE_URL_CACHE[card_name]
-
-    # Fall back to using the API if we don't have the image URL cached (e.g. when viewing old drafts)
-    query_string = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
-    return 'https://api.scryfall.com/cards/named?' + query_string
 
 
 def _even_mix(list_a, list_b):
