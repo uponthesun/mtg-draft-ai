@@ -1,0 +1,13 @@
+<b>Viewing Seat:</b> {{ drafter.seat }}
+<br>
+{% if drafter.bot %}
+    <b>Bot</b>
+{% else %}
+    <b>Name:</b> {{ drafter.name }}
+{% endif %}
+<br>
+View Seat:
+{% for seat in seat_range %}
+    <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
+{% endfor %}
+<br>

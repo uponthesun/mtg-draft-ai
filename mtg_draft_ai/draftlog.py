@@ -65,12 +65,16 @@ def log_to_html(log_file):
     """Outputs HTML visualization of a draft from the given log file."""
 
     drafters = load_drafters_from_log(log_file)
+    return drafters_to_html(drafters)
 
+
+def drafters_to_html(drafters, headers=True):
     html = default_style()
 
     i = 0
     for drafter in drafters:
-        html += 'Drafter {}\n'.format(i)
+        if headers:
+            html += 'Drafter {}\n'.format(i)
         for pack, pick in zip(drafter.pack_history, drafter.cards_owned):
             html += '<div class="pack">\n{}</div>\n'.format(card_names_to_html(pack, highlighted=pick))
 

@@ -20,6 +20,7 @@ class Drafter(models.Model):
     bot = models.BooleanField()
     # TODO: may need to store this outside DB eventually
     bot_state = models.BinaryField(null=True, blank=True)
+    name = models.CharField(max_length=40, default='')
 
     def __str__(self):
         return 'ID: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(

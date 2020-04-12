@@ -1,73 +1,88 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_pack.css' %}" />
 <script src="{% static 'show_pack.js' %}"></script>
-View Seat:
-<!-- Human drafter is always seat 0 -->
-<a href="/draft/{{ draft.id }}">0 (You)</a>
-{% for seat in bot_seat_range %}
-    <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
-{% endfor %}
+{% include "drafts/draft_header.html" %}
 <br>
-<br>
-<b>Seat {{ current_seat }}: Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
 
 <div>
 
-{% if human_drafter %}
-    <form action="/draft/pick-card/{{ draft.id }}" method="post">
-        {% csrf_token %}
-        <input name="phase" type="hidden" value="{{ phase }}">
-        <input name="pick" type="hidden" value="{{ pick }}">
+{% if not waiting_for_drafters %}
+    {% if not draft_complete %}
+        <br>
+        <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+    {% endif %}
+
+    {% if drafter.bot %}
+        <!-- Do-nothing form to make formatting consistent with human drafter view -->
+        <form>
         {% for card, image_url in cards %}
-            <button name="picked_card_id" value="{{ card.id }}">
-                <img src="{{ image_url }}" width="146" height="204" />
-            </button>
+            <img src="{{ image_url }}" width="146" height="204" />
         {% endfor %}
-    </form>
-{% else %}
-    <!-- Do-nothing form to make formatting consistent with human drafter view -->
-    <form>
-    {% for card, image_url in cards %}
-        <img src="{{ image_url }}" width="146" height="204" />
-    {% endfor %}
-    </form>
-{% endif %}
-    <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
-
-    <div id="bot_ratings" class="hidden">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Rating</th>
-                <th>Color Combo</th>
-                <th>Power Delta</th>
-                <th>Total Power</th>
-                <th>Edges Delta</th>
-                <th>Total Edges</th>
-                <th>Common Neighbors Weighted</th>
-            </tr>
-            {% for rating in bot_ratings %}
-            <tr>
-                <td>{{ rating.card.name }}</td>
-                <td><b>{{ rating.rating }}</b></td>
-                <td>{{ rating.color_combo }}</td>
-                <td>{{ rating.power_delta }}</td>
-                <td>{{ rating.total_power }}</td>
-                <td>{{ rating.edges_delta }}</td>
-                <td>{{ rating.total_edges }}</td>
-                <td>{{ rating.common_neighbors_weighted }}</td>
-            </tr>
+        </form>
+    {% else %}
+        <form action="/draft/pick-card/{{ draft.id }}" method="post">
+            {% csrf_token %}
+            <input name="phase" type="hidden" value="{{ phase }}">
+            <input name="pick" type="hidden" value="{{ pick }}">
+            <input name="seat" type="hidden" value="{{ drafter.seat }}">
+            {% for card, image_url in cards %}
+                <button name="picked_card_id" value="{{ card.id }}">
+                    <img src="{{ image_url }}" width="146" height="204" />
+                </button>
             {% endfor %}
-        </table>
-</div>
+        </form>
+    {% endif %}
 
-{% if draft_complete %}
-<form action="/draft/{{ draft.id }}/seat/{{ current_seat }}/autobuild" method="get">
-    <button type="submit">
-        Auto-build deck
-    </button>
-</form>
+    {% if draft_complete %}
+        <form action="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/autobuild" method="get">
+            <button type="submit">
+                Auto-build deck
+            </button>
+        </form>
+        <a href="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/all-picks">Review Draft</a>
+        <br>
+    {% else %}
+        <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
+
+        <div id="bot_ratings" class="hidden">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>Color Combo</th>
+                    <th>Power Delta</th>
+                    <th>Total Power</th>
+                    <th>Edges Delta</th>
+                    <th>Total Edges</th>
+                    <th>Common Neighbors Weighted</th>
+                </tr>
+                {% for rating in bot_ratings %}
+                <tr>
+                    <td>{{ rating.card.name }}</td>
+                    <td><b>{{ rating.rating }}</b></td>
+                    <td>{{ rating.color_combo }}</td>
+                    <td>{{ rating.power_delta }}</td>
+                    <td>{{ rating.total_power }}</td>
+                    <td>{{ rating.edges_delta }}</td>
+                    <td>{{ rating.total_edges }}</td>
+                    <td>{{ rating.common_neighbors_weighted }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+{% else %}
+    <script src="{% static 'refresh.js' %}"></script>
+    <br>
+    Waiting for human drafters in seats:
+    <br>
+    {% for d in waiting_for_drafters %}
+        {{ d.seat }}
+        <br>
+    {% endfor %}
+    <br>
 {% endif %}
+
 <b>Owned Cards</b>
 
 <div>
