@@ -20,7 +20,7 @@
         {% endfor %}
         </form>
     {% else %}
-        <form action="{% url pick_card draft_id=draft.id %}" method="post">
+        <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
             {% csrf_token %}
             <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
             <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
@@ -34,12 +34,12 @@
     {% endif %}
 
     {% if draft_complete %}
-        <form action="{% url auto_build draft_id=draft.id seat=drafter.seat %}" method="get">
+        <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
             <button type="submit">
                 Auto-build deck
             </button>
         </form>
-        <a href="{% url all_picks draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
+        <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
         <br>
     {% else %}
         <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
