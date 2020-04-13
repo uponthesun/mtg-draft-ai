@@ -1,0 +1,60 @@
+{%load static %}
+<link rel="stylesheet" href="{% static 'show_seat.css' %}" />
+{% include "drafts/draft_header.html" %}
+<br>
+
+<div>
+
+{% if draft_complete %}
+    <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
+        <button type="submit">
+            Auto-build deck
+        </button>
+    </form>
+    <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
+    <br>
+
+{% elif waiting_for_drafters %}
+    <br>
+    <b>Waiting for drafters in seats:</b>
+    <br>
+    <div id="waiting-for-drafters"></div>
+    <br>
+    <script src="{% static 'show_seat_refresh.js' %}"></script>
+
+{% else %}
+    <br>
+    <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
+
+    <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
+        {% csrf_token %}
+        <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
+        <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
+        <input name="seat" type="hidden" value="{{ drafter.seat }}">
+        {% for card, image_url in cards %}
+            {% if drafter.bot %}
+                <img src="{{ image_url }}" width="146" height="204" />
+            {% else %}
+                <button name="picked_card_id" value="{{ card.id }}">
+                    <img src="{{ image_url }}" width="146" height="204" />
+                </button>
+            {% endif %}
+        {% endfor %}
+    </form>
+
+    {% include "drafts/show_seat_bot_ratings.html" %}
+{% endif %}
+
+<b>Owned Cards</b>
+
+<div>
+{% for _, image_url in owned_cards %}
+    {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
+    <img src="{{ image_url }}" width="146" height="204" />
+{% endfor %}
+</div>
+
+<textarea rows="{{ owned_cards|length }}">
+{% for card, _ in owned_cards %}1 {{ card.name }}
+{% endfor %}
+</textarea>

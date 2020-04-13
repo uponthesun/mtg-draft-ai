@@ -2,2260 +2,2338 @@
 mana_cost = ["5","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Big","Keyword","ETB - Enabler"]
+tags = ["Reanimator - Payoff","Keyword","Ramp - Payoff","Goreclaw - Payoff","Tier 3"]
 
 ["Abzan Battle Priest"]
 mana_cost = ["3","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Counters - Payoff","Keyword","Lifegain - Enabler","Counters - Enabler"]
-
-["Accorder Paladin"]
-mana_cost = ["1","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Tokens - Payoff","Keyword"]
+tags = ["Counters - Payoff","Keyword","Lifegain - Enabler","Counters - Enabler","Tier 3","Signpost"]
 
 ["Adarkar Wastes"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Adeliz, the Cinder Wind"]
 mana_cost = ["1","U","R"]
 color_identity = "UR"
 types = ["creature"]
-tags = ["Spells - Payoff","Wizards - Payoff","Wizards - Enabler"]
+tags = ["Spells - Payoff","Wizards - Payoff","Wizards - Enabler","Tier 2","Legends - Enabler","Signpost"]
 
 ["Ajani's Pridemate"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Lifegain - Payoff"]
+tags = ["Lifegain - Payoff","Tier 3","Signpost"]
 
 ["Akroan Crusader"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Heroic - Payoff","Keyword"]
+tags = ["Heroic - Payoff","Keyword","Tier 4","Signpost"]
+
+["Akroan Hoplite"]
+mana_cost = ["W","R"]
+color_identity = "RW"
+types = ["creature"]
+tags = ["Tier 3","Tokens Aggro - Payoff","Signpost"]
 
 ["Anafenza, Kin-Tree Spirit"]
 mana_cost = ["W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Counters - Enabler","Keyword","Spirits - Enabler","ETB - Enabler"]
+tags = ["Counters - Enabler","Keyword","Spirits - Enabler","ETB - Enabler","Tier 2","Legends - Enabler"]
 
 ["Anax and Cymede"]
 mana_cost = ["1","W","R"]
 color_identity = "RW"
 types = ["creature"]
-tags = ["Signpost","Heroic - Payoff","Keyword"]
+tags = ["Signpost","Heroic - Payoff","Keyword","Legends - Enabler","Tokens Aggro - Payoff","Tier 2"]
 
 ["Angel of Flight Alabaster"]
 mana_cost = ["4","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Signpost","Spirits - Payoff"]
+tags = ["Signpost","Spirits - Payoff","Tier 2"]
+
+["Angel of Vitality"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tier 3","Lifegain - Payoff","Signpost"]
 
 ["Angelic Gift"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["enchantment"]
-tags = ["Heroic - Enabler"]
-
-["Anowon, the Ruin Sage"]
-mana_cost = ["3","B","B"]
-color_identity = "B"
-types = ["creature"]
-tags = ["Vampires - Enabler","Vampires - Payoff","Sacrifice - Payoff","Signpost"]
-
-["Arcbond"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["instant"]
-tags = ["Spells - Enabler"]
-
-["Arena Athlete"]
-mana_cost = ["1","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Heroic - Payoff","Keyword"]
+tags = ["Heroic - Enabler","Tier 4"]
 
 ["Armorcraft Judge"]
 mana_cost = ["3","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Signpost","Counters - Payoff","Card Draw"]
-
-["Artificer's Assistant"]
-mana_cost = ["U"]
-color_identity = "U"
-types = ["creature"]
-tags = ["Ninjutsu - Enabler","Artifacts (Cheap) - Payoff"]
+tags = ["Signpost","Counters - Payoff","Tier 2","Spice","Elves - Enabler"]
 
 ["Asylum Visitor"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Keyword","Vampires - Enabler","Wizards - Enabler","Card Draw","Madness/Hellbent - Payoff"]
+tags = ["Keyword","Vampires - Enabler","Wizards - Enabler","Discard - Payoff","Hellbent - Payoff","Signpost","Tier 2"]
 
 ["Augury Owl"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["ETB - Enabler","Ninjutsu - Enabler"]
+tags = ["ETB - Enabler","Ninjutsu - Enabler","Tier 4"]
+
+["Avacyn's Judgment"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["Signpost","Spells - Enabler","Removal","Tier 3","Keyword","Spells (Red) - Enabler","Discard - Payoff"]
+
+["Avaricious Dragon"]
+mana_cost = ["2","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Hellbent - Payoff","Tier 4"]
 
 ["Ayli, Eternal Pilgrim"]
 mana_cost = ["W","B"]
 color_identity = "BW"
 types = ["creature"]
-tags = ["Signpost","Lifegain - Enabler","Lifegain - Payoff","Higher Toughness"]
+tags = ["Signpost","Lifegain - Enabler","Lifegain - Payoff","Spice","Legends - Enabler","Tier 2"]
 
 ["Azami, Lady of Scrolls"]
 mana_cost = ["2","U","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Signpost","Wizards - Payoff","Wizards - Enabler","Card Draw"]
-
-["Azorius Herald"]
-mana_cost = ["2","W"]
-color_identity = "UW"
-types = ["creature"]
-tags = ["Spirits - Enabler","Lifegain - Enabler","ETB - Enabler"]
+tags = ["Signpost","Wizards - Payoff","Wizards - Enabler","Tier 1","Legends - Enabler","Ramp - Payoff"]
 
 ["Azorius Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Azra Oddsmaker"]
 mana_cost = ["1","B","R"]
 color_identity = "BR"
 types = ["creature"]
-tags = ["Card Draw","Madness/Hellbent - Enabler"]
+tags = ["Tier 1","Spice","Discard - Enabler","Hellbent - Enabler"]
+
+["Bag of Holding"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Tier 3","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Artifacts - Enabler","Drake Haven - Enabler","Discard - Payoff"]
+
+["Bandage"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["Heroic - Enabler","Spells - Enabler","Tier 3"]
 
 ["Banisher Priest"]
 mana_cost = ["1","W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Removal","ETB - Enabler"]
-
-["Banishing Light"]
-mana_cost = ["2","W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Removal"]
+tags = ["Removal","ETB - Enabler","Tier 2"]
 
 ["Battlefield Forge"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Bedlam Reveler"]
 mana_cost = ["6","R","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Signpost","Spells - Payoff","Higher Toughness","Big","Keyword","Card Draw"]
-
-["Birds of Paradise"]
-mana_cost = ["G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Ninjutsu - Enabler"]
+tags = ["Signpost","Spells - Payoff","Keyword","Tier 1","Spice","Graveyard - Payoff"]
 
 ["Bishop of Rebirth"]
 mana_cost = ["3","W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Higher Toughness","Vampires - Enabler"]
+tags = ["Vampires - Enabler","Tier 3"]
 
 ["Blade of the Bloodchief"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Counters - Enabler","Sacrifice - Payoff","Vampires - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
-
-["Blighted Gorge"]
-mana_cost = []
-color_identity = "R"
-types = ["land"]
-tags = ["Land Graveyard - Enabler"]
-
-["Blood Artist"]
-mana_cost = ["1","B"]
-color_identity = "B"
-types = ["creature"]
-tags = ["Sacrifice - Payoff","Vampires - Enabler","Lifegain - Enabler"]
+tags = ["Counters - Enabler","Sacrifice - Payoff","Vampires - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3"]
 
 ["Bloodhall Priest"]
 mana_cost = ["2","B","R"]
 color_identity = "BR"
 types = ["creature"]
-tags = ["Signpost","Big","Keyword","Vampires - Enabler","Madness/Hellbent - Payoff"]
+tags = ["Signpost","Keyword","Vampires - Enabler","Tier 1","Discard - Payoff","Hellbent - Payoff","Power - Enabler"]
 
 ["Bloodline Necromancer"]
 mana_cost = ["4","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Payoff","Vampires - Enabler","Wizards - Payoff","Wizards - Enabler"]
+tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Payoff","Vampires - Enabler","Wizards - Payoff","Wizards - Enabler","Spice","Signpost","Tier 1"]
 
 ["Bloodrage Brawler"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Madness/Hellbent - Enabler"]
+tags = ["Tier 3","Discard - Enabler","Hellbent - Enabler","Power - Enabler"]
 
 ["Bloodsoaked Champion"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Keyword"]
+tags = ["Sacrifice - Enabler","Keyword","Tier 2","Discard - Payoff"]
 
 ["Bloodspore Thrinax"]
 mana_cost = ["2","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Tokens - Payoff","Keyword","Sacrifice - Payoff"]
+tags = ["Counters - Enabler","Tokens - Payoff","Keyword","Sacrifice - Payoff","Tier 3","Signpost","Spice"]
 
 ["Blossoming Defense"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler"]
+tags = ["Trick","Heroic - Enabler","Flash - Interaction","Tier 2","Spells - Enabler","Power - Enabler"]
+
+["Bolt Bend"]
+mana_cost = ["3","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Power - Payoff","Tier 3"]
 
 ["Bomat Courier"]
 mana_cost = ["1"]
 color_identity = "R"
 types = ["artifact","creature"]
-tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 2","Discard - Enabler","Hellbent - Payoff","Drake Haven - Enabler"]
 
 ["Bone Picker"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Ninjutsu - Enabler"]
+tags = ["Sacrifice - Payoff","Ninjutsu - Enabler","Tier 3"]
 
 ["Bone Splinters"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Removal","Sacrifice - Payoff"]
+tags = ["Removal","Sacrifice - Payoff","Tier 3"]
 
 ["Boros Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Bound by Moonsilver"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["enchantment"]
-tags = ["Removal","Keyword","Heroic - Enabler"]
+tags = ["Removal","Keyword","Heroic - Enabler","Tier 3"]
 
 ["Bounding Krasis"]
 mana_cost = ["1","U","G"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Flash - Threat"]
+tags = ["Flash - Threat","Tier 3"]
+
+["Bounty of the Luxa"]
+mana_cost = ["2","G","U"]
+color_identity = "GU"
+types = ["enchantment"]
+tags = ["Tier 3","Ramp - Enabler"]
 
 ["Brago, King Eternal"]
 mana_cost = ["2","W","U"]
 color_identity = "UW"
 types = ["creature"]
-tags = ["Signpost","ETB - Payoff","Spirits - Enabler","Higher Toughness"]
+tags = ["Signpost","ETB - Payoff","Spirits - Enabler","Tier 1","Spice","Legends - Enabler"]
 
 ["Brimstone Volley"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Keyword","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Keyword","Spells - Enabler","Tier 2","Spells (Red) - Enabler"]
+
+["Brineborn Cutthroat"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["Tier 3","Flash - Threat","Signpost"]
 
 ["Brittle Effigy"]
 mana_cost = ["1"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3"]
 
 ["Brushland"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Buried Ruin"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Land Graveyard - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Creature) - Payoff"]
+tags = ["Land Graveyard - Enabler","Artifacts (Creature) - Payoff","Land Dying - Enabler","Artifacts (Recursion) - Enabler","Tier 4"]
+
+["Burning Prophet"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Tier 2","Spells - Payoff","Wizards - Enabler","Signpost"]
 
 ["Call to the Feast"]
 mana_cost = ["2","W","B"]
 color_identity = "BW"
 types = ["sorcery"]
-tags = ["Tokens - Enabler","Lifegain - Enabler","Vampires - Enabler"]
+tags = ["Tokens - Enabler","Lifegain - Enabler","Vampires - Enabler","Tier 3"]
+
+["Callow Jushi"]
+mana_cost = ["1","U","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["Spirits - Payoff","Tier 3"]
+
+["Camaraderie"]
+mana_cost = ["4","G","W"]
+color_identity = "GW"
+types = ["sorcery"]
+tags = ["Spice","Signpost","Tokens - Payoff","Tier 3"]
+
+["Canyon Slough"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
+
+["Cast Down"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["Removal","Tier 2","Spells - Enabler"]
 
 ["Cathartic Reunion"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["sorcery"]
-tags = ["Graveyard - Enabler","Spells - Enabler","Madness/Hellbent - Enabler"]
+tags = ["Graveyard - Enabler","Spells - Enabler","Discard - Enabler","Spells (Red) - Enabler","Tier 3"]
 
 ["Cavern Harpy"]
 mana_cost = ["U","B"]
 color_identity = "BU"
 types = ["creature"]
-tags = ["ETB - Payoff","Ninjutsu - Enabler"]
+tags = ["ETB - Payoff","Ninjutsu - Enabler","Tier 2"]
 
 ["Caves of Koilos"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
-["Centaur's Herald"]
-mana_cost = ["G"]
-color_identity = "G"
+["Celestial Kirin"]
+mana_cost = ["2","W","W"]
+color_identity = "W"
 types = ["creature"]
-tags = ["Flash - Threat"]
+tags = ["Signpost","Spirits - Enabler","Spirits - Payoff","Tier 2","Legends - Enabler"]
 
 ["Chart a Course"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["sorcery"]
-tags = ["Graveyard - Enabler","Keyword","Card Draw","Spells - Enabler","Madness/Hellbent - Enabler"]
+tags = ["Graveyard - Enabler","Keyword","Spells - Enabler","Tier 2","Ninjutsu - Payoff","Discard - Enabler"]
 
 ["Cinder Barrens"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
+
+["Cliffhaven Vampire"]
+mana_cost = ["2","W","B"]
+color_identity = "BW"
+types = ["creature"]
+tags = ["Tier 3","Lifegain - Payoff","Signpost","Vampires - Enabler"]
 
 ["Clifftop Retreat"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Cloudblazer"]
 mana_cost = ["3","W","U"]
 color_identity = "UW"
 types = ["creature"]
-tags = ["Lifegain - Enabler","ETB - Enabler","Card Draw"]
+tags = ["Lifegain - Enabler","ETB - Enabler","Tier 1"]
 
 ["Cloudfin Raptor"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Counters - Enabler","Keyword","Ninjutsu - Enabler"]
+tags = ["Counters - Enabler","Keyword","Ninjutsu - Enabler","Tier 1"]
 
 ["Collateral Damage"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Sacrifice - Payoff","Removal","Spells - Enabler","Removal - Size"]
+tags = ["Sacrifice - Payoff","Removal","Spells - Enabler","Tier 4","Spells (Red) - Enabler"]
+
+["Command the Dreadhorde"]
+mana_cost = ["4","B","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["Lifegain - Payoff","Graveyard - Payoff","Tier 3"]
 
 ["Commune with the Gods"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Graveyard - Enabler"]
+tags = ["Graveyard - Enabler","Spells - Enabler","Tier 3"]
 
-["Countryside Crusher"]
-mana_cost = ["1","R","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Land Graveyard - Payoff","Land Graveyard - Enabler","Big"]
-
-["Crawling Sensation"]
-mana_cost = ["2","G"]
-color_identity = "G"
+["Conclave Tribunal"]
+mana_cost = ["3","W"]
+color_identity = "W"
 types = ["enchantment"]
-tags = ["Graveyard - Enabler","Land Graveyard - Payoff"]
-
-["Crested Herdcaller"]
-mana_cost = ["3","G","G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Tokens - Enabler","ETB - Enabler"]
+tags = ["Tier 2","Removal","Tokens - Payoff"]
 
 ["Crested Sunmare"]
 mana_cost = ["3","W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Signpost","Lifegain - Payoff","Big"]
+tags = ["Signpost","Lifegain - Payoff","Tier 1","Spice"]
 
 ["Crovax the Cursed"]
 mana_cost = ["2","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Signpost","Sacrifice - Payoff","Counters - Enabler","Big","Vampires - Enabler"]
-
-["Crusader of Odric"]
-mana_cost = ["2","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Tokens - Payoff","Big"]
+tags = ["Sacrifice - Payoff","Counters - Enabler","Vampires - Enabler","Tier 2","Legends - Enabler"]
 
 ["Crush of Tentacles"]
 mana_cost = ["4","U","U"]
 color_identity = "U"
 types = ["sorcery"]
-tags = ["Big","Keyword","ETB - Payoff"]
-
-["Crux of Fate"]
-mana_cost = ["3","B","B"]
-color_identity = "B"
-types = ["sorcery"]
-tags = []
+tags = ["Keyword","ETB - Payoff","Tier 1","Spice","Ramp - Payoff"]
 
 ["Cryptic Serpent"]
 mana_cost = ["5","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Spells - Payoff"]
+tags = ["Spells - Payoff","Tier 3","Power - Enabler","Signpost"]
 
-["Cultivator's Caravan"]
-mana_cost = ["3"]
-color_identity = "C"
-types = ["artifact"]
-tags = ["Big","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler"]
+["Cryptolith Rite"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["enchantment"]
+tags = ["Spice","Tokens - Payoff","Ramp - Enabler","Tier 3"]
 
 ["Curious Obsession"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["enchantment"]
-tags = ["Heroic - Enabler","Card Draw"]
-
-["Daring Archaeologist"]
-mana_cost = ["3","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Big","Keyword","ETB - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Creature) - Payoff"]
+tags = ["Heroic - Enabler","Tier 1","Ninjutsu - Payoff"]
 
 ["Dark-Dweller Oracle"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Sacrifice - Payoff"]
+tags = ["Sacrifice - Payoff","Tier 2","Spice","Signpost"]
 
-["Deadbridge Chant"]
-mana_cost = ["4","B","G"]
-color_identity = "BG"
-types = ["enchantment"]
-tags = ["Signpost","Graveyard - Enabler","Card Draw"]
+["Deadbridge Shaman"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Tier 4","Elves - Enabler"]
 
 ["Deadeye Harpooner"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["ETB - Enabler","Removal"]
+tags = ["ETB - Enabler","Removal","Tier 4"]
 
-["Devoted Druid"]
-mana_cost = ["1","G"]
-color_identity = "G"
-types = ["creature"]
-tags = []
+["Demotion"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Tier 3","Removal"]
 
 ["Dimir Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Dinrova Horror"]
 mana_cost = ["4","U","B"]
 color_identity = "BU"
 types = ["creature"]
-tags = ["ETB - Enabler","Bounce"]
+tags = ["ETB - Enabler","Bounce","Tier 3"]
 
 ["Dismissive Pyromancer"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Enabler","Graveyard - Enabler","Removal - Size"]
+tags = ["Removal","Wizards - Enabler","Graveyard - Enabler","Tier 2","Discard - Enabler"]
 
 ["Disperse"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Bounce","Spells - Enabler"]
+tags = ["Bounce","Spells - Enabler","Flash - Interaction","Tier 3"]
 
 ["Dissolve"]
 mana_cost = ["1","U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Counterspell","Spells - Enabler"]
+tags = ["Flash - Interaction","Tier 3"]
 
 ["Dive Down"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler","Flash - Interaction","Tier 2"]
+
+["Divine Visitation"]
+mana_cost = ["3","W","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Signpost","Spice","Tokens - Payoff","Tier 1"]
+
+["Dragon Fodder"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["sorcery"]
+tags = ["Tier 3","Sacrifice - Enabler","Tokens - Enabler","Tokens Aggro - Enabler","Spells - Enabler","Spells (Red) - Enabler"]
 
 ["Dragon Mantle"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["enchantment"]
-tags = ["Heroic - Enabler"]
+tags = ["Heroic - Enabler","Tier 3","Power - Enabler"]
 
 ["Dragonskull Summit"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Drake Haven"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["enchantment"]
-tags = ["Signpost","Madness/Hellbent - Payoff"]
+tags = ["Spice","Discard - Payoff","Drake Haven - Payoff","Tier 4"]
+
+["Drogskol Captain"]
+mana_cost = ["1","W","U"]
+color_identity = "UW"
+types = ["creature"]
+tags = ["Signpost","Tier 2","Spirits - Enabler","Spirits - Payoff"]
 
 ["Drowned Catacomb"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Dusk Legion Zealot"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["ETB - Enabler","Vampires - Enabler"]
+tags = ["ETB - Enabler","Vampires - Enabler","Tier 3","Sacrifice - Enabler"]
 
-["Echoing Decay"]
-mana_cost = ["1","B"]
-color_identity = "B"
-types = ["instant"]
-tags = ["Removal","Removal - Size"]
-
-["Embodiment of Fury"]
-mana_cost = ["3","R"]
-color_identity = "R"
+["Dwynen's Elite"]
+mana_cost = ["1","G"]
+color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Enabler","Landfall - Payoff","Keyword"]
+tags = ["Elves - Enabler","Elves - Payoff","Signpost","Tier 4"]
+
+["Dwynen, Gilt-Leaf Daen"]
+mana_cost = ["2","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Elves - Enabler","Elves - Payoff","Tier 3","Legends - Enabler","Lifegain - Enabler","Signpost"]
+
+["Elvish Archdruid"]
+mana_cost = ["1","G","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Elves - Enabler","Elves - Payoff","Tier 3","Signpost"]
 
 ["Enthralling Victor"]
 mana_cost = ["3","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","ETB - Enabler"]
+tags = ["Sacrifice - Enabler","ETB - Enabler","Tier 3"]
 
 ["Epiphany at the Drownyard"]
 mana_cost = ["X","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
+tags = ["Graveyard - Enabler","Spells - Enabler","Flash - Threat","Tier 3","Ramp - Payoff"]
 
-["Essence Flux"]
-mana_cost = ["U"]
-color_identity = "U"
-types = ["instant"]
-tags = ["Trick","Spirits - Payoff","Spells - Enabler"]
-
-["Experiment One"]
-mana_cost = ["G"]
-color_identity = "G"
+["Eyeblight Assassin"]
+mana_cost = ["2","B"]
+color_identity = "B"
 types = ["creature"]
-tags = ["Counters - Enabler","Keyword"]
+tags = ["Elves - Enabler","ETB - Enabler","Tier 4"]
 
 ["Fa'adiyah Seer"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Landfall - Enabler","Graveyard - Enabler","Madness/Hellbent - Enabler"]
+tags = ["Graveyard - Enabler","Tier 3","Land Extra - Enabler"]
+
+["Fall of the Hammer"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Tier 3","Removal","Heroic - Enabler","Spells (Red) - Enabler","Spells - Enabler"]
 
 ["Fall of the Titans"]
 mana_cost = ["X","X","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Heroic - Enabler","Keyword","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Heroic - Enabler","Keyword","Spells - Enabler","Tier 1","Ramp - Payoff","Spells (Red) - Enabler"]
 
 ["Familiar's Ruse"]
 mana_cost = ["U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Counterspell"]
+tags = ["Flash - Interaction","Tier 4"]
+
+["Famished Paladin"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tier 4"]
 
 ["Favored Hoplite"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Heroic - Payoff","Higher Toughness","Keyword"]
+tags = ["Heroic - Payoff","Keyword","Tier 3","Signpost"]
+
+["Fetid Pools"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Fettergeist"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Higher Toughness","Spirits - Enabler","Ninjutsu - Enabler"]
+tags = ["Spirits - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Fiery Temper"]
 mana_cost = ["1","R","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Keyword","Spells - Enabler","Madness/Hellbent - Payoff","Removal","Removal - Size"]
+tags = ["Keyword","Spells - Enabler","Removal","Tier 3","Discard - Payoff","Spells (Red) - Enabler"]
 
 ["Filigree Familiar"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Lifegain - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Lifegain - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3","Artifacts (Sac) - Enabler"]
+
+["Fireblade Artist"]
+mana_cost = ["B","R"]
+color_identity = "BR"
+types = ["creature"]
+tags = ["Sacrifice - Payoff","Tier 3"]
+
+["Fists of Flame"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Heroic - Enabler","Spells - Enabler","Trick","Spells (Red) - Enabler","Tier 3","Power - Payoff"]
 
 ["Fists of Ironwood"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Tokens - Enabler","Heroic - Enabler"]
+tags = ["Tokens - Enabler","Heroic - Enabler","Tier 3","Sacrifice - Enabler","Tokens Aggro - Enabler","Power - Payoff"]
+
+["Fogwalker"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["Tier 4","Spirits - Enabler","Ninjutsu - Enabler"]
 
 ["Forsaken Sanctuary"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Fortune's Favor"]
-mana_cost = ["3","U"]
-color_identity = "U"
-types = ["instant"]
-tags = ["Graveyard - Enabler","Card Draw","Spells - Enabler"]
+tags = ["Fixer"]
 
 ["Foul Orchard"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Foundry of the Consuls"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Tokens - Enabler","Land Graveyard - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Tokens - Enabler","Land Graveyard - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Land Dying - Enabler","Tier 3"]
 
-["Gallant Cavalry"]
-mana_cost = ["3","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["ETB - Enabler","Tokens - Enabler"]
+["Furious Rise"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["enchantment"]
+tags = ["Power - Payoff","Tier 2","Signpost"]
 
 ["Gather the Townsfolk"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["sorcery"]
-tags = ["Tokens - Enabler","Keyword","Spells - Enabler"]
+tags = ["Tokens - Enabler","Keyword","Spells - Enabler","Tier 3","Sacrifice - Enabler","Tokens Aggro - Enabler"]
 
-["Generator Servant"]
-mana_cost = ["1","R"]
-color_identity = "R"
+["Gempalm Strider"]
+mana_cost = ["1","G"]
+color_identity = "G"
 types = ["creature"]
-tags = []
+tags = ["Elves - Enabler","Elves - Payoff","Trick","Signpost","Tier 2","Drake Haven - Enabler"]
 
 ["Generous Patron"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Higher Toughness","Keyword","ETB - Enabler","Card Draw"]
+tags = ["Counters - Enabler","Keyword","ETB - Enabler","Tier 2","Elves - Enabler","Spice"]
 
 ["Genesis Wave"]
 mana_cost = ["X","G","G","G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Big"]
-
-["Ghitu Lavarunner"]
-mana_cost = ["R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Wizards - Enabler"]
+tags = ["Tier 3","Ramp - Payoff","Spice"]
 
 ["Ghoultree"]
 mana_cost = ["7","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Signpost","Graveyard - Payoff","Big"]
+tags = ["Signpost","Graveyard - Payoff","Tier 3","Power - Enabler"]
 
 ["Gideon's Reproach"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Removal","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Spells - Enabler","Tier 3"]
 
 ["Gird for Battle"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["sorcery"]
-tags = ["Heroic - Enabler","Counters - Enabler","Spells - Enabler"]
+tags = ["Heroic - Enabler","Counters - Enabler","Spells - Enabler","Tier 4"]
 
 ["Glacial Fortress"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
+
+["Glint-Horn Buccaneer"]
+mana_cost = ["1","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Discard - Enabler","Discard - Payoff","Tier 3"]
 
 ["Glint-Nest Crane"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Higher Toughness","ETB - Enabler","Ninjutsu - Enabler","Artifacts - Payoff"]
+tags = ["Ninjutsu - Enabler","Artifacts - Payoff","Tier 3","Signpost"]
 
-["Goblin Assault"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["enchantment"]
-tags = ["Tokens - Enabler","Sacrifice - Enabler"]
+["Glowspore Shaman"]
+mana_cost = ["B","G"]
+color_identity = "BG"
+types = ["creature"]
+tags = ["Elves - Enabler","Tier 3","Graveyard - Enabler"]
+
+["Gnarlroot Trapper"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Tier 3","Elves - Enabler","Elves - Payoff","Signpost"]
 
 ["Goblin Clearcutter"]
 mana_cost = ["3","R"]
 color_identity = "GR"
 types = ["creature"]
-tags = ["Land Graveyard - Enabler"]
-
-["Goblin Instigator"]
-mana_cost = ["1","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Sacrifice - Enabler","Tokens - Enabler","ETB - Enabler"]
+tags = ["Land Graveyard - Enabler","Tier 3","Ramp - Enabler","Land Dying - Enabler"]
 
 ["Goblin Welder"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Signpost","Artifacts - Payoff"]
+tags = ["Signpost","Tier 2","Spice","Artifacts (Sac) - Payoff","Artifacts (Recursion) - Enabler"]
 
 ["Golgari Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Gonti, Lord of Luxury"]
 mana_cost = ["2","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Higher Toughness","ETB - Enabler"]
+tags = ["ETB - Enabler","Tier 1","Legends - Enabler"]
 
-["Grab the Reins"]
-mana_cost = ["3","R"]
-color_identity = "R"
-types = ["instant"]
-tags = ["Keyword","Spells - Enabler","Sacrifice - Enabler"]
+["Good-Fortune Unicorn"]
+mana_cost = ["1","G","W"]
+color_identity = "GW"
+types = ["creature"]
+tags = ["Counters - Enabler","Tokens - Payoff","Tier 3"]
+
+["Goreclaw, Terror of Qal Sisma"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Power - Enabler","Power - Payoff","Legends - Enabler","Signpost","Goreclaw - Enabler","Tier 1"]
+
+["Grateful Apparition"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Counters - Payoff","Spirits - Enabler","Ninjutsu - Enabler","Keyword","Tier 4"]
 
 ["Graveyard Marshal"]
 mana_cost = ["B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Signpost"]
+tags = ["Graveyard - Payoff","Signpost","Tier 3"]
 
 ["Grazing Gladehart"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Landfall - Payoff"]
+tags = ["Lifegain - Enabler","Land Extra - Payoff","Tier 4"]
 
 ["Greenwarden of Murasa"]
 mana_cost = ["4","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Big","ETB - Enabler"]
+tags = ["Graveyard - Payoff","ETB - Enabler","Ramp - Payoff","Goreclaw - Payoff","Tier 1"]
 
 ["Gruesome Menagerie"]
 mana_cost = ["3","B","B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Graveyard - Payoff"]
+tags = ["Graveyard - Payoff","Tier 2","Spice","Vampires - Payoff","Elves - Payoff"]
 
 ["Gruul Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Gyre Sage"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Higher Toughness","Keyword"]
+tags = ["Counters - Enabler","Keyword","Tier 2","Elves - Enabler"]
+
+["Hanged Executioner"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Spirits - Enabler","Tokens - Enabler","Tokens Aggro - Enabler","ETB - Enabler","Tier 2"]
+
+["Hanweir Militia Captain"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tokens - Payoff","Tier 2","Tokens Aggro - Payoff"]
 
 ["Harbinger of the Tides"]
 mana_cost = ["U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Bounce","ETB - Enabler","Wizards - Enabler","Flash - Threat"]
+tags = ["Bounce","ETB - Enabler","Wizards - Enabler","Flash - Threat","Tier 2"]
 
 ["Hardened Scales"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Counters - Payoff","Signpost"]
-
-["Harm's Way"]
-mana_cost = ["W"]
-color_identity = "W"
-types = ["instant"]
-tags = ["Removal","Heroic - Enabler","Spells - Enabler","Removal - Size"]
+tags = ["Counters - Payoff","Signpost","Tier 3"]
 
 ["Harvest Pyre"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Graveyard - Payoff","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Graveyard - Payoff","Spells - Enabler","Tier 3","Spells (Red) - Enabler"]
 
 ["Haunted Dead"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Tokens - Enabler","Graveyard - Payoff","Spirits - Enabler","ETB - Enabler","Madness/Hellbent - Enabler","Sacrifice - Enabler"]
-
-["Hearthfire Hobgoblin"]
-mana_cost = ["RW","RW","RW"]
-color_identity = "RW"
-types = ["creature"]
-tags = []
+tags = ["Tokens - Enabler","Graveyard - Payoff","ETB - Enabler","Sacrifice - Enabler","Tier 2","Discard - Enabler","Discard - Payoff"]
 
 ["Hedron Archive"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Tier 2","Ramp - Enabler","Artifacts (Recursion) - Payoff"]
 
 ["Heir of Falkenrath"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Keyword","Vampires - Enabler","Madness/Hellbent - Enabler"]
-
-["Heir of the Wilds"]
-mana_cost = ["1","G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Keyword"]
+tags = ["Keyword","Vampires - Enabler","Tier 2","Discard - Enabler","Hellbent - Enabler"]
 
 ["Hermit Druid"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Enabler","Landfall - Enabler","Land Graveyard - Enabler"]
+tags = ["Graveyard - Enabler","Land Graveyard - Enabler","Tier 2","Land Extra - Enabler"]
+
+["Hero of Iroas"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Heroic - Payoff","Tier 3"]
+
+["Hero of the Games"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Heroic - Payoff","Tokens Aggro - Payoff","Tier 3"]
+
+["Hero of the Pride"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tier 3","Heroic - Payoff","Tokens Aggro - Payoff"]
 
 ["Highland Lake"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Higure, the Still Wind"]
 mana_cost = ["3","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff","Signpost","Ninjutsu - Enabler","Higher Toughness"]
+tags = ["Ninjutsu - Payoff","Signpost","Ninjutsu - Enabler","Tier 2","Ninjas - Enabler","Legends - Enabler"]
 
 ["Hinterland Harbor"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Hollowhenge Spirit"]
-mana_cost = ["3","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Spirits - Enabler","Flash - Threat"]
+tags = ["Fixer"]
 
 ["Hooded Hydra"]
 mana_cost = ["X","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Tokens - Enabler"]
+tags = ["Counters - Enabler","Counters - Payoff","Tokens - Enabler","Spice","Sacrifice - Enabler","Tier 3"]
 
 ["Hostile Desert"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = ["Land Graveyard - Payoff"]
+tags = ["Land Graveyard - Payoff","Graveyard - Payoff","Tier 4"]
+
+["Hunting Triad"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["Elves - Enabler","Counters - Enabler","Tier 2","Spells - Enabler","Trick","Tokens Aggro - Enabler"]
+
+["Ichor Wellspring"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Tier 4","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Sac) - Enabler"]
+
+["Igneous Elemental"]
+mana_cost = ["4","R","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Tier 3","Land Graveyard - Payoff","Goreclaw - Payoff","Signpost"]
 
 ["Illusionist's Stratagem"]
 mana_cost = ["3","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["ETB - Payoff","Spells - Enabler"]
+tags = ["ETB - Payoff","Spice","Tier 3"]
 
 ["Incendiary Flow"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["sorcery"]
-tags = ["Removal","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Spells - Enabler","Tier 2","Spells (Red) - Enabler"]
+
+["Incubation Druid"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Counters - Payoff","Flash - Threat","Keyword","Ramp - Enabler","Elves - Enabler","Tier 2"]
+
+["Indomitable Will"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Heroic - Enabler","Trick","Tier 4"]
 
 ["Indulgent Aristocrat"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Lifegain - Enabler","Counters - Enabler","Vampires - Enabler","Vampires - Payoff"]
+tags = ["Sacrifice - Payoff","Lifegain - Enabler","Counters - Enabler","Vampires - Enabler","Vampires - Payoff","Signpost","Tier 3"]
+
+["Inquisitor Exarch"]
+mana_cost = ["W","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tier 3","Lifegain - Enabler","ETB - Enabler"]
 
 ["Inspiring Cleric"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Enabler"]
+tags = ["Lifegain - Enabler","ETB - Enabler","Vampires - Enabler","Tier 3"]
+
+["Invigorated Rampage"]
+mana_cost = ["1","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Tier 3","Trick","Heroic - Enabler","Power - Payoff","Spells - Enabler"]
+
+["Irrigated Farmland"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Isareth the Awakener"]
 mana_cost = ["1","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Payoff"]
+tags = ["Graveyard - Payoff","Tier 2","Discard - Payoff","Legends - Enabler"]
 
 ["Isolated Chapel"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Izzet Chemister"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Spells - Payoff","Graveyard - Payoff","Signpost","Higher Toughness","Wizards - Enabler"]
+tags = ["Spells - Payoff","Graveyard - Payoff","Signpost","Wizards - Enabler","Tier 2","Spice"]
 
 ["Izzet Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Jeskai Ascendancy"]
 mana_cost = ["U","R","W"]
 color_identity = "RUW"
 types = ["enchantment"]
-tags = ["Signpost","Spells - Payoff","Tokens - Payoff","Madness/Hellbent - Enabler"]
+tags = ["Spells - Payoff","Tokens - Payoff","Spice","Discard - Enabler","Tokens Aggro - Payoff","Tier 3"]
 
 ["Jori En, Ruin Diver"]
 mana_cost = ["1","U","R"]
 color_identity = "UR"
 types = ["creature"]
-tags = ["Higher Toughness","Wizards - Enabler","Card Draw"]
+tags = ["Wizards - Enabler","Tier 2","Spice","Legends - Enabler"]
 
-["Juniper Order Ranger"]
-mana_cost = ["3","G","W"]
-color_identity = "GW"
+["Judith, the Scourge Diva"]
+mana_cost = ["1","B","R"]
+color_identity = "BR"
 types = ["creature"]
-tags = ["Counters - Enabler","Tokens - Payoff","ETB - Enabler","Higher Toughness"]
+tags = ["Sacrifice - Payoff","Signpost","Spice","Tier 2","Legends - Enabler"]
 
 ["Kalastria Highborn"]
 mana_cost = ["B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Vampires - Enabler","Vampires - Payoff"]
+tags = ["Lifegain - Enabler","Vampires - Enabler","Vampires - Payoff","Tier 2","Signpost"]
 
 ["Kami of Ancient Law"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Spirits - Enabler"]
+tags = ["Spirits - Enabler","Tier 3"]
 
 ["Kari Zev, Skyship Raider"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Tokens - Enabler","Higher Toughness"]
+tags = ["Sacrifice - Enabler","Tokens - Enabler","Tier 1","Legends - Enabler","Tokens Aggro - Enabler"]
 
 ["Karn, Silver Golem"]
 mana_cost = ["5"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Signpost","Higher Toughness","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler"]
+tags = ["Signpost","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler","Tier 3","Legends - Enabler"]
 
 ["Karplusan Forest"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Kessig Cagebreakers"]
 mana_cost = ["4","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Signpost","Higher Toughness","Big"]
+tags = ["Graveyard - Payoff","Signpost","Tier 1"]
 
 ["Key to the City"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Madness/Hellbent - Enabler","Artifacts - Enabler","Ninjutsu - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Artifacts - Enabler","Ninjutsu - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Tier 2","Discard - Enabler","Hellbent - Enabler","Power - Payoff"]
 
 ["Killing Glare"]
 mana_cost = ["X","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Removal","Removal - Size"]
+tags = ["Removal","Tier 3","Spells - Enabler"]
 
 ["Kindly Stranger"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Removal","Higher Toughness","Keyword","Madness/Hellbent - Payoff","Removal - Size"]
+tags = ["Graveyard - Payoff","Removal","Keyword","Discard - Payoff","Tier 3"]
 
 ["Kiri-Onna"]
 mana_cost = ["4","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Spirits - Enabler","ETB - Enabler","Bounce"]
+tags = ["Spirits - Enabler","ETB - Enabler","Bounce","Tier 4"]
 
 ["Kitesail Freebooter"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Ninjutsu - Enabler"]
-
-["Knotvine Paladin"]
-mana_cost = ["G","W"]
-color_identity = "GW"
-types = ["creature"]
-tags = ["Tokens - Payoff"]
+tags = ["Ninjutsu - Enabler","Tier 2"]
 
 ["Lantern Kami"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Spirits - Enabler","Ninjutsu - Enabler"]
+tags = ["Spirits - Enabler","Ninjutsu - Enabler","Tier 4"]
 
-["Launch the Fleet"]
-mana_cost = ["W"]
-color_identity = "W"
-types = ["sorcery"]
-tags = ["Tokens - Enabler","Tokens - Payoff","Keyword","Spells - Enabler","Heroic - Enabler"]
-
-["Lightning Helix"]
-mana_cost = ["R","W"]
-color_identity = "RW"
+["Lightning Axe"]
+mana_cost = ["R"]
+color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Lifegain - Enabler","Spells - Enabler","Removal - Size"]
+tags = ["Discard - Enabler","Hellbent - Enabler","Removal","Spells (Red) - Enabler","Spells - Enabler","Tier 2"]
 
 ["Liliana's Specter"]
 mana_cost = ["1","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["ETB - Enabler","Ninjutsu - Enabler"]
+tags = ["ETB - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Llanowar Elves"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["creature"]
-tags = []
+tags = ["Ramp - Enabler","Elves - Enabler","Tier 2"]
 
 ["Llanowar Wastes"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Lone Rider"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Lifegain - Payoff","Lifegain - Enabler","Keyword"]
-
-["Loyal Pegasus"]
-mana_cost = ["W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["Ninjutsu - Enabler"]
+tags = ["Lifegain - Payoff","Lifegain - Enabler","Keyword","Tier 4","Signpost"]
 
 ["Ludevic's Test Subject"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Big","Flash - Threat"]
+tags = ["Flash - Threat","Tier 2","Ramp - Payoff"]
+
+["Lupine Prototype"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler","Artifacts - Enabler","Tier 4","Hellbent - Payoff","Signpost","Power - Enabler"]
 
 ["Magma Burst"]
 mana_cost = ["3","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Keyword","Land Graveyard - Enabler","Removal","Spells - Enabler","Removal - Size"]
+tags = ["Keyword","Land Graveyard - Enabler","Removal","Spells - Enabler","Tier 3","Land Dying - Enabler","Land Extra - Payoff","Spells (Red) - Enabler"]
 
 ["Magmatic Force"]
 mana_cost = ["5","R","R","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Big","Reanimator - Payoff"]
+tags = ["Reanimator - Payoff","Tier 3","Ramp - Payoff","Goreclaw - Payoff"]
 
 ["Magmatic Insight"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["sorcery"]
-tags = ["Land Graveyard - Enabler","Spells - Enabler"]
+tags = ["Land Graveyard - Enabler","Spells - Enabler","Land Extra - Payoff","Drake Haven - Enabler","Spells (Red) - Enabler","Tier 3"]
 
 ["Magmaw"]
 mana_cost = ["3","R","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Signpost"]
+tags = ["Sacrifice - Payoff","Signpost","Tier 3","Power - Enabler"]
 
 ["Magus of the Scroll"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Removal","Wizards - Enabler","Madness/Hellbent - Payoff","Removal - Size"]
+tags = ["Removal","Wizards - Enabler","Tier 3","Hellbent - Payoff"]
 
 ["Magus of the Wheel"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Graveyard - Enabler","Wizards - Enabler","Madness/Hellbent - Enabler"]
+tags = ["Graveyard - Enabler","Wizards - Enabler","Tier 2","Hellbent - Payoff","Discard - Enabler","Spice"]
 
 ["Mana Leak"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Counterspell","Spells - Enabler"]
+tags = ["Flash - Interaction","Tier 2"]
 
 ["Martial Glory"]
 mana_cost = ["W","R"]
 color_identity = "RW"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 2"]
 
 ["Martyr of Dusk"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Lifegain - Enabler","Vampires - Enabler"]
+tags = ["Sacrifice - Enabler","Lifegain - Enabler","Vampires - Enabler","Tier 3","Tokens Aggro - Enabler"]
+
+["Martyr's Soul"]
+mana_cost = ["2","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Tier 3","Spirits - Enabler","Counters - Enabler","Tokens - Payoff"]
+
+["Marwyn, the Nurturer"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Elves - Enabler","Elves - Payoff","Legends - Enabler","Signpost","Tier 3"]
 
 ["Maverick Thopterist"]
 mana_cost = ["3","U","R"]
 color_identity = "UR"
 types = ["creature"]
-tags = ["Signpost","Tokens - Enabler","Artifacts - Enabler","Keyword","ETB - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Signpost","Tokens - Enabler","Artifacts - Enabler","Keyword","ETB - Enabler","Artifacts (Creature) - Enabler","Tier 2","Artifacts (Cheap) - Payoff","Artifacts (Sac) - Enabler"]
 
 ["Mavren Fein, Dusk Apostle"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Tokens - Enabler","Lifegain - Enabler","Signpost","Vampires - Enabler","Vampires - Payoff"]
+tags = ["Tokens - Enabler","Lifegain - Enabler","Signpost","Vampires - Enabler","Vampires - Payoff","Tier 3","Legends - Enabler","Tokens Aggro - Enabler"]
 
 ["Meandering River"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
+
+["Memorial to Glory"]
+mana_cost = []
+color_identity = "W"
+types = ["land"]
+tags = ["Land Graveyard - Enabler","Tokens - Enabler","Land Dying - Enabler","Tier 3"]
 
 ["Memorial to Unity"]
 mana_cost = []
 color_identity = "G"
 types = ["land"]
-tags = ["Land Graveyard - Enabler"]
+tags = ["Land Graveyard - Enabler","Land Dying - Enabler","Tier 3"]
 
 ["Metallic Mimic"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Counters - Enabler","Tokens - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Counters - Enabler","Tokens - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 2","Tokens Aggro - Payoff","Wizards - Enabler","Elves - Payoff","Spirits - Payoff","Vampires - Payoff"]
 
 ["Metalwork Colossus"]
 mana_cost = ["11"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Signpost","Big","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler"]
-
-["Midnight Oil"]
-mana_cost = ["2","B","B"]
-color_identity = "B"
-types = ["enchantment"]
-tags = ["Card Draw"]
-
-["Might of the Masses"]
-mana_cost = ["G"]
-color_identity = "G"
-types = ["instant"]
-tags = ["Trick","Tokens - Payoff","Heroic - Enabler"]
+tags = ["Signpost","Artifacts - Enabler","Artifacts (Noncreature) - Payoff","Artifacts (Creature) - Enabler","Tier 3","Artifacts (Recursion) - Payoff"]
 
 ["Mikaeus, the Lunarch"]
 mana_cost = ["X","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Counters - Enabler","Tokens - Payoff","Signpost","Big"]
+tags = ["Counters - Enabler","Tokens - Payoff","Tier 1","Legends - Enabler","Tokens Aggro - Payoff"]
 
 ["Militia Bugler"]
 mana_cost = ["2","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Higher Toughness","ETB - Enabler"]
+tags = ["ETB - Enabler","Tier 2"]
 
 ["Mina and Denn, Wildborn"]
 mana_cost = ["2","R","G"]
 color_identity = "GR"
 types = ["creature"]
-tags = ["Landfall - Enabler","Big"]
+tags = ["Tier 2","Land Extra - Enabler","Legends - Enabler","Elves - Enabler","Power - Enabler","Power - Payoff"]
 
 ["Mindless Automaton"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Madness/Hellbent - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Counters - Enabler","Counters - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler","Tier 2","Artifacts (Recursion) - Payoff","Discard - Enabler","Hellbent - Enabler"]
 
 ["Mindstorm Crown"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Card Draw","Madness/Hellbent - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
-
-["Mirror Mockery"]
-mana_cost = ["1","U"]
-color_identity = "U"
-types = ["enchantment"]
-tags = ["Removal","ETB - Payoff"]
+tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Hellbent - Payoff","Tier 4","Signpost"]
 
 ["Mistblade Shinobi"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff"]
+tags = ["Ninjutsu - Payoff","Tier 2","Ninjas - Enabler"]
 
 ["Molten Vortex"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["enchantment"]
-tags = ["Land Graveyard - Enabler","Removal","Removal - Size"]
+tags = ["Land Graveyard - Enabler","Removal","Tier 2","Land Extra - Payoff","Hellbent - Enabler","Drake Haven - Enabler"]
+
+["Moonblade Shinobi"]
+mana_cost = ["3","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["Ninjas - Enabler","Ninjutsu - Payoff","Tier 3"]
+
+["Mother Bear"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Graveyard - Payoff","Tokens - Enabler","Tier 3"]
+
+["Murderous Compulsion"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["Removal","Discard - Payoff","Tier 3","Spells - Enabler"]
 
 ["Murderous Cut"]
 mana_cost = ["4","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Removal","Graveyard - Payoff","Keyword"]
+tags = ["Removal","Graveyard - Payoff","Keyword","Tier 2","Spells - Enabler"]
 
 ["Mystic Snake"]
 mana_cost = ["1","G","U","U"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Signpost","Flash - Counterspell"]
+tags = ["Signpost","Flash - Interaction","Tier 2"]
 
 ["Naru Meha, Master Wizard"]
 mana_cost = ["2","U","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Signpost","Wizards - Payoff","Spells - Payoff","Wizards - Enabler","Flash - Threat"]
+tags = ["Signpost","Wizards - Payoff","Spells - Payoff","Wizards - Enabler","Flash - Threat","Tier 2","Spice","Legends - Enabler"]
 
-["Nearheath Chaplain"]
-mana_cost = ["3","W"]
-color_identity = "W"
+["Nath of the Gilt-Leaf"]
+mana_cost = ["3","B","G"]
+color_identity = "BG"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Tokens - Enabler","Spirits - Enabler"]
+tags = ["Elves - Enabler","Legends - Enabler","Tier 3"]
 
 ["Nebelgast Herald"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Spirits - Payoff","Spirits - Enabler","Flash - Threat","Ninjutsu - Enabler"]
+tags = ["Spirits - Payoff","Spirits - Enabler","Flash - Threat","Ninjutsu - Enabler","Tier 3","Signpost"]
 
 ["Necropolis Fiend"]
 mana_cost = ["7","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Signpost","Graveyard - Payoff","Higher Toughness","Big","Keyword"]
+tags = ["Signpost","Graveyard - Payoff","Keyword","Tier 2","Goreclaw - Payoff"]
 
 ["Necrotic Wound"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Graveyard - Payoff"]
+tags = ["Graveyard - Payoff","Tier 4","Removal"]
 
 ["Negate"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Counterspell","Spells - Enabler"]
+tags = ["Flash - Interaction","Tier 3"]
 
 ["Neheb, the Eternal"]
 mana_cost = ["3","R","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Higher Toughness","Big","Keyword"]
+tags = ["Keyword","Tier 2","Ramp - Enabler","Legends - Enabler","Power - Enabler"]
 
-["Niblis of the Urn"]
-mana_cost = ["1","W"]
-color_identity = "W"
+["Nessian Hornbeetle"]
+mana_cost = ["1","G"]
+color_identity = "G"
 types = ["creature"]
-tags = ["Spirits - Enabler","Ninjutsu - Enabler"]
+tags = ["Power - Payoff","Tier 3","Signpost"]
+
+["Neurok Replica"]
+mana_cost = ["3"]
+color_identity = "U"
+types = ["artifact","creature"]
+tags = ["Wizards - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler","Artifacts - Enabler","Bounce","Tier 3"]
+
+["Nightmare's Thirst"]
+mana_cost = ["B"]
+color_identity = "B"
+types = ["instant"]
+tags = ["Removal","Lifegain - Enabler","Lifegain - Payoff","Tier 3"]
 
 ["Ninja of the Deep Hours"]
 mana_cost = ["3","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff"]
+tags = ["Ninjutsu - Payoff","Tier 2","Ninjas - Enabler"]
+
+["Nissa's Judgment"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["sorcery"]
+tags = ["Removal","Counters - Enabler","Counters - Payoff","Tier 3"]
 
 ["Nyx Weaver"]
 mana_cost = ["1","B","G"]
 color_identity = "BG"
 types = ["enchantment","creature"]
-tags = ["Graveyard - Enabler","Graveyard - Payoff","Signpost","Higher Toughness"]
+tags = ["Graveyard - Enabler","Graveyard - Payoff","Tier 2"]
+
+["O-Naginata"]
+mana_cost = ["1"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Power - Payoff","Artifacts (Cheap) - Enabler","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Tier 2"]
 
 ["Oathsworn Vampire"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Payoff","Vampires - Enabler"]
-
-["Ochran Assassin"]
-mana_cost = ["1","B","G"]
-color_identity = "BG"
-types = ["creature"]
-tags = ["Removal"]
-
-["Ogre Battledriver"]
-mana_cost = ["2","R","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Signpost","Tokens - Payoff"]
+tags = ["Lifegain - Payoff","Vampires - Enabler","Tier 3","Signpost"]
 
 ["Okiba-Gang Shinobi"]
 mana_cost = ["3","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff"]
+tags = ["Ninjutsu - Payoff","Ninjas - Enabler","Tier 4"]
 
 ["Omnath, Locus of Rage"]
 mana_cost = ["3","R","R","G","G"]
 color_identity = "GR"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Big","Landfall - Payoff","Keyword"]
-
-["One Dozen Eyes"]
-mana_cost = ["5","G"]
-color_identity = "G"
-types = ["sorcery"]
-tags = ["Tokens - Enabler"]
-
-["Oppressive Rays"]
-mana_cost = ["W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Removal"]
+tags = ["Reanimator - Payoff","Keyword","Tier 2","Ramp - Payoff","Land Extra - Payoff","Legends - Enabler","Signpost","Goreclaw - Payoff"]
 
 ["Opt"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Spells - Enabler"]
+tags = ["Spells - Enabler","Tier 2"]
 
 ["Oracle of Mul Daya"]
 mana_cost = ["3","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Landfall - Enabler"]
+tags = ["Tier 1","Spice","Ramp - Enabler","Land Extra - Enabler","Elves - Enabler"]
 
 ["Ordeal of Heliod"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["enchantment"]
-tags = ["Heroic - Enabler","Lifegain - Enabler","Counters - Enabler"]
+tags = ["Heroic - Enabler","Lifegain - Enabler","Counters - Enabler","Tier 4"]
 
 ["Ordeal of Thassa"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["enchantment"]
-tags = ["Heroic - Enabler","Counters - Enabler","Counters - Payoff","Card Draw"]
+tags = ["Heroic - Enabler","Counters - Enabler","Counters - Payoff","Ninjutsu - Payoff","Tier 3"]
 
 ["Orzhov Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Outnumber"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Removal","Tokens - Payoff","Spells - Enabler","Removal - Size"]
-
-["Pacification Array"]
-mana_cost = ["1"]
-color_identity = "C"
-types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
-
-["Pacifism"]
-mana_cost = ["1","W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Removal"]
+tags = ["Removal","Tokens - Payoff","Spells - Enabler","Tier 2","Spells (Red) - Enabler","Tokens Aggro - Payoff"]
 
 ["Pack Guardian"]
 mana_cost = ["2","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Enabler","Spirits - Enabler","Flash - Threat"]
+tags = ["Land Graveyard - Enabler","Spirits - Enabler","Flash - Threat","Tier 2","Land Extra - Payoff","Power - Enabler"]
 
 ["Palladium Myr"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 2","Ramp - Enabler"]
 
 ["Panharmonicon"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Signpost","ETB - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
-
-["Path of Bravery"]
-mana_cost = ["2","W"]
-color_identity = "W"
-types = ["enchantment"]
-tags = ["Lifegain - Enabler","Lifegain - Payoff","Tokens - Payoff"]
+tags = ["Signpost","ETB - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Spice","Tier 4"]
 
 ["Path of Discovery"]
 mana_cost = ["3","G"]
 color_identity = "G"
 types = ["enchantment"]
-tags = ["Counters - Enabler","Graveyard - Enabler","Landfall - Enabler","Keyword","Tokens - Payoff"]
+tags = ["Counters - Enabler","Graveyard - Enabler","Keyword","Tokens - Payoff","Tier 2","Spice","Land Extra - Enabler"]
 
 ["Peel from Reality"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["ETB - Payoff","Bounce","Spells - Enabler"]
+tags = ["ETB - Payoff","Bounce","Spells - Enabler","Tier 3"]
 
 ["Perilous Myr"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Removal - Size"]
+tags = ["Removal","Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3","Artifacts (Sac) - Enabler"]
 
 ["Phalanx Leader"]
 mana_cost = ["W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Signpost","Heroic - Payoff","Counters - Enabler","Keyword"]
+tags = ["Signpost","Heroic - Payoff","Counters - Enabler","Keyword","Tier 2","Tokens Aggro - Payoff"]
 
 ["Phantom Nomad"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Counters - Enabler","Spirits - Enabler"]
+tags = ["Counters - Enabler","Spirits - Enabler","Tier 3"]
+
+["Phyrexian Revoker"]
+mana_cost = ["2"]
+color_identity = "C"
+types = ["artifact","creature"]
+tags = ["Tier 3","Artifacts (Cheap) - Enabler","Artifacts (Creature) - Enabler","Artifacts - Enabler"]
 
 ["Pianna, Nomad Captain"]
 mana_cost = ["1","W","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Tokens - Payoff","Signpost"]
+tags = ["Tokens - Payoff","Legends - Enabler","Tokens Aggro - Payoff","Signpost","Tier 1"]
 
 ["Pilfering Imp"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Ninjutsu - Enabler"]
+tags = ["Ninjutsu - Enabler","Tier 4"]
 
 ["Piston Sledge"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Keyword","Artifacts - Enabler","Artifacts (Cheap) - Payoff","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Keyword","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Sac) - Payoff","Signpost","Tier 3"]
 
-["Pongify"]
-mana_cost = ["U"]
+["Pore Over the Pages"]
+mana_cost = ["3","U","U"]
 color_identity = "U"
-types = ["instant"]
-tags = ["Removal","Trick","Flash - Threat","Spells - Enabler"]
+types = ["sorcery"]
+tags = ["Spells - Enabler","Ramp - Payoff","Tier 3"]
 
 ["Possessed Skaab"]
 mana_cost = ["3","U","B"]
 color_identity = "BU"
 types = ["creature"]
-tags = ["ETB - Enabler"]
-
-["Precognition Field"]
-mana_cost = ["3","U"]
-color_identity = "U"
-types = ["enchantment"]
-tags = ["Spells - Payoff","Signpost","Card Draw"]
-
-["Presence of Gond"]
-mana_cost = ["2","G"]
-color_identity = "G"
-types = ["enchantment"]
-tags = ["Tokens - Enabler","Heroic - Enabler"]
+tags = ["ETB - Enabler","Tier 2"]
 
 ["Prey Upon"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Removal","Heroic - Enabler","Removal - Size"]
+tags = ["Removal","Heroic - Enabler","Tier 2","Spells - Enabler","Power - Payoff"]
 
 ["Prophet of Kruphix"]
 mana_cost = ["3","U","G"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Signpost","Higher Toughness","Wizards - Enabler","Flash - Threat"]
-
-["Prophetic Prism"]
-mana_cost = ["2"]
-color_identity = "C"
-types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Signpost","Wizards - Enabler","Flash - Threat","Spice","Tier 2"]
 
 ["Pyrite Spellbomb"]
 mana_cost = ["1"]
 color_identity = "R"
 types = ["artifact"]
-tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Removal - Size"]
+tags = ["Removal","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Cheap) - Enabler","Tier 2"]
 
 ["Pyromancer's Goggles"]
 mana_cost = ["5"]
 color_identity = "R"
 types = ["artifact"]
-tags = ["Signpost","Spells - Payoff","Artifacts - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Spice","Spells (Red) - Payoff","Legends - Enabler","Tier 3"]
 
 ["Quickling"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["ETB - Payoff","Ninjutsu - Enabler","Flash - Threat"]
+tags = ["ETB - Payoff","Ninjutsu - Enabler","Flash - Threat","Tier 3"]
 
 ["Rakdos Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Ramunap Excavator"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Payoff","Land Graveyard - Payoff","Landfall - Enabler","Higher Toughness"]
+tags = ["Graveyard - Payoff","Land Graveyard - Payoff","Tier 2","Land Extra - Enabler"]
+
+["Ransack the Lab"]
+mana_cost = ["1","B"]
+color_identity = "B"
+types = ["sorcery"]
+tags = ["Tier 3","Graveyard - Enabler","Spells - Enabler"]
 
 ["Rattlechains"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Spirits - Payoff","Spirits - Enabler","Flash - Threat","Ninjutsu - Enabler"]
+tags = ["Spirits - Payoff","Spirits - Enabler","Flash - Threat","Ninjutsu - Enabler","Tier 2","Signpost"]
 
 ["Ravenous Rats"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["ETB - Enabler"]
+tags = ["ETB - Enabler","Tier 3","Sacrifice - Enabler"]
 
 ["Reap What Is Sown"]
 mana_cost = ["1","W","G"]
 color_identity = "GW"
 types = ["instant"]
-tags = ["Counters - Enabler"]
+tags = ["Counters - Enabler","Tier 3"]
 
 ["Reassembling Skeleton"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Enabler","Graveyard - Payoff"]
+tags = ["Sacrifice - Enabler","Graveyard - Payoff","Discard - Payoff","Tier 3"]
 
 ["Reckless Racer"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Madness/Hellbent - Enabler","Higher Toughness"]
+tags = ["Tier 2","Discard - Enabler"]
+
+["Reclusive Artificer"]
+mana_cost = ["2","U","R"]
+color_identity = "UR"
+types = ["creature"]
+tags = ["Tier 3","Artifacts - Payoff","Signpost"]
 
 ["Renegade Krasis"]
 mana_cost = ["1","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Signpost","Keyword"]
+tags = ["Counters - Enabler","Counters - Payoff","Signpost","Keyword","Tier 3"]
 
 ["Rhox Faithmender"]
 mana_cost = ["3","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Signpost","Higher Toughness"]
+tags = ["Lifegain - Enabler","Signpost","Tier 4"]
 
 ["Riddleform"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["enchantment"]
-tags = ["Spells - Payoff"]
+tags = ["Spells - Payoff","Signpost","Tier 4"]
 
 ["Rise from the Tides"]
 mana_cost = ["5","U"]
 color_identity = "U"
 types = ["sorcery"]
-tags = ["Graveyard - Payoff","Spells - Payoff","Signpost","Big","Spells - Enabler"]
+tags = ["Graveyard - Payoff","Spells - Payoff","Signpost","Tier 3","Spice"]
 
 ["Rishkar, Peema Renegade"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","ETB - Enabler"]
+tags = ["Counters - Enabler","ETB - Enabler","Tier 1","Ramp - Enabler","Legends - Enabler","Elves - Enabler"]
 
 ["River Hoopoe"]
 mana_cost = ["G","U"]
 color_identity = "GU"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Flash - Threat","Card Draw","Higher Toughness","Ninjutsu - Enabler"]
+tags = ["Lifegain - Enabler","Flash - Threat","Ninjutsu - Enabler","Tier 3","Ramp - Payoff"]
 
 ["Rootbound Crag"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Rowdy Crew"]
-mana_cost = ["2","R","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Graveyard - Enabler","ETB - Enabler","Card Draw","Madness/Hellbent - Enabler"]
+tags = ["Fixer"]
 
 ["Ruin Raider"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Keyword","Card Draw"]
+tags = ["Keyword","Tier 2","Ninjutsu - Payoff"]
 
 ["Sai, Master Thopterist"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Artifacts - Payoff","Signpost","Higher Toughness"]
+tags = ["Artifacts - Payoff","Signpost","Tier 2","Artifacts (Sac) - Payoff","Artifacts (Sac) - Enabler","Legends - Enabler"]
 
 ["Sanctum Seeker"]
 mana_cost = ["2","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Signpost","Higher Toughness","Vampires - Enabler","Vampires - Payoff"]
+tags = ["Lifegain - Enabler","Signpost","Vampires - Enabler","Vampires - Payoff","Tier 2"]
 
 ["Saproling Migration"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["sorcery"]
-tags = ["Tokens - Enabler"]
+tags = ["Tokens - Enabler","Sacrifice - Enabler","Spells - Enabler","Tokens Aggro - Enabler","Tier 3"]
 
 ["Satyr Wayfinder"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Graveyard - Enabler","ETB - Enabler"]
+tags = ["Graveyard - Enabler","ETB - Enabler","Tier 2","Land Extra - Enabler","Land Graveyard - Enabler","Sacrifice - Enabler"]
+
+["Scattered Groves"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
 
 ["Scourge Wolf"]
 mana_cost = ["R","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Keyword","Madness/Hellbent - Payoff"]
+tags = ["Keyword","Tier 2","Discard - Payoff"]
 
 ["Scourge of Nel Toth"]
 mana_cost = ["5","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Reanimator - Payoff","Signpost","Big"]
+tags = ["Reanimator - Payoff","Signpost","Spice","Graveyard - Payoff","Tier 1","Discard - Payoff","Goreclaw - Payoff"]
 
 ["Scrounging Bandar"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler"]
+tags = ["Counters - Enabler","Tier 3"]
 
 ["Scute Mob"]
 mana_cost = ["G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Flash - Threat","Big"]
+tags = ["Flash - Threat","Tier 2","Power - Enabler"]
 
 ["Seal Away"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["enchantment"]
-tags = ["Removal"]
-
-["Second Harvest"]
-mana_cost = ["2","G","G"]
-color_identity = "G"
-types = ["instant"]
-tags = ["Tokens - Payoff","Signpost"]
+tags = ["Removal","Tier 3"]
 
 ["Selesnya Evangel"]
 mana_cost = ["G","W"]
 color_identity = "GW"
 types = ["creature"]
-tags = ["Tokens - Enabler","Higher Toughness"]
+tags = ["Tokens - Enabler","Tier 2","Sacrifice - Enabler","Elves - Enabler"]
 
 ["Selesnya Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
+
+["Shaman of the Pack"]
+mana_cost = ["1","B","G"]
+color_identity = "BG"
+types = ["creature"]
+tags = ["Elves - Enabler","Elves - Payoff","Tier 3","Signpost"]
+
+["Sheltered Thicket"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer","Land Graveyard - Enabler","Drake Haven - Enabler"]
+
+["Sheltering Light"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["Tier 3","Spells - Enabler","Heroic - Enabler"]
 
 ["Shivan Reef"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Sickening Dreams"]
-mana_cost = ["1","B"]
-color_identity = "B"
-types = ["sorcery"]
-tags = ["Madness/Hellbent - Enabler"]
+tags = ["Fixer"]
 
 ["Sifter Wurm"]
 mana_cost = ["5","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Big","ETB - Enabler"]
-
-["Signal Pest"]
-mana_cost = ["1"]
-color_identity = "C"
-types = ["artifact","creature"]
-tags = ["Ninjutsu - Enabler","Artifacts - Enabler","Tokens - Payoff","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["ETB - Enabler","Tier 3","Ramp - Payoff","Goreclaw - Payoff"]
 
 ["Simic Signet"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler"]
-
-["Sin Prodder"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Graveyard - Enabler"]
+tags = ["Artifacts - Enabler","Artifacts (Cheap) - Enabler","Artifacts (Noncreature) - Enabler","Ramp - Enabler","Fixer","Tier 2"]
 
 ["Sinister Concoction"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["enchantment"]
-tags = ["Removal","Madness/Hellbent - Enabler"]
+tags = ["Removal","Tier 3","Discard - Enabler","Hellbent - Enabler","Graveyard - Enabler"]
 
 ["Siren Stormtamer"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Wizards - Enabler","Ninjutsu - Enabler"]
+tags = ["Wizards - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Skarrg Guildmage"]
 mana_cost = ["R","G"]
 color_identity = "GR"
 types = ["creature"]
-tags = ["Land Graveyard - Enabler"]
+tags = ["Land Graveyard - Enabler","Tier 2","Land Dying - Enabler","Power - Payoff","Power - Enabler"]
 
 ["Skilled Animator"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Higher Toughness","Big","Artifacts (Cheap) - Payoff"]
+tags = ["Artifacts (Cheap) - Payoff","Signpost","Tier 4"]
 
 ["Skinshifter"]
 mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Big","Flash - Threat","Ninjutsu - Enabler"]
+tags = ["Flash - Threat","Ninjutsu - Enabler","Tier 2","Power - Enabler"]
 
 ["Skullmulcher"]
 mana_cost = ["4","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Tokens - Payoff","Counters - Enabler","Keyword","ETB - Enabler","Sacrifice - Payoff","Card Draw"]
+tags = ["Tokens - Payoff","Counters - Enabler","Keyword","ETB - Enabler","Sacrifice - Payoff","Tier 1","Spice","Power - Enabler"]
 
-["Skymarcher Aspirant"]
-mana_cost = ["W"]
-color_identity = "W"
+["Skyknight Vanguard"]
+mana_cost = ["R","W"]
+color_identity = "RW"
 types = ["creature"]
-tags = ["Keyword","Vampires - Enabler"]
+tags = ["Tier 3","Tokens Aggro - Enabler"]
 
 ["Skyscanner"]
 mana_cost = ["3"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Ninjutsu - Enabler","ETB - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Ninjutsu - Enabler","ETB - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 3","Artifacts (Sac) - Enabler"]
 
-["Smother"]
-mana_cost = ["1","B"]
-color_identity = "B"
-types = ["instant"]
-tags = ["Removal"]
-
-["Soul's Fire"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["instant"]
-tags = ["Spells - Enabler","Heroic - Enabler","Removal","Removal - Size"]
+["Smoke Shroud"]
+mana_cost = ["1","U"]
+color_identity = "U"
+types = ["enchantment"]
+tags = ["Ninjutsu - Enabler","Tier 4","Signpost"]
 
 ["Soulfire Grand Master"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Signpost","Lifegain - Enabler","Spells - Payoff"]
+tags = ["Lifegain - Enabler","Spells - Payoff","Spice","Tier 2"]
 
-["Spawnbroker"]
-mana_cost = ["2","U"]
+["Spectral Sailor"]
+mana_cost = ["U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["ETB - Enabler","Wizards - Enabler"]
+tags = ["Tier 3","Spirits - Enabler","Flash - Threat","Ninjutsu - Enabler"]
 
 ["Spectral Shepherd"]
 mana_cost = ["2","W"]
 color_identity = "UW"
 types = ["creature"]
-tags = ["Spirits - Enabler","Spirits - Payoff","Ninjutsu - Enabler"]
+tags = ["Tier 4","Spirits - Enabler","Spirits - Payoff","Signpost"]
 
-["Spore Swarm"]
-mana_cost = ["3","G"]
+["Spellgorger Weird"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Tier 3","Spells - Payoff","Power - Enabler","Signpost"]
+
+["Squirrel Wrangler"]
+mana_cost = ["2","G","G"]
 color_identity = "G"
-types = ["instant"]
-tags = ["Tokens - Enabler","Flash - Threat"]
+types = ["creature"]
+tags = ["Tokens - Enabler","Land Graveyard - Enabler","Tier 3","Land Dying - Enabler","Land Extra - Payoff"]
 
 ["Steel Overseer"]
 mana_cost = ["2"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Signpost","Counters - Enabler","Artifacts - Enabler","Artifacts (Creature) - Payoff","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler"]
+tags = ["Signpost","Counters - Enabler","Artifacts - Enabler","Artifacts (Creature) - Payoff","Artifacts (Creature) - Enabler","Artifacts (Cheap) - Enabler","Tier 1","Artifacts (Recursion) - Payoff"]
 
 ["Steward of Solidarity"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Tokens - Enabler","Keyword"]
+tags = ["Tokens - Enabler","Keyword","Tier 2","Sacrifice - Enabler","Tokens Aggro - Enabler"]
 
 ["Stitcher's Supplier"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Graveyard - Enabler"]
+tags = ["Graveyard - Enabler","Tier 3"]
 
 ["Stone Quarry"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Stream of Unconsciousness"]
 mana_cost = ["U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Trick","Wizards - Payoff","Spells - Enabler"]
+tags = ["Trick","Wizards - Payoff","Spells - Enabler","Tier 3","Signpost"]
 
 ["Stromkirk Condemned"]
 mana_cost = ["B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Vampires - Enabler","Vampires - Payoff","Madness/Hellbent - Enabler"]
+tags = ["Tier 3","Vampires - Enabler","Vampires - Payoff","Discard - Enabler","Hellbent - Enabler","Signpost"]
+
+["Stromkirk Occultist"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["creature"]
+tags = ["Tier 3","Vampires - Enabler","Discard - Payoff","Signpost"]
 
 ["Submerged Boneyard"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Sulfur Falls"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Sulfurous Springs"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Sunpetal Grove"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Supernatural Stamina"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Trick","ETB - Payoff"]
+tags = ["Trick","ETB - Payoff","Spells - Enabler","Tier 3"]
 
 ["Supreme Phantom"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Signpost","Spirits - Enabler","Spirits - Payoff","Higher Toughness","Ninjutsu - Enabler"]
+tags = ["Signpost","Spirits - Enabler","Spirits - Payoff","Ninjutsu - Enabler","Tier 2"]
 
 ["Supreme Will"]
 mana_cost = ["2","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Flash - Counterspell","Spells - Enabler"]
+tags = ["Spells - Enabler","Flash - Interaction","Tier 3"]
 
 ["Swift Justice"]
 mana_cost = ["W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Lifegain - Enabler","Spells - Enabler"]
+tags = ["Trick","Heroic - Enabler","Lifegain - Enabler","Spells - Enabler","Tier 2"]
+
+["Sylvan Messenger"]
+mana_cost = ["3","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Elves - Enabler","Elves - Payoff","Signpost","Tier 3"]
+
+["Take Heart"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["Lifegain - Enabler","Trick","Tier 3","Heroic - Enabler","Spells - Enabler"]
 
 ["Tallowisp"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["creature"]
-tags = ["Spirits - Payoff","Keyword","Spirits - Enabler","Higher Toughness"]
-
-["Tapestry of the Ages"]
-mana_cost = ["4"]
-color_identity = "C"
-types = ["artifact"]
-tags = ["Artifacts (Noncreature) - Enabler","Artifacts - Enabler"]
-
-["Temple of Abandon"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
-["Temple of Deceit"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
-
-["Temple of Enlightenment"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
+tags = ["Spirits - Payoff","Keyword","Spirits - Enabler","Tier 2","Signpost"]
 
 ["Temple of Epiphany"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Malady"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Temple of Malice"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Mystery"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Temple of Plenty"]
-mana_cost = []
-color_identity = "C"
-types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Silence"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temple of Triumph"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Temur Battle Rage"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Keyword","Spells - Enabler"]
+tags = ["Trick","Heroic - Enabler","Keyword","Spells - Enabler","Power - Payoff","Tier 3"]
+
+["Tendershoot Dryad"]
+mana_cost = ["4","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Tokens - Enabler","Tokens - Payoff","Signpost","Keyword","Tier 2"]
+
+["Tenth District Legionnaire"]
+mana_cost = ["R","W"]
+color_identity = "RW"
+types = ["creature"]
+tags = ["Signpost","Heroic - Payoff","Tier 3"]
 
 ["Territorial Allosaurus"]
 mana_cost = ["2","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Big","Keyword"]
-
-["Teysa, Orzhov Scion"]
-mana_cost = ["1","W","B"]
-color_identity = "BW"
-types = ["creature"]
-tags = ["Signpost","Sacrifice - Payoff","Tokens - Payoff","Higher Toughness"]
+tags = ["Keyword","Tier 2","Ramp - Payoff","Power - Enabler","Goreclaw - Payoff"]
 
 ["The Flame of Keld"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["enchantment"]
-tags = ["Keyword","Madness/Hellbent - Enabler","Madness/Hellbent - Payoff"]
+tags = ["Keyword","Hellbent - Payoff","Hellbent - Enabler","Drake Haven - Enabler","Tier 4"]
 
 ["The Gitrog Monster"]
 mana_cost = ["3","B","G"]
 color_identity = "BG"
 types = ["creature"]
-tags = ["Signpost","Graveyard - Payoff","Big","Land Graveyard - Enabler","Land Graveyard - Payoff"]
+tags = ["Graveyard - Payoff","Land Graveyard - Enabler","Land Graveyard - Payoff","Tier 2","Spice","Land Dying - Enabler","Land Extra - Payoff","Legends - Enabler","Discard - Payoff","Power - Enabler"]
 
 ["Thing in the Ice"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Signpost","Spells - Payoff","Higher Toughness","Big","Keyword"]
-
-["Thirst for Knowledge"]
-mana_cost = ["2","U"]
-color_identity = "U"
-types = ["instant"]
-tags = ["Artifacts - Payoff","Card Draw","Spells - Enabler","Madness/Hellbent - Enabler"]
+tags = ["Signpost","Spells - Payoff","Keyword","Tier 1"]
 
 ["Thopter Squadron"]
 mana_cost = ["5"]
 color_identity = "C"
 types = ["artifact","creature"]
-tags = ["Tokens - Enabler","Counters - Enabler","Counters - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Tokens - Enabler","Counters - Enabler","Counters - Payoff","Artifacts - Enabler","Artifacts (Creature) - Enabler","Tier 2","Artifacts (Sac) - Enabler","Artifacts (Recursion) - Payoff"]
 
 ["Thought Courier"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Wizards - Enabler","Madness/Hellbent - Enabler"]
-
-["Thresher Lizard"]
-mana_cost = ["2","R"]
-color_identity = "R"
-types = ["creature"]
-tags = ["Madness/Hellbent - Payoff"]
+tags = ["Wizards - Enabler","Tier 2","Graveyard - Enabler","Discard - Enabler"]
 
 ["Throat Slitter"]
 mana_cost = ["4","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff","Removal"]
+tags = ["Ninjutsu - Payoff","Removal","Tier 2","Ninjas - Enabler"]
+
+["Throatseeker"]
+mana_cost = ["2","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Tier 3","Vampires - Enabler","Ninjas - Payoff","Ninjas - Enabler","Signpost"]
 
 ["Tilling Treefolk"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Payoff","Graveyard - Payoff","Landfall - Enabler","Higher Toughness"]
+tags = ["Land Graveyard - Payoff","Graveyard - Payoff","Land Extra - Enabler","Tier 4"]
 
 ["Timber Gorge"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
 ["Titan's Strength"]
 mana_cost = ["R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Trick","Heroic - Enabler","Spells - Enabler"]
+tags = ["Trick","Heroic - Enabler","Spells - Enabler","Tier 3","Power - Enabler"]
 
 ["Titania, Protector of Argoth"]
 mana_cost = ["3","G","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Payoff","Signpost"]
+tags = ["Land Graveyard - Payoff","Signpost","Spice","Land Dying - Payoff","Land Extra - Enabler","Legends - Enabler","Power - Enabler","Tier 3"]
+
+["Together Forever"]
+mana_cost = ["W","W"]
+color_identity = "W"
+types = ["enchantment"]
+tags = ["Spice","Counters - Enabler","Counters - Payoff","Keyword","ETB - Payoff","Tier 1","Signpost"]
 
 ["Tower Geist"]
 mana_cost = ["3","U"]
 color_identity = "U"
 types = ["creature"]
-tags = ["Spirits - Enabler","ETB - Enabler","Ninjutsu - Enabler"]
+tags = ["Spirits - Enabler","ETB - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Tragic Slip"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Removal"]
+tags = ["Removal","Tier 2","Spells - Enabler","Sacrifice - Payoff"]
 
 ["Tranquil Expanse"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Treasure Keeper"]
-mana_cost = ["4"]
-color_identity = "C"
-types = ["artifact","creature"]
-tags = ["Sacrifice - Enabler","Artifacts - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Fixer"]
 
 ["Tuktuk the Explorer"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Big","Sacrifice - Enabler"]
+tags = ["Sacrifice - Enabler","Tier 3","Legends - Enabler"]
+
+["Tumble Magnet"]
+mana_cost = ["3"]
+color_identity = "C"
+types = ["artifact"]
+tags = ["Tier 4","Artifacts (Noncreature) - Enabler","Artifacts (Sac) - Enabler","Artifacts - Enabler"]
 
 ["Tuskguard Captain"]
 mana_cost = ["2","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Counters - Enabler","Counters - Payoff","Higher Toughness","Keyword"]
-
-["Twinstrike"]
-mana_cost = ["3","B","R"]
-color_identity = "BR"
-types = ["instant"]
-tags = ["Removal","Madness/Hellbent - Payoff","Removal - Size"]
-
-["Tymaret, the Murder King"]
-mana_cost = ["B","R"]
-color_identity = "BR"
-types = ["creature"]
-tags = ["Signpost","Sacrifice - Payoff"]
+tags = ["Counters - Enabler","Counters - Payoff","Keyword","Tier 3","Signpost"]
 
 ["Ultimate Price"]
 mana_cost = ["1","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Removal"]
+tags = ["Removal","Tier 2","Spells - Enabler"]
 
 ["Underground River"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Urbis Protector"]
-mana_cost = ["4","W","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["ETB - Enabler"]
+tags = ["Fixer"]
 
 ["Urge to Feed"]
 mana_cost = ["B","B"]
 color_identity = "B"
 types = ["instant"]
-tags = ["Vampires - Payoff","Removal","Removal - Size"]
+tags = ["Vampires - Payoff","Removal","Tier 2","Spells - Enabler","Signpost"]
 
 ["Valorous Stance"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["instant"]
-tags = ["Removal","Trick","Heroic - Enabler","Spells - Enabler","Removal - Size"]
+tags = ["Removal","Trick","Heroic - Enabler","Spells - Enabler","Tier 3"]
 
 ["Vampire Nighthawk"]
 mana_cost = ["1","B","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Higher Toughness","Vampires - Enabler","Ninjutsu - Enabler"]
+tags = ["Lifegain - Enabler","Vampires - Enabler","Ninjutsu - Enabler","Tier 3"]
 
 ["Vampiric Rites"]
 mana_cost = ["B"]
 color_identity = "B"
 types = ["enchantment"]
-tags = ["Lifegain - Enabler","Sacrifice - Payoff","Card Draw"]
+tags = ["Lifegain - Enabler","Sacrifice - Payoff","Tier 2","Signpost"]
 
 ["Vengeful Rebel"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Removal","Sacrifice - Payoff","Keyword","ETB - Enabler","Removal - Size"]
-
-["Verdant Embrace"]
-mana_cost = ["3","G","G"]
-color_identity = "G"
-types = ["enchantment"]
-tags = ["Tokens - Enabler","Heroic - Enabler","Big"]
+tags = ["Removal","Sacrifice - Payoff","Keyword","ETB - Enabler","Tier 2"]
 
 ["Victimize"]
 mana_cost = ["2","B"]
 color_identity = "B"
 types = ["sorcery"]
-tags = ["Graveyard - Payoff","Reanimator - Enabler","Signpost"]
-
-["Viridian Zealot"]
-mana_cost = ["G","G"]
-color_identity = "G"
-types = ["creature"]
-tags = []
-
-["Viscera Seer"]
-mana_cost = ["B"]
-color_identity = "B"
-types = ["creature"]
-tags = ["Vampires - Enabler","Wizards - Enabler","Sacrifice - Payoff"]
-
-["Vizier of Deferment"]
-mana_cost = ["2","W"]
-color_identity = "W"
-types = ["creature"]
-tags = ["ETB - Payoff","Flash - Threat"]
+tags = ["Graveyard - Payoff","Reanimator - Enabler","Spice","Tier 1"]
 
 ["Vizkopa Guildmage"]
 mana_cost = ["W","B"]
 color_identity = "BW"
 types = ["creature"]
-tags = ["Lifegain - Enabler","Lifegain - Payoff","Wizards - Enabler"]
+tags = ["Lifegain - Enabler","Lifegain - Payoff","Wizards - Enabler","Tier 2"]
+
+["Voldaren Pariah"]
+mana_cost = ["3","B","B"]
+color_identity = "B"
+types = ["creature"]
+tags = ["Signpost","Vampires - Enabler","Tier 1","Spice","Sacrifice - Payoff","Keyword","Discard - Payoff"]
 
 ["Voyage's End"]
 mana_cost = ["1","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Bounce","Spells - Enabler"]
+tags = ["Bounce","Spells - Enabler","Flash - Interaction","Tier 3"]
 
-["Wall of Omens"]
-mana_cost = ["1","W"]
-color_identity = "W"
+["Warden of the Chained"]
+mana_cost = ["1","R","G"]
+color_identity = "GR"
 types = ["creature"]
-tags = ["Higher Toughness","ETB - Enabler"]
+tags = ["Tier 3","Power - Enabler","Power - Payoff","Signpost"]
+
+["Wavebreak Hippocamp"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["enchantment","creature"]
+tags = ["Tier 3","Flash - Threat","Signpost"]
 
 ["Weatherlight"]
 mana_cost = ["4"]
 color_identity = "C"
 types = ["artifact"]
-tags = ["Signpost","Artifacts - Payoff","Keyword","Card Draw","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Creature) - Enabler"]
+tags = ["Signpost","Artifacts - Payoff","Keyword","Artifacts - Enabler","Artifacts (Noncreature) - Enabler","Artifacts (Creature) - Enabler","Tier 1","Spice","Artifacts (Recursion) - Payoff","Legends - Payoff","Legends - Enabler","Power - Enabler"]
 
 ["Weight of Conscience"]
 mana_cost = ["1","W"]
 color_identity = "W"
 types = ["enchantment"]
-tags = ["Removal"]
+tags = ["Removal","Tier 2"]
+
+["Welding Sparks"]
+mana_cost = ["2","R"]
+color_identity = "R"
+types = ["instant"]
+tags = ["Tier 3","Artifacts (Cheap) - Payoff","Signpost"]
 
 ["Whisper, Blood Liturgist"]
 mana_cost = ["3","B"]
 color_identity = "B"
 types = ["creature"]
-tags = ["Sacrifice - Payoff","Reanimator - Enabler","Signpost","ETB - Payoff"]
+tags = ["Sacrifice - Payoff","Reanimator - Enabler","ETB - Payoff","Spice","Legends - Enabler","Tier 3"]
+
+["Wirewood Symbiote"]
+mana_cost = ["G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Elves - Payoff","Tier 2","Signpost"]
+
+["Wizard Mentor"]
+mana_cost = ["2","U"]
+color_identity = "U"
+types = ["creature"]
+tags = ["Tier 3","ETB - Payoff","Wizards - Enabler"]
 
 ["Wizard's Lightning"]
 mana_cost = ["2","R"]
 color_identity = "R"
 types = ["instant"]
-tags = ["Wizards - Payoff","Removal","Spells - Enabler","Removal - Size"]
+tags = ["Wizards - Payoff","Removal","Spells - Enabler","Spells (Red) - Enabler","Signpost","Tier 3"]
 
 ["Wizard's Retort"]
 mana_cost = ["1","U","U"]
 color_identity = "U"
 types = ["instant"]
-tags = ["Wizards - Payoff","Flash - Counterspell","Spells - Enabler"]
+tags = ["Wizards - Payoff","Flash - Interaction","Tier 3"]
 
 ["Woodland Cemetery"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
+
+["Woodland Champion"]
+mana_cost = ["1","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Tier 3","Tokens - Payoff","Signpost","Elves - Enabler","Tokens Aggro - Payoff"]
 
 ["Woodland Stream"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
+tags = ["Fixer"]
 
-["World Shaper"]
-mana_cost = ["3","G"]
+["Wren's Run Vanquisher"]
+mana_cost = ["1","G"]
 color_identity = "G"
 types = ["creature"]
-tags = ["Land Graveyard - Payoff","Graveyard - Enabler","Landfall - Enabler"]
+tags = ["Elves - Enabler","Elves - Payoff","Signpost","Tier 3"]
 
 ["Yavimaya Coast"]
 mana_cost = []
 color_identity = "C"
 types = ["land"]
-tags = []
-
-["Yavimaya Sapherd"]
-mana_cost = ["2","G"]
-color_identity = "G"
-types = ["creature"]
-tags = ["Tokens - Enabler","ETB - Enabler"]
+tags = ["Fixer"]
 
 ["Young Pyromancer"]
 mana_cost = ["1","R"]
 color_identity = "R"
 types = ["creature"]
-tags = ["Signpost","Spells - Payoff","Tokens - Enabler"]
+tags = ["Signpost","Spells - Payoff","Tier 2","Sacrifice - Enabler","Tokens Aggro - Enabler"]
 
 ["Yuriko, the Tiger's Shadow"]
 mana_cost = ["1","U","B"]
 color_identity = "BU"
 types = ["creature"]
-tags = ["Ninjutsu - Payoff","Signpost","Higher Toughness"]
+tags = ["Ninjutsu - Payoff","Signpost","Tier 2","Ninjas - Enabler","Ninjas - Payoff","Legends - Enabler"]

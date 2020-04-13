@@ -7,28 +7,35 @@ import toml
 class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
-    def __init__(self, name, color_id=None, tags=None):
+    def __init__(self, name, color_id=None, types=None, mana_cost=None, tags=None, power_tier=None,
+                 fixer_color_id=None):
         """
         Args:
             name (str): The card's name.
             color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
                 can assign R for Bomat Courier.
+            types (List[str]): The card's supertypes.
             tags (List[(str, str)]): List of applicable tags for this card, as read from cubetutor.
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
+            power_tier (int): Power level tier as tagged by cube maintainer (currently values 1-4 allowed).
         """
         tags = [] if tags is None else tags
 
         self.name = name
         self.color_id = color_id
+        self.types = types
+        self.mana_cost = mana_cost
         self.tags = tags
+        self.power_tier = power_tier
+        self.fixer_color_id=fixer_color_id
 
-    def __str__(self):
-        return 'C: {}'.format(self.name)
+    def full_repr(self):
+        return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
 
     def __repr__(self):
-        return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
+        return 'C: {}'.format(self.name)
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):
@@ -42,15 +49,22 @@ class Card:
     def from_raw_data(name, properties):
         raw_tags = properties['tags']
         tags = []
-        for raw_tag in raw_tags:
-            split = raw_tag.split('-')
-            if len(split) != 2:
-                # Currently, only two-part tags are supported
-                continue
-            k, v = split
-            tags.append((k.strip(), v.strip()))
+        power_tier = None
 
-        return Card(name, color_id=properties['color_identity'], tags=tags)
+        for raw_tag in raw_tags:
+            # Currently, the only tags we use are:
+            # - power level tags in the format: "Tier N"
+            # - synergy tags in the format: "Theme - Role"
+            if raw_tag.startswith('Tier'):
+                power_tier = int(raw_tag.split(' ')[1])
+            else:
+                split = raw_tag.split('-')
+                if len(split) == 2:
+                    k, v = split
+                    tags.append((k.strip(), v.strip()))
+
+        return Card(name, color_id=properties['color_identity'], types=properties['types'],
+                    mana_cost=properties['mana_cost'], tags=tags, power_tier=power_tier)
 
 
 class Drafter:
@@ -134,6 +148,10 @@ class DraftInfo:
     def num_cards_in_draft(self):
         return self.num_drafters * self.num_phases * self.cards_per_pack
 
+    def __str__(self):
+        return 'num_drafters: {}, num_phases: {}, cards_per_pack: {}'.format(
+            self.num_drafters, self.num_phases, self.cards_per_pack)
+
 
 class Packs:
     """The collection of all packs used in a draft, organized by phase and seat.
@@ -154,7 +172,6 @@ class Packs:
         """
         self.pack_contents = pack_contents
 
-
     def get_pack(self, phase, starting_seat):
         """Gets a specific pack.
 
@@ -169,15 +186,25 @@ class Packs:
         return self.pack_contents[phase][starting_seat]
 
 
-def read_cube_toml(filename):
+def read_cube_toml(filename, fixer_data_filename=None):
     """Reads cube data from a toml file and returns it as a List[Card].
 
     Args:
         filename (str): Path (relative or absolute) to file containing cube list. File must
             be in the TOML format.
+        fixer_data_filename (str): Path (relative or absolute) to file containing color identity data
+            for fixer lands. File should contain a dict of card name: color id, in the TOML format.
 
     Returns:
         List[Card]: The List[Card] from the file.
     """
     raw_data = toml.load(filename)
-    return [Card.from_raw_data(*tup) for tup in raw_data.items()]
+    cube_list = [Card.from_raw_data(*tup) for tup in raw_data.items()]
+
+    if fixer_data_filename:
+        fixers = toml.load(fixer_data_filename)
+        for card in cube_list:
+            if card.name in fixers:
+                card.fixer_color_id = fixers[card.name]
+
+    return cube_list

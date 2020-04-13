@@ -1,4 +1,5 @@
 import argparse
+from collections import namedtuple
 import contextlib
 import os
 import statistics
@@ -12,23 +13,30 @@ def main():
     parser = argparse.ArgumentParser(description='Run N full drafts + deckbuilds for each, with all logs saved.')
     parser.add_argument('n', type=int, help='Number of drafts to run')
     parser.add_argument('--card-data', type=str, help='Card data TOML file', default='cube_81183_tag_data.toml')
+    parser.add_argument('--fixer-data', type=str, help='Fixer data TOML file', default='cube_81183_fixer_data.toml')
     parser.add_argument('-d', '--dir', type=str, help='Output directory for files', default='output')
 
     args = parser.parse_args()
 
-    cube_list = read_cube_toml(args.card_data)
+    cube_list = read_cube_toml(args.card_data, args.fixer_data)
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
-    drafter_factory = GreedySynergyPicker.factory(cube_list)
+    drafter_factory = GreedyPowerAndSynergyPicker.factory(cube_list)
 
-    edge_counts = []
+    deck_metrics = []
     for i in range(0, args.n):
-        edge_counts += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory,
-                                 deckbuild_fn=deckbuild.best_two_color_synergy_build)
+        deck_metrics += run_trial(name=i, output_dir=args.dir, draft_info=draft_info, drafter_factory=drafter_factory,
+                                  deckbuild_fn=deckbuild.best_two_color_synergy_build)
 
-    mean = statistics.mean(edge_counts)
-    median = statistics.median(edge_counts)
-    print('Mean # of edges: {}'.format(mean))
-    print('Median # of edges: {}'.format(median))
+    edge_counts = [dm.num_edges for dm in deck_metrics]
+    avg_power_values = [dm.avg_power for dm in deck_metrics]
+
+    print('Mean # of edges: {}'.format(statistics.mean(edge_counts)))
+    print('Median # of edges: {}'.format(statistics.median(edge_counts)))
+    print('Mean avg deck power: {}'.format(statistics.mean(avg_power_values)))
+    print('Median avg deck power: {}'.format(statistics.median(avg_power_values)))
+
+
+DeckMetrics = namedtuple('DeckMetrics', ['num_edges', 'avg_power'])
 
 
 def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn):
@@ -72,12 +80,17 @@ def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn):
     print('Build HTML written to {}'.format(build_html_file))
 
     # Return # of edges in each deck
-    return [edges_in_deck(d) for d in decks]
+    return [DeckMetrics(num_edges=edges_in_deck(d), avg_power=avg_power(d)) for d in decks]
 
 
 def edges_in_deck(deck):
     deck_graph = synergy.create_graph(deck)
     return len(deck_graph.edges)
+
+
+def avg_power(deck):
+    return statistics.mean([GreedyPowerAndSynergyPicker._power_rating(card) for card in deck
+                            if 'land' not in card.types])
 
 
 def decks_to_html(decks):

@@ -1,0 +1,27 @@
+{% include "drafts/draft_header.html" %}
+<br>
+<b>Build</b>
+<br>
+Synergy edges: {{ num_edges }}
+<br>
+Average card power: {{ avg_power }}
+<div>
+{% for image_url in built_deck_images %}
+    <img src="{{ image_url }}" width="146" height="204" />
+{% endfor %}
+</div>
+
+<b>Leftovers</b>
+
+<div>
+{% for image_url in leftovers_images %}
+    <img src="{{ image_url }}" width="146" height="204" />
+{% endfor %}
+</div>
+
+<textarea rows="{{ textarea_rows }}">
+{% for name in deck_card_names %}1 {{ name }}
+{% endfor %}
+{% for name in leftovers_card_names %}1 {{ name }}
+{% endfor %}
+</textarea>

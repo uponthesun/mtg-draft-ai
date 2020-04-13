@@ -91,6 +91,7 @@ class DraftController:
         if self.debug:
             print(message)
 
+
 def create_packs(draft_info):
     """Creates a collection of shuffled packs to be used for one draft.
 

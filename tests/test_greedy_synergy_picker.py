@@ -1,12 +1,13 @@
 import mock
 import os
 import pytest
-from mtg_draft_ai.brains import GreedySynergyPicker, all_common_neighbors
+from mtg_draft_ai.brains import GreedySynergyPicker, all_common_neighbors, _GSPRating
 from mtg_draft_ai.api import *
 from mtg_draft_ai import synergy
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+
 
 # Cards:
 # Abzan Battle Priest, Ajani's Pridemate, Lightning Helix, "Ayli, Eternal Pilgrim",
@@ -65,8 +66,10 @@ def test_greedy_synergy_picker(cards, cards_by_name, draft_info):
     assert len(ratings) == 5
 
     top_ranked = ratings[0]
-    assert top_ranked.card == cards_by_name['Ayli, Eternal Pilgrim']
     # Expected:
     # total edges: priest/pridemate/ayli all connected
     # common neighbors (not already in pool): swift justice
-    assert top_ranked[1:] == ('WB', 3, 1, picker.default_ratings[top_ranked.card])
+    # edges delta: 2 (ayli + priest, ayli + pridemate)
+    expected = _GSPRating(cards_by_name['Ayli, Eternal Pilgrim'], 'WB', total_edges=3, common_neighbors_weighted=1,
+                          edges_delta=2, default=picker.default_ratings[top_ranked.card])
+    assert top_ranked == expected

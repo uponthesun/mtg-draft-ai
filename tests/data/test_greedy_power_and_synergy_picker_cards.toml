@@ -1,0 +1,47 @@
+["Abzan Battle Priest"]
+mana_cost = ["3","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Counters - Payoff","Keyword","Lifegain - Enabler","Counters - Enabler","Tier 3"]
+
+["Ajani's Pridemate"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Lifegain - Payoff","Tier 3"]
+
+["Lightning Helix"]
+mana_cost = ["R","W"]
+color_identity = "RW"
+types = ["instant"]
+tags = ["Removal","Lifegain - Enabler","Spells - Enabler","Tier 1"]
+
+["Ayli, Eternal Pilgrim"]
+mana_cost = ["W","B"]
+color_identity = "BW"
+types = ["creature"]
+tags = ["Signpost","Lifegain - Enabler","Lifegain - Payoff","Higher Toughness","Tier 1"]
+
+["Tuskguard Captain"]
+mana_cost = ["2","G"]
+color_identity = "G"
+types = ["creature"]
+tags = ["Counters - Enabler","Counters - Payoff","Higher Toughness","Keyword","Tier 3"]
+
+["Swift Justice"]
+mana_cost = ["W"]
+color_identity = "W"
+types = ["instant"]
+tags = ["Trick","Heroic - Enabler","Lifegain - Enabler","Spells - Enabler","Tier 3"]
+
+["Caves of Koilos"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer"]
+
+["Woodland Cemetery"]
+mana_cost = []
+color_identity = "C"
+types = ["land"]
+tags = ["Fixer"]

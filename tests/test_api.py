@@ -1,6 +1,6 @@
 import mock
 import pytest
-from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker
+from mtg_draft_ai.api import Drafter, Packs, DraftInfo, Picker, Card
 
 
 PICKED_CARD = 1
@@ -32,7 +32,7 @@ def test_picker_invalid_pick(draft_info, picker):
         picker.pick.return_value = 'Ace of Spades'
         drafter = Drafter(picker, draft_info)
         drafter.pick(pack=[1, 2, 3])
-    assert 'Drafter made invalid pick Ace of Spades' in str(excinfo)
+    assert 'Drafter made invalid pick Ace of Spades' in str(excinfo.value)
 
 
 def test_packs_get():
@@ -47,3 +47,20 @@ def test_invalid_picker():
 
     with pytest.raises(TypeError):
         InvalidPicker()
+
+
+def test_card_from_raw_data():
+    name = 'Abhorrent Overlord'
+    props = {
+        'color_identity': 'B',
+        'tags': ['Reanimator - Payoff', 'Big', 'Keyword', 'Tier 2', 'Ramp - Payoff'],
+        'types': ['Creature'],
+        'mana_cost': ["5", "B", "B"]
+    }
+    card = Card.from_raw_data(name, props)
+
+    assert card.name == name
+    assert card.color_id == 'B'
+    assert card.power_tier == 2
+    assert card.tags == [('Reanimator', 'Payoff'), ('Ramp', 'Payoff')]
+    assert card.types == ['Creature']

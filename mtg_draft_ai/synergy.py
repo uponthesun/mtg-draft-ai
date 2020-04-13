@@ -3,7 +3,7 @@
 import networkx as nx
 
 
-def create_graph(cards, remove_isolated=True):
+def create_graph(cards, remove_isolated=True, freeze=True):
     """Creates a synergy graph for the given list of card objects.
 
     Each card is a node, and two cards are connected by an edge if one tagged as an Enabler and
@@ -37,7 +37,8 @@ def create_graph(cards, remove_isolated=True):
 
     if remove_isolated:
         G.remove_nodes_from(list(nx.isolates(G)))
-    return nx.freeze(G)
+
+    return nx.freeze(G) if freeze else G
 
 
 def _cards_by_themes(cards):
