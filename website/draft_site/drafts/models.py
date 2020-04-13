@@ -55,6 +55,12 @@ class Drafter(models.Model):
     def owned_cards(self):
         return self.draft.card_set.filter(picked_by=self)
 
+    def waiting_for_drafters(self):
+        human_drafters = self.draft.drafter_set.filter(bot=False)
+        return [d for d in human_drafters
+                if d.current_phase < self.current_phase or
+                d.current_phase == self.current_phase and d.current_pick < self.current_pick]
+
 
 class Card(models.Model):
     draft = models.ForeignKey(Draft, on_delete=models.CASCADE)
