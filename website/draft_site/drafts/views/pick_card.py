@@ -16,7 +16,7 @@ class StaleReadError(Exception):
     pass
 
 
-# /draft/pick-card/<int:draft_id>
+# /draft/<int:draft_id>/pick-card
 def pick_card(request, draft_id):
     draft = get_object_or_404(models.Draft, pk=draft_id)
     drafter = draft.drafter_set.get(seat=request.POST['seat'])
