@@ -72,15 +72,12 @@
         </div>
     {% endif %}
 {% else %}
+    <br>
+    <b>Waiting for drafters in seats:</b>
+    <br>
+    <div id="waiting-for-drafters"></div>
+    <br>
     <script src="{% static 'show_seat_refresh.js' %}"></script>
-    <br>
-    Waiting for human drafters in seats:
-    <br>
-    {% for d in waiting_for_drafters %}
-        {{ d.seat }}
-        <br>
-    {% endfor %}
-    <br>
 {% endif %}
 
 <b>Owned Cards</b>
