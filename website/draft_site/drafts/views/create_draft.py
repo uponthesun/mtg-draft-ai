@@ -11,7 +11,7 @@ from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import Drafter
 
 
-# /draft
+# /draft/create
 @transaction.atomic
 def create_draft(request):
     defaults = {

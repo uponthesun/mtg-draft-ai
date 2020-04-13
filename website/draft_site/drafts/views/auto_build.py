@@ -9,7 +9,7 @@ from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
 
 
-# /draft/<int:draft_id>/seat/<int:seat>/autobuild
+# /draft/<int:draft_id>/seat/<int:seat>/auto-build
 def auto_build(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
     drafter = draft.drafter_set.get(seat=seat)

@@ -16,7 +16,7 @@ def all_picks(request, draft_id, seat):
     context = {
         'draft': draft,
         'drafter': drafter,
-        'seat_range': range(0, draft.num_drafters),
+        'seat_range': range(0, draft.num_drafters),  # Used by header
         'output': output,
     }
     return render(request, 'drafts/all_picks.html', context)
