@@ -1,83 +1,48 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'show_seat.css' %}" />
-<script src="{% static 'show_seat_show_bot_ratings.js' %}"></script>
 {% include "drafts/draft_header.html" %}
 <br>
 
 <div>
 
-{% if not waiting_for_drafters %}
-    {% if not draft_complete %}
-        <br>
-        <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
-    {% endif %}
+{% if draft_complete %}
+    <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
+        <button type="submit">
+            Auto-build deck
+        </button>
+    </form>
+    <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
+    <br>
 
-    {% if drafter.bot %}
-        <!-- Do-nothing form to make formatting consistent with human drafter view -->
-        <form>
-        {% for card, image_url in cards %}
-            <img src="{{ image_url }}" width="146" height="204" />
-        {% endfor %}
-        </form>
-    {% else %}
-        <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
-            {% csrf_token %}
-            <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
-            <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
-            <input name="seat" type="hidden" value="{{ drafter.seat }}">
-            {% for card, image_url in cards %}
-                <button name="picked_card_id" value="{{ card.id }}">
-                    <img src="{{ image_url }}" width="146" height="204" />
-                </button>
-            {% endfor %}
-        </form>
-    {% endif %}
-
-    {% if draft_complete %}
-        <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
-            <button type="submit">
-                Auto-build deck
-            </button>
-        </form>
-        <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
-        <br>
-    {% else %}
-        <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
-
-        <div id="bot_ratings" class="hidden">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Rating</th>
-                    <th>Color Combo</th>
-                    <th>Power Delta</th>
-                    <th>Total Power</th>
-                    <th>Edges Delta</th>
-                    <th>Total Edges</th>
-                    <th>Common Neighbors Weighted</th>
-                </tr>
-                {% for rating in bot_ratings %}
-                <tr>
-                    <td>{{ rating.card.name }}</td>
-                    <td><b>{{ rating.rating }}</b></td>
-                    <td>{{ rating.color_combo }}</td>
-                    <td>{{ rating.power_delta }}</td>
-                    <td>{{ rating.total_power }}</td>
-                    <td>{{ rating.edges_delta }}</td>
-                    <td>{{ rating.total_edges }}</td>
-                    <td>{{ rating.common_neighbors_weighted }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-    {% endif %}
-{% else %}
+{% elif waiting_for_drafters %}
     <br>
     <b>Waiting for drafters in seats:</b>
     <br>
     <div id="waiting-for-drafters"></div>
     <br>
     <script src="{% static 'show_seat_refresh.js' %}"></script>
+
+{% else %}
+    <br>
+    <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
+
+    <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
+        {% csrf_token %}
+        <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
+        <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
+        <input name="seat" type="hidden" value="{{ drafter.seat }}">
+        {% for card, image_url in cards %}
+            {% if drafter.bot %}
+                <img src="{{ image_url }}" width="146" height="204" />
+            {% else %}
+                <button name="picked_card_id" value="{{ card.id }}">
+                    <img src="{{ image_url }}" width="146" height="204" />
+                </button>
+            {% endif %}
+        {% endfor %}
+    </form>
+
+    {% include "drafts/show_seat_bot_ratings.html" %}
 {% endif %}
 
 <b>Owned Cards</b>
