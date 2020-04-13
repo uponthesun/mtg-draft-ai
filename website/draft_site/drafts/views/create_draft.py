@@ -39,8 +39,6 @@ def _create_and_save_draft_models(human_drafter_names, num_bots):
 
     # Create and save Card model objects for this draft
     draft_info = new_draft.to_draft_info(CUBE_DATA.cards)
-    print(new_draft)
-    print(draft_info)
     packs = create_packs(draft_info)
     for phase in range(0, new_draft.num_phases):
         for start_seat in range(0, new_draft.num_drafters):
