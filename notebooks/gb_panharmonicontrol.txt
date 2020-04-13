@@ -1,0 +1,48 @@
+GB panharmonicontrol from CubeTutor.com
+1 Devoted Druid
+1 Dusk Legion Zealot
+1 Graveyard Marshal
+1 Hermit Druid
+1 Kitesail Freebooter
+1 Ravenous Rats
+1 Kindly Stranger
+1 Rishkar, Peema Renegade
+1 Gonti, Lord of Luxury
+1 Haunted Dead
+1 Whisper, Blood Liturgist
+1 Crested Herdcaller
+1 Skullmulcher
+1 Greenwarden of Murasa
+1 Scourge of Nel Toth
+1 Brittle Effigy
+1 Golgari Signet
+1 Panharmonicon
+1 Supernatural Stamina
+1 Commune with the Gods
+1 Crux of Fate
+1 Midnight Oil
+1 Path of Discovery
+1 Foul Orchard
+1 Llanowar Wastes
+1 Temple of Malady
+
+Sideboard
+1 Accorder Paladin
+1 Bishop of Rebirth
+1 Brushland
+1 Cathartic Reunion
+1 Cavern Harpy
+1 Cryptic Serpent
+1 Fists of Ironwood
+1 Harbinger of the Tides
+1 Illusionist's Stratagem
+1 Juniper Order Ranger
+1 Kiri-Onna
+1 Maverick Thopterist
+1 Metalwork Colossus
+1 Oathsworn Vampire
+1 Second Harvest
+1 Selesnya Evangel
+1 Stone Quarry
+1 Stromkirk Condemned
+1 Temple of Plenty
