@@ -8,6 +8,6 @@
 <br>
 View Seat:
 {% for seat in seat_range %}
-    <a href="/draft/{{ draft.id }}/seat/{{ seat }}">{{ seat }}</a>
+    <a href="{% url 'show_seat' draft_id=draft.id seat=seat %}">{{ seat }}</a>
 {% endfor %}
 <br>

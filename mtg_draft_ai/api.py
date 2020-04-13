@@ -148,6 +148,10 @@ class DraftInfo:
     def num_cards_in_draft(self):
         return self.num_drafters * self.num_phases * self.cards_per_pack
 
+    def __str__(self):
+        return 'num_drafters: {}, num_phases: {}, cards_per_pack: {}'.format(
+            self.num_drafters, self.num_phases, self.cards_per_pack)
+
 
 class Packs:
     """The collection of all packs used in a draft, organized by phase and seat.

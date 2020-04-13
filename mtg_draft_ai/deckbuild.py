@@ -171,8 +171,6 @@ def best_two_color_synergy_build(card_pool, build_fn=_communities_build):
         List[Card]: The best build found among all 2-color combinations for this pool.
     """
 
-    print('\nBuilding pool: {}'.format([c.name for c in card_pool]))
-
     candidates = []
     graph = synergy.create_graph(card_pool, remove_isolated=False)
 
@@ -195,10 +193,6 @@ def best_two_color_synergy_build(card_pool, build_fn=_communities_build):
         raise DeckbuildError('No build found')
 
     candidates.sort(key=lambda tup: tup[1:], reverse=True)
-    printable_candidates = [([c.name for c in tup[0]], *tup[1:]) for tup in candidates]
-    print('Deck candidates:')
-    print('\n'.join([str(pc) for pc in printable_candidates]))
-
     return candidates[0][0]
 
 

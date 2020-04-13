@@ -1,4 +1,4 @@
-<form action="/draft" method="post">
+<form action="{% url 'create_draft' %}" method="post">
     {% csrf_token %}
 
     Human drafters (enter one name per line). Seats will be evenly spaced with bots, but in random order.

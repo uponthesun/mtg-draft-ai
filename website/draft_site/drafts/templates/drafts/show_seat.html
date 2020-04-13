@@ -1,6 +1,6 @@
 {%load static %}
-<link rel="stylesheet" href="{% static 'show_pack.css' %}" />
-<script src="{% static 'show_pack.js' %}"></script>
+<link rel="stylesheet" href="{% static 'show_seat.css' %}" />
+<script src="{% static 'show_seat_show_bot_ratings.js' %}"></script>
 {% include "drafts/draft_header.html" %}
 <br>
 
@@ -9,7 +9,7 @@
 {% if not waiting_for_drafters %}
     {% if not draft_complete %}
         <br>
-        <b>Pack {{ phase|add:1 }} Pick {{ pick|add:1 }} </b>
+        <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
     {% endif %}
 
     {% if drafter.bot %}
@@ -20,10 +20,10 @@
         {% endfor %}
         </form>
     {% else %}
-        <form action="/draft/pick-card/{{ draft.id }}" method="post">
+        <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
             {% csrf_token %}
-            <input name="phase" type="hidden" value="{{ phase }}">
-            <input name="pick" type="hidden" value="{{ pick }}">
+            <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
+            <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
             <input name="seat" type="hidden" value="{{ drafter.seat }}">
             {% for card, image_url in cards %}
                 <button name="picked_card_id" value="{{ card.id }}">
@@ -34,12 +34,12 @@
     {% endif %}
 
     {% if draft_complete %}
-        <form action="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/autobuild" method="get">
+        <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
             <button type="submit">
                 Auto-build deck
             </button>
         </form>
-        <a href="/draft/{{ draft.id }}/seat/{{ drafter.seat }}/all-picks">Review Draft</a>
+        <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
         <br>
     {% else %}
         <div><input type="button" onclick="unhide(this, 'bot_ratings') " value="Show Bot Ratings"></div>
@@ -72,7 +72,7 @@
         </div>
     {% endif %}
 {% else %}
-    <script src="{% static 'refresh.js' %}"></script>
+    <script src="{% static 'show_seat_refresh.js' %}"></script>
     <br>
     Waiting for human drafters in seats:
     <br>
