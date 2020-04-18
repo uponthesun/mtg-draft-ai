@@ -137,7 +137,7 @@ def _communities_build(card_pool_graph, main_colors, splash_colors=[]):
     if splash_colors:
         nonland_fixers_in_build = [c for c in current_build if c in nonland_fixers]
         num_fixers = len(nonland_fixers_in_build) + len(land_fixers)
-        max_splash_cards = max(0, num_fixers - 3)
+        max_splash_cards = max(0, num_fixers - 4)
 
         current_splash_cards = [c for c in current_build if _splashed(c, splash_colors)]
         while len(current_splash_cards) > max_splash_cards:
