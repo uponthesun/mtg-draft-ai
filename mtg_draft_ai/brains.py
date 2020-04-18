@@ -54,16 +54,19 @@ class RatedCard:
 
 class ComponentRater(abc.ABC):
 
-    def __init__(self, name, weight):
-        self.name = name
+    def __init__(self, weight=1):
         self.weight = weight
+
+    @abc.abstractmethod
+    def name(self):
+        pass
 
     @abc.abstractmethod
     def rate(self, card, color_combo, cards_owned, draft_info):
         pass
 
     @abc.abstractmethod
-    def normalize(self, value, all_values):
+    def normalize(self, value, all_values, color_combo, cards_owned):
         pass
 
 
@@ -74,11 +77,11 @@ class TwoColorComboRatingsPicker(Picker):
 
     def pick(self, pack, cards_owned, draft_info):
         ranked_candidates = self.ratings(pack, cards_owned, draft_info)
-        return ranked_candidates[0][0]
+        return ranked_candidates[0].card
 
     def ratings(self, pack, cards_owned, draft_info):
-        cards_with_rating_components = self._raw_components(pack, cards_owned, draft_info)
-        cards_with_normalized_rating_components = self._normalized_ratings(cards_with_rating_components)
+        cards_with_rating_components = self._raw_rating_components(pack, cards_owned, draft_info)
+        cards_with_normalized_rating_components = self._normalized_ratings(cards_with_rating_components, cards_owned)
         rated_cards = self._final_ratings(cards_with_normalized_rating_components)
         sorted_rated_cards = sorted(rated_cards, key=lambda rc: rc.rating, reverse=True)
 
@@ -97,14 +100,15 @@ class TwoColorComboRatingsPicker(Picker):
                                              components=rating_components))
         return raw_rating_components
 
-    def _normalized_ratings(self, cards_with_rating_components):
+    def _normalized_ratings(self, cards_with_rating_components, cards_owned):
         normalized_ratings = [copy.copy(r) for r in cards_with_rating_components]
 
         for component_rater in self.component_raters:
             key = component_rater.name
             all_values = [rating.components[key] for rating in normalized_ratings]
             for rating in normalized_ratings:
-                rating.components[key] = component_rater.normalize(rating.components[key], all_values)
+                rating.components[key] = component_rater.normalize(rating.components[key], all_values,
+                                                                   rating.color_combo, cards_owned)
 
         return normalized_ratings
 
@@ -117,6 +121,75 @@ class TwoColorComboRatingsPicker(Picker):
             card_to_rate.rating = round(numerator / denominator, 3)
 
         return final_ratings
+
+
+class CardsOwnedPowerRater(ComponentRater):
+
+    def name(self):
+        return 'cards_owned_power'
+
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        on_color_cards_owned = [c for c in cards_owned if synergy.castable(c, color_combo)]
+        return sum([power_rating(c) for c in on_color_cards_owned])
+
+    def normalize(self, value, all_values, color_combo, cards_owned):
+        return value / max(1, len(cards_owned))
+
+
+class PowerDeltaRater(ComponentRater):
+
+    def name(self):
+        return 'power_delta'
+
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        return power_rating(card)
+
+    def normalize(self, value, all_values, color_combo, cards_owned):
+        return value
+
+
+def power_rating(card):
+    """Assign numerical power value for each power tier."""
+
+    # These values are pretty arbitrary, but they feel like reasonable defaults
+    # in lieu of a data-driven tuning process or theoretical basis for assigning them.
+    # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
+    values_by_tier = {
+        1: 1,
+        2: 0.7,
+        3: 0.4,
+        4: 0.1,
+        None: 0
+    }
+    if card.power_tier not in values_by_tier:
+        raise ValueError('Undefined power tier: {}'.format(card.power_tier))
+    return values_by_tier[card.power_tier]
+
+
+class SynergyDeltaRater(ComponentRater):
+
+    def name(self):
+        return 'syn_edges_delta'
+
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        on_color_cards_owned = [c for c in cards_owned if synergy.castable(c, color_combo)]
+        cards_with_candidate = on_color_cards_owned + [card]
+        syn_graph = synergy.create_graph(cards_with_candidate)
+        edges_delta = syn_graph.degree[card] if card in syn_graph else 0
+        return edges_delta
+
+    def normalize(self, value, all_values, color_combo, cards_owned):
+        return value / max(1, len(cards_owned))
+
+
+class SynergyAndPowerPicker(TwoColorComboRatingsPicker):
+
+    def __init__(self):
+        super().__init__([CardsOwnedPowerRater(), PowerDeltaRater(), SynergyDeltaRater()])
+
+    @classmethod
+    def factory(cls):
+        return Factory(cls, {})
 
 
 class GreedySynergyPicker(Picker):
