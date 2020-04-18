@@ -3,9 +3,7 @@ import os
 import pytest
 from mtg_draft_ai.brains import SynergyPowerFixingPicker
 from mtg_draft_ai.api import *
-
-
-TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+from .. import TEST_DATA_DIR
 
 
 # Cards:

@@ -2,9 +2,7 @@ import os
 import pytest
 from mtg_draft_ai.controller import create_packs, read_cube_list, DraftController
 from mtg_draft_ai.api import DraftInfo, Drafter, Packs, Card, Picker
-
-
-TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+from .. import TEST_DATA_DIR
 
 
 @pytest.fixture
