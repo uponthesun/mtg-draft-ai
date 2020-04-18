@@ -94,7 +94,7 @@ class TwoColorComboRatingsPicker(Picker):
             on_color_candidates = [c for c in pack if synergy.castable(c, color_combo)]
 
             for candidate in on_color_candidates:
-                rating_components = {cr.name: cr.rate(candidate, color_combo, cards_owned, draft_info)
+                rating_components = {cr.name(): cr.rate(candidate, color_combo, cards_owned, draft_info)
                                      for cr in self.component_raters}
                 raw_rating_components.append(RatedCard(card=candidate, color_combo=color_combo,
                                              components=rating_components))
@@ -104,7 +104,7 @@ class TwoColorComboRatingsPicker(Picker):
         normalized_ratings = [copy.copy(r) for r in cards_with_rating_components]
 
         for component_rater in self.component_raters:
-            key = component_rater.name
+            key = component_rater.name()
             all_values = [rating.components[key] for rating in normalized_ratings]
             for rating in normalized_ratings:
                 rating.components[key] = component_rater.normalize(rating.components[key], all_values,
@@ -117,7 +117,7 @@ class TwoColorComboRatingsPicker(Picker):
 
         denominator = sum(cr.weight for cr in self.component_raters)
         for card_to_rate in final_ratings:
-            numerator = sum(cr.weight * card_to_rate.components[cr.name] for cr in self.component_raters)
+            numerator = sum(cr.weight * card_to_rate.components[cr.name()] for cr in self.component_raters)
             card_to_rate.rating = round(numerator / denominator, 3)
 
         return final_ratings

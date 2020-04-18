@@ -14,6 +14,10 @@ def show_seat(request, draft_id, seat):
 
     # Generate bot recommendations
     bot_ratings = _get_bot_ratings(draft, current_pack, sorted_owned_cards)
+    component_keys = list(bot_ratings[0].components.keys())
+    bot_ratings_column_names = ['Name', 'Rating', 'Color Combo'] + component_keys
+    bot_ratings_table = [[r.card.name, r.rating, r.color_combo] + [r.components[k] for k in component_keys]
+                         for r in bot_ratings]
 
     context = {
         'draft': draft,
@@ -21,7 +25,8 @@ def show_seat(request, draft_id, seat):
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in current_pack],
         'owned_cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in sorted_owned_cards],
-        'bot_ratings': bot_ratings,
+        'bot_ratings_column_names': bot_ratings_column_names,
+        'bot_ratings_table': bot_ratings_table,
         'waiting_for_drafters': drafter.waiting_for_drafters(),
         'draft_complete': (drafter.current_phase == draft.num_phases),
     }
@@ -34,4 +39,4 @@ def _get_bot_ratings(draft, current_pack, owned_cards):
     owned_converted = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
     draft_info = draft.to_draft_info(CUBE_DATA.cards)
     # TODO: fix interface for getting ratings
-    return PICKER_FACTORY.create()._get_ratings(pack_converted, owned_converted, draft_info)
+    return PICKER_FACTORY.create().ratings(pack_converted, owned_converted, draft_info)
