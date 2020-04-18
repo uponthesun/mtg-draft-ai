@@ -135,7 +135,9 @@ class CardsOwnedPowerRater(ComponentRater):
         return sum([power_rating(c) for c in on_color_cards_owned])
 
     def normalize(self, value, all_values, color_combo, cards_owned):
-        return value / max(1, len(cards_owned))
+        max_value = max(all_values)
+        return value / max_value if max_value > 0 else 0
+        #return value / max(1, len(cards_owned))
 
 
 class PowerDeltaRater(ComponentRater):
@@ -163,7 +165,9 @@ class SynergyDeltaRater(ComponentRater):
         return edges_delta
 
     def normalize(self, value, all_values, color_combo, cards_owned):
-        return value / max(1, len(cards_owned))
+        max_value = max(all_values)
+        return value / max_value if max_value > 0 else 0
+        #return value / max(1, len(cards_owned))
 
 
 class CardsOwnedSynergyRater(ComponentRater):
