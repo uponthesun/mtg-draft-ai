@@ -1,9 +1,7 @@
-import mock
 import os
 import pytest
 from mtg_draft_ai.brains import all_common_neighbors
 from mtg_draft_ai.api import *
-from mtg_draft_ai import synergy
 
 
 TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -14,7 +12,7 @@ TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 # Tuskguard Captain, Swift Justice
 @pytest.fixture
 def cards():
-    file_path = os.path.join(TEST_DATA_DIR, 'test_greedy_synergy_picker_cards.toml')
+    file_path = os.path.join(TEST_DATA_DIR, 'test_common_neighbors.toml')
     return read_cube_toml(file_path)
 
 

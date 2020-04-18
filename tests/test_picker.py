@@ -11,7 +11,7 @@ TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 # Cards:
 # Abzan Battle Priest, Ajani's Pridemate, Lightning Helix, "Ayli, Eternal Pilgrim",
 # Tuskguard Captain, Swift Justice
-CUBE_LIST_PATH = os.path.join(TEST_DATA_DIR, 'test_greedy_power_and_synergy_picker_cards.toml')
+CUBE_LIST_PATH = os.path.join(TEST_DATA_DIR, 'test_picker.toml')
 FIXER_DATA_PATH = os.path.join(TEST_DATA_DIR, 'fixer_data.toml')
 
 CUBE_LIST = read_cube_toml(CUBE_LIST_PATH, FIXER_DATA_PATH)
