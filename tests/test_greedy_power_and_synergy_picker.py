@@ -68,14 +68,15 @@ def test_composite_ratings():
 
 def test_pick(draft_info, picker):
     owned_cards = _cards(['Abzan Battle Priest', "Ajani's Pridemate"])
-    pack = _cards(['Ayli, Eternal Pilgrim', 'Tuskguard Captain'])
+    pack = _cards(['Ayli, Eternal Pilgrim', 'Tuskguard Captain', 'Caves of Koilos'])
 
     pick = picker.pick(pack, owned_cards, draft_info)
     assert pick == CARDS_BY_NAME['Ayli, Eternal Pilgrim']
 
 
 def test_fixer_land_pick(draft_info, picker):
-    owned_cards = _cards(['Abzan Battle Priest', "Ajani's Pridemate", 'Ayli, Eternal Pilgrim'])
+    owned_cards = _cards(['Abzan Battle Priest', "Ajani's Pridemate", 'Ayli, Eternal Pilgrim', 'Swift Justice',
+                          'Angel of Vitality'])
     pack = _cards(['Tuskguard Captain', 'Caves of Koilos', 'Woodland Cemetery'])
 
     pick = picker.pick(pack, owned_cards, draft_info)

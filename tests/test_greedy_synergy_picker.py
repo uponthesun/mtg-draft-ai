@@ -71,5 +71,5 @@ def test_greedy_synergy_picker(cards, cards_by_name, draft_info):
     # common neighbors (not already in pool): swift justice
     # edges delta: 2 (ayli + priest, ayli + pridemate)
     expected = _GSPRating(cards_by_name['Ayli, Eternal Pilgrim'], 'WB', total_edges=3, common_neighbors_weighted=1,
-                          edges_delta=2, default=picker.default_ratings[top_ranked.card])
+                          edges_delta=2)
     assert top_ranked == expected

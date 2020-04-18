@@ -10,6 +10,12 @@ color_identity = "W"
 types = ["creature"]
 tags = ["Lifegain - Payoff","Tier 3"]
 
+["Angel of Vitality"]
+mana_cost = ["1","W"]
+color_identity = "W"
+types = ["creature"]
+tags = ["Lifegain - Payoff","Tier 3"]
+
 ["Lightning Helix"]
 mana_cost = ["R","W"]
 color_identity = "RW"
