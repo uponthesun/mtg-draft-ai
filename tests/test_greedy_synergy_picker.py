@@ -73,3 +73,6 @@ def test_greedy_synergy_picker(cards, cards_by_name, draft_info):
     expected = _GSPRating(cards_by_name['Ayli, Eternal Pilgrim'], 'WB', total_edges=3, common_neighbors_weighted=1,
                           edges_delta=2, default=picker.default_ratings[top_ranked.card])
     assert top_ranked == expected
+
+    pick = picker.pick(pack=pack, cards_owned=owned_cards, draft_info=draft_info)
+    assert pick == expected.card

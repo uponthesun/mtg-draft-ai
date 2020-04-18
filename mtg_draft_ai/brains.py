@@ -1,12 +1,15 @@
 """Implementations of Picker, which (hopefully) use intelligent strategies to make draft picks."""
 
+import abc
 import collections
-import math
+import copy
+from dataclasses import dataclass
 import random
 import statistics
+from typing import Dict
 import networkx as nx
 from mtg_draft_ai import synergy
-from mtg_draft_ai.api import Picker
+from mtg_draft_ai.api import Card, Picker
 
 
 COLOR_PAIRS = ['WU', 'WB', 'WR', 'WG', 'UB', 'UR', 'UG', 'BR', 'BG', 'RG']
@@ -38,6 +41,82 @@ class Factory:
 
     def create(self):
         return self.output_class(**self.kwargs)
+
+
+# Rating = collections.namedtuple('Rating', ['card', 'color_combo', 'rating', 'components'])
+@dataclass
+class RatedCard:
+    card: Card
+    color_combo: str
+    components: Dict[str, float]
+    rating: float = None
+
+
+class ComponentRater(abc.ABC):
+
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+
+    @abc.abstractmethod
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        pass
+
+    @abc.abstractmethod
+    def normalize(self, value, all_values):
+        pass
+
+
+class TwoColorComboRatingsPicker(Picker):
+
+    def __init__(self, component_raters):
+        self.component_raters = component_raters
+
+    def pick(self, pack, cards_owned, draft_info):
+        ranked_candidates = self.ratings(pack, cards_owned, draft_info)
+        return ranked_candidates[0][0]
+
+    def ratings(self, pack, cards_owned, draft_info):
+        cards_with_rating_components = self._raw_components(pack, cards_owned, draft_info)
+        cards_with_normalized_rating_components = self._normalized_ratings(cards_with_rating_components)
+        rated_cards = self._final_ratings(cards_with_normalized_rating_components)
+        sorted_rated_cards = sorted(rated_cards, key=lambda rc: rc.rating, reverse=True)
+
+        return sorted_rated_cards
+
+    def _raw_rating_components(self, pack, cards_owned, draft_info):
+        raw_rating_components = []
+
+        for color_combo in COLOR_PAIRS:
+            on_color_candidates = [c for c in pack if synergy.castable(c, color_combo)]
+
+            for candidate in on_color_candidates:
+                rating_components = {cr.name: cr.rate(candidate, color_combo, cards_owned, draft_info)
+                                     for cr in self.component_raters}
+                raw_rating_components.append(RatedCard(card=candidate, color_combo=color_combo,
+                                             components=rating_components))
+        return raw_rating_components
+
+    def _normalized_ratings(self, cards_with_rating_components):
+        normalized_ratings = [copy.copy(r) for r in cards_with_rating_components]
+
+        for component_rater in self.component_raters:
+            key = component_rater.name
+            all_values = [rating.components[key] for rating in normalized_ratings]
+            for rating in normalized_ratings:
+                rating.components[key] = component_rater.normalize(rating.components[key], all_values)
+
+        return normalized_ratings
+
+    def _final_ratings(self, cards_with_normalized_rating_components):
+        final_ratings = [copy.copy(r) for r in cards_with_normalized_rating_components]
+
+        denominator = sum(cr.weight for cr in self.component_raters)
+        for card_to_rate in final_ratings:
+            numerator = sum(cr.weight * card_to_rate.components[cr.name] for cr in self.component_raters)
+            card_to_rate.rating = round(numerator / denominator, 3)
+
+        return final_ratings
 
 
 class GreedySynergyPicker(Picker):
