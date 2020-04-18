@@ -14,4 +14,4 @@ _fixer_data_file_path = os.path.join(_data_dir, 'cube_81183_fixer_data.toml')
 # and need to be used by multiple different views.
 # TODO: Redesign this when adding support for multiple cubes.
 CUBE_DATA = CubeData.load(_cube_file_path, _image_urls_file_path, _fixer_data_file_path)
-PICKER_FACTORY = SynergyAndPowerPicker.factory()
+PICKER_FACTORY = SynergyAndPowerPicker.factory(CUBE_DATA.cards)

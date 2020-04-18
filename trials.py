@@ -20,7 +20,7 @@ def main():
 
     cube_list = read_cube_toml(args.card_data, args.fixer_data)
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
-    drafter_factory = SynergyAndPowerPicker.factory()
+    drafter_factory = SynergyAndPowerPicker.factory(cube_list)
 
     deck_metrics = []
     for i in range(0, args.n):

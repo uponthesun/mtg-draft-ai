@@ -182,20 +182,48 @@ class CardsOwnedSynergyRater(ComponentRater):
         return value / max_value if max_value > 0 else 0
 
 
+class CommonNeighborsRater(ComponentRater):
+
+    def __init__(self, common_neighbors, weight=1):
+        super().__init__(weight=weight)
+        self.common_neighbors = common_neighbors
+
+    def name(self):
+        return 'common_neighbors_weighted'
+
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        on_color_cards_owned = [c for c in cards_owned if synergy.castable(c, color_combo)]
+
+        neighbor_count = 0
+        for c in on_color_cards_owned:
+            valid_neighbors = [n.name for n in self.common_neighbors[card][c]
+                               if synergy.castable(n, color_combo)
+                               if n not in cards_owned]
+            neighbor_count += len(valid_neighbors)
+
+        return neighbor_count
+
+    def normalize(self, value, all_values, color_combo, cards_owned):
+        max_value = max(all_values)
+        return value / max_value if max_value > 0 else 0
+
+
 class SynergyAndPowerPicker(TwoColorComboRatingsPicker):
 
-    def __init__(self):
+    def __init__(self, common_neighbors):
         component_raters = [
             CardsOwnedPowerRater(),
             PowerDeltaRater(),
             CardsOwnedSynergyRater(),
-            SynergyDeltaRater()
+            SynergyDeltaRater(),
+            CommonNeighborsRater(common_neighbors=common_neighbors)
         ]
         super().__init__(component_raters)
 
     @classmethod
-    def factory(cls):
-        return Factory(cls, {})
+    def factory(cls, card_list):
+        kwargs = {'common_neighbors': all_common_neighbors(card_list)}
+        return Factory(cls, kwargs)
 
 
 class GreedySynergyPicker(Picker):
@@ -467,7 +495,7 @@ def _normalize(value, max_value):
     return round(value / max_value, 3) if max_value != 0 else 0
 
 
-def all_common_neighbors(graph, cards):
+def all_common_neighbors(cards):
     """Computes common neighbors for all pairs of cards.
 
     Args:
@@ -478,8 +506,9 @@ def all_common_neighbors(graph, cards):
     Returns:
         {Card: {Card: List[Card]}}: dict which allows lookup of a list of common neighbors for any pair of cards.
     """
-    common_neighbors = {}
+    graph = synergy.create_graph(cards)
 
+    common_neighbors = {}
     for i in range(0, len(cards) - 1):
         for j in range(i + 1, len(cards)):
             c1, c2 = cards[i], cards[j]
