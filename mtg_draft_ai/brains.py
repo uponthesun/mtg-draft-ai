@@ -249,7 +249,7 @@ class FixingLandsRater(ComponentRater):
         return set(color_combo_a) == set(color_combo_b)
 
 
-class SynergyAndPowerPicker(TwoColorComboRatingsPicker):
+class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
 
     def __init__(self, common_neighbors):
         component_raters = [
