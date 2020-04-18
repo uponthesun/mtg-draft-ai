@@ -289,7 +289,7 @@ def _fixer_rating(num_oncolor_nonlands, num_picks_made, num_oncolor_fixer_lands)
     # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
     # that improving your mana always has value
     lower_bound = 0.3
-    offset = 1 + num_oncolor_fixer_lands
+    offset = 3 + num_oncolor_fixer_lands
 
     return max(0, lower_bound + (1 - lower_bound) * (num_oncolor_nonlands - offset) / num_picks_made)
 
