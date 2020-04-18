@@ -2,7 +2,6 @@
 
 import abc
 import copy
-from dataclasses import dataclass
 import random
 from typing import Dict
 import networkx as nx
@@ -41,13 +40,13 @@ class Factory:
         return self.output_class(**self.kwargs)
 
 
-# Rating = collections.namedtuple('Rating', ['card', 'color_combo', 'rating', 'components'])
-@dataclass
 class RatedCard:
-    card: Card
-    color_combo: str
-    components: Dict[str, float]
-    rating: float = None
+
+    def __init__(self, card, color_combo, components, rating=None):
+        self.card = card
+        self.color_combo = color_combo
+        self.components = components
+        self.rating = rating
 
 
 class ComponentRater(abc.ABC):

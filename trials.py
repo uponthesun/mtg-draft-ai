@@ -2,6 +2,7 @@ import argparse
 from collections import namedtuple
 import contextlib
 import os
+import statistics
 
 from mtg_draft_ai.controller import *
 from mtg_draft_ai.api import *
