@@ -14,7 +14,7 @@ def show_seat(request, draft_id, seat):
 
     # Generate bot recommendations
     bot_ratings = _get_bot_ratings(draft, current_pack, sorted_owned_cards)
-    component_keys = list(bot_ratings[0].components.keys())
+    component_keys = list(bot_ratings[0].components.keys()) if len(bot_ratings) > 0 else []
     bot_ratings_column_names = ['Name', 'Rating', 'Colors'] + component_keys
     bot_ratings_table = [[r.card.name, r.rating, r.color_combo] + [r.components[k] for k in component_keys]
                          for r in bot_ratings]
