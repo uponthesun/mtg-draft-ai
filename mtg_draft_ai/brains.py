@@ -1,11 +1,9 @@
 """Implementations of Picker, which (hopefully) use intelligent strategies to make draft picks."""
 
 import abc
-import collections
 import copy
 from dataclasses import dataclass
 import random
-import statistics
 from typing import Dict
 import networkx as nx
 from mtg_draft_ai import synergy
@@ -137,7 +135,6 @@ class CardsOwnedPowerRater(ComponentRater):
     def normalize(self, value, all_values, color_combo, cards_owned):
         max_value = max(all_values)
         return value / max_value if max_value > 0 else 0
-        #return value / max(1, len(cards_owned))
 
 
 class PowerDeltaRater(ComponentRater):
@@ -167,7 +164,6 @@ class SynergyDeltaRater(ComponentRater):
     def normalize(self, value, all_values, color_combo, cards_owned):
         max_value = max(all_values)
         return value / max_value if max_value > 0 else 0
-        #return value / max(1, len(cards_owned))
 
 
 class CardsOwnedSynergyRater(ComponentRater):
@@ -272,7 +268,6 @@ def all_common_neighbors(cards):
     """Computes common neighbors for all pairs of cards.
 
     Args:
-        graph (networkx.Graph): The graph to compute common neighbors for.
         cards (List[Card]): Cards to compute common neighbors for. (May include
             cards not in the graph.)
 
