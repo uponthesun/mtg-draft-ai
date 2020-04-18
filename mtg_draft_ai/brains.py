@@ -71,13 +71,14 @@ class ComponentRater(abc.ABC):
 
 
 class TwoColorComboRatingsPicker(Picker):
+    ROUND_NUM_DIGITS = 3
 
     def __init__(self, component_raters):
         self.component_raters = component_raters
 
     def pick(self, pack, cards_owned, draft_info):
         ranked_candidates = self.ratings(pack, cards_owned, draft_info)
-        return ranked_candidates[0].card
+        return ranked_candidates[0].card if len(ranked_candidates) > 0 else pack[0]
 
     def ratings(self, pack, cards_owned, draft_info):
         cards_with_rating_components = self._raw_rating_components(pack, cards_owned, draft_info)
@@ -107,8 +108,9 @@ class TwoColorComboRatingsPicker(Picker):
             key = component_rater.name()
             all_values = [rating.components[key] for rating in normalized_ratings]
             for rating in normalized_ratings:
-                rating.components[key] = component_rater.normalize(rating.components[key], all_values,
+                normalized_value = component_rater.normalize(rating.components[key], all_values,
                                                                    rating.color_combo, cards_owned)
+                rating.components[key] = round(normalized_value, self.ROUND_NUM_DIGITS)
 
         return normalized_ratings
 
@@ -118,7 +120,7 @@ class TwoColorComboRatingsPicker(Picker):
         denominator = sum(cr.weight for cr in self.component_raters)
         for card_to_rate in final_ratings:
             numerator = sum(cr.weight * card_to_rate.components[cr.name()] for cr in self.component_raters)
-            card_to_rate.rating = round(numerator / denominator, 3)
+            card_to_rate.rating = round(numerator / denominator, self.ROUND_NUM_DIGITS)
 
         return final_ratings
 
@@ -148,24 +150,6 @@ class PowerDeltaRater(ComponentRater):
         return value
 
 
-def power_rating(card):
-    """Assign numerical power value for each power tier."""
-
-    # These values are pretty arbitrary, but they feel like reasonable defaults
-    # in lieu of a data-driven tuning process or theoretical basis for assigning them.
-    # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
-    values_by_tier = {
-        1: 1,
-        2: 0.7,
-        3: 0.4,
-        4: 0.1,
-        None: 0
-    }
-    if card.power_tier not in values_by_tier:
-        raise ValueError('Undefined power tier: {}'.format(card.power_tier))
-    return values_by_tier[card.power_tier]
-
-
 class SynergyDeltaRater(ComponentRater):
 
     def name(self):
@@ -182,10 +166,32 @@ class SynergyDeltaRater(ComponentRater):
         return value / max(1, len(cards_owned))
 
 
+class CardsOwnedSynergyRater(ComponentRater):
+
+    def name(self):
+        return 'cards_owned_syn_edges'
+
+    def rate(self, card, color_combo, cards_owned, draft_info):
+        on_color_cards_owned = [c for c in cards_owned if synergy.castable(c, color_combo)]
+        syn_graph = synergy.create_graph(on_color_cards_owned)
+
+        return len(syn_graph.edges)
+
+    def normalize(self, value, all_values, color_combo, cards_owned):
+        max_value = max(all_values)
+        return value / max_value if max_value > 0 else 0
+
+
 class SynergyAndPowerPicker(TwoColorComboRatingsPicker):
 
     def __init__(self):
-        super().__init__([CardsOwnedPowerRater(), PowerDeltaRater(), SynergyDeltaRater()])
+        component_raters = [
+            CardsOwnedPowerRater(),
+            PowerDeltaRater(),
+            CardsOwnedSynergyRater(),
+            SynergyDeltaRater()
+        ]
+        super().__init__(component_raters)
 
     @classmethod
     def factory(cls):
@@ -487,3 +493,21 @@ def all_common_neighbors(graph, cards):
             common_neighbors[c2][c1] = neighbors
 
     return common_neighbors
+
+
+def power_rating(card):
+    """Assign numerical power value for each power tier."""
+
+    # These values are pretty arbitrary, but they feel like reasonable defaults
+    # in lieu of a data-driven tuning process or theoretical basis for assigning them.
+    # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
+    values_by_tier = {
+        1: 1,
+        2: 0.7,
+        3: 0.4,
+        4: 0.1,
+        None: 0
+    }
+    if card.power_tier not in values_by_tier:
+        raise ValueError('Undefined power tier: {}'.format(card.power_tier))
+    return values_by_tier[card.power_tier]
