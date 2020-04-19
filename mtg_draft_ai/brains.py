@@ -286,7 +286,7 @@ class FixingLandsRater(ComponentRater):
 
 
 class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
-    """Current best known configuration of TwoColorComboRatingsPicker."""
+    """Current best known configuration for 'New World Order' cube (81183)."""
 
     def __init__(self, common_neighbors):
         component_raters = [
@@ -305,6 +305,22 @@ class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
     def factory(cls, card_list):
         kwargs = {'common_neighbors': all_common_neighbors(card_list)}
         return Factory(cls, kwargs)
+
+
+class PowerFixingPicker(TwoColorComboRatingsPicker):
+    """WIP configuration for 'Galaxy Brain Cube' (6949)."""
+
+    def __init__(self):
+        component_raters = [
+            CardsOwnedPowerRater(),
+            PowerDeltaRater(),
+            FixingLandsRater()
+        ]
+        super().__init__(component_raters)
+
+    @classmethod
+    def factory(cls):
+        return Factory(cls, {})
 
 
 def all_common_neighbors(cards):
@@ -340,9 +356,10 @@ def power_rating(card):
 
     # These values are pretty arbitrary, but they feel like reasonable defaults
     # in lieu of a data-driven tuning process or theoretical basis for assigning them.
-    # TODO: it's possible we should read these directly from the tags instead, so the cube owner has full control.
+    # TODO: make this configurable per cube
     values_by_tier = {
-        1: 1,
+        0: 1.3,
+        1: 1.0,
         2: 0.7,
         3: 0.4,
         4: 0.1,
