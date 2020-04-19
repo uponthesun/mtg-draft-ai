@@ -3,7 +3,6 @@
 import abc
 import copy
 import random
-from typing import Dict
 import networkx as nx
 from mtg_draft_ai import synergy
 from mtg_draft_ai.api import Card, Picker
@@ -41,8 +40,16 @@ class Factory:
 
 
 class RatedCard:
+    """Rating data for a card + two-color combo. Used by TwoColorComboRatingsPicker."""
 
     def __init__(self, card, color_combo, components, rating=None):
+        """
+        Args:
+            card (Card): The card being rated.
+            color_combo (str): The color combo.
+            components (Dict[str, float]): Component values which will be inputs into the rating.
+            rating (float): The rating for this color combo.
+        """
         self.card = card
         self.color_combo = color_combo
         self.components = components
@@ -50,8 +57,13 @@ class RatedCard:
 
 
 class ComponentRater(abc.ABC):
+    """Defines interface for a Rater for a specific component such as power delta, synergy delta, etc."""
 
     def __init__(self, weight=1):
+        """
+        Args:
+            weight (float): Weight of this component when calculating the final rating.
+        """
         self.weight = weight
 
     @abc.abstractmethod
@@ -60,14 +72,25 @@ class ComponentRater(abc.ABC):
 
     @abc.abstractmethod
     def rate(self, card, color_combo, cards_owned, draft_info):
+        """Returns the rating for this component only."""
         pass
 
     @abc.abstractmethod
     def normalize(self, value, all_values, color_combo, cards_owned):
+        """Maps the given value into the real number range [0, 1]."""
         pass
 
 
 class TwoColorComboRatingsPicker(Picker):
+    """
+    Picker with modular components. Evaluates two-color combinations only for now.
+
+    Does the following steps:
+    1). Generates component ratings for each card x two-color combo
+    2). Normalizes each component rating into the real number range [0, 1]
+    3). Generates final rating via weighted average of components.
+    """
+
     ROUND_NUM_DIGITS = 3
 
     def __init__(self, component_raters):
@@ -123,6 +146,7 @@ class TwoColorComboRatingsPicker(Picker):
 
 
 class CardsOwnedPowerRater(ComponentRater):
+    """Rates the total power of the pool for a color combo, not counting the candidate card."""
 
     def name(self):
         return 'cards_owned_power'
@@ -137,6 +161,7 @@ class CardsOwnedPowerRater(ComponentRater):
 
 
 class PowerDeltaRater(ComponentRater):
+    """Rates the power of candidate card."""
 
     def name(self):
         return 'power_delta'
@@ -149,6 +174,7 @@ class PowerDeltaRater(ComponentRater):
 
 
 class SynergyDeltaRater(ComponentRater):
+    """Rates the synergy edges added to the pool by the candidate card for a color combo."""
 
     def name(self):
         return 'syn_edges_delta'
@@ -166,6 +192,7 @@ class SynergyDeltaRater(ComponentRater):
 
 
 class CardsOwnedSynergyRater(ComponentRater):
+    """Rates the total synergy edges of the pool for a color combo, not counting the candidate card."""
 
     def name(self):
         return 'cards_owned_syn_edges'
@@ -182,6 +209,12 @@ class CardsOwnedSynergyRater(ComponentRater):
 
 
 class CommonNeighborsRater(ComponentRater):
+    """
+    Rates how many common neighbors are shared between your pool and the candidate card for a color combo.
+
+    This is a measure of how well the candidate fits with your card pool in the larger context of the format, which
+    especially helps for early picks when you don't have many cards yet.
+    """
 
     def __init__(self, common_neighbors, weight=1):
         super().__init__(weight=weight)
@@ -208,6 +241,12 @@ class CommonNeighborsRater(ComponentRater):
 
 
 class FixingLandsRater(ComponentRater):
+    """
+    Rates mana fixing for a color combo (lands only for now).
+
+    Generally the rating is higher the more playables you have, and the later in the draft it is.
+    The more fixing lands you already have, the lower it is.
+    """
 
     def name(self):
         return 'land_fixer'
@@ -230,6 +269,8 @@ class FixingLandsRater(ComponentRater):
         # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
         # that improving your mana always has value
         lower_bound = 0.3
+        # Hand-tuned / arbitrary starting offset, which makes it rate fixers lower initially and higher later on.
+        # Having more fixers already increases the offset which decreases the rating.
         offset = 3 + num_oncolor_fixer_lands
         oncolor_nonlands_proportion_with_offset = max(0, (num_oncolor_nonlands - offset)) / num_picks_made
 
@@ -245,6 +286,7 @@ class FixingLandsRater(ComponentRater):
 
 
 class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
+    """Current best known configuration of TwoColorComboRatingsPicker."""
 
     def __init__(self, common_neighbors):
         component_raters = [
@@ -253,6 +295,8 @@ class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
             CardsOwnedSynergyRater(),
             SynergyDeltaRater(),
             CommonNeighborsRater(common_neighbors=common_neighbors),
+            # Weight of 3 so it's equivalent in overall weight to power delta + synergy delta + common neighbors,
+            # which are generally all 0 for fixing lands.
             FixingLandsRater(weight=3)
         ]
         super().__init__(component_raters)
