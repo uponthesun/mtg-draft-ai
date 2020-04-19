@@ -319,7 +319,7 @@ class PowerFixingPicker(TwoColorComboRatingsPicker):
         super().__init__(component_raters)
 
     @classmethod
-    def factory(cls):
+    def factory(cls, card_list):
         return Factory(cls, {})
 
 

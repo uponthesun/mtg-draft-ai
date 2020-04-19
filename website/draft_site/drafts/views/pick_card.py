@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.db import transaction
 
-from .constants import CUBE_DATA, PICKER_FACTORY
+from .constants import CUBES_BY_ID
 from .. import models
 
 LOGGER = logging.getLogger(__name__)
@@ -44,11 +44,12 @@ def _make_bot_picks(draft, phase, pick):
     bot_drafters = sorted(draft.drafter_set.filter(bot=True), key=lambda d: d.seat)
     for db_drafter in bot_drafters:
         db_pack = db_drafter.current_pack()
-        pack = [CUBE_DATA.card_by_name(c.name) for c in db_pack]
+        cube_data = CUBES_BY_ID['6949']
+        pack = [cube_data.card_by_name(c.name) for c in db_pack]
 
         drafter = pickle.loads(db_drafter.bot_state)
         # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-        drafter.picker = PICKER_FACTORY.create()
+        drafter.picker = cube_data.picker_factory.create()
         picked_card = drafter.pick(pack)
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)

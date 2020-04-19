@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .. import models
-from .constants import CUBE_DATA
+from .constants import CUBES_BY_ID
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import Drafter
 
@@ -38,7 +38,7 @@ def _create_and_save_draft_models(human_drafter_names, num_bots):
     new_draft.save()
 
     # Create and save Card model objects for this draft
-    draft_info = new_draft.to_draft_info(CUBE_DATA.cards)
+    draft_info = new_draft.to_draft_info(CUBES_BY_ID['6949'].cards)
     packs = create_packs(draft_info)
     for phase in range(0, new_draft.num_phases):
         for start_seat in range(0, new_draft.num_drafters):

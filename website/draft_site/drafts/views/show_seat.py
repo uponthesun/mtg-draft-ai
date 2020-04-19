@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
 from .. import models
-from .constants import CUBE_DATA, PICKER_FACTORY
+from .constants import CUBES_BY_ID
 
 
 # /draft/<int:draft_id>/seat/<int:seat>
@@ -19,12 +19,14 @@ def show_seat(request, draft_id, seat):
     bot_ratings_table = [[r.card.name, r.rating, r.color_combo] + [r.components[k] for k in component_keys]
                          for r in bot_ratings]
 
+    cube_data = CUBES_BY_ID['6949']
+
     context = {
         'draft': draft,
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
-        'cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in current_pack],
-        'owned_cards': [(c, CUBE_DATA.get_image_url(c.name)) for c in sorted_owned_cards],
+        'cards': [(c, cube_data.get_image_url(c.name)) for c in current_pack],
+        'owned_cards': [(c, cube_data.get_image_url(c.name)) for c in sorted_owned_cards],
         'bot_ratings_column_names': bot_ratings_column_names,
         'bot_ratings_table': bot_ratings_table,
         'waiting_for_drafters': drafter.waiting_for_drafters(),
@@ -35,8 +37,10 @@ def show_seat(request, draft_id, seat):
 
 
 def _get_bot_ratings(draft, current_pack, owned_cards):
-    pack_converted = [CUBE_DATA.card_by_name(c.name) for c in current_pack]
-    owned_converted = [CUBE_DATA.card_by_name(c.name) for c in owned_cards]
-    draft_info = draft.to_draft_info(CUBE_DATA.cards)
+    cube_data = CUBES_BY_ID['6949']
+
+    pack_converted = [cube_data.card_by_name(c.name) for c in current_pack]
+    owned_converted = [cube_data.card_by_name(c.name) for c in owned_cards]
+    draft_info = draft.to_draft_info(cube_data.cards)
     # TODO: fix interface for getting ratings
-    return PICKER_FACTORY.create().ratings(pack_converted, owned_converted, draft_info)
+    return cube_data.picker_factory.create().ratings(pack_converted, owned_converted, draft_info)
