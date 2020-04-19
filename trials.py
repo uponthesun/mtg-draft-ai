@@ -3,6 +3,7 @@ from collections import namedtuple
 import contextlib
 import os
 import statistics
+
 from mtg_draft_ai.controller import *
 from mtg_draft_ai.api import *
 from mtg_draft_ai.brains import *
@@ -20,7 +21,7 @@ def main():
 
     cube_list = read_cube_toml(args.card_data, args.fixer_data)
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
-    drafter_factory = GreedyPowerAndSynergyPicker.factory(cube_list)
+    drafter_factory = SynergyPowerFixingPicker.factory(cube_list)
 
     deck_metrics = []
     for i in range(0, args.n):
@@ -89,7 +90,7 @@ def edges_in_deck(deck):
 
 
 def avg_power(deck):
-    return statistics.mean([GreedyPowerAndSynergyPicker._power_rating(card) for card in deck
+    return statistics.mean([power_rating(card) for card in deck
                             if 'land' not in card.types])
 
 

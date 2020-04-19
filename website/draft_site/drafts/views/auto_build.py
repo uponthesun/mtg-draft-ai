@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 from .. import models
 from .constants import CUBE_DATA
-from mtg_draft_ai.brains import GreedyPowerAndSynergyPicker
+from mtg_draft_ai.brains import power_rating
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
 
@@ -21,7 +21,7 @@ def auto_build(request, draft_id, seat):
     deck_graph = synergy.create_graph(built_deck, remove_isolated=False)
     leftovers = [c for c in pool if c not in built_deck]
     # TODO: fix interface
-    avg_power = statistics.mean([GreedyPowerAndSynergyPicker._power_rating(c) for c in built_deck
+    avg_power = statistics.mean([power_rating(c) for c in built_deck
                                  if 'land' not in c.types])
 
     context = {

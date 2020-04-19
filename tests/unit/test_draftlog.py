@@ -6,9 +6,7 @@ from mtg_draft_ai import draftlog
 from mtg_draft_ai.controller import DraftController, read_cube_toml
 from mtg_draft_ai.api import DraftInfo, Drafter
 from mtg_draft_ai.brains import RandomPicker
-
-
-TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+from .. import TEST_DATA_DIR
 
 
 @pytest.fixture
