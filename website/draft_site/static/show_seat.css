@@ -1,4 +1,13 @@
-.hidden{
+body {
+    background: #333;
+    color: white;
+}
+
+a {
+    color: #00b7ff;
+}
+
+.hidden {
     display:none;
 }
 
