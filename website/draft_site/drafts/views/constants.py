@@ -24,4 +24,4 @@ CUBES = [
         autobuild_enabled=False
     )
 ]
-CUBES_BY_ID = {c.uid: c for c in CUBES}
+CUBES_BY_ID = {c.cube_id: c for c in CUBES}

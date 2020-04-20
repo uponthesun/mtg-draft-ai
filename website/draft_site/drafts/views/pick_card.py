@@ -44,7 +44,7 @@ def _make_bot_picks(draft, phase, pick):
     bot_drafters = sorted(draft.drafter_set.filter(bot=True), key=lambda d: d.seat)
     for db_drafter in bot_drafters:
         db_pack = db_drafter.current_pack()
-        cube_data = CUBES_BY_ID['6949']
+        cube_data = CUBES_BY_ID[draft.cube_id]
         pack = [cube_data.card_by_name(c.name) for c in db_pack]
 
         drafter = pickle.loads(db_drafter.bot_state)

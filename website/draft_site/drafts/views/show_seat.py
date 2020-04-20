@@ -19,7 +19,7 @@ def show_seat(request, draft_id, seat):
     bot_ratings_table = [[r.card.name, r.rating, r.color_combo] + [r.components[k] for k in component_keys]
                          for r in bot_ratings]
 
-    cube_data = CUBES_BY_ID['6949']
+    cube_data = CUBES_BY_ID[draft.cube_id]
 
     context = {
         'draft': draft,
@@ -37,7 +37,7 @@ def show_seat(request, draft_id, seat):
 
 
 def _get_bot_ratings(draft, current_pack, owned_cards):
-    cube_data = CUBES_BY_ID['6949']
+    cube_data = CUBES_BY_ID[draft.cube_id]
 
     pack_converted = [cube_data.card_by_name(c.name) for c in current_pack]
     owned_converted = [cube_data.card_by_name(c.name) for c in owned_cards]

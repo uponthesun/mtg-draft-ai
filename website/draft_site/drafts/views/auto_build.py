@@ -13,7 +13,7 @@ from mtg_draft_ai import synergy
 def auto_build(request, draft_id, seat):
     draft = get_object_or_404(models.Draft, pk=draft_id)
     drafter = draft.drafter_set.get(seat=seat)
-    cube_data = CUBES_BY_ID['6949']
+    cube_data = CUBES_BY_ID[draft.cube_id]
 
     # Convert from DB objects to Card objects with metadata
     pool = [cube_data.card_by_name(c.name) for c in drafter.owned_cards()]
