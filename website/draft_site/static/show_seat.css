@@ -9,3 +9,13 @@ table, th, td {
 .unhidden{
     display:block;
 }
+
+.card {
+  width: 146px;
+  height: 204px;
+}
+
+.card:hover {
+  transform: scale(2) translate(20%, 10%) ;
+  transition-delay: 0.5s;
+}
