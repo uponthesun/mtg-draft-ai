@@ -35,10 +35,10 @@
         <input name="seat" type="hidden" value="{{ drafter.seat }}">
         {% for card, image_url in cards %}
             {% if drafter.bot %}
-                <img src="{{ image_url }}" width="146" height="204" />
+                <img src="{{ image_url }}" class="card" />
             {% else %}
                 <button name="picked_card_id" value="{{ card.id }}">
-                    <img src="{{ image_url }}" width="146" height="204" />
+                    <img src="{{ image_url }}" class="card"/>
                 </button>
             {% endif %}
         {% endfor %}
@@ -52,7 +52,7 @@
 <div>
 {% for _, image_url in owned_cards %}
     {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
-    <img src="{{ image_url }}" width="146" height="204" />
+    <img src="{{ image_url }}" class="card" />
 {% endfor %}
 </div>
 
