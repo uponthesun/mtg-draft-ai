@@ -31,6 +31,7 @@ def show_seat(request, draft_id, seat):
         'bot_ratings_table': bot_ratings_table,
         'waiting_for_drafters': drafter.waiting_for_drafters(),
         'draft_complete': (drafter.current_phase == draft.num_phases),
+        'autobuild_enabled': cube_data.autobuild_enabled
     }
 
     return render(request, 'drafts/show_seat.html', context)
