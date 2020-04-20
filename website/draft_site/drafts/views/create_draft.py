@@ -14,14 +14,12 @@ from mtg_draft_ai.api import Drafter
 # /draft/create
 @transaction.atomic
 def create_draft(request):
-    print(request.POST)
     defaults = {
         'cube_select': None,  # required
         'human_drafter_names': 'Ash Ketchum\n',
         'num_bot_drafters': 5
     }
     params = {k: request.POST.get(k, default=v) for k, v in defaults.items()}
-    print(params)
 
     cube_id = int(params['cube_select'])
     raw_human_drafter_names = params['human_drafter_names'].split('\n')
