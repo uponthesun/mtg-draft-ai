@@ -7,7 +7,7 @@ from mtg_draft_ai.brains import PowerFixingPicker
 CUBES = [
     CubeData.load(
         name='NWO Cube',
-        uid='81183',
+        cube_id=81183,
         cube_file_name='cube_81183_tag_data.toml',
         fixer_data_file_name='cube_81183_fixer_data.toml',
         image_urls_file_name='cube_81183_image_urls.toml',
@@ -16,7 +16,7 @@ CUBES = [
     ),
     CubeData.load(
         name='Galaxy Brain Cube',
-        uid='6949',
+        cube_id=6949,
         cube_file_name='cube_6949_tag_data.toml',
         fixer_data_file_name='cube_6949_fixer_data.toml',
         image_urls_file_name='cube_6949_image_urls.toml',

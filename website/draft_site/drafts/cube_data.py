@@ -14,9 +14,9 @@ DATA_DIR = os.path.join(settings.DRAFTS_APP_DIR, 'cubedata')
 
 class CubeData:
 
-    def __init__(self, name, uid, cards, image_urls, picker_factory, autobuild_enabled=False):
+    def __init__(self, name, cube_id, cards, image_urls, picker_factory, autobuild_enabled=False):
         self.name = name
-        self.uid = uid
+        self.cube_id = cube_id
         self.cards = cards
         self.image_urls = image_urls
         self.picker_factory = picker_factory
@@ -25,7 +25,7 @@ class CubeData:
         self.cards_by_name = {c.name: c for c in cards}
 
     @staticmethod
-    def load(name, uid, cube_file_name, fixer_data_file_name, image_urls_file_name, picker_class,
+    def load(name, cube_id, cube_file_name, fixer_data_file_name, image_urls_file_name, picker_class,
              autobuild_enabled=False):
         cube_file_path = os.path.join(DATA_DIR, cube_file_name)
         fixer_data_file_path = os.path.join(DATA_DIR, fixer_data_file_name)
@@ -36,7 +36,7 @@ class CubeData:
         image_urls = _load_and_update_image_url_cache(card_names, image_urls_file_path)
         picker_factory = picker_class.factory(cards)
 
-        return CubeData(name=name, uid=uid, cards=cards, image_urls=image_urls, picker_factory=picker_factory,
+        return CubeData(name=name, cube_id=cube_id, cards=cards, image_urls=image_urls, picker_factory=picker_factory,
                         autobuild_enabled=autobuild_enabled)
 
     def card_by_name(self, card_name):
