@@ -1,0 +1,16 @@
+card-image {
+    display: inline;
+    margin: 1px;
+}
+
+.highlight {
+    border-width: 10px;
+    border-color: red;
+    border-style: solid;
+}
+
+.pack {
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+}
