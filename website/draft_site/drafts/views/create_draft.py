@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .. import models
-from .constants import CUBE_DATA
+from .constants import CUBES_BY_ID
 from mtg_draft_ai.controller import create_packs
 from mtg_draft_ai.api import Drafter
 
@@ -14,31 +14,36 @@ from mtg_draft_ai.api import Drafter
 # /draft/create
 @transaction.atomic
 def create_draft(request):
+    print(request.POST)
     defaults = {
+        'cube_select': None,  # required
         'human_drafter_names': 'Ash Ketchum\n',
         'num_bot_drafters': 5
     }
     params = {k: request.POST.get(k, default=v) for k, v in defaults.items()}
+    print(params)
+
+    cube_id = int(params['cube_select'])
     raw_human_drafter_names = params['human_drafter_names'].split('\n')
     human_drafter_names = [name.strip() for name in raw_human_drafter_names if len(name.strip()) > 0]
     num_bots = int(params['num_bot_drafters'])
 
-    new_draft = _create_and_save_draft_models(human_drafter_names, num_bots)
+    new_draft = _create_and_save_draft_models(cube_id, human_drafter_names, num_bots)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
 
 # Helper functions below
 
-def _create_and_save_draft_models(human_drafter_names, num_bots):
+def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
 
     # Create and save Draft model objects
-    new_draft = models.Draft(num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
+    new_draft = models.Draft(cube_id=cube_id, num_drafters=num_humans + num_bots, num_phases=3, cards_per_pack=15)
     new_draft.save()
 
     # Create and save Card model objects for this draft
-    draft_info = new_draft.to_draft_info(CUBE_DATA.cards)
+    draft_info = new_draft.to_draft_info(CUBES_BY_ID[cube_id].cards)
     packs = create_packs(draft_info)
     for phase in range(0, new_draft.num_phases):
         for start_seat in range(0, new_draft.num_drafters):

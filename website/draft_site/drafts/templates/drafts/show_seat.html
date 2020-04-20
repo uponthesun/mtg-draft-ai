@@ -6,11 +6,13 @@
 <div>
 
 {% if draft_complete %}
-    <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
-        <button type="submit">
-            Auto-build deck
-        </button>
-    </form>
+    {% if autobuild_enabled %}
+        <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
+            <button type="submit">
+                Auto-build deck
+            </button>
+        </form>
+    {% endif %}
     <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
     <br>
 
