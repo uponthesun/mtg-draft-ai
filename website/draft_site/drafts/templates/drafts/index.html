@@ -1,3 +1,6 @@
+{%load static %}
+<link rel="stylesheet" href="{% static 'general.css' %}" />
+
 <form action="{% url 'create_draft' %}" method="post">
     {% csrf_token %}
 
