@@ -21,8 +21,7 @@ def main():
 
     cube_list = read_cube_toml(args.card_data, args.fixer_data)
     draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
-    #drafter_factory = SynergyPowerFixingPicker.factory(cube_list)
-    drafter_factory = PowerFixingPicker.factory(cube_list)
+    drafter_factory = SynergyPowerFixingPicker.factory(cube_list)
 
     deck_metrics = []
     for i in range(0, args.n):
@@ -74,8 +73,7 @@ def run_trial(name, output_dir, draft_info, drafter_factory, deckbuild_fn):
     # Run deckbuild, redirecting output to debug file
     with open(build_debug_file, 'w') as f:
         with contextlib.redirect_stdout(f):
-            #decks = [deckbuild_fn(d.cards_owned) for d in drafters]
-            decks = [d.cards_owned for d in drafters]
+            decks = [deckbuild_fn(d.cards_owned) for d in drafters]
 
     # Write build.html - HTML display of final built decks for every seat
     with open(build_html_file, 'w') as f:
