@@ -664,7 +664,7 @@ color_identity = "U"
 types = ["instant"]
 tags = ["Tier 3"]
 
-["Dissolve"]
+["Neutralize"]
 mana_cost = ["1","U","U"]
 color_identity = "U"
 types = ["instant"]
@@ -3043,5 +3043,23 @@ tags = ["Tier 3"]
 ["Zur the Enchanter"]
 mana_cost = ["1","W","U","B"]
 color_identity = "BUW"
+types = ["creature"]
+tags = ["Tier 3"]
+
+["Offspring's Revenge"]
+mana_cost = ["2","W","B", "R"]
+color_identity = "BRW"
+types = ["enchantment"]
+tags = ["Tier 3"]
+
+["Song of Creation"]
+mana_cost = ["1","U","R", "G"]
+color_identity = "GRU"
+types = ["enchantment"]
+tags = ["Tier 4"]
+
+["Cryptic Trilobite"]
+mana_cost = ["X", "X"]
+color_identity = "C"
 types = ["creature"]
 tags = ["Tier 3"]
