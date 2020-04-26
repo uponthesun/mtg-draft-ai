@@ -1684,6 +1684,12 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "Tier 3",]
 
+["Flameshadow Conjuring"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Tier 3",]
+
 ["Sneak Attack"]
 mana_cost = [ "3", "R",]
 color_identity = "R"

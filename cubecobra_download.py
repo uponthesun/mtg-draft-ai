@@ -27,7 +27,7 @@ def type_line_to_types(type_line):
 
 
 def get_mana_cost(name):
-    if 'mana_cost' in CURRENT_DATA[name]:
+    if name in CURRENT_DATA and 'mana_cost' in CURRENT_DATA[name]:
         return CURRENT_DATA[name]['mana_cost']
 
     mana_cost_scryfall = get_mana_cost_scryfall(name)
