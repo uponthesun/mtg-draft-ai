@@ -2,115 +2,115 @@
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Doomed Traveler"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Isamaru, Hound of Konda"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Thraben Inspector"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 [Topplegeist]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Daring Skyjek"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 [Eight-and-a-Half-Tails]
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Enduring Sliver"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Kor Skyfisher"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Leonin Relic-Warder"]
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Puresteel Paladin"]
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Restoration Specialist"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Sram, Senior Edificer"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Stone Haven Outfitter"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Stoneforge Mystic"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Abzan Falconer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Flickerwisp]
 mana_cost = [ "1", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Master of Pearls"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Mentor of the Meek"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Nomad Mythmaker"]
 mana_cost = [ "2", "W",]
@@ -122,13 +122,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Tethmos High Priest"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Academy Rector"]
 mana_cost = [ "3", "W",]
@@ -146,7 +146,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Kor Cartographer"]
 mana_cost = [ "3", "W",]
@@ -158,7 +158,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Lotus-Eye Mystics"]
 mana_cost = [ "3", "W",]
@@ -170,7 +170,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Springjack Shepherd"]
 mana_cost = [ "3", "W",]
@@ -194,7 +194,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "4", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 0", " aggro",]
+tags = [ "Tier 0", "aggro",]
 
 ["Totem-Guide Hartebeest"]
 mana_cost = [ "4", "W",]
@@ -218,25 +218,25 @@ tags = [ "Tier 4",]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Emerge Unscathed"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Gods Willing"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Path to Exile"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 [Tithe]
 mana_cost = [ "W",]
@@ -248,13 +248,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Unexpectedly Absent"]
 mana_cost = [ "X", "W", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Forsake the Worldly"]
 mana_cost = [ "2", "W",]
@@ -272,7 +272,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Faith's Reward"]
 mana_cost = [ "3", "W",]
@@ -284,7 +284,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "X", "W", "W",]
 color_identity = "W"
 types = [ "sorcery",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Death or Glory"]
 mana_cost = [ "4", "W",]
@@ -314,7 +314,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "artifact",]
-tags = [ "Tier 2", " aggro", " flexible",]
+tags = [ "Tier 2", "aggro", "flexible",]
 
 ["Scepter of Dominance"]
 mana_cost = [ "1", "W", "W",]
@@ -326,7 +326,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "snow", "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Genju of the Fields"]
 mana_cost = [ "W",]
@@ -338,7 +338,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Sentinel's Eyes"]
 mana_cost = [ "W",]
@@ -350,7 +350,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Hoofprints of the Stag"]
 mana_cost = [ "1", "W",]
@@ -380,13 +380,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Promise of Bunrei"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Endless Horizons"]
 mana_cost = [ "3", "W",]
@@ -854,31 +854,31 @@ tags = [ "Tier 3",]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Viscera Seer"]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Asylum Visitor"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Blood Artist"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Bloodghast]
 mana_cost = [ "B", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 [Carrionette]
 mana_cost = [ "1", "B",]
@@ -896,31 +896,31 @@ tags = [ "Tier 4",]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Nether Traitor"]
 mana_cost = [ "B", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Olivia's Dragoon"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Oona's Prowler"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Pain Seer"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Soldevi Adnate"]
 mana_cost = [ "1", "B",]
@@ -932,7 +932,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Big Game Hunter"]
 mana_cost = [ "1", "B", "B",]
@@ -944,13 +944,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Nantuko Husk"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Pawn of Ulamog"]
 mana_cost = [ "1", "B", "B",]
@@ -962,7 +962,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Spectral Sliver"]
 mana_cost = [ "2", "B",]
@@ -980,7 +980,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Toshiro Umezawa"]
 mana_cost = [ "1", "B", "B",]
@@ -992,7 +992,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Crypt Ghast"]
 mana_cost = [ "3", "B",]
@@ -1016,7 +1016,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Necrotic Ooze"]
 mana_cost = [ "2", "B", "B",]
@@ -1058,7 +1058,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "4", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Extractor Demon"]
 mana_cost = [ "4", "B", "B",]
@@ -1100,19 +1100,19 @@ tags = [ "Tier 2",]
 mana_cost = [ "0",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Tragic Slip"]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Go for the Throat"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Grim Harvest"]
 mana_cost = [ "1", "B",]
@@ -1130,7 +1130,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Drag to the Underworld"]
 mana_cost = [ "2", "B", "B",]
@@ -1154,7 +1154,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "4", "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Cabal Therapy"]
 mana_cost = [ "B",]
@@ -1172,7 +1172,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Demonic Tutor"]
 mana_cost = [ "1", "B",]
@@ -1184,7 +1184,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "B", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Macabre Waltz"]
 mana_cost = [ "1", "B",]
@@ -1238,7 +1238,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Soul Stair Expedition"]
 mana_cost = [ "B",]
@@ -1274,73 +1274,73 @@ tags = [ "Tier 4",]
 mana_cost = [ "1",]
 color_identity = "R"
 types = [ "artifact", "creature",]
-tags = [ "Tier 2", " aggro", " aggro-only",]
+tags = [ "Tier 2", "aggro", "aggro-only",]
 
 ["Jackal Pup"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Monastery Swiftspear"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Scorched Rusalka"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Stonewright]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Striking Sliver"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Abbot of Keral Keep"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Bladeback Sliver"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Dreadhorde Arcanist"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Ember Hauler"]
 mana_cost = [ "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Firefist Striker"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Humble Defector"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Hunter Sliver"]
 mana_cost = [ "1", "R",]
@@ -1352,37 +1352,37 @@ tags = [ "Tier 4",]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Lightning Mauler"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Mogg War Marshal"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Soulbright Flamekin"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Stingscourger]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Young Pyromancer"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Akroma, Angel of Fury"]
 mana_cost = [ "5", "R", "R", "R",]
@@ -1394,13 +1394,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Hissing Iguanar"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Hollowhead Sliver"]
 mana_cost = [ "2", "R",]
@@ -1418,13 +1418,13 @@ tags = [ "Tier 2",]
 mana_cost = [ "1", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Pyreheart Wolf"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro", " aggro-only",]
+tags = [ "Tier 2", "aggro", "aggro-only",]
 
 ["Quicksmith Genius"]
 mana_cost = [ "2", "R",]
@@ -1442,13 +1442,13 @@ tags = [ "Tier 4",]
 mana_cost = [ "3", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Fledgling Dragon"]
 mana_cost = [ "2", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Kurkesh, Onakke Ancient"]
 mana_cost = [ "2", "R", "R",]
@@ -1466,7 +1466,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "3", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Emrakul's Hatcher"]
 mana_cost = [ "4", "R",]
@@ -1478,7 +1478,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "4", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Flayer of the Hatebound"]
 mana_cost = [ "5", "R",]
@@ -1508,7 +1508,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "9", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 0", " aggro",]
+tags = [ "Tier 0", "aggro",]
 
 ["Jaya, Venerated Firemage"]
 mana_cost = [ "4", "R",]
@@ -1520,31 +1520,31 @@ tags = [ "Tier 3",]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Burst Lightning"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Lightning Axe"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Lightning Bolt"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Otherworldly Outburst"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "aggro", " aggro-only", " Tier 3",]
+tags = [ "aggro", "aggro-only", "Tier 3",]
 
 ["Battle Hymn"]
 mana_cost = [ "1", "R",]
@@ -1568,37 +1568,37 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Magma Jet"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Stoke the Flames"]
 mana_cost = [ "2", "R", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Flame Javelin"]
 mana_cost = [ "2", "/", "R", "2", "/", "R", "2", "/", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Devastating Summons"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 [Earthquake]
 mana_cost = [ "X", "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Faithless Looting"]
 mana_cost = [ "R",]
@@ -1610,7 +1610,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Cathartic Reunion"]
 mana_cost = [ "1", "R",]
@@ -1622,7 +1622,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Fire Ambush"]
 mana_cost = [ "1", "R",]
@@ -1652,7 +1652,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Empty the Warrens"]
 mana_cost = [ "3", "R",]
@@ -1694,7 +1694,7 @@ tags = [ "Tier 0",]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Caustic Caterpillar"]
 mana_cost = [ "G",]
@@ -1706,7 +1706,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Elvish Visionary"]
 mana_cost = [ "1", "G",]
@@ -1718,19 +1718,19 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Jade Mage"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Lotus Cobra"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Manaweft Sliver"]
 mana_cost = [ "1", "G",]
@@ -1742,19 +1742,19 @@ tags = [ "Tier 2",]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Obsessive Skinner"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Quirion Dryad"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Sakura-Tribe Elder"]
 mana_cost = [ "1", "G",]
@@ -1772,25 +1772,25 @@ tags = [ "Tier 2",]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro", " aggro-only",]
+tags = [ "Tier 4", "aggro", "aggro-only",]
 
 ["Syr Faren, the Hengehammer"]
 mana_cost = [ "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 [Werebear]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Wild Mongrel"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Civic Wayfinder"]
 mana_cost = [ "2", "G",]
@@ -1814,7 +1814,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "4", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "aggro", " Tier 3",]
+tags = [ "aggro", "Tier 3",]
 
 ["Loaming Shaman"]
 mana_cost = [ "2", "G",]
@@ -1826,7 +1826,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Splinterfright]
 mana_cost = [ "2", "G",]
@@ -1838,19 +1838,19 @@ tags = [ "Tier 2",]
 mana_cost = [ "1", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Briarhorn]
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Centaur Chieftain"]
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Citanul Hierophants"]
 mana_cost = [ "3", "G",]
@@ -1874,7 +1874,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro", " aggro-only",]
+tags = [ "Tier 4", "aggro", "aggro-only",]
 
 ["Oracle of Mul Daya"]
 mana_cost = [ "3", "G",]
@@ -1958,13 +1958,13 @@ tags = [ "Tier 2",]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Sylvan Might"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Realms Uncharted"]
 mana_cost = [ "2", "G",]
@@ -1976,7 +1976,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Chord of Calling"]
 mana_cost = [ "X", "G", "G", "G",]
@@ -2006,7 +2006,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "sorcery",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 [Explore]
 mana_cost = [ "1", "G",]
@@ -2084,7 +2084,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Greater Good"]
 mana_cost = [ "2", "G", "G",]
@@ -2102,13 +2102,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "4", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 0", " aggro",]
+tags = [ "Tier 0", "aggro",]
 
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
 color_identity = "UW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Momentary Blink"]
 mana_cost = [ "1", "W",]
@@ -2118,7 +2118,7 @@ tags = [ "Tier 3",]
 
 ["Puresight Merrow"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
-color_identity = "UW"
+color_identity = "WU"
 types = [ "creature",]
 tags = [ "Tier 3",]
 
@@ -2132,7 +2132,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "W", "/", "U", "W", "/", "U",]
 color_identity = "UW"
 types = [ "instant",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Disciple of Deceit"]
 mana_cost = [ "U", "B",]
@@ -2150,7 +2150,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "U", "/", "B", "U", "/", "B",]
 color_identity = "BU"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Forbidden Alchemy"]
 mana_cost = [ "2", "U",]
@@ -2174,13 +2174,13 @@ tags = [ "Tier 4",]
 mana_cost = [ "B", "R",]
 color_identity = "BR"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 [Terminate]
 mana_cost = [ "B", "R",]
 color_identity = "BR"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Crypt Champion"]
 mana_cost = [ "3", "B",]
@@ -2192,13 +2192,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "R", "/", "G", "R", "/", "G",]
 color_identity = "GR"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Fires of Yavimaya"]
 mana_cost = [ "1", "R", "G",]
 color_identity = "GR"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Ulasht, the Hate Seed"]
 mana_cost = [ "2", "R", "G",]
@@ -2210,13 +2210,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "G", "W",]
 color_identity = "GW"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Selesnya Guildmage"]
 mana_cost = [ "G", "/", "W", "G", "/", "W",]
 color_identity = "GW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Harmonic Sliver"]
 mana_cost = [ "1", "G", "W",]
@@ -2228,19 +2228,19 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "G", "W",]
 color_identity = "GW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Sigil of the Nayan Gods"]
 mana_cost = [ "1", "G", "W",]
 color_identity = "GW"
 types = [ "enchantment",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Cartel Aristocrat"]
 mana_cost = [ "W", "B",]
 color_identity = "BW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Anguished Unmaking"]
 mana_cost = [ "1", "W", "B",]
@@ -2258,7 +2258,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "W", "/", "B", "W", "/", "B", "W", "/", "B",]
 color_identity = "BW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Rise to Glory"]
 mana_cost = [ "3", "W", "B",]
@@ -2282,7 +2282,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "1", "B", "G",]
 color_identity = "BG"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Cadaverous Bloom"]
 mana_cost = [ "3", "B", "G",]
@@ -2306,7 +2306,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2", "G", "/", "U",]
 color_identity = "GU"
 types = [ "instant",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Dormant Sliver"]
 mana_cost = [ "2", "G", "U",]
@@ -2330,7 +2330,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "U", "/", "R",]
 color_identity = "RU"
 types = [ "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Desperate Ravings"]
 mana_cost = [ "1", "R",]
@@ -2342,13 +2342,13 @@ tags = [ "Tier 3",]
 mana_cost = [ "U", "/", "R", "U", "/", "R",]
 color_identity = "RU"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Goblin Electromancer"]
 mana_cost = [ "U", "R",]
 color_identity = "RU"
 types = [ "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Saheeli, Sublime Artificer"]
 mana_cost = [ "1", "U", "/", "R", "U", "/", "R",]
@@ -2366,13 +2366,13 @@ tags = [ "Tier 2",]
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Rise of the Hobgoblins"]
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
 types = [ "enchantment",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Leave // Chance"]
 mana_cost = [ "1", "W",]
@@ -2420,7 +2420,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Cryptic Trilobite"]
 mana_cost = [ "X", "X",]
@@ -2438,7 +2438,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Crashing Drawbridge"]
 mana_cost = [ "2",]
@@ -2456,7 +2456,7 @@ tags = [ "Tier 1",]
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Sorcerer's Broom"]
 mana_cost = [ "2",]
@@ -2480,7 +2480,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "3", "R", "R",]
 color_identity = ""
 types = [ "creature",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 [Scarecrone]
 mana_cost = [ "3",]
@@ -2558,7 +2558,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 2", " aggro", " aggro-only",]
+tags = [ "Tier 2", "aggro", "aggro-only",]
 
 ["Aether Vial"]
 mana_cost = [ "1",]
@@ -2570,7 +2570,7 @@ tags = [ "Tier 1",]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Brittle Effigy"]
 mana_cost = [ "1",]
@@ -2582,7 +2582,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "X",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Codex Shredder"]
 mana_cost = [ "1",]
@@ -2606,7 +2606,7 @@ tags = [ "Tier 4",]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Paradise Mantle"]
 mana_cost = [ "0",]
@@ -2642,7 +2642,7 @@ tags = [ "Tier 3",]
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Mind Stone"]
 mana_cost = [ "2",]
@@ -2654,7 +2654,7 @@ tags = [ "Tier 2",]
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 1", " aggro",]
+tags = [ "Tier 1", "aggro",]
 
 ["Prismatic Lens"]
 mana_cost = [ "2",]
@@ -2678,13 +2678,13 @@ tags = [ "Tier 1",]
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "aggro", " aggro-only", " Tier 3",]
+tags = [ "aggro", "aggro-only", "Tier 3",]
 
 ["Veteran's Armaments"]
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "tribal", "artifact",]
-tags = [ "Tier 3", " aggro", " aggro-only",]
+tags = [ "Tier 3", "aggro", "aggro-only",]
 
 ["Ashnod's Altar"]
 mana_cost = [ "3",]
@@ -3074,7 +3074,7 @@ tags = [ "Fixer",]
 mana_cost = []
 color_identity = "R"
 types = [ "land",]
-tags = [ "Tier 3", " aggro",]
+tags = [ "Tier 3", "aggro",]
 
 ["Marsh Flats"]
 mana_cost = []
@@ -3104,7 +3104,7 @@ tags = [ "Tier 4",]
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Tier 2", " aggro",]
+tags = [ "Tier 2", "aggro",]
 
 ["Nykthos, Shrine to Nyx"]
 mana_cost = []
@@ -3140,7 +3140,7 @@ tags = [ "Tier 4",]
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Tier 4", " aggro",]
+tags = [ "Tier 4", "aggro",]
 
 ["Verdant Catacombs"]
 mana_cost = []

@@ -46,7 +46,7 @@ def convert_cubecobra_card(name, card):
         'mana_cost': get_mana_cost(name),
         'color_identity': card['Color'],
         'types': type_line_to_types(card['Type']),
-        'tags': card['Tags'].split(',')
+        'tags': [t.strip() for t in card['Tags'].split(',')]
     }
 
 converted_cards_by_name = {name: convert_cubecobra_card(name, card) for name, card in cards_by_name.items()}
