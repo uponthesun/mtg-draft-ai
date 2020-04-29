@@ -19,7 +19,7 @@ csv_rows = [row for row in reader]
 keys = csv_rows[0]
 card_rows = csv_rows[1:]
 cards_from_csv = [{k: v for k, v in zip(keys, row)} for row in card_rows]
-cards_by_name = {card['Name']: card for card in cards_from_csv}
+cards_by_name = {c['Name']: c for c in cards_from_csv if c['Maybeboard'] == 'false'}
 
 def type_line_to_types(type_line):
     types = type_line.split('-')[0].strip().split(' ')
