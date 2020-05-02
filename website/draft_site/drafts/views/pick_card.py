@@ -43,10 +43,9 @@ def _make_bot_picks(human_drafter, phase, pick):
 
     cube_data = CUBES_BY_ID[draft.cube_id]
 
-    next_drafter = human_drafter.passing_to()
+    next_drafter = human_drafter.receiving_from()
 
-    while next_drafter.bot:
-        # print('Making bot pick for seat {}'.format(next_drafter.seat))
+    while next_drafter.bot and next_drafter.current_pack() is not None:
         db_pack = next_drafter.current_pack()
         pack = [cube_data.card_by_name(c.name) for c in db_pack]
 
@@ -60,7 +59,7 @@ def _make_bot_picks(human_drafter, phase, pick):
         next_drafter.bot_state = pickle.dumps(mtg_ai_drafter)
         _save_pick(draft, next_drafter, picked_db_card, phase, pick)
 
-        next_drafter = next_drafter.passing_to()
+        next_drafter = next_drafter.receiving_from()
 
 
 def _save_pick(draft, drafter, card, phase, pick):

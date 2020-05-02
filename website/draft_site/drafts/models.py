@@ -31,6 +31,11 @@ class Drafter(models.Model):
             self.id, self.name, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
 
     def current_pack(self):
+        # If the next pack hasn't been passed yet, return None.
+        receiving_from_drafter_progress = (self.receiving_from().current_phase, self.receiving_from().current_pick)
+        if receiving_from_drafter_progress < (self.current_phase, self.current_pick):
+            return None
+
         # Implement "passing" packs after each pick by shifting the index of the pack
         # assigned to each drafter by the pick index. We add when passing left,
         # and subtract when passing right (picture the packs staying in place,
@@ -41,8 +46,10 @@ class Drafter(models.Model):
         return self.draft.card_set.filter(phase=self.current_phase, start_seat=pack_index, picked_by__isnull=True)
 
     def passing_to(self):
-        passing_to_seat = (self.seat + self._direction()) % self.draft.num_drafters
-        return self.draft.drafter_set.filter(seat=passing_to_seat).first()
+        return self._adjacent_drafter(self._direction())
+
+    def receiving_from(self):
+        return self._adjacent_drafter(-1 * self._direction())
 
     def owned_cards(self):
         return self.draft.card_set.filter(picked_by=self)
@@ -56,6 +63,10 @@ class Drafter(models.Model):
     def _direction(self):
         # Alternate passing directions based on phase, starting with passing left.
         return -1 if self.current_phase % 2 == 0 else 1
+
+    def _adjacent_drafter(self, direction):
+        passing_to_seat = (self.seat + direction) % self.draft.num_drafters
+        return self.draft.drafter_set.filter(seat=passing_to_seat).first()
 
 
 class Card(models.Model):

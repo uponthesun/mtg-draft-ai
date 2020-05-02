@@ -33,6 +33,19 @@ def create_draft(request):
 
 # Helper functions below
 
+def _make_initial_bot_picks(draft):
+    bots = draft.drafter_set.filter(bot=True).all()
+
+    can_pick_bots = [b for b in bots if b.current_pack() is not None]
+    while any(can_pick_bots):
+        for b in can_pick_bots:
+            pass
+
+        can_pick_bots = [b for b in bots if b.current_pack() is not None]
+
+    pass
+
+
 def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
 
