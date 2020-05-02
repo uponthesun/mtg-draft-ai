@@ -29,9 +29,7 @@ def pick_card(request, draft_id):
         with transaction.atomic():
             _save_pick(draft, drafter, picked_card, phase, pick)
 
-            # TODO: Use drafter field to designate primary instead of hardcoding it as seat 0
-            if drafter.seat == 0:
-                _make_bot_picks(draft, phase, pick)
+            _make_bot_picks(drafter, phase, pick)
     except StaleReadError:
         LOGGER.info('Stale read occurred when picking card, transaction was rolled back')
 
@@ -40,22 +38,29 @@ def pick_card(request, draft_id):
 
 # Helper functions below
 
-def _make_bot_picks(draft, phase, pick):
-    bot_drafters = sorted(draft.drafter_set.filter(bot=True), key=lambda d: d.seat)
-    for db_drafter in bot_drafters:
-        db_pack = db_drafter.current_pack()
-        cube_data = CUBES_BY_ID[draft.cube_id]
+def _make_bot_picks(human_drafter, phase, pick):
+    draft = human_drafter.draft
+
+    cube_data = CUBES_BY_ID[draft.cube_id]
+
+    next_drafter = human_drafter.passing_to()
+
+    while next_drafter.bot:
+        # print('Making bot pick for seat {}'.format(next_drafter.seat))
+        db_pack = next_drafter.current_pack()
         pack = [cube_data.card_by_name(c.name) for c in db_pack]
 
-        drafter = pickle.loads(db_drafter.bot_state)
+        mtg_ai_drafter = pickle.loads(next_drafter.bot_state)
         # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-        drafter.picker = cube_data.picker_factory.create()
-        picked_card = drafter.pick(pack)
+        mtg_ai_drafter.picker = cube_data.picker_factory.create()
+
+        picked_card = mtg_ai_drafter.pick(pack)
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
-        drafter.picker = None
-        db_drafter.bot_state = pickle.dumps(drafter)
-        _save_pick(draft, db_drafter, picked_db_card, phase, pick)
+        next_drafter.bot_state = pickle.dumps(mtg_ai_drafter)
+        _save_pick(draft, next_drafter, picked_db_card, phase, pick)
+
+        next_drafter = next_drafter.passing_to()
 
 
 def _save_pick(draft, drafter, card, phase, pick):
