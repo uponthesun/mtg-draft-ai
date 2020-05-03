@@ -37,12 +37,12 @@ def create_draft(request):
 def _make_initial_bot_picks(draft):
     bots = draft.drafter_set.filter(bot=True).all()
 
+    # TODO: improve performance
     can_pick_bots = [b for b in bots if b.current_pack() is not None]
     while any(can_pick_bots):
         for b in can_pick_bots:
             b.make_bot_pick()
             b.refresh_from_db()
-
         can_pick_bots = [b for b in bots if b.current_pack() is not None]
 
 

@@ -39,6 +39,7 @@ def pick_card(request, draft_id):
 def _make_bot_picks(human_drafter):
     next_drafter = human_drafter.passing_to()
 
+    # TODO: improve performance
     while next_drafter.bot and next_drafter.current_pack() is not None:
         next_drafter.make_bot_pick()
         next_drafter = next_drafter.passing_to()
