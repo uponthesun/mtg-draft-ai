@@ -21,6 +21,10 @@ class Draft(models.Model):
         return DraftInfo(card_list=card_list, num_drafters=self.num_drafters, num_phases=self.num_phases,
                          cards_per_pack=self.cards_per_pack)
 
+    def eager_picks_enabled(self, drafters=None):
+        drafters = drafters or self.drafter_set.all()
+        return len([d for d in drafters if not d.bot]) > 1
+
     def make_initial_bot_picks(self):
         bots = self.drafter_set.filter(bot=True).all()
 

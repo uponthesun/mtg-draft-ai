@@ -57,5 +57,5 @@ def _advance_phase_if_needed(draft):
         for drafter in all_drafters:
             drafter.advance_phase()
 
-    if len([d for d in all_drafters if not d.bot]) > 1:
+    if draft.eager_picks_enabled(all_drafters):
         draft.make_initial_bot_picks()
