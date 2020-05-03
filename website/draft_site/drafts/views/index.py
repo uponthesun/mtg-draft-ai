@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .constants import CUBES
+from ..constants import CUBES
 
 
 # /

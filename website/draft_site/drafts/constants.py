@@ -1,4 +1,4 @@
-from ..cube_data import CubeData
+from .cube_data import CubeData
 from mtg_draft_ai.brains import SynergyPowerFixingPicker
 from mtg_draft_ai.brains import PowerFixingPicker
 

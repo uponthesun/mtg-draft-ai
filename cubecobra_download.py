@@ -21,6 +21,7 @@ card_rows = csv_rows[1:]
 cards_from_csv = [{k: v for k, v in zip(keys, row)} for row in card_rows]
 cards_by_name = {c['Name']: c for c in cards_from_csv if c['Maybeboard'] == 'false'}
 
+
 def type_line_to_types(type_line):
     types = type_line.split('-')[0].strip().split(' ')
     return [t.lower() for t in types if t != 'Legendary']
@@ -56,7 +57,8 @@ def convert_cubecobra_card(name, card):
         'mana_cost': get_mana_cost(name),
         'color_identity': card['Color'],
         'types': type_line_to_types(card['Type']),
-        'tags': [t.strip() for t in card['Tags'].split(',')]
+        'tags': [t.strip() for t in card['Tags'].split(',')],
+        'set': card['Set']
     }
 
 

@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from .. import models
-from .constants import CUBES_BY_ID
+from ..constants import CUBES_BY_ID
 from mtg_draft_ai.controller import create_packs
 
 

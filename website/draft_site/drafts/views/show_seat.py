@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
 from .. import models
-from .constants import CUBES_BY_ID
+from ..constants import CUBES_BY_ID
 
 
 # /draft/<int:draft_id>/seat/<int:seat>

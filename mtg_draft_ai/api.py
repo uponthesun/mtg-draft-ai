@@ -8,7 +8,7 @@ class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
     def __init__(self, name, color_id=None, types=None, mana_cost=None, tags=None, power_tier=None,
-                 fixer_color_id=None):
+                 fixer_color_id=None, card_set=None):
         """
         Args:
             name (str): The card's name.
@@ -29,7 +29,8 @@ class Card:
         self.mana_cost = mana_cost
         self.tags = tags
         self.power_tier = power_tier
-        self.fixer_color_id=fixer_color_id
+        self.fixer_color_id = fixer_color_id
+        self.card_set = card_set
 
     def full_repr(self):
         return '{}: {}'.format(self.__class__.__name__, repr(self.__dict__))
@@ -63,8 +64,9 @@ class Card:
                     k, v = split
                     tags.append((k.strip(), v.strip()))
 
+        card_set = properties['set'] if set in properties else None
         return Card(name, color_id=properties['color_identity'], types=properties['types'],
-                    mana_cost=properties['mana_cost'], tags=tags, power_tier=power_tier)
+                    mana_cost=properties['mana_cost'], tags=tags, power_tier=power_tier, card_set=card_set)
 
 
 class Drafter:
