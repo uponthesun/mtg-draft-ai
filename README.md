@@ -38,7 +38,7 @@ Activates the virtual environment. You should always have the virtualenv active 
 
 You can now run python scripts which use files from this project, e.g.:
 ```
-python draft.py
+python trials.py 1
 ```
 
 # Running Tests
