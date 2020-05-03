@@ -61,7 +61,11 @@ class Drafter(models.Model):
             raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
 
-    def make_bot_pick(self, phase, pick):
+    def make_bot_pick(self, phase=None, pick=None):
+        phase = phase or self.current_phase
+        pick = pick or self.current_pick
+        print('make_bot_pick seat {} phase {} pick {}'.format(self.seat, phase, pick))
+
         db_pack = self.current_pack()
         if db_pack is None:
             return

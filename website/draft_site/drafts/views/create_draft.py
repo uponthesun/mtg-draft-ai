@@ -27,6 +27,7 @@ def create_draft(request):
     num_bots = int(params['num_bot_drafters'])
 
     new_draft = _create_and_save_draft_models(cube_id, human_drafter_names, num_bots)
+    _make_initial_bot_picks(new_draft)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
@@ -39,11 +40,10 @@ def _make_initial_bot_picks(draft):
     can_pick_bots = [b for b in bots if b.current_pack() is not None]
     while any(can_pick_bots):
         for b in can_pick_bots:
-            pass
+            b.make_bot_pick()
+            b.refresh_from_db()
 
         can_pick_bots = [b for b in bots if b.current_pack() is not None]
-
-    pass
 
 
 def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
