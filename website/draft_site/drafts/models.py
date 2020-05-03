@@ -66,13 +66,9 @@ class Drafter(models.Model):
             raise StaleReadError('Card already picked: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
 
+        # Don't advance phase here if we reach end of pack; that's done for all drafters at once in views.pick_card
         new_pick = pick + 1
         new_phase = phase
-        """
-        if new_pick >= self.draft.cards_per_pack:
-            new_pick = 0
-            new_phase = phase + 1
-        """
 
         updated_count = Drafter.objects \
             .filter(id=self.id, current_phase=phase, current_pick=pick) \
