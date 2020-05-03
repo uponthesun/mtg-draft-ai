@@ -37,9 +37,12 @@ def pick_card(request, draft_id):
 # Helper functions below
 
 def _make_bot_picks(human_drafter):
-    next_drafter = human_drafter.passing_to()
+    draft = human_drafter.draft
 
-    # TODO: improve performance
-    while next_drafter.bot and next_drafter.current_pack() is not None:
-        next_drafter.make_bot_pick()
-        next_drafter = next_drafter.passing_to()
+    all_drafters = sorted(draft.drafter_set.all(), key=lambda d: d.seat)
+
+    current_seat = human_drafter.seat + human_drafter.direction()
+
+    while all_drafters[current_seat].bot:
+        all_drafters[current_seat].make_bot_pick()
+        current_seat += human_drafter.direction()

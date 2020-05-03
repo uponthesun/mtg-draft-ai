@@ -10,16 +10,19 @@ def show_seat(request, draft_id, seat):
     drafter = draft.drafter_set.get(seat=seat)
     cube_data = CUBES_BY_ID[draft.cube_id]
 
+    current_pack = drafter.current_pack()
+    waiting = current_pack is None
+    current_pack = current_pack or []
+
     basic_context = {
         'draft': draft,
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
-        'waiting': drafter.current_pack() is None,
+        'waiting': waiting,
         'draft_complete': (drafter.current_phase == draft.num_phases),
         'autobuild_enabled': cube_data.autobuild_enabled
     }
 
-    current_pack = drafter.current_pack() or []
     sorted_owned_cards = sorted(drafter.owned_cards(), key=lambda c: (c.phase, c.picked_at))
     # Generate bot recommendations
     bot_ratings = _get_bot_ratings(draft, current_pack, sorted_owned_cards)

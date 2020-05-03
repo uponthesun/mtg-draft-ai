@@ -45,7 +45,7 @@ class Drafter(models.Model):
 
         if updated_count != 1:
             raise StaleReadError('Card already picked: draft {}, seat {}, phase {}, pick {}'.format(
-                self.draft.id, self.drafter.seat, phase, pick))
+                self.draft.id, self.seat, phase, pick))
 
         new_pick = pick + 1
         new_phase = phase
@@ -64,7 +64,6 @@ class Drafter(models.Model):
     def make_bot_pick(self, phase=None, pick=None):
         phase = phase or self.current_phase
         pick = pick or self.current_pick
-        print('make_bot_pick seat {} phase {} pick {}'.format(self.seat, phase, pick))
 
         db_pack = self.current_pack()
         if db_pack is None:
@@ -85,7 +84,8 @@ class Drafter(models.Model):
 
     def current_pack(self):
         # If the next pack hasn't been passed yet, return None.
-        receiving_from_drafter_progress = (self.receiving_from().current_phase, self.receiving_from().current_pick)
+        receiving_from = self.receiving_from()
+        receiving_from_drafter_progress = (receiving_from.current_phase, receiving_from.current_pick)
         if receiving_from_drafter_progress < (self.current_phase, self.current_pick):
             return None
 
@@ -94,15 +94,15 @@ class Drafter(models.Model):
         # and subtract when passing right (picture the packs staying in place,
         # and the drafters standing up and walking around the table).
         # Then we apply modulus (since the packs are passed in a circle).
-        pack_index = (self.seat - self.current_pick * self._direction()) % self.draft.num_drafters
+        pack_index = (self.seat - self.current_pick * self.direction()) % self.draft.num_drafters
 
         return self.draft.card_set.filter(phase=self.current_phase, start_seat=pack_index, picked_by__isnull=True)
 
     def passing_to(self):
-        return self._adjacent_drafter(self._direction())
+        return self._adjacent_drafter(self.direction())
 
     def receiving_from(self):
-        return self._adjacent_drafter(-1 * self._direction())
+        return self._adjacent_drafter(-1 * self.direction())
 
     def owned_cards(self):
         return self.draft.card_set.filter(picked_by=self)
@@ -113,7 +113,7 @@ class Drafter(models.Model):
                 if d.current_phase < self.current_phase or
                 d.current_phase == self.current_phase and d.current_pick < self.current_pick]
 
-    def _direction(self):
+    def direction(self):
         # Alternate passing directions based on phase, starting with passing left.
         return -1 if self.current_phase % 2 == 0 else 1
 
