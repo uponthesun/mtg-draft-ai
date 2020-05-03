@@ -41,8 +41,8 @@ def _make_bot_picks(human_drafter):
 
     all_drafters = sorted(draft.drafter_set.all(), key=lambda d: d.seat)
 
-    current_seat = human_drafter.seat + human_drafter.direction()
+    current_seat = (human_drafter.seat + human_drafter.direction()) % draft.num_drafters
 
     while all_drafters[current_seat].bot:
         all_drafters[current_seat].make_bot_pick()
-        current_seat += human_drafter.direction()
+        current_seat = (current_seat + human_drafter.direction()) % draft.num_drafters
