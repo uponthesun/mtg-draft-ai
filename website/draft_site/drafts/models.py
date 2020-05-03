@@ -1,5 +1,3 @@
-import pickle
-
 from django.db import models
 from mtg_draft_ai.api import DraftInfo
 
@@ -30,8 +28,7 @@ class Drafter(models.Model):
     current_phase = models.IntegerField(default=0)  # 0-indexed
     current_pick = models.IntegerField(default=0)  # 0-indexed
     bot = models.BooleanField()
-    # TODO: may need to store this outside DB eventually
-    bot_state = models.BinaryField(null=True, blank=True)
+    bot_state = models.BinaryField(null=True, blank=True)  # Not used as of 05/02/2020
     name = models.CharField(max_length=40, default='')
 
     def __str__(self):
@@ -71,15 +68,15 @@ class Drafter(models.Model):
 
         cube_data = CUBES_BY_ID[self.draft.cube_id]
         mtg_draft_ai_pack = [cube_data.card_by_name(c.name) for c in db_pack]
+        mtg_draft_ai_owned_cards = [cube_data.card_by_name(c.name) for c in self.owned_cards()]
 
-        mtg_ai_drafter = pickle.loads(self.bot_state)
         # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-        mtg_ai_drafter.picker = cube_data.picker_factory.create()
-
-        picked_card = mtg_ai_drafter.pick(mtg_draft_ai_pack)
+        picker = cube_data.picker_factory.create()
+        picked_card = picker.pick(mtg_draft_ai_pack, cards_owned=mtg_draft_ai_owned_cards,
+                                  draft_info=self.draft.to_draft_info(cube_data.cards))
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
-        self.bot_state = pickle.dumps(mtg_ai_drafter)
+        # self.bot_state = pickle.dumps(mtg_ai_drafter)
         self.make_pick(picked_db_card, phase, pick)
 
     def current_pack(self):
