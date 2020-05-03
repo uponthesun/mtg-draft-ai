@@ -1,4 +1,3 @@
-import pickle
 import random
 
 from django.db import transaction
@@ -8,7 +7,6 @@ from django.urls import reverse
 from .. import models
 from .constants import CUBES_BY_ID
 from mtg_draft_ai.controller import create_packs
-from mtg_draft_ai.api import Drafter
 
 
 # /draft/create
@@ -27,6 +25,10 @@ def create_draft(request):
     num_bots = int(params['num_bot_drafters'])
 
     new_draft = _create_and_save_draft_models(cube_id, human_drafter_names, num_bots)
+
+    # If there's more than one human, we need the bots to pick "eagerly" so the humans can too.
+    if len(human_drafter_names) > 1:
+        _make_initial_bot_picks(new_draft)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
@@ -53,9 +55,7 @@ def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
     # Create and save Drafter model objects for this draft
     human_drafters = [models.Drafter(draft=new_draft, bot=False, name=name) for name in human_drafter_names]
     random.shuffle(human_drafters)
-    # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
-    bot_drafters = [models.Drafter(draft=new_draft, bot=True, bot_state=pickle.dumps(Drafter(None, draft_info)),
-                                   name='Bot') for _ in range(0, num_bots)]
+    bot_drafters = [models.Drafter(draft=new_draft, bot=True, name='Bot') for _ in range(0, num_bots)]
     drafters = _even_mix(human_drafters, bot_drafters)
     for i in range(0, len(drafters)):
         drafters[i].seat = i
@@ -83,3 +83,14 @@ def _even_mix(list_a, list_b):
             result[i] = list_b_copy.pop(0)
 
     return result
+
+
+def _make_initial_bot_picks(draft):
+    bots = draft.drafter_set.filter(bot=True).all()
+
+    can_pick_bots = [b for b in bots if b.current_pack() is not None]
+    while any(can_pick_bots):
+        for b in can_pick_bots:
+            b.make_bot_pick()
+            b.refresh_from_db()
+        can_pick_bots = [b for b in bots if b.current_pack() is not None]

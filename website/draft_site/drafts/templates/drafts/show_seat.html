@@ -16,13 +16,13 @@
     <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
     <br>
 
-{% elif waiting_for_drafters %}
+{% elif waiting %}
     <br>
-    <b>Waiting for drafters in seats:</b>
+    <b>Waiting for other drafters to pick</b>
     <br>
     <div id="waiting-for-drafters"></div>
     <br>
-    <script src="{% static 'show_seat_refresh.js' %}"></script>
+    <script src="{% static 'show_seat_refresh_v2.js' %}"></script>
 
 {% else %}
     <br>
