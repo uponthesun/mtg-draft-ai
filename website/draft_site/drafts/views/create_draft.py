@@ -25,23 +25,15 @@ def create_draft(request):
     num_bots = int(params['num_bot_drafters'])
 
     new_draft = _create_and_save_draft_models(cube_id, human_drafter_names, num_bots)
-    _make_initial_bot_picks(new_draft)
+
+    # If there's more than one human, we need the bots to pick "eagerly" so the humans can too.
+    if len(human_drafter_names) > 1:
+        _make_initial_bot_picks(new_draft)
 
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
 
 # Helper functions below
-
-def _make_initial_bot_picks(draft):
-    bots = draft.drafter_set.filter(bot=True).all()
-
-    can_pick_bots = [b for b in bots if b.current_pack() is not None]
-    while any(can_pick_bots):
-        for b in can_pick_bots:
-            b.make_bot_pick()
-            b.refresh_from_db()
-        can_pick_bots = [b for b in bots if b.current_pack() is not None]
-
 
 def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
     num_humans = len(human_drafter_names)
@@ -91,3 +83,14 @@ def _even_mix(list_a, list_b):
             result[i] = list_b_copy.pop(0)
 
     return result
+
+
+def _make_initial_bot_picks(draft):
+    bots = draft.drafter_set.filter(bot=True).all()
+
+    can_pick_bots = [b for b in bots if b.current_pack() is not None]
+    while any(can_pick_bots):
+        for b in can_pick_bots:
+            b.make_bot_pick()
+            b.refresh_from_db()
+        can_pick_bots = [b for b in bots if b.current_pack() is not None]
