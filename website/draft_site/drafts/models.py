@@ -21,6 +21,16 @@ class Draft(models.Model):
         return DraftInfo(card_list=card_list, num_drafters=self.num_drafters, num_phases=self.num_phases,
                          cards_per_pack=self.cards_per_pack)
 
+    def make_initial_bot_picks(self):
+        bots = self.drafter_set.filter(bot=True).all()
+
+        can_pick_bots = [b for b in bots if b.current_pack() is not None]
+        while any(can_pick_bots):
+            for b in can_pick_bots:
+                b.make_bot_pick()
+                b.refresh_from_db()
+            can_pick_bots = [b for b in bots if b.current_pack() is not None]
+
 
 class Drafter(models.Model):
     draft = models.ForeignKey(Draft, on_delete=models.CASCADE)
@@ -35,6 +45,18 @@ class Drafter(models.Model):
         return 'ID: {}, Name: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(
             self.id, self.name, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
 
+    # TODO: move current phase to draft model
+    def advance_phase(self):
+        new_pick = 0
+        new_phase = self.current_phase + 1
+
+        updated_count = Drafter.objects \
+            .filter(id=self.id, current_phase=self.current_phase, current_pick=self.current_pick) \
+            .update(current_phase=new_phase, current_pick=new_pick)
+
+        if updated_count != 1:
+            raise StaleReadError('Drafter already updated: draft {}, seat {}'.format(self.draft.id, self.seat))
+
     def make_pick(self, card, phase, pick):
         updated_count = Card.objects \
             .filter(id=card.id, picked_by__isnull=True) \
@@ -44,15 +66,13 @@ class Drafter(models.Model):
             raise StaleReadError('Card already picked: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
 
+        # Don't advance phase here if we reach end of pack; that's done for all drafters at once in views.pick_card
         new_pick = pick + 1
         new_phase = phase
-        if new_pick >= self.draft.cards_per_pack:
-            new_pick = 0
-            new_phase = phase + 1
 
         updated_count = Drafter.objects \
             .filter(id=self.id, current_phase=phase, current_pick=pick) \
-            .update(current_phase=new_phase, current_pick=new_pick, bot_state=self.bot_state)
+            .update(current_phase=new_phase, current_pick=new_pick)
 
         if updated_count != 1:
             raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
@@ -80,6 +100,9 @@ class Drafter(models.Model):
         self.make_pick(picked_db_card, phase, pick)
 
     def current_pack(self):
+        if self.current_pick >= self.draft.cards_per_pack or self.current_phase >= self.draft.num_phases:
+            return None
+
         # If the next pack hasn't been passed yet, return None.
         receiving_from = self._receiving_from()
         receiving_from_drafter_progress = (receiving_from.current_phase, receiving_from.current_pick)

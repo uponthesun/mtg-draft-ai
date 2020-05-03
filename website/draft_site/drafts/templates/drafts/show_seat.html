@@ -15,24 +15,23 @@
     {% endif %}
     <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
     <br>
-
-{% elif waiting %}
-    <br>
-    <b>Waiting for other drafters to pick</b>
-    <br>
-    <div id="waiting-for-drafters"></div>
-    <br>
-    <script src="{% static 'show_seat_refresh_v2.js' %}"></script>
-
 {% else %}
+    <b>Queued Packs</b>
     <br>
+    <div id="queued-packs"></div>
+    <br>
+    <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
+    <input id="current-seat" type="hidden" value="{{ drafter.seat }}" />
+    <input id="waiting" type="hidden" value="{{ waiting|lower }}" />
+    <script src="{% static 'show_seat_refresh_v3.js' %}"></script>
+
     <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
 
     <form action="{% url 'pick_card' draft_id=draft.id %}" method="post">
         {% csrf_token %}
-        <input name="phase" type="hidden" value="{{ drafter.current_phase }}">
-        <input name="pick" type="hidden" value="{{ drafter.current_pick }}">
-        <input name="seat" type="hidden" value="{{ drafter.seat }}">
+        <input name="phase" type="hidden" value="{{ drafter.current_phase }}" />
+        <input name="pick" type="hidden" value="{{ drafter.current_pick }}" />
+        <input name="seat" type="hidden" value="{{ drafter.seat }}" />
         {% for card, image_url in cards %}
             {% if drafter.bot %}
                 <img src="{{ image_url }}" class="card" />
