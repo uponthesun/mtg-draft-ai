@@ -95,24 +95,15 @@ class Drafter(models.Model):
 
         return self.draft.card_set.filter(phase=self.current_phase, start_seat=pack_index, picked_by__isnull=True)
 
-    def passing_to(self):
-        return self._adjacent_drafter(self.direction())
-
-    def receiving_from(self):
-        return self._adjacent_drafter(-1 * self.direction())
-
     def owned_cards(self):
         return self.draft.card_set.filter(picked_by=self)
-
-    def waiting_for_drafters(self):
-        human_drafters = self.draft.drafter_set.filter(bot=False)
-        return [d for d in human_drafters
-                if d.current_phase < self.current_phase or
-                d.current_phase == self.current_phase and d.current_pick < self.current_pick]
 
     def direction(self):
         # Alternate passing directions based on phase, starting with passing left.
         return -1 if self.current_phase % 2 == 0 else 1
+
+    def _receiving_from(self):
+        return self._adjacent_drafter(-1 * self.direction())
 
     def _adjacent_drafter(self, direction):
         passing_to_seat = (self.seat + direction) % self.draft.num_drafters
