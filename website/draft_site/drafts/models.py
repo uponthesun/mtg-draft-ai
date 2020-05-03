@@ -81,7 +81,7 @@ class Drafter(models.Model):
 
     def current_pack(self):
         # If the next pack hasn't been passed yet, return None.
-        receiving_from = self.receiving_from()
+        receiving_from = self._receiving_from()
         receiving_from_drafter_progress = (receiving_from.current_phase, receiving_from.current_pick)
         if receiving_from_drafter_progress < (self.current_phase, self.current_pick):
             return None
