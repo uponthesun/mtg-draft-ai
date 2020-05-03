@@ -64,7 +64,7 @@ class Card:
                     k, v = split
                     tags.append((k.strip(), v.strip()))
 
-        card_set = properties['set'] if set in properties else None
+        card_set = properties['set'] if 'set' in properties else None
         return Card(name, color_id=properties['color_identity'], types=properties['types'],
                     mana_cost=properties['mana_cost'], tags=tags, power_tier=power_tier, card_set=card_set)
 
