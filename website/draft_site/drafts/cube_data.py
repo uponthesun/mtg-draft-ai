@@ -32,8 +32,7 @@ class CubeData:
         image_urls_file_path = os.path.join(DATA_DIR, image_urls_file_name)
 
         cards = read_cube_toml(cube_file_path, fixer_data_file_path)
-        card_names = [c.name for c in cards]
-        image_urls = _load_and_update_image_url_cache(card_names, image_urls_file_path)
+        image_urls = _load_and_update_image_url_cache(cards, image_urls_file_path)
         picker_factory = picker_class.factory(cards)
 
         return CubeData(name=name, cube_id=cube_id, cards=cards, image_urls=image_urls, picker_factory=picker_factory,
@@ -52,20 +51,20 @@ class CubeData:
         return 'https://api.scryfall.com/cards/named?' + query_string
 
 
-def _load_and_update_image_url_cache(card_names, image_urls_file):
+def _load_and_update_image_url_cache(cards, image_urls_file):
     # Load cache from disk
     cache = toml.load(image_urls_file)
 
     # Filter out cards which are no longer in the cube list
-    cache = {k: v for k, v in cache.items() if k in card_names}
+    cache = {k: v for k, v in cache.items() if k in cards}
 
     # Get URLs for new cards
-    missing_cards = [name for name in card_names if name not in cache]
+    missing_cards = [c for c in cards if c.name not in cache]
     with ThreadPool(10) as tp:
-        urls = tp.map(_get_scryfall_image_url, missing_cards)
+        urls = tp.starmap(_get_scryfall_image_url, [(c.name, c.card_set) for c in missing_cards])
 
-    for card_name, url in zip(missing_cards, urls):
-        cache[card_name] = url
+    for card, url in zip(missing_cards, urls):
+        cache[card.name] = url
 
     # Write cache back out to disk
     with open(image_urls_file, 'w') as f:
@@ -74,9 +73,9 @@ def _load_and_update_image_url_cache(card_names, image_urls_file):
     return cache
 
 
-def _get_scryfall_image_url(name):
+def _get_scryfall_image_url(name, card_set):
     try:
-        r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name})
+        r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name, 'set': card_set})
         card_json = r.json()
         if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
             # Case for double-faced cards
@@ -84,5 +83,5 @@ def _get_scryfall_image_url(name):
             return card_json['card_faces'][0]['image_uris']['normal']
         return card_json['image_uris']['normal']
     except Exception as e:
-        print('Failed to get image uri for card: {}'.format(card_json))
+        print('Failed to get image uri for card: {}'.format(name))
         raise e
