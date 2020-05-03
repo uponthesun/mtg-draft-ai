@@ -1,5 +1,9 @@
+import pickle
+
 from django.db import models
 from mtg_draft_ai.api import DraftInfo
+
+from .views.constants import CUBES_BY_ID
 
 
 class StaleReadError(Exception):
@@ -56,6 +60,24 @@ class Drafter(models.Model):
         if updated_count != 1:
             raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
+
+    def make_bot_pick(self, phase, pick):
+        db_pack = self.current_pack()
+        if db_pack is None:
+            return
+
+        cube_data = CUBES_BY_ID[self.draft.cube_id]
+        mtg_draft_ai_pack = [cube_data.card_by_name(c.name) for c in db_pack]
+
+        mtg_ai_drafter = pickle.loads(self.bot_state)
+        # TODO: for now picker state isn't saved to improve performance; we might need to in the future.
+        mtg_ai_drafter.picker = cube_data.picker_factory.create()
+
+        picked_card = mtg_ai_drafter.pick(mtg_draft_ai_pack)
+
+        picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
+        self.bot_state = pickle.dumps(mtg_ai_drafter)
+        self.make_pick(picked_db_card, phase, pick)
 
     def current_pack(self):
         # If the next pack hasn't been passed yet, return None.
