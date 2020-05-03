@@ -26,10 +26,6 @@ def create_draft(request):
 
     new_draft = _create_and_save_draft_models(cube_id, human_drafter_names, num_bots)
 
-    # If there's more than one human, we need the bots to pick "eagerly" so the humans can too.
-    if len(human_drafter_names) > 1:
-        new_draft.make_initial_bot_picks()
-
     return HttpResponseRedirect(reverse('show_draft', kwargs={'draft_id': new_draft.id}))
 
 
@@ -60,6 +56,10 @@ def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
     for i in range(0, len(drafters)):
         drafters[i].seat = i
         drafters[i].save()
+
+    # If there's more than one human, we need the bots to pick "eagerly" so the humans can too.
+    if new_draft.eager_picks_enabled(drafters):
+        new_draft.make_initial_bot_picks()
 
     return new_draft
 

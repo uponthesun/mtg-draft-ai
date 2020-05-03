@@ -22,7 +22,10 @@ async function checkWaitingForDrafters() {
         const currentSeat = parseInt(document.getElementById('current-seat').value);
         const numQueued = data.drafters.filter(d => d.seat == currentSeat)[0].queued_packs
 
-        document.getElementById('queued-packs').innerHTML = format_display(data.drafters)
+        queued_packs_display = document.getElementById('queued-packs')
+        if (queued_packs_display) {
+            queued_packs_display.innerHTML = format_display(data.drafters);
+        }
 
         if (numQueued > 0 && isWaiting) {
             location.reload()

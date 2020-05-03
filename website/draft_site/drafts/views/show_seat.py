@@ -19,6 +19,7 @@ def show_seat(request, draft_id, seat):
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'waiting': waiting,
+        'show_queued_packs': draft.eager_picks_enabled(),
         'draft_complete': (drafter.current_phase == draft.num_phases),
         'autobuild_enabled': cube_data.autobuild_enabled
     }
