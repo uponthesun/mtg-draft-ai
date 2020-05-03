@@ -119,7 +119,7 @@ class Drafter(models.Model):
 
     def _adjacent_drafter(self, direction):
         passing_to_seat = (self.seat + direction) % self.draft.num_drafters
-        return self.draft.drafter_set.filter(seat=passing_to_seat).first()
+        return self.draft.drafter_set.get(seat=passing_to_seat)
 
 
 class Card(models.Model):

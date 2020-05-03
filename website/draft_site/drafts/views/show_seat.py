@@ -14,8 +14,7 @@ def show_seat(request, draft_id, seat):
         'draft': draft,
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
-        'waiting_for_drafters': drafter.waiting_for_drafters(),
-        #'waiting': drafter.current_pack() is None,
+        'waiting': drafter.current_pack() is None,
         'draft_complete': (drafter.current_phase == draft.num_phases),
         'autobuild_enabled': cube_data.autobuild_enabled
     }
