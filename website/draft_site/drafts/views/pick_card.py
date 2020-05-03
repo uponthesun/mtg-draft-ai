@@ -27,7 +27,7 @@ def pick_card(request, draft_id):
 
     try:
         with transaction.atomic():
-            _save_pick(draft, drafter, picked_card, phase, pick)
+            drafter.make_pick(picked_card, phase, pick)
 
             _make_bot_picks(drafter, phase, pick)
     except StaleReadError:
@@ -57,30 +57,6 @@ def _make_bot_picks(human_drafter, phase, pick):
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
         next_drafter.bot_state = pickle.dumps(mtg_ai_drafter)
-        _save_pick(draft, next_drafter, picked_db_card, phase, pick)
+        next_drafter.make_pick(picked_db_card, phase, pick)
 
         next_drafter = next_drafter.receiving_from()
-
-
-def _save_pick(draft, drafter, card, phase, pick):
-    updated_count = models.Card.objects \
-        .filter(id=card.id, picked_by__isnull=True) \
-        .update(picked_by=drafter, picked_at=pick)
-
-    if updated_count != 1:
-        raise StaleReadError('Card already picked: draft {}, seat {}, phase {}, pick {}'.format(
-                             draft.id, drafter.seat, phase, pick))
-
-    new_pick = pick + 1
-    new_phase = phase
-    if new_pick >= draft.cards_per_pack:
-        new_pick = 0
-        new_phase = phase + 1
-
-    updated_count = models.Drafter.objects \
-        .filter(id=drafter.id, current_phase=phase, current_pick=pick) \
-        .update(current_phase=new_phase, current_pick=new_pick, bot_state=drafter.bot_state)
-
-    if updated_count != 1:
-        raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
-                             draft.id, drafter.seat, phase, pick))

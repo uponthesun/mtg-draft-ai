@@ -2,6 +2,10 @@ from django.db import models
 from mtg_draft_ai.api import DraftInfo
 
 
+class StaleReadError(Exception):
+    pass
+
+
 class Draft(models.Model):
     cube_id = models.IntegerField()
     num_drafters = models.IntegerField()
@@ -29,6 +33,29 @@ class Drafter(models.Model):
     def __str__(self):
         return 'ID: {}, Name: {}, Draft: {}, Seat: {}, Is Bot: {}, Phase: {}, Pick: {}'.format(
             self.id, self.name, self.draft.id, self.seat, self.bot, self.current_phase, self.current_pick)
+
+    def make_pick(self, card, phase, pick):
+        updated_count = Card.objects \
+            .filter(id=card.id, picked_by__isnull=True) \
+            .update(picked_by=self, picked_at=pick)
+
+        if updated_count != 1:
+            raise StaleReadError('Card already picked: draft {}, seat {}, phase {}, pick {}'.format(
+                self.draft.id, self.drafter.seat, phase, pick))
+
+        new_pick = pick + 1
+        new_phase = phase
+        if new_pick >= self.draft.cards_per_pack:
+            new_pick = 0
+            new_phase = phase + 1
+
+        updated_count = Drafter.objects \
+            .filter(id=self.id, current_phase=phase, current_pick=pick) \
+            .update(current_phase=new_phase, current_pick=new_pick, bot_state=self.bot_state)
+
+        if updated_count != 1:
+            raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
+                self.draft.id, self.seat, phase, pick))
 
     def current_pack(self):
         # If the next pack hasn't been passed yet, return None.
