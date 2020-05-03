@@ -56,7 +56,8 @@ def _load_and_update_image_url_cache(cards, image_urls_file):
     cache = toml.load(image_urls_file)
 
     # Filter out cards which are no longer in the cube list
-    cache = {k: v for k, v in cache.items() if k in cards}
+    card_names = [c.name for c in cards]
+    cache = {k: v for k, v in cache.items() if k in card_names}
 
     # Get URLs for new cards
     missing_cards = [c for c in cards if c.name not in cache]

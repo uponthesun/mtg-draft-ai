@@ -1,7 +1,7 @@
 from django.db import models
 from mtg_draft_ai.api import DraftInfo
 
-from .views.constants import CUBES_BY_ID
+from .constants import CUBES_BY_ID
 
 
 class StaleReadError(Exception):

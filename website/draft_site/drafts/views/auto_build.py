@@ -3,7 +3,7 @@ import statistics
 from django.shortcuts import render, get_object_or_404
 
 from .. import models
-from .constants import CUBES_BY_ID
+from ..constants import CUBES_BY_ID
 from mtg_draft_ai.brains import power_rating
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
