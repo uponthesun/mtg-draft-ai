@@ -26,8 +26,8 @@ def pick_card(request, draft_id):
     try:
         with transaction.atomic():
             drafter.make_pick(picked_card, phase, pick)
-
             _make_bot_picks(drafter)
+            _advance_phase_if_needed(draft)
     except StaleReadError:
         LOGGER.info('Stale read occurred when picking card, transaction was rolled back')
 
@@ -46,3 +46,16 @@ def _make_bot_picks(human_drafter):
     while all_drafters[current_seat].bot:
         all_drafters[current_seat].make_bot_pick()
         current_seat = (current_seat + human_drafter.direction()) % draft.num_drafters
+
+
+def _advance_phase_if_needed(draft):
+    all_drafters = draft.drafter_set.all()
+    drafters_done_with_phase = [d for d in all_drafters if d.current_pick >= draft.cards_per_pack]
+
+    if len(drafters_done_with_phase) == len(all_drafters):
+        # TODO: move current phase to draft model
+        for drafter in all_drafters:
+            drafter.advance_phase()
+
+    if len([d for d in all_drafters if not d.bot]) > 1:
+        draft.make_initial_bot_picks()

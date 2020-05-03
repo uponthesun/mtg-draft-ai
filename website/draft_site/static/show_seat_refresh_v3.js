@@ -1,7 +1,9 @@
 function format_display(drafters) {
     let html = ''
     for (const drafter of drafters) {
-        html += `Seat ${drafter.seat} - ${drafter.name}: ${drafter.queued_packs}<br>`
+        if (drafter.queued_packs > 0) {
+            html += `Seat ${drafter.seat} - ${drafter.name}: ${drafter.queued_packs}<br>`
+        }
     }
     html += `<i>Last updated: ${new Date().toTimeString()}</i><br>`
     return html;
