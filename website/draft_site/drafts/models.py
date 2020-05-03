@@ -46,9 +46,11 @@ class Drafter(models.Model):
 
         new_pick = pick + 1
         new_phase = phase
+        """
         if new_pick >= self.draft.cards_per_pack:
             new_pick = 0
             new_phase = phase + 1
+        """
 
         updated_count = Drafter.objects \
             .filter(id=self.id, current_phase=phase, current_pick=pick) \
@@ -80,6 +82,9 @@ class Drafter(models.Model):
         self.make_pick(picked_db_card, phase, pick)
 
     def current_pack(self):
+        if self.current_pick >= self.draft.cards_per_pack:
+            return None
+
         # If the next pack hasn't been passed yet, return None.
         receiving_from = self._receiving_from()
         receiving_from_drafter_progress = (receiving_from.current_phase, receiving_from.current_pick)

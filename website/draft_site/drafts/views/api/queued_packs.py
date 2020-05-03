@@ -16,15 +16,21 @@ def queued_packs(request, draft_id):
         # Use array indices instead of calling drafter._receiving_from to avoid extra queries
         receiving_from = drafters[(i - drafter.direction()) % len(drafters)]
 
-        # TODO: simplify
+        """
         if receiving_from.current_phase == drafter.current_phase:
             receiving_from_current_pick = receiving_from.current_pick
         elif receiving_from.current_phase > drafter.current_phase:
             receiving_from_current_pick = draft.cards_per_pack
         else:
             receiving_from_current_pick = -1
+        """
 
-        queued_packs_for_drafter = (receiving_from_current_pick - drafter.current_pick) + 1
+        # TODO: simplify
+        if drafter.current_pick >= draft.cards_per_pack:
+            queued_packs_for_drafter = 0
+        else:
+            receiving_from_current_pick = min(receiving_from.current_pick, draft.cards_per_pack - 1)
+            queued_packs_for_drafter = receiving_from_current_pick - drafter.current_pick + 1
         result.append({'seat': drafter.seat, 'name': drafter.name, 'queued_packs': queued_packs_for_drafter})
 
     return JsonResponse({'drafters': result})

@@ -9,7 +9,8 @@ function format_display(drafters) {
 
 async function checkWaitingForDrafters() {
     //const url = location + '/is-pack-available';
-    const url = location.origin + '/draft/214/queued-packs'
+    const draftId = document.getElementById('draft-id').value;
+    const url = `${location.origin}/draft/${draftId}/queued-packs`;
 
     try {
         const response = await fetch(url);
@@ -22,7 +23,7 @@ async function checkWaitingForDrafters() {
         document.getElementById('queued-packs').innerHTML = format_display(data.drafters)
 
         if (numQueued > 0 && isWaiting) {
-            //location.reload()
+            location.reload()
         }
     } catch (e) {
         console.error(e)

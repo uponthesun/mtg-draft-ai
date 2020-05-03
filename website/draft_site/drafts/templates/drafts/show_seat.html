@@ -20,6 +20,7 @@
     <br>
     <div id="queued-packs"></div>
     <br>
+    <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
     <input id="current-seat" type="hidden" value="{{ drafter.seat }}" />
     <input id="waiting" type="hidden" value="{{ waiting|lower }}" />
     <script src="{% static 'show_seat_refresh_v2.js' %}"></script>
