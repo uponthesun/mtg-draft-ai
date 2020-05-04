@@ -80,10 +80,7 @@ class Drafter(models.Model):
             raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
 
-    def make_bot_pick(self, cube_data, phase=None, pick=None):
-        phase = phase or self.current_phase
-        pick = pick or self.current_pick
-
+    def make_bot_pick(self, cube_data):
         db_pack = self.current_pack()
         if db_pack is None:
             return
@@ -97,8 +94,7 @@ class Drafter(models.Model):
                                   draft_info=self.draft.to_draft_info(cube_data.cards))
 
         picked_db_card = next(c for c in db_pack if c.name == picked_card.name)
-        # self.bot_state = pickle.dumps(mtg_ai_drafter)
-        self.make_pick(picked_db_card, phase, pick)
+        self.make_pick(picked_db_card, self.current_phase, self.current_pick)
 
     def current_pack(self):
         if self.current_pick >= self.draft.cards_per_pack or self.current_phase >= self.draft.num_phases:
