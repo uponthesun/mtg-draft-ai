@@ -8,7 +8,6 @@ from django.conf import settings
 import requests
 import toml
 
-
 DATA_DIR = os.path.join(settings.DRAFTS_APP_DIR, 'cubedata')
 
 
@@ -33,6 +32,7 @@ class CubeData:
 
         cards = read_cube_toml(cube_file_path, fixer_data_file_path)
         image_urls = _load_and_update_image_url_cache(cards, image_urls_file_path)
+
         picker_factory = picker_class.factory(cards)
 
         return CubeData(name=name, cube_id=cube_id, cards=cards, image_urls=image_urls, picker_factory=picker_factory,
