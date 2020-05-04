@@ -11,7 +11,5 @@ urlpatterns = [
     path('draft/<int:draft_id>/seat/<int:seat>/auto-build', views.auto_build, name='auto_build'),
     path('draft/<int:draft_id>/seat/<int:seat>/all-picks', views.all_picks, name='all_picks'),
     path('draft/<int:draft_id>/pick-card', views.pick_card, name='pick_card'),
-    path('draft/<int:draft_id>/queued-packs', views.api.queued_packs, name='queued_packs'),
-    path('draft/<int:draft_id>/seat/<int:seat>/is-pack-available', views.api.is_pack_available,
-         name='is_pack_available')
+    path('draft/<int:draft_id>/queued-packs', views.api.queued_packs, name='queued_packs')
 ]
