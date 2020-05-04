@@ -1,10 +1,10 @@
 function format_display(drafters) {
-    let html = ''
-    human_drafters = drafters.filter(d => !d.is_bot)
+    let html = `<b>Queued Packs</b> - <i>Last updated: ${new Date().toTimeString()}</i><br>`
 
+    human_drafters = drafters.filter(d => !d.is_bot)
     html += human_drafters.map(d => `${d.name}: ${d.queued_packs}`).join(', ')
 
-    html += `<br><i>Last updated: ${new Date().toTimeString()}</i><br>`
+    html += '<br>'
     return html;
 }
 

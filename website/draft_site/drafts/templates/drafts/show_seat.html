@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="{% static 'show_seat.css' %}" />
 {% include "drafts/draft_header.html" %}
 
-<br>
 <div>
 <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
 <br>
@@ -16,10 +15,8 @@
     {% endif %}
 {% else %}
     {% if show_queued_packs %}
-    <b>Queued Packs</b>
-    <br>
-    <div id="queued-packs"></div>
-    <br>
+        <div id="queued-packs"><b>Queued Packs</b><br></div>
+        <br>
     {% endif %}
 
     <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
