@@ -4,7 +4,8 @@
 
 <br>
 <div>
-
+<a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
+<br>
 {% if draft_complete %}
     {% if autobuild_enabled %}
         <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
@@ -13,8 +14,6 @@
             </button>
         </form>
     {% endif %}
-    <a href="{% url 'all_picks' draft_id=draft.id seat=drafter.seat %}">Review Draft</a>
-    <br>
 {% else %}
     {% if show_queued_packs %}
     <b>Queued Packs</b>
