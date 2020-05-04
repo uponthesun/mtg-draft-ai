@@ -1,16 +1,14 @@
 function format_display(drafters) {
     let html = ''
-    for (const drafter of drafters) {
-        if (drafter.queued_packs > 0) {
-            html += `Seat ${drafter.seat} - ${drafter.name}: ${drafter.queued_packs}<br>`
-        }
-    }
-    html += `<i>Last updated: ${new Date().toTimeString()}</i><br>`
+    human_drafters = drafters.filter(d => !d.is_bot)
+
+    html += human_drafters.map(d => `${d.name}: ${d.queued_packs}`).join(', ')
+
+    html += `<br><i>Last updated: ${new Date().toTimeString()}</i><br>`
     return html;
 }
 
 async function checkWaitingForDrafters() {
-    //const url = location + '/is-pack-available';
     const draftId = document.getElementById('draft-id').value;
     const url = `${location.origin}/draft/${draftId}/queued-packs`;
 

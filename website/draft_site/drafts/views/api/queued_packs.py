@@ -22,6 +22,7 @@ def queued_packs(request, draft_id):
         else:
             receiving_from_current_pick = min(receiving_from.current_pick, draft.cards_per_pack - 1)
             queued_packs_for_drafter = receiving_from_current_pick - drafter.current_pick + 1
-        result.append({'seat': drafter.seat, 'name': drafter.name, 'queued_packs': queued_packs_for_drafter})
+        result.append({'seat': drafter.seat, 'name': drafter.name, 'queued_packs': queued_packs_for_drafter,
+                       'is_bot': drafter.bot})
 
     return JsonResponse({'drafters': result})
