@@ -1,8 +1,6 @@
 from django.db import models
 from mtg_draft_ai.api import DraftInfo
 
-from .constants import CUBES_BY_ID
-
 
 class StaleReadError(Exception):
     pass
@@ -25,13 +23,13 @@ class Draft(models.Model):
         drafters = drafters or self.drafter_set.all()
         return len([d for d in drafters if not d.bot]) > 1
 
-    def make_initial_bot_picks(self):
+    def make_initial_bot_picks(self, cube_data):
         bots = self.drafter_set.filter(bot=True).all()
 
         can_pick_bots = [b for b in bots if b.current_pack() is not None]
         while any(can_pick_bots):
             for b in can_pick_bots:
-                b.make_bot_pick()
+                b.make_bot_pick(cube_data)
                 b.refresh_from_db()
             can_pick_bots = [b for b in bots if b.current_pack() is not None]
 
@@ -82,7 +80,7 @@ class Drafter(models.Model):
             raise StaleReadError('Drafter already updated: draft {}, seat {}, phase {}, pick {}'.format(
                 self.draft.id, self.seat, phase, pick))
 
-    def make_bot_pick(self, phase=None, pick=None):
+    def make_bot_pick(self, cube_data, phase=None, pick=None):
         phase = phase or self.current_phase
         pick = pick or self.current_pick
 
@@ -90,7 +88,6 @@ class Drafter(models.Model):
         if db_pack is None:
             return
 
-        cube_data = CUBES_BY_ID[self.draft.cube_id]
         mtg_draft_ai_pack = [cube_data.card_by_name(c.name) for c in db_pack]
         mtg_draft_ai_owned_cards = [cube_data.card_by_name(c.name) for c in self.owned_cards()]
 

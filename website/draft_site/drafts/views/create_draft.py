@@ -59,7 +59,7 @@ def _create_and_save_draft_models(cube_id, human_drafter_names, num_bots):
 
     # If there's more than one human, we need the bots to pick "eagerly" so the humans can too.
     if new_draft.eager_picks_enabled(drafters):
-        new_draft.make_initial_bot_picks()
+        new_draft.make_initial_bot_picks(CUBES_BY_ID[cube_id])
 
     return new_draft
 

@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.db import transaction
 
 from .. import models
+from ..constants import CUBES_BY_ID
 
 LOGGER = logging.getLogger(__name__)
 
@@ -38,13 +39,12 @@ def pick_card(request, draft_id):
 
 def _make_bot_picks(human_drafter):
     draft = human_drafter.draft
-
     all_drafters = sorted(draft.drafter_set.all(), key=lambda d: d.seat)
-
     current_seat = (human_drafter.seat + human_drafter.direction()) % draft.num_drafters
+    cube_data = CUBES_BY_ID[draft.cube_id]
 
     while all_drafters[current_seat].bot:
-        all_drafters[current_seat].make_bot_pick()
+        all_drafters[current_seat].make_bot_pick(cube_data)
         current_seat = (current_seat + human_drafter.direction()) % draft.num_drafters
 
 
@@ -58,4 +58,4 @@ def _advance_phase_if_needed(draft):
             drafter.advance_phase()
 
     if draft.eager_picks_enabled(all_drafters):
-        draft.make_initial_bot_picks()
+        draft.make_initial_bot_picks(CUBES_BY_ID[draft.cube_id])
