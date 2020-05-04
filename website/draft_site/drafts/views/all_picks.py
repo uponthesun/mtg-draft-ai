@@ -11,8 +11,8 @@ def all_picks(request, draft_id, seat):
     cube_data = CUBES_BY_ID[draft.cube_id]
 
     picks, pack_history = _convert_drafter(drafter)
-    picks_urls = [cube_data.get_image_url(name) for name in picks]
-    pack_leftovers_urls = [[cube_data.get_image_url(name) for name in pack] for pack in pack_history]
+    picks_urls = [cube_data.get_image_url(c.name) for c in picks]
+    pack_leftovers_urls = [[cube_data.get_image_url(c.name) for c in pack] for pack in pack_history]
 
     context = {
         'draft': draft,
@@ -25,31 +25,21 @@ def all_picks(request, draft_id, seat):
 
 # Helper functions below
 
-def _convert_drafter(db_drafter):
-    draft = db_drafter.draft
-    drafters = models.Drafter.objects.filter(draft=draft)
+def _convert_drafter(drafter):
+    draft = drafter.draft
 
-    picks_table = []
-    for d in drafters:
-        picks = models.Card.objects.filter(draft=draft, picked_by=d)
-        sorted_picks = sorted(picks, key=lambda c: (c.phase, c.picked_at))
-        picks_table.append([c.name for c in sorted_picks])
-
-    picks = []
+    picks = sorted(drafter.owned_cards(), key=lambda c: (c.phase, c.picked_at))
     pack_leftovers = []
-    for phase in range(0, draft.num_phases):
-        direction = -1 if phase % 2 == 0 else 1
+    for phase in range(0, drafter.current_phase + 1):
+        pick_range_end = drafter.current_pick if drafter.current_phase == phase else draft.cards_per_pack
+        for pick in range(0, pick_range_end):
+            direction = -1 if phase % 2 == 0 else 1
+            pack_index = (drafter.seat - pick * direction) % draft.num_drafters
+            original_pack = draft.card_set.filter(phase=phase, start_seat=pack_index)
 
-        for pick in range(0, draft.cards_per_pack):
-            r = db_drafter.seat
-            c = phase * draft.cards_per_pack + pick
-            pack_contents = []
-
-            for i in range(0, draft.cards_per_pack - pick):
-                pack_contents.append(picks_table[r][c])
-                r = (r + direction) % draft.num_drafters
-                c += 1
-            picks.append(pack_contents.pop(0))
-            pack_leftovers.append(pack_contents)
+            pack_at_that_time = [c for c in original_pack if c.picked_at is None or c.picked_at >= pick]
+            pick_from_pack = picks[phase * draft.cards_per_pack + pick]
+            leftovers = [c for c in pack_at_that_time if c.name != pick_from_pack.name]
+            pack_leftovers.append(leftovers)
 
     return picks, pack_leftovers
