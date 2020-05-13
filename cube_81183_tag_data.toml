@@ -317,7 +317,7 @@ set = "grn"
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "sorcery",]
-tags = [ "Tier 1", "Spells - Enabler",]
+tags = [ "Spells - Enabler", "Tier 2",]
 set = "soi"
 
 ["Gather the Townsfolk"]
@@ -359,7 +359,7 @@ set = "dom"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Spice", "Counters - Enabler", "Counters - Payoff", "ETB - Payoff", "Tier 1", "Signpost", "Counters Target - Enabler",]
+tags = [ "Spice", "Counters - Enabler", "Counters - Payoff", "ETB - Payoff", "Signpost", "Counters Target - Enabler", "Tier 2",]
 set = "bbd"
 
 ["Weight of Conscience"]
@@ -1143,7 +1143,7 @@ set = "mh1"
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Graveyard - Payoff", "Spice", "Tier 1", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler",]
+tags = [ "Graveyard - Payoff", "Spice", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Tier 2",]
 set = "usg"
 
 ["Gruesome Menagerie"]

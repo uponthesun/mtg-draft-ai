@@ -9,7 +9,7 @@ set = "ala"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Sac Fodder - Enabler",]
 set = "isd"
 
 ["Isamaru, Hound of Konda"]
@@ -44,14 +44,14 @@ set = "gtc"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler",]
 set = "chk"
 
 ["Enduring Sliver"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Counters - Enabler", "Slivers - Enabler",]
 set = "mh1"
 
 ["Kor Skyfisher"]
@@ -65,14 +65,14 @@ set = "zen"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler",]
 set = "mbs"
 
 ["Puresteel Paladin"]
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Devotion W - Enabler",]
 set = "nph"
 
 ["Restoration Specialist"]
@@ -114,14 +114,14 @@ set = "wwk"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Counters - Payoff",]
 set = "ktk"
 
 [Flickerwisp]
 mana_cost = [ "1", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", "Strategy - Aggro",]
+tags = [ "Tier 1", "Strategy - Aggro", "Devotion W - Enabler",]
 set = "eve"
 
 ["Master of Pearls"]
@@ -177,7 +177,7 @@ set = "5dn"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control",]
+tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control", "Tokens - Enabler", "Sac Fodder - Enabler", "Landfall - Payoff", "Devotion W - Enabler",]
 set = "zen"
 
 ["Kor Cartographer"]
@@ -240,7 +240,7 @@ set = "mor"
 mana_cost = [ "3", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Devotion W - Enabler",]
 set = "emn"
 
 ["Totem-Guide Hartebeest"]
@@ -261,7 +261,7 @@ set = "chk"
 mana_cost = [ "5", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Tier 3", "Strategy - Control", "Landfall - Payoff",]
 set = "bfz"
 
 ["Emerge Unscathed"]
@@ -380,7 +380,7 @@ set = "m20"
 mana_cost = [ "1", "W", "W",]
 color_identity = "W"
 types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control", "Devotion W - Enabler",]
 set = "con"
 
 ["Gelid Shackles"]
@@ -429,7 +429,7 @@ set = "lrw"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Tier 3", "Strategy - Control", "Devotion W - Enabler",]
 set = "shm"
 
 ["Astral Drift"]
@@ -478,7 +478,7 @@ set = "rav"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Devotion W - Enabler",]
 set = "wwk"
 
 ["Sage's Reverie"]
@@ -494,6 +494,13 @@ color_identity = "W"
 types = [ "enchantment",]
 tags = [ "Tier 3",]
 set = "c19"
+
+["Mistveil Plains"]
+mana_cost = []
+color_identity = "W"
+types = [ "land",]
+tags = [ "Tier 4", "Strategy - Control",]
+set = "shm"
 
 ["Enclave Cryptologist"]
 mana_cost = [ "U",]
@@ -1461,6 +1468,13 @@ types = [ "artifact",]
 tags = [ "Tier 4",]
 set = "eld"
 
+["Bolas's Citadel"]
+mana_cost = [ "3", "B", "B", "B",]
+color_identity = "B"
+types = [ "artifact",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "war"
+
 ["Dead Weight"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -1614,6 +1628,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "tsp"
+
+["Slobad, Goblin Tinkerer"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "c16"
 
 ["Soulbright Flamekin"]
 mana_cost = [ "1", "R",]
@@ -2007,6 +2028,13 @@ types = [ "enchantment",]
 tags = [ "Tier 0",]
 set = "usg"
 
+["Ghitu Encampment"]
+mana_cost = []
+color_identity = "R"
+types = [ "land",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+set = "ulg"
+
 ["Basking Rootwalla"]
 mana_cost = [ "G",]
 color_identity = "G"
@@ -2180,7 +2208,7 @@ mana_cost = [ "1", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 4", "Strategy - Control",]
-set = "cmd"
+set = "tsb"
 
 [Splinterfright]
 mana_cost = [ "2", "G",]
@@ -2251,6 +2279,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "rix"
+
+["Aerie Ouphes"]
+mana_cost = [ "4", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "eve"
 
 ["Deranged Hermit"]
 mana_cost = [ "3", "G", "G",]
@@ -2504,11 +2539,18 @@ types = [ "enchantment",]
 tags = [ "Tier 0", "Strategy - Aggro",]
 set = "nem"
 
+["Castle Garenbrig"]
+mana_cost = []
+color_identity = "G"
+types = [ "land",]
+tags = [ "Tier 3",]
+set = "eld"
+
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
 color_identity = "UW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion U - Enabler",]
 set = "dis"
 
 ["Momentary Blink"]
@@ -2613,7 +2655,7 @@ set = "dis"
 mana_cost = [ "R", "/", "G", "R", "/", "G",]
 color_identity = "GR"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion G - Enabler", "Devotion R - Enabler",]
 set = "gpt"
 
 ["Fires of Yavimaya"]
@@ -2641,7 +2683,7 @@ set = "tsp"
 mana_cost = [ "G", "/", "W", "G", "/", "W",]
 color_identity = "GW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion G - Enabler",]
 set = "rav"
 
 ["Harmonic Sliver"]
@@ -2690,7 +2732,7 @@ set = "plc"
 mana_cost = [ "W", "/", "B", "W", "/", "B", "W", "/", "B",]
 color_identity = "BW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion B - Enabler",]
 set = "eve"
 
 ["Rise to Glory"]
@@ -2816,7 +2858,7 @@ set = "eve"
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion R - Enabler",]
 set = "rav"
 
 ["Rise of the Hobgoblins"]
@@ -3631,13 +3673,6 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "ons"
 
-["Castle Garenbrig"]
-mana_cost = []
-color_identity = "G"
-types = [ "land",]
-tags = [ "Tier 3",]
-set = "eld"
-
 ["Flooded Strand"]
 mana_cost = []
 color_identity = ""
@@ -3645,26 +3680,12 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "ons"
 
-["Ghitu Encampment"]
-mana_cost = []
-color_identity = "R"
-types = [ "land",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
-set = "ulg"
-
 ["Marsh Flats"]
 mana_cost = []
 color_identity = ""
 types = [ "land",]
 tags = [ "Fixer",]
 set = "zen"
-
-["Mistveil Plains"]
-mana_cost = []
-color_identity = "W"
-types = [ "land",]
-tags = [ "Tier 4", "Strategy - Control",]
-set = "shm"
 
 ["Misty Rainforest"]
 mana_cost = []
