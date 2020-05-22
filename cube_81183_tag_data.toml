@@ -1619,7 +1619,7 @@ set = "lgn"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Counters - Enabler", "Tier 2", "Elves - Enabler", "Power - Payoff",]
+tags = [ "Counters - Enabler", "Elves - Enabler", "Power - Payoff", "Tier 3",]
 set = "gtc"
 
 ["Hermit Druid"]

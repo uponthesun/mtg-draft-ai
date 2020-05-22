@@ -312,14 +312,14 @@ class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
 
     def __init__(self, common_neighbors):
         component_raters = [
-            CardsOwnedPowerRater(),
+            CardsOwnedPowerRater(weight=LinearProgressWeight(start=1, end=2)),
             PowerDeltaRater(weight=LinearProgressWeight(start=2, end=1)),
-            CardsOwnedSynergyRater(),
-            SynergyDeltaRater(),
-            CommonNeighborsRater(common_neighbors=common_neighbors, weight=LinearProgressWeight(start=1.5, end=0.5)),
+            CardsOwnedSynergyRater(weight=LinearProgressWeight(start=1, end=2)),
+            SynergyDeltaRater(weight=LinearProgressWeight(start=1, end=2)),
+            CommonNeighborsRater(common_neighbors=common_neighbors, weight=LinearProgressWeight(start=2, end=1)),
             # Weight is equal to sum of weights for power delta + synergy delta + common neighbors,
             # which are generally all 0 for fixing lands.
-            FixingLandsRater(weight=ConstantWeight(3))
+            FixingLandsRater(weight=ConstantWeight(5))
         ]
         super().__init__(component_raters)
 
