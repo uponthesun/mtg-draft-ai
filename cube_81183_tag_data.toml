@@ -149,7 +149,7 @@ set = "m20"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Tokens - Enabler", "Tokens Aggro - Enabler", "Sacrifice - Enabler",]
+tags = [ "Tier 3", "Tokens - Enabler", "Tokens Aggro - Enabler",]
 set = "mm3"
 
 ["Deadeye Harpooner"]
@@ -240,7 +240,7 @@ set = "dom"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Enabler", "Sacrifice - Enabler", "Spirit Tokens - Enabler",]
+tags = [ "Tier 3", "Lifegain - Enabler", "Spirit Tokens - Enabler",]
 set = "soi"
 
 ["Angel of Flight Alabaster"]
@@ -331,7 +331,7 @@ set = "dka"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "sorcery",]
-tags = [ "Tokens - Enabler", "Artifacts (Creature) - Enabler", "Sacrifice - Enabler", "Tier 3",]
+tags = [ "Tokens - Enabler", "Artifacts (Creature) - Enabler", "Tier 3", "Tokens Aggro - Enabler",]
 set = "aer"
 
 ["Cartouche of Solidarity"]
@@ -800,7 +800,7 @@ set = "ktk"
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Sacrifice - Payoff", "Lifegain - Enabler", "Counters - Enabler", "Vampires - Enabler", "Vampires - Payoff", "Signpost", "Tier 3", "Sacrifice Outlet - Enabler",]
+tags = [ "Lifegain - Enabler", "Counters - Enabler", "Vampires - Enabler", "Vampires - Payoff", "Signpost", "Tier 3", "Sacrifice Outlet - Enabler", "Sacrifice - Payoff",]
 set = "soi"
 
 ["Pilfering Imp"]
@@ -1311,7 +1311,7 @@ set = "emn"
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Sacrifice - Enabler", "Tier 3", "Legends - Enabler",]
+tags = [ "Sacrifice - Enabler", "Tier 3", "Legends - Enabler", "Sacrifice Outlet - Payoff",]
 set = "roe"
 
 ["Avaricious Dragon"]
@@ -1402,7 +1402,7 @@ set = "ths"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 3", "Removal", "Heroic - Enabler", "Spells (Red) - Enabler", "Spells - Enabler",]
+tags = [ "Removal", "Heroic - Enabler", "Spells (Red) - Enabler", "Spells - Enabler", "Tier 2",]
 set = "bng"
 
 ["Fiery Conclusion"]
@@ -1416,7 +1416,7 @@ set = "rav"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Heroic - Enabler", "Spells - Enabler", "Trick", "Spells (Red) - Enabler", "Power - Payoff", "Tier 4",]
+tags = [ "Heroic - Enabler", "Spells - Enabler", "Trick", "Spells (Red) - Enabler", "Power - Payoff", "Tier 3",]
 set = "mh1"
 
 ["Harvest Pyre"]
@@ -1430,14 +1430,14 @@ set = "isd"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Trick", "Heroic - Enabler", "Power - Payoff", "Spells - Enabler", "Tier 4",]
+tags = [ "Trick", "Heroic - Enabler", "Power - Payoff", "Tier 3",]
 set = "aer"
 
 ["Temur Battle Rage"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Trick", "Heroic - Enabler", "Spells - Enabler", "Power - Payoff", "Tier 4",]
+tags = [ "Trick", "Heroic - Enabler", "Power - Payoff", "Tier 4",]
 set = "frf"
 
 ["Brimstone Volley"]
@@ -1486,7 +1486,7 @@ set = "ori"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 4", "Spells - Enabler", "Heroic - Enabler",]
+tags = [ "Spells - Enabler", "Heroic - Enabler", "Tier 3",]
 set = "kld"
 
 ["Avacyn's Judgment"]
@@ -1640,7 +1640,7 @@ set = "rna"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Graveyard - Payoff", "Tokens - Enabler", "Tier 3", "Sacrifice - Enabler",]
+tags = [ "Graveyard - Payoff", "Tokens - Enabler", "Tier 3",]
 set = "mh1"
 
 ["Nessian Hornbeetle"]
@@ -1661,7 +1661,7 @@ set = "bng"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Counters - Enabler", "Tier 3", "Counters Target - Enabler",]
+tags = [ "Counters - Enabler", "Counters Target - Enabler", "Tier 4",]
 set = "aer"
 
 [Skinshifter]
@@ -1920,7 +1920,7 @@ set = "som"
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "tribal", "sorcery",]
-tags = [ "Elves - Enabler", "Tier 2", "Spells - Enabler", "Trick", "Tokens Aggro - Enabler", "Tokens - Enabler", "Big Counters - Enabler", "Counters Target - Enabler", "Sacrifice - Enabler",]
+tags = [ "Elves - Enabler", "Tier 2", "Spells - Enabler", "Trick", "Tokens - Enabler", "Big Counters - Enabler", "Counters Target - Enabler", "Sacrifice - Enabler",]
 set = "mor"
 
 ["Nissa's Judgment"]
@@ -1948,7 +1948,7 @@ set = "soi"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tokens - Enabler", "Heroic - Enabler", "Tier 3", "Sacrifice - Enabler", "Tokens Aggro - Enabler", "Power - Payoff",]
+tags = [ "Tokens - Enabler", "Heroic - Enabler", "Tier 3", "Power - Payoff",]
 set = "rav"
 
 ["Path of Discovery"]
@@ -2375,7 +2375,7 @@ set = "zen"
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Removal", "Artifacts (Cheap) - Enabler", "Tier 3", "Artifact Cards - Enabler", "Flash - Interaction",]
+tags = [ "Removal", "Artifacts (Cheap) - Enabler", "Tier 3", "Artifact Cards - Enabler", "Flash - Interaction", "Hellbent - Enabler",]
 set = "m11"
 
 [O-Naginata]

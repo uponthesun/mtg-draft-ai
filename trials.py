@@ -20,7 +20,7 @@ def main():
     args = parser.parse_args()
 
     cube_list = read_cube_toml(args.card_data, args.fixer_data)
-    draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
+    draft_info = DraftInfo(card_list=cube_list, num_drafters=8, num_phases=3, cards_per_pack=15)
     drafter_factory = SynergyPowerFixingPicker.factory(cube_list)
 
     deck_metrics = []
@@ -102,11 +102,18 @@ def decks_to_html(decks):
         deck_graph = synergy.create_graph(deck, remove_isolated=False)
         sorted_deck = [tup[0] for tup in synergy.sorted_centralities(deck_graph)]
 
-        html += 'Deck {} - # Edges: {} \n'.format(i, len(deck_graph.edges))
+        html += 'Deck {} - {} - # Edges: {} \n'.format(i, ''.join(deck_colors(sorted_deck)), len(deck_graph.edges))
         html += '<div>\n{}</div>\n'.format(display.cards_to_html(sorted_deck))
         i += 1
 
     return html
+
+def deck_colors(deck):
+    result = set()
+    for card in deck:
+        for color in card.color_id:
+            result.add(color)
+    return sorted(list(result))
 
 
 if __name__ == '__main__':
