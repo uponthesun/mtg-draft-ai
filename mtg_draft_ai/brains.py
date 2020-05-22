@@ -268,10 +268,10 @@ class FixingLandsRater(ComponentRater):
 
         # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
         # that improving your mana always has value
-        lower_bound = 0.3
+        lower_bound = 0.2
         # Hand-tuned / arbitrary starting offset, which makes it rate fixers lower initially and higher later on.
         # Having more fixers already increases the offset which decreases the rating.
-        offset = 3 + num_oncolor_fixer_lands
+        offset = 4 + num_oncolor_fixer_lands
         oncolor_nonlands_proportion_with_offset = max(0, (num_oncolor_nonlands - offset)) / num_picks_made
 
         return lower_bound + (1 - lower_bound) * oncolor_nonlands_proportion_with_offset
@@ -291,13 +291,13 @@ class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
     def __init__(self, common_neighbors):
         component_raters = [
             CardsOwnedPowerRater(),
-            PowerDeltaRater(weight=3),
+            PowerDeltaRater(weight=2),
             CardsOwnedSynergyRater(),
             SynergyDeltaRater(),
             CommonNeighborsRater(common_neighbors=common_neighbors),
             # Weight is equal to sum of weights for power delta + synergy delta + common neighbors,
             # which are generally all 0 for fixing lands.
-            FixingLandsRater(weight=5)
+            FixingLandsRater(weight=4)
         ]
         super().__init__(component_raters)
 
