@@ -373,7 +373,7 @@ set = "bbd"
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Removal", "Tier 2",]
+tags = [ "Removal", "Tier 2", "Tokens - Payoff",]
 set = "mor"
 
 ["Bound by Moonsilver"]
