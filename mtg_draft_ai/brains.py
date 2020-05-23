@@ -56,10 +56,31 @@ class RatedCard:
         self.rating = rating
 
 
+class ConstantWeight:
+
+    def __init__(self, weight):
+        self.weight = weight
+
+    def compute(self, cards_owned, draft_info):
+        return self.weight
+
+
+class LinearProgressWeight:
+
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def compute(self, cards_owned, draft_info):
+        progress = len(cards_owned) / (draft_info.num_phases * draft_info.cards_per_pack)
+
+        return self.start + progress * (self.end - self.start)
+
+
 class ComponentRater(abc.ABC):
     """Defines interface for a Rater for a specific component such as power delta, synergy delta, etc."""
 
-    def __init__(self, weight=1):
+    def __init__(self, weight=ConstantWeight(1)):
         """
         Args:
             weight (float): Weight of this component when calculating the final rating.
@@ -103,7 +124,7 @@ class TwoColorComboRatingsPicker(Picker):
     def ratings(self, pack, cards_owned, draft_info):
         cards_with_rating_components = self._raw_rating_components(pack, cards_owned, draft_info)
         cards_with_normalized_rating_components = self._normalized_ratings(cards_with_rating_components, cards_owned)
-        rated_cards = self._final_ratings(cards_with_normalized_rating_components)
+        rated_cards = self._final_ratings(cards_with_normalized_rating_components, cards_owned, draft_info)
         sorted_rated_cards = sorted(rated_cards, key=lambda rc: rc.rating, reverse=True)
 
         return sorted_rated_cards
@@ -134,12 +155,13 @@ class TwoColorComboRatingsPicker(Picker):
 
         return normalized_ratings
 
-    def _final_ratings(self, cards_with_normalized_rating_components):
+    def _final_ratings(self, cards_with_normalized_rating_components, cards_owned, draft_info):
         final_ratings = [copy.copy(r) for r in cards_with_normalized_rating_components]
 
-        denominator = sum(cr.weight for cr in self.component_raters)
+        denominator = sum(cr.weight.compute(cards_owned, draft_info) for cr in self.component_raters)
         for card_to_rate in final_ratings:
-            numerator = sum(cr.weight * card_to_rate.components[cr.name()] for cr in self.component_raters)
+            numerator = sum(cr.weight.compute(cards_owned, draft_info) * card_to_rate.components[cr.name()]
+                            for cr in self.component_raters)
             card_to_rate.rating = round(numerator / denominator, self.ROUND_NUM_DIGITS)
 
         return final_ratings
@@ -216,7 +238,7 @@ class CommonNeighborsRater(ComponentRater):
     especially helps for early picks when you don't have many cards yet.
     """
 
-    def __init__(self, common_neighbors, weight=1):
+    def __init__(self, common_neighbors, weight=ConstantWeight(1)):
         super().__init__(weight=weight)
         self.common_neighbors = common_neighbors
 
@@ -268,10 +290,10 @@ class FixingLandsRater(ComponentRater):
 
         # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
         # that improving your mana always has value
-        lower_bound = 0.2
+        lower_bound = 0.3
         # Hand-tuned / arbitrary starting offset, which makes it rate fixers lower initially and higher later on.
         # Having more fixers already increases the offset which decreases the rating.
-        offset = 4 + num_oncolor_fixer_lands
+        offset = 3 + num_oncolor_fixer_lands
         oncolor_nonlands_proportion_with_offset = max(0, (num_oncolor_nonlands - offset)) / num_picks_made
 
         return lower_bound + (1 - lower_bound) * oncolor_nonlands_proportion_with_offset
@@ -290,14 +312,14 @@ class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
 
     def __init__(self, common_neighbors):
         component_raters = [
-            CardsOwnedPowerRater(),
-            PowerDeltaRater(weight=2),
-            CardsOwnedSynergyRater(),
-            SynergyDeltaRater(),
-            CommonNeighborsRater(common_neighbors=common_neighbors),
+            CardsOwnedPowerRater(weight=LinearProgressWeight(start=1, end=2)),
+            PowerDeltaRater(weight=LinearProgressWeight(start=2, end=1)),
+            CardsOwnedSynergyRater(weight=LinearProgressWeight(start=1, end=2)),
+            SynergyDeltaRater(weight=LinearProgressWeight(start=1, end=2)),
+            CommonNeighborsRater(common_neighbors=common_neighbors, weight=LinearProgressWeight(start=2, end=1)),
             # Weight is equal to sum of weights for power delta + synergy delta + common neighbors,
             # which are generally all 0 for fixing lands.
-            FixingLandsRater(weight=4)
+            FixingLandsRater(weight=ConstantWeight(5))
         ]
         super().__init__(component_raters)
 

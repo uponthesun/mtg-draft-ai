@@ -20,7 +20,7 @@ def main():
     args = parser.parse_args()
 
     cube_list = read_cube_toml(args.card_data, args.fixer_data)
-    draft_info = DraftInfo(card_list=cube_list, num_drafters=6, num_phases=3, cards_per_pack=15)
+    draft_info = DraftInfo(card_list=cube_list, num_drafters=8, num_phases=3, cards_per_pack=15)
     drafter_factory = SynergyPowerFixingPicker.factory(cube_list)
 
     deck_metrics = []
@@ -102,11 +102,23 @@ def decks_to_html(decks):
         deck_graph = synergy.create_graph(deck, remove_isolated=False)
         sorted_deck = [tup[0] for tup in synergy.sorted_centralities(deck_graph)]
 
-        html += 'Deck {} - # Edges: {} \n'.format(i, len(deck_graph.edges))
+        html += 'Deck {} - {} - # Edges: {} \n'.format(i, deck_colors(sorted_deck), len(deck_graph.edges))
         html += '<div>\n{}</div>\n'.format(display.cards_to_html(sorted_deck))
         i += 1
 
     return html
+
+
+def deck_colors(deck):
+    nonlands = [c for c in deck if 'land' not in c.types]
+    counts = {}
+    for card in nonlands:
+        for color in card.color_id:
+            if color not in counts:
+                counts[color] = 0
+            counts[color] += 1
+    sorted_by_count = [k for k, v in sorted(counts.items(), key=lambda i: i[1], reverse=True)]
+    return ''.join(sorted(c if counts[c] > 3 else c.lower() for c in sorted_by_count))  # splash colors are lowercase
 
 
 if __name__ == '__main__':
