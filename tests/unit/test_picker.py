@@ -18,7 +18,7 @@ CARDS_BY_NAME = {c.name: c for c in CUBE_LIST}
 
 @pytest.fixture
 def draft_info():
-    return mock.Mock(name='draft_info')
+    return mock.Mock(name='draft_info', num_phases=3, cards_per_pack=15)
 
 
 @pytest.fixture
