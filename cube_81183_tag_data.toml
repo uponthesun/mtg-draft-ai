@@ -397,13 +397,6 @@ types = [ "enchantment",]
 tags = [ "Signpost", "Tokens - Payoff", "Tier 2", "Tokens Aggro - Payoff",]
 set = "grn"
 
-["Mausoleum Wanderer"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Ninjutsu - Enabler", "Spirits - Enabler", "Spirits - Payoff", "Tier 3", "Spirit Tokens - Payoff",]
-set = "emn"
-
 [Pteramander]
 mana_cost = [ "U",]
 color_identity = "U"
@@ -446,6 +439,13 @@ types = [ "creature",]
 tags = [ "Tier 4", "Spirits - Enabler", "Ninjutsu - Enabler",]
 set = "emn"
 
+["Ghostly Pilferer"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Spirits - Enabler", "Ninjutsu - Enabler", "Drake Haven - Enabler", "Discard - Enabler", "Hellbent - Enabler", "Tier 3",]
+set = "m21"
+
 ["Glint-Nest Crane"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -481,6 +481,13 @@ types = [ "creature",]
 tags = [ "Spirits - Payoff", "Spirits - Enabler", "Flash - Threat", "Ninjutsu - Enabler", "Tier 2", "Signpost",]
 set = "soi"
 
+[Shacklegeist]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Signpost", "Spirits - Enabler", "Spirits - Payoff", "Spirit Tokens - Payoff", "Ninjutsu - Enabler", "Tier 2",]
+set = "m21"
+
 ["Supreme Phantom"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -501,13 +508,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Wizards - Enabler", "Tier 2", "Graveyard - Enabler", "Discard - Enabler",]
 set = "5dn"
-
-["Callow Jushi"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Spirits - Payoff", "Tier 3",]
-set = "bok"
 
 [Fettergeist]
 mana_cost = [ "2", "U",]
@@ -1853,13 +1853,6 @@ types = [ "creature",]
 tags = [ "Graveyard - Payoff", "ETB - Enabler", "Ramp - Payoff", "Goreclaw - Payoff", "Tier 1",]
 set = "bfz"
 
-[Ghoultree]
-mana_cost = [ "7", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Signpost", "Graveyard - Payoff", "Power - Enabler", "Tier 4",]
-set = "dka"
-
 ["Sifter Wurm"]
 mana_cost = [ "5", "G", "G",]
 color_identity = "G"
@@ -1950,6 +1943,13 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Tokens - Enabler", "Heroic - Enabler", "Tier 3", "Power - Payoff",]
 set = "rav"
+
+["Garruk's Uprising"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "Signpost", "Tier 3", "Power - Payoff",]
+set = "m21"
 
 ["Path of Discovery"]
 mana_cost = [ "3", "G",]
@@ -2287,6 +2287,13 @@ types = [ "artifact", "creature",]
 tags = [ "Counters - Enabler", "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler", "Tier 2", "Tokens Aggro - Payoff", "Wizards - Enabler", "Elves - Payoff", "Spirits - Payoff", "Vampires - Payoff", "Artifact Cards - Enabler", "Spirit Tokens - Payoff",]
 set = "aer"
 
+["Myr Sire"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4", "Sacrifice - Enabler", "Artifact Cards - Enabler", "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler",]
+set = "mbs"
+
 ["Perilous Myr"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -2405,13 +2412,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Artifacts (Cheap) - Enabler", "Artifacts (Noncreature) - Enabler", "Ramp - Enabler", "Fixer", "Tier 3", "Artifact Cards - Enabler",]
 set = "rav"
-
-["Culling Dais"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Artifacts (Cheap) - Enabler", "Artifacts (Noncreature) - Enabler", "Artifact Cards - Enabler",]
-set = "bbd"
 
 ["Dimir Signet"]
 mana_cost = [ "2",]
