@@ -19,3 +19,11 @@ table, th, td {
   transform: scale(2) translate(20%, 10%) ;
   transition-delay: 0.5s;
 }
+
+input[type="button"] {
+  -webkit-appearance: none;
+}
+
+button {
+  -webkit-appearance: none;
+}
