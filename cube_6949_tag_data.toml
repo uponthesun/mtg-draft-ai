@@ -117,6 +117,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "wwk"
 
+["Whitemane Lion"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "plc"
+
 ["Abzan Falconer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -165,13 +172,6 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 2",]
 set = "uds"
-
-["Auriok Salvagers"]
-mana_cost = [ "3", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "5dn"
 
 ["Emeria Angel"]
 mana_cost = [ "2", "W", "W",]
@@ -331,7 +331,7 @@ set = "m15"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "sorcery",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "mh1"
 
 ["Death or Glory"]
@@ -429,7 +429,7 @@ set = "shm"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3",]
+tags = [ "Tier 4",]
 set = "mh1"
 
 ["Bound by Moonsilver"]
@@ -485,7 +485,7 @@ set = "frf"
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3",]
+tags = [ "Tier 4",]
 set = "c19"
 
 ["Mistveil Plains"]
@@ -509,6 +509,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "roe"
 
+["Galerider Sliver"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "m14"
+
 ["Screeching Sliver"]
 mana_cost = [ "U",]
 color_identity = "U"
@@ -529,13 +536,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "m15"
-
-["Cloud of Faeries"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 4", "Strategy - Aggro",]
-set = "ulg"
 
 ["Lighthouse Chronologist"]
 mana_cost = [ "1", "U",]
@@ -578,6 +578,13 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control",]
 set = "isd"
+
+["Soratami Cloudskater"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "chk"
 
 ["Surveilling Sprite"]
 mana_cost = [ "1", "U",]
@@ -753,13 +760,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "mmq"
-
-["Mystical Tutor"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 4",]
-set = "mir"
 
 [Repeal]
 mana_cost = [ "X", "U",]
@@ -1227,7 +1227,7 @@ set = "nph"
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "enchantment", "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 4",]
 set = "ths"
 
 ["Marsh Flitter"]
@@ -1300,13 +1300,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "m12"
 
-[Disfigure]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
-set = "zen"
-
 ["Slaughter Pact"]
 mana_cost = [ "0",]
 color_identity = "B"
@@ -1320,6 +1313,13 @@ color_identity = "B"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "dka"
+
+["Easy Prey"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 3",]
+set = "iko"
 
 ["Go for the Throat"]
 mana_cost = [ "1", "B",]
@@ -1493,7 +1493,7 @@ set = "uds"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "enchantment",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Strategy - Control", "Tier 4",]
 set = "inv"
 
 ["Necromancer's Stockpile"]
@@ -1761,6 +1761,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Tier 2",]
 set = "dka"
+
+[Spitebellows]
+mana_cost = [ "5", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "mor"
 
 ["Bogardan Hellkite"]
 mana_cost = [ "6", "R", "R",]
@@ -2161,6 +2168,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "ons"
 
+["Krosan Restorer"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "tor"
+
 ["Loaming Shaman"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -2174,13 +2188,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "bng"
-
-["Spike Feeder"]
-mana_cost = [ "1", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 4", "Strategy - Control",]
-set = "tsb"
 
 [Splinterfright]
 mana_cost = [ "2", "G",]
@@ -2231,12 +2238,26 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "inv"
 
+["Nylea, Keen-Eyed"]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "enchantment", "creature",]
+tags = [ "Tier 3",]
+set = "thb"
+
 ["Oracle of Mul Daya"]
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 1", "Strategy - Control",]
 set = "zen"
+
+["Spike Breeder"]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 4",]
+set = "sth"
 
 ["World Shaper"]
 mana_cost = [ "3", "G",]
@@ -2497,6 +2518,13 @@ types = [ "land",]
 tags = [ "Tier 3",]
 set = "eld"
 
+["Tranquil Thicket"]
+mana_cost = []
+color_identity = "G"
+types = [ "land",]
+tags = [ "Tier 4",]
+set = "ons"
+
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
 color_identity = "UW"
@@ -2517,13 +2545,6 @@ color_identity = "WU"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "shm"
-
-["Aethermage's Touch"]
-mana_cost = [ "2", "W", "U",]
-color_identity = "UW"
-types = [ "instant",]
-tags = [ "Tier 3",]
-set = "dis"
 
 [Mirrorweave]
 mana_cost = [ "2", "W", "/", "U", "W", "/", "U",]
@@ -2826,33 +2847,12 @@ types = [ "sorcery",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "dis"
 
-["Offspring's Revenge"]
-mana_cost = [ "2", "R", "W", "B",]
-color_identity = "BRW"
-types = [ "enchantment",]
-tags = [ "Tier 3",]
-set = "iko"
-
-["Song of Creation"]
-mana_cost = [ "1", "G", "U", "R",]
-color_identity = "GRU"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "iko"
-
 ["Reaper King"]
 mana_cost = [ "2", "/", "W", "2", "/", "U", "2", "/", "B", "2", "/", "R", "2", "/", "G",]
 color_identity = "BGRUW"
 types = [ "artifact", "creature",]
 tags = [ "Tier 4",]
 set = "shm"
-
-[Chronomaton]
-mana_cost = [ "1",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Tier 4", "Strategy - Aggro",]
-set = "m13"
 
 ["Cryptic Trilobite"]
 mana_cost = [ "X", "X",]
@@ -2958,6 +2958,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "soi"
+
+[Extruder]
+mana_cost = [ "4",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4",]
+set = "uds"
 
 ["Lodestone Myr"]
 mana_cost = [ "4",]
@@ -3084,13 +3091,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 4",]
 set = "soi"
-
-["Armillary Sphere"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "con"
 
 ["Coldsteel Heart"]
 mana_cost = [ "2",]
@@ -3610,6 +3610,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "ons"
 
+["Geier Reach Sanitarium"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 4",]
+set = "emn"
+
 ["Marsh Flats"]
 mana_cost = []
 color_identity = ""
@@ -3679,13 +3686,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 4",]
 set = "m15"
-
-["Tectonic Edge"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Tier 4", "Strategy - Aggro", "Strategy - Control",]
-set = "wwk"
 
 ["Verdant Catacombs"]
 mana_cost = []

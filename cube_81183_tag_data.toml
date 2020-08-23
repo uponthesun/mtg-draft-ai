@@ -915,13 +915,6 @@ types = [ "creature",]
 tags = [ "Tier 4", "Elves - Enabler",]
 set = "ori"
 
-["Eyeblight Assassin"]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Elves - Enabler", "ETB - Enabler", "Tier 4",]
-set = "ori"
-
 ["Isareth the Awakener"]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
@@ -1180,6 +1173,13 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Lifegain - Enabler", "Sacrifice - Payoff", "Signpost", "Sacrifice Outlet - Enabler", "Tier 3",]
 set = "bfz"
+
+["Prowess of the Fair"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "tribal", "enchantment",]
+tags = [ "Tier 4", "Elves - Payoff",]
+set = "lrw"
 
 ["Bomat Courier"]
 mana_cost = [ "1",]
@@ -2327,7 +2327,7 @@ mana_cost = [ "3",]
 color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler", "Tier 2", "Ramp - Enabler", "Artifact Cards - Enabler",]
-set = "c14"
+set = "som"
 
 [Skyscanner]
 mana_cost = [ "3",]
