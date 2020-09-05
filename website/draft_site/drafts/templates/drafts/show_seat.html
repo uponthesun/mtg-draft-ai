@@ -48,13 +48,13 @@
 <b>Owned Cards</b>
 
 <div>
-{% for _, image_url in owned_cards %}
+{% for _, image_url, _ in owned_cards %}
     {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
     <img src="{{ image_url }}" class="card" />
 {% endfor %}
 </div>
 
 <textarea rows="{{ owned_cards|length }}">
-{% for card, _ in owned_cards %}1 {{ card.name }}
+{% for card, _, set in owned_cards %}1 {{ card.name }} ({{ set|upper }})
 {% endfor %}
 </textarea>
