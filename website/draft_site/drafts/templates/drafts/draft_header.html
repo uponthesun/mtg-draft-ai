@@ -1,6 +1,8 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'general.css' %}" />
 
+<a href="{% url 'show_draft' draft.id%}">Draft Overview</a>
+<br>
 <b>Viewing Seat:</b> {{ drafter.seat }}
 <br>
 {% if drafter.bot %}
