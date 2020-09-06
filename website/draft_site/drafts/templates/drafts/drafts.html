@@ -11,7 +11,7 @@ table, th, td {
 <tr>
     <td><a href="{% url 'show_draft' draft.id %}">Draft {{ draft.id }}</a></td>
     <td>{{ cube_name }}</td>
-    <td>{{ drafters }}</td>
+    <td>{% for drafter in drafters %}<a href="{% url 'show_seat' draft.id drafter.seat %}">{{ drafter.name }}</a>&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}</td>
 </tr>
 {% endfor %}
 </table>

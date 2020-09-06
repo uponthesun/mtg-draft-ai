@@ -12,7 +12,7 @@ def drafts(request):
         human_drafters_by_draft_id.setdefault(drafter.draft_id, [])
         human_drafters_by_draft_id[drafter.draft_id].append(drafter)
 
-    drafts_table = [(draft, CUBES_BY_ID[draft.cube_id].name, ', '.join([h.name for h in human_drafters_by_draft_id[draft.id]]))
+    drafts_table = [(draft, CUBES_BY_ID[draft.cube_id].name, human_drafters_by_draft_id[draft.id])
                     for draft in all_drafts]
 
     return render(request, 'drafts/drafts.html', {'drafts_table': drafts_table})
