@@ -21,8 +21,8 @@ Average card power: {{ avg_power }}
 </div>
 
 <textarea rows="{{ textarea_rows }}">
-{% for name in deck_card_names %}1 {{ name }}
+{% for name, set in deck_card_names %}1 {{ name }} ({{ set|upper }})
 {% endfor %}
-{% for name in leftovers_card_names %}1 {{ name }}
+{% for name, set in leftovers_card_names %}1 {{ name }} ({{ set|upper }})
 {% endfor %}
 </textarea>
