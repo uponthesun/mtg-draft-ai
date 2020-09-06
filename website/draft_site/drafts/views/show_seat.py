@@ -41,7 +41,7 @@ def show_seat(request, draft_id, seat):
 
     deck_exports_context = {
         'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in sorted_owned_cards],
-        'leftovers_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in sorted_owned_cards],
+        'leftovers_card_names': [],
         'textarea_rows': len(sorted_owned_cards) + 1,
     }
 
