@@ -8,18 +8,22 @@ class Card:
     """Identifying information and other relevant attributes of a single Magic card."""
 
     def __init__(self, name, color_id=None, types=None, mana_cost=None, tags=None, power_tier=None,
-                 fixer_color_id=None, card_set=None):
+                 fixer_color_id=None, card_set=''):
         """
         Args:
             name (str): The card's name.
             color_id (str): The card's color identity, as read from cubetutor. E.g. a cube owner
                 can assign R for Bomat Courier.
             types (List[str]): The card's supertypes.
+            mana_cost (List[str]): The card's full mana cost, for example ["2", "G", "G"]
             tags (List[(str, str)]): List of applicable tags for this card, as read from cubetutor.
                 Currently, only two-part tags are supported, in the format: <Category> - <Subcategory>
                 e.g.: Lifegain - Payoff
                 Defaults to [].
             power_tier (int): Power level tier as tagged by cube maintainer (currently values 1-4 allowed).
+            fixer_color_id (str): Set this only for cards which the bot should treat as fixers. String containing
+                all the colors the card can fix for, for example "UW".
+            card_set (str): The set abbreviation for the printing for this card. For example: "TSP"
         """
         tags = [] if tags is None else tags
 
