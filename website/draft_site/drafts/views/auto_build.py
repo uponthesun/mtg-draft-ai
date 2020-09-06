@@ -31,10 +31,13 @@ def auto_build(request, draft_id, seat):
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'built_deck_images': [cube_data.get_image_url(c.name) for c in built_deck],
         'leftovers_images': [cube_data.get_image_url(c.name) for c in leftovers],
-        'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in built_deck],
-        'leftovers_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in leftovers],
         'num_edges': len(deck_graph.edges),
         'avg_power': round(avg_power, 2),
+    }
+
+    deck_exports_context = {
+        'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in built_deck],
+        'leftovers_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in leftovers],
         'textarea_rows': len(pool) + 1,
     }
-    return render(request, 'drafts/auto_build.html', context)
+    return render(request, 'drafts/auto_build.html', {**context, **deck_exports_context})
