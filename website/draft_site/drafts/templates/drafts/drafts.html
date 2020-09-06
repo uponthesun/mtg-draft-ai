@@ -1,0 +1,17 @@
+<style>
+table, th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+</style>
+
+<table>
+<tr><th>Draft</th><th>Cube</th><th>Human Drafters</th></tr>
+{% for draft, cube_name, drafters in drafts_table %}
+<tr>
+    <td><a href="{% url 'show_draft' draft.id %}">Draft {{ draft.id }}</a></td>
+    <td>{{ cube_name }}</td>
+    <td>{{ drafters }}</td>
+</tr>
+{% endfor %}
+</table>
