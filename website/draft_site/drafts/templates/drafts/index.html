@@ -1,6 +1,12 @@
 {%load static %}
 <link rel="stylesheet" href="{% static 'general.css' %}" />
 
+<b><a href="{% url 'drafts' %}">Previous drafts</a></b>
+<br>
+<br>
+<b>Start new draft</b>
+<br>
+
 <form action="{% url 'create_draft' %}" method="post">
     {% csrf_token %}
 
