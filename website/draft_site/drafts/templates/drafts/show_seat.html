@@ -54,7 +54,4 @@
 {% endfor %}
 </div>
 
-<textarea rows="{{ owned_cards|length }}">
-{% for card, _ in owned_cards %}1 {{ card.name }}
-{% endfor %}
-</textarea>
+{% include "drafts/deck_exports.html" %}

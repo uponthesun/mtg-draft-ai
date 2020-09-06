@@ -39,7 +39,13 @@ def show_seat(request, draft_id, seat):
         'bot_ratings_table': bot_ratings_table,
     }
 
-    return render(request, 'drafts/show_seat.html', {**basic_context, **current_pack_context})
+    deck_exports_context = {
+        'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in sorted_owned_cards],
+        'leftovers_card_names': [],
+        'textarea_rows': len(sorted_owned_cards) + 1,
+    }
+
+    return render(request, 'drafts/show_seat.html', {**basic_context, **current_pack_context, **deck_exports_context})
 
 
 def _get_bot_ratings(draft, current_pack, owned_cards):
