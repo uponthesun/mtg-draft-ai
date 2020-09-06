@@ -2,7 +2,7 @@ import os
 import urllib
 from multiprocessing.pool import ThreadPool
 
-from mtg_draft_ai.api import read_cube_toml
+from mtg_draft_ai.api import Card, read_cube_toml
 
 from django.conf import settings
 import requests
@@ -39,7 +39,7 @@ class CubeData:
                         autobuild_enabled=autobuild_enabled)
 
     def card_by_name(self, card_name):
-        return self.cards_by_name[card_name]
+        return self.cards_by_name[card_name] if card_name in self.cards_by_name else Card(name=card_name)
 
     def get_image_url(self, card_name):
         """ Gets the image URL for a card name from cache if present, otherwise falls back to the API URL. """
