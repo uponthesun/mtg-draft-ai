@@ -25,7 +25,7 @@ class Command(BaseCommand):
 
         drafts_to_delete = Draft.objects.filter(id__in=[draft.id for draft in single_player_drafts])
 
-        print('About to delete {} drafts: {}'.format(len(drafts_to_delete), drafts_to_delete))
+        print('About to delete {} drafts: {}'.format(len(drafts_to_delete), [draft.id for draft in drafts_to_delete]))
         if options['dry_run']:
             print('--dry-run specified; nothing deleted')
         else:
