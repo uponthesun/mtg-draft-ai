@@ -8,6 +8,7 @@
 <textarea rows="{{ textarea_rows }}">
 {% for name, set in deck_card_names %}1 {{ name }} ({{ set|upper }})
 {% endfor %}
+// Sideboard
 {% for name, set in leftovers_card_names %}1 {{ name }} ({{ set|upper }})
 {% endfor %}
 </textarea>
