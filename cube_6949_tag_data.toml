@@ -2469,6 +2469,13 @@ types = [ "enchantment",]
 tags = [ "Tier 4",]
 set = "m20"
 
+["Strength from the Fallen"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "Tier 4",]
+set = "jou"
+
 ["Warbriar Blessing"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
@@ -2480,7 +2487,7 @@ set = "thb"
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 2",]
+tags = [ "Tier 3",]
 set = "mmq"
 
 [Narcissism]
@@ -2517,13 +2524,6 @@ color_identity = "G"
 types = [ "land",]
 tags = [ "Tier 3",]
 set = "eld"
-
-["Tranquil Thicket"]
-mana_cost = []
-color_identity = "G"
-types = [ "land",]
-tags = [ "Tier 4",]
-set = "ons"
 
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
@@ -3253,19 +3253,19 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "dis"
 
+["Irrigated Farmland"]
+mana_cost = []
+color_identity = "WU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
 ["Mystic Gate"]
 mana_cost = []
 color_identity = "UW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "shm"
-
-["Temple of Enlightenment"]
-mana_cost = []
-color_identity = "UW"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "bng"
 
 ["Creeping Tar Pit"]
 mana_cost = []
@@ -3281,19 +3281,19 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "m10"
 
+["Fetid Pools"]
+mana_cost = []
+color_identity = "UB"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
 ["Sunken Ruins"]
 mana_cost = []
 color_identity = "BU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "shm"
-
-["Temple of Deceit"]
-mana_cost = []
-color_identity = "BU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ths"
 
 ["Watery Grave"]
 mana_cost = []
@@ -3308,6 +3308,13 @@ color_identity = "BR"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "dis"
+
+["Canyon Slough"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
 
 ["Dragonskull Summit"]
 mana_cost = []
@@ -3330,13 +3337,6 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "wwk"
 
-["Temple of Malice"]
-mana_cost = []
-color_identity = "BR"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "bng"
-
 ["Fire-Lit Thicket"]
 mana_cost = []
 color_identity = "GR"
@@ -3358,6 +3358,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "m10"
 
+["Sheltered Thicket"]
+mana_cost = []
+color_identity = "RG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
 ["Stomping Ground"]
 mana_cost = []
 color_identity = "GR"
@@ -3365,12 +3372,12 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "gpt"
 
-["Temple of Abandon"]
+["Scattered Groves"]
 mana_cost = []
-color_identity = "GR"
+color_identity = "WG"
 types = [ "land",]
 tags = [ "Fixer",]
-set = "ths"
+set = "akh"
 
 ["Stirring Wildwood"]
 mana_cost = []
@@ -3392,13 +3399,6 @@ color_identity = "GW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "rav"
-
-["Temple of Plenty"]
-mana_cost = []
-color_identity = "GW"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "bng"
 
 ["Wooded Bastion"]
 mana_cost = []

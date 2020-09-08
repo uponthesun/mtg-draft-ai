@@ -15,14 +15,15 @@
     {% endif %}
 {% else %}
     {% if show_queued_packs %}
+        <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
+        <input id="current-seat" type="hidden" value="{{ drafter.seat }}" />
+        <input id="waiting" type="hidden" value="{{ waiting|lower }}" />
+
         <div id="queued-packs"><b>Queued Packs</b><br></div>
         <br>
+s
+        <script src="{% static 'show_seat_refresh_v4.js' %}"></script>
     {% endif %}
-
-    <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
-    <input id="current-seat" type="hidden" value="{{ drafter.seat }}" />
-    <input id="waiting" type="hidden" value="{{ waiting|lower }}" />
-    <script src="{% static 'show_seat_refresh_v4.js' %}"></script>
 
     <b>Pack {{ drafter.current_phase|add:1 }} Pick {{ drafter.current_pick|add:1 }} </b>
 
