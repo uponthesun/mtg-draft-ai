@@ -264,13 +264,6 @@ types = [ "instant",]
 tags = [ "Tier 4", "Strategy - Aggro",]
 set = "roe"
 
-["Gods Willing"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "instant",]
-tags = [ "Tier 4", "Strategy - Aggro",]
-set = "ths"
-
 ["Path to Exile"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -291,6 +284,13 @@ color_identity = "W"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "fut"
+
+["Sejiri Shelter"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "znr"
 
 ["Unexpectedly Absent"]
 mana_cost = [ "X", "W", "W",]
@@ -340,13 +340,6 @@ color_identity = "W"
 types = [ "sorcery",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "mh1"
-
-["Death or Glory"]
-mana_cost = [ "4", "W",]
-color_identity = "W"
-types = [ "sorcery",]
-tags = [ "Tier 4",]
-set = "inv"
 
 ["Hallowed Burial"]
 mana_cost = [ "3", "W", "W",]
@@ -450,7 +443,7 @@ set = "sok"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 2", "Strategy - Control",]
+tags = [ "Strategy - Control", "Tier 3",]
 set = "akh"
 
 ["Endless Horizons"]
@@ -1027,13 +1020,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "rna"
 
-["Stitcher's Supplier"]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "m19"
-
 ["Viscera Seer"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -1230,13 +1216,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "nph"
 
-["Erebos, God of the Dead"]
-mana_cost = [ "3", "B",]
-color_identity = "B"
-types = [ "enchantment", "creature",]
-tags = [ "Tier 4",]
-set = "ths"
-
 ["Marsh Flitter"]
 mana_cost = [ "3", "B",]
 color_identity = "B"
@@ -1321,6 +1300,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "dka"
 
+["Village Rites"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 3",]
+set = "m21"
+
 ["Easy Prey"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1398,13 +1384,6 @@ types = [ "sorcery",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "usg"
 
-[Thoughtseize]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
-set = "lrw"
-
 ["Demonic Tutor"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1425,6 +1404,13 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 3",]
 set = "mh1"
+
+["Stitch Together"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 4",]
+set = "jud"
 
 ["Read the Bones"]
 mana_cost = [ "2", "B",]
@@ -1461,6 +1447,13 @@ types = [ "sorcery",]
 tags = [ "Tier 4",]
 set = "m15"
 
+["Malefic Scythe"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "artifact",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "m21"
+
 ["Wishclaw Talisman"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1474,6 +1467,13 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "isd"
+
+["Genju of the Fens"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "Tier 4",]
+set = "bok"
 
 ["Quest for the Gravelord"]
 mana_cost = [ "B",]
@@ -1502,13 +1502,6 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Strategy - Control", "Tier 4",]
 set = "inv"
-
-["Necromancer's Stockpile"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "m15"
 
 ["Casting of Bones"]
 mana_cost = [ "2", "B",]
@@ -2000,6 +1993,13 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "rav"
 
+["Valakut Exploration"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Tier 3",]
+set = "znr"
+
 ["Flameshadow Conjuring"]
 mana_cost = [ "3", "R",]
 color_identity = "R"
@@ -2068,7 +2068,7 @@ mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
-set = "ima"
+set = "zen"
 
 ["Manaweft Sliver"]
 mana_cost = [ "1", "G",]
@@ -2235,7 +2235,7 @@ set = "jou"
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Strategy - Aggro", "Tier 4",]
 set = "inv"
 
 ["Nylea, Keen-Eyed"]
@@ -2410,7 +2410,7 @@ set = "roe"
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "sorcery",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Strategy - Aggro", "Tier 3",]
 set = "isd"
 
 [Explore]
@@ -2468,13 +2468,6 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Tier 4",]
 set = "m20"
-
-["Strength from the Fallen"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "jou"
 
 ["Warbriar Blessing"]
 mana_cost = [ "1", "G",]
@@ -2707,6 +2700,13 @@ types = [ "sorcery",]
 tags = [ "Tier 3",]
 set = "apc"
 
+["Rendclaw Trow"]
+mana_cost = [ "2", "B", "/", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "eve"
+
 ["Varolz, the Scar-Striped"]
 mana_cost = [ "1", "B", "G",]
 color_identity = "BG"
@@ -2783,13 +2783,6 @@ color_identity = "RU"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "rtr"
-
-["Saheeli, Sublime Artificer"]
-mana_cost = [ "1", "U", "/", "R", "U", "/", "R",]
-color_identity = "RU"
-types = [ "planeswalker",]
-tags = [ "Tier 3",]
-set = "war"
 
 [Nucklavee]
 mana_cost = [ "4", "U", "/", "R", "U", "/", "R",]
@@ -3036,13 +3029,6 @@ types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "som"
 
-["Chromatic Star"]
-mana_cost = [ "1",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4",]
-set = "tsp"
-
 ["Codex Shredder"]
 mana_cost = [ "1",]
 color_identity = ""
@@ -3169,6 +3155,13 @@ types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "kld"
 
+["Spare Supplies"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3",]
+set = "znr"
+
 ["Veteran's Armaments"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -3189,6 +3182,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 1",]
 set = "5dn"
+
+["Jar of Eyeballs"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 4",]
+set = "dka"
 
 [Deathrender]
 mana_cost = [ "4",]
