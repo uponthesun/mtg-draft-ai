@@ -75,6 +75,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler",]
 set = "mbs"
 
+[Myrsmith]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "som"
+
 ["Puresteel Paladin"]
 mana_cost = [ "W", "W",]
 color_identity = "W"
@@ -137,6 +144,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "xln"
+
+["Lancer Sliver"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "mh1"
 
 ["Master of Pearls"]
 mana_cost = [ "1", "W",]
@@ -324,7 +338,7 @@ set = "isd"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "m13"
 
 ["Return to the Ranks"]
@@ -418,13 +432,6 @@ types = [ "tribal", "enchantment",]
 tags = [ "Tier 4", "Strategy - Control",]
 set = "lrw"
 
-["Astral Drift"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "mh1"
-
 ["Bound by Moonsilver"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -478,21 +485,21 @@ set = "frf"
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "c19"
 
 ["Mistveil Plains"]
 mana_cost = []
 color_identity = "W"
 types = [ "land",]
-tags = [ "Tier 4", "Strategy - Control",]
+tags = [ "Tier 4", "Strategy - Control", "Project",]
 set = "shm"
 
 ["Drowned Rusalka"]
 mana_cost = [ "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "gpt"
 
 ["Enclave Cryptologist"]
@@ -513,7 +520,7 @@ set = "m14"
 mana_cost = [ "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "tsp"
 
 [Wingcrafter]
@@ -625,7 +632,7 @@ set = "som"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "isd"
 
 ["Maelstrom Djinn"]
@@ -863,7 +870,7 @@ set = "chk"
 mana_cost = [ "3", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "kld"
 
 [Gush]
@@ -926,7 +933,7 @@ set = "tor"
 mana_cost = [ "5", "U",]
 color_identity = "U"
 types = [ "sorcery",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "m11"
 
 ["Aether Spellbomb"]
@@ -942,6 +949,13 @@ color_identity = "U"
 types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "eld"
+
+["Shimmering Wings"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Strategy - Aggro", "Tier 4",]
+set = "tmp"
 
 ["Dance of Many"]
 mana_cost = [ "U", "U",]
@@ -978,25 +992,18 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "m15"
 
-["Phantom Wings"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "enchantment",]
-tags = [ "Strategy - Aggro", "Tier 4",]
-set = "wth"
-
 ["Arcane Adaptation"]
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "xln"
 
 ["Spellweaver Volute"]
 mana_cost = [ "3", "U", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Strategy - Control", "Tier 4",]
+tags = [ "Strategy - Control", "Tier 4", "Project",]
 set = "fut"
 
 ["Carrion Feeder"]
@@ -1171,7 +1178,7 @@ set = "rix"
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Tier 3", "Strategy - Control", "Project",]
 set = "bok"
 
 ["Undead Gladiator"]
@@ -1563,7 +1570,7 @@ set = "mh1"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 2",]
 set = "war"
 
 ["Ember Hauler"]
@@ -1780,7 +1787,7 @@ set = "mrd"
 mana_cost = [ "4", "R", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "nph"
 
 ["Greater Gargadon"]
@@ -1829,7 +1836,7 @@ set = "emn"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "avr"
 
 ["Commune with Lava"]
@@ -1976,7 +1983,7 @@ set = "isd"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "csp"
 
 ["Dual Casting"]
@@ -2154,6 +2161,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "rav"
 
+["Dryad of the Ilysian Grove"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "enchantment", "creature",]
+tags = [ "Tier 3",]
+set = "thb"
+
 ["Eternal Witness"]
 mana_cost = [ "1", "G", "G",]
 color_identity = "G"
@@ -2179,7 +2193,7 @@ set = "tor"
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "dis"
 
 ["Scourge of Skola Vale"]
@@ -2326,7 +2340,7 @@ set = "m15"
 mana_cost = [ "5", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "m14"
 
 ["Regal Force"]
@@ -2385,19 +2399,12 @@ types = [ "instant",]
 tags = [ "Tier 2",]
 set = "rav"
 
-["Shared Summons"]
-mana_cost = [ "3", "G", "G",]
-color_identity = "G"
-types = [ "instant",]
-tags = [ "Tier 3",]
-set = "m20"
-
-["Chatter of the Squirrel"]
+["Ancient Stirrings"]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "sorcery",]
-tags = [ "Tier 4",]
-set = "ody"
+tags = [ "Tier 3",]
+set = "roe"
 
 ["Irresistible Prey"]
 mana_cost = [ "G",]
@@ -2434,11 +2441,18 @@ types = [ "sorcery",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "rav"
 
+["Nissa's Triumph"]
+mana_cost = [ "G", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Tier 3",]
+set = "war"
+
 [Exploration]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "usg"
 
 ["Frog Tongue"]
@@ -2466,7 +2480,7 @@ set = "lrw"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "m20"
 
 ["Warbriar Blessing"]
@@ -2501,7 +2515,7 @@ set = "usg"
 mana_cost = [ "3", "G", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "rav"
 
 ["Saproling Burst"]
@@ -2510,13 +2524,6 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Tier 0", "Strategy - Aggro",]
 set = "nem"
-
-["Castle Garenbrig"]
-mana_cost = []
-color_identity = "G"
-types = [ "land",]
-tags = [ "Tier 3",]
-set = "eld"
 
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
@@ -2557,7 +2564,7 @@ set = "jou"
 mana_cost = [ "U", "B",]
 color_identity = "BU"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "sth"
 
 ["Sygg, River Cutthroat"]
@@ -2637,13 +2644,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion G - Enabler",]
 set = "rav"
 
-["Harmonic Sliver"]
-mana_cost = [ "1", "G", "W",]
-color_identity = "GW"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "tsp"
-
 ["Knight of the Reliquary"]
 mana_cost = [ "1", "G", "W",]
 color_identity = "GW"
@@ -2657,6 +2657,13 @@ color_identity = "GW"
 types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "arb"
+
+["Siona, Captain of the Pyleas"]
+mana_cost = [ "1", "G", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "Tier 4",]
+set = "thb"
 
 ["Cartel Aristocrat"]
 mana_cost = [ "W", "B",]
@@ -2728,6 +2735,13 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "soi"
 
+["Simic Guildmage"]
+mana_cost = [ "G", "/", "U", "G", "/", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "dis"
+
 ["Zameck Guildmage"]
 mana_cost = [ "G", "U",]
 color_identity = "GU"
@@ -2748,13 +2762,6 @@ color_identity = "GU"
 types = [ "creature",]
 tags = [ "Tier 4",]
 set = "plc"
-
-["Horizon Chimera"]
-mana_cost = [ "2", "G", "U",]
-color_identity = "GU"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
-set = "ths"
 
 ["Experiment Kraj"]
 mana_cost = [ "2", "G", "G", "U", "U",]
@@ -2816,7 +2823,7 @@ set = "c19"
 mana_cost = [ "1", "W",]
 color_identity = "RW"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "hou"
 
 ["Beck // Call"]
@@ -2844,7 +2851,7 @@ set = "dis"
 mana_cost = [ "2", "/", "W", "2", "/", "U", "2", "/", "B", "2", "/", "R", "2", "/", "G",]
 color_identity = "BGRUW"
 types = [ "artifact", "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "shm"
 
 ["Cryptic Trilobite"]
@@ -3183,18 +3190,11 @@ types = [ "artifact",]
 tags = [ "Tier 1",]
 set = "5dn"
 
-["Jar of Eyeballs"]
-mana_cost = [ "3",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4",]
-set = "dka"
-
 [Deathrender]
 mana_cost = [ "4",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "lrw"
 
 ["Trading Post"]
