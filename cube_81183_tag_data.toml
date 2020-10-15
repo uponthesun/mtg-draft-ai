@@ -229,6 +229,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Saprolings - Enabler", "Saprolings - Payoff", "Thallids - Enabler",]
 set = "plc"
 
+["Rhox Faithmender"]
+mana_cost = [ "3", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 4", "Lifegain - Enabler", "Lifegain - Payoff",]
+set = "m13"
+
 ["Visionary Augmenter"]
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
@@ -257,6 +264,13 @@ types = [ "creature",]
 tags = [ "Signpost", "Lifegain - Payoff", "Tier 1",]
 set = "hou"
 
+["Ajani's Presence"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Heroic - Enabler", "Spells - Enabler", "Trick", "Tier 4",]
+set = "jou"
+
 [Bandage]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -270,13 +284,6 @@ color_identity = "W"
 types = [ "instant",]
 tags = [ "ETB - Payoff", "Tier 3",]
 set = "mh1"
-
-["Sheltering Light"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "instant",]
-tags = [ "Spells - Enabler", "Heroic - Enabler", "Tier 4",]
-set = "xln"
 
 ["Swift Justice"]
 mana_cost = [ "W",]
@@ -950,6 +957,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Ninjutsu - Payoff", "Sacrifice - Payoff",]
 set = "xln"
 
+["Silversmote Ghoul"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Vampires - Enabler", "Lifegain - Payoff", "Tier 3",]
+set = "m21"
+
 [Throatseeker]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -1159,13 +1173,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Graveyard - Payoff", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Tier 2",]
 set = "usg"
-
-["Command the Dreadhorde"]
-mana_cost = [ "4", "B", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Lifegain - Payoff", "Tier 3",]
-set = "war"
 
 ["Sinister Concoction"]
 mana_cost = [ "B",]

@@ -1314,13 +1314,6 @@ types = [ "instant",]
 tags = [ "Tier 3",]
 set = "m21"
 
-["Easy Prey"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Tier 3",]
-set = "iko"
-
 ["Go for the Throat"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1376,6 +1369,13 @@ color_identity = "B"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "ktk"
+
+["Bloodchief's Thirst"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
+set = "znr"
 
 ["Cabal Therapy"]
 mana_cost = [ "B",]
@@ -1465,7 +1465,7 @@ set = "m21"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "artifact",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "eld"
 
 ["Dead Weight"]
