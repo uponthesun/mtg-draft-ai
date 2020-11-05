@@ -306,13 +306,6 @@ types = [ "instant",]
 tags = [ "Removal", "Trick", "Heroic - Enabler", "Spells - Enabler", "Tier 3",]
 set = "frf"
 
-["Midnight Haunting"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "instant",]
-tags = [ "Spirit Tokens - Enabler", "Tier 3", "Flash - Threat", "Tokens - Enabler", "Tokens Aggro - Enabler",]
-set = "isd"
-
 ["Gird for Battle"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -382,6 +375,13 @@ color_identity = "W"
 types = [ "enchantment",]
 tags = [ "Removal", "Tier 3", "Sacrifice Outlet - Enabler",]
 set = "soi"
+
+["Omen of the Sun"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Tier 4", "Tokens - Enabler", "Lifegain - Enabler",]
+set = "thb"
 
 ["Conclave Tribunal"]
 mana_cost = [ "3", "W",]
