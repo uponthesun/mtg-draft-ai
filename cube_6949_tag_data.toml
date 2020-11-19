@@ -124,13 +124,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "wwk"
 
-["Whitemane Lion"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "plc"
-
 ["Abzan Falconer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -144,13 +137,6 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "xln"
-
-["Lancer Sliver"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 4", "Strategy - Aggro",]
-set = "mh1"
 
 ["Master of Pearls"]
 mana_cost = [ "1", "W",]
@@ -383,6 +369,13 @@ types = [ "artifact",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "m20"
 
+["Glass Casket"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "artifact",]
+tags = [ "Strategy - Control", "Strategy - Aggro", "Tier 2",]
+set = "eld"
+
 ["Scepter of Dominance"]
 mana_cost = [ "1", "W", "W",]
 color_identity = "W"
@@ -600,13 +593,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "mh1"
 
-["Barrin, Tolarian Archmage"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "m21"
-
 ["Chasm Skulker"]
 mana_cost = [ "2", "U",]
 color_identity = "U"
@@ -760,6 +746,13 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "mmq"
+
+[Pongify]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "plc"
 
 [Repeal]
 mana_cost = [ "X", "U",]
@@ -1244,12 +1237,12 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "c19"
 
-["Gravebreaker Lamia"]
+["Corpse Connoisseur"]
 mana_cost = [ "4", "B",]
 color_identity = "B"
-types = [ "enchantment", "creature",]
-tags = [ "Tier 2", "Strategy - Control",]
-set = "thb"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "ala"
 
 ["Gray Merchant of Asphodel"]
 mana_cost = [ "3", "B", "B",]
@@ -1453,13 +1446,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 4",]
 set = "m15"
-
-["Malefic Scythe"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "m21"
 
 ["Wishclaw Talisman"]
 mana_cost = [ "1", "B",]
@@ -2721,13 +2707,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "dgm"
 
-[Deathsprout]
-mana_cost = [ "1", "B", "B", "G",]
-color_identity = "BG"
-types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "c20"
-
 ["Ongoing Investigation"]
 mana_cost = [ "1", "U",]
 color_identity = "GU"
@@ -2931,6 +2910,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "fut"
 
+["Pilgrim's Eye"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 3",]
+set = "wwk"
+
 [Scarecrone]
 mana_cost = [ "3",]
 color_identity = ""
@@ -3112,13 +3098,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 4",]
 set = "mrd"
-
-["Mazemind Tome"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "m21"
 
 ["Mind Stone"]
 mana_cost = [ "2",]

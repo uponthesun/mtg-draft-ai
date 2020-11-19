@@ -138,19 +138,19 @@ types = [ "creature",]
 tags = [ "Lifegain - Payoff", "Signpost", "Tier 4",]
 set = "m20"
 
-["Attended Knight"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Tokens - Enabler", "Tokens Aggro - Enabler",]
-set = "m13"
-
 ["Deadeye Harpooner"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
 tags = [ "ETB - Enabler", "Removal", "Tier 4",]
 set = "aer"
+
+["Glint-Sleeve Artisan"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Counters - Enabler", "Tokens - Enabler", "Tokens Aggro - Enabler", "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler",]
+set = "kld"
 
 ["Hanged Executioner"]
 mana_cost = [ "2", "W",]
@@ -194,6 +194,13 @@ types = [ "creature",]
 tags = [ "Legends - Enabler", "Tokens Aggro - Payoff", "Signpost", "Tier 2",]
 set = "ody"
 
+["Sandsteppe Outcast"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Counters - Enabler", "Tokens - Enabler", "Tokens Aggro - Enabler", "Spirit Tokens - Enabler", "ETB - Enabler",]
+set = "frf"
+
 ["Waxmane Baku"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -212,7 +219,7 @@ set = "ktk"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Counters - Enabler", "Counters Target - Enabler", "Lifegain - Enabler",]
+tags = [ "Tier 3", "Counters - Enabler", "Counters Target - Enabler", "Lifegain - Enabler", "ETB - Enabler",]
 set = "m21"
 
 ["Celestial Kirin"]
@@ -235,13 +242,6 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 4", "Lifegain - Enabler", "Lifegain - Payoff",]
 set = "m13"
-
-["Visionary Augmenter"]
-mana_cost = [ "2", "W", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 2", "Tokens - Enabler", "ETB", "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler", "Counters - Enabler",]
-set = "kld"
 
 ["Angel of Flight Alabaster"]
 mana_cost = [ "4", "W",]
@@ -1438,7 +1438,7 @@ mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
 tags = [ "Tier 4", "Power - Payoff", "Heroic - Enabler", "Trick",]
-set = "2xm"
+set = "frf"
 
 ["Brimstone Volley"]
 mana_cost = [ "2", "R",]
@@ -1755,13 +1755,6 @@ types = [ "creature",]
 tags = [ "Graveyard - Payoff", "Land Graveyard - Payoff", "Tier 2", "Land Extra - Enabler",]
 set = "hou"
 
-["Renegade Krasis"]
-mana_cost = [ "1", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Counters - Enabler", "Counters - Payoff", "Signpost", "Tier 3",]
-set = "dgm"
-
 ["Rishkar, Peema Renegade"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1930,6 +1923,13 @@ types = [ "tribal", "sorcery",]
 tags = [ "Elves - Enabler", "Trick", "Tokens - Enabler", "Sacrifice - Enabler", "Tier 3",]
 set = "mor"
 
+["Nissa's Judgment"]
+mana_cost = [ "4", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Tier 3", "Counters - Enabler", "Removal", "Counters Target - Enabler",]
+set = "ogw"
+
 ["Hardened Scales"]
 mana_cost = [ "G",]
 color_identity = "G"
@@ -1972,6 +1972,13 @@ types = [ "enchantment",]
 tags = [ "Graveyard - Enabler", "Land Graveyard - Enabler", "Land Graveyard - Payoff", "Graveyard - Payoff", "Tier 3",]
 set = "dom"
 
+["Moorland Haunt"]
+mana_cost = []
+color_identity = "WU"
+types = [ "land",]
+tags = [ "Tier 3", "Spirit Tokens - Enabler",]
+set = "isd"
+
 ["Drogskol Captain"]
 mana_cost = [ "1", "W", "U",]
 color_identity = "UW"
@@ -1981,7 +1988,7 @@ set = "dka"
 
 ["Spectral Shepherd"]
 mana_cost = [ "2", "W",]
-color_identity = "UW"
+color_identity = "WU"
 types = [ "creature",]
 tags = [ "Tier 4", "Spirits - Enabler", "Spirits - Payoff",]
 set = "soi"
@@ -2552,13 +2559,6 @@ color_identity = "UW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ogw"
-
-["Moorland Haunt"]
-mana_cost = []
-color_identity = "UW"
-types = [ "land",]
-tags = [ "Tier 3", "Spirit Tokens - Enabler",]
-set = "isd"
 
 ["Drowned Catacomb"]
 mana_cost = []
