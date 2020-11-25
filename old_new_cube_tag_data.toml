@@ -40,7 +40,7 @@ types = [ "creature",]
 tags = [ "",]
 set = "rtr"
 
-["Glory-Bound Initiate"]
+["Gust Walker"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
@@ -439,13 +439,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "war"
 
-["Magus of the Bazaar"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "",]
-set = "plc"
-
 ["Merfolk Trickster"]
 mana_cost = [ "U", "U",]
 color_identity = "U"
@@ -838,6 +831,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "frf"
 
+["Thrull Parasite"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "gtc"
+
 ["Aphemia, the Cacophony"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -858,13 +858,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "",]
 set = "wth"
-
-["Glint-Sleeve Siphoner"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "",]
-set = "aer"
 
 ["Grimclaw Bats"]
 mana_cost = [ "1", "B",]
@@ -921,13 +914,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "",]
 set = "rna"
-
-["Bontu the Glorified"]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "",]
-set = "akh"
 
 ["Coffin Queen"]
 mana_cost = [ "2", "B",]
@@ -1104,13 +1090,6 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "aer"
 
-["Call of the Death-Dweller"]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "",]
-set = "iko"
-
 ["Extinction Event"]
 mana_cost = [ "3", "B",]
 color_identity = "B"
@@ -1181,6 +1160,13 @@ types = [ "enchantment",]
 tags = [ "",]
 set = "thb"
 
+["Chainer's Torment"]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "",]
+set = "dom"
+
 ["Rite of Belzenlok"]
 mana_cost = [ "2", "B", "B",]
 color_identity = "B"
@@ -1229,13 +1215,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "csp"
-
-["Spikeshot Elder"]
-mana_cost = [ "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "som"
 
 ["Aether Chaser"]
 mana_cost = [ "1", "R",]
@@ -1314,19 +1293,19 @@ types = [ "creature",]
 tags = [ "",]
 set = "mh1"
 
+["Wily Goblin"]
+mana_cost = [ "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "xln"
+
 ["Ahn-Crop Crasher"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "akh"
-
-["Anax, Hardened in the Forge"]
-mana_cost = [ "1", "R", "R",]
-color_identity = "R"
-types = [ "enchantment", "creature",]
-tags = [ "",]
-set = "thb"
 
 ["Chandra, Fire of Kaladesh"]
 mana_cost = [ "1", "R", "R",]
@@ -1419,19 +1398,19 @@ types = [ "creature",]
 tags = [ "",]
 set = "thb"
 
-["Terror of the Peaks"]
-mana_cost = [ "3", "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "m21"
-
 [Thunderblust]
 mana_cost = [ "2", "R", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "eve"
+
+["Chandra's Incinerator"]
+mana_cost = [ "5", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "m21"
 
 ["Chaos Maw"]
 mana_cost = [ "5", "R", "R",]
@@ -1559,19 +1538,19 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "emn"
 
-["Shatterskull Smashing"]
-mana_cost = [ "X", "R", "R",]
-color_identity = "R"
-types = [ "sorcery",]
-tags = [ "",]
-set = "znr"
-
 ["Chandra's Regulator"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "artifact",]
 tags = [ "",]
 set = "m20"
+
+["Seal of Fire"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "",]
+set = "dis"
 
 ["The First Eruption"]
 mana_cost = [ "2", "R",]
@@ -1628,13 +1607,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
 set = "ice"
-
-["Channeler Initiate"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "akh"
 
 ["Deranged Outcast"]
 mana_cost = [ "1", "G",]
@@ -1706,13 +1678,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "frf"
 
-["Ainok Survivalist"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "dtk"
-
 ["Caller of the Claw"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1740,6 +1705,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
 set = "emn"
+
+["Hooded Hydra"]
+mana_cost = [ "X", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "ktk"
 
 ["Hornbash Mentor"]
 mana_cost = [ "2", "G",]
@@ -1797,19 +1769,19 @@ types = [ "creature",]
 tags = [ "",]
 set = "hou"
 
+["Ripjaw Raptor"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "xln"
+
 ["Temur Sabertooth"]
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
 set = "frf"
-
-["Territorial Allosaurus"]
-mana_cost = [ "2", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "dom"
 
 [Vengevine]
 mana_cost = [ "2", "G", "G",]
@@ -1845,13 +1817,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
 set = "ala"
-
-["Wolfir Silverheart"]
-mana_cost = [ "3", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "avr"
 
 ["Feasting Troll King"]
 mana_cost = [ "2", "G", "G", "G", "G",]
@@ -2413,6 +2378,13 @@ types = [ "artifact",]
 tags = [ "",]
 set = "soi"
 
+["Decoction Module"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "kld"
+
 ["Engineered Explosives"]
 mana_cost = [ "X",]
 color_identity = ""
@@ -2475,13 +2447,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "",]
 set = "kld"
-
-["Nyx Lotus"]
-mana_cost = [ "4",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "",]
-set = "thb"
 
 ["Forsaken Monument"]
 mana_cost = [ "5",]
@@ -2905,7 +2870,7 @@ set = "wwk"
 
 ["Westvale Abbey"]
 mana_cost = []
-color_identity = "B"
+color_identity = ""
 types = [ "land",]
 tags = [ "",]
 set = "soi"
