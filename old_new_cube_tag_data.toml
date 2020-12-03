@@ -999,6 +999,13 @@ types = [ "planeswalker",]
 tags = [ "",]
 set = "m19"
 
+["Cling to Dust"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "",]
+set = "thb"
+
 ["Fatal Push"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -1019,6 +1026,13 @@ color_identity = "B"
 types = [ "instant",]
 tags = [ "",]
 set = "m21"
+
+["Heartless Act"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "",]
+set = "iko"
 
 ["Vicious Offering"]
 mana_cost = [ "1", "B",]
@@ -1795,7 +1809,7 @@ mana_cost = [ "4", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
-set = "pc2"
+set = "m11"
 
 ["Feasting Troll King"]
 mana_cost = [ "2", "G", "G", "G", "G",]
