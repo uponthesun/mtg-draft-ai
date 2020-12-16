@@ -140,6 +140,7 @@ class TwoColorComboRatingsPicker(Picker):
                                      for cr in self.component_raters}
                 raw_rating_components.append(RatedCard(card=candidate, color_combo=color_combo,
                                              components=rating_components))
+        random.shuffle(raw_rating_components) # Randomize order to avoid biasing towards certain colors in case of ties
         return raw_rating_components
 
     def _normalized_ratings(self, cards_with_rating_components, cards_owned):
@@ -385,7 +386,7 @@ def power_rating(card):
         2: 0.7,
         3: 0.4,
         4: 0.1,
-        None: 0
+        None: 0.01 # Add a tiny amount for untagged cards to let bots at least stay in colors for untagged cubes
     }
     if card.power_tier not in values_by_tier:
         raise ValueError('Undefined power tier: {}'.format(card.power_tier))
