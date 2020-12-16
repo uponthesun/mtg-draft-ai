@@ -527,7 +527,7 @@ set = "5dn"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4", "Artifact Cards - Payoff", "Artifacts (Recursion) - Enabler",]
+tags = [ "Tier 4", "Artifacts (Recursion) - Enabler", "Artifacts (Creature) - Payoff",]
 set = "jmp"
 
 ["Mistblade Shinobi"]
@@ -810,13 +810,6 @@ types = [ "creature",]
 tags = [ "Lifegain - Enabler", "Counters - Enabler", "Vampires - Enabler", "Vampires - Payoff", "Tier 3", "Sacrifice Outlet - Enabler", "Sacrifice - Payoff",]
 set = "soi"
 
-["Pilfering Imp"]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Ninjutsu - Enabler", "Tier 4",]
-set = "grn"
-
 ["Stitcher's Supplier"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -830,6 +823,13 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Vampires - Enabler", "Wizards - Enabler", "Discard - Payoff", "Hellbent - Payoff", "Tier 2",]
 set = "soi"
+
+["Basilica Screecher"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 4", "Ninjutsu - Enabler", "Lifegain - Enabler",]
+set = "gtc"
 
 ["Discordant Piper"]
 mana_cost = [ "1", "B",]
@@ -2496,6 +2496,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Ninjutsu - Enabler", "Artifacts (Noncreature) - Enabler", "Artifacts (Cheap) - Enabler", "Tier 2", "Discard - Enabler", "Hellbent - Enabler", "Power - Payoff", "Artifact Cards - Enabler",]
 set = "kld"
+
+["Livewire Lash"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3", "Artifact Cards - Enabler", "Artifacts (Noncreature) - Enabler", "Heroic - Payoff",]
+set = "som"
 
 ["Orzhov Signet"]
 mana_cost = [ "2",]

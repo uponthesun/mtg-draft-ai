@@ -1552,6 +1552,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "frf"
 
+["Kruin Striker"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "avr"
+
 ["Lightning Mauler"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1927,7 +1934,7 @@ set = "avr"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "enchantment",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Strategy - Aggro",]
 set = "m15"
 
 ["Galvanic Arc"]
