@@ -2399,6 +2399,13 @@ types = [ "artifact",]
 tags = [ "",]
 set = "vis"
 
+["Witch's Oven"]
+mana_cost = [ "1",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "eld"
+
 ["Azor's Gateway"]
 mana_cost = [ "2",]
 color_identity = ""
