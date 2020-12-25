@@ -485,7 +485,7 @@ set = "m15"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Spirits - Payoff", "Spirits - Enabler", "Flash - Threat", "Ninjutsu - Enabler", "Tier 2",]
+tags = [ "Spirits - Enabler", "Flash - Threat", "Ninjutsu - Enabler", "Tier 2",]
 set = "soi"
 
 ["Sea Gate Stormcaller"]
@@ -761,13 +761,6 @@ types = [ "sorcery",]
 tags = [ "ETB - Payoff", "Tier 1", "Ramp - Payoff",]
 set = "ogw"
 
-["Rise from the Tides"]
-mana_cost = [ "5", "U",]
-color_identity = "U"
-types = [ "sorcery",]
-tags = [ "Graveyard - Payoff", "Spells - Payoff", "Tier 4",]
-set = "soi"
-
 ["Mystic Subdual"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -922,12 +915,12 @@ types = [ "creature",]
 tags = [ "Tier 3", "Vampires - Enabler", "Vampires - Payoff", "Discard - Enabler", "Hellbent - Enabler",]
 set = "emn"
 
-["Deadbridge Shaman"]
+["Elderfang Ritualist"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 4", "Elves - Enabler",]
-set = "ori"
+tags = [ "Elves - Enabler", "Elves - Payoff", "Tier 4",]
+set = "khm"
 
 ["Isareth the Awakener"]
 mana_cost = [ "1", "B", "B",]
@@ -1055,6 +1048,13 @@ types = [ "creature",]
 tags = [ "Graveyard - Payoff", "Tier 4",]
 set = "sth"
 
+["Thornmantle Striker"]
+mana_cost = [ "4", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Elves - Enabler", "Elves - Payoff",]
+set = "khm"
+
 ["Throat Slitter"]
 mana_cost = [ "4", "B",]
 color_identity = "B"
@@ -1165,13 +1165,6 @@ mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 3", "Graveyard - Enabler",]
-set = "mh1"
-
-["Return from Extinction"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 3", "Elves - Payoff", "Vampires - Payoff",]
 set = "mh1"
 
 [Victimize]
@@ -2168,19 +2161,19 @@ types = [ "creature",]
 tags = [ "Lifegain - Enabler", "Lifegain - Payoff", "Wizards - Enabler", "Tier 3",]
 set = "gtc"
 
+["Indulging Patrician"]
+mana_cost = [ "1", "W", "B",]
+color_identity = "BW"
+types = [ "creature",]
+tags = [ "Tier 3", "Lifegain - Enabler", "Lifegain - Payoff", "Vampires - Enabler",]
+set = "m21"
+
 ["Call to the Feast"]
 mana_cost = [ "2", "W", "B",]
 color_identity = "BW"
 types = [ "sorcery",]
 tags = [ "Tokens - Enabler", "Lifegain - Enabler", "Vampires - Enabler", "Tier 3", "Sacrifice - Enabler",]
 set = "xln"
-
-["Cliffhaven Vampire"]
-mana_cost = [ "2", "W", "B",]
-color_identity = "BW"
-types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Payoff", "Vampires - Enabler",]
-set = "ogw"
 
 ["Glowspore Shaman"]
 mana_cost = [ "B", "G",]
