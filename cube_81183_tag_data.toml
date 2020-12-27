@@ -604,7 +604,7 @@ set = "bok"
 mana_cost = [ "2", "U", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 2", "Wizards - Enabler", "Wizards - Payoff",]
+tags = [ "Tier 3", "Wizards - Enabler", "Wizards - Payoff",]
 set = "lgn"
 
 ["Tower Geist"]
@@ -712,19 +712,19 @@ types = [ "instant",]
 tags = [ "Flash - Interaction", "Tier 3",]
 set = "ths"
 
+["Sage's Dousing"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "tribal", "instant",]
+tags = [ "Tier 3", "Flash - Interaction", "Wizards - Payoff",]
+set = "mor"
+
 ["Supreme Will"]
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "instant",]
 tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3",]
 set = "hou"
-
-["Wizard's Retort"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Wizards - Payoff", "Flash - Interaction", "Tier 3",]
-set = "dom"
 
 ["Illusionist's Stratagem"]
 mana_cost = [ "3", "U",]
@@ -746,6 +746,13 @@ color_identity = "U"
 types = [ "sorcery",]
 tags = [ "Graveyard - Enabler", "Spells - Enabler", "Tier 2", "Ninjutsu - Payoff", "Discard - Enabler",]
 set = "xln"
+
+["Bond of Insight"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Tier 3", "Spells - Enabler", "Spells - Payoff",]
+set = "war"
 
 ["Pore Over the Pages"]
 mana_cost = [ "3", "U", "U",]
@@ -1087,7 +1094,7 @@ set = "ktk"
 mana_cost = [ "5", "B", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Graveyard - Payoff", "Tier 1", "Discard - Payoff", "Goreclaw - Payoff",]
+tags = [ "Graveyard - Payoff", "Discard - Payoff", "Goreclaw - Payoff", "Tier 2",]
 set = "c15"
 
 ["Killing Glare"]
@@ -1894,6 +1901,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "ETB - Enabler", "Tier 3", "Ramp - Payoff", "Goreclaw - Payoff",]
 set = "hou"
+
+["Might of the Masses"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Tier 3", "Tokens Aggro - Payoff", "Spells - Enabler", "Heroic - Enabler",]
+set = "roe"
 
 ["Scatter the Seeds"]
 mana_cost = [ "3", "G", "G",]
