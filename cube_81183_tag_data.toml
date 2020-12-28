@@ -40,13 +40,6 @@ types = [ "creature",]
 tags = [ "Counters - Payoff", "Spirits - Enabler", "Ninjutsu - Enabler", "Tier 4",]
 set = "war"
 
-["Guardian of Pilgrims"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Spirits - Enabler", "Tier 4",]
-set = "emn"
-
 ["Hanweir Militia Captain"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -67,6 +60,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Heroic - Payoff", "Tokens Aggro - Payoff",]
 set = "thb"
+
+["Jeskai Barricade"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 4", "ETB - Payoff",]
+set = "frf"
 
 ["Lone Rider"]
 mana_cost = [ "1", "W",]
@@ -439,12 +439,12 @@ types = [ "creature",]
 tags = [ "Tier 3", "Flash - Threat",]
 set = "m20"
 
-[Fogwalker]
+["Fblthp, the Lost"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4", "Spirits - Enabler", "Ninjutsu - Enabler",]
-set = "emn"
+tags = [ "Tier 3", "ETB - Enabler", "Legends - Enabler",]
+set = "war"
 
 ["Ghostly Pilferer"]
 mana_cost = [ "1", "U",]
@@ -464,7 +464,7 @@ set = "kld"
 mana_cost = [ "U", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Bounce", "ETB - Enabler", "Wizards - Enabler", "Flash - Threat", "Tier 2",]
+tags = [ "ETB - Enabler", "Wizards - Enabler", "Flash - Threat", "Tier 2",]
 set = "ori"
 
 ["Ludevic's Test Subject"]
@@ -632,7 +632,7 @@ set = "bok"
 mana_cost = [ "4", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Spirits - Enabler", "ETB - Enabler", "Bounce", "Tier 4",]
+tags = [ "Spirits - Enabler", "ETB - Enabler", "Tier 4",]
 set = "sok"
 
 ["Cryptic Serpent"]
@@ -667,7 +667,7 @@ set = "mor"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Bounce", "Spells - Enabler", "Flash - Interaction", "Tier 3",]
+tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3",]
 set = "mor"
 
 ["Familiar's Ruse"]
@@ -695,14 +695,14 @@ set = "m14"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "ETB - Payoff", "Bounce", "Spells - Enabler", "Tier 3",]
+tags = [ "ETB - Payoff", "Spells - Enabler", "Tier 3",]
 set = "avr"
 
 ["Voyage's End"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Bounce", "Spells - Enabler", "Flash - Interaction", "Tier 3",]
+tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3",]
 set = "ths"
 
 [Dissolve]
@@ -725,6 +725,13 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3",]
 set = "hou"
+
+[Dismiss]
+mana_cost = [ "2", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Flash - Interaction", "Tier 3",]
+set = "tmp"
 
 ["Illusionist's Stratagem"]
 mana_cost = [ "3", "U",]
@@ -1031,7 +1038,7 @@ set = "xln"
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Sacrifice - Payoff", "ETB - Payoff", "Legends - Enabler", "Tier 3", "Sacrifice Outlet - Enabler",]
+tags = [ "ETB - Payoff", "Legends - Enabler", "Tier 3", "Sacrifice Outlet - Enabler", "Graveyard - Payoff",]
 set = "dom"
 
 ["Bloodline Necromancer"]
@@ -1356,6 +1363,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Spells - Payoff", "Power - Enabler",]
 set = "hou"
 
+["Rukh Egg"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 4", "Sacrifice - Enabler", "Sacrifice Outlet - Payoff",]
+set = "arn"
+
 [Magmaw]
 mana_cost = [ "3", "R", "R",]
 color_identity = "R"
@@ -1391,13 +1405,6 @@ types = [ "creature",]
 tags = [ "Spells - Payoff", "Tier 1", "Graveyard - Payoff",]
 set = "emn"
 
-["Magmatic Force"]
-mana_cost = [ "5", "R", "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Ramp - Payoff", "Goreclaw - Payoff", "Tier 4",]
-set = "bbd"
-
 ["Fall of the Titans"]
 mana_cost = [ "X", "X", "R",]
 color_identity = "R"
@@ -1432,13 +1439,6 @@ color_identity = "R"
 types = [ "instant",]
 tags = [ "Heroic - Enabler", "Spells (Red) - Enabler", "Spells - Enabler", "Tier 2",]
 set = "bng"
-
-["Fiery Conclusion"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Spells (Red) - Enabler", "Tier 4",]
-set = "rav"
 
 ["Fire Prophecy"]
 mana_cost = [ "1", "R",]
@@ -1573,13 +1573,6 @@ types = [ "enchantment",]
 tags = [ "Land Graveyard - Enabler", "Land Extra - Payoff", "Hellbent - Enabler", "Drake Haven - Enabler", "Tier 3",]
 set = "ori"
 
-["Tectonic Reformation"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "enchantment",]
-tags = [ "Tier 4", "Drake Haven - Enabler", "Land Extra - Payoff", "Land Graveyard - Enabler",]
-set = "mh1"
-
 ["The Flame of Keld"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1593,6 +1586,13 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "Power - Payoff", "Tier 3",]
 set = "thb"
+
+["Forgotten Cave"]
+mana_cost = []
+color_identity = "R"
+types = [ "land",]
+tags = [ "Land Graveyard - Enabler",]
+set = "ons"
 
 ["Joraga Warcaller"]
 mana_cost = [ "G",]
@@ -1675,7 +1675,7 @@ set = "mh1"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Power - Payoff", "Tier 4",]
+tags = [ "Power - Payoff", "Tier 3",]
 set = "thb"
 
 ["Pendelhaven Elder"]
@@ -2021,13 +2021,6 @@ types = [ "creature",]
 tags = [ "Spirits - Enabler", "Spirits - Payoff", "Tier 3", "Spirit Tokens - Payoff",]
 set = "dka"
 
-["Spectral Shepherd"]
-mana_cost = [ "2", "W",]
-color_identity = "WU"
-types = [ "creature",]
-tags = [ "Tier 4", "Spirits - Enabler", "Spirits - Payoff",]
-set = "soi"
-
 ["Brago, King Eternal"]
 mana_cost = [ "2", "W", "U",]
 color_identity = "UW"
@@ -2067,7 +2060,7 @@ set = "ori"
 mana_cost = [ "4", "U", "B",]
 color_identity = "BU"
 types = [ "creature",]
-tags = [ "ETB - Enabler", "Bounce", "Tier 3",]
+tags = [ "ETB - Enabler", "Tier 3",]
 set = "gtc"
 
 ["Tymaret, the Murder King"]
@@ -2858,7 +2851,7 @@ set = "ths"
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Land Graveyard - Enabler", "Land Dying - Enabler", "Artifacts (Recursion) - Enabler", "Tier 4",]
+tags = [ "Land Dying - Enabler", "Artifacts (Recursion) - Enabler", "Tier 4",]
 set = "m12"
 
 ["Foundry of the Consuls"]
