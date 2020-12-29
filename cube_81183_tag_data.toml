@@ -12,6 +12,13 @@ types = [ "creature",]
 tags = [ "Spirits - Enabler", "Ninjutsu - Enabler", "Tier 4",]
 set = "chk"
 
+["Thraben Inspector"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "ETB - Enabler", "Artifacts (Cheap) - Enabler",]
+set = "soi"
+
 ["Ajani's Pridemate"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -438,13 +445,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 3", "Flash - Threat",]
 set = "m20"
-
-["Fblthp, the Lost"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3", "ETB - Enabler", "Legends - Enabler",]
-set = "war"
 
 ["Ghostly Pilferer"]
 mana_cost = [ "1", "U",]

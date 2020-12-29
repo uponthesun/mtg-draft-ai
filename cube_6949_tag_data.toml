@@ -1073,7 +1073,7 @@ set = "bng"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2",]
+tags = [ "Tier 3",]
 set = "all"
 
 ["Grim Haruspex"]
@@ -2749,13 +2749,6 @@ types = [ "artifact", "creature",]
 tags = [ "Tier 4",]
 set = "eld"
 
-["Lupine Prototype"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Strategy - Aggro", "Tier 4",]
-set = "emn"
-
 [Millikin]
 mana_cost = [ "2",]
 color_identity = ""
@@ -3476,13 +3469,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ons"
-
-["Geier Reach Sanitarium"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Tier 4",]
-set = "emn"
 
 ["Marsh Flats"]
 mana_cost = []
