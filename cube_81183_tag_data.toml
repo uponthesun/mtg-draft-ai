@@ -16,7 +16,7 @@ set = "chk"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "ETB - Enabler", "Artifacts (Cheap) - Enabler",]
+tags = [ "Tier 3", "ETB - Enabler", "Artifacts (Cheap) - Enabler", "Sacrifice - Enabler",]
 set = "soi"
 
 ["Ajani's Pridemate"]
