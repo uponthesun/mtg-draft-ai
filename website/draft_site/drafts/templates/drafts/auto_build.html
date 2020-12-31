@@ -1,3 +1,8 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
 {% include "drafts/draft_header.html" %}
 
 <br>
@@ -6,6 +11,21 @@
 Synergy edges: {{ num_edges }}
 <br>
 Average card power: {{ avg_power }}
+<br>
+Card power <breakdown></breakdown>
+<br>
+<table>
+<tr>
+    <th>Rating</th><th>Count</th>
+</tr>
+{% for rating, count in power_histogram %}
+<tr>
+    <td>{{ rating }}</td><td>{{ count }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+
 <div>
 {% for image_url in built_deck_images %}
     <img src="{{ image_url }}" width="146" height="204" />
