@@ -1258,6 +1258,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "fut"
 
+["Songs of the Damned"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 4",]
+set = "me2"
+
 ["Tragic Slip"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -2189,6 +2196,13 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "sth"
 
+["Spike Soldier"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "sth"
+
 ["World Shaper"]
 mana_cost = [ "3", "G",]
 color_identity = "G"
@@ -2273,6 +2287,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "wwk"
 
+["Prey's Vengeance"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Strategy - Aggro", "Tier 3",]
+set = "roe"
+
 ["Vines of Vastwood"]
 mana_cost = [ "G",]
 color_identity = "G"
@@ -2307,13 +2328,6 @@ color_identity = "G"
 types = [ "instant",]
 tags = [ "Tier 2",]
 set = "rav"
-
-["Ancient Stirrings"]
-mana_cost = [ "G",]
-color_identity = "G"
-types = [ "sorcery",]
-tags = [ "Tier 3",]
-set = "roe"
 
 ["Irresistible Prey"]
 mana_cost = [ "G",]
@@ -2630,12 +2644,12 @@ types = [ "creature",]
 tags = [ "Tier 4",]
 set = "plc"
 
-["Experiment Kraj"]
-mana_cost = [ "2", "G", "G", "U", "U",]
+["Tamiyo, Collector of Tales"]
+mana_cost = [ "2", "G", "U",]
 color_identity = "GU"
-types = [ "creature",]
+types = [ "planeswalker",]
 tags = [ "Tier 3",]
-set = "dis"
+set = "war"
 
 ["Desperate Ravings"]
 mana_cost = [ "1", "R",]
@@ -2783,13 +2797,6 @@ color_identity = ""
 types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "fut"
-
-["Pilgrim's Eye"]
-mana_cost = [ "3",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Tier 3",]
-set = "wwk"
 
 [Scarecrone]
 mana_cost = [ "3",]
