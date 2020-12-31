@@ -21,9 +21,7 @@ def auto_build(request, draft_id, seat):
     built_deck = best_two_color_synergy_build(pool)
     deck_graph = synergy.create_graph(built_deck, remove_isolated=False)
     leftovers = [c for c in pool if c not in built_deck]
-    # TODO: fix interface
-    avg_power = statistics.mean([power_rating(c) for c in built_deck
-                                 if 'land' not in c.types])
+    power_ratings = [power_rating(c) for c in built_deck if 'land' not in c.types]
 
     context = {
         'draft': draft,
@@ -32,7 +30,8 @@ def auto_build(request, draft_id, seat):
         'built_deck_images': [cube_data.get_image_url(c.name) for c in built_deck],
         'leftovers_images': [cube_data.get_image_url(c.name) for c in leftovers],
         'num_edges': len(deck_graph.edges),
-        'avg_power': round(avg_power, 2),
+        'avg_power': round(statistics.mean(power_ratings), 2),
+        'power_histogram': _card_power_histogram(power_ratings),
     }
 
     deck_exports_context = {
@@ -41,3 +40,13 @@ def auto_build(request, draft_id, seat):
         'textarea_rows': len(pool) + 1,
     }
     return render(request, 'drafts/auto_build.html', {**context, **deck_exports_context})
+
+
+def _card_power_histogram(power_ratings):
+    """Return a list of (rating, frequency) pairs, sorted by rating in descending order."""
+    histogram = {}
+    for rating in power_ratings:
+        histogram.setdefault(rating, 0)
+        histogram[rating] += 1
+
+    return sorted(histogram.items(), reverse=True)
