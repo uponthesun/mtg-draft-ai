@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
+from .. import deck_export
 from .. import models
 from ..constants import CUBES_BY_ID
 
@@ -40,8 +41,8 @@ def show_seat(request, draft_id, seat):
     }
 
     deck_exports_context = {
-        'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in sorted_owned_cards],
-        'leftovers_card_names': [],
+        'cockatrice_export': deck_export.cockatrice(sorted_owned_cards, []),
+        'encoded_deckbuild_ui_export': deck_export.deckbuild_ui(sorted_owned_cards, [], cube_data, encoded=True),
         'textarea_rows': len(sorted_owned_cards) + 1,
     }
 

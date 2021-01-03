@@ -1,25 +1,16 @@
+<br>
+<a href="https://uponthesun.github.io/react-deckbuild-ui/?cards={{ encoded_deckbuild_ui_export }}">Open in deckbuilder</a>
+<br>
+<br>
 <table>
 <tr>
-    <td><a href="https://uponthesun.github.io/react-deckbuild-ui/">Deckbuild UI</a></td>
-    <td>Cockatrice</td>
+    <td>Export to Cockatrice</td>
 </tr>
 <tr>
     <td>
-<textarea rows="{{ textarea_rows }}">
-{% for name, set in deck_card_names %}1 {{ name }} ({{ set|upper }})
-{% endfor %}
-// Sideboard
-{% for name, set in leftovers_card_names %}1 {{ name }} ({{ set|upper }})
-{% endfor %}
-</textarea>
-    </td>
-    <td>
-<textarea rows="{{ textarea_rows }}">
-{% for name, set in deck_card_names %}1 {{ name }}
-{% endfor %}
-{% for name, set in leftovers_card_names %}1 {{ name }}
-{% endfor %}
-</textarea>
+        <textarea rows="{{ textarea_rows }}">
+{{ cockatrice_export }}
+        </textarea>
     </td>
 </tr>
 </table>

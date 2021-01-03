@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 from .. import models
 from ..constants import CUBES_BY_ID
+from .. import deck_export
 from mtg_draft_ai.brains import power_rating
 from mtg_draft_ai.deckbuild import best_two_color_synergy_build
 from mtg_draft_ai import synergy
@@ -36,8 +37,8 @@ def auto_build(request, draft_id, seat):
     }
 
     deck_exports_context = {
-        'deck_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in built_deck],
-        'leftovers_card_names': [(c.name, cube_data.card_by_name(c.name).card_set) for c in leftovers],
+        'cockatrice_export': deck_export.cockatrice(built_deck, leftovers),
+        'encoded_deckbuild_ui_export': deck_export.deckbuild_ui(built_deck, leftovers, cube_data, encoded=True),
         'textarea_rows': len(pool) + 1,
     }
     return render(request, 'drafts/auto_build.html', {**context, **deck_exports_context})
