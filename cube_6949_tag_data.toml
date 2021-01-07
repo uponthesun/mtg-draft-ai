@@ -51,7 +51,7 @@ set = "gtc"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "chk"
 
 ["Enduring Sliver"]
@@ -68,13 +68,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "zen"
 
-["Leonin Relic-Warder"]
-mana_cost = [ "W", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Strategy - Aggro", "Devotion W - Enabler", "Tier 3",]
-set = "mbs"
-
 [Myrsmith]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -86,7 +79,7 @@ set = "som"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Devotion W - Enabler",]
+tags = [ "Tier 3", "Strategy - Aggro",]
 set = "nph"
 
 ["Restoration Specialist"]
@@ -170,7 +163,7 @@ set = "plc"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 3",]
 set = "jou"
 
 ["Academy Rector"]
@@ -250,12 +243,26 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Control", "Landfall - Payoff",]
 set = "bfz"
 
+["Blessed Breath"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "chk"
+
 ["Emerge Unscathed"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
 tags = [ "Tier 4", "Strategy - Aggro",]
 set = "roe"
+
+["Hundred-Talon Strike"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "bok"
 
 ["Path to Exile"]
 mana_cost = [ "W",]
@@ -268,15 +275,15 @@ set = "con"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Strategy - Control",]
 set = "mh1"
 
-[Tithe]
-mana_cost = [ "W",]
+["Candles' Glow"]
+mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Strategy - Control", "Tier 4",]
-set = "vis"
+tags = [ "Tier 4",]
+set = "chk"
 
 [Disenchant]
 mana_cost = [ "1", "W",]
@@ -284,6 +291,20 @@ color_identity = "W"
 types = [ "instant",]
 tags = [ "Tier 4", "Strategy - Control",]
 set = "tsb"
+
+["Otherworldly Journey"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 4",]
+set = "chk"
+
+["Shining Shoal"]
+mana_cost = [ "X", "W", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "bok"
 
 ["Unexpectedly Absent"]
 mana_cost = [ "X", "W", "W",]
@@ -366,7 +387,7 @@ set = "eld"
 mana_cost = [ "1", "W", "W",]
 color_identity = "W"
 types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control", "Devotion W - Enabler",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "con"
 
 ["Gelid Shackles"]
@@ -397,18 +418,11 @@ types = [ "enchantment",]
 tags = [ "Tier 4", "Strategy - Aggro",]
 set = "thb"
 
-["Gleam of Authority"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "enchantment",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "dtk"
-
 ["Hoofprints of the Stag"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "tribal", "enchantment",]
-tags = [ "Tier 4", "Strategy - Control",]
+tags = [ "Strategy - Control", "Tier 3",]
 set = "lrw"
 
 ["Bound by Moonsilver"]
@@ -436,7 +450,7 @@ set = "akh"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Strategy - Control",]
+tags = [ "Strategy - Control", "Tier 3",]
 set = "eve"
 
 ["Faith's Fetters"]
@@ -450,7 +464,7 @@ set = "rav"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 3", "Devotion W - Enabler",]
+tags = [ "Tier 3",]
 set = "wwk"
 
 ["Sage's Reverie"]
@@ -576,7 +590,7 @@ set = "m15"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4", "Strategy - Aggro",]
+tags = [ "Tier 3",]
 set = "tsp"
 
 ["Grand Architect"]
@@ -719,12 +733,12 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "mmq"
 
-[Pongify]
+["Reach Through Mists"]
 mana_cost = [ "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "plc"
+tags = [ "Tier 4",]
+set = "chk"
 
 [Repeal]
 mana_cost = [ "X", "U",]
@@ -747,19 +761,12 @@ types = [ "instant",]
 tags = [ "Strategy - Control", "Tier 4",]
 set = "tsb"
 
-["Arcane Denial"]
+["Consuming Vortex"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
-set = "all"
-
-["Flash of Insight"]
-mana_cost = [ "X", "1", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 4", "Strategy - Control",]
-set = "jud"
+tags = [ "Tier 3",]
+set = "chk"
 
 ["Mana Leak"]
 mana_cost = [ "1", "U",]
@@ -816,6 +823,13 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "chk"
+
+["Murmurs from Beyond"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "sok"
 
 [Neutralize]
 mana_cost = [ "1", "U", "U",]
@@ -921,13 +935,6 @@ color_identity = "U"
 types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "mma"
-
-["Shimmering Wings"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "enchantment",]
-tags = [ "Strategy - Aggro", "Tier 4",]
-set = "tmp"
 
 ["Dance of Many"]
 mana_cost = [ "U", "U",]
@@ -1118,13 +1125,6 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "rav"
 
-["Tomb Robber"]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Strategy - Aggro", "Tier 4",]
-set = "rix"
-
 ["Toshiro Umezawa"]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
@@ -1258,13 +1258,6 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "fut"
 
-["Songs of the Damned"]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Tier 4",]
-set = "me2"
-
 ["Tragic Slip"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -1276,7 +1269,7 @@ set = "dka"
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 3",]
 set = "m21"
 
 ["Go for the Throat"]
@@ -1293,6 +1286,20 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "csp"
 
+["Sickening Shoal"]
+mana_cost = [ "X", "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control", "Strategy - Aggro",]
+set = "bok"
+
+["Soulless Revival"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 4",]
+set = "chk"
+
 ["Essence Extraction"]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
@@ -1300,19 +1307,19 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "kld"
 
+["Horobi's Whisper"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "bok"
+
 [Murder]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "m13"
-
-["Drag to the Underworld"]
-mana_cost = [ "2", "B", "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 3",]
-set = "thb"
 
 ["Makeshift Mannequin"]
 mana_cost = [ "3", "B",]
@@ -1346,7 +1353,7 @@ set = "jud"
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Strategy - Control", "Tier 4",]
+tags = [ "Tier 4",]
 set = "usg"
 
 ["Demonic Tutor"]
@@ -1362,13 +1369,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
 set = "sok"
-
-["Ransack the Lab"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 3",]
-set = "mh1"
 
 ["Stitch Together"]
 mana_cost = [ "B", "B",]
@@ -1412,26 +1412,12 @@ types = [ "sorcery",]
 tags = [ "Tier 4",]
 set = "m15"
 
-["Wishclaw Talisman"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "artifact",]
-tags = [ "Tier 4",]
-set = "eld"
-
 ["Dead Weight"]
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "isd"
-
-["Genju of the Fens"]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "bok"
 
 ["Quest for the Gravelord"]
 mana_cost = [ "B",]
@@ -1776,13 +1762,6 @@ types = [ "instant",]
 tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control",]
 set = "m10"
 
-["Otherworldly Outburst"]
-mana_cost = [ "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "emn"
-
 ["Battle Hymn"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1797,6 +1776,13 @@ types = [ "instant",]
 tags = [ "Tier 4",]
 set = "dtk"
 
+["Glacial Ray"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control", "Strategy - Aggro",]
+set = "chk"
+
 [Incinerate]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1808,7 +1794,7 @@ set = "mir"
 mana_cost = [ "R", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Strategy - Control", "Tier 4",]
 set = "dka"
 
 ["Magma Jet"]
@@ -1930,13 +1916,6 @@ types = [ "enchantment",]
 tags = [ "Tier 4", "Project",]
 set = "csp"
 
-["Inferno Fist"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "enchantment",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "m15"
-
 ["Galvanic Arc"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -2048,13 +2027,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "soi"
-
-["Quirion Dryad"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 4", "Strategy - Aggro",]
-set = "pls"
 
 ["Sakura-Tribe Elder"]
 mana_cost = [ "1", "G",]
@@ -2238,13 +2210,6 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "lgn"
 
-["Spike Tiller"]
-mana_cost = [ "3", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "tsp"
-
 [Cloudthresher]
 mana_cost = [ "2", "G", "G", "G", "G",]
 color_identity = "G"
@@ -2287,12 +2252,12 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "wwk"
 
-["Prey's Vengeance"]
+["Kodama's Might"]
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "instant",]
-tags = [ "Strategy - Aggro", "Tier 3",]
-set = "roe"
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "chk"
 
 ["Vines of Vastwood"]
 mana_cost = [ "G",]
@@ -2300,6 +2265,13 @@ color_identity = "G"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "zen"
+
+["Warriors' Lesson"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Tier 4", "Strategy - Aggro",]
+set = "ths"
 
 ["Sylvan Might"]
 mana_cost = [ "1", "G",]
@@ -2445,7 +2417,7 @@ set = "nem"
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
 color_identity = "UW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion U - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "dis"
 
 ["Momentary Blink"]
@@ -2504,6 +2476,13 @@ types = [ "creature",]
 tags = [ "Strategy - Control", "Tier 3",]
 set = "ody"
 
+["Mystical Teachings"]
+mana_cost = [ "3", "U",]
+color_identity = "BU"
+types = [ "instant",]
+tags = [ "Tier 4",]
+set = "tsp"
+
 ["Acidic Sliver"]
 mana_cost = [ "B", "R",]
 color_identity = "BR"
@@ -2529,7 +2508,7 @@ set = "dis"
 mana_cost = [ "R", "/", "G", "R", "/", "G",]
 color_identity = "GR"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion G - Enabler", "Devotion R - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "gpt"
 
 ["Fires of Yavimaya"]
@@ -2550,7 +2529,7 @@ set = "tsp"
 mana_cost = [ "G", "/", "W", "G", "/", "W",]
 color_identity = "GW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion G - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "rav"
 
 ["Knight of the Reliquary"]
@@ -2585,7 +2564,7 @@ set = "plc"
 mana_cost = [ "W", "/", "B", "W", "/", "B", "W", "/", "B",]
 color_identity = "BW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion B - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "eve"
 
 ["Rise to Glory"]
@@ -2641,7 +2620,7 @@ set = "eve"
 mana_cost = [ "2", "G", "U",]
 color_identity = "GU"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 3",]
 set = "plc"
 
 ["Tamiyo, Collector of Tales"]
@@ -2690,7 +2669,7 @@ set = "eve"
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Devotion W - Enabler", "Devotion R - Enabler",]
+tags = [ "Tier 2", "Strategy - Aggro",]
 set = "rav"
 
 ["Rise of the Hobgoblins"]
@@ -2769,6 +2748,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Tier 1",]
 set = "ody"
+
+["Myr Retriever"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "mrd"
 
 ["Sorcerer's Broom"]
 mana_cost = [ "2",]
@@ -2950,13 +2936,6 @@ mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 4",]
-set = "soi"
-
-["Brain in a Jar"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4", "Strategy - Control",]
 set = "soi"
 
 ["Coldsteel Heart"]

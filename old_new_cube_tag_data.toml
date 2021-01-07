@@ -537,6 +537,13 @@ types = [ "artifact", "creature",]
 tags = [ "",]
 set = "con"
 
+["Grizzled Angler"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "emn"
+
 ["Jace's Archivist"]
 mana_cost = [ "1", "U", "U",]
 color_identity = "U"
@@ -655,13 +662,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "",]
 set = "rix"
-
-["Into the Roil"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "",]
-set = "zen"
 
 [Negate]
 mana_cost = [ "1", "U",]
@@ -1230,6 +1230,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "akh"
 
+["Blood Aspirant"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "thb"
+
 ["Careless Celebrant"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1356,13 +1363,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "dtk"
 
-["Merchant of the Vale"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "eld"
-
 ["Prophetic Flamespeaker"]
 mana_cost = [ "1", "R", "R",]
 color_identity = "R"
@@ -1404,6 +1404,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "m21"
+
+["Runehorn Hellkite"]
+mana_cost = [ "5", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "c16"
 
 ["Chaos Maw"]
 mana_cost = [ "5", "R", "R",]
@@ -1461,19 +1468,19 @@ types = [ "instant",]
 tags = [ "",]
 set = "hou"
 
-["Fire Prophecy"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "",]
-set = "iko"
-
 ["Brimstone Volley"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "instant",]
 tags = [ "",]
 set = "isd"
+
+["Flame Spill"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "",]
+set = "iko"
 
 ["Valakut Awakening"]
 mana_cost = [ "2", "R",]
@@ -1489,6 +1496,13 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "eve"
 
+["Purphoros's Intervention"]
+mana_cost = [ "X", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "",]
+set = "thb"
+
 ["Go for Blood"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1496,29 +1510,8 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "iko"
 
-[Grapeshot]
+["Incendiary Flow"]
 mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "sorcery",]
-tags = [ "",]
-set = "tsp"
-
-["Lava Coil"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "sorcery",]
-tags = [ "",]
-set = "grn"
-
-["Roil Eruption"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "sorcery",]
-tags = [ "",]
-set = "znr"
-
-["Collective Defiance"]
-mana_cost = [ "1", "R", "R",]
 color_identity = "R"
 types = [ "sorcery",]
 tags = [ "",]
@@ -1544,6 +1537,13 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "",]
 set = "dis"
+
+["Oath of Chandra"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "",]
+set = "ogw"
 
 ["The Flame of Keld"]
 mana_cost = [ "1", "R",]

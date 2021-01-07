@@ -30,7 +30,7 @@ set = "m19"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Counters - Enabler", "Spirits - Enabler", "Tier 2", "Legends - Enabler", "Counters Target - Enabler",]
+tags = [ "Counters - Enabler", "Spirits - Enabler", "Tier 2", "Legends - Enabler", "Counters Target - Enabler", "ETB - Enabler",]
 set = "dtk"
 
 ["Charming Prince"]
