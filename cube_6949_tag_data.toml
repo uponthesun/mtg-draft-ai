@@ -68,13 +68,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "zen"
 
-[Myrsmith]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "som"
-
 ["Puresteel Paladin"]
 mana_cost = [ "W", "W",]
 color_identity = "W"
@@ -558,13 +551,6 @@ types = [ "creature",]
 tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 2",]
 set = "isd"
 
-["Soratami Cloudskater"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "chk"
-
 ["Surveilling Sprite"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -1006,6 +992,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "m11"
 
+["Ashen-Skin Zubera"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "chk"
+
 ["Asylum Visitor"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1216,6 +1209,13 @@ types = [ "creature",]
 tags = [ "Tier 2",]
 set = "ths"
 
+["He Who Hungers"]
+mana_cost = [ "4", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 4",]
+set = "chk"
+
 ["Kagemaro, First to Suffer"]
 mana_cost = [ "3", "B", "B",]
 color_identity = "B"
@@ -1362,13 +1362,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "3ed"
-
-["Kiku's Shadow"]
-mana_cost = [ "B", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
-set = "sok"
 
 ["Stitch Together"]
 mana_cost = [ "B", "B",]
@@ -1650,6 +1643,13 @@ types = [ "creature",]
 tags = [ "Tier 2",]
 set = "jud"
 
+["Erratic Cyclops"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "grn"
+
 ["Fledgling Dragon"]
 mana_cost = [ "2", "R", "R",]
 color_identity = "R"
@@ -1927,7 +1927,7 @@ set = "rav"
 mana_cost = [ "3", "R",]
 color_identity = "R"
 types = [ "enchantment",]
-tags = [ "Tier 3",]
+tags = [ "Project", "Tier 3",]
 set = "ori"
 
 ["Sneak Attack"]
@@ -1962,7 +1962,14 @@ set = "ori"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 3",]
+set = "chk"
+
+["Dripping-Tongue Zubera"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
 set = "chk"
 
 ["Elvish Visionary"]
@@ -1990,7 +1997,7 @@ set = "m12"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 3",]
 set = "dom"
 
 ["Lotus Cobra"]
@@ -2077,19 +2084,19 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "rav"
 
+["Elder Pine of Jukai"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "sok"
+
 ["Eternal Witness"]
 mana_cost = [ "1", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 1", "Strategy - Control",]
 set = "5dn"
-
-[Hystrodon]
-mana_cost = [ "4", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "ons"
 
 ["Krosan Restorer"]
 mana_cost = [ "2", "G",]
@@ -2147,12 +2154,12 @@ types = [ "enchantment", "creature",]
 tags = [ "Tier 3",]
 set = "jou"
 
-["Nylea, Keen-Eyed"]
+[Haru-Onna]
 mana_cost = [ "3", "G",]
 color_identity = "G"
-types = [ "enchantment", "creature",]
-tags = [ "Tier 3",]
-set = "thb"
+types = [ "creature",]
+tags = [ "Tier 4",]
+set = "sok"
 
 ["Oracle of Mul Daya"]
 mana_cost = [ "3", "G",]
@@ -2672,6 +2679,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "rav"
 
+["Koll, the Forgemaster"]
+mana_cost = [ "R", "W",]
+color_identity = "RW"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
+
 ["Rise of the Hobgoblins"]
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
@@ -2753,7 +2767,7 @@ set = "ody"
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "",]
+tags = [ "Tier 4",]
 set = "mrd"
 
 ["Sorcerer's Broom"]

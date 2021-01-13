@@ -572,6 +572,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "soi"
 
+["Inga Rune-Eyes"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
+
 ["Niblis of Frost"]
 mana_cost = [ "2", "U", "U",]
 color_identity = "U"
@@ -718,13 +725,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "",]
 set = "eld"
-
-["Of One Mind"]
-mana_cost = [ "2", "U",]
-color_identity = "U"
-types = [ "sorcery",]
-tags = [ "",]
-set = "iko"
 
 ["Inscription of Insight"]
 mana_cost = [ "3", "U",]
