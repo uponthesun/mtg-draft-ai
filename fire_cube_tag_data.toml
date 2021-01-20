@@ -19,13 +19,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "zen"
 
-["Weathered Wayfarer"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "",]
-set = "9ed"
-
 ["Gust Walker"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -285,13 +278,6 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "dka"
 
-["Emeria's Call"]
-mana_cost = [ "4", "W", "W", "W",]
-color_identity = "W"
-types = [ "sorcery",]
-tags = [ "",]
-set = "znr"
-
 ["Glass Casket"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -410,13 +396,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "",]
 set = "kld"
-
-["Sidisi's Faithful"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "",]
-set = "dtk"
 
 ["Trusted Advisor"]
 mana_cost = [ "U",]
@@ -572,13 +551,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "soi"
 
-["Inga Rune-Eyes"]
-mana_cost = [ "3", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "",]
-set = "khm"
-
 ["Niblis of Frost"]
 mana_cost = [ "2", "U", "U",]
 color_identity = "U"
@@ -733,13 +705,6 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "znr"
 
-["Rite of Replication"]
-mana_cost = [ "2", "U", "U",]
-color_identity = "U"
-types = [ "sorcery",]
-tags = [ "",]
-set = "zen"
-
 ["Midnight Clock"]
 mana_cost = [ "2", "U",]
 color_identity = "U"
@@ -879,13 +844,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "",]
 set = "znr"
-
-["Order of Midnight"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "",]
-set = "eld"
 
 ["Orzhov Enforcer"]
 mana_cost = [ "1", "B",]
@@ -1188,13 +1146,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "iko"
 
-["Dragonmaster Outcast"]
-mana_cost = [ "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "bfz"
-
 ["Goblin Banneret"]
 mana_cost = [ "R",]
 color_identity = "R"
@@ -1231,13 +1182,6 @@ tags = [ "",]
 set = "akh"
 
 ["Blood Aspirant"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "thb"
-
-["Careless Celebrant"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
@@ -1559,13 +1503,6 @@ types = [ "enchantment",]
 tags = [ "",]
 set = "thb"
 
-["The First Eruption"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "enchantment",]
-tags = [ "",]
-set = "dom"
-
 ["Sarkhan's Unsealing"]
 mana_cost = [ "3", "R",]
 color_identity = "R"
@@ -1670,13 +1607,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
 set = "dst"
-
-["Ainok Survivalist"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "dtk"
 
 ["Architect of the Untamed"]
 mana_cost = [ "2", "G",]
