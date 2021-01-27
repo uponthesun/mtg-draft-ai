@@ -215,6 +215,13 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "roe"
 
+["Shepherd of the Cosmos"]
+mana_cost = [ "4", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 2",]
+set = "khm"
+
 ["Yosei, the Morning Star"]
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
@@ -621,6 +628,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "frf"
 
+["Orvar, the All-Form"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "khm"
+
 ["Aeon Chronicler"]
 mana_cost = [ "3", "U", "U",]
 color_identity = "U"
@@ -655,6 +669,13 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 4",]
 set = "tsp"
+
+["Relentless Skaabs"]
+mana_cost = [ "3", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "dka"
 
 ["River Kelpie"]
 mana_cost = [ "3", "U", "U",]
@@ -718,13 +739,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "4ed"
-
-["Whispers of the Muse"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Strategy - Control", "Tier 4",]
-set = "tsb"
 
 ["Consuming Vortex"]
 mana_cost = [ "1", "U",]
@@ -1356,12 +1370,12 @@ types = [ "sorcery",]
 tags = [ "Tier 2",]
 set = "tsp"
 
-["Endless Obedience"]
+["Haunting Voyage"]
 mana_cost = [ "4", "B", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Tier 4",]
-set = "m15"
+tags = [ "Tier 3",]
+set = "khm"
 
 ["Dead Weight"]
 mana_cost = [ "B",]
@@ -2039,7 +2053,7 @@ set = "rav"
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 4",]
 set = "sok"
 
 ["Eternal Witness"]

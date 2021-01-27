@@ -40,6 +40,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Lifegain - Enabler", "ETB - Payoff", "ETB - Enabler",]
 set = "eld"
 
+["Clarion Spirit"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Spirits - Enabler", "Spirit Tokens - Enabler", "Tokens Aggro - Enabler", "Tokens - Enabler", "Sacrifice - Enabler", "Tier 2",]
+set = "khm"
+
 ["Grateful Apparition"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -130,13 +137,6 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Counters Target - Enabler", "Counters - Payoff",]
 set = "m21"
-
-["Vanguard of Brimaz"]
-mana_cost = [ "W", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Heroic - Payoff", "Tier 4",]
-set = "bng"
 
 ["Angel of Vitality"]
 mana_cost = [ "2", "W",]
@@ -852,6 +852,13 @@ types = [ "creature",]
 tags = [ "ETB - Enabler", "Vampires - Enabler", "Tier 3", "Sacrifice - Enabler",]
 set = "rix"
 
+["Elderfang Disciple"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Elves - Enabler", "Sacrifice - Enabler", "ETB - Enabler", "Tier 3",]
+set = "khm"
+
 ["Graveyard Marshal"]
 mana_cost = [ "B", "B",]
 color_identity = "B"
@@ -880,13 +887,6 @@ types = [ "creature",]
 tags = [ "Ninjutsu - Enabler", "Tier 3",]
 set = "xln"
 
-["Miara, Thorn of the Glade"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3", "Elves - Enabler", "Elves - Payoff",]
-set = "cmr"
-
 ["Mire Triton"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -908,19 +908,19 @@ types = [ "creature",]
 tags = [ "Tier 2", "Sacrifice Outlet - Enabler", "Sacrifice - Payoff",]
 set = "rna"
 
-["Ravenous Rats"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "ETB - Enabler", "Tier 3", "Sacrifice - Enabler",]
-set = "gvl"
-
 ["Reassembling Skeleton"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
 tags = [ "Sacrifice - Enabler", "Graveyard - Payoff", "Discard - Payoff", "Tier 3",]
 set = "m11"
+
+["Skemfar Avenger"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Elves - Enabler", "Elves - Payoff", "Tier 3",]
+set = "khm"
 
 ["Stromkirk Condemned"]
 mana_cost = [ "B", "B",]

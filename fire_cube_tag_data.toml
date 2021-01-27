@@ -1,23 +1,30 @@
-["Faerie Guidemother"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "",]
-set = "eld"
-
-["Giant Killer"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "",]
-set = "eld"
-
 ["Steppe Lynx"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
 tags = [ "",]
 set = "zen"
+
+["Toolcraft Exemplar"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "kld"
+
+["Town Gossipmonger"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "soi"
+
+["Aethergeode Miner"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "aer"
 
 ["Gust Walker"]
 mana_cost = [ "1", "W",]
@@ -551,6 +558,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "soi"
 
+["Inga Rune-Eyes"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
+
 ["Niblis of Frost"]
 mana_cost = [ "2", "U", "U",]
 color_identity = "U"
@@ -1006,6 +1020,13 @@ types = [ "instant",]
 tags = [ "",]
 set = "war"
 
+["Rise of the Dread Marn"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "",]
+set = "khm"
+
 ["Hagra Mauling"]
 mana_cost = [ "2", "B", "B",]
 color_identity = "B"
@@ -1132,13 +1153,6 @@ types = [ "land",]
 tags = [ "",]
 set = "hou"
 
-["Mortuary Mire"]
-mana_cost = []
-color_identity = "B"
-types = [ "land",]
-tags = [ "",]
-set = "bfz"
-
 ["Blisterspit Gremlin"]
 mana_cost = [ "R",]
 color_identity = "R"
@@ -1173,6 +1187,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "aer"
+
+["Axgard Cavalry"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
 
 ["Battlefield Scavenger"]
 mana_cost = [ "1", "R",]
@@ -1209,12 +1230,12 @@ types = [ "creature",]
 tags = [ "",]
 set = "m21"
 
-["Kargan Dragonlord"]
-mana_cost = [ "R", "R",]
+["Magda, Brazen Outlaw"]
+mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
-set = "roe"
+set = "khm"
 
 ["Magmatic Channeler"]
 mana_cost = [ "1", "R",]
@@ -1279,6 +1300,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "dtk"
 
+["Dwarven Bloodboiler"]
+mana_cost = [ "R", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "jud"
+
 ["Fervent Paincaster"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1306,13 +1334,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "dtk"
-
-["Prophetic Flamespeaker"]
-mana_cost = [ "1", "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "",]
-set = "jou"
 
 ["Pia and Kiran Nalaar"]
 mana_cost = [ "2", "R", "R",]
@@ -1615,13 +1636,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "kld"
 
-["Caller of the Claw"]
-mana_cost = [ "2", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "lgn"
-
 ["Dryad of the Ilysian Grove"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1671,6 +1685,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "xln"
 
+[Brawn]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "jud"
+
 ["Deadbridge Goliath"]
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
@@ -1678,12 +1699,12 @@ types = [ "creature",]
 tags = [ "",]
 set = "rtr"
 
-["Nylea, God of the Hunt"]
+["Nylea, Keen-Eyed"]
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "enchantment", "creature",]
 tags = [ "",]
-set = "plist"
+set = "thb"
 
 ["Peema Aether-Seer"]
 mana_cost = [ "3", "G",]
@@ -1888,13 +1909,6 @@ types = [ "enchantment",]
 tags = [ "",]
 set = "xln"
 
-["Hibernation's End"]
-mana_cost = [ "4", "G",]
-color_identity = "G"
-types = [ "enchantment",]
-tags = [ "",]
-set = "csp"
-
 ["Hashep Oasis"]
 mana_cost = []
 color_identity = "G"
@@ -2014,13 +2028,6 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "mir"
 
-["Krosan Verge"]
-mana_cost = []
-color_identity = "WG"
-types = [ "land",]
-tags = [ "",]
-set = "jud"
-
 ["Murasa Rootgrazer"]
 mana_cost = [ "G", "W",]
 color_identity = "GW"
@@ -2041,6 +2048,13 @@ color_identity = "GW"
 types = [ "creature",]
 tags = [ "",]
 set = "iko"
+
+["Maja, Bretagard Protector"]
+mana_cost = [ "2", "G", "W", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
 
 ["Sigarda, Heron's Grace"]
 mana_cost = [ "3", "G", "W",]
@@ -2181,13 +2195,6 @@ color_identity = "RW"
 types = [ "creature",]
 tags = [ "",]
 set = "grn"
-
-["Brion Stoutarm"]
-mana_cost = [ "2", "R", "W",]
-color_identity = "RW"
-types = [ "creature",]
-tags = [ "",]
-set = "lrw"
 
 ["Nahiri, the Harbinger"]
 mana_cost = [ "2", "R", "W",]
@@ -2426,6 +2433,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "",]
 set = "kld"
+
+["Mobile Garrison"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "aer"
 
 ["Aetherworks Marvel"]
 mana_cost = [ "4",]
