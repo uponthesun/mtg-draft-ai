@@ -201,6 +201,9 @@ def _splashed(card, splash_colors):
 
 
 def _relevant_cards(card_pool, main_colors, splash_colors):
+    # Filter out cards we don't have data for, i.e. if the card has been removed from the cube
+    card_pool = [c for c in card_pool if c.color_id is not None]
+
     colors = list(main_colors) + list(splash_colors)
     return [c for c in card_pool
             # on-color nonlands
