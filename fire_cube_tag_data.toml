@@ -1524,13 +1524,6 @@ types = [ "enchantment",]
 tags = [ "",]
 set = "thb"
 
-["Sarkhan's Unsealing"]
-mana_cost = [ "3", "R",]
-color_identity = "R"
-types = [ "enchantment",]
-tags = [ "",]
-set = "m19"
-
 ["Ramunap Ruins"]
 mana_cost = []
 color_identity = "R"

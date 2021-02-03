@@ -803,12 +803,12 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "sok"
 
-[Neutralize]
+["Saw It Coming"]
 mana_cost = [ "1", "U", "U",]
 color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
-set = "iko"
+set = "khm"
 
 ["Sinister Sabotage"]
 mana_cost = [ "1", "U", "U",]
