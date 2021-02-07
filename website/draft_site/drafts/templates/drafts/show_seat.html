@@ -33,14 +33,14 @@
         <input name="pick" type="hidden" value="{{ drafter.current_pick }}" />
         <input name="seat" type="hidden" value="{{ drafter.seat }}" />
         {% for card, image_urls in cards %}
-            {% if drafter.bot %}
-                <img src="{{ image_urls|first }}" class="card"/>
-            {% else %}
+            {% if not drafter.bot %}
                 <button name="picked_card_id" value="{{ card.id }}">
+            {% endif %}
                     <img src="{{ image_urls|first }}" class="card"/>
                     {% if image_urls|length_is:"2" %}
                         <img src="{{ image_urls.1 }}" class="cardback"/>
                     {% endif %}
+            {% if not drafter.bot %}
                 </button>
             {% endif %}
         {% endfor %}
