@@ -1,5 +1,5 @@
 {%load static %}
-<link rel="stylesheet" href="{% static 'show_seat_v2.css' %}" />
+<link rel="stylesheet" href="{% static 'show_seat_v3.css' %}" />
 {% include "drafts/draft_header.html" %}
 
 <div>
@@ -32,12 +32,15 @@
         <input name="phase" type="hidden" value="{{ drafter.current_phase }}" />
         <input name="pick" type="hidden" value="{{ drafter.current_pick }}" />
         <input name="seat" type="hidden" value="{{ drafter.seat }}" />
-        {% for card, image_url in cards %}
-            {% if drafter.bot %}
-                <img src="{{ image_url }}" class="card" />
-            {% else %}
+        {% for card, image_urls in cards %}
+            {% if not drafter.bot %}
                 <button name="picked_card_id" value="{{ card.id }}">
-                    <img src="{{ image_url }}" class="card"/>
+            {% endif %}
+                    <img src="{{ image_urls|first }}" class="card"/>
+                    {% if image_urls|length_is:"2" %}
+                        <img src="{{ image_urls.1 }}" class="cardback"/>
+                    {% endif %}
+            {% if not drafter.bot %}
                 </button>
             {% endif %}
         {% endfor %}
@@ -49,9 +52,12 @@
 <b>Owned Cards</b>
 
 <div>
-{% for _, image_url in owned_cards %}
+{% for _, image_urls in owned_cards %}
     {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
-    <img src="{{ image_url }}" class="card" />
+    <img src="{{ image_urls|first }}" class="card" />
+    {% if image_urls|length_is:"2" %}
+        <img src="{{ image_urls.1 }}" class="cardback"/>
+    {% endif %}
 {% endfor %}
 </div>
 

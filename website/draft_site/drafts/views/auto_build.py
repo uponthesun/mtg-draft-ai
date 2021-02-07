@@ -30,8 +30,8 @@ def auto_build(request, draft_id, seat):
         'draft': draft,
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
-        'built_deck_images': [cube_data.get_image_url(c.name) for c in built_deck],
-        'leftovers_images': [cube_data.get_image_url(c.name) for c in leftovers],
+        'built_deck_images': [cube_data.get_image_urls(c.name) for c in built_deck],
+        'leftovers_images': [cube_data.get_image_urls(c.name) for c in leftovers],
         'num_edges': len(deck_graph.edges),
         'avg_power': round(avg_power, 2),
     }

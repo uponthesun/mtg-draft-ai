@@ -2,11 +2,11 @@
 <link rel="stylesheet" href="{% static 'all_picks.css' %}" />
 {% include "drafts/draft_header.html" %}
 
-{% for pick_url, pack_urls in picks_with_packs %}
+{% for pick_urls, pack_urls in picks_with_packs %}
     <div class="pack">
-        <img src="{{ pick_url }}" width="146" height="204" class="card-image highlight" />
-        {% for card_url in pack_urls %}
-            <img src="{{ card_url }}" width="146" height="204" />
+        <img src="{{ pick_urls|first }}" width="146" height="204" class="card-image highlight" />
+        {% for card_urls in pack_urls %}
+            <img src="{{ card_urls|first }}" width="146" height="204" />
         {% endfor %}
     </div>
 {% endfor %}

@@ -7,16 +7,16 @@ Synergy edges: {{ num_edges }}
 <br>
 Average card power: {{ avg_power }}
 <div>
-{% for image_url in built_deck_images %}
-    <img src="{{ image_url }}" width="146" height="204" />
+{% for image_urls in built_deck_images %}
+    <img src="{{ image_urls|first }}" width="146" height="204" />
 {% endfor %}
 </div>
 
 <b>Leftovers</b>
 
 <div>
-{% for image_url in leftovers_images %}
-    <img src="{{ image_url }}" width="146" height="204" />
+{% for image_urls in leftovers_images %}
+    <img src="{{ image_urls|first }}" width="146" height="204" />
 {% endfor %}
 </div>
 
