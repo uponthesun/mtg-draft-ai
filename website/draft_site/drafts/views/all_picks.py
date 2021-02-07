@@ -11,8 +11,8 @@ def all_picks(request, draft_id, seat):
     cube_data = CUBES_BY_ID[draft.cube_id]
 
     picks, pack_history = _convert_drafter(drafter)
-    picks_urls = [cube_data.get_image_url(c.name) for c in picks]
-    pack_leftovers_urls = [[cube_data.get_image_url(c.name) for c in pack] for pack in pack_history]
+    picks_urls = [cube_data.get_image_urls(c.name) for c in picks]
+    pack_leftovers_urls = [[cube_data.get_image_urls(c.name) for c in pack] for pack in pack_history]
 
     context = {
         'draft': draft,

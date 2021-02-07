@@ -41,14 +41,14 @@ class CubeData:
     def card_by_name(self, card_name):
         return self.cards_by_name[card_name] if card_name in self.cards_by_name else Card(name=card_name)
 
-    def get_image_url(self, card_name):
+    def get_image_urls(self, card_name):
         """ Gets the image URL for a card name from cache if present, otherwise falls back to the API URL. """
         if card_name in self.image_urls:
             return self.image_urls[card_name]
 
         # Fall back to using the API if we don't have the image URL cached (e.g. when viewing old drafts)
         query_string = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
-        return 'https://api.scryfall.com/cards/named?' + query_string
+        return ['https://api.scryfall.com/cards/named?' + query_string]
 
 
 def _load_and_update_image_url_cache(cards, image_urls_file):
@@ -62,10 +62,10 @@ def _load_and_update_image_url_cache(cards, image_urls_file):
     # Get URLs for new cards
     missing_cards = [c for c in cards if c.name not in cache]
     with ThreadPool(10) as tp:
-        urls = tp.starmap(_get_scryfall_image_url, [(c.name, c.card_set) for c in missing_cards])
+        all_missing_urls = tp.starmap(_get_scryfall_image_urls, [(c.name, c.card_set) for c in missing_cards])
 
-    for card, url in zip(missing_cards, urls):
-        cache[card.name] = url
+    for card, card_urls in zip(missing_cards, all_missing_urls):
+        cache[card.name] = card_urls
 
     # Write cache back out to disk
     with open(image_urls_file, 'w') as f:
@@ -74,15 +74,18 @@ def _load_and_update_image_url_cache(cards, image_urls_file):
     return cache
 
 
-def _get_scryfall_image_url(name, card_set):
+def _get_scryfall_image_urls(name, card_set):
     try:
         r = requests.get('https://api.scryfall.com/cards/named', params={'exact': name, 'set': card_set})
         card_json = r.json()
-        if 'card_faces' in card_json and 'image_uris' in card_json['card_faces'][0]:
-            # Case for double-faced cards
-            # TODO: nice to have - show both sides of a DFC
-            return card_json['card_faces'][0]['image_uris']['normal']
-        return card_json['image_uris']['normal']
+        size = 'normal'
+        if 'image_uris' in card_json:
+            urls = [card_json['image_uris'][size]]
+        else:
+            # double-faced cards
+            urls = [card_face['image_uris'][size] for card_face in card_json['card_faces']]
+
+        return urls
     except Exception as e:
         print('Failed to get image uri for card: {}'.format(name))
         raise e

@@ -34,8 +34,8 @@ def show_seat(request, draft_id, seat):
                          for r in bot_ratings]
 
     current_pack_context = {
-        'cards': [(c, cube_data.get_image_url(c.name)) for c in current_pack],
-        'owned_cards': [(c, cube_data.get_image_url(c.name)) for c in sorted_owned_cards],
+        'cards': [(c, cube_data.get_image_urls(c.name)) for c in current_pack],
+        'owned_cards': [(c, cube_data.get_image_urls(c.name)) for c in sorted_owned_cards],
         'bot_ratings_column_names': bot_ratings_column_names,
         'bot_ratings_table': bot_ratings_table,
     }
