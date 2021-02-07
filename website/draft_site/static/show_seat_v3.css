@@ -16,6 +16,8 @@ table, th, td {
 }
 
 .card:hover {
+  /* Hand-tuned 60 pixel horizontal translation so hover image on left edge of screen stays onscreen.
+     51 pixel vertical translation comes from normal image height of 204 / 4. */
   transform: translate(60px, 51px) scale(2);
   transition-delay: 0.5s;
 }
@@ -33,8 +35,11 @@ table, th, td {
   visibility: visible;
   transition: opacity 0s;
   transition-delay: 0.5s;
-  width: 292px;
-  height: 408px;
+  width: 292px; /* 2x normal width */
+  height: 408px; /* 2x normal height */
+
+  /* Transform so this shows up to the right of the front side enlarged hover image.
+     133 pixel horizontal translation = normal width 146 / 2 + the 60 pixel translation from .card:hover */
   transform: translate(133px, -51px);
 }
 
