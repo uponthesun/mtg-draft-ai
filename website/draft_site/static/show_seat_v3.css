@@ -1,0 +1,47 @@
+.hidden {
+    display:none;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.unhidden{
+    display:block;
+}
+
+.card {
+  width: 146px;
+  height: 204px;
+}
+
+.card:hover {
+  transform: translate(60px, 51px) scale(2);
+  transition-delay: 0.5s;
+}
+
+.cardback {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+}
+
+.cardback:hover, .card:hover + .cardback {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0s;
+  transition-delay: 0.5s;
+  width: 292px;
+  height: 408px;
+  transform: translate(133px, -51px);
+}
+
+input[type="button"] {
+  -webkit-appearance: none;
+}
+
+button {
+  -webkit-appearance: none;
+}

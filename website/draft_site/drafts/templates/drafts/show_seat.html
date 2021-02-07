@@ -1,5 +1,5 @@
 {%load static %}
-<link rel="stylesheet" href="{% static 'show_seat_v2.css' %}" />
+<link rel="stylesheet" href="{% static 'show_seat_v3.css' %}" />
 {% include "drafts/draft_header.html" %}
 
 <div>
@@ -38,6 +38,9 @@
             {% else %}
                 <button name="picked_card_id" value="{{ card.id }}">
                     <img src="{{ image_urls|first }}" class="card"/>
+                    {% if image_urls|length_is:"2" %}
+                        <img src="{{ image_urls.1 }}" class="cardback"/>
+                    {% endif %}
                 </button>
             {% endif %}
         {% endfor %}
@@ -52,6 +55,9 @@
 {% for _, image_urls in owned_cards %}
     {% if forloop.counter0|divisibleby:draft.cards_per_pack %}<br>{% endif %}
     <img src="{{ image_urls|first }}" class="card" />
+    {% if image_urls|length_is:"2" %}
+        <img src="{{ image_urls.1 }}" class="cardback"/>
+    {% endif %}
 {% endfor %}
 </div>
 
