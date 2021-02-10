@@ -866,13 +866,6 @@ types = [ "creature",]
 tags = [ "Elves - Enabler", "Sacrifice - Enabler", "ETB - Enabler", "Tier 3",]
 set = "khm"
 
-["Graveyard Marshal"]
-mana_cost = [ "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Graveyard - Payoff", "Tier 3",]
-set = "m19"
-
 ["Kalastria Highborn"]
 mana_cost = [ "B", "B",]
 color_identity = "B"
