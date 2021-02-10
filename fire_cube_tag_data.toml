@@ -1594,12 +1594,12 @@ types = [ "creature",]
 tags = [ "",]
 set = "xln"
 
-[Brawn]
-mana_cost = [ "3", "G",]
+["Wayward Swordtooth"]
+mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "",]
-set = "jud"
+set = "rix"
 
 ["Deadbridge Goliath"]
 mana_cost = [ "2", "G", "G",]
