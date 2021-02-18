@@ -1,3 +1,3 @@
-python cubecobra_download.py galaxy-brain-cube cube_6949_tag_data.toml
-python cubecobra_download.py nwo-cube cube_81183_tag_data.toml
-python cubecobra_download.py fire-cube fire_cube_tag_data.toml
+python cubecobra_download.py galaxy_brain_cube cube_6949_tag_data.toml
+python cubecobra_download.py nwo_cube cube_81183_tag_data.toml
+python cubecobra_download.py fire_cube fire_cube_tag_data.toml

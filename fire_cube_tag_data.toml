@@ -880,6 +880,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "khm"
 
+["Undercity Informer"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "gtc"
+
 ["Erebos, Bleak-Hearted"]
 mana_cost = [ "3", "B",]
 color_identity = "B"
