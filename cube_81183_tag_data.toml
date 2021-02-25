@@ -1,10 +1,3 @@
-["Favored Hoplite"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Heroic - Payoff", "Tier 4",]
-set = "ths"
-
 ["Thraben Inspector"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -144,6 +137,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "ETB - Enabler", "Tier 4", "Interaction", "Card Advantage",]
 set = "aer"
+
+["Fabled Hero"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 2", "Heroic - Payoff",]
+set = "ths"
 
 ["Glint-Sleeve Artisan"]
 mana_cost = [ "2", "W",]
@@ -347,13 +347,6 @@ color_identity = "W"
 types = [ "sorcery",]
 tags = [ "Spells - Enabler", "Tier 2", "Interaction",]
 set = "soi"
-
-["Gather the Townsfolk"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "sorcery",]
-tags = [ "Tokens - Enabler", "Tokens Aggro - Enabler", "Sacrifice - Enabler", "Spells - Enabler", "Tier 3",]
-set = "dka"
 
 ["Cartouche of Solidarity"]
 mana_cost = [ "W",]
@@ -653,7 +646,7 @@ set = "akh"
 mana_cost = [ "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Heroic - Enabler", "Spells - Enabler", "Flash - Interaction", "Tier 2", "Trick",]
+tags = [ "Heroic - Enabler", "Spells - Enabler", "Flash - Interaction", "Trick", "Tier 3",]
 set = "xln"
 
 [Opt]
@@ -758,7 +751,7 @@ set = "mh1"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "sorcery",]
-tags = [ "Graveyard - Enabler", "Spells - Enabler", "Tier 2", "Ninjutsu - Payoff", "Discard - Enabler", "Card Advantage",]
+tags = [ "Graveyard - Enabler", "Spells - Enabler", "Ninjutsu - Payoff", "Discard - Enabler", "Card Advantage", "Tier 3",]
 set = "xln"
 
 ["Bond of Insight"]
@@ -1059,7 +1052,7 @@ set = "sth"
 mana_cost = [ "3", "B", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2", "Elves - Enabler", "Elves", "Card Advantage",]
+tags = [ "Tier 2", "Elves - Enabler", "Elves", "Card Advantage", "Sacrifice - Payoff",]
 set = "khc"
 
 ["Thornmantle Striker"]
@@ -1201,6 +1194,13 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Lifegain - Enabler", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Tier 3", "Card Advantage",]
 set = "bfz"
+
+["Bomat Courier"]
+mana_cost = [ "1",]
+color_identity = "R"
+types = [ "artifact", "creature",]
+tags = [ "Tier 2", "Hellbent - Payoff", "Artifacts (Cheap) - Enabler", "Artifact Cards - Enabler", "Artifacts (Creature) - Enabler", "Card Advantage",]
+set = "kld"
 
 ["Goblin Welder"]
 mana_cost = [ "R",]
@@ -1355,13 +1355,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Tier 3", "Spells - Payoff", "Power - Enabler",]
 set = "hou"
-
-["Rockslide Sorcerer"]
-mana_cost = [ "3", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Wizards - Enabler", "Wizards - Payoff", "Spells - Payoff", "Tier 3", "Interaction", "Card Advantage",]
-set = "znr"
 
 ["Rukh Egg"]
 mana_cost = [ "3", "R",]
@@ -2070,13 +2063,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Discard - Payoff", "Legends - Enabler",]
 set = "ths"
 
-["Azra Oddsmaker"]
-mana_cost = [ "1", "B", "R",]
-color_identity = "BR"
-types = [ "creature",]
-tags = [ "Discard - Enabler", "Hellbent - Enabler", "Tier 2", "Card Advantage",]
-set = "bbd"
-
 ["Judith, the Scourge Diva"]
 mana_cost = [ "1", "B", "R",]
 color_identity = "BR"
@@ -2090,6 +2076,13 @@ color_identity = "BR"
 types = [ "creature",]
 tags = [ "Vampires - Enabler", "Discard - Payoff", "Hellbent - Payoff", "Tier 2", "Interaction", "Card Advantage",]
 set = "emn"
+
+["Chainer, Nightmare Adept"]
+mana_cost = [ "2", "B", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Tier 3", "Discard - Enabler",]
+set = "c19"
 
 ["Skarrg Guildmage"]
 mana_cost = [ "R", "G",]
@@ -2322,13 +2315,6 @@ types = [ "enchantment",]
 tags = [ "Spells - Payoff", "Tokens - Payoff", "Discard - Enabler", "Tokens Aggro - Payoff", "Tier 4",]
 set = "ktk"
 
-["Lupine Prototype"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Hellbent - Payoff", "Tier 4",]
-set = "emn"
-
 ["Metallic Mimic"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -2382,7 +2368,7 @@ set = "m19"
 mana_cost = [ "4",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Counters - Enabler", "Artifacts (Creature) - Enabler", "Artifacts (Recursion) - Payoff", "Discard - Enabler", "Hellbent - Enabler", "Artifact Cards - Enabler", "Tier 3",]
+tags = [ "Counters - Enabler", "Artifacts (Creature) - Enabler", "Discard - Enabler", "Hellbent - Enabler", "Artifact Cards - Enabler", "Tier 3",]
 set = "tsb"
 
 ["Karn, Silver Golem"]
@@ -2559,6 +2545,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Artifacts (Noncreature) - Enabler", "Ramp - Enabler", "Artifacts (Recursion) - Payoff", "Artifact Cards - Enabler", "Tier 3", "Card Advantage",]
 set = "bfz"
+
+["Mystic Forge"]
+mana_cost = [ "4",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3", "Artifact Cards - Payoff", "Artifact Cards - Enabler", "Artifacts (Noncreature) - Enabler",]
+set = "m20"
 
 [Panharmonicon]
 mana_cost = [ "4",]

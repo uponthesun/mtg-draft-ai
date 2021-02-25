@@ -1853,13 +1853,6 @@ types = [ "creature",]
 tags = [ "",]
 set = "war"
 
-["King Narfi's Betrayal"]
-mana_cost = [ "1", "U", "B",]
-color_identity = "BU"
-types = [ "enchantment",]
-tags = [ "",]
-set = "khm"
-
 ["Tezzeret the Schemer"]
 mana_cost = [ "2", "U", "B",]
 color_identity = "BU"
