@@ -95,6 +95,9 @@ def castable(card, colors):
     Returns:
         bool: Whether the card is castable.
     """
+    if card.color_id is None:
+        return False
+
     return set(card.color_id).issubset(set(colors)) or card.color_id == 'C'
 
 
