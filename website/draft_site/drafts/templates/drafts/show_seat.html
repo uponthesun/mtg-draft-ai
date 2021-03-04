@@ -7,12 +7,16 @@
 <br>
 {% if draft_complete %}
     {% if autobuild_enabled %}
+        <br>
         <form action="{% url 'auto_build' draft_id=draft.id seat=drafter.seat %}" method="get">
             <button type="submit">
                 Auto-build deck
             </button>
         </form>
     {% endif %}
+    <a href="https://uponthesun.github.io/react-deckbuild-ui/?cards={{ encoded_deckbuild_ui_export }}">Open in deckbuilder</a>
+    <br>
+    <br>
 {% else %}
     {% if show_queued_packs %}
         <input id="draft-id" type = "hidden" value="{{ draft.id }}" />
@@ -61,4 +65,4 @@
 {% endfor %}
 </div>
 
-{% include "drafts/deck_exports.html" %}
+{% include "drafts/cockatrice_export.html" %}

@@ -6,6 +6,11 @@
 Synergy edges: {{ num_edges }}
 <br>
 Average card power: {{ avg_power }}
+<br>
+<br>
+<a href="https://uponthesun.github.io/react-deckbuild-ui/?cards={{ encoded_deckbuild_ui_export }}">Open in deckbuilder</a>
+<br>
+<br>
 <div>
 {% for image_urls in built_deck_images %}
     <img src="{{ image_urls|first }}" width="146" height="204" />
@@ -20,4 +25,4 @@ Average card power: {{ avg_power }}
 {% endfor %}
 </div>
 
-{% include "drafts/deck_exports.html" %}
+{% include "drafts/cockatrice_export.html" %}
