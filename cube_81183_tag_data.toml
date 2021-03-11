@@ -243,13 +243,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Saprolings - Enabler", "Saprolings - Payoff", "Thallids - Enabler",]
 set = "plc"
 
-["Rhox Faithmender"]
-mana_cost = [ "3", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 4", "Lifegain - Enabler", "Lifegain - Payoff",]
-set = "m13"
-
 ["Twinblade Paladin"]
 mana_cost = [ "3", "W",]
 color_identity = "W"
@@ -670,12 +663,12 @@ types = [ "instant",]
 tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3", "Interaction",]
 set = "mor"
 
-["Familiar's Ruse"]
+["Essence Capture"]
 mana_cost = [ "U", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Flash - Interaction", "Tier 4", "Interaction",]
-set = "lrw"
+tags = [ "Interaction", "Flash - Interaction", "Tier 3",]
+set = "rna"
 
 ["Mana Leak"]
 mana_cost = [ "1", "U",]
@@ -793,7 +786,7 @@ set = "ths"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Ninjutsu - Enabler", "Tier 4",]
+tags = [ "Ninjutsu - Enabler", "Tier 3",]
 set = "mh1"
 
 ["Drake Haven"]
@@ -1223,6 +1216,20 @@ types = [ "creature",]
 tags = [ "Spells - Payoff", "Wizards - Enabler", "Tier 3",]
 set = "war"
 
+["Burning-Fist Minotaur"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Wizards - Enabler", "Discard - Enabler",]
+set = "hou"
+
+["Careless Celebrant"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Sacrifice - Enabler",]
+set = "thb"
+
 ["Chained Brute"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1250,13 +1257,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Sacrifice - Enabler", "Tier 1", "Legends - Enabler", "Tokens Aggro - Enabler",]
 set = "aer"
-
-["Scourge Wolf"]
-mana_cost = [ "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Discard - Payoff", "Tier 3",]
-set = "soi"
 
 ["Young Pyromancer"]
 mana_cost = [ "1", "R",]
@@ -1356,13 +1356,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Spells - Payoff", "Power - Enabler",]
 set = "hou"
 
-["Rukh Egg"]
-mana_cost = [ "3", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Tier 4", "Sacrifice - Enabler", "Sacrifice Outlet - Payoff",]
-set = "arn"
-
 [Magmaw]
 mana_cost = [ "3", "R", "R",]
 color_identity = "R"
@@ -1447,13 +1440,6 @@ types = [ "instant",]
 tags = [ "Spells - Enabler", "Spells (Red) - Enabler", "Interaction", "Tier 2",]
 set = "5dn"
 
-["Temur Battle Rage"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Tier 4", "Power - Payoff", "Heroic - Enabler",]
-set = "frf"
-
 ["Brimstone Volley"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1495,6 +1481,13 @@ color_identity = "R"
 types = [ "sorcery",]
 tags = [ "Sacrifice Outlet - Payoff", "Sacrifice - Enabler", "Tier 4",]
 set = "eld"
+
+["Crater's Claws"]
+mana_cost = [ "X", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Tier 3", "Power - Payoff", "Spells - Enabler", "Spells (Red) - Enabler", "Interaction",]
+set = "ktk"
 
 ["Magmatic Insight"]
 mana_cost = [ "R",]
@@ -2487,7 +2480,7 @@ set = "gpt"
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Ninjutsu - Enabler", "Artifacts (Noncreature) - Enabler", "Artifacts (Cheap) - Enabler", "Tier 2", "Discard - Enabler", "Hellbent - Enabler", "Power - Payoff", "Artifact Cards - Enabler",]
+tags = [ "Ninjutsu - Enabler", "Artifacts (Noncreature) - Enabler", "Artifacts (Cheap) - Enabler", "Tier 2", "Discard - Enabler", "Hellbent - Enabler", "Artifact Cards - Enabler",]
 set = "kld"
 
 ["Livewire Lash"]
@@ -2550,7 +2543,7 @@ set = "bfz"
 mana_cost = [ "4",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 3", "Artifact Cards - Payoff", "Artifact Cards - Enabler", "Artifacts (Noncreature) - Enabler",]
+tags = [ "Tier 3", "Artifact Cards - Payoff", "Artifact Cards - Enabler", "Artifacts (Noncreature) - Enabler", "Card Advantage",]
 set = "m20"
 
 [Panharmonicon]
