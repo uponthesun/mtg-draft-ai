@@ -243,13 +243,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Saprolings - Enabler", "Saprolings - Payoff", "Thallids - Enabler",]
 set = "plc"
 
-["Twinblade Paladin"]
-mana_cost = [ "3", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Payoff",]
-set = "m20"
-
 ["Visionary Augmenter"]
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
@@ -275,7 +268,7 @@ set = "xln"
 mana_cost = [ "3", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Lifegain - Payoff", "Tier 1", "Card Advantage",]
+tags = [ "Lifegain - Payoff", "Card Advantage", "Tier 2",]
 set = "hou"
 
 ["Ajani's Presence"]
@@ -656,6 +649,13 @@ types = [ "tribal", "instant",]
 tags = [ "Wizards - Payoff", "Spells - Enabler", "Tier 3", "Trick",]
 set = "mor"
 
+["Disdainful Stroke"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Flash - Interaction", "Interaction",]
+set = "ktk"
+
 [Disperse]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -677,13 +677,6 @@ types = [ "instant",]
 tags = [ "Flash - Interaction", "Tier 2", "Interaction",]
 set = "sth"
 
-[Negate]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Flash - Interaction", "Tier 3",]
-set = "m14"
-
 ["Peel from Reality"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -697,6 +690,13 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3", "Interaction",]
 set = "ths"
+
+["Calculated Dismissal"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Flash - Interaction",]
+set = "ori"
 
 [Dissolve]
 mana_cost = [ "1", "U", "U",]
@@ -837,13 +837,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Elves - Enabler", "Sacrifice - Enabler", "ETB - Enabler", "Tier 3",]
 set = "khm"
-
-["Ghastly Gloomhunter"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Enabler", "Ninjutsu - Enabler",]
-set = "znr"
 
 ["Kalastria Highborn"]
 mana_cost = [ "B", "B",]
@@ -1227,7 +1220,7 @@ set = "hou"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", "Sacrifice - Enabler",]
+tags = [ "Tier 3", "Sacrifice - Enabler", "Interaction",]
 set = "thb"
 
 ["Chained Brute"]
@@ -1864,7 +1857,7 @@ set = "c14"
 mana_cost = [ "4", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", "Tokens - Payoff", "Tokens - Enabler", "Goreclaw - Payoff", "Power - Enabler", "Squirrels - Enabler", "Squirrels - Payoff",]
+tags = [ "Tier 3", "Tokens - Payoff", "Tokens - Enabler", "Goreclaw - Payoff", "Squirrels - Enabler", "Squirrels - Payoff",]
 set = "ust"
 
 ["Greenwarden of Murasa"]
@@ -1901,13 +1894,6 @@ color_identity = "G"
 types = [ "instant",]
 tags = [ "Tier 3", "Counters - Payoff", "Interaction", "Spells - Enabler", "Heroic - Enabler",]
 set = "rna"
-
-["Scatter the Seeds"]
-mana_cost = [ "3", "G", "G",]
-color_identity = "G"
-types = [ "instant",]
-tags = [ "Tokens - Enabler", "Tier 4", "Saprolings - Enabler",]
-set = "rav"
 
 ["Commune with the Gods"]
 mana_cost = [ "1", "G",]
@@ -2300,13 +2286,6 @@ color_identity = "WR"
 types = [ "enchantment", "creature",]
 tags = [ "Heroic - Payoff", "Tokens Aggro - Enabler", "Tokens Aggro - Payoff", "Tier 3",]
 set = "thb"
-
-["Jeskai Ascendancy"]
-mana_cost = [ "U", "R", "W",]
-color_identity = "RUW"
-types = [ "enchantment",]
-tags = [ "Spells - Payoff", "Tokens - Payoff", "Discard - Enabler", "Tokens Aggro - Payoff", "Tier 4",]
-set = "ktk"
 
 ["Metallic Mimic"]
 mana_cost = [ "2",]
