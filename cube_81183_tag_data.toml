@@ -1010,7 +1010,7 @@ set = "xln"
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "ETB - Payoff", "Legends - Enabler", "Sacrifice Outlet - Enabler", "Graveyard - Payoff", "Tier 4",]
+tags = [ "Legends - Enabler", "Sacrifice Outlet - Enabler", "Graveyard - Payoff", "Tier 4",]
 set = "dom"
 
 ["Bloodline Necromancer"]
@@ -1083,13 +1083,6 @@ types = [ "creature",]
 tags = [ "Graveyard - Payoff", "Discard - Payoff", "Goreclaw - Payoff", "Tier 2",]
 set = "c15"
 
-["Killing Glare"]
-mana_cost = [ "X", "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Tier 3", "Spells - Enabler", "Interaction",]
-set = "gtc"
-
 ["Necrotic Wound"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -1138,6 +1131,13 @@ color_identity = "B"
 types = [ "instant",]
 tags = [ "Graveyard - Payoff", "Tier 2", "Spells - Enabler", "Interaction",]
 set = "ktk"
+
+["Spark Harvest"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Interaction", "Tier 3", "Sacrifice Outlet - Enabler", "Sacrifice - Payoff",]
+set = "war"
 
 ["Feast of Blood"]
 mana_cost = [ "1", "B",]
@@ -1353,7 +1353,7 @@ set = "hou"
 mana_cost = [ "3", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Sacrifice - Payoff", "Tier 3", "Sacrifice Outlet - Enabler", "Power - Enabler", "Interaction",]
+tags = [ "Sacrifice - Payoff", "Tier 3", "Sacrifice Outlet - Enabler", "Power - Enabler",]
 set = "roe"
 
 ["Neheb, the Eternal"]
@@ -2035,19 +2035,19 @@ types = [ "creature",]
 tags = [ "ETB - Enabler", "Tier 3", "Interaction", "Card Advantage",]
 set = "gtc"
 
+["Slaughter-Priest of Mogis"]
+mana_cost = [ "B", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Tier 3", "Sacrifice - Payoff",]
+set = "thb"
+
 ["Tymaret, the Murder King"]
 mana_cost = [ "B", "R",]
 color_identity = "BR"
 types = [ "creature",]
 tags = [ "Tier 3", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Discard - Payoff", "Legends - Enabler",]
 set = "ths"
-
-["Judith, the Scourge Diva"]
-mana_cost = [ "1", "B", "R",]
-color_identity = "BR"
-types = [ "creature",]
-tags = [ "Legends - Enabler", "Sacrifice Outlet - Payoff", "Tier 3", "Tokens Aggro - Payoff", "Card Advantage",]
-set = "rna"
 
 ["Bloodhall Priest"]
 mana_cost = [ "2", "B", "R",]
