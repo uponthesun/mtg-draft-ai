@@ -1115,7 +1115,7 @@ set = "exo"
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
+tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
 set = "m14"
 
 ["Body Snatcher"]
@@ -1180,13 +1180,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Tier 2",]
 set = "ths"
-
-["He Who Hungers"]
-mana_cost = [ "4", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 4",]
-set = "chk"
 
 ["Kagemaro, First to Suffer"]
 mana_cost = [ "3", "B", "B",]
@@ -1300,13 +1293,6 @@ types = [ "instant",]
 tags = [ "Tier 3",]
 set = "lrw"
 
-["Vraska's Contempt"]
-mana_cost = [ "2", "B", "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "xln"
-
 ["Murderous Cut"]
 mana_cost = [ "4", "B",]
 color_identity = "B"
@@ -1405,13 +1391,6 @@ types = [ "enchantment",]
 tags = [ "Tier 3",]
 set = "zen"
 
-["Chime of Night"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "uds"
-
 [Mourning]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1419,11 +1398,18 @@ types = [ "enchantment",]
 tags = [ "Strategy - Control", "Tier 4",]
 set = "inv"
 
+["Rune of Mortality"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "Tier 3",]
+set = "khm"
+
 ["Casting of Bones"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Strategy - Control",]
+tags = [ "Tier 4",]
 set = "all"
 
 ["Bomat Courier"]
@@ -2056,13 +2042,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Control",]
 set = "rav"
 
-["Elder Pine of Jukai"]
-mana_cost = [ "2", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 4",]
-set = "sok"
-
 ["Eternal Witness"]
 mana_cost = [ "1", "G", "G",]
 color_identity = "G"
@@ -2125,13 +2104,6 @@ color_identity = "G"
 types = [ "enchantment", "creature",]
 tags = [ "Tier 3",]
 set = "jou"
-
-[Haru-Onna]
-mana_cost = [ "3", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 4",]
-set = "sok"
 
 ["Oracle of Mul Daya"]
 mana_cost = [ "3", "G",]
@@ -2308,13 +2280,6 @@ types = [ "enchantment",]
 tags = [ "Tier 4", "Project",]
 set = "usg"
 
-["Frog Tongue"]
-mana_cost = [ "G",]
-color_identity = "G"
-types = [ "enchantment",]
-tags = [ "Tier 4",]
-set = "tmp"
-
 ["Fists of Ironwood"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
@@ -2377,6 +2342,13 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Tier 0", "Strategy - Aggro",]
 set = "nem"
+
+["Khalni Garden"]
+mana_cost = []
+color_identity = "G"
+types = [ "land",]
+tags = [ "Tier 3",]
+set = "wwk"
 
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
@@ -2539,62 +2511,6 @@ types = [ "sorcery",]
 tags = [ "Tier 3",]
 set = "thb"
 
-["Darkheart Sliver"]
-mana_cost = [ "B", "G",]
-color_identity = "BG"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "plc"
-
-["Life // Death"]
-mana_cost = [ "G",]
-color_identity = "BG"
-types = [ "sorcery",]
-tags = [ "Tier 3",]
-set = "apc"
-
-["Varolz, the Scar-Striped"]
-mana_cost = [ "1", "B", "G",]
-color_identity = "BG"
-types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro",]
-set = "dgm"
-
-["Ongoing Investigation"]
-mana_cost = [ "1", "U",]
-color_identity = "GU"
-types = [ "enchantment",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "soi"
-
-["Zameck Guildmage"]
-mana_cost = [ "G", "U",]
-color_identity = "GU"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "gtc"
-
-[Snakeform]
-mana_cost = [ "2", "G", "/", "U",]
-color_identity = "GU"
-types = [ "instant",]
-tags = [ "Tier 3",]
-set = "eve"
-
-["Dormant Sliver"]
-mana_cost = [ "2", "G", "U",]
-color_identity = "GU"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "plc"
-
-["Tamiyo, Collector of Tales"]
-mana_cost = [ "2", "G", "U",]
-color_identity = "GU"
-types = [ "planeswalker",]
-tags = [ "Tier 3",]
-set = "war"
-
 ["Desperate Ravings"]
 mana_cost = [ "1", "R",]
 color_identity = "RU"
@@ -2630,6 +2546,27 @@ types = [ "creature",]
 tags = [ "Strategy - Control", "Tier 3",]
 set = "eve"
 
+["Darkheart Sliver"]
+mana_cost = [ "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "plc"
+
+["Life // Death"]
+mana_cost = [ "G",]
+color_identity = "BG"
+types = [ "sorcery",]
+tags = [ "Tier 3",]
+set = "apc"
+
+["Varolz, the Scar-Striped"]
+mana_cost = [ "1", "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Tier 2", "Strategy - Aggro",]
+set = "dgm"
+
 ["Boros Guildmage"]
 mana_cost = [ "R", "/", "W", "R", "/", "W",]
 color_identity = "RW"
@@ -2657,6 +2594,41 @@ color_identity = "RW"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "c19"
+
+["Ongoing Investigation"]
+mana_cost = [ "1", "U",]
+color_identity = "GU"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "soi"
+
+["Zameck Guildmage"]
+mana_cost = [ "G", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "gtc"
+
+[Snakeform]
+mana_cost = [ "2", "G", "/", "U",]
+color_identity = "GU"
+types = [ "instant",]
+tags = [ "Tier 3",]
+set = "eve"
+
+["Dormant Sliver"]
+mana_cost = [ "2", "G", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "plc"
+
+["Tamiyo, Collector of Tales"]
+mana_cost = [ "2", "G", "U",]
+color_identity = "GU"
+types = [ "planeswalker",]
+tags = [ "Tier 3",]
+set = "war"
 
 ["Beck // Call"]
 mana_cost = [ "G", "U",]
@@ -3057,6 +3029,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "wwk"
 
+["Flooded Strand"]
+mana_cost = []
+color_identity = "WU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ons"
+
 ["Glacial Fortress"]
 mana_cost = []
 color_identity = "UW"
@@ -3099,6 +3078,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "m10"
 
+["Polluted Delta"]
+mana_cost = []
+color_identity = "UB"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ons"
+
 ["Sunken Ruins"]
 mana_cost = []
 color_identity = "BU"
@@ -3126,6 +3112,13 @@ color_identity = "BR"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "dis"
+
+["Bloodstained Mire"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ons"
 
 ["Dragonskull Summit"]
 mana_cost = []
@@ -3190,6 +3183,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "ths"
 
+["Wooded Foothills"]
+mana_cost = []
+color_identity = "RG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ons"
+
 ["Stirring Wildwood"]
 mana_cost = []
 color_identity = "GW"
@@ -3217,6 +3217,13 @@ color_identity = "GW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "bng"
+
+["Windswept Heath"]
+mana_cost = []
+color_identity = "WG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ons"
 
 ["Wooded Bastion"]
 mana_cost = []
@@ -3246,6 +3253,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "isd"
 
+["Marsh Flats"]
+mana_cost = []
+color_identity = "WB"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "zen"
+
 ["Shambling Vent"]
 mana_cost = []
 color_identity = "BW"
@@ -3259,6 +3273,48 @@ color_identity = "BW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ths"
+
+["Cascade Bluffs"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "eve"
+
+["Scalding Tarn"]
+mana_cost = []
+color_identity = "UR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "zen"
+
+["Steam Vents"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "gpt"
+
+["Sulfur Falls"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "isd"
+
+["Temple of Epiphany"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "jou"
+
+["Wandering Fumarole"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ogw"
 
 ["Hissing Quagmire"]
 mana_cost = []
@@ -3288,6 +3344,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "eve"
 
+["Verdant Catacombs"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "zen"
+
 ["Woodland Cemetery"]
 mana_cost = []
 color_identity = "BG"
@@ -3295,75 +3358,12 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "isd"
 
-["Breeding Pool"]
+["Arid Mesa"]
 mana_cost = []
-color_identity = "GU"
+color_identity = "WR"
 types = [ "land",]
 tags = [ "Fixer",]
-set = "dis"
-
-["Flooded Grove"]
-mana_cost = []
-color_identity = "GU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "eve"
-
-["Hinterland Harbor"]
-mana_cost = []
-color_identity = "GU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "isd"
-
-["Lumbering Falls"]
-mana_cost = []
-color_identity = "GU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "bfz"
-
-["Temple of Mystery"]
-mana_cost = []
-color_identity = "GU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ths"
-
-["Cascade Bluffs"]
-mana_cost = []
-color_identity = "RU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "eve"
-
-["Steam Vents"]
-mana_cost = []
-color_identity = "RU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "gpt"
-
-["Sulfur Falls"]
-mana_cost = []
-color_identity = "RU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "isd"
-
-["Temple of Epiphany"]
-mana_cost = []
-color_identity = "RU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "jou"
-
-["Wandering Fumarole"]
-mana_cost = []
-color_identity = "RU"
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ogw"
+set = "zen"
 
 ["Clifftop Retreat"]
 mana_cost = []
@@ -3400,12 +3400,47 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "ths"
 
-["Arid Mesa"]
+["Breeding Pool"]
 mana_cost = []
-color_identity = ""
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "dis"
+
+["Flooded Grove"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "eve"
+
+["Hinterland Harbor"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "isd"
+
+["Lumbering Falls"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
+["Misty Rainforest"]
+mana_cost = []
+color_identity = "UG"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "zen"
+
+["Temple of Mystery"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ths"
 
 ["Ash Barrens"]
 mana_cost = []
@@ -3413,34 +3448,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 2",]
 set = "c16"
-
-["Bloodstained Mire"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ons"
-
-["Flooded Strand"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ons"
-
-["Marsh Flats"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "zen"
-
-["Misty Rainforest"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "zen"
 
 ["Mouth of Ronom"]
 mana_cost = []
@@ -3453,7 +3460,7 @@ set = "csp"
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
+tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 1",]
 set = "mor"
 
 ["Nykthos, Shrine to Nyx"]
@@ -3470,20 +3477,6 @@ types = [ "land",]
 tags = [ "Tier 3",]
 set = "wc00"
 
-["Polluted Delta"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ons"
-
-["Scalding Tarn"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "zen"
-
 ["Scrying Sheets"]
 mana_cost = []
 color_identity = ""
@@ -3497,24 +3490,3 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 4",]
 set = "m15"
-
-["Verdant Catacombs"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "zen"
-
-["Windswept Heath"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ons"
-
-["Wooded Foothills"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer",]
-set = "ons"
