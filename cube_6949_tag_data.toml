@@ -2543,7 +2543,7 @@ set = "kld"
 mana_cost = [ "4", "U", "/", "R", "U", "/", "R",]
 color_identity = "RU"
 types = [ "creature",]
-tags = [ "Strategy - Control", "Tier 3",]
+tags = [ "Strategy - Control", "Tier 2",]
 set = "eve"
 
 ["Darkheart Sliver"]
