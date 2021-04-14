@@ -163,7 +163,7 @@ set = "plc"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Cuttable",]
 set = "jou"
 
 ["Academy Rector"]
@@ -184,7 +184,7 @@ set = "dst"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Cuttable",]
 set = "frf"
 
 ["Ranger of Eos"]
@@ -264,11 +264,18 @@ types = [ "instant",]
 tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control",]
 set = "con"
 
+["Brought Back"]
+mana_cost = [ "W", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 3",]
+set = "m20"
+
 ["Candles' Glow"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Cuttable",]
 set = "chk"
 
 ["Shining Shoal"]
@@ -410,13 +417,6 @@ color_identity = "W"
 types = [ "enchantment",]
 tags = [ "Strategy - Aggro", "Tier 1",]
 set = "sok"
-
-["Promise of Tomorrow"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "enchantment",]
-tags = [ "Tier 3",]
-set = "cmr"
 
 ["Cast Out"]
 mana_cost = [ "3", "W",]
@@ -669,13 +669,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 4",]
 set = "tsp"
-
-["Relentless Skaabs"]
-mana_cost = [ "3", "U", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "dka"
 
 ["River Kelpie"]
 mana_cost = [ "3", "U", "U",]
@@ -943,6 +936,13 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "m15"
 
+["Rune of Flight"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
+set = "khm"
+
 ["Carrion Feeder"]
 mana_cost = [ "B",]
 color_identity = "B"
@@ -968,7 +968,7 @@ set = "m11"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Cuttable",]
 set = "chk"
 
 ["Asylum Visitor"]
@@ -1202,19 +1202,19 @@ types = [ "creature",]
 tags = [ "Tier 2",]
 set = "con"
 
-["Razaketh, the Foulblooded"]
-mana_cost = [ "5", "B", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "hou"
-
 ["Rune-Scarred Demon"]
 mana_cost = [ "5", "B", "B",]
 color_identity = "B"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "m12"
+
+["Razaketh, the Foulblooded"]
+mana_cost = [ "5", "B", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "hou"
 
 ["Slaughter Pact"]
 mana_cost = [ "0",]
@@ -1342,6 +1342,13 @@ types = [ "sorcery",]
 tags = [ "Tier 3",]
 set = "usg"
 
+["Blood for Bones"]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 3",]
+set = "m20"
+
 [Damnation]
 mana_cost = [ "2", "B", "B",]
 color_identity = "B"
@@ -1355,13 +1362,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 2",]
 set = "tsp"
-
-["Haunting Voyage"]
-mana_cost = [ "4", "B", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 3",]
-set = "khm"
 
 ["Malefic Scythe"]
 mana_cost = [ "1", "B",]
@@ -1397,13 +1397,6 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Strategy - Control", "Tier 4",]
 set = "inv"
-
-["Rune of Mortality"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Tier 3",]
-set = "khm"
 
 ["Casting of Bones"]
 mana_cost = [ "2", "B",]
@@ -1664,6 +1657,13 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "mor"
 
+["Chancellor of the Forge"]
+mana_cost = [ "4", "R", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 4", "Project",]
+set = "nph"
+
 ["Bogardan Hellkite"]
 mana_cost = [ "6", "R", "R",]
 color_identity = "R"
@@ -1677,13 +1677,6 @@ color_identity = "R"
 types = [ "artifact", "creature",]
 tags = [ "Tier 3",]
 set = "mrd"
-
-["Chancellor of the Forge"]
-mana_cost = [ "4", "R", "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Tier 4", "Project",]
-set = "nph"
 
 ["Greater Gargadon"]
 mana_cost = [ "9", "R",]
@@ -1927,7 +1920,7 @@ set = "chk"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Cuttable",]
 set = "chk"
 
 ["Elvish Visionary"]
@@ -2798,6 +2791,27 @@ types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "tsp"
 
+["Chimeric Mass"]
+mana_cost = [ "X",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "som"
+
+["Everflowing Chalice"]
+mana_cost = [ "0",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 2", "Strategy - Control",]
+set = "wwk"
+
+["Paradise Mantle"]
+mana_cost = [ "0",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3",]
+set = "5dn"
+
 ["Adventuring Gear"]
 mana_cost = [ "1",]
 color_identity = ""
@@ -2826,26 +2840,12 @@ types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "m11"
 
-["Chimeric Mass"]
-mana_cost = [ "X",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "som"
-
 ["Codex Shredder"]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 3",]
 set = "rtr"
-
-["Everflowing Chalice"]
-mana_cost = [ "0",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 2", "Strategy - Control",]
-set = "wwk"
 
 ["Explorer's Scope"]
 mana_cost = [ "1",]
@@ -2860,13 +2860,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "dst"
-
-["Paradise Mantle"]
-mana_cost = [ "0",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 3",]
-set = "5dn"
 
 ["Sensei's Divining Top"]
 mana_cost = [ "1",]
@@ -3448,6 +3441,13 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 2",]
 set = "c16"
+
+["High Market"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 3",]
+set = "mmq"
 
 ["Mouth of Ronom"]
 mana_cost = []

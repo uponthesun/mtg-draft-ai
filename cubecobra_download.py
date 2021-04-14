@@ -10,7 +10,7 @@ data_file_name = sys.argv[2]
 with open(data_file_name, 'r') as f:
     CURRENT_DATA = toml.load(f)
 
-url = 'https://cubecobra.com/cube/download/csv/{}?primary=Color%20Category&secondary=Types-Multicolor&tertiary=CMC2'
+url = 'http://cubecobra.com/cube/download/csv/{}?primary=Color%20Category&secondary=Types-Multicolor&tertiary=Mana%20Value&quaternary=Alphabetical'
 response = requests.get(url.format(cube_id))
 lines = [row for row in response.content.decode('utf-8').split('\r\n') if len(row) > 0]
 reader = csv.reader(lines)
