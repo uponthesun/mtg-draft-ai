@@ -1,0 +1,3268 @@
+["Alseid of Life's Bounty"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "enchantment", "creature",]
+tags = [ "Removal Interaction",]
+set = "thb"
+
+["Giant Killer"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Removal",]
+set = "eld"
+
+["Student of Warfare"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "roe"
+
+["Weathered Wayfarer"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "ons"
+
+["Containment Priest"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "m21"
+
+["Jötun Grunt"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Sideboard", "Graveyard Interaction",]
+set = "csp"
+
+["Knight of the White Orchid"]
+mana_cost = [ "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "ala"
+
+["Leonin Arbiter"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Sideboard",]
+set = "som"
+
+["Leonin Lightscribe"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "stx"
+
+["Leonin Relic-Warder"]
+mana_cost = [ "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Enchantment Interaction",]
+set = "mbs"
+
+["Luminarch Aspirant"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "znr"
+
+["Professor of Symbology"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Seasoned Hallowblade"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "m21"
+
+["Selfless Spirit"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Removal Interaction", "Anti-Sweeper",]
+set = "emn"
+
+["Tithe Taker"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Anti-Counterspell",]
+set = "rna"
+
+["Vizier of Remedies"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Combo",]
+set = "akh"
+
+["Wall of Omens"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "roe"
+
+["Bygone Bishop"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "soi"
+
+["Elite Spellbinder"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Hand Interaction",]
+set = "stx"
+
+[Flickerwisp]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "eve"
+
+["Heliod, Sun-Crowned"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "enchantment", "creature",]
+tags = [ "Combo",]
+set = "thb"
+
+["Hushwing Gryff"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Sideboard", "Flash Threat", "Card Advantage",]
+set = "m15"
+
+["Mangara of Corondor"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Removal",]
+set = "tsp"
+
+["Monastery Mentor"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "plist"
+
+["Ranger-Captain of Eos"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Anti-Counterspell", "Card Advantage", "Anti-Sweeper",]
+set = "mh1"
+
+["Skyclave Apparition"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction", "Card Advantage",]
+set = "znr"
+
+["Glimmerpoint Stag"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "som"
+
+["Halvar, God of Battle"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Removal Interaction", "Card Advantage",]
+set = "khm"
+
+["Ojutai Exemplars"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "dtk"
+
+["Ranger of Eos"]
+mana_cost = [ "3", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "ala"
+
+["Restoration Angel"]
+mana_cost = [ "3", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "avr"
+
+["Archangel Avacyn"]
+mana_cost = [ "3", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "soi"
+
+["Baneslayer Angel"]
+mana_cost = [ "3", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Sideboard",]
+set = "m10"
+
+["Karmic Guide"]
+mana_cost = [ "3", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "ulg"
+
+["Sun Titan"]
+mana_cost = [ "4", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "m11"
+
+["Angel of Glory's Rise"]
+mana_cost = [ "5", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Combo", "Graveyard", "Card Advantage",]
+set = "avr"
+
+["Ajani, Adversary of Tyrants"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "planeswalker",]
+tags = [ "Card Advantage",]
+set = "m19"
+
+[Ephemerate]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal Interaction", "Card Advantage",]
+set = "mh1"
+
+["Fight as One"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal Interaction", "Card Advantage",]
+set = "iko"
+
+["Harm's Way"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "m10"
+
+["Mana Tithe"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "plc"
+
+["Path to Exile"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "con"
+
+["Swords to Plowshares"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "4ed"
+
+[Tithe]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Card Advantage",]
+set = "vis"
+
+["Judge Unworthy"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "fut"
+
+["Unexpectedly Absent"]
+mana_cost = [ "X", "W", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction",]
+set = "c13"
+
+["Prismatic Strands"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Sideboard", "Graveyard", "Removal Interaction", "Card Advantage",]
+set = "jud"
+
+["Settle the Wreckage"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Sweeper", "Card Advantage",]
+set = "xln"
+
+[Oust]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "roe"
+
+["Academic Probation"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Sideboard",]
+set = "stx"
+
+["Declaration in Stone"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "soi"
+
+["Reduce to Memory"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction",]
+set = "stx"
+
+["Sevinne's Reclamation"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "c19"
+
+[Doomskar]
+mana_cost = [ "3", "W", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Sweeper", "Card Advantage",]
+set = "khm"
+
+["Legion's Landing"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "xln"
+
+["Seal Away"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "",]
+set = "dom"
+
+["Parallax Wave"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Removal",]
+set = "plist"
+
+["Windbrisk Heights"]
+mana_cost = []
+color_identity = "W"
+types = [ "land",]
+tags = [ "Card Advantage",]
+set = "lrw"
+
+["Delver of Secrets"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "isd"
+
+["Frost Augur"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "snow", "creature",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Alrund, God of the Cosmos"]
+mana_cost = [ "3", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Augur of Bolas"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "m13"
+
+["Fae of Wishes"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Merfolk Trickster"]
+mana_cost = [ "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Flash Threat",]
+set = "dom"
+
+["Phantasmal Image"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "m12"
+
+["Spellstutter Sprite"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Counterspell", "Flash Threat",]
+set = "lrw"
+
+["Thassa's Oracle"]
+mana_cost = [ "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Combo",]
+set = "thb"
+
+["Brazen Borrower"]
+mana_cost = [ "1", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Flash Threat", "Bounce",]
+set = "eld"
+
+["Champion of Wits"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage", "Graveyard",]
+set = "hou"
+
+["Cosima, God of the Voyage"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Emry, Lurker of the Loch"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "eld"
+
+["Gadwick, the Wizened"]
+mana_cost = [ "X", "U", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Vendilion Clique"]
+mana_cost = [ "1", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Hand Interaction", "Flash Threat",]
+set = "mor"
+
+["Master of Winds"]
+mana_cost = [ "2", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "znr"
+
+["Niblis of Frost"]
+mana_cost = [ "2", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "emn"
+
+["Ninja of the Deep Hours"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "bok"
+
+["Venser, Shaper Savant"]
+mana_cost = [ "2", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Counterspell", "Flash Threat", "Bounce",]
+set = "fut"
+
+["Vizier of Many Faces"]
+mana_cost = [ "2", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "akh"
+
+["Geralf's Masterpiece"]
+mana_cost = [ "3", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "soi"
+
+["Meloku the Clouded Mirror"]
+mana_cost = [ "4", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "chk"
+
+["Stormwing Entity"]
+mana_cost = [ "3", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "m21"
+
+["Teferi, Mage of Zhalfir"]
+mana_cost = [ "2", "U", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "tsp"
+
+["Ethereal Forager"]
+mana_cost = [ "4", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "c20"
+
+["Frost Titan"]
+mana_cost = [ "4", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "m11"
+
+["Elder Deep-Fiend"]
+mana_cost = [ "8",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "",]
+set = "emn"
+
+["Jace, Wielder of Mysteries"]
+mana_cost = [ "1", "U", "U", "U",]
+color_identity = "U"
+types = [ "planeswalker",]
+tags = [ "Card Advantage",]
+set = "war"
+
+[Brainstorm]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "",]
+set = "mmq"
+
+[Miscast]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Anti-Counterspell",]
+set = "m21"
+
+["Spell Snare"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "dis"
+
+["Thought Scour"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "",]
+set = "dka"
+
+["Vapor Snag"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Removal Interaction", "Bounce",]
+set = "nph"
+
+["Arcane Denial"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "all"
+
+[Censor]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "akh"
+
+[Deprive]
+mana_cost = [ "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "roe"
+
+["Into the Roil"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Bounce",]
+set = "zen"
+
+["Logic Knot"]
+mana_cost = [ "X", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "fut"
+
+["Memory Lapse"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "mir"
+
+[Negate]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "m10"
+
+[Predict]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "",]
+set = "ody"
+
+[Remand]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "rav"
+
+["Divide by Zero"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell", "Bounce",]
+set = "stx"
+
+["Saw It Coming"]
+mana_cost = [ "1", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "khm"
+
+["Commit // Memory"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Graveyard", "Counterspell", "Removal",]
+set = "akh"
+
+["Cryptic Command"]
+mana_cost = [ "1", "U", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Counterspell", "Bounce", "Card Advantage",]
+set = "lrw"
+
+["Hieroglyphic Illumination"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Card Advantage",]
+set = "c20"
+
+[Gush]
+mana_cost = [ "4", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Card Advantage",]
+set = "mmq"
+
+["Dig Through Time"]
+mana_cost = [ "6", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "ktk"
+
+[Ponder]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "",]
+set = "lrw"
+
+["Silent Departure"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Bounce",]
+set = "isd"
+
+["Chart a Course"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "jmp"
+
+["Of One Mind"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "iko"
+
+["Teachings of the Archaics"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "",]
+set = "stx"
+
+["Time Warp"]
+mana_cost = [ "3", "U", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Combo",]
+set = "tmp"
+
+["Alrund's Epiphany"]
+mana_cost = [ "5", "U", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Midnight Clock"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Curious Obsession"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "rix"
+
+["Search for Azcanta"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "xln"
+
+["The Mirari Conjecture"]
+mana_cost = [ "4", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "dom"
+
+["Shark Typhoon"]
+mana_cost = [ "5", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "iko"
+
+["Riptide Laboratory"]
+mana_cost = []
+color_identity = "U"
+types = [ "land",]
+tags = [ "Card Advantage",]
+set = "ons"
+
+["Carrion Feeder"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "scg"
+
+[Eyetwitch]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "stx"
+
+[Gravecrawler]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "dka"
+
+["Knight of the Ebon Legion"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "m20"
+
+["Stitcher's Supplier"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "m19"
+
+["Viscera Seer"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Combo Sac Outlet",]
+set = "m11"
+
+["Dark Confidant"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "rav"
+
+["Glint-Sleeve Siphoner"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "aer"
+
+["Heir of Falkenrath"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "soi"
+
+["Kitesail Freebooter"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Hand Interaction",]
+set = "m21"
+
+["Nantuko Shade"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "tor"
+
+["Order of Midnight"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "eld"
+
+["Skirsdag High Priest"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "isd"
+
+["Skyclave Shade"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "znr"
+
+["Flesh Carver"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "c14"
+
+["Liliana, Heretical Healer"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "ori"
+
+["Nether Spirit"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "mmq"
+
+["Plague Engineer"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage",]
+set = "mh1"
+
+["Woe Strider"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard", "Combo Sac Outlet", "Card Advantage",]
+set = "thb"
+
+["Yahenni, Undying Partisan"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Combo Sac Outlet",]
+set = "aer"
+
+["Inverter of Truth"]
+mana_cost = [ "2", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Combo",]
+set = "ogw"
+
+["Mindwrack Demon"]
+mana_cost = [ "2", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "soi"
+
+["Rankle, Master of Pranks"]
+mana_cost = [ "2", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Doom Whisperer"]
+mana_cost = [ "3", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "grn"
+
+["Phyrexian Plaguelord"]
+mana_cost = [ "3", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Removal", "Combo Sac Outlet",]
+set = "ulg"
+
+["Puppeteer Clique"]
+mana_cost = [ "3", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard Interaction", "Card Advantage", "Graveyard",]
+set = "shm"
+
+["Sidisi, Undead Vizier"]
+mana_cost = [ "3", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "",]
+set = "dtk"
+
+["Burning-Rune Demon"]
+mana_cost = [ "4", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Soul of Innistrad"]
+mana_cost = [ "4", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "m15"
+
+["Gurmag Angler"]
+mana_cost = [ "6", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "frf"
+
+["Cling to Dust"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Graveyard Interaction", "Card Advantage",]
+set = "thb"
+
+[Disfigure]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "zen"
+
+[Entomb]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "",]
+set = "ody"
+
+["Fatal Push"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "aer"
+
+["Ghastly Demise"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "ody"
+
+["Tragic Slip"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "dka"
+
+["Village Rites"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "",]
+set = "m21"
+
+["Bile Blight"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "bng"
+
+["Heartless Act"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "iko"
+
+["Murderous Rider"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal", "Card Advantage",]
+set = "eld"
+
+["Poison the Cup"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "khm"
+
+["Baleful Mastery"]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "stx"
+
+["Murderous Cut"]
+mana_cost = [ "4", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Removal", "Graveyard",]
+set = "plist"
+
+["Bloodchief's Thirst"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "znr"
+
+["Cabal Therapy"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Hand Interaction",]
+set = "jud"
+
+[Duress]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Sideboard", "Hand Interaction",]
+set = "usg"
+
+[Reanimate]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "",]
+set = "tmp"
+
+[Thoughtseize]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Hand Interaction",]
+set = "lrw"
+
+[Unearth]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Graveyard",]
+set = "ulg"
+
+["Collective Brutality"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Removal", "Hand Interaction",]
+set = "emn"
+
+["Feed the Swarm"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Removal", "Enchantment Interaction",]
+set = "znr"
+
+["Necrotic Fumes"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "stx"
+
+["Extinction Event"]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Sweeper", "Card Advantage",]
+set = "iko"
+
+["Egon, God of Death"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "artifact",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "khm"
+
+["Poet's Quill"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Animate Dead"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "",]
+set = "4ed"
+
+[Bitterblossom]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "tribal", "enchantment",]
+tags = [ "Card Advantage",]
+set = "mor"
+
+["Oath of Ghouls"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "exo"
+
+["Diabolic Servitude"]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "",]
+set = "usg"
+
+["Castle Locthwain"]
+mana_cost = []
+color_identity = "B"
+types = [ "land",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Dragonmaster Outcast"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "bfz"
+
+["Goblin Welder"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "ulg"
+
+["Grim Lavamancer"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard", "Removal", "Card Advantage",]
+set = "tor"
+
+["Monastery Swiftspear"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "ktk"
+
+["Conspiracy Theorist"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Dire Fleet Daredevil"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard Interaction", "Card Advantage",]
+set = "rix"
+
+["Dismissive Pyromancer"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "m19"
+
+["Dreadhorde Arcanist"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "war"
+
+["Embereth Shieldbreaker"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Sideboard", "Artifact Interaction", "Card Advantage",]
+set = "eld"
+
+["Goblin Cratermaker"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Sideboard", "Removal", "Artifact Interaction",]
+set = "grn"
+
+["Goblin Engineer"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "mh1"
+
+["Krark, the Thumbless"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "cmr"
+
+["Magmatic Channeler"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "znr"
+
+["Robber of the Rich"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "eld"
+
+["Young Pyromancer"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "m14"
+
+["Anje's Ravager"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "c19"
+
+["Bogardan Dragonheart"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Combo Sac Outlet",]
+set = "mh1"
+
+["Dualcaster Mage"]
+mana_cost = [ "1", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "c14"
+
+["Flamewake Phoenix"]
+mana_cost = [ "1", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "frf"
+
+["Irencrag Pyromancer"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage",]
+set = "eld"
+
+["Irreverent Revelers"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Sideboard", "Card Advantage",]
+set = "thb"
+
+["Pia Nalaar"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "kld"
+
+["Squee, Goblin Nabob"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "10e"
+
+["Arclight Phoenix"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "grn"
+
+["Heart-Piercer Manticore"]
+mana_cost = [ "2", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard", "Removal", "Card Advantage",]
+set = "akh"
+
+["Rowdy Crew"]
+mana_cost = [ "2", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "xln"
+
+[Arc-Slogger]
+mana_cost = [ "3", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage",]
+set = "mrd"
+
+["Furystoke Giant"]
+mana_cost = [ "3", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Card Advantage", "Graveyard",]
+set = "shm"
+
+["Goldspan Dragon"]
+mana_cost = [ "3", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "",]
+set = "khm"
+
+["Ox of Agonas"]
+mana_cost = [ "3", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "thb"
+
+["Siege-Gang Commander"]
+mana_cost = [ "3", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage",]
+set = "scg"
+
+["Academic Dispute"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "",]
+set = "stx"
+
+["Fiery Impulse"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "ori"
+
+["Lava Dart"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "",]
+set = "jud"
+
+["Magma Spray"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "ala"
+
+["Reckless Rage"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "rix"
+
+[Skred]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "csp"
+
+[Abrade]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Artifact Interaction", "Removal",]
+set = "hou"
+
+["Fire Prophecy"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "iko"
+
+["Shredded Sails"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Artifact Interaction", "Removal",]
+set = "iko"
+
+[Starstorm]
+mana_cost = [ "X", "R", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Sweeper", "Card Advantage",]
+set = "ons"
+
+["Thrill of Possibility"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "",]
+set = "eld"
+
+["Blast from the Past"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal", "Card Advantage",]
+set = "unh"
+
+["Magmatic Sinkhole"]
+mana_cost = [ "5", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Graveyard", "Removal",]
+set = "mh1"
+
+[Conflagrate]
+mana_cost = [ "X", "X", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "",]
+set = "tsp"
+
+["Crash Through"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "",]
+set = "hou"
+
+["Faithless Looting"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "",]
+set = "dka"
+
+["Cleansing Wildfire"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Sideboard",]
+set = "znr"
+
+["Lava Coil"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "grn"
+
+[Roast]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "dtk"
+
+["Collective Defiance"]
+mana_cost = [ "1", "R", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "emn"
+
+[Demonfire]
+mana_cost = [ "X", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Anti-Counterspell", "Removal",]
+set = "dis"
+
+["Igneous Inspiration"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "stx"
+
+["Nahiri's Wrath"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Sweeper",]
+set = "emn"
+
+["Start from Scratch"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Artifact Interaction",]
+set = "stx"
+
+["Finale of Promise"]
+mana_cost = [ "X", "R", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "Graveyard",]
+set = "war"
+
+["Goblin Bombardment"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Combo Sac Outlet",]
+set = "tmp"
+
+["The Akroan War"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Removal",]
+set = "thb"
+
+["Allosaurus Shepherd"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Sideboard", "Anti-Counterspell",]
+set = "jmp"
+
+["Birds of Paradise"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "rav"
+
+["Llanowar Elves"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "6ed"
+
+["Nimble Mongoose"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "ody"
+
+["Noble Hierarch"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "con"
+
+["Ulvenwald Tracker"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Removal",]
+set = "avr"
+
+["Channeler Initiate"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "akh"
+
+["Devoted Druid"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Combo",]
+set = "shm"
+
+["Dragonsguard Elite"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "stx"
+
+["Dryad Greenseeker"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "m19"
+
+["Duskwatch Recruiter"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "soi"
+
+["Jolrael, Mwonvuli Recluse"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "m21"
+
+["Kraul Harpooner"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage", "Sideboard",]
+set = "grn"
+
+["Lambholt Pacifist"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "soi"
+
+["Melira, Sylvok Outcast"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Combo",]
+set = "nph"
+
+["Paradise Druid"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "war"
+
+["Scavenging Ooze"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard Interaction",]
+set = "cmd"
+
+["Sylvan Advocate"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "ddu"
+
+["Wall of Blossoms"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "sth"
+
+["Wall of Roots"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "mir"
+
+["Wildborn Preserver"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Flash Threat",]
+set = "eld"
+
+["Courser of Kruphix"]
+mana_cost = [ "1", "G", "G",]
+color_identity = "G"
+types = [ "enchantment", "creature",]
+tags = [ "Card Advantage",]
+set = "bng"
+
+["Deathgorge Scavenger"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Sideboard", "Graveyard Interaction",]
+set = "xln"
+
+["Den Protector"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "dtk"
+
+["Eternal Witness"]
+mana_cost = [ "1", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "5dn"
+
+["Reclamation Sage"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Enchantment Interaction", "Card Advantage",]
+set = "m15"
+
+["Thrashing Brontodon"]
+mana_cost = [ "1", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Enchantment Interaction",]
+set = "rix"
+
+["Gnarled Professor"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Masked Admirers"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "lrw"
+
+["Temur Sabertooth"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage", "Removal Interaction",]
+set = "frf"
+
+["Toski, Bearer of Secrets"]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Anti-Counterspell", "Card Advantage",]
+set = "khm"
+
+[Vengevine]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "roe"
+
+["Yeva, Nature's Herald"]
+mana_cost = [ "2", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Flash Threat",]
+set = "m13"
+
+["Acidic Slime"]
+mana_cost = [ "3", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Enchantment Interaction", "Card Advantage",]
+set = "m13"
+
+["Verdurous Gearhulk"]
+mana_cost = [ "3", "G", "G",]
+color_identity = "G"
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "kld"
+
+["Hooting Mandrills"]
+mana_cost = [ "5", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "ktk"
+
+["Krosan Tusker"]
+mana_cost = [ "5", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "ons"
+
+["Vivien, Champion of the Wilds"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "planeswalker",]
+tags = [ "Card Advantage", "Flash Threat",]
+set = "war"
+
+["Blossoming Defense"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Removal Interaction",]
+set = "kld"
+
+["Inscription of Abundance"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "znr"
+
+[Wilt]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Artifact Interaction", "Enchantment Interaction",]
+set = "iko"
+
+["Collected Company"]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Flash Threat", "Card Advantage",]
+set = "dtk"
+
+["Abundant Harvest"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "",]
+set = "sta"
+
+["Savage Swipe"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Removal",]
+set = "mh1"
+
+["Traverse the Ulvenwald"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Graveyard",]
+set = "soi"
+
+[Explore]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "",]
+set = "wwk"
+
+["Life from the Loam"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "rav"
+
+["Nylea's Intervention"]
+mana_cost = [ "X", "G", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Removal", "Card Advantage",]
+set = "thb"
+
+["Containment Breach"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Artifact Interaction", "Enchantment Interaction",]
+set = "stx"
+
+["Ecological Appreciation"]
+mana_cost = [ "X", "2", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Field Trip"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Kodama's Reach"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "chk"
+
+["Search for Tomorrow"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "",]
+set = "tsp"
+
+["Nissa's Renewal"]
+mana_cost = [ "5", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "znc"
+
+["Seasons Past"]
+mana_cost = [ "4", "G", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "soi"
+
+["Vivien's Arkbow"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "artifact",]
+tags = [ "Flash Threat",]
+set = "war"
+
+["Birthing Pod"]
+mana_cost = [ "3", "G", "/", "P",]
+color_identity = "G"
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "nph"
+
+["Evolutionary Leap"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "Card Advantage", "Removal Interaction",]
+set = "ori"
+
+["Survival of the Fittest"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "",]
+set = "exo"
+
+["Sylvan Library"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "4ed"
+
+["Wilderness Reclamation"]
+mana_cost = [ "3", "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "rna"
+
+["Azorius Charm"]
+mana_cost = [ "W", "U",]
+color_identity = "UW"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "rtr"
+
+["Mistmeadow Witch"]
+mana_cost = [ "1", "W", "/", "U",]
+color_identity = "UW"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "shm"
+
+["Spell Queller"]
+mana_cost = [ "1", "W", "U",]
+color_identity = "UW"
+types = [ "creature",]
+tags = [ "Counterspell", "Flash Threat", "Card Advantage",]
+set = "emn"
+
+["Ojutai's Command"]
+mana_cost = [ "2", "W", "U",]
+color_identity = "UW"
+types = [ "instant",]
+tags = [ "Counterspell",]
+set = "dtk"
+
+["Sky Hussar"]
+mana_cost = [ "3", "W", "U",]
+color_identity = "UW"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "dis"
+
+["Drown in the Loch"]
+mana_cost = [ "U", "B",]
+color_identity = "BU"
+types = [ "instant",]
+tags = [ "Removal", "Counterspell",]
+set = "eld"
+
+["Fathom Feeder"]
+mana_cost = [ "U", "B",]
+color_identity = "BU"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "bfz"
+
+["Bane Alley Broker"]
+mana_cost = [ "1", "U", "B",]
+color_identity = "BU"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "gtc"
+
+["The Scarab God"]
+mana_cost = [ "3", "U", "B",]
+color_identity = "BU"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "hou"
+
+["Gyruda, Doom of Depths"]
+mana_cost = [ "4", "U", "/", "B", "U", "/", "B",]
+color_identity = "BU"
+types = [ "creature",]
+tags = [ "",]
+set = "iko"
+
+["Valki, God of Lies"]
+mana_cost = [ "1", "B",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Hand Interaction", "Card Advantage", "Removal", "Artifact Interaction",]
+set = "khm"
+
+["Azra Oddsmaker"]
+mana_cost = [ "1", "B", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "bbd"
+
+["Kolaghan's Command"]
+mana_cost = [ "1", "B", "R",]
+color_identity = "BR"
+types = [ "instant",]
+tags = [ "Artifact Interaction", "Removal", "Card Advantage",]
+set = "dtk"
+
+["Cut // Ribbons"]
+mana_cost = [ "1", "R",]
+color_identity = "BR"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Removal",]
+set = "plist"
+
+["Immersturm Predator"]
+mana_cost = [ "2", "B", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Combo Sac Outlet", "Graveyard Interaction",]
+set = "khm"
+
+["Murderous Redcap"]
+mana_cost = [ "2", "B", "/", "R", "B", "/", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Combo", "Card Advantage", "Graveyard",]
+set = "shm"
+
+["Sarkhan the Mad"]
+mana_cost = [ "3", "B", "R",]
+color_identity = "BR"
+types = [ "planeswalker",]
+tags = [ "Card Advantage",]
+set = "roe"
+
+["Guttural Response"]
+mana_cost = [ "R", "/", "G",]
+color_identity = "GR"
+types = [ "instant",]
+tags = [ "Anti-Counterspell",]
+set = "shm"
+
+["Artifact Mutation"]
+mana_cost = [ "R", "G",]
+color_identity = "GR"
+types = [ "instant",]
+tags = [ "Artifact Interaction", "Sideboard", "Card Advantage",]
+set = "inv"
+
+["Reap the Past"]
+mana_cost = [ "X", "R", "G",]
+color_identity = "GR"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "mh1"
+
+["Heaven // Earth"]
+mana_cost = [ "X", "G",]
+color_identity = "GR"
+types = [ "instant",]
+tags = [ "Graveyard", "Sweeper", "Card Advantage",]
+set = "akh"
+
+["Collision // Colossus"]
+mana_cost = [ "1", "R", "/", "G",]
+color_identity = "GR"
+types = [ "instant",]
+tags = [ "Removal", "Sideboard",]
+set = "rna"
+
+["Huntmaster of the Fells"]
+mana_cost = [ "2", "R", "G",]
+color_identity = "GR"
+types = [ "creature",]
+tags = [ "Removal", "Card Advantage",]
+set = "dka"
+
+["Struggle // Survive"]
+mana_cost = [ "2", "R",]
+color_identity = "GR"
+types = [ "instant",]
+tags = [ "Graveyard Interaction",]
+set = "hou"
+
+["Gavony Township"]
+mana_cost = []
+color_identity = "WG"
+types = [ "land",]
+tags = [ "Card Advantage",]
+set = "isd"
+
+["Qasali Pridemage"]
+mana_cost = [ "G", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "Artifact Interaction", "Enchantment Interaction",]
+set = "arb"
+
+["Saffi Eriksdotter"]
+mana_cost = [ "G", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "Combo", "Removal Interaction",]
+set = "tsp"
+
+["Kitchen Finks"]
+mana_cost = [ "1", "G", "/", "W", "G", "/", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "Combo", "Graveyard", "Card Advantage",]
+set = "shm"
+
+["Renegade Rallier"]
+mana_cost = [ "1", "G", "W",]
+color_identity = "GW"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "aer"
+
+["Mirari's Wake"]
+mana_cost = [ "3", "G", "W",]
+color_identity = "GW"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "jud"
+
+["Cartel Aristocrat"]
+mana_cost = [ "W", "B",]
+color_identity = "BW"
+types = [ "creature",]
+tags = [ "Combo Sac Outlet",]
+set = "gtc"
+
+["Tidehollow Sculler"]
+mana_cost = [ "W", "B",]
+color_identity = "BW"
+types = [ "artifact", "creature",]
+tags = [ "Hand Interaction",]
+set = "ala"
+
+["Inkling Summoning"]
+mana_cost = [ "1", "W", "/", "B", "W", "/", "B",]
+color_identity = "BW"
+types = [ "sorcery",]
+tags = [ "",]
+set = "stx"
+
+["Lingering Souls"]
+mana_cost = [ "2", "W",]
+color_identity = "BW"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "dka"
+
+["Lurrus of the Dream-Den"]
+mana_cost = [ "1", "W", "/", "B", "W", "/", "B",]
+color_identity = "BW"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "iko"
+
+["Selfless Glyphweaver"]
+mana_cost = [ "2", "W",]
+color_identity = "BW"
+types = [ "creature",]
+tags = [ "Removal Interaction", "Sweeper", "Anti-Sweeper",]
+set = "stx"
+
+["Sin Collector"]
+mana_cost = [ "1", "W", "B",]
+color_identity = "BW"
+types = [ "creature",]
+tags = [ "Hand Interaction", "Card Advantage",]
+set = "dgm"
+
+["Expressive Iteration"]
+mana_cost = [ "U", "R",]
+color_identity = "RU"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Sprite Dragon"]
+mana_cost = [ "U", "R",]
+color_identity = "RU"
+types = [ "creature",]
+tags = [ "",]
+set = "iko"
+
+["Fire // Ice"]
+mana_cost = [ "1", "R",]
+color_identity = "RU"
+types = [ "instant",]
+tags = [ "Removal",]
+set = "apc"
+
+["Niv-Mizzet, Parun"]
+mana_cost = [ "U", "U", "U", "R", "R", "R",]
+color_identity = "RU"
+types = [ "creature",]
+tags = [ "Anti-Counterspell", "Card Advantage",]
+set = "grn"
+
+["Grim Flayer"]
+mana_cost = [ "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Graveyard",]
+set = "emn"
+
+["Lotleth Troll"]
+mana_cost = [ "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "",]
+set = "rtr"
+
+["Catacomb Sifter"]
+mana_cost = [ "1", "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "",]
+set = "bfz"
+
+["Pest Summoning"]
+mana_cost = [ "1", "B", "/", "G", "B", "/", "G",]
+color_identity = "BG"
+types = [ "sorcery",]
+tags = [ "",]
+set = "stx"
+
+["Ishkanah, Grafwidow"]
+mana_cost = [ "4", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "emn"
+
+["Find // Finality"]
+mana_cost = [ "B", "/", "G", "B", "/", "G",]
+color_identity = "BG"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Sweeper", "Card Advantage",]
+set = "grn"
+
+["Figure of Destiny"]
+mana_cost = [ "R", "/", "W",]
+color_identity = "RW"
+types = [ "creature",]
+tags = [ "",]
+set = "eve"
+
+["Flamescroll Celebrant"]
+mana_cost = [ "1", "R",]
+color_identity = "RW"
+types = [ "creature",]
+tags = [ "Anti-Counterspell",]
+set = "stx"
+
+["Rip Apart"]
+mana_cost = [ "R", "W",]
+color_identity = "RW"
+types = [ "sorcery",]
+tags = [ "Artifact Interaction", "Enchantment Interaction", "Removal",]
+set = "stx"
+
+["Deafening Clarion"]
+mana_cost = [ "1", "R", "W",]
+color_identity = "RW"
+types = [ "sorcery",]
+tags = [ "Sweeper", "Card Advantage",]
+set = "grn"
+
+["Nahiri, the Harbinger"]
+mana_cost = [ "2", "R", "W",]
+color_identity = "RW"
+types = [ "planeswalker",]
+tags = [ "Removal", "Enchantment Interaction", "Artifact Interaction",]
+set = "soi"
+
+["Reconstruct History"]
+mana_cost = [ "2", "R", "W",]
+color_identity = "RW"
+types = [ "sorcery",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "stx"
+
+["Showdown of the Skalds"]
+mana_cost = [ "2", "R", "W",]
+color_identity = "RW"
+types = [ "enchantment",]
+tags = [ "Card Advantage",]
+set = "khm"
+
+["Decisive Denial"]
+mana_cost = [ "G", "U",]
+color_identity = "GU"
+types = [ "instant",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction", "Counterspell",]
+set = "stx"
+
+["Growth Spiral"]
+mana_cost = [ "G", "U",]
+color_identity = "GU"
+types = [ "instant",]
+tags = [ "",]
+set = "rna"
+
+["Nissa, Steward of Elements"]
+mana_cost = [ "X", "G", "U",]
+color_identity = "GU"
+types = [ "planeswalker",]
+tags = [ "Card Advantage",]
+set = "akh"
+
+["Quandrix Apprentice"]
+mana_cost = [ "G", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "stx"
+
+["Wood Sage"]
+mana_cost = [ "G", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "",]
+set = "tmp"
+
+["Thopter Foundry"]
+mana_cost = [ "W", "/", "B", "U",]
+color_identity = "BUW"
+types = [ "artifact",]
+tags = [ "",]
+set = "arb"
+
+["Alesha, Who Smiles at Death"]
+mana_cost = [ "2", "R",]
+color_identity = "BRW"
+types = [ "creature",]
+tags = [ "",]
+set = "frf"
+
+["Mythos of Snapdax"]
+mana_cost = [ "2", "W", "W",]
+color_identity = "BRW"
+types = [ "sorcery",]
+tags = [ "Sweeper",]
+set = "iko"
+
+["Mythos of Nethroi"]
+mana_cost = [ "2", "B",]
+color_identity = "BGW"
+types = [ "instant",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction",]
+set = "iko"
+
+["Soulfire Grand Master"]
+mana_cost = [ "1", "W",]
+color_identity = "RUW"
+types = [ "creature",]
+tags = [ "Combo", "Card Advantage",]
+set = "frf"
+
+["Jeskai Ascendancy"]
+mana_cost = [ "U", "R", "W",]
+color_identity = "RUW"
+types = [ "enchantment",]
+tags = [ "",]
+set = "ktk"
+
+["Hangarback Walker"]
+mana_cost = [ "X", "X",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Card Advantage",]
+set = "ori"
+
+["Walking Ballista"]
+mana_cost = [ "X", "X",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Removal", "Combo", "Card Advantage",]
+set = "aer"
+
+["Arcbound Ravager"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "dst"
+
+["Phyrexian Revoker"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "mbs"
+
+[Spellskite]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Removal Interaction",]
+set = "nph"
+
+["Eternal Scourge"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "emn"
+
+["Crystalline Crawler"]
+mana_cost = [ "4",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "c16"
+
+["Emrakul, the Promised End"]
+mana_cost = [ "1", "3",]
+color_identity = ""
+types = [ "creature",]
+tags = [ "Graveyard", "Card Advantage",]
+set = "emn"
+
+["Environmental Sciences"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "sorcery",]
+tags = [ "",]
+set = "stx"
+
+["Introduction to Prophecy"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "sorcery",]
+tags = [ "Sideboard",]
+set = "stx"
+
+["Introduction to Annihilation"]
+mana_cost = [ "5",]
+color_identity = ""
+types = [ "sorcery",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction",]
+set = "stx"
+
+["Mascot Exhibition"]
+mana_cost = [ "7",]
+color_identity = ""
+types = [ "sorcery",]
+tags = [ "",]
+set = "stx"
+
+["Engineered Explosives"]
+mana_cost = [ "X",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Artifact Interaction", "Enchantment Interaction", "Sweeper", "Removal", "Card Advantage",]
+set = "5dn"
+
+["Mishra's Bauble"]
+mana_cost = [ "0",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "csp"
+
+["Aether Vial"]
+mana_cost = [ "1",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "dst"
+
+["Soul-Guide Lantern"]
+mana_cost = [ "1",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Sideboard", "Graveyard Interaction",]
+set = "thb"
+
+["Cranial Plating"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "5dn"
+
+["Smuggler's Copter"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "kld"
+
+["Spawning Pit"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Combo Sac Outlet", "Removal Interaction",]
+set = "dst"
+
+["Sword of the Animist"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "c17"
+
+["Sword of the Meek"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "",]
+set = "fut"
+
+["Treasure Map"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "xln"
+
+["Heirloom Blade"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Card Advantage", "Removal Interaction",]
+set = "znc"
+
+["Sword of Fire and Ice"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Removal", "Card Advantage",]
+set = "dst"
+
+["Adarkar Wastes"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "10e"
+
+["Celestial Colonnade"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "wwk"
+
+["Flood Plain"]
+mana_cost = []
+color_identity = "WU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "vma"
+
+["Irrigated Farmland"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
+["Mystic Gate"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Port Town"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "soi"
+
+["Bad River"]
+mana_cost = []
+color_identity = "UB"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "vma"
+
+["Choked Estuary"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "soi"
+
+["Creeping Tar Pit"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "wwk"
+
+["Fetid Pools"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
+["Sunken Ruins"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Underground River"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "10e"
+
+["Canyon Slough"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
+["Foreboding Ruins"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "soi"
+
+["Graven Cairns"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Lavaclaw Reaches"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "wwk"
+
+["Rocky Tar Pit"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "vma"
+
+["Sulfurous Springs"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "10e"
+
+["Fire-Lit Thicket"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Game Trail"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "soi"
+
+["Karplusan Forest"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "10e"
+
+["Mountain Valley"]
+mana_cost = []
+color_identity = "RG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "vma"
+
+["Raging Ravine"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "wwk"
+
+["Sheltered Thicket"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
+[Brushland]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "10e"
+
+["Fortified Village"]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "soi"
+
+[Grasslands]
+mana_cost = []
+color_identity = "WG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "vma"
+
+["Scattered Groves"]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "akh"
+
+["Stirring Wildwood"]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "wwk"
+
+["Wooded Bastion"]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Caves of Koilos"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "apc"
+
+["Fetid Heath"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Shambling Vent"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
+["Shineshadow Snarl"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "stx"
+
+["Temple of Silence"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "",]
+set = "ths"
+
+["Cascade Bluffs"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Frostboil Snarl"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "stx"
+
+["Shivan Reef"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "apc"
+
+["Temple of Epiphany"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "",]
+set = "jou"
+
+["Wandering Fumarole"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ogw"
+
+["Hissing Quagmire"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ogw"
+
+["Llanowar Wastes"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "apc"
+
+["Necroblossom Snarl"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "stx"
+
+["Temple of Malady"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "",]
+set = "jou"
+
+["Twilight Mire"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Battlefield Forge"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "apc"
+
+["Furycalm Snarl"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "stx"
+
+["Needle Spires"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "ogw"
+
+["Rugged Prairie"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Temple of Triumph"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "",]
+set = "ths"
+
+["Flooded Grove"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "2xm"
+
+["Lumbering Falls"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
+["Temple of Mystery"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "",]
+set = "ths"
+
+["Vineglimmer Snarl"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "stx"
+
+["Yavimaya Coast"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "apc"
+
+["Savai Triome"]
+mana_cost = []
+color_identity = "BRW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "iko"
+
+["Ketria Triome"]
+mana_cost = []
+color_identity = "GRU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "iko"
+
+["Indatha Triome"]
+mana_cost = []
+color_identity = "BGW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "iko"
+
+["Raugrin Triome"]
+mana_cost = []
+color_identity = "RUW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "iko"
+
+["Zagoth Triome"]
+mana_cost = []
+color_identity = "BGU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "iko"
+
+["Ash Barrens"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Fixer",]
+set = "c16"
+
+["Calciform Pools"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "tsp"
+
+["Cavern of Souls"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Anti-Counterspell",]
+set = "avr"
+
+["Crawling Barrens"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "znr"
+
+["Dreadship Reef"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "tsp"
+
+["Evolving Wilds"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Fixer",]
+set = "roe"
+
+["Fabled Passage"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Fixer",]
+set = "eld"
+
+["Field of Ruin"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "xln"
+
+["Fungal Reaches"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "tsp"
+
+["Ghost Quarter"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "dis"
+
+["Inkmoth Nexus"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "mbs"
+
+["Mishra's Factory"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "me1"
+
+["Molten Slagheap"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "tsp"
+
+["Prismatic Vista"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Fixer",]
+set = "mh1"
+
+["Rishadan Port"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "mmq"
+
+["Saltcrusted Steppe"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "tsp"
+
+["Tectonic Edge"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "wwk"
+
+["Terramorphic Expanse"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Fixer",]
+set = "tsp"
+
+["Westvale Abbey"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "soi"
