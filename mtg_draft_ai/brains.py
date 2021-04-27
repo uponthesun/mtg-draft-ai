@@ -133,7 +133,7 @@ class TwoColorComboRatingsPicker(Picker):
         raw_rating_components = []
 
         for color_combo in COLOR_PAIRS:
-            on_color_candidates = [c for c in pack if synergy.castable(c, color_combo)]
+            on_color_candidates = [c for c in pack if synergy.castable(c, color_combo) or fixes_for(c, color_combo)]
 
             for candidate in on_color_candidates:
                 rating_components = {cr.name(): cr.rate(candidate, color_combo, cards_owned, draft_info)
@@ -279,15 +279,13 @@ class FixingLandsRater(ComponentRater):
         if num_picks_made == 0:
             return 0
 
-        if not ('land' in card.types and card.fixer_color_id and self._same_colors(card.fixer_color_id, color_combo)):
+        if not fixes_for(card, color_combo):
             return 0
 
         num_oncolor_nonlands = len([c for c in cards_owned
                                     if synergy.castable(c, color_combo)
                                     if 'land' not in c.types])
-        num_oncolor_fixer_lands = len([c for c in cards_owned
-                                       if 'land' in c.types
-                                       if c.fixer_color_id == color_combo])
+        num_oncolor_fixer_lands = len([c for c in cards_owned if fixes_for(c, color_combo)])
 
         # Hand-tuned lower bound, no strong theoretical justification, but supported by intuition
         # that improving your mana always has value
@@ -302,10 +300,11 @@ class FixingLandsRater(ComponentRater):
     def normalize(self, value, all_values, color_combo, cards_owned):
         return value
 
-    # TODO: fix how we store color combos so this isn't needed
     @staticmethod
-    def _same_colors(color_combo_a, color_combo_b):
-        return set(color_combo_a) == set(color_combo_b)
+    def _fixes_for(card, color_combo):
+        if not ('land' in card.types and card.fixer_color_id):
+            return False
+        return set(color_combo).issubset(set(card.fixer_color_id))
 
 
 class SynergyPowerFixingPicker(TwoColorComboRatingsPicker):
@@ -391,3 +390,9 @@ def power_rating(card):
     if card.power_tier not in values_by_tier:
         raise ValueError('Undefined power tier: {}'.format(card.power_tier))
     return values_by_tier[card.power_tier]
+
+
+def fixes_for(card, color_combo):
+    if not ('land' in card.types and card.fixer_color_id):
+        return False
+    return set(color_combo).issubset(set(card.fixer_color_id))

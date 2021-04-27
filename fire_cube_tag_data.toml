@@ -579,13 +579,6 @@ types = [ "instant",]
 tags = [ "Interaction", "Aggro",]
 set = "akh"
 
-["Oona's Grace"]
-mana_cost = [ "2", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "",]
-set = "eve"
-
 ["Commit // Memory"]
 mana_cost = [ "3", "U",]
 color_identity = "U"
@@ -647,6 +640,13 @@ mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "enchantment",]
 tags = [ "Card Advantage",]
+set = "thb"
+
+["Omen of the Sea"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "",]
 set = "thb"
 
 ["Ominous Seas"]
@@ -2007,6 +2007,13 @@ types = [ "creature",]
 tags = [ "Card Advantage", "Tier 2",]
 set = "dom"
 
+["Aminatou, the Fateshifter"]
+mana_cost = [ "W", "U", "B",]
+color_identity = "BUW"
+types = [ "planeswalker",]
+tags = [ "",]
+set = "c18"
+
 ["Ghen, Arcanum Weaver"]
 mana_cost = [ "R", "W", "B",]
 color_identity = "BRW"
@@ -2305,350 +2312,350 @@ set = "c16"
 mana_cost = []
 color_identity = "UW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "10e"
 
 ["Azorius Chancery"]
 mana_cost = []
 color_identity = "UW"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "dis"
 
 ["Glacial Fortress"]
 mana_cost = []
 color_identity = "UW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "m10"
 
 ["Seachrome Coast"]
 mana_cost = []
 color_identity = "UW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "som"
 
 ["Darkslick Shores"]
 mana_cost = []
 color_identity = "BU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "som"
 
 ["Dimir Aqueduct"]
 mana_cost = []
 color_identity = "BU"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "rav"
 
 ["Drowned Catacomb"]
 mana_cost = []
 color_identity = "BU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "m10"
 
 ["Underground River"]
 mana_cost = []
 color_identity = "BU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "10e"
 
 ["Blackcleave Cliffs"]
 mana_cost = []
 color_identity = "BR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "som"
 
 ["Dragonskull Summit"]
 mana_cost = []
 color_identity = "BR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "m10"
 
 ["Rakdos Carnarium"]
 mana_cost = []
 color_identity = "BR"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "dis"
 
 ["Sulfurous Springs"]
 mana_cost = []
 color_identity = "BR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "10e"
 
 ["Copperline Gorge"]
 mana_cost = []
 color_identity = "GR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "som"
 
 ["Gruul Turf"]
 mana_cost = []
 color_identity = "GR"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "gpt"
 
 ["Karplusan Forest"]
 mana_cost = []
 color_identity = "GR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "10e"
 
 ["Rootbound Crag"]
 mana_cost = []
 color_identity = "GR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "m10"
 
 [Brushland]
 mana_cost = []
 color_identity = "GW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "10e"
 
 ["Razorverge Thicket"]
 mana_cost = []
 color_identity = "GW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "som"
 
 ["Selesnya Sanctuary"]
 mana_cost = []
 color_identity = "GW"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "rav"
 
 ["Sunpetal Grove"]
 mana_cost = []
 color_identity = "GW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "m10"
 
 ["Caves of Koilos"]
 mana_cost = []
 color_identity = "BW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "apc"
 
 ["Concealed Courtyard"]
 mana_cost = []
 color_identity = "BW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "kld"
 
 ["Isolated Chapel"]
 mana_cost = []
 color_identity = "BW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "isd"
 
 ["Orzhov Basilica"]
 mana_cost = []
 color_identity = "BW"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "gpt"
 
 ["Izzet Boilerworks"]
 mana_cost = []
 color_identity = "RU"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "gpt"
 
 ["Shivan Reef"]
 mana_cost = []
 color_identity = "RU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "apc"
 
 ["Spirebluff Canal"]
 mana_cost = []
 color_identity = "RU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "kld"
 
 ["Sulfur Falls"]
 mana_cost = []
 color_identity = "RU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "isd"
 
 ["Blooming Marsh"]
 mana_cost = []
 color_identity = "BG"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "kld"
 
 ["Golgari Rot Farm"]
 mana_cost = []
 color_identity = "BG"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "rav"
 
 ["Llanowar Wastes"]
 mana_cost = []
 color_identity = "BG"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "apc"
 
 ["Woodland Cemetery"]
 mana_cost = []
 color_identity = "BG"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "isd"
 
 ["Battlefield Forge"]
 mana_cost = []
 color_identity = "RW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "apc"
 
 ["Boros Garrison"]
 mana_cost = []
 color_identity = "RW"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "rav"
 
 ["Clifftop Retreat"]
 mana_cost = []
 color_identity = "RW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "isd"
 
 ["Inspiring Vantage"]
 mana_cost = []
 color_identity = "RW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "kld"
 
 ["Botanical Sanctum"]
 mana_cost = []
 color_identity = "GU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "kld"
 
 ["Hinterland Harbor"]
 mana_cost = []
 color_identity = "GU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "isd"
 
 ["Simic Growth Chamber"]
 mana_cost = []
 color_identity = "GU"
 types = [ "land",]
-tags = [ "Tier 2", "Card Advantage",]
+tags = [ "Tier 2", "Card Advantage", "Fixer",]
 set = "dis"
 
 ["Yavimaya Coast"]
 mana_cost = []
 color_identity = "GU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "apc"
 
 ["Seaside Citadel"]
 mana_cost = []
 color_identity = "GUW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ala"
 
 ["Arcane Sanctum"]
 mana_cost = []
 color_identity = "BUW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ala"
 
 ["Crumbling Necropolis"]
 mana_cost = []
 color_identity = "BRU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ala"
 
 ["Savage Lands"]
 mana_cost = []
 color_identity = "BGR"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ala"
 
 ["Jungle Shrine"]
 mana_cost = []
 color_identity = "GRW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ala"
 
 ["Nomad Outpost"]
 mana_cost = []
 color_identity = "BRW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ktk"
 
 ["Frontier Bivouac"]
 mana_cost = []
 color_identity = "GRU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ktk"
 
 ["Sandsteppe Citadel"]
 mana_cost = []
 color_identity = "BGW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ktk"
 
 ["Mystic Monastery"]
 mana_cost = []
 color_identity = "RUW"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ktk"
 
 ["Opulent Palace"]
 mana_cost = []
 color_identity = "BGU"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Fixer",]
 set = "ktk"
 
 ["Aether Hub"]
