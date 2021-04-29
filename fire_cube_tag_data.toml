@@ -1321,6 +1321,13 @@ types = [ "sorcery",]
 tags = [ "",]
 set = "rix"
 
+["Cursed Mirror"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "artifact",]
+tags = [ "",]
+set = "c21"
+
 ["Oath of Chandra"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1376,13 +1383,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Card Advantage", "Tier 2",]
 set = "m20"
-
-["Loam Dryad"]
-mana_cost = [ "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "",]
-set = "soi"
 
 ["Bloom Tender"]
 mana_cost = [ "1", "G",]
@@ -2046,7 +2046,7 @@ set = "iko"
 mana_cost = [ "U", "R", "W",]
 color_identity = "RUW"
 types = [ "creature",]
-tags = [ "Card Advantage",]
+tags = [ "Card Advantage", "Aggro",]
 set = "iko"
 
 ["Yarok, the Desecrated"]
