@@ -117,13 +117,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Counters Target - Enabler", "Counters - Payoff",]
 set = "m21"
 
-["Angel of Vitality"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Lifegain - Payoff", "Tier 4",]
-set = "m20"
-
 ["Attended Knight"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -193,6 +186,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Legends - Enabler", "Tokens Aggro - Payoff", "Tier 2",]
 set = "ody"
+
+["Prava of the Steel Legion"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Tokens - Payoff",]
+set = "cmr"
 
 ["Sandsteppe Outcast"]
 mana_cost = [ "2", "W",]
@@ -936,19 +936,19 @@ types = [ "creature",]
 tags = [ "Vampires - Enabler", "Lifegain - Payoff", "Tier 3", "Card Advantage",]
 set = "m21"
 
-[Throatseeker]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Vampires - Enabler", "Ninjas - Payoff", "Ninjas - Enabler", "Tier 4", "Filler",]
-set = "mh1"
-
 ["Vampire Nighthawk"]
 mana_cost = [ "1", "B", "B",]
 color_identity = "B"
 types = [ "creature",]
 tags = [ "Lifegain - Enabler", "Vampires - Enabler", "Ninjutsu - Enabler", "Tier 3",]
 set = "m13"
+
+["Veinwitch Coven"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 2", "Lifegain - Payoff", "Vampires - Enabler", "Card Advantage",]
+set = "c21"
 
 ["Vengeful Rebel"]
 mana_cost = [ "2", "B",]

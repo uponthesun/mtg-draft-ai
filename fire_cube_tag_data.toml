@@ -19,13 +19,6 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "soi"
 
-["Accorder Paladin"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Aggro",]
-set = "mbs"
-
 ["Cliffside Rescuer"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
