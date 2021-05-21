@@ -11,10 +11,6 @@ from ..constants import CUBES_BY_ID
 LOGGER = logging.getLogger(__name__)
 
 
-class StaleReadError(Exception):
-    pass
-
-
 # /draft/<int:draft_id>/pick-card
 def pick_card(request, draft_id):
     draft = get_object_or_404(models.Draft, pk=draft_id)
@@ -29,8 +25,8 @@ def pick_card(request, draft_id):
             drafter.make_pick(picked_card, phase, pick)
             _make_bot_picks(drafter)
             _advance_phase_if_needed(draft)
-    except StaleReadError:
-        LOGGER.info('Stale read occurred when picking card, transaction was rolled back')
+    except models.StaleReadError:
+        LOGGER.warning('Stale read occurred when picking card, transaction was rolled back', exc_info=True)
 
     return HttpResponseRedirect(reverse('show_seat', kwargs={'draft_id': draft_id, 'seat': request.POST['seat']}))
 
