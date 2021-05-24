@@ -31,6 +31,15 @@ CUBES = [
         image_urls_file_name='fire_cube_image_urls.toml',
         picker_class=PowerFixingPicker,
         autobuild_enabled=False
+    ),
+    CubeData.load(
+        name='Interaction Cube',
+        cube_id=5,
+        cube_file_name='interaction_cube_tag_data.toml',
+        fixer_data_file_name='interaction_cube_fixer_data.toml',
+        image_urls_file_name='interaction_cube_image_urls.toml',
+        picker_class=PowerFixingPicker,
+        autobuild_enabled=False
     )
 ]
 CUBES_BY_ID = {c.cube_id: c for c in CUBES}
