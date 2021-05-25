@@ -2924,6 +2924,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "soi"
 
+["Prairie Stream"]
+mana_cost = []
+color_identity = "UW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
 ["Bad River"]
 mana_cost = []
 color_identity = "UB"
@@ -2951,6 +2958,13 @@ color_identity = "BU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "akh"
+
+["Sunken Hollow"]
+mana_cost = []
+color_identity = "BU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
 
 ["Sunken Ruins"]
 mana_cost = []
@@ -3001,12 +3015,26 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "vma"
 
+["Smoldering Marsh"]
+mana_cost = []
+color_identity = "BR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
 ["Sulfurous Springs"]
 mana_cost = []
 color_identity = "BR"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "10e"
+
+["Cinder Glade"]
+mana_cost = []
+color_identity = "GR"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
 
 ["Fire-Lit Thicket"]
 mana_cost = []
@@ -3057,6 +3085,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "10e"
 
+["Canopy Vista"]
+mana_cost = []
+color_identity = "GW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "bfz"
+
 ["Fortified Village"]
 mana_cost = []
 color_identity = "GW"
@@ -3098,6 +3133,13 @@ color_identity = "BW"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "apc"
+
+["Concealed Courtyard"]
+mana_cost = []
+color_identity = "BW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "kld"
 
 ["Fetid Heath"]
 mana_cost = []
@@ -3148,6 +3190,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "apc"
 
+["Spirebluff Canal"]
+mana_cost = []
+color_identity = "RU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "kld"
+
 ["Temple of Epiphany"]
 mana_cost = []
 color_identity = "RU"
@@ -3161,6 +3210,13 @@ color_identity = "RU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ogw"
+
+["Blooming Marsh"]
+mana_cost = []
+color_identity = "BG"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "kld"
 
 ["Hissing Quagmire"]
 mana_cost = []
@@ -3211,6 +3267,13 @@ types = [ "land",]
 tags = [ "Fixer",]
 set = "stx"
 
+["Inspiring Vantage"]
+mana_cost = []
+color_identity = "RW"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "kld"
+
 ["Needle Spires"]
 mana_cost = []
 color_identity = "RW"
@@ -3231,6 +3294,13 @@ color_identity = "RW"
 types = [ "land",]
 tags = [ "",]
 set = "ths"
+
+["Botanical Sanctum"]
+mana_cost = []
+color_identity = "GU"
+types = [ "land",]
+tags = [ "Fixer",]
+set = "kld"
 
 ["Flooded Grove"]
 mana_cost = []
