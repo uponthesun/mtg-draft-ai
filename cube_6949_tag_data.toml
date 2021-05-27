@@ -271,13 +271,6 @@ types = [ "instant",]
 tags = [ "Tier 3",]
 set = "m20"
 
-["Candles' Glow"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "instant",]
-tags = [ "Tier 4", "Cuttable",]
-set = "chk"
-
 ["Shining Shoal"]
 mana_cost = [ "X", "W", "W",]
 color_identity = "W"
@@ -347,6 +340,13 @@ color_identity = "W"
 types = [ "sorcery",]
 tags = [ "Tier 2",]
 set = "m10"
+
+["Portable Hole"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "artifact",]
+tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control",]
+set = "afr"
 
 ["Ancestral Blade"]
 mana_cost = [ "1", "W",]
@@ -621,19 +621,19 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "m13"
 
+["Inga Rune-Eyes"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "khm"
+
 ["Mistfire Adept"]
 mana_cost = [ "3", "U",]
 color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "frf"
-
-["Orvar, the All-Form"]
-mana_cost = [ "3", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "khm"
 
 ["Aeon Chronicler"]
 mana_cost = [ "3", "U", "U",]
@@ -1908,6 +1908,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 4", "Strategy - Aggro",]
 set = "bng"
+
+["Jaspera Sentinel"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "khm"
 
 ["Budoka Gardener"]
 mana_cost = [ "1", "G",]

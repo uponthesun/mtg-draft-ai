@@ -348,6 +348,13 @@ types = [ "sorcery",]
 tags = [ "Removal", "Tier 2",]
 set = "roe"
 
+["Prismatic Ending"]
+mana_cost = [ "X", "W",]
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction",]
+set = "mh2"
+
 ["Academic Probation"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -2224,12 +2231,12 @@ types = [ "creature",]
 tags = [ "Card Advantage",]
 set = "gtc"
 
-["The Scarab God"]
-mana_cost = [ "3", "U", "B",]
+["Architects of Will"]
+mana_cost = [ "2", "U", "B",]
 color_identity = "BU"
-types = [ "creature",]
-tags = [ "Graveyard", "Card Advantage", "Tier 1",]
-set = "hou"
+types = [ "artifact", "creature",]
+tags = [ "",]
+set = "arb"
 
 ["Gyruda, Doom of Depths"]
 mana_cost = [ "4", "U", "/", "B", "U", "/", "B",]
@@ -2410,7 +2417,7 @@ set = "stx"
 mana_cost = [ "2", "W",]
 color_identity = "BW"
 types = [ "sorcery",]
-tags = [ "Graveyard", "Card Advantage", "Tier 1",]
+tags = [ "Graveyard", "Card Advantage", "Tier 2",]
 set = "dka"
 
 ["Lurrus of the Dream-Den"]
@@ -2650,13 +2657,6 @@ color_identity = "RUW"
 types = [ "creature",]
 tags = [ "Combo", "Card Advantage",]
 set = "frf"
-
-["Jeskai Ascendancy"]
-mana_cost = [ "U", "R", "W",]
-color_identity = "RUW"
-types = [ "enchantment",]
-tags = [ "",]
-set = "ktk"
 
 ["Hangarback Walker"]
 mana_cost = [ "X", "X",]
@@ -3434,13 +3434,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "",]
 set = "tsp"
-
-["Ghost Quarter"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "",]
-set = "dis"
 
 ["Inkmoth Nexus"]
 mana_cost = []
