@@ -75,6 +75,13 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "soi"
 
+["Digsite Engineer"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "",]
+set = "c21"
+
 ["Eldrazi Displacer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -159,19 +166,19 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "mh1"
 
-["Master Skald"]
-mana_cost = [ "4", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Card Advantage",]
-set = "khm"
-
 ["Thalia's Lancers"]
 mana_cost = [ "3", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 2", "Card Advantage",]
 set = "emn"
+
+["World Queller"]
+mana_cost = [ "3", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Interaction",]
+set = "zen"
 
 ["Ajani, Strength of the Pride"]
 mana_cost = [ "2", "W", "W",]
@@ -208,6 +215,13 @@ types = [ "instant",]
 tags = [ "Aggro",]
 set = "m21"
 
+["Resurgent Belief"]
+mana_cost = []
+color_identity = "W"
+types = [ "sorcery",]
+tags = [ "Card Advantage",]
+set = "mh2"
+
 ["Declaration in Stone"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -243,12 +257,12 @@ types = [ "artifact",]
 tags = [ "Interaction", "Aggro",]
 set = "eld"
 
-["Cowed by Wisdom"]
+["Oppressive Rays"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Interaction", "Aggro",]
-set = "sok"
+tags = [ "Aggro", "Interaction",]
+set = "jou"
 
 ["Temporal Isolation"]
 mana_cost = [ "1", "W",]
@@ -656,6 +670,13 @@ types = [ "enchantment",]
 tags = [ "Interaction",]
 set = "kld"
 
+["Dress Down"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Interaction",]
+set = "mh2"
+
 ["Medomai's Prophecy"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -683,6 +704,13 @@ color_identity = "U"
 types = [ "land",]
 tags = [ "",]
 set = "hou"
+
+["Faerie Conclave"]
+mana_cost = []
+color_identity = "U"
+types = [ "land",]
+tags = [ "",]
+set = "ulg"
 
 ["Ipnu Rivulet"]
 mana_cost = []
@@ -852,6 +880,13 @@ types = [ "creature",]
 tags = [ "",]
 set = "kld"
 
+[Bloodtracker]
+mana_cost = [ "3", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage", "Aggro",]
+set = "c18"
+
 ["Dirge Bat"]
 mana_cost = [ "2", "B", "B",]
 color_identity = "B"
@@ -859,26 +894,12 @@ types = [ "creature",]
 tags = [ "Interaction", "Tier 2", "Card Advantage",]
 set = "iko"
 
-["Entomber Exarch"]
-mana_cost = [ "2", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Card Advantage",]
-set = "nph"
-
 ["Erebos, Bleak-Hearted"]
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "enchantment", "creature",]
 tags = [ "Interaction", "Monocolor", "Card Advantage",]
 set = "thb"
-
-[Mortivore]
-mana_cost = [ "2", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "",]
-set = "ody"
 
 ["Cairn Wanderer"]
 mana_cost = [ "4", "B",]
@@ -964,6 +985,13 @@ types = [ "sorcery",]
 tags = [ "Interaction", "Aggro", "Tier 2",]
 set = "znr"
 
+["Killing Wave"]
+mana_cost = [ "X", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Finisher",]
+set = "avr"
+
 ["Feed the Swarm"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -991,6 +1019,13 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Card Advantage",]
 set = "xln"
+
+["Bloodchief Ascension"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "",]
+set = "zen"
 
 ["Arguel's Blood Fast"]
 mana_cost = [ "1", "B",]
@@ -1125,12 +1160,12 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "m21"
 
-["Dire Fleet Daredevil"]
+["Grenzo's Cutthroat"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Aggro", "Card Advantage",]
-set = "rix"
+tags = [ "Aggro",]
+set = "cns"
 
 ["Heartfire Immolator"]
 mana_cost = [ "1", "R",]
@@ -1433,6 +1468,13 @@ types = [ "land",]
 tags = [ "Aggro",]
 set = "hou"
 
+["Shinka, the Bloodsoaked Keep"]
+mana_cost = []
+color_identity = "R"
+types = [ "land",]
+tags = [ "Aggro",]
+set = "chk"
+
 ["Kazuul's Fury"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1727,6 +1769,13 @@ types = [ "sorcery",]
 tags = [ "Card Advantage",]
 set = "war"
 
+["Oath of Nissa"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "enchantment",]
+tags = [ "",]
+set = "ogw"
+
 [Rancor]
 mana_cost = [ "G",]
 color_identity = "G"
@@ -1782,6 +1831,13 @@ color_identity = "G"
 types = [ "land",]
 tags = [ "Card Advantage",]
 set = "lrw"
+
+["Treetop Village"]
+mana_cost = []
+color_identity = "G"
+types = [ "land",]
+tags = [ "",]
+set = "ulg"
 
 ["Bala Ged Recovery"]
 mana_cost = [ "2", "G",]
@@ -2119,6 +2175,13 @@ types = [ "planeswalker",]
 tags = [ "",]
 set = "c18"
 
+["Flesh // Blood"]
+mana_cost = [ "3", "B", "G",]
+color_identity = "BGR"
+types = [ "sorcery",]
+tags = [ "Finisher",]
+set = "dgm"
+
 ["Ghen, Arcanum Weaver"]
 mana_cost = [ "R", "W", "B",]
 color_identity = "BRW"
@@ -2427,6 +2490,13 @@ types = [ "artifact",]
 tags = [ "Interaction",]
 set = "kld"
 
+["Mimic Vat"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Card Advantage",]
+set = "som"
+
 ["Mobile Garrison"]
 mana_cost = [ "3",]
 color_identity = ""
@@ -2441,12 +2511,12 @@ types = [ "artifact",]
 tags = [ "Finisher",]
 set = "mh2"
 
-["Bomat Bazaar Barge"]
-mana_cost = [ "4",]
+["Raiders' Karve"]
+mana_cost = [ "3",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "",]
-set = "kld"
+tags = [ "Aggro",]
+set = "khm"
 
 ["Nyx Lotus"]
 mana_cost = [ "4",]

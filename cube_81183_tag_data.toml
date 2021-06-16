@@ -201,13 +201,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Counters - Enabler", "Tokens - Enabler", "Tokens Aggro - Enabler", "Spirit Tokens - Enabler", "ETB - Enabler",]
 set = "frf"
 
-["Splendor Mare"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Enabler", "Filler",]
-set = "iko"
-
 ["Waxmane Baku"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -1307,13 +1300,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Discard - Enabler",]
 set = "aer"
 
-["Stampede Rider"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Tier 3", "Power - Payoff",]
-set = "thb"
-
 ["Stromkirk Occultist"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1599,7 +1585,7 @@ mana_cost = [ "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Elves - Payoff", "Tier 2", "Card Advantage",]
-set = "scg"
+set = "ema"
 
 ["Dwynen's Elite"]
 mana_cost = [ "1", "G",]
@@ -2286,6 +2272,13 @@ color_identity = "GU"
 types = [ "creature",]
 tags = [ "Wizards - Enabler", "Flash - Threat", "Tier 3",]
 set = "ths"
+
+["Jeskai Ascendancy"]
+mana_cost = [ "U", "R", "W",]
+color_identity = "RUW"
+types = [ "enchantment",]
+tags = [ "Tier 4", "Spice",]
+set = "ktk"
 
 ["Metallic Mimic"]
 mana_cost = [ "2",]
