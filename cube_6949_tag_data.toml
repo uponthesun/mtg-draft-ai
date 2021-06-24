@@ -61,13 +61,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Counters - Enabler", "Slivers - Enabler", "Non-Canon",]
 set = "mh1"
 
-[Flumph]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "afr"
-
 ["Kor Skyfisher"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -907,6 +900,13 @@ color_identity = "U"
 types = [ "enchantment",]
 tags = [ "Tier 2", "Strategy - Control", "Strategy - Aggro",]
 set = "drk"
+
+["Dress Down"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Trick",]
+set = "mh2"
 
 ["Flooded Shoreline"]
 mana_cost = [ "U", "U",]
@@ -1936,6 +1936,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3",]
 set = "chk"
+
+["Deeproot Champion"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "xln"
 
 ["Dripping-Tongue Zubera"]
 mana_cost = [ "1", "G",]
