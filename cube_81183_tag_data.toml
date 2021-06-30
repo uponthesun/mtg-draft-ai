@@ -2298,7 +2298,7 @@ set = "aer"
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Tier 3", "Interaction", "Counters - Enabler", "Counters Target - Payoff",]
+tags = [ "Tier 3", "Interaction", "Counters - Enabler", "Counters Target - Payoff", "Artifacts (Creature) - Enabler", "Artifacts (Cheap) - Enabler",]
 set = "mh2"
 
 ["Perilous Myr"]

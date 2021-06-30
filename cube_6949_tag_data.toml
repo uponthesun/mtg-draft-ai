@@ -2469,6 +2469,13 @@ types = [ "instant",]
 tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 3", "Removal",]
 set = "pls"
 
+["Sedge Sliver"]
+mana_cost = [ "2", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "tsp"
+
 ["Crypt Champion"]
 mana_cost = [ "3", "B",]
 color_identity = "BR"
