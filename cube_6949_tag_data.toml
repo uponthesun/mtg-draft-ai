@@ -1,10 +1,3 @@
-["Akrasan Squire"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "ala"
-
 ["Cenn's Tactician"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -18,6 +11,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Sac Fodder - Enabler",]
 set = "isd"
+
+["Monk of the Open Hand"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "afr"
 
 ["Thraben Inspector"]
 mana_cost = [ "W",]
@@ -719,6 +719,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control", "Strategy - Aggro", "Bounce",]
 set = "gpt"
 
+[Suspend]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Bounce", "Tier 3", "Cuttable", "Non-Canon",]
+set = "mh2"
+
 [Unsummon]
 mana_cost = [ "U",]
 color_identity = "U"
@@ -905,7 +912,7 @@ set = "drk"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Tier 3", "Trick",]
+tags = [ "Tier 3", "Trick", "Non-Canon", "Cuttable",]
 set = "mh2"
 
 ["Flooded Shoreline"]
@@ -2399,6 +2406,13 @@ types = [ "instant",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "tsp"
 
+["Monk Class"]
+mana_cost = [ "W", "U",]
+color_identity = "WU"
+types = [ "enchantment",]
+tags = [ "Card Advantage", "Tier 2", "Bounce",]
+set = "afr"
+
 ["Puresight Merrow"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
 color_identity = "WU"
@@ -2482,6 +2496,13 @@ color_identity = "BR"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
 set = "dis"
+
+["Goblin Anarchomancer"]
+mana_cost = [ "R", "G",]
+color_identity = "RG"
+types = [ "creature",]
+tags = [ "Strategy - Aggro", "Tier 3", "Cuttable", "Non-Canon",]
+set = "mh2"
 
 ["Gruul Guildmage"]
 mana_cost = [ "R", "/", "G", "R", "/", "G",]

@@ -936,6 +936,13 @@ types = [ "land",]
 tags = [ "Graveyard", "Combo",]
 set = "tsp"
 
+["Hall of Storm Giants"]
+mana_cost = []
+color_identity = "U"
+types = [ "land",]
+tags = [ "",]
+set = "afr"
+
 ["Mystic Sanctuary"]
 mana_cost = []
 color_identity = "U"
@@ -1405,6 +1412,13 @@ types = [ "enchantment",]
 tags = [ "",]
 set = "usg"
 
+["Hive of the Eye Tyrant"]
+mana_cost = []
+color_identity = "B"
+types = [ "land",]
+tags = [ "Graveyard Interaction",]
+set = "afr"
+
 ["Blazing Rootwalla"]
 mana_cost = [ "R",]
 color_identity = "R"
@@ -1495,6 +1509,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "",]
 set = "mh1"
+
+["Heartfire Immolator"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Removal",]
+set = "m21"
 
 ["Krark, the Thumbless"]
 mana_cost = [ "1", "R",]
@@ -2314,6 +2335,13 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Card Advantage", "Tier 2",]
 set = "rna"
+
+["Lair of the Hydra"]
+mana_cost = []
+color_identity = "G"
+types = [ "land",]
+tags = [ "",]
+set = "afr"
 
 ["Tranquil Thicket"]
 mana_cost = []
@@ -3631,13 +3659,6 @@ types = [ "land",]
 tags = [ "",]
 set = "tsp"
 
-["Cavern of Souls"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Anti-Counterspell",]
-set = "avr"
-
 ["Crawling Barrens"]
 mana_cost = []
 color_identity = ""
@@ -3679,13 +3700,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "",]
 set = "tsp"
-
-["Hive of the Eye Tyrant"]
-mana_cost = []
-color_identity = "B"
-types = [ "land",]
-tags = [ "Graveyard Interaction",]
-set = "afr"
 
 ["Inkmoth Nexus"]
 mana_cost = []
