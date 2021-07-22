@@ -579,13 +579,6 @@ types = [ "planeswalker",]
 tags = [ "Devotion", "Board Complexity", "Wordy",]
 set = "m21"
 
-["Thought Scour"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "",]
-set = "dka"
-
 [Anticognition]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -648,6 +641,13 @@ color_identity = "U"
 types = [ "sorcery",]
 tags = [ "",]
 set = "grn"
+
+["Bond of Insight"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Card Advantage", "Mill",]
+set = "war"
 
 ["Inscription of Insight"]
 mana_cost = [ "3", "U",]
@@ -1405,6 +1405,13 @@ types = [ "instant",]
 tags = [ "Interaction", "Tier 2", "Aggro",]
 set = "kld"
 
+["You Find Some Prisoners"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Cuttable", "Mill",]
+set = "afr"
+
 ["Grab the Reins"]
 mana_cost = [ "3", "R",]
 color_identity = "R"
@@ -1558,6 +1565,13 @@ color_identity = "G"
 types = [ "enchantment", "creature",]
 tags = [ "Wordy", "Finisher", "Blocker", "Cuttable",]
 set = "thb"
+
+["Intrepid Outlander"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Aggro", "Blocker",]
+set = "afr"
 
 ["Jolrael, Mwonvuli Recluse"]
 mana_cost = [ "1", "G",]
@@ -1859,13 +1873,6 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Cuttable", "Wordy",]
 set = "soi"
-
-["Ranger Class"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "enchantment",]
-tags = [ "Aggro", "Wordy", "Card Advantage", "Board Complexity",]
-set = "afr"
 
 ["The Binding of the Titans"]
 mana_cost = [ "1", "G",]
@@ -2622,6 +2629,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Sacrifice",]
 set = "dst"
+
+["Spell Satchel"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Spells Payoff", "Card Advantage",]
+set = "stx"
 
 ["Sphere of the Suns"]
 mana_cost = [ "2",]

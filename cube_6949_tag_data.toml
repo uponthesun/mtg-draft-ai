@@ -1769,13 +1769,6 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control", "Removal",]
 set = "5dn"
 
-["Calibrated Blast"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Non-Canon", "Tier 3", "Strategy - Control", "Removal", "Card Advantage",]
-set = "mh2"
-
 ["Stoke the Flames"]
 mana_cost = [ "2", "R", "R",]
 color_identity = "R"
@@ -2259,6 +2252,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Trick", "Card Advantage",]
 set = "ody"
 
+["Wear Away"]
+mana_cost = [ "G", "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Cuttable", "Tier 4", "Strategy - Control",]
+set = "chk"
+
 ["Realms Uncharted"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -2405,13 +2405,6 @@ color_identity = "WU"
 types = [ "instant",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "tsp"
-
-["Monk Class"]
-mana_cost = [ "W", "U",]
-color_identity = "WU"
-types = [ "enchantment",]
-tags = [ "Card Advantage", "Tier 2", "Bounce",]
-set = "afr"
 
 ["Puresight Merrow"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
