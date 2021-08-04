@@ -215,18 +215,11 @@ types = [ "creature",]
 tags = [ "Tier 0", "Strategy - Aggro", "Strategy - Control", "Card Advantage",]
 set = "mor"
 
-["Totem-Guide Hartebeest"]
-mana_cost = [ "4", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage", "Cuttable",]
-set = "roe"
-
 ["Shepherd of the Cosmos"]
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Card Advantage", "Tier 3", "Cuttable",]
+tags = [ "Card Advantage", "Tier 3",]
 set = "khm"
 
 ["Yosei, the Morning Star"]
@@ -404,6 +397,13 @@ types = [ "tribal", "enchantment",]
 tags = [ "Strategy - Control", "Tier 3", "Card Advantage",]
 set = "lrw"
 
+["Spectral Steel"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
+set = "khm"
+
 ["Bound by Moonsilver"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -450,7 +450,7 @@ set = "wwk"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Card Advantage",]
+tags = [ "Tier 4", "Card Advantage", "Project",]
 set = "frf"
 
 ["Song of the Worldsoul"]
@@ -599,13 +599,6 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control", "Bounce",]
 set = "vis"
-
-["Sea-Dasher Octopus"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
-set = "iko"
 
 ["Trinket Mage"]
 mana_cost = [ "2", "U",]
@@ -898,7 +891,7 @@ set = "tor"
 mana_cost = [ "3", "U", "U",]
 color_identity = "U"
 types = [ "sorcery",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "tmp"
 
 ["Mass Polymorph"]
@@ -914,6 +907,13 @@ color_identity = "U"
 types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control", "Bounce",]
 set = "mrd"
+
+["Mark of Eviction"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Bounce", "Cuttable",]
+set = "rav"
 
 ["Dance of Many"]
 mana_cost = [ "U", "U",]
@@ -1145,13 +1145,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control", "Card Advantage",]
 set = "m14"
-
-["Body Snatcher"]
-mana_cost = [ "2", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 4",]
-set = "uds"
 
 ["Crypt Ghast"]
 mana_cost = [ "3", "B",]
@@ -1745,7 +1738,7 @@ set = "m10"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "avr"
 
 ["Commune with Lava"]
@@ -2034,13 +2027,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 1",]
 set = "chk"
-
-["Sanctum Weaver"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "enchantment", "creature",]
-tags = [ "Tier 2", "Non-Canon", "Card Advantage",]
-set = "mh2"
 
 ["Satyr Wayfinder"]
 mana_cost = [ "1", "G",]
@@ -2340,7 +2326,7 @@ set = "usg"
 mana_cost = [ "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Non-Canon",]
+tags = [ "Tier 4", "Non-Canon", "Cuttable",]
 set = "mh2"
 
 ["Fists of Ironwood"]
@@ -2405,13 +2391,6 @@ color_identity = "G"
 types = [ "enchantment",]
 tags = [ "Tier 0", "Strategy - Aggro", "Card Advantage",]
 set = "nem"
-
-["Khalni Garden"]
-mana_cost = []
-color_identity = "G"
-types = [ "land",]
-tags = [ "Tier 3",]
-set = "wwk"
 
 ["Azorius Guildmage"]
 mana_cost = [ "W", "/", "U", "W", "/", "U",]
@@ -2541,9 +2520,9 @@ set = "rav"
 
 ["Harmonic Sliver"]
 mana_cost = [ "1", "G", "W",]
-color_identity = "GW"
+color_identity = "WG"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Card Advantage", "Cuttable",]
 set = "tsp"
 
 ["Knight of the Reliquary"]
