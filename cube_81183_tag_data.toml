@@ -254,7 +254,7 @@ set = "hou"
 mana_cost = [ "4", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Spirits - Enabler", "Card Advantage", "Tier 4", "ETB - Enabler",]
+tags = [ "Spirits - Enabler", "Card Advantage", "Tier 4", "ETB - Enabler", "Cuttable",]
 set = "stx"
 
 ["Ajani's Presence"]
@@ -345,7 +345,7 @@ set = "dom"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Counters - Enabler", "Counters - Payoff", "ETB - Payoff", "Counters Target - Enabler", "Tier 1", "Card Advantage",]
+tags = [ "Counters - Enabler", "Counters - Payoff", "ETB - Payoff", "Counters Target - Enabler", "Tier 1", "Card Advantage", "Spice",]
 set = "bbd"
 
 ["Weight of Conscience"]
@@ -737,7 +737,7 @@ set = "soi"
 mana_cost = [ "4", "U", "U",]
 color_identity = "U"
 types = [ "sorcery",]
-tags = [ "ETB - Payoff", "Tier 1", "Ramp - Payoff",]
+tags = [ "ETB - Payoff", "Tier 1", "Ramp - Payoff", "Spice",]
 set = "ogw"
 
 ["Mystic Subdual"]
@@ -880,6 +880,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Vampires - Enabler", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Lifegain - Enabler",]
 set = "mh2"
 
+["Defiant Salvager"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler",]
+set = "aer"
+
 ["Gilt-Blade Prowler"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -929,13 +936,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Lifegain - Payoff", "Vampires - Enabler", "Card Advantage",]
 set = "c21"
 
-["Vraska's Finisher"]
-mana_cost = [ "2", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3", "Interaction",]
-set = "war"
-
 ["Warteye Witch"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -949,20 +949,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Ninjas - Enabler", "Ninjutsu - Payoff", "Tier 4",]
 set = "mh1"
-
-["Bushmeat Poacher"]
-mana_cost = [ "3", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3", "Sacrifice - Payoff", "Sacrifice Outlet - Enabler", "Card Advantage", "Toughness - Enabler",]
-set = "iko"
-
-["Carrion Grub"]
-mana_cost = [ "3", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 4", "Graveyard - Enabler", "Graveyard - Payoff", "Toughness - Enabler", "Cuttable",]
-set = "m21"
 
 ["Crovax the Cursed"]
 mana_cost = [ "2", "B", "B",]
@@ -985,6 +971,13 @@ types = [ "creature",]
 tags = [ "Tokens - Enabler", "Graveyard - Payoff", "ETB - Enabler", "Sacrifice - Enabler", "Tier 2", "Discard - Enabler", "Discard - Payoff", "Spirit Tokens - Enabler",]
 set = "emn"
 
+["Keening Banshee"]
+mana_cost = [ "2", "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 2", "Card Advantage", "Interaction", "ETB - Enabler", "Ninjutsu - Enabler",]
+set = "rav"
+
 ["Sanctum Seeker"]
 mana_cost = [ "2", "B", "B",]
 color_identity = "B"
@@ -1005,13 +998,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Ninjutsu - Payoff", "Ninjas - Enabler", "Tier 3", "Card Advantage",]
 set = "bok"
-
-[Revenant]
-mana_cost = [ "4", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Graveyard - Payoff", "Tier 4",]
-set = "sth"
 
 ["Thornmantle Striker"]
 mana_cost = [ "4", "B",]
@@ -1171,7 +1157,7 @@ set = "kld"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Artifacts (Recursion) - Enabler", "Artifacts (Cheap) - Payoff", "Tier 3", "Card Advantage",]
+tags = [ "Artifacts (Recursion) - Enabler", "Artifacts (Cheap) - Payoff", "Tier 3", "Card Advantage", "Spice",]
 set = "ulg"
 
 ["Bloodrage Brawler"]
@@ -1262,7 +1248,7 @@ set = "thb"
 mana_cost = [ "2", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Spells - Payoff", "Graveyard - Payoff", "Wizards - Enabler", "Tier 3", "Card Advantage",]
+tags = [ "Spells - Payoff", "Graveyard - Payoff", "Wizards - Enabler", "Tier 3", "Card Advantage", "Spice",]
 set = "c17"
 
 ["Magus of the Wheel"]
@@ -1573,19 +1559,19 @@ types = [ "creature",]
 tags = [ "Elves - Enabler", "Tier 4",]
 set = "ori"
 
+["Elvish Warmaster"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3", "Elves - Enabler", "Elves - Payoff", "Card Advantage",]
+set = "khm"
+
 ["Fa'adiyah Seer"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
 tags = [ "Graveyard - Enabler", "Land Extra - Enabler", "Drake Haven - Enabler", "Tier 4",]
 set = "plc"
-
-["Gempalm Strider"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Elves - Enabler", "Elves - Payoff", "Tier 4",]
-set = "lgn"
 
 ["Gyre Sage"]
 mana_cost = [ "1", "G",]
@@ -1649,13 +1635,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Flash - Threat", "Ninjutsu - Enabler", "Tier 2", "Power - Enabler",]
 set = "m12"
-
-["Tajuru Paragon"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 3", "Elves - Enabler", "Elves - Payoff", "Wizards - Payoff", "Card Advantage",]
-set = "znr"
 
 ["Thallid Shell-Dweller"]
 mana_cost = [ "1", "G",]
@@ -2011,7 +1990,7 @@ set = "gtc"
 mana_cost = [ "B", "R",]
 color_identity = "BR"
 types = [ "creature",]
-tags = [ "Tier 3", "Interaction",]
+tags = [ "Tier 3", "Interaction", "Sacrifice - Enabler", "Sacrifice Outlet - Payoff",]
 set = "cmr"
 
 ["Tymaret, the Murder King"]
@@ -2076,6 +2055,13 @@ color_identity = "GW"
 types = [ "creature",]
 tags = [ "Tier 3", "Counters - Payoff",]
 set = "m21"
+
+["Join the Dance"]
+mana_cost = [ "G", "W",]
+color_identity = "WG"
+types = [ "sorcery",]
+tags = [ "Tier 3", "Tokens - Enabler", "Sacrifice - Enabler",]
+set = "mid"
 
 ["Selesnya Evangel"]
 mana_cost = [ "G", "W",]
@@ -2188,6 +2174,13 @@ color_identity = "BG"
 types = [ "creature",]
 tags = [ "Graveyard - Payoff", "Land Graveyard - Enabler", "Land Graveyard - Payoff", "Land Dying - Enabler", "Land Extra - Payoff", "Legends - Enabler", "Discard - Payoff", "Tier 2", "Card Advantage",]
 set = "soi"
+
+["Izoni, Thousand-Eyed"]
+mana_cost = [ "2", "B", "B", "G", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Tier 3", "Graveyard - Payoff", "Elves - Enabler", "Card Advantage",]
+set = "grn"
 
 ["Martial Glory"]
 mana_cost = [ "R", "W",]

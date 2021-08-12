@@ -2914,7 +2914,7 @@ set = "dst"
 mana_cost = [ "S",]
 color_identity = ""
 types = [ "snow", "artifact",]
-tags = [ "Tier 2", "Strategy - Control", "Non-Canon",]
+tags = [ "Tier 2", "Strategy - Control", "Non-Canon", "Cuttable",]
 set = "mh1"
 
 ["Blazing Torch"]

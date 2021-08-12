@@ -502,6 +502,13 @@ types = [ "creature",]
 tags = [ "Card Advantage", "Finisher", "Cuttable", "Mana Sink",]
 set = "akh"
 
+["Sea-Dasher Octopus"]
+mana_cost = [ "1", "U", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "iko"
+
 ["Skaab Ruinator"]
 mana_cost = [ "1", "U", "U",]
 color_identity = "U"
@@ -781,6 +788,13 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "",]
 set = "eld"
+
+["Champion of the Perished"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Aggro",]
+set = "mid"
 
 [Cryptbreaker]
 mana_cost = [ "B",]
@@ -1090,6 +1104,13 @@ types = [ "sorcery",]
 tags = [ "Card Advantage", "Mill Payoff", "Cuttable",]
 set = "xln"
 
+["Warlock Class"]
+mana_cost = [ "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "Aggro", "Finisher",]
+set = "afr"
+
 ["Dreadhorde Invasion"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1370,13 +1391,6 @@ types = [ "planeswalker",]
 tags = [ "Devotion", "Big Spells Payoff",]
 set = "dom"
 
-["Burst Lightning"]
-mana_cost = [ "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Interaction", "Aggro", "Tier 2",]
-set = "zen"
-
 ["Fiery Impulse"]
 mana_cost = [ "R",]
 color_identity = "R"
@@ -1411,6 +1425,13 @@ color_identity = "R"
 types = [ "instant",]
 tags = [ "Cuttable", "Mill",]
 set = "afr"
+
+["Dead // Gone"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "",]
+set = "plc"
 
 ["Grab the Reins"]
 mana_cost = [ "3", "R",]
@@ -1586,6 +1607,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Ramp", "Blocker", "Cuttable",]
 set = "dom"
+
+["Prosperous Innkeeper"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "",]
+set = "afr"
 
 ["Resilient Khenra"]
 mana_cost = [ "1", "G",]
@@ -1999,6 +2027,13 @@ color_identity = "BR"
 types = [ "creature",]
 tags = [ "Aggro", "Finisher", "Sacrifice",]
 set = "cmr"
+
+["Kalain, Reclusive Painter"]
+mana_cost = [ "B", "R",]
+color_identity = "BR"
+types = [ "creature",]
+tags = [ "",]
+set = "afr"
 
 ["Slaughter-Priest of Mogis"]
 mana_cost = [ "B", "R",]
