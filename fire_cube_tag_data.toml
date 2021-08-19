@@ -523,13 +523,6 @@ types = [ "creature",]
 tags = [ "Big Spells Payoff",]
 set = "dtk"
 
-["Thassa, Deep-Dwelling"]
-mana_cost = [ "3", "U",]
-color_identity = "U"
-types = [ "enchantment", "creature",]
-tags = [ "Interaction", "Card Advantage", "Mana Sink", "Monocolor", "ETB payoff",]
-set = "thb"
-
 ["Undead Alchemist"]
 mana_cost = [ "3", "U",]
 color_identity = "U"
@@ -1104,13 +1097,6 @@ types = [ "sorcery",]
 tags = [ "Card Advantage", "Mill Payoff", "Cuttable",]
 set = "xln"
 
-["Warlock Class"]
-mana_cost = [ "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Aggro", "Finisher",]
-set = "afr"
-
 ["Dreadhorde Invasion"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1664,6 +1650,13 @@ types = [ "creature",]
 tags = [ "Tier 2", "Card Advantage", "Devotion",]
 set = "rix"
 
+["Selesnya Eulogist"]
+mana_cost = [ "2", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Card Advantage",]
+set = "c19"
+
 ["Silverfur Partisan"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1761,6 +1754,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Card Advantage", "Cuttable",]
 set = "ons"
+
+["Wrenn and Seven"]
+mana_cost = [ "3", "G", "G",]
+color_identity = "G"
+types = [ "planeswalker",]
+tags = [ "Card Advantage",]
+set = "mid"
 
 ["Fortifying Draught"]
 mana_cost = [ "G",]
@@ -1978,6 +1978,13 @@ color_identity = "WU"
 types = [ "instant",]
 tags = [ "Interaction",]
 set = "rna"
+
+["Lazav, the Multifarious"]
+mana_cost = [ "U", "B",]
+color_identity = "BU"
+types = [ "creature",]
+tags = [ "",]
+set = "plist"
 
 ["Soaring Thought-Thief"]
 mana_cost = [ "U", "B",]
@@ -2314,6 +2321,13 @@ color_identity = "UG"
 types = [ "sorcery",]
 tags = [ "Card Advantage",]
 set = "dka"
+
+["Gilder Bairn"]
+mana_cost = [ "1", "G", "/", "U", "G", "/", "U",]
+color_identity = "GU"
+types = [ "creature",]
+tags = [ "",]
+set = "eve"
 
 ["Kasmina, Enigma Sage"]
 mana_cost = [ "1", "G", "U",]

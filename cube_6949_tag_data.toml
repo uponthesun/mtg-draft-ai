@@ -54,13 +54,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "chk"
 
-["Enduring Sliver"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Counters - Enabler", "Slivers - Enabler", "Non-Canon",]
-set = "mh1"
-
 [Flumph]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -81,6 +74,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "som"
+
+["Oswald Fiddlebender"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "afr"
 
 ["Puresteel Paladin"]
 mana_cost = [ "W", "W",]
@@ -124,19 +124,19 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Card Advantage",]
 set = "wwk"
 
+["Syndic of Tithes"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "gtc"
+
 ["Abzan Falconer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Counters - Payoff",]
 set = "ktk"
-
-["Kor Hookmaster"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "zen"
 
 ["Master of Pearls"]
 mana_cost = [ "1", "W",]
@@ -170,7 +170,7 @@ set = "plc"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Cuttable",]
+tags = [ "Tier 3", "Strategy - Aggro",]
 set = "jou"
 
 ["Vizier of Deferment"]
@@ -184,14 +184,14 @@ set = "akh"
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 2",]
+tags = [ "Tier 2", "Strategy - Control",]
 set = "uds"
 
 ["Leonin Battlemage"]
 mana_cost = [ "3", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Strategy - Aggro", "Tier 4",]
 set = "dst"
 
 ["Ranger of Eos"]
@@ -214,13 +214,6 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 0", "Strategy - Aggro", "Strategy - Control", "Card Advantage",]
 set = "mor"
-
-["Shepherd of the Cosmos"]
-mana_cost = [ "4", "W", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Card Advantage", "Tier 3",]
-set = "khm"
 
 ["Yosei, the Morning Star"]
 mana_cost = [ "4", "W", "W",]
@@ -502,6 +495,13 @@ types = [ "creature",]
 tags = [ "Tier 3",]
 set = "m15"
 
+["Floating-Dream Zubera"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3", "Cuttable",]
+set = "chk"
+
 ["Lighthouse Chronologist"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -562,7 +562,7 @@ set = "mh1"
 mana_cost = [ "4", "U", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Cuttable",]
 set = "tsp"
 
 ["Chasm Skulker"]
@@ -908,13 +908,6 @@ types = [ "artifact",]
 tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control", "Bounce",]
 set = "mrd"
 
-["Mark of Eviction"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "enchantment",]
-tags = [ "Tier 3", "Bounce", "Cuttable",]
-set = "rav"
-
 ["Dance of Many"]
 mana_cost = [ "U", "U",]
 color_identity = "U"
@@ -1040,6 +1033,13 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Tier 4",]
 set = "lgn"
+
+["Dream Devourer"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Control", "Cuttable",]
+set = "khm"
 
 ["Dregscape Sliver"]
 mana_cost = [ "1", "B",]
@@ -1192,7 +1192,7 @@ set = "c19"
 mana_cost = [ "4", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Cuttable",]
 set = "ala"
 
 ["Gray Merchant of Asphodel"]
@@ -1255,8 +1255,15 @@ set = "dka"
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Cuttable",]
 set = "m21"
+
+["Devour in Shadow"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 3", "Removal", "Strategy - Aggro", "Strategy - Control",]
+set = "5dn"
 
 ["Go for the Throat"]
 mana_cost = [ "1", "B",]
@@ -1521,7 +1528,7 @@ set = "frf"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Cuttable",]
+tags = [ "Tier 3", "Strategy - Aggro",]
 set = "avr"
 
 ["Lightning Mauler"]
@@ -1689,7 +1696,7 @@ set = "mor"
 mana_cost = [ "4", "R", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 4", "Project", "Card Advantage",]
+tags = [ "Tier 4", "Project", "Card Advantage", "Cuttable",]
 set = "nph"
 
 ["Bogardan Hellkite"]
@@ -1745,7 +1752,7 @@ set = "avr"
 mana_cost = [ "X", "R", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 4", "Cuttable", "Card Advantage",]
+tags = [ "Tier 4", "Card Advantage",]
 set = "dtk"
 
 ["Glacial Ray"]
@@ -1787,7 +1794,7 @@ set = "m15"
 mana_cost = [ "5", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Non-Canon", "Tier 3", "Strategy - Control", "Removal",]
+tags = [ "Non-Canon", "Tier 3", "Strategy - Control", "Removal", "Cuttable",]
 set = "mh1"
 
 ["Devastating Summons"]
@@ -2000,6 +2007,13 @@ types = [ "creature",]
 tags = [ "Tier 2",]
 set = "m14"
 
+["Masked Vandal"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage", "Cuttable",]
+set = "khm"
+
 ["Nessian Wanderer"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
@@ -2046,7 +2060,7 @@ set = "csp"
 mana_cost = [ "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Strategy - Aggro", "Tier 2",]
+tags = [ "Strategy - Aggro", "Tier 2", "Cuttable",]
 set = "eld"
 
 [Werebear]
@@ -2081,7 +2095,7 @@ set = "5dn"
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage",]
+tags = [ "Tier 3", "Card Advantage", "Cuttable",]
 set = "tor"
 
 ["Scourge of Skola Vale"]
@@ -2158,7 +2172,7 @@ set = "rix"
 mana_cost = [ "2", "G", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Non-Canon", "Tier 3", "Card Advantage",]
+tags = [ "Non-Canon", "Tier 3", "Card Advantage", "Cuttable",]
 set = "mh2"
 
 ["Deranged Hermit"]
@@ -2245,19 +2259,19 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Aggro", "Trick",]
 set = "zen"
 
+["Wild Shape"]
+mana_cost = [ "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Trick", "Tier 3", "Strategy - Aggro",]
+set = "afr"
+
 ["Sylvan Might"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Trick", "Card Advantage",]
 set = "ody"
-
-["Wear Away"]
-mana_cost = [ "G", "G",]
-color_identity = "G"
-types = [ "instant",]
-tags = [ "Cuttable", "Tier 4", "Strategy - Control",]
-set = "chk"
 
 ["Realms Uncharted"]
 mana_cost = [ "2", "G",]
@@ -2279,13 +2293,6 @@ color_identity = "G"
 types = [ "instant",]
 tags = [ "Tier 2",]
 set = "rav"
-
-["Irresistible Prey"]
-mana_cost = [ "G",]
-color_identity = "G"
-types = [ "sorcery",]
-tags = [ "Strategy - Aggro", "Tier 4",]
-set = "roe"
 
 ["Prey Upon"]
 mana_cost = [ "G",]
@@ -2333,7 +2340,7 @@ set = "mh2"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Cuttable", "Tier 4", "Strategy - Aggro",]
+tags = [ "Tier 4", "Strategy - Aggro",]
 set = "rav"
 
 ["In Search of Greatness"]
@@ -2354,7 +2361,7 @@ set = "eld"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Project", "Card Advantage", "Strategy - Aggro",]
+tags = [ "Tier 4", "Card Advantage", "Strategy - Aggro",]
 set = "m20"
 
 ["Warbriar Blessing"]
@@ -2517,13 +2524,6 @@ color_identity = "GW"
 types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Card Advantage",]
 set = "rav"
-
-["Harmonic Sliver"]
-mana_cost = [ "1", "G", "W",]
-color_identity = "WG"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage", "Cuttable",]
-set = "tsp"
 
 ["Knight of the Reliquary"]
 mana_cost = [ "1", "G", "W",]
@@ -2749,6 +2749,13 @@ types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "aer"
 
+["Myr Scrapling"]
+mana_cost = [ "1",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
+set = "mh2"
+
 ["Crashing Drawbridge"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -2868,13 +2875,6 @@ types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Control", "Card Advantage",]
 set = "tsp"
 
-["Ancient Stone Idol"]
-mana_cost = [ "1", "0",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Non-Canon", "Tier 3", "Strategy - Control", "Card Advantage", "Cuttable",]
-set = "c18"
-
 ["Chimeric Mass"]
 mana_cost = [ "X",]
 color_identity = ""
@@ -2935,7 +2935,7 @@ set = "m11"
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 3",]
+tags = [ "Tier 4",]
 set = "rtr"
 
 ["Explorer's Scope"]
