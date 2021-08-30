@@ -1300,6 +1300,13 @@ types = [ "creature",]
 tags = [ "Blocker", "Artifact Payoff", "Sacrifice",]
 set = "m21"
 
+["Erratic Cyclops"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Big Spells Payoff",]
+set = "grn"
+
 ["Pia and Kiran Nalaar"]
 mana_cost = [ "2", "R", "R",]
 color_identity = "R"
@@ -1454,6 +1461,13 @@ types = [ "sorcery",]
 tags = [ "Interaction", "Mill",]
 set = "emn"
 
+["Indomitable Creativity"]
+mana_cost = [ "X", "R", "R", "R",]
+color_identity = "R"
+types = [ "sorcery",]
+tags = [ "",]
+set = "aer"
+
 ["Purphoros's Intervention"]
 mana_cost = [ "X", "R",]
 color_identity = "R"
@@ -1481,13 +1495,6 @@ color_identity = "R"
 types = [ "artifact",]
 tags = [ "Interaction",]
 set = "mrd"
-
-["Lightning Spear"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "artifact",]
-tags = [ "Aggro", "Interaction",]
-set = "mh2"
 
 [Immolation]
 mana_cost = [ "R",]
@@ -2322,13 +2329,6 @@ types = [ "sorcery",]
 tags = [ "Card Advantage",]
 set = "dka"
 
-["Gilder Bairn"]
-mana_cost = [ "1", "G", "/", "U", "G", "/", "U",]
-color_identity = "GU"
-types = [ "creature",]
-tags = [ "",]
-set = "eve"
-
 ["Kasmina, Enigma Sage"]
 mana_cost = [ "1", "G", "U",]
 color_identity = "UG"
@@ -2356,6 +2356,13 @@ color_identity = "UG"
 types = [ "planeswalker",]
 tags = [ "Card Advantage", "Wordy",]
 set = "bfz"
+
+["Prime Speaker Vannifar"]
+mana_cost = [ "2", "G", "U",]
+color_identity = "UG"
+types = [ "creature",]
+tags = [ "ETB payoff", "Card Advantage",]
+set = "rna"
 
 ["Tatyova, Benthic Druid"]
 mana_cost = [ "3", "G", "U",]
@@ -2622,6 +2629,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Ramp", "Cuttable",]
 set = "soi"
+
+[Dermotaxi]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Mill Payoff",]
+set = "mh2"
 
 ["Eye of Vecna"]
 mana_cost = [ "2",]
@@ -3113,13 +3127,6 @@ types = [ "land",]
 tags = [ "Spells Payoff",]
 set = "stx"
 
-["Holdout Settlement"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "",]
-set = "ogw"
-
 ["Inventors' Fair"]
 mana_cost = []
 color_identity = ""
@@ -3147,6 +3154,13 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Card Advantage", "Aggro", "Mana Sink",]
 set = "ogw"
+
+["Survivors' Encampment"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "",]
+set = "hou"
 
 ["Treasure Vault"]
 mana_cost = []

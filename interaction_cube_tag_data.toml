@@ -173,6 +173,13 @@ types = [ "creature",]
 tags = [ "Tier 2",]
 set = "eve"
 
+["Hallowed Spiritkeeper"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Graveyard", "Anti-Sweeper", "Card Advantage",]
+set = "c14"
+
 ["Heliod, Sun-Crowned"]
 mana_cost = [ "2", "W",]
 color_identity = "W"

@@ -149,7 +149,7 @@ set = "xln"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Spirits - Enabler", "Big Counters - Enabler", "Tokens Aggro - Payoff",]
+tags = [ "Tier 3", "Spirits - Enabler", "Big Counters - Enabler", "Tokens Aggro - Payoff", "Cuttable",]
 set = "mh1"
 
 ["Mavren Fein, Dusk Apostle"]
@@ -212,7 +212,7 @@ set = "m21"
 mana_cost = [ "2", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Spirits - Enabler", "Spirits - Payoff", "Tier 2", "Legends - Enabler", "Interaction",]
+tags = [ "Spirits - Enabler", "Spirits - Payoff", "Tier 2", "Legends - Enabler", "Interaction", "Card Advantage",]
 set = "sok"
 
 ["Pallid Mycoderm"]
@@ -240,7 +240,7 @@ set = "isd"
 mana_cost = [ "3", "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Vampires - Enabler", "Tier 3",]
+tags = [ "Vampires - Enabler", "Tier 3", "Card Advantage",]
 set = "xln"
 
 ["Crested Sunmare"]
@@ -275,7 +275,7 @@ set = "10e"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "ETB - Payoff", "Tier 3",]
+tags = [ "ETB - Payoff", "Tier 3", "Card Advantage",]
 set = "mh1"
 
 [Outflank]
@@ -324,7 +324,7 @@ set = "soi"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Heroic - Enabler", "Tokens Aggro - Enabler",]
+tags = [ "Tier 4", "Heroic - Enabler", "Tokens Aggro - Enabler", "Cuttable",]
 set = "akh"
 
 ["Angelic Gift"]
@@ -429,7 +429,7 @@ set = "m21"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Ninjutsu - Enabler", "Tier 3", "Artifact Cards - Payoff",]
+tags = [ "Ninjutsu - Enabler", "Tier 3", "Artifact Cards - Payoff", "Card Advantage",]
 set = "kld"
 
 ["Harbinger of the Tides"]
@@ -499,7 +499,7 @@ set = "5dn"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 4", "Artifacts (Recursion) - Enabler", "Artifacts (Creature) - Payoff", "Card Advantage", "Cuttable",]
+tags = [ "Tier 4", "Artifacts (Recursion) - Enabler", "Artifacts (Creature) - Payoff", "Card Advantage",]
 set = "jmp"
 
 ["Dragon Turtle"]
@@ -548,7 +548,7 @@ set = "thb"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 3", "ETB - Payoff", "Wizards - Enabler",]
+tags = [ "Tier 3", "ETB - Payoff", "Wizards - Enabler", "Card Advantage",]
 set = "usg"
 
 ["Moonblade Shinobi"]
@@ -590,7 +590,7 @@ set = "dka"
 mana_cost = [ "3", "U", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "ETB - Payoff", "Tier 3",]
+tags = [ "ETB - Payoff", "Tier 3", "Card Advantage",]
 set = "eve"
 
 ["Higure, the Still Wind"]
@@ -674,7 +674,7 @@ set = "ths"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Tier 3", "Flash - Interaction",]
+tags = [ "Tier 3", "Flash - Interaction", "Cuttable",]
 set = "ori"
 
 [Dissolve]
@@ -709,7 +709,7 @@ set = "tmp"
 mana_cost = [ "3", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "ETB - Payoff", "Tier 4",]
+tags = [ "ETB - Payoff", "Tier 4", "Card Advantage",]
 set = "aer"
 
 ["Rain of Revelation"]
@@ -737,7 +737,7 @@ set = "soi"
 mana_cost = [ "4", "U", "U",]
 color_identity = "U"
 types = [ "sorcery",]
-tags = [ "ETB - Payoff", "Tier 1", "Ramp - Payoff", "Spice",]
+tags = [ "ETB - Payoff", "Tier 1", "Ramp - Payoff", "Spice", "Card Advantage",]
 set = "ogw"
 
 ["Mystic Subdual"]
@@ -765,7 +765,7 @@ set = "mh1"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Discard - Payoff", "Drake Haven - Payoff", "Tier 4", "Spice",]
+tags = [ "Discard - Payoff", "Drake Haven - Payoff", "Tier 4", "Spice", "Card Advantage",]
 set = "akh"
 
 ["Bloodsoaked Champion"]
@@ -821,7 +821,7 @@ set = "wwk"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "Lifegain - Enabler", "Graveyard - Enabler", "Cuttable",]
+tags = [ "Tier 3", "Lifegain - Enabler", "Graveyard - Enabler",]
 set = "thb"
 
 ["Oathsworn Vampire"]
@@ -849,7 +849,7 @@ set = "m11"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "ETB - Enabler",]
+tags = [ "Tier 3", "ETB - Enabler", "Graveyard - Enabler",]
 set = "xln"
 
 ["Sepulcher Ghoul"]
@@ -898,7 +898,7 @@ set = "mh2"
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "Graveyard - Enabler", "Ninjutsu - Enabler", "Cuttable",]
+tags = [ "Tier 3", "Graveyard - Enabler", "Ninjutsu - Enabler",]
 set = "m20"
 
 ["Kindly Stranger"]
@@ -1125,11 +1125,18 @@ types = [ "sorcery",]
 tags = [ "Tier 3", "Graveyard - Enabler", "Spells - Enabler",]
 set = "mh1"
 
+["Stitch Together"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 4", "Graveyard - Payoff",]
+set = "jud"
+
 [Victimize]
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Graveyard - Payoff", "Sacrifice Outlet - Enabler", "Tier 3", "Card Advantage",]
+tags = [ "Graveyard - Payoff", "Sacrifice Outlet - Enabler", "Tier 3", "Card Advantage", "Spice",]
 set = "usg"
 
 ["Sinister Concoction"]
@@ -1258,13 +1265,6 @@ types = [ "creature",]
 tags = [ "Graveyard - Enabler", "Wizards - Enabler", "Tier 2", "Hellbent - Payoff", "Discard - Enabler",]
 set = "c15"
 
-["Qal Sisma Behemoth"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Tier 4", "Power - Enabler", "Cuttable",]
-set = "dtk"
-
 ["Reckless Racer"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1300,6 +1300,20 @@ types = [ "creature",]
 tags = [ "Hellbent - Payoff", "Tier 3", "Card Advantage",]
 set = "ori"
 
+["Embodiment of Fury"]
+mana_cost = [ "3", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Power - Enabler", "Land Extra - Payoff",]
+set = "ogw"
+
+["Goblin Razerunners"]
+mana_cost = [ "2", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Tier 3", "Land Dying - Enabler", "Land Extra - Payoff", "Power - Enabler",]
+set = "con"
+
 [Magmaroth]
 mana_cost = [ "3", "R",]
 color_identity = "R"
@@ -1332,7 +1346,7 @@ set = "bfz"
 mana_cost = [ "4", "R", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", "Land Graveyard - Payoff", "Goreclaw - Payoff", "Interaction", "Card Advantage",]
+tags = [ "Tier 3", "Land Graveyard - Payoff", "Goreclaw - Payoff", "Interaction", "Card Advantage", "Graveyard - Payoff", "Cuttable",]
 set = "mh1"
 
 ["Bedlam Reveler"]
@@ -1341,13 +1355,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Spells - Payoff", "Tier 1", "Card Advantage",]
 set = "emn"
-
-["Fall of the Titans"]
-mana_cost = [ "X", "X", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Heroic - Enabler", "Spells - Enabler", "Tier 1", "Ramp - Payoff", "Spells (Red) - Enabler", "Interaction", "Card Advantage",]
-set = "ogw"
 
 ["Lightning Axe"]
 mana_cost = [ "R",]
@@ -1381,7 +1388,7 @@ set = "bng"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Heroic - Enabler", "Spells - Enabler", "Spells (Red) - Enabler", "Power - Payoff", "Trick", "Tier 4",]
+tags = [ "Heroic - Enabler", "Spells - Enabler", "Spells (Red) - Enabler", "Power - Payoff", "Trick", "Tier 4", "Cuttable",]
 set = "mh1"
 
 ["Magma Jet"]
@@ -1426,6 +1433,13 @@ types = [ "instant",]
 tags = [ "Power - Payoff", "Tier 4",]
 set = "war"
 
+["Fall of the Titans"]
+mana_cost = [ "X", "X", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Heroic - Enabler", "Spells - Enabler", "Tier 1", "Ramp - Payoff", "Spells (Red) - Enabler", "Interaction", "Card Advantage",]
+set = "ogw"
+
 ["Claim the Firstborn"]
 mana_cost = [ "R",]
 color_identity = "R"
@@ -1451,7 +1465,7 @@ set = "ori"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Spells - Enabler", "Heroic - Enabler", "Tier 4",]
+tags = [ "Spells - Enabler", "Heroic - Enabler", "Tier 4", "Cuttable",]
 set = "kld"
 
 ["Avacyn's Judgment"]
@@ -1514,7 +1528,7 @@ set = "ori"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "enchantment",]
-tags = [ "Hellbent - Payoff", "Tier 4", "Hellbent - Enabler", "Discard - Enabler", "Card Advantage",]
+tags = [ "Hellbent - Payoff", "Tier 4", "Hellbent - Enabler", "Discard - Enabler", "Card Advantage", "Cuttable",]
 set = "dom"
 
 ["Furious Rise"]
@@ -1558,6 +1572,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Elves - Enabler", "Tier 4",]
 set = "ori"
+
+["Elvish Visionary"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3", "ETB - Enabler", "Elves - Enabler", "Sacrifice - Enabler",]
+set = "ala"
 
 ["Elvish Warmaster"]
 mana_cost = [ "1", "G",]
@@ -1619,7 +1640,7 @@ set = "tsp"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Graveyard - Enabler", "ETB - Enabler", "Tier 2", "Land Extra - Enabler", "Land Graveyard - Enabler", "Sacrifice - Enabler",]
+tags = [ "Graveyard - Enabler", "Tier 2", "Land Extra - Enabler", "Land Graveyard - Enabler", "Sacrifice - Enabler",]
 set = "bng"
 
 ["Scrounging Bandar"]
@@ -1759,7 +1780,7 @@ set = "zen"
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Land Graveyard - Enabler", "Spirits - Enabler", "Flash - Threat", "Tier 2", "Land Extra - Payoff", "Power - Enabler",]
+tags = [ "Spirits - Enabler", "Flash - Threat", "Tier 2", "Land Extra - Payoff", "Power - Enabler",]
 set = "soi"
 
 ["Sporesower Thallid"]
@@ -1773,15 +1794,8 @@ set = "tsp"
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tokens - Enabler", "Land Graveyard - Enabler", "Tier 3", "Land Dying - Enabler", "Land Extra - Payoff", "Squirrels - Enabler", "Squirrels - Payoff",]
+tags = [ "Tokens - Enabler", "Land Graveyard - Enabler", "Tier 3", "Land Dying - Enabler", "Land Extra - Payoff", "Squirrels - Enabler", "Squirrels - Payoff", "Card Advantage",]
 set = "pcy"
-
-["Wildheart Invoker"]
-mana_cost = [ "2", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 3", "Power - Enabler", "Elves - Enabler",]
-set = "roe"
 
 ["Sporoloth Ancient"]
 mana_cost = [ "3", "G", "G",]
@@ -1794,7 +1808,7 @@ set = "tsr"
 mana_cost = [ "3", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Land Graveyard - Payoff", "Land Dying - Payoff", "Land Extra - Enabler", "Legends - Enabler", "Power - Enabler", "Tier 3", "Card Advantage",]
+tags = [ "Land Graveyard - Payoff", "Land Dying - Payoff", "Land Extra - Enabler", "Legends - Enabler", "Power - Enabler", "Tier 3", "Card Advantage", "Spice",]
 set = "c14"
 
 ["Earl of Squirrel"]
@@ -1843,7 +1857,7 @@ set = "rna"
 mana_cost = [ "2", "G", "G",]
 color_identity = "G"
 types = [ "instant",]
-tags = [ "Flash - Threat", "Tier 4", "Cuttable",]
+tags = [ "Flash - Threat", "Tier 4", "Cuttable", "Card Advantage",]
 set = "ody"
 
 ["Commune with the Gods"]
@@ -1881,13 +1895,6 @@ types = [ "sorcery",]
 tags = [ "Tier 3", "Graveyard - Enabler", "Land Extra - Enabler", "Land Graveyard - Enabler", "Spells - Enabler", "Card Advantage",]
 set = "mh1"
 
-["Genesis Wave"]
-mana_cost = [ "X", "G", "G", "G",]
-color_identity = "G"
-types = [ "sorcery",]
-tags = [ "Ramp - Payoff", "Tier 4", "Card Advantage",]
-set = "som"
-
 ["Hunting Triad"]
 mana_cost = [ "3", "G",]
 color_identity = "G"
@@ -1902,6 +1909,13 @@ types = [ "sorcery",]
 tags = [ "Tier 3", "Counters - Enabler", "Counters Target - Enabler", "Interaction",]
 set = "ogw"
 
+["Genesis Wave"]
+mana_cost = [ "X", "G", "G", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Ramp - Payoff", "Tier 4", "Card Advantage",]
+set = "som"
+
 ["Garruk's Uprising"]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1913,7 +1927,7 @@ set = "m21"
 mana_cost = [ "3", "G",]
 color_identity = "G"
 types = [ "enchantment",]
-tags = [ "Tokens - Payoff", "Land Extra - Enabler", "Tier 3", "Card Advantage",]
+tags = [ "Tokens - Payoff", "Tier 3", "Card Advantage", "Counters - Enabler",]
 set = "rix"
 
 ["The Mending of Dominaria"]
@@ -2023,9 +2037,9 @@ set = "gtc"
 
 ["Warden of the Chained"]
 mana_cost = [ "1", "R", "G",]
-color_identity = "GR"
+color_identity = "RG"
 types = [ "creature",]
-tags = [ "Tier 3", "Power - Enabler", "Power - Payoff", "Cuttable",]
+tags = [ "Tier 3", "Power - Enabler", "Power - Payoff",]
 set = "thb"
 
 ["Goblin Clearcutter"]
@@ -2252,12 +2266,40 @@ types = [ "creature",]
 tags = [ "Wizards - Enabler", "Flash - Threat", "Tier 3",]
 set = "ths"
 
+["Offspring's Revenge"]
+mana_cost = [ "2", "R", "W", "B",]
+color_identity = "WBR"
+types = [ "enchantment",]
+tags = [ "Spice", "Tier 3", "Card Advantage", "Graveyard - Payoff", "ETB - Payoff",]
+set = "iko"
+
+["Kalamax, the Stormsire"]
+mana_cost = [ "1", "G", "U", "R",]
+color_identity = "URG"
+types = [ "creature",]
+tags = [ "Tier 3", "Spice", "Card Advantage", "Spells - Payoff", "Power - Enabler", "Legends - Enabler",]
+set = "c20"
+
+["Abzan Ascendancy"]
+mana_cost = [ "W", "B", "G",]
+color_identity = "WBG"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Spice", "Counters - Enabler", "Sacrifice Outlet - Payoff",]
+set = "ktk"
+
 ["Jeskai Ascendancy"]
 mana_cost = [ "U", "R", "W",]
-color_identity = "RUW"
+color_identity = "WUR"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Spice",]
+tags = [ "Tier 4", "Spice", "Tokens - Payoff", "Spells - Payoff", "Discard - Enabler",]
 set = "ktk"
+
+["Titans' Nest"]
+mana_cost = [ "1", "B", "G", "U",]
+color_identity = "UBG"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Graveyard - Enabler", "Spice",]
+set = "iko"
 
 ["Metallic Mimic"]
 mana_cost = [ "2",]
@@ -2354,7 +2396,7 @@ set = "m20"
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Vampires - Payoff", "Sacrifice Outlet - Payoff", "Tier 4", "Artifact Cards - Enabler",]
+tags = [ "Vampires - Payoff", "Sacrifice Outlet - Payoff", "Tier 4", "Artifact Cards - Enabler", "Cuttable",]
 set = "zen"
 
 ["Brittle Effigy"]
@@ -2494,7 +2536,7 @@ set = "m20"
 mana_cost = [ "4",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "ETB - Payoff", "Artifacts (Noncreature) - Enabler", "Tier 4", "Artifact Cards - Enabler", "Spice",]
+tags = [ "ETB - Payoff", "Artifacts (Noncreature) - Enabler", "Tier 4", "Artifact Cards - Enabler", "Cuttable",]
 set = "kld"
 
 [Weatherlight]
@@ -2783,6 +2825,13 @@ color_identity = "GU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "apc"
+
+["Bonders' Enclave"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 3", "Card Advantage", "Power - Payoff",]
+set = "iko"
 
 ["Buried Ruin"]
 mana_cost = []
