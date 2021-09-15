@@ -229,6 +229,13 @@ types = [ "instant",]
 tags = [ "Aggro", "Trick", "Heroic Spell",]
 set = "khm"
 
+["Fateful Absence"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 2", "Interaction",]
+set = "mid"
+
 ["Resurgent Belief"]
 mana_cost = []
 color_identity = "W"
@@ -382,6 +389,13 @@ color_identity = "W"
 types = [ "land",]
 tags = [ "Aggro", "Trick",]
 set = "znr"
+
+["Larder Zombie"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Blocker",]
+set = "mid"
 
 ["Minister of Inquiries"]
 mana_cost = [ "U",]
@@ -852,6 +866,13 @@ types = [ "creature",]
 tags = [ "Aggro", "Devotion",]
 set = "tor"
 
+["Pain Seer"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Card Advantage", "Aggro",]
+set = "bng"
+
 ["Putrid Goblin"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1195,6 +1216,13 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "m21"
 
+["Flame Channeler"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Aggro", "Card Advantage", "Tier 2",]
+set = "mid"
+
 ["Goblin Engineer"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1250,6 +1278,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Elemental Payoff", "Card Advantage", "Cuttable",]
 set = "lrw"
+
+["Smoldering Egg"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Big Spells Payoff", "Spells Payoff", "Card Advantage", "Blocker",]
+set = "mid"
 
 ["Ahn-Crop Crasher"]
 mana_cost = [ "2", "R",]
@@ -1636,6 +1671,13 @@ types = [ "creature",]
 tags = [ "Card Advantage", "Blocker", "Sacrifice",]
 set = "mbs"
 
+["Werewolf Pack Leader"]
+mana_cost = [ "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Aggro", "Card Advantage",]
+set = "afr"
+
 [Bloodbriar]
 mana_cost = [ "2", "G",]
 color_identity = "G"
@@ -1766,7 +1808,7 @@ set = "ons"
 mana_cost = [ "3", "G", "G",]
 color_identity = "G"
 types = [ "planeswalker",]
-tags = [ "Card Advantage",]
+tags = [ "Card Advantage", "Tier 2",]
 set = "mid"
 
 ["Fortifying Draught"]
@@ -1866,13 +1908,6 @@ color_identity = "G"
 types = [ "sorcery",]
 tags = [ "Card Advantage", "Cuttable",]
 set = "mrd"
-
-["Rishkar's Expertise"]
-mana_cost = [ "4", "G", "G",]
-color_identity = "G"
-types = [ "sorcery",]
-tags = [ "Card Advantage", "Tier 2", "Cuttable",]
-set = "aer"
 
 ["Mouth // Feed"]
 mana_cost = [ "2", "G",]
@@ -2727,6 +2762,13 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Finisher", "Tier 2", "Card Advantage", "Aggro", "Enchantment Payoff", "Artifact Payoff",]
 set = "mh2"
+
+["Temple Bell"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Mill",]
+set = "m11"
 
 ["Forsaken Monument"]
 mana_cost = [ "5",]

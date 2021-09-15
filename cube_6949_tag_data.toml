@@ -58,7 +58,7 @@ set = "chk"
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Control", "Cuttable",]
+tags = [ "Strategy - Control", "Cuttable", "Tier 4",]
 set = "afr"
 
 ["Kor Skyfisher"]
@@ -179,6 +179,13 @@ color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "jou"
+
+["Thalia's Geistcaller"]
+mana_cost = [ "2", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Control", "Card Advantage", "Non-Canon", "Cuttable",]
+set = "c19"
 
 ["Vizier of Deferment"]
 mana_cost = [ "2", "W",]
@@ -513,7 +520,7 @@ set = "m15"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Cuttable", "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "chk"
 
 ["Lighthouse Chronologist"]
@@ -733,6 +740,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control", "Strategy - Aggro", "Bounce",]
 set = "gpt"
 
+["Secrets of the Key"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Card Advantage", "Cuttable",]
+set = "mid"
+
 [Suspend]
 mana_cost = [ "U",]
 color_identity = "U"
@@ -901,13 +915,6 @@ types = [ "sorcery",]
 tags = [ "Tier 2", "Strategy - Control", "Card Advantage",]
 set = "tor"
 
-["Time Warp"]
-mana_cost = [ "3", "U", "U",]
-color_identity = "U"
-types = [ "sorcery",]
-tags = [ "Tier 4", "Project", "Cuttable",]
-set = "tmp"
-
 ["Mass Polymorph"]
 mana_cost = [ "5", "U",]
 color_identity = "U"
@@ -957,12 +964,12 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
 set = "m15"
 
-["Stupefying Touch"]
-mana_cost = [ "1", "U",]
+["Grafted Identity"]
+mana_cost = [ "2", "U", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Cuttable",]
-set = "tor"
+tags = [ "Removal", "Tier 3", "Card Advantage", "Cuttable",]
+set = "mid"
 
 ["Carrion Feeder"]
 mana_cost = [ "B",]
@@ -989,7 +996,7 @@ set = "m11"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Cuttable", "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "chk"
 
 ["Asylum Visitor"]
@@ -1045,7 +1052,7 @@ set = "lgn"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Control", "Cuttable",]
+tags = [ "Tier 3", "Strategy - Control",]
 set = "khm"
 
 ["Dregscape Sliver"]
@@ -1076,13 +1083,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "emn"
 
-["Pain Seer"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage", "Cuttable",]
-set = "bng"
-
 ["Soldevi Adnate"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1108,7 +1108,7 @@ set = "csp"
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 2", "Strategy - Aggro", "Card Advantage",]
+tags = [ "Strategy - Aggro", "Card Advantage", "Tier 3",]
 set = "m21"
 
 ["Nantuko Husk"]
@@ -1402,7 +1402,7 @@ set = "tsp"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "artifact",]
-tags = [ "Tier 3", "Cuttable", "Strategy - Aggro",]
+tags = [ "Cuttable", "Strategy - Aggro", "Tier 4",]
 set = "m21"
 
 ["Dead Weight"]
@@ -1432,6 +1432,13 @@ color_identity = "B"
 types = [ "enchantment",]
 tags = [ "Strategy - Control", "Tier 4", "Removal",]
 set = "inv"
+
+["No Rest for the Wicked"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "enchantment",]
+tags = [ "Tier 4", "Card Advantage",]
+set = "usg"
 
 ["Bomat Courier"]
 mana_cost = [ "1",]
@@ -1507,7 +1514,7 @@ set = "m11"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 4", "Cuttable",]
+tags = [ "Tier 4", "Project",]
 set = "chk"
 
 ["Firefist Striker"]
@@ -1808,7 +1815,7 @@ set = "p02"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+tags = [ "Strategy - Aggro", "Tier 4",]
 set = "dka"
 
 ["Maximize Velocity"]
@@ -1955,7 +1962,7 @@ set = "xln"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Cuttable", "Tier 4",]
+tags = [ "Tier 4", "Project",]
 set = "chk"
 
 ["Elvish Visionary"]
@@ -2497,6 +2504,13 @@ types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "inv"
 
+["Rite of Harmony"]
+mana_cost = [ "G", "W",]
+color_identity = "WG"
+types = [ "instant",]
+tags = [ "Card Advantage", "Tier 3",]
+set = "mid"
+
 ["Saffi Eriksdotter"]
 mana_cost = [ "G", "W",]
 color_identity = "GW"
@@ -2721,13 +2735,6 @@ types = [ "artifact", "creature",]
 tags = [ "Strategy - Control", "Cuttable", "Tier 3",]
 set = "stx"
 
-["Heap Doll"]
-mana_cost = [ "1",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Tier 4",]
-set = "shm"
-
 ["Hope of Ghirapur"]
 mana_cost = [ "1",]
 color_identity = ""
@@ -2818,6 +2825,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Control", "Card Advantage",]
 set = "soi"
+
+["Crossroads Candleguide"]
+mana_cost = [ "4",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4",]
+set = "mid"
 
 [Extruder]
 mana_cost = [ "4",]
@@ -2959,13 +2973,6 @@ types = [ "artifact",]
 tags = [ "Tier 4", "Removal",]
 set = "som"
 
-["Goldvein Pick"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
-set = "khm"
-
 ["Guardian Idol"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -3054,7 +3061,7 @@ set = "lrw"
 mana_cost = [ "4",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Tier 1", "Strategy - Control", "Card Advantage",]
+tags = [ "Strategy - Control", "Card Advantage", "Tier 2",]
 set = "m13"
 
 ["Gauntlet of Power"]
@@ -3511,6 +3518,13 @@ color_identity = "GU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ths"
+
+["Holdout Settlement"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 3", "Fixer",]
+set = "ogw"
 
 ["Mouth of Ronom"]
 mana_cost = []
