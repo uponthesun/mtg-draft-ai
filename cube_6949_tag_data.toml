@@ -96,13 +96,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "aer"
 
-["Shepherd of the Flock"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
-set = "eld"
-
 ["Sram, Senior Edificer"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -229,6 +222,13 @@ types = [ "creature",]
 tags = [ "Tier 0", "Strategy - Aggro", "Strategy - Control", "Card Advantage",]
 set = "mor"
 
+["Moorland Rescuer"]
+mana_cost = [ "5", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage", "Non-Canon",]
+set = "mic"
+
 ["Yosei, the Morning Star"]
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
@@ -289,7 +289,7 @@ set = "bok"
 mana_cost = [ "X", "W", "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 1", "Non-Canon", "Removal",]
+tags = [ "Strategy - Aggro", "Strategy - Control", "Non-Canon", "Removal", "Tier 2",]
 set = "c13"
 
 [Ghostway]

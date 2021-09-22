@@ -250,13 +250,6 @@ types = [ "creature",]
 tags = [ "Lifegain - Payoff", "Card Advantage", "Tier 2",]
 set = "hou"
 
-["Pillardrop Rescuer"]
-mana_cost = [ "4", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Spirits - Enabler", "Card Advantage", "Tier 4", "ETB - Enabler", "Cuttable",]
-set = "stx"
-
 ["Ajani's Presence"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -417,6 +410,13 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "ETB - Enabler", "Ninjutsu - Enabler", "Tier 4",]
 set = "m11"
+
+["Baithook Angler"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3", "Spirits - Enabler", "Ninjutsu - Enabler",]
+set = "mid"
 
 ["Brineborn Cutthroat"]
 mana_cost = [ "1", "U",]
@@ -649,19 +649,26 @@ types = [ "instant",]
 tags = [ "Tier 3", "Flash - Interaction", "Interaction",]
 set = "ktk"
 
-[Disperse]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3", "Interaction",]
-set = "mor"
-
 ["Essence Capture"]
 mana_cost = [ "U", "U",]
 color_identity = "U"
 types = [ "instant",]
 tags = [ "Interaction", "Flash - Interaction", "Tier 3",]
 set = "rna"
+
+[Geistwave]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Interaction", "Flash - Interaction", "Spells - Enabler",]
+set = "mid"
+
+["Lofty Denial"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 4", "Flash - Interaction",]
+set = "m21"
 
 ["Mana Leak"]
 mana_cost = [ "1", "U",]
@@ -683,13 +690,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Spells - Enabler", "Flash - Interaction", "Tier 3", "Interaction",]
 set = "ths"
-
-["Calculated Dismissal"]
-mana_cost = [ "2", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 3", "Flash - Interaction", "Cuttable",]
-set = "ori"
 
 [Dissolve]
 mana_cost = [ "1", "U", "U",]

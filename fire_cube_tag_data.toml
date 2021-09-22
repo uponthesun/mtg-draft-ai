@@ -96,6 +96,13 @@ types = [ "creature",]
 tags = [ "Aggro",]
 set = "grn"
 
+["Wall of Mourning"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Card Advantage", "Blocker",]
+set = "mic"
+
 ["Digsite Engineer"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -142,7 +149,7 @@ set = "afr"
 mana_cost = [ "2", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Clerics Payoff", "Finisher", "Lifegain Payoff",]
+tags = [ "Clerics Payoff", "Finisher", "Lifegain Payoff", "Blocker",]
 set = "khm"
 
 ["Solemn Recruit"]
@@ -529,6 +536,13 @@ color_identity = "U"
 types = [ "creature",]
 tags = [ "Card Advantage", "Finisher", "Devotion",]
 set = "isd"
+
+["Cleaver Skaab"]
+mana_cost = [ "3", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Card Advantage", "Zombie Payoff",]
+set = "mic"
 
 ["Living Lore"]
 mana_cost = [ "3", "U",]
@@ -1468,6 +1482,13 @@ types = [ "instant",]
 tags = [ "Finisher", "Interaction", "Card Advantage", "Cuttable", "Aggro", "Wordy",]
 set = "mrd"
 
+["Magmatic Sinkhole"]
+mana_cost = [ "5", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Interaction", "Big Spell",]
+set = "mh1"
+
 ["Glimpse of Tomorrow"]
 mana_cost = []
 color_identity = "R"
@@ -1803,13 +1824,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Card Advantage", "Cuttable",]
 set = "ons"
-
-["Wrenn and Seven"]
-mana_cost = [ "3", "G", "G",]
-color_identity = "G"
-types = [ "planeswalker",]
-tags = [ "Card Advantage", "Tier 2",]
-set = "mid"
 
 ["Fortifying Draught"]
 mana_cost = [ "G",]
@@ -3147,13 +3161,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Interaction", "Card Advantage", "Tier 2", "Sweeper",]
 set = "war"
-
-["Blinkmoth Nexus"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Aggro",]
-set = "dst"
 
 ["Field of Ruin"]
 mana_cost = []
