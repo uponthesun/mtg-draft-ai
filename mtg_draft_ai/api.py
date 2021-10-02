@@ -52,6 +52,7 @@ class Card:
 
     @staticmethod
     def from_raw_data(name, properties):
+        name = Card.sanitize_name(name)
         raw_tags = properties['tags']
         tags = []
         power_tier = None
@@ -71,6 +72,10 @@ class Card:
         card_set = properties['set'] if 'set' in properties else None
         return Card(name, color_id=properties['color_identity'], types=properties['types'],
                     mana_cost=properties['mana_cost'], tags=tags, power_tier=power_tier, card_set=card_set)
+
+    @staticmethod
+    def sanitize_name(name):
+        return name.replace('ö', 'o')
 
 
 class Drafter:
