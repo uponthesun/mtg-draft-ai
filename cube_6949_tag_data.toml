@@ -824,13 +824,6 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control", "Card Advantage",]
 set = "sok"
 
-["Saw It Coming"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "khm"
-
 ["Sinister Sabotage"]
 mana_cost = [ "1", "U", "U",]
 color_identity = "U"
@@ -844,6 +837,13 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control", "Card Advantage",]
 set = "mrd"
+
+["You Find the Villains' Lair"]
+mana_cost = [ "1", "U", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "afr"
 
 ["Gifts Ungiven"]
 mana_cost = [ "3", "U",]
