@@ -12,19 +12,19 @@ types = [ "creature",]
 tags = [ "Tier 4", "Graveyard",]
 set = "mid"
 
-["Mardu Woe-Reaper"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Graveyard Interaction", "Cuttable", "Tier 4",]
-set = "frf"
-
 ["Mother of Runes"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
 tags = [ "Tier 2", "Card Advantage", "Removal Interaction",]
 set = "ulg"
+
+["Stonebinder's Familiar"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "creature",]
+tags = [ "Tier 4", "Cuttable",]
+set = "stx"
 
 ["Student of Warfare"]
 mana_cost = [ "W",]
@@ -37,14 +37,14 @@ set = "roe"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage",]
+tags = [ "Tier 3",]
 set = "khm"
 
 ["Weathered Wayfarer"]
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Card Advantage", "Tier 3", "Sideboard",]
+tags = [ "Card Advantage", "Tier 3",]
 set = "ons"
 
 ["Ambitious Farmhand"]
@@ -79,14 +79,14 @@ set = "csp"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Card Advantage", "Tier 3", "Ramp",]
+tags = [ "Card Advantage", "Ramp", "Tier 2",]
 set = "ala"
 
 ["Leonin Lightscribe"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Tier 3",]
+tags = [ "Tier 3", "Finisher",]
 set = "stx"
 
 ["Leonin Relic-Warder"]
@@ -114,7 +114,7 @@ set = "stx"
 mana_cost = [ "W", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Graveyard Interaction", "Sideboard", "Tier 4",]
+tags = [ "Graveyard Interaction", "Tier 4",]
 set = "chk"
 
 ["Seasoned Hallowblade"]
@@ -135,7 +135,7 @@ set = "emn"
 mana_cost = [ "1", "W",]
 color_identity = "W"
 types = [ "creature",]
-tags = [ "Removal Interaction", "Card Advantage", "Tier 3",]
+tags = [ "Removal Interaction", "Card Advantage", "Tier 4",]
 set = "eld"
 
 ["Sungold Sentinel"]
@@ -243,13 +243,6 @@ types = [ "creature",]
 tags = [ "Combo", "Card Advantage", "Graveyard", "Tier 3",]
 set = "mh2"
 
-["Timeless Dragon"]
-mana_cost = [ "3", "W", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Card Advantage", "Graveyard", "Finisher", "Tier 2",]
-set = "mh2"
-
 ["Sun Titan"]
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
@@ -275,7 +268,7 @@ set = "c21"
 mana_cost = [ "W",]
 color_identity = "W"
 types = [ "instant",]
-tags = [ "Removal Interaction", "Card Advantage", "Tier 3",]
+tags = [ "Removal Interaction", "Card Advantage", "Tier 3", "Combo",]
 set = "mh1"
 
 ["Fight as One"]
@@ -284,13 +277,6 @@ color_identity = "W"
 types = [ "instant",]
 tags = [ "Removal Interaction", "Card Advantage", "Trick", "Tier 4",]
 set = "iko"
-
-["Harm's Way"]
-mana_cost = [ "W",]
-color_identity = "W"
-types = [ "instant",]
-tags = [ "Removal", "Tier 3",]
-set = "m10"
 
 ["Path to Exile"]
 mana_cost = [ "W",]
@@ -326,6 +312,13 @@ color_identity = "W"
 types = [ "instant",]
 tags = [ "Removal", "Artifact Interaction", "Enchantment Interaction", "Planeswalker Interaction", "Tier 2",]
 set = "c13"
+
+["Valorous Stance"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 4", "Removal", "Removal Interaction",]
+set = "frf"
 
 ["Prismatic Ending"]
 mana_cost = [ "X", "W",]
@@ -389,6 +382,13 @@ color_identity = "W"
 types = [ "enchantment",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "stx"
+
+["Stasis Snare"]
+mana_cost = [ "1", "W", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Removal", "Exiling Removal",]
+set = "bfz"
 
 ["Parallax Wave"]
 mana_cost = [ "2", "W", "W",]
@@ -457,7 +457,7 @@ set = "m13"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Card Advantage", "Tier 2",]
+tags = [ "Card Advantage", "Tier 3",]
 set = "eld"
 
 ["Faerie Vandal"]
@@ -495,19 +495,19 @@ types = [ "creature",]
 tags = [ "Combo", "Tier 3", "Finisher",]
 set = "thb"
 
-["Vedalken Mastermind"]
-mana_cost = [ "U", "U",]
-color_identity = "U"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage", "Removal Interaction",]
-set = "5dn"
-
 ["Champion of Wits"]
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "creature",]
 tags = [ "Card Advantage", "Graveyard", "Tier 2",]
 set = "hou"
+
+["Cosima, God of the Voyage"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage",]
+set = "khm"
 
 ["Dream Strix"]
 mana_cost = [ "2", "U",]
@@ -569,7 +569,7 @@ set = "c20"
 mana_cost = [ "5", "U", "U",]
 color_identity = "U"
 types = [ "creature",]
-tags = [ "Tier 3", "Finisher",]
+tags = [ "Finisher", "Tier 4",]
 set = "m21"
 
 ["Jace, Wielder of Mysteries"]
@@ -632,7 +632,7 @@ set = "roe"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Counterspell", "Sideboard", "Tier 4",]
+tags = [ "Counterspell", "Tier 4",]
 set = "ktk"
 
 ["Flash of Insight"]
@@ -674,7 +674,7 @@ set = "mir"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Counterspell", "Sideboard", "Tier 3",]
+tags = [ "Counterspell", "Tier 3",]
 set = "m10"
 
 [Remand]
@@ -697,13 +697,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Counterspell", "Bounce", "Tier 3", "Artifact Interaction", "Enchantment Interaction", "Planeswalker Interaction",]
 set = "stx"
-
-["Saw It Coming"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 3", "Counterspell",]
-set = "khm"
 
 ["Thirst for Knowledge"]
 mana_cost = [ "2", "U",]
@@ -782,6 +775,13 @@ types = [ "sorcery",]
 tags = [ "Card Advantage", "Tier 3",]
 set = "iko"
 
+["Teachings of the Archaics"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Sideboard", "Tier 4",]
+set = "stx"
+
 ["Time Warp"]
 mana_cost = [ "3", "U", "U",]
 color_identity = "U"
@@ -807,7 +807,7 @@ set = "eld"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Tier 4", "Sideboard", "Card Advantage", "Ability Interaction",]
+tags = [ "Tier 4", "Card Advantage", "Ability Interaction",]
 set = "mh2"
 
 ["Search for Azcanta"]
@@ -856,7 +856,7 @@ set = "eld"
 mana_cost = []
 color_identity = "U"
 types = [ "land",]
-tags = [ "Tier 4", "Removal Interaction", "Card Advantage",]
+tags = [ "Tier 4", "Removal Interaction", "Card Advantage", "Cuttable",]
 set = "ons"
 
 ["Carrion Feeder"]
@@ -915,18 +915,11 @@ types = [ "creature",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "war"
 
-["Heir of Falkenrath"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Tier 3",]
-set = "soi"
-
 ["Jadar, Ghoulcaller of Nephalia"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Tier 3", "Cuttable",]
+tags = [ "Cuttable", "Tier 4",]
 set = "mid"
 
 ["Kitesail Freebooter"]
@@ -935,6 +928,27 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Hand Interaction", "Tier 3",]
 set = "m21"
+
+["Order of Midnight"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage", "Graveyard",]
+set = "eld"
+
+["Piper of the Swarm"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage", "Removal",]
+set = "eld"
+
+["Putrid Goblin"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Combo",]
+set = "mh1"
 
 ["Sinister Starfish"]
 mana_cost = [ "1", "B",]
@@ -971,13 +985,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Card Advantage",]
 set = "grn"
 
-["Nether Spirit"]
-mana_cost = [ "1", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Graveyard", "Card Advantage", "Tier 4", "Cuttable",]
-set = "mmq"
-
 ["Sedgemoor Witch"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -996,7 +1003,7 @@ set = "thb"
 mana_cost = [ "2", "B",]
 color_identity = "B"
 types = [ "creature",]
-tags = [ "Combo Sac Outlet", "Tier 3", "Sideboard", "Removal Interaction", "Anti-Sweeper",]
+tags = [ "Combo Sac Outlet", "Tier 3", "Removal Interaction", "Anti-Sweeper",]
 set = "aer"
 
 ["Inverter of Truth"]
@@ -1101,7 +1108,7 @@ set = "m21"
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "instant",]
-tags = [ "Removal", "Planeswalker Interaction", "Exiling Removal", "Tier 2",]
+tags = [ "Removal", "Planeswalker Interaction", "Exiling Removal", "Tier 3",]
 set = "stx"
 
 ["Bile Blight"]
@@ -1111,19 +1118,19 @@ types = [ "instant",]
 tags = [ "Removal", "Tier 3",]
 set = "bng"
 
+["Heartless Act"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "instant",]
+tags = [ "Tier 2", "Removal",]
+set = "iko"
+
 ["Erebos's Intervention"]
 mana_cost = [ "X", "B",]
 color_identity = "B"
 types = [ "instant",]
 tags = [ "Removal", "Graveyard Interaction", "Tier 3",]
 set = "thb"
-
-["Hero's Downfall"]
-mana_cost = [ "1", "B", "B",]
-color_identity = "B"
-types = [ "instant",]
-tags = [ "Removal", "Planeswalker Interaction", "Tier 3",]
-set = "ths"
 
 ["Poison the Cup"]
 mana_cost = [ "1", "B", "B",]
@@ -1164,7 +1171,7 @@ set = "jud"
 mana_cost = [ "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Sideboard", "Hand Interaction", "Tier 3",]
+tags = [ "Hand Interaction", "Tier 3",]
 set = "usg"
 
 ["Inquisition of Kozilek"]
@@ -1192,7 +1199,7 @@ set = "lrw"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Tier 4", "Sideboard", "Hand Interaction", "Cuttable",]
+tags = [ "Tier 4", "Hand Interaction", "Cuttable",]
 set = "thb"
 
 ["Collective Brutality"]
@@ -1206,14 +1213,21 @@ set = "emn"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Removal", "Enchantment Interaction", "Sideboard", "Tier 3",]
+tags = [ "Removal", "Enchantment Interaction", "Tier 3",]
 set = "znr"
 
 [Persist]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Graveyard", "Tier 3", "Cuttable",]
+tags = [ "Graveyard", "Tier 3",]
+set = "mh2"
+
+["Flay Essence"]
+mana_cost = [ "1", "B", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Removal", "Exiling Removal",]
 set = "mh2"
 
 ["Necrotic Fumes"]
@@ -1227,7 +1241,7 @@ set = "stx"
 mana_cost = [ "3", "B",]
 color_identity = "B"
 types = [ "sorcery",]
-tags = [ "Sweeper", "Card Advantage", "Exiling Removal", "Tier 3", "Cuttable",]
+tags = [ "Sweeper", "Card Advantage", "Exiling Removal", "Tier 3",]
 set = "iko"
 
 ["Egon, God of Death"]
@@ -1241,7 +1255,7 @@ set = "khm"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "artifact",]
-tags = [ "Tier 3", "Card Advantage",]
+tags = [ "Card Advantage", "Tier 2",]
 set = "stx"
 
 ["Animate Dead"]
@@ -1255,7 +1269,7 @@ set = "4ed"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "enchantment",]
-tags = [ "Tier 3", "Card Advantage", "Sideboard",]
+tags = [ "Tier 3", "Card Advantage",]
 set = "xln"
 
 ["Oath of Ghouls"]
@@ -1311,7 +1325,7 @@ set = "bfz"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 2",]
+tags = [ "Tier 3",]
 set = "mid"
 
 ["Goblin Welder"]
@@ -1360,7 +1374,7 @@ set = "mid"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Sideboard", "Removal", "Artifact Interaction", "Tier 3",]
+tags = [ "Removal", "Artifact Interaction", "Tier 3",]
 set = "grn"
 
 ["Goblin Engineer"]
@@ -1404,13 +1418,6 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Card Advantage", "Tier 3",]
 set = "m14"
-
-["Bogardan Dragonheart"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Combo Sac Outlet", "Cuttable", "Tier 4",]
-set = "mh1"
 
 ["Breya's Apprentice"]
 mana_cost = [ "2", "R",]
@@ -1500,21 +1507,21 @@ set = "ogw"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 4", "Trick", "Card Advantage", "Removal",]
+tags = [ "Tier 4", "Trick", "Card Advantage",]
 set = "stx"
 
 ["Lava Dart"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Tier 3", "Removal", "Graveyard", "Sideboard",]
+tags = [ "Tier 3", "Removal", "Graveyard", "Cuttable",]
 set = "jud"
 
 ["Lightning Bolt"]
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Removal", "Planeswalker Interaction", "Cuttable", "Tier 2",]
+tags = [ "Removal", "Planeswalker Interaction", "Tier 2",]
 set = "m10"
 
 ["Magma Spray"]
@@ -1573,6 +1580,13 @@ types = [ "instant",]
 tags = [ "Tier 4", "Sideboard", "Artifact Interaction", "Removal",]
 set = "iko"
 
+["Demon Bolt"]
+mana_cost = [ "2", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Removal", "Tier 3", "Planeswalker Interaction",]
+set = "khm"
+
 [Electrodominance]
 mana_cost = [ "X", "R", "R",]
 color_identity = "R"
@@ -1612,7 +1626,7 @@ set = "dka"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Exiling Removal", "Removal", "Tier 3",]
+tags = [ "Exiling Removal", "Removal", "Tier 3", "Planeswalker Interaction",]
 set = "avr"
 
 ["Cleansing Wildfire"]
@@ -1668,7 +1682,7 @@ set = "c15"
 mana_cost = [ "1",]
 color_identity = "R"
 types = [ "artifact",]
-tags = [ "Tier 3", "Removal",]
+tags = [ "Tier 3", "Removal", "Planeswalker Interaction",]
 set = "mrd"
 
 ["Cursed Mirror"]
@@ -1691,6 +1705,13 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "Card Advantage", "Tier 4",]
 set = "m21"
+
+["Barbarian Ring"]
+mana_cost = []
+color_identity = "R"
+types = [ "land",]
+tags = [ "Tier 4", "Removal", "Planeswalker Interaction",]
+set = "ody"
 
 ["Den of the Bugbear"]
 mana_cost = []
@@ -1716,7 +1737,7 @@ set = "ons"
 ["Plargg, Dean of Chaos"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
-types = [ "card",]
+types = [ "creature",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "stx"
 
@@ -1769,6 +1790,13 @@ types = [ "creature",]
 tags = [ "Tier 4", "Cuttable",]
 set = "mid"
 
+["Brindle Shoat"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "pc2"
+
 ["Devoted Druid"]
 mana_cost = [ "1", "G",]
 color_identity = "G"
@@ -1801,7 +1829,7 @@ set = "m21"
 mana_cost = [ "1", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Removal", "Sideboard", "Tier 4", "Cuttable",]
+tags = [ "Removal", "Tier 4", "Cuttable",]
 set = "grn"
 
 ["Lambholt Pacifist"]
@@ -1864,7 +1892,7 @@ set = "eld"
 mana_cost = [ "2", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Sideboard", "Graveyard Interaction", "Tier 3",]
+tags = [ "Graveyard Interaction", "Tier 3",]
 set = "xln"
 
 ["Den Protector"]
@@ -1878,7 +1906,7 @@ set = "dtk"
 mana_cost = [ "1", "G", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Graveyard", "Card Advantage", "Tier 2", "Cuttable",]
+tags = [ "Graveyard", "Card Advantage", "Tier 2", "Combo",]
 set = "5dn"
 
 ["Hooded Hydra"]
@@ -1908,13 +1936,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 4", "Mana Sink", "Card Advantage",]
 set = "m15"
-
-["Centaur Vinecrasher"]
-mana_cost = [ "3", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Graveyard", "Card Advantage", "Tier 3", "Finisher",]
-set = "c15"
 
 ["Masked Admirers"]
 mana_cost = [ "2", "G", "G",]
@@ -1962,7 +1983,7 @@ set = "kld"
 mana_cost = [ "5", "G",]
 color_identity = "G"
 types = [ "creature",]
-tags = [ "Tier 3", "Graveyard",]
+tags = [ "Graveyard", "Tier 4",]
 set = "ktk"
 
 [Terastodon]
@@ -1978,6 +1999,13 @@ color_identity = "G"
 types = [ "instant",]
 tags = [ "Removal Interaction", "Trick", "Tier 3",]
 set = "kld"
+
+["Duel for Dominance"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "instant",]
+tags = [ "Tier 3", "Removal", "Trick",]
+set = "mid"
 
 ["Verdant Command"]
 mana_cost = [ "1", "G",]
@@ -2013,13 +2041,6 @@ color_identity = "G"
 types = [ "sorcery",]
 tags = [ "Tier 4",]
 set = "roe"
-
-["Traverse the Ulvenwald"]
-mana_cost = [ "G",]
-color_identity = "G"
-types = [ "sorcery",]
-tags = [ "Graveyard", "Tier 3",]
-set = "soi"
 
 [Explore]
 mana_cost = [ "1", "G",]
@@ -2074,7 +2095,7 @@ set = "lrw"
 mana_cost = [ "5", "G",]
 color_identity = "G"
 types = [ "sorcery",]
-tags = [ "Card Advantage", "Big Mana", "Cuttable", "Tier 4",]
+tags = [ "Card Advantage", "Big Mana", "Tier 4",]
 set = "bfz"
 
 ["Birthing Pod"]
@@ -2144,7 +2165,7 @@ set = "afr"
 mana_cost = []
 color_identity = "G"
 types = [ "land",]
-tags = [ "Tier 4",]
+tags = [ "Tier 4", "Cuttable",]
 set = "fut"
 
 ["Tranquil Thicket"]
@@ -2256,7 +2277,7 @@ set = "khm"
 mana_cost = [ "2", "B", "/", "R", "B", "/", "R",]
 color_identity = "BR"
 types = [ "creature",]
-tags = [ "Combo", "Card Advantage", "Graveyard", "Tier 3", "Removal",]
+tags = [ "Combo", "Card Advantage", "Graveyard", "Tier 3", "Removal", "Planeswalker Interaction",]
 set = "shm"
 
 ["Kessig Wolf Run"]
@@ -2277,7 +2298,7 @@ set = "mh1"
 mana_cost = [ "X", "G",]
 color_identity = "RG"
 types = [ "instant",]
-tags = [ "Tier 3", "Sweeper", "Graveyard", "Card Advantage", "Sideboard",]
+tags = [ "Tier 3", "Sweeper", "Graveyard", "Card Advantage",]
 set = "akh"
 
 ["Struggle // Survive"]
@@ -2291,7 +2312,7 @@ set = "hou"
 mana_cost = [ "G",]
 color_identity = "WG"
 types = [ "instant",]
-tags = [ "Card Advantage", "Graveyard", "Tier 3", "Trick", "Sideboard", "Removal Interaction",]
+tags = [ "Card Advantage", "Graveyard", "Tier 3", "Trick", "Removal Interaction",]
 set = "tsp"
 
 ["Qasali Pridemage"]
@@ -2403,7 +2424,7 @@ set = "eld"
 mana_cost = [ "1", "R",]
 color_identity = "UR"
 types = [ "instant",]
-tags = [ "Removal", "Tier 2",]
+tags = [ "Removal", "Tier 2", "Planeswalker Interaction",]
 set = "cmd"
 
 ["Elemental Summoning"]
@@ -2412,13 +2433,6 @@ color_identity = "RU"
 types = [ "sorcery",]
 tags = [ "Sideboard", "Tier 3",]
 set = "stx"
-
-["Ravenous Squirrel"]
-mana_cost = [ "B", "/", "G",]
-color_identity = "BG"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage",]
-set = "mh2"
 
 ["Grim Flayer"]
 mana_cost = [ "B", "G",]
@@ -2433,6 +2447,13 @@ color_identity = "BG"
 types = [ "creature",]
 tags = [ "Tier 3", "Anti-Sweeper", "Finisher",]
 set = "rtr"
+
+["Catacomb Sifter"]
+mana_cost = [ "1", "B", "G",]
+color_identity = "BG"
+types = [ "creature",]
+tags = [ "Tier 3",]
+set = "bfz"
 
 ["Pest Summoning"]
 mana_cost = [ "1", "B", "/", "G", "B", "/", "G",]
@@ -2494,14 +2515,14 @@ set = "soi"
 mana_cost = [ "2", "R", "W",]
 color_identity = "WR"
 types = [ "sorcery",]
-tags = [ "Tier 4", "Graveyard", "Card Advantage", "Cuttable", "Sideboard",]
+tags = [ "Tier 4", "Graveyard", "Card Advantage", "Cuttable",]
 set = "stx"
 
 ["Decisive Denial"]
 mana_cost = [ "G", "U",]
 color_identity = "UG"
 types = [ "instant",]
-tags = [ "Tier 3", "Removal", "Sideboard", "Counterspell",]
+tags = [ "Tier 3", "Removal", "Counterspell",]
 set = "stx"
 
 ["Growth Spiral"]
@@ -2592,7 +2613,7 @@ set = "mh1"
 mana_cost = [ "2",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Planeswalker Interaction", "Ability Interaction", "Tier 4", "Sideboard",]
+tags = [ "Planeswalker Interaction", "Ability Interaction", "Tier 4",]
 set = "mbs"
 
 ["Walking Ballista"]
@@ -2608,6 +2629,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Big Mana", "Ramp",]
 set = "c16"
+
+[Masticore]
+mana_cost = [ "4",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 3", "Removal", "Mana Sink",]
+set = "uds"
 
 ["Phyrexian Metamorph"]
 mana_cost = [ "3", "U", "/", "P",]
@@ -2641,7 +2669,7 @@ set = "mrd"
 mana_cost = [ "6",]
 color_identity = ""
 types = [ "artifact", "creature",]
-tags = [ "Removal", "Tier 4", "Card Advantage",]
+tags = [ "Removal", "Tier 4", "Card Advantage", "Planeswalker Interaction",]
 set = "mrd"
 
 ["Environmental Sciences"]
@@ -2662,7 +2690,7 @@ set = "stx"
 mana_cost = [ "X",]
 color_identity = ""
 types = [ "artifact",]
-tags = [ "Artifact Interaction", "Enchantment Interaction", "Sweeper", "Removal", "Card Advantage", "Tier 2",]
+tags = [ "Artifact Interaction", "Enchantment Interaction", "Sweeper", "Removal", "Card Advantage", "Tier 2", "Planeswalker Interaction",]
 set = "5dn"
 
 ["Everflowing Chalice"]
@@ -2742,6 +2770,13 @@ types = [ "artifact",]
 tags = [ "Finisher", "Tier 2",]
 set = "mrd"
 
+["Key to the City"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Finisher", "Tier 3",]
+set = "kld"
+
 ["Liquimetal Torque"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -2755,13 +2790,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 2", "Ramp",]
 set = "wth"
-
-["Smuggler's Copter"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 1", "Cuttable",]
-set = "kld"
 
 ["Sorcerous Spyglass"]
 mana_cost = [ "2",]
@@ -2811,13 +2839,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Card Advantage", "Tier 3",]
 set = "xln"
-
-["Kyren Toy"]
-mana_cost = [ "3",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Tier 4", "Ramp", "Cuttable",]
-set = "mmq"
 
 ["Tangle Wire"]
 mana_cost = [ "3",]
@@ -3278,7 +3299,7 @@ set = "tsp"
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Finisher", "Mana Sink", "Tier 4",]
+tags = [ "Finisher", "Mana Sink", "Tier 4", "Cuttable",]
 set = "znr"
 
 ["Dreadship Reef"]
@@ -3330,18 +3351,11 @@ types = [ "land",]
 tags = [ "Tier 2",]
 set = "m14"
 
-["Prismatic Vista"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Fixer", "Tier 2",]
-set = "mh1"
-
 ["Rishadan Port"]
 mana_cost = []
 color_identity = ""
 types = [ "land",]
-tags = [ "Tier 3", "Cuttable", "Anti-Counterspell",]
+tags = [ "Anti-Counterspell", "Tier 2", "Land Interaction",]
 set = "wc01"
 
 ["Tectonic Edge"]
