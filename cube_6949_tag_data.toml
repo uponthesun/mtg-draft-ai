@@ -222,13 +222,6 @@ types = [ "creature",]
 tags = [ "Tier 0", "Strategy - Aggro", "Strategy - Control", "Card Advantage",]
 set = "mor"
 
-["Moorland Rescuer"]
-mana_cost = [ "5", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage", "Non-Canon",]
-set = "mic"
-
 ["Yosei, the Morning Star"]
 mana_cost = [ "4", "W", "W",]
 color_identity = "W"
@@ -810,6 +803,13 @@ types = [ "instant",]
 tags = [ "Tier 2", "Card Advantage",]
 set = "isd"
 
+["Circular Logic"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control",]
+set = "tor"
+
 [Dissipate]
 mana_cost = [ "1", "U", "U",]
 color_identity = "U"
@@ -837,13 +837,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control", "Card Advantage",]
 set = "mrd"
-
-["You Find the Villains' Lair"]
-mana_cost = [ "1", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
-set = "afr"
 
 ["Gifts Ungiven"]
 mana_cost = [ "3", "U",]
