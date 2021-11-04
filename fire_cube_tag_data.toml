@@ -824,13 +824,6 @@ types = [ "enchantment", "creature",]
 tags = [ "Finisher", "Blocker", "Sacrifice", "Aggro", "Tier 3",]
 set = "thb"
 
-["Nantuko Shade"]
-mana_cost = [ "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Aggro", "Tier 3",]
-set = "tor"
-
 ["Nullpriest of Oblivion"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -1039,6 +1032,13 @@ mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Interaction", "Aggro", "Tier 3",]
+set = "znr"
+
+["Agadeem's Awakening"]
+mana_cost = [ "X", "B", "B", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 2", "Card Advantage",]
 set = "znr"
 
 ["Battle at the Bridge"]
@@ -1544,6 +1544,13 @@ color_identity = "R"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "cm2"
+
+["Spikefield Hazard"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "land",]
+tags = [ "Tier 3", "Interaction",]
+set = "znr"
 
 ["Gilded Goose"]
 mana_cost = [ "G",]
