@@ -8,6 +8,7 @@ CUBES = [
     CubeData.load(
         name='NWO Cube',
         cube_id=81183,
+        cubecobra_id='nwo_cube',
         cube_file_name='cube_81183_tag_data.toml',
         fixer_data_file_name='cube_81183_fixer_data.toml',
         image_urls_file_name='cube_81183_image_urls.toml',
@@ -17,6 +18,7 @@ CUBES = [
     CubeData.load(
         name='Galaxy Brain Cube',
         cube_id=6949,
+        cubecobra_id='galaxy_brain_cube',
         cube_file_name='cube_6949_tag_data.toml',
         fixer_data_file_name='cube_6949_fixer_data.toml',
         image_urls_file_name='cube_6949_image_urls.toml',
@@ -26,6 +28,7 @@ CUBES = [
     CubeData.load(
         name='FIRE Cube',
         cube_id=4,
+        cubecobra_id='fire_cube',
         cube_file_name='fire_cube_tag_data.toml',
         fixer_data_file_name='fire_cube_fixer_data.toml',
         image_urls_file_name='fire_cube_image_urls.toml',
@@ -35,6 +38,7 @@ CUBES = [
     CubeData.load(
         name='Interaction Cube',
         cube_id=5,
+        cubecobra_id='interaction_cube',
         cube_file_name='interaction_cube_tag_data.toml',
         fixer_data_file_name='interaction_cube_fixer_data.toml',
         image_urls_file_name='interaction_cube_image_urls.toml',

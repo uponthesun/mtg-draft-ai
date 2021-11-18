@@ -17,6 +17,8 @@ def all_picks(request, draft_id, seat):
     context = {
         'draft': draft,
         'drafter': drafter,
+        'cube_name': cube_data.name,
+        'cubecobra_url': cube_data.cubecobra_url,
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'picks_with_packs': zip(picks_urls, pack_leftovers_urls),
     }
