@@ -383,6 +383,13 @@ types = [ "enchantment",]
 tags = [ "Tier 4", "Strategy - Aggro", "Strategy - Control",]
 set = "dtk"
 
+["Radiant Grace"]
+mana_cost = [ "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "vow"
+
 ["Sentinel's Eyes"]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -473,6 +480,13 @@ color_identity = "W"
 types = [ "land",]
 tags = [ "Tier 4", "Strategy - Control",]
 set = "shm"
+
+["Cobbled Lancer"]
+mana_cost = [ "U",]
+color_identity = "U"
+types = [ "creature",]
+tags = [ "Tier 3", "Card Advantage", "Strategy - Aggro", "Strategy - Control",]
+set = "vow"
 
 ["Enclave Cryptologist"]
 mana_cost = [ "U",]
@@ -719,6 +733,13 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Control",]
 set = "mmq"
 
+["Epiphany at the Drownyard"]
+mana_cost = [ "X", "U",]
+color_identity = "U"
+types = [ "instant",]
+tags = [ "Tier 3", "Strategy - Control", "Card Advantage",]
+set = "soi"
+
 ["Reach Through Mists"]
 mana_cost = [ "U",]
 color_identity = "U"
@@ -732,13 +753,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Control", "Strategy - Aggro", "Bounce",]
 set = "gpt"
-
-["Secrets of the Key"]
-mana_cost = [ "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 3", "Card Advantage", "Cuttable",]
-set = "mid"
 
 [Suspend]
 mana_cost = [ "U",]
@@ -807,7 +821,7 @@ set = "isd"
 mana_cost = [ "2", "U",]
 color_identity = "U"
 types = [ "instant",]
-tags = [ "Tier 3", "Strategy - Control",]
+tags = [ "Tier 3", "Strategy - Control", "Cuttable",]
 set = "tor"
 
 [Dissipate]
@@ -859,20 +873,6 @@ types = [ "instant",]
 tags = [ "Strategy - Aggro", "Strategy - Control", "Tier 3", "Card Advantage",]
 set = "mmq"
 
-["Jace's Ingenuity"]
-mana_cost = [ "3", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 2", "Strategy - Control", "Card Advantage",]
-set = "m11"
-
-["Nexus of Fate"]
-mana_cost = [ "5", "U", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Tier 4", "Strategy - Control",]
-set = "m19"
-
 ["Dig Through Time"]
 mana_cost = [ "6", "U", "U",]
 color_identity = "U"
@@ -900,6 +900,13 @@ color_identity = "U"
 types = [ "sorcery",]
 tags = [ "Tier 4", "Non-Canon",]
 set = "ust"
+
+["Witness the Future"]
+mana_cost = [ "2", "U",]
+color_identity = "U"
+types = [ "sorcery",]
+tags = [ "Tier 4", "Strategy - Control",]
+set = "vow"
 
 ["Deep Analysis"]
 mana_cost = [ "3", "U",]
@@ -929,6 +936,13 @@ types = [ "enchantment",]
 tags = [ "Tier 2", "Strategy - Control", "Strategy - Aggro",]
 set = "drk"
 
+["Fear of Death"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Tier 3", "Removal",]
+set = "vow"
+
 ["Flooded Shoreline"]
 mana_cost = [ "U", "U",]
 color_identity = "U"
@@ -956,13 +970,6 @@ color_identity = "U"
 types = [ "enchantment",]
 tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
 set = "m15"
-
-["Grafted Identity"]
-mana_cost = [ "2", "U", "U",]
-color_identity = "U"
-types = [ "enchantment",]
-tags = [ "Removal", "Tier 3", "Card Advantage", "Cuttable",]
-set = "mid"
 
 ["Carrion Feeder"]
 mana_cost = [ "B",]
@@ -3519,6 +3526,13 @@ types = [ "land",]
 tags = [ "Tier 3", "Fixer",]
 set = "ogw"
 
+["Hostile Desert"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+set = "hou"
+
 ["Mouth of Ronom"]
 mana_cost = []
 color_identity = ""
@@ -3553,3 +3567,10 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 4", "Card Advantage",]
 set = "m15"
+
+["Tectonic Edge"]
+mana_cost = []
+color_identity = ""
+types = [ "land",]
+tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
+set = "wwk"
