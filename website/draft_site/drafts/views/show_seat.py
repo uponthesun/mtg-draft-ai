@@ -17,6 +17,8 @@ def show_seat(request, draft_id, seat):
 
     basic_context = {
         'draft': draft,
+        'cube_name': cube_data.name,
+        'cubecobra_url': cube_data.cubecobra_url(),
         'drafter': drafter,
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'waiting': waiting,

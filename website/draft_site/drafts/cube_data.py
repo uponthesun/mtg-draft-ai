@@ -13,9 +13,10 @@ DATA_DIR = os.path.join(settings.DRAFTS_APP_DIR, 'cubedata')
 
 class CubeData:
 
-    def __init__(self, name, cube_id, cards, image_urls, picker_factory, autobuild_enabled=False):
+    def __init__(self, name, cube_id, cubecobra_id, cards, image_urls, picker_factory, autobuild_enabled=False):
         self.name = name
         self.cube_id = cube_id
+        self.cubecobra_id = cubecobra_id
         self.cards = cards
         self.image_urls = image_urls
         self.picker_factory = picker_factory
@@ -24,7 +25,7 @@ class CubeData:
         self.cards_by_name = {c.name: c for c in cards}
 
     @staticmethod
-    def load(name, cube_id, cube_file_name, fixer_data_file_name, image_urls_file_name, picker_class,
+    def load(name, cube_id, cubecobra_id, cube_file_name, fixer_data_file_name, image_urls_file_name, picker_class,
              autobuild_enabled=False):
         cube_file_path = os.path.join(DATA_DIR, cube_file_name)
         fixer_data_file_path = os.path.join(DATA_DIR, fixer_data_file_name)
@@ -35,8 +36,8 @@ class CubeData:
 
         picker_factory = picker_class.factory(cards)
 
-        return CubeData(name=name, cube_id=cube_id, cards=cards, image_urls=image_urls, picker_factory=picker_factory,
-                        autobuild_enabled=autobuild_enabled)
+        return CubeData(name=name, cube_id=cube_id, cubecobra_id=cubecobra_id, cards=cards, image_urls=image_urls,
+                        picker_factory=picker_factory, autobuild_enabled=autobuild_enabled)
 
     def card_by_name(self, card_name):
         return self.cards_by_name[card_name] if card_name in self.cards_by_name else Card(name=card_name)
@@ -49,6 +50,9 @@ class CubeData:
         # Fall back to using the API if we don't have the image URL cached (e.g. when viewing old drafts)
         query_string = urllib.parse.urlencode({'format': 'image', 'exact': card_name})
         return ['https://api.scryfall.com/cards/named?' + query_string]
+
+    def cubecobra_url(self):
+        return 'https://cubecobra.com/cube/overview/{}'.format(self.cubecobra_id)
 
 
 def _load_and_update_image_url_cache(cards, image_urls_file):

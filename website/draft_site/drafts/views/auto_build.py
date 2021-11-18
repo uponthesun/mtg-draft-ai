@@ -29,6 +29,8 @@ def auto_build(request, draft_id, seat):
     context = {
         'draft': draft,
         'drafter': drafter,
+        'cube_name': cube_data.name,
+        'cubecobra_url': cube_data.cubecobra_url(),
         'seat_range': range(0, draft.num_drafters),  # Used by header
         'built_deck_images': [cube_data.get_image_urls(c.name) for c in built_deck],
         'leftovers_images': [cube_data.get_image_urls(c.name) for c in leftovers],
