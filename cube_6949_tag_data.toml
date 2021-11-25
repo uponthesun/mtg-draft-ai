@@ -1363,6 +1363,13 @@ types = [ "sorcery",]
 tags = [ "Tier 4",]
 set = "jud"
 
+["Footsteps of the Goryo"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "sorcery",]
+tags = [ "Tier 4",]
+set = "sok"
+
 ["Read the Bones"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -1376,13 +1383,6 @@ color_identity = "B"
 types = [ "sorcery",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "usg"
-
-["Blood for Bones"]
-mana_cost = [ "3", "B",]
-color_identity = "B"
-types = [ "sorcery",]
-tags = [ "Tier 3", "Card Advantage", "Cuttable",]
-set = "m20"
 
 [Damnation]
 mana_cost = [ "2", "B", "B",]
@@ -1402,7 +1402,7 @@ set = "tsp"
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "artifact",]
-tags = [ "Cuttable", "Strategy - Aggro", "Tier 4",]
+tags = [ "Cuttable", "Strategy - Aggro", "Tier 3",]
 set = "m21"
 
 ["Dead Weight"]
@@ -1482,6 +1482,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "avr"
 
+["Voldaren Epicure"]
+mana_cost = [ "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Strategy - Aggro", "Tier 4",]
+set = "vow"
+
 ["Abbot of Keral Keep"]
 mana_cost = [ "1", "R",]
 color_identity = "R"
@@ -1542,7 +1549,7 @@ set = "frf"
 mana_cost = [ "1", "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Tier 3", "Strategy - Aggro",]
+tags = [ "Tier 3", "Strategy - Aggro", "Cuttable",]
 set = "avr"
 
 ["Lightning Mauler"]
@@ -1836,7 +1843,7 @@ set = "avr"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "sorcery",]
-tags = [ "Tier 4", "Strategy - Aggro",]
+tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
 set = "thb"
 
 ["Cathartic Reunion"]
@@ -2216,6 +2223,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "m15"
+
+["Kodama of the East Tree"]
+mana_cost = [ "4", "G", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Tier 3", "Non-Canon",]
+set = "cmr"
 
 ["Megantic Sliver"]
 mana_cost = [ "5", "G",]
@@ -2734,6 +2748,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Strategy - Control", "Cuttable", "Tier 3",]
 set = "stx"
+
+["Heap Doll"]
+mana_cost = [ "1",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4",]
+set = "shm"
 
 ["Hope of Ghirapur"]
 mana_cost = [ "1",]

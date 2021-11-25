@@ -1430,7 +1430,7 @@ set = "bfz"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "instant",]
-tags = [ "Spells (Red) - Enabler", "Spells - Enabler", "Interaction", "Tier 3",]
+tags = [ "Spells (Red) - Enabler", "Spells - Enabler", "Interaction", "Tier 2",]
 set = "dom"
 
 ["Titan's Strength"]
@@ -2018,7 +2018,7 @@ set = "dom"
 mana_cost = []
 color_identity = "G"
 types = [ "land",]
-tags = [ "",]
+tags = [ "Tier 3", "Land Graveyard - Enabler",]
 set = "cmd"
 
 ["Moorland Haunt"]
