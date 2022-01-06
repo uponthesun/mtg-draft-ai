@@ -404,13 +404,6 @@ types = [ "tribal", "enchantment",]
 tags = [ "Strategy - Control", "Tier 3", "Card Advantage",]
 set = "lrw"
 
-["Spectral Steel"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "enchantment",]
-tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
-set = "khm"
-
 ["Bound by Moonsilver"]
 mana_cost = [ "2", "W",]
 color_identity = "W"
@@ -767,13 +760,6 @@ color_identity = "U"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control", "Bounce",]
 set = "4ed"
-
-["Consuming Vortex"]
-mana_cost = [ "1", "U",]
-color_identity = "U"
-types = [ "instant",]
-tags = [ "Bounce", "Tier 4",]
-set = "chk"
 
 ["Mana Leak"]
 mana_cost = [ "1", "U",]
@@ -1685,13 +1671,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro",]
 set = "frf"
 
-["Surtland Flinger"]
-mana_cost = [ "3", "R", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Strategy - Aggro", "Tier 2", "Cuttable",]
-set = "khm"
-
 ["Flayer of the Hatebound"]
 mana_cost = [ "5", "R",]
 color_identity = "R"
@@ -1782,13 +1761,6 @@ color_identity = "R"
 types = [ "instant",]
 tags = [ "Tier 2", "Strategy - Aggro", "Strategy - Control", "Removal",]
 set = "mir"
-
-["Increasing Vengeance"]
-mana_cost = [ "R", "R",]
-color_identity = "R"
-types = [ "instant",]
-tags = [ "Strategy - Control", "Tier 4", "Cuttable", "Card Advantage", "Project",]
-set = "dka"
 
 ["Magma Jet"]
 mana_cost = [ "1", "R",]
@@ -2326,7 +2298,7 @@ set = "rav"
 mana_cost = [ "G", "G",]
 color_identity = "G"
 types = [ "sorcery",]
-tags = [ "Tier 3", "Card Advantage",]
+tags = [ "Tier 3", "Card Advantage", "Cuttable",]
 set = "war"
 
 [Exploration]
@@ -2496,13 +2468,6 @@ color_identity = "BR"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
 set = "dis"
-
-["Goblin Anarchomancer"]
-mana_cost = [ "R", "G",]
-color_identity = "RG"
-types = [ "creature",]
-tags = [ "Strategy - Aggro", "Tier 3", "Cuttable", "Non-Canon",]
-set = "mh2"
 
 ["Gruul Guildmage"]
 mana_cost = [ "R", "/", "G", "R", "/", "G",]
@@ -3546,13 +3511,6 @@ color_identity = ""
 types = [ "land",]
 tags = [ "Tier 3", "Fixer",]
 set = "ogw"
-
-["Hostile Desert"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Tier 3", "Strategy - Aggro", "Strategy - Control",]
-set = "hou"
 
 ["Mouth of Ronom"]
 mana_cost = []

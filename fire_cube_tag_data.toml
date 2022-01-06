@@ -68,13 +68,6 @@ types = [ "creature",]
 tags = [ "Aggro", "Cuttable", "Tier 3",]
 set = "hou"
 
-["Paladin of Atonement"]
-mana_cost = [ "1", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Aggro", "Tier 4", "Cuttable",]
-set = "rix"
-
 ["Parish-Blade Trainee"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -740,6 +733,13 @@ types = [ "enchantment",]
 tags = [ "Card Advantage", "Tier 3",]
 set = "thb"
 
+["Mirror Mockery"]
+mana_cost = [ "1", "U",]
+color_identity = "U"
+types = [ "enchantment",]
+tags = [ "Interaction", "Tier 3", "Card Advantage",]
+set = "dtk"
+
 ["Ominous Seas"]
 mana_cost = [ "1", "U",]
 color_identity = "U"
@@ -845,19 +845,19 @@ types = [ "enchantment", "creature",]
 tags = [ "Tier 3",]
 set = "jou"
 
-["Grimclaw Bats"]
-mana_cost = [ "1", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Aggro", "Lifegain Payoff", "Finisher", "Tier 4",]
-set = "dst"
-
 ["Lampad of Death's Vigil"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
 types = [ "enchantment", "creature",]
 tags = [ "Finisher", "Blocker", "Sacrifice", "Aggro", "Tier 3",]
 set = "thb"
+
+["Nantuko Shade"]
+mana_cost = [ "B", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Aggro",]
+set = "tor"
 
 ["Nullpriest of Oblivion"]
 mana_cost = [ "1", "B",]
@@ -1039,7 +1039,7 @@ mana_cost = [ "1", "B", "B",]
 color_identity = "B"
 types = [ "instant",]
 tags = [ "Interaction", "Aggro", "Tier 2",]
-set = "ths"
+set = "vow"
 
 ["Grisly Spectacle"]
 mana_cost = [ "2", "B", "B",]
@@ -1585,7 +1585,7 @@ mana_cost = []
 color_identity = "R"
 types = [ "land",]
 tags = [ "Fixer",]
-set = "cm2"
+set = "lrw"
 
 ["Spikefield Hazard"]
 mana_cost = [ "R",]
@@ -1607,13 +1607,6 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Ramp", "Tier 2",]
 set = "eld"
-
-["Bloom Tender"]
-mana_cost = [ "1", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Card Advantage", "Tier 2", "Ramp",]
-set = "eve"
 
 ["Deranged Outcast"]
 mana_cost = [ "1", "G",]
@@ -2390,7 +2383,7 @@ mana_cost = [ "1", "R", "W", "B",]
 color_identity = "WBR"
 types = [ "creature",]
 tags = [ "Interaction", "Card Advantage", "Tier 2", "Aggro",]
-set = "iko"
+set = "prm"
 
 ["Omnath, Locus of the Roil"]
 mana_cost = [ "1", "G", "U", "R",]
@@ -2454,6 +2447,13 @@ color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Artifact Payoff", "Finisher", "Aggro", "Board Complexity", "Tier 3",]
 set = "dst"
+
+["Metallic Mimic"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 3", "Aggro", "Zombie Payoff", "Dwarf Payoff", "Clerics Payoff",]
+set = "aer"
 
 ["Phyrexian Revoker"]
 mana_cost = [ "2",]
@@ -2594,13 +2594,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Zombie Payoff", "Mill", "Tier 4",]
 set = "akh"
-
-["Eye of Vecna"]
-mana_cost = [ "2",]
-color_identity = ""
-types = [ "artifact",]
-tags = [ "Card Advantage", "Lifegain Payoff", "Tier 3",]
-set = "afr"
 
 ["Funeral Longboat"]
 mana_cost = [ "2",]
@@ -3069,14 +3062,14 @@ mana_cost = []
 color_identity = ""
 types = [ "land",]
 tags = [ "Board Complexity", "Tier 4", "Aggro",]
-set = "dst"
+set = "mm2"
 
 ["Fabled Passage"]
 mana_cost = []
 color_identity = ""
 types = [ "land",]
 tags = [ "Fixer", "Tier 2",]
-set = "eld"
+set = "pw21"
 
 ["Guildmages' Forum"]
 mana_cost = []
