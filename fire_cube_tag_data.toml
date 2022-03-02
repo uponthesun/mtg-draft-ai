@@ -257,6 +257,13 @@ types = [ "enchantment",]
 tags = [ "Aggro", "Interaction", "Tier 4",]
 set = "jou"
 
+["Michiko's Reign of Truth"]
+mana_cost = [ "1", "W",]
+color_identity = "W"
+types = [ "enchantment",]
+tags = [ "Enchantment Payoff", "Artifact Payoff", "Tier 2",]
+set = "neo"
+
 ["Rune of Sustenance"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -950,6 +957,13 @@ types = [ "creature",]
 tags = [ "Finisher", "Blocker", "Tier 3",]
 set = "gtc"
 
+["Undercity Scrounger"]
+mana_cost = [ "2", "B",]
+color_identity = "B"
+types = [ "artifact", "creature",]
+tags = [ "Tier 3",]
+set = "neo"
+
 ["Weaponcraft Enthusiast"]
 mana_cost = [ "2", "B",]
 color_identity = "B"
@@ -1628,6 +1642,13 @@ color_identity = "G"
 types = [ "creature",]
 tags = [ "Tier 3", "Aggro",]
 set = "akh"
+
+["Kami of Transience"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "creature",]
+tags = [ "Enchantment Payoff", "Tier 3",]
+set = "neo"
 
 ["Llanowar Scout"]
 mana_cost = [ "1", "G",]
@@ -2476,12 +2497,26 @@ types = [ "artifact", "creature",]
 tags = [ "Aggro", "Tier 3",]
 set = "khm"
 
+["Reito Sentinel"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 4", "Mill",]
+set = "neo"
+
 ["Relic Golem"]
 mana_cost = [ "3",]
 color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Mill Payoff", "Tier 4", "Mill",]
 set = "znr"
+
+["Runaway Trash-Bot"]
+mana_cost = [ "3",]
+color_identity = ""
+types = [ "artifact", "creature",]
+tags = [ "Tier 3", "Artifact Payoff", "Enchantment Payoff",]
+set = "neo"
 
 ["Myriad Construct"]
 mana_cost = [ "4",]

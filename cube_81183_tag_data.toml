@@ -278,6 +278,13 @@ types = [ "instant",]
 tags = [ "ETB - Payoff", "Tier 3", "Card Advantage",]
 set = "mh1"
 
+["March of Otherworldly Light"]
+mana_cost = [ "X", "W",]
+color_identity = "W"
+types = [ "instant",]
+tags = [ "Tier 2", "Interaction",]
+set = "neo"
+
 [Outflank]
 mana_cost = [ "W",]
 color_identity = "W"
@@ -772,7 +779,7 @@ set = "afr"
 mana_cost = [ "1", "U",]
 color_identity = "U"
 types = [ "enchantment",]
-tags = [ "Trick", "Tier 4", "Flash - Interaction", "Heroic - Enabler",]
+tags = [ "Trick", "Tier 4", "Flash - Interaction", "Heroic - Enabler", "Cuttable",]
 set = "vow"
 
 ["Mystic Subdual"]
@@ -831,6 +838,13 @@ types = [ "creature",]
 tags = [ "Tier 3", "Vampires - Enabler", "Sacrifice - Enabler",]
 set = "bfz"
 
+["Dokuchi Silencer"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "creature",]
+tags = [ "Tier 3", "Interaction", "Ninjutsu - Payoff", "Ninjas - Enabler",]
+set = "neo"
+
 ["Dusk Legion Zealot"]
 mana_cost = [ "1", "B",]
 color_identity = "B"
@@ -865,6 +879,13 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Tier 3", "Lifegain - Enabler", "Graveyard - Enabler",]
 set = "thb"
+
+["Nezumi Prowler"]
+mana_cost = [ "1", "B",]
+color_identity = "B"
+types = [ "artifact", "creature",]
+tags = [ "Tier 3", "Ninjas - Enabler", "Ninjutsu - Payoff",]
+set = "neo"
 
 ["Oathsworn Vampire"]
 mana_cost = [ "1", "B",]
@@ -1047,13 +1068,6 @@ color_identity = "B"
 types = [ "creature",]
 tags = [ "Lifegain - Enabler", "Vampires - Payoff", "Vampires - Enabler", "Wizards - Payoff", "Wizards - Enabler", "Tier 2", "Card Advantage",]
 set = "c17"
-
-["Okiba-Gang Shinobi"]
-mana_cost = [ "3", "B", "B",]
-color_identity = "B"
-types = [ "creature",]
-tags = [ "Ninjutsu - Payoff", "Ninjas - Enabler", "Tier 3", "Card Advantage",]
-set = "bok"
 
 ["Thornmantle Striker"]
 mana_cost = [ "4", "B",]
@@ -1586,13 +1600,6 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "Land Graveyard - Enabler", "Land Extra - Payoff", "Hellbent - Enabler", "Drake Haven - Enabler", "Tier 3", "Interaction",]
 set = "ori"
-
-["The Flame of Keld"]
-mana_cost = [ "1", "R",]
-color_identity = "R"
-types = [ "enchantment",]
-tags = [ "Hellbent - Payoff", "Tier 4", "Hellbent - Enabler", "Discard - Enabler", "Card Advantage", "Cuttable",]
-set = "dom"
 
 ["Furious Rise"]
 mana_cost = [ "2", "R",]

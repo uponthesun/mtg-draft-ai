@@ -131,13 +131,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Counters - Payoff",]
 set = "ktk"
 
-["Desperate Sentry"]
-mana_cost = [ "2", "W",]
-color_identity = "W"
-types = [ "creature",]
-tags = [ "Tier 3", "Card Advantage", "Cuttable",]
-set = "emn"
-
 ["Master of Pearls"]
 mana_cost = [ "1", "W",]
 color_identity = "W"
@@ -1472,7 +1465,7 @@ set = "avr"
 mana_cost = [ "R",]
 color_identity = "R"
 types = [ "creature",]
-tags = [ "Strategy - Aggro", "Tier 4",]
+tags = [ "Strategy - Aggro", "Tier 4", "Cuttable",]
 set = "vow"
 
 ["Abbot of Keral Keep"]
@@ -1608,13 +1601,6 @@ types = [ "creature",]
 tags = [ "Tier 2", "Strategy - Aggro", "Card Advantage",]
 set = "dka"
 
-["Quicksmith Genius"]
-mana_cost = [ "2", "R",]
-color_identity = "R"
-types = [ "creature",]
-tags = [ "Tier 4", "Cuttable",]
-set = "kld"
-
 ["Smelt-Ward Minotaur"]
 mana_cost = [ "2", "R",]
 color_identity = "R"
@@ -1656,6 +1642,13 @@ color_identity = "R"
 types = [ "creature",]
 tags = [ "Strategy - Aggro", "Tier 3", "Non-Canon",]
 set = "cns"
+
+["Volcano Hellion"]
+mana_cost = [ "2", "R", "R",]
+color_identity = "R"
+types = [ "creature",]
+tags = [ "Removal", "Strategy - Aggro", "Tier 3",]
+set = "plc"
 
 ["Emrakul's Hatcher"]
 mana_cost = [ "4", "R",]
@@ -1733,6 +1726,13 @@ color_identity = "R"
 types = [ "instant",]
 tags = [ "Tier 1", "Strategy - Aggro", "Strategy - Control", "Removal",]
 set = "m10"
+
+["March of Reckless Joy"]
+mana_cost = [ "X", "R",]
+color_identity = "R"
+types = [ "instant",]
+tags = [ "Tier 3",]
+set = "neo"
 
 ["Battle Hymn"]
 mana_cost = [ "1", "R",]
@@ -1880,6 +1880,20 @@ color_identity = "R"
 types = [ "enchantment",]
 tags = [ "Tier 4", "Project",]
 set = "csp"
+
+["The Flame of Keld"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Strategy - Aggro", "Card Advantage", "Tier 3",]
+set = "plist"
+
+["Underworld Breach"]
+mana_cost = [ "1", "R",]
+color_identity = "R"
+types = [ "enchantment",]
+tags = [ "Card Advantage", "Tier 3",]
+set = "thb"
 
 ["Galvanic Arc"]
 mana_cost = [ "2", "R",]
@@ -2196,13 +2210,6 @@ types = [ "creature",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "m15"
 
-["Kodama of the East Tree"]
-mana_cost = [ "4", "G", "G",]
-color_identity = "G"
-types = [ "creature",]
-tags = [ "Tier 3", "Non-Canon",]
-set = "cmr"
-
 ["Megantic Sliver"]
 mana_cost = [ "5", "G",]
 color_identity = "G"
@@ -2279,6 +2286,13 @@ color_identity = "G"
 types = [ "sorcery",]
 tags = [ "Strategy - Aggro", "Tier 3", "Removal",]
 set = "isd"
+
+["Commune with the Gods"]
+mana_cost = [ "1", "G",]
+color_identity = "G"
+types = [ "sorcery",]
+tags = [ "Tier 3",]
+set = "ths"
 
 ["Gather the Pack"]
 mana_cost = [ "1", "G",]
@@ -2406,6 +2420,13 @@ types = [ "instant",]
 tags = [ "Tier 3", "Strategy - Aggro", "Trick",]
 set = "shm"
 
+["Emergency Powers"]
+mana_cost = [ "5", "W", "U",]
+color_identity = "WU"
+types = [ "instant",]
+tags = [ "Tier 4", "Project",]
+set = "rna"
+
 ["Disciple of Deceit"]
 mana_cost = [ "U", "B",]
 color_identity = "BU"
@@ -2468,6 +2489,13 @@ color_identity = "BR"
 types = [ "creature",]
 tags = [ "Tier 3", "Strategy - Aggro", "Card Advantage",]
 set = "dis"
+
+["Goblin Anarchomancer"]
+mana_cost = [ "R", "G",]
+color_identity = "RG"
+types = [ "creature",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "mh2"
 
 ["Gruul Guildmage"]
 mana_cost = [ "R", "/", "G", "R", "/", "G",]
@@ -2672,13 +2700,6 @@ types = [ "planeswalker",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "war"
 
-["Beck // Call"]
-mana_cost = [ "G", "U",]
-color_identity = "GUW"
-types = [ "sorcery",]
-tags = [ "Tier 3", "Strategy - Control", "Card Advantage",]
-set = "dgm"
-
 ["Zur the Enchanter"]
 mana_cost = [ "1", "W", "U", "B",]
 color_identity = "BUW"
@@ -2714,26 +2735,12 @@ types = [ "artifact", "creature",]
 tags = [ "Strategy - Control", "Cuttable", "Tier 3",]
 set = "stx"
 
-["Heap Doll"]
-mana_cost = [ "1",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Tier 4",]
-set = "shm"
-
 ["Hope of Ghirapur"]
 mana_cost = [ "1",]
 color_identity = ""
 types = [ "artifact", "creature",]
 tags = [ "Tier 3", "Strategy - Aggro",]
 set = "aer"
-
-["Myr Scrapling"]
-mana_cost = [ "1",]
-color_identity = ""
-types = [ "artifact", "creature",]
-tags = [ "Tier 4", "Strategy - Aggro", "Cuttable",]
-set = "mh2"
 
 ["Crashing Drawbridge"]
 mana_cost = [ "2",]
@@ -3015,6 +3022,13 @@ types = [ "artifact",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "znr"
 
+["Stuffed Bear"]
+mana_cost = [ "2",]
+color_identity = ""
+types = [ "artifact",]
+tags = [ "Tier 3", "Strategy - Aggro",]
+set = "mid"
+
 ["Veteran's Armaments"]
 mana_cost = [ "2",]
 color_identity = ""
@@ -3077,13 +3091,6 @@ color_identity = ""
 types = [ "artifact",]
 tags = [ "Tier 3", "Card Advantage",]
 set = "nph"
-
-["Gift of Doom"]
-mana_cost = [ "4", "B",]
-color_identity = "B"
-types = [ "enchantment",]
-tags = [ "Tier 3", "Cuttable", "Non-Canon",]
-set = "c19"
 
 ["Celestial Colonnade"]
 mana_cost = []
@@ -3504,13 +3511,6 @@ color_identity = "GU"
 types = [ "land",]
 tags = [ "Fixer",]
 set = "ths"
-
-["Holdout Settlement"]
-mana_cost = []
-color_identity = ""
-types = [ "land",]
-tags = [ "Tier 3", "Fixer",]
-set = "ogw"
 
 ["Mouth of Ronom"]
 mana_cost = []
