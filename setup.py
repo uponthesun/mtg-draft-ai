@@ -15,7 +15,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    install_requires=['toml', 'networkx', 'scipy', 'Django', 'requests', 'beautifulsoup4>=4.7',
+    install_requires=['toml', 'networkx<=2.5', 'scipy', 'Django', 'requests', 'beautifulsoup4>=4.7',
                       'ratelimiter>=1.2', 'retrying>=1.3'],
     extras_require={
         'test': ['pytest>=3.6', 'mock', 'pytest-cov']
