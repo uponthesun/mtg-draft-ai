@@ -16,11 +16,10 @@ lines = [row for row in response.content.decode('utf-8').split('\r\n') if len(ro
 reader = csv.reader(lines)
 csv_rows = [row for row in reader]
 
-keys = csv_rows[0]
+keys = [k.lower() for k in csv_rows[0]]
 card_rows = csv_rows[1:]
 cards_from_csv = [{k: v for k, v in zip(keys, row)} for row in card_rows]
-cards_by_name = {c['Name']: c for c in cards_from_csv if c['Maybeboard'] == 'false'}
-
+cards_by_name = {c['name']: c for c in cards_from_csv if c['maybeboard'] == 'false'}
 
 def type_line_to_types(type_line):
     types = type_line.split('-')[0].strip().split(' ')
@@ -55,10 +54,10 @@ def get_mana_cost_scryfall(name):
 def convert_cubecobra_card(name, card):
     return {
         'mana_cost': get_mana_cost(name),
-        'color_identity': card['Color'],
-        'types': type_line_to_types(card['Type']),
-        'tags': [t.strip() for t in card['Tags'].split(';')],
-        'set': card['Set']
+        'color_identity': card['color'],
+        'types': type_line_to_types(card['type']),
+        'tags': [t.strip() for t in card['tags'].split(';')],
+        'set': card['set']
     }
 
 
